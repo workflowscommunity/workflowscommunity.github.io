@@ -1,1 +1,2 @@
-# workflowscommunity.github.io
+# Workflows Community Initiative Website
+https://workflows.community

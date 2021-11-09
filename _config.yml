@@ -1,0 +1,23 @@
+# Site settings
+title: Workflows Community Initiative
+subtitle: Bringing the Scientific Workflows Community Together
+
+markdown: kramdown
+enable-mathjax: yes
+
+permalink: /blog/:title/
+
+# Pagination
+paginate: 8
+paginate_path: /blog/page:num/
+
+plugins:
+  - jekyll-sitemap    # Adds sitemap to the website at /sitemap.xml
+  - jekyll-feed       # Adds feed to the website at /feed.xml
+  - jekyll-paginate   # Used for sorting posts by page numbers.
+  - jekyll-seo-tag    # Adds all the important SEO meta tags by default.
+
+exclude:
+  - .jekyll-cache
+  - README.md
+  - LICENSE
