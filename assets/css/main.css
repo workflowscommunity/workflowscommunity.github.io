@@ -4222,169 +4222,34 @@ li:nth-child(n+1):nth-last-child(-n+1) {
 .dropdown-item {
     padding: 1em 1em 1em 2em;
     text-transform: none !important;
-    /*font-variant: small-caps;*/
     font-weight: bold;
+    letter-spacing: 0.2em !important;
 }
 
 .post .title img {
     max-height: 0.85em;
 }
 
-.team-single {
-    position: relative;
+.color-1 {
+    color: #BED755;
 }
 
-.team-single img {
-    max-width: 6em;
-    float: left;
-    border-radius: 5%;
-    box-shadow: 3px 3px 3px #ccc;
+.color-2 {
+    color: #8CCA60;
 }
 
-.team-single.previous img {
-    max-width: 3em !important;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+.color-3 {
+    color: #4CA171;
 }
 
-.team-single .social-profile {
-    float: left;
-    margin-left: 0.5em;
+.color-4 {
+    color: #4DABAC;
 }
 
-.team-single .person-info {
-    float: left;
-    margin-left: 1em;
-    margin-bottom: 2em;
-    max-width: 270px;
+.color-5 {
+    color: #ED8D34;
 }
 
-.team-single.previous .person-info {
-    max-width: 200px;
-}
-
-.team-single .person-info h1 {
-    font-weight: bold;
-    font-size: 0.9em;
-    letter-spacing: 0.15em;
-    margin-bottom: 0.2em;
-    text-transform: none;
-}
-
-.team-single .person-info p {
-    color: #999;
-    font-size: 0.9em;
-    line-height: 1.3em;
-}
-
-.usage {
-    font-size: 0.7em;
-    font-weight: bold;
-    border: 1px solid #DB5C5F;
-    border-radius: 0.5em;
-    color: #DB5C5F;
-    padding: 0.2em 0.5em;
-}
-
-.external {
-    font-size: 0.7em;
-    font-weight: bold;
-    border: 1px solid #0069d9;
-    border-radius: 0.5em;
-    color: #0069d9;
-    padding: 0.2em 0.5em;
-}
-
-.simulators {
-    padding: 1em;
-    border: 1px solid #ccc;
-    margin-bottom: 2em;
-    border-radius: 0.5em;
-}
-
-.github-button {
-    background-color: #555;
-    padding: 0.2em 1em;
-    font-size: 0.8em;
-    color: #fff;
-    border-radius: 0.5em;
-}
-
-.github-button:hover {
-    text-decoration: none;
-    color: #fff !important;
-    box-shadow: #ccc 3px 3px 3px;
-}
-
-.featured-icon {
-    float: left;
-    font-size: 3em;
-    border-bottom: 0;
-    margin-right: 0.5em;
-}
-
-.release-box {
-    padding: 1em;
-    border: 1px solid #aaa;
-    border-radius: 0.5em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-
-.simgrid {
-    padding: 0.3em 1em !important;
-    background-color: #4AA3C3 !important;
-    font-size: 0.9em;
-    color: #fff;
-    text-align: center;
-    border-radius: 0.5em;
-    vertical-align: top;
-}
-
-.release-btn {
-    padding: 0.3em 1em !important;
-    background-color: #fafafa !important;
-    font-size: 0.9em;
-    border: 1px solid #999;
-    color: #999 !important;
-}
-
-.release-btn:hover {
-    background-color: #999 !important;
-    color: #fff !important;
-    box-shadow: #ccc 3px 3px 3px;
-}
-
-.numbers {
-    min-height: 4.5em;
-    padding: 1.5em 1em;
-    text-align: center;
-    line-height: 1.8em
-}
-
-.numbers-b-r {
-    border-right: 5px dotted #F9DE4B;
-}
-
-.numbers-b-l {
-    border-left: 5px dotted #F9DE4B;
-}
-
-.numbers-b-b {
-    border-bottom: 5px dotted #F9DE4B;
-}
-
-.numbers-red {
-    background-color: #DD5B5E;
-    color: #fff !important;
-}
-
-.numbers-yellow {
-    background-color: #ECA442;
-    color: #fff !important;
-}
-
-.numbers-orange {
-    background-color: #E06F38;
-    color: #fff !important;
+.color-6 {
+    color: #EA4727;
 }
