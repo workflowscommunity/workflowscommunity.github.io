@@ -2,9 +2,36 @@
     <h1><a href="/"><img src="/images/workflows-community-logo-horizontal.png" style="width: 10em" alt="" /></a></h1>
     <nav class="links">
         <ul>
-            <li><a href="/workflow_systems" title="List of Open Source Workflow Systems">Workflow Systems</a></li>
-            <li><a href="/task_forces" title="List of Task Force Efforts by the Community">Task Forces</a></li>
-            <li><a href="/summits" title="Workflows Community Summits">Summits</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="workflowsDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="dropdown-menu" aria-labelledby="workflowsDropdown">
+                    <a class="dropdown-item" href="/workflows/systems">Workflow Systems</a>
+                    <a class="dropdown-item" href="/workflows/registries">Workflow Registries</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="researchDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Research
+                </a>
+                <div class="dropdown-menu" aria-labelledby="researchDropdown">
+                    <a class="dropdown-item" href="/research/task_forces">Task Forces</a>
+                    <a class="dropdown-item" href="/research/frameworks">Frameworks</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="eventsDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Events
+                </a>
+                <div class="dropdown-menu" aria-labelledby="eventsDropdown">
+                    <a class="dropdown-item" href="/events/summits">Workflows Community Summits</a>
+                    <a class="dropdown-item" href="/events/related">Workflows-Friendly Events</a>
+                </div>
+            </li>
             <li><a href="/about" title="Who are we?">About</a></li>
         </ul>
     </nav>
