@@ -3,47 +3,41 @@ layout: default
 permalink: /
 ---
 
-<!-- Main -->
-<div id="main">
+<article class="post">
+    <div class="row" style="margin-bottom: 2em">
+        Under development
+    </div>
+</article>
 
-    <article class="post">
-        <div class="row" style="margin-bottom: 2em">
-            Under development
+<article class="post">
+    <header>
+        <div class="title">
+            <h1></h1>
         </div>
-    </article>
+    </header>
 
-    <article class="post">
-        <header>
-            <div class="title">
-                <h1></h1>
-            </div>
-        </header>
+</article>
 
-    </article>
-
-    <article class="post">
-        <header>
-            <div class="title">
-                <h3>Founding Members</h3>
-                <p>Since 2021</p>
-            </div>
-        </header>
-
-        <div class="row">
-            {% assign institutions = site.data.institutions | where: "founding",true %}
-            {% for institution in institutions %}
-            <div class="col-sm-6 col-md-4 institution">
-                <a href="{{institution.link}}" target="_blank">
-                    <img src="/images/institutions/{{institution.image}}" alt="{{institution.name}}" />
-                </a>
-            </div>
-            {% endfor %}
+<article class="post">
+    <header>
+        <div class="title">
+            <h3>Founding Members</h3>
+            <p>Since 2021</p>
         </div>
-        <br />
-    </article>
+    </header>
 
-</div>
-
+    <div class="row">
+        {% assign institutions = site.data.institutions | where: "founding",true %}
+        {% for institution in institutions %}
+        <div class="col-sm-6 col-md-4 institution">
+            <a href="{{institution.link}}" target="_blank">
+                <img src="/images/institutions/{{institution.image}}" alt="{{institution.name}}" />
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <br />
+</article>
 
 <script type="text/javascript">
     $('.timer').countTo();

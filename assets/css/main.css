@@ -2786,7 +2786,7 @@ ul.posts article header > :last-child {
 }
 
 .post > header .meta {
-    padding: 3.75em 3em 1.75em 3em;
+    padding: 3.75em 2em 1.75em 2em;
     border-left: solid 1px rgba(160, 160, 160, 0.3);
     min-width: 17em;
     text-align: right;
@@ -4257,4 +4257,40 @@ li:nth-child(n+1):nth-last-child(-n+1) {
 .institution img, .institution a {
     max-height: 3em !important;
     border-bottom: 0 !important;
+}
+
+.post > header .meta .date {
+    font-size: 0.9em;
+    letter-spacing: normal;
+    margin: 0;
+}
+
+.post > header .meta .time {
+    font-size: 0.8em;
+    line-height: 1.2em !important;
+    text-transform: none;
+    letter-spacing: normal;
+    color: #999;
+    margin: 0;
+}
+
+.post img {
+    max-width: 100%;
+}
+
+.post > .message {
+    padding: 1em; 
+    border: 1px solid #ccc; 
+    border-radius: 0.5em; 
+    line-height: 1.5em; 
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    box-shadow: #ccc 3px 3px 3px;
+    background-color: #fafafa;
+}
+
+.agenda {
+    font-size: 0.9em;
+    margin: 0;
+    line-height: 1.2em;
 }

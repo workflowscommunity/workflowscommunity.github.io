@@ -1,0 +1,24 @@
+---
+layout: default
+permalink: /events/summits
+---
+
+<article class="post">
+    <header>
+        <div class="title">
+            <h2>Workflows Community Summits</h2>
+        </div>
+    </header>
+
+    <div class="row">
+        {% assign summits = site.summits %}
+        {% for summit in summits %}
+        <div class="col-sm-12 col-md-12">
+            <a href="{{summit.url}}">
+                {{summit.title}}: {{summit.subtitle}}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <br />
+</article>

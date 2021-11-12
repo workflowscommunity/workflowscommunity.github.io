@@ -11,6 +11,12 @@ permalink: /blog/:title/
 paginate: 8
 paginate_path: /blog/page:num/
 
+# Collections
+collections:
+  summits:
+    output: true
+    permalink: /events/summits/:path/
+
 plugins:
   - jekyll-sitemap    # Adds sitemap to the website at /sitemap.xml
   - jekyll-feed       # Adds feed to the website at /feed.xml
