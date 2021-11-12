@@ -4253,3 +4253,8 @@ li:nth-child(n+1):nth-last-child(-n+1) {
 .color-6 {
     color: #EA4727;
 }
+
+.institution img, .institution a {
+    max-height: 3em !important;
+    border-bottom: 0 !important;
+}
