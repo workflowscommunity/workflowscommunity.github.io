@@ -11,7 +11,7 @@ permalink: /events/summits
     </header>
 
     <div class="row">
-        {% assign summits = site.summits %}
+        {% assign summits = site.summits | sort: 'date' | reverse %}
         {% for summit in summits %}
         <div class="col-sm-12 col-md-12">
             <a href="{{summit.url}}">
