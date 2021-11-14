@@ -4294,3 +4294,54 @@ li:nth-child(n+1):nth-last-child(-n+1) {
     margin: 0;
     line-height: 1.2em;
 }
+
+.event {
+    margin-bottom: 0.5em;
+    display: block;
+    text-decoration: none;
+    border-bottom: 0;
+    border-radius: 0.5em;
+    padding: 1em 0.5em;
+}
+
+.event:hover {
+    text-decoration: none;
+    background-color: #fafafa;
+    box-shadow: #ccc 3px 3px 3px;
+}
+
+.event-date {
+    float: left;
+    min-width: 6em;
+    max-width: 6em;
+    text-align: center;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    min-height: 4em;
+    padding-top: 0.2em;
+}
+
+.event-date > .header {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #888;
+}
+
+.event-date > .subheader {
+    font-size: 0.9em;
+    color: #999;
+}
+
+.event-content {
+    position: relative;
+    line-height: 1.2em;
+}
+
+.event-content > .time {
+    font-size: 0.9em;
+    color: #999;
+}
+
+.event-content strong {
+    font-size: 1.2em;
+}

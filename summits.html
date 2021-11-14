@@ -14,8 +14,19 @@ permalink: /events/summits
         {% assign summits = site.summits | sort: 'date' | reverse %}
         {% for summit in summits %}
         <div class="col-sm-12 col-md-12">
-            <a href="{{summit.url}}">
-                {{summit.title}}: {{summit.subtitle}}
+            <a href="{{summit.url}}" class="event">
+                <div class="event-date">
+                    <span class="header">{{summit.date | date: "%b %d" }}</span><br />
+                    <span class="subheader">{{summit.date | date: "%Y" }}</span>
+                </div>
+                <div class="event-content">
+                    <span class="time">{{summit.times}}</span><br />
+                    <strong>{{summit.title}}</strong><br />
+                    <i>{{summit.subtitle}}</i><br />
+                    {% if summit.report_link %}
+                    <img src="{{summit.report_badge}}" alt="DOI" style="padding-top: 0.5em" />
+                    {% endif %}
+                </div>
             </a>
         </div>
         {% endfor %}
