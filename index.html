@@ -29,7 +29,7 @@ permalink: /
     <div class="row">
         {% assign institutions = site.data.institutions | where: "founding",true %}
         {% for institution in institutions %}
-        <div class="col-sm-6 col-md-4 institution">
+        <div class="col-sm-6 col-md-3 institution">
             <a href="{{institution.link}}" target="_blank">
                 <img src="/images/institutions/{{institution.image}}" alt="{{institution.name}}" />
             </a>

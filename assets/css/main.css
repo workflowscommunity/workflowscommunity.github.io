@@ -4254,6 +4254,10 @@ li:nth-child(n+1):nth-last-child(-n+1) {
     color: #EA4727;
 }
 
+.institution {
+    text-align: center;
+}
+
 .institution img, .institution a {
     max-height: 3em !important;
     border-bottom: 0 !important;
@@ -4295,7 +4299,7 @@ li:nth-child(n+1):nth-last-child(-n+1) {
     line-height: 1.2em;
 }
 
-.event {
+.event, .framework {
     margin-bottom: 0.5em;
     display: block;
     text-decoration: none;
@@ -4304,7 +4308,7 @@ li:nth-child(n+1):nth-last-child(-n+1) {
     padding: 1em 0.5em;
 }
 
-.event:hover {
+.event:hover, .framework:hover {
     text-decoration: none;
     background-color: #fafafa;
     box-shadow: #ccc 3px 3px 3px;
@@ -4344,4 +4348,71 @@ li:nth-child(n+1):nth-last-child(-n+1) {
 
 .event-content strong {
     font-size: 1.2em;
+}
+
+.framework {   
+    padding: 1em 1em;
+    display: flex;
+}
+
+.framework a {
+    border-bottom: 0;
+}
+
+.framework a:hover {
+    text-decoration: none;
+    border-bottom: 0;
+}
+
+.framework-icon {
+    flex: 1;
+    max-width: 3em;
+    max-height: 3em;
+    margin-top: 0.5em;
+    margin-right: 1em;
+}
+
+.framework-content {
+    flex: 1;
+}
+
+.framework-content > .description {
+    font-size: 0.9em;
+    color: #999;
+    line-height: 1.2em;
+    margin: 0;
+}
+
+.badges > .badge {
+    border-radius: 1em;
+    border: 1px solid #999 !important;
+    background-color: #fff;
+    padding: 0.25em 0.75em;
+    font-size: 0.8em;
+    color: #555;
+    margin-right: 0.5em;
+    font-weight: normal;
+}
+
+.badges > .badge:hover {
+    background-color: #555;
+    color: #fff !important;
+}
+
+.gitlab:hover {
+    background-color: rgb(204, 110, 3) !important;
+    border: 1px solid rgb(204, 110, 3) !important;
+}
+
+.documentation:hover {
+    background-color: #4EABAB !important;
+    border: 1px solid #4EABAB !important;
+}
+
+.tags > .tag {
+    font-size: 0.7em;
+    border-radius: 1em;
+    padding: 0.25em 0.75em;
+    background-color: #EC8B34;
+    color: #fff;
 }

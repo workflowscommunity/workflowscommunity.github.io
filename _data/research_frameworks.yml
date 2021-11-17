@@ -1,0 +1,20 @@
+- name: "WRENCH: Cyberinfrastructure Simulation Workbench"
+  url: https://wrench-project.org
+  description: A framework for implementing simulators of workflow management systems, with the goal of producing simulators that are accurate and can run scalably on a single computer while requiring minimal software development effort
+  icon: https://wrench-project.org/favicon.ico
+  github: https://github.com/wrench-project/wrench
+  documentation: https://wrench-project.org/wrench/1.10/
+  tags:
+    - simulation
+    - modeling
+
+- name: "WfCommons: Community Framework for Enabling Scientific Workflow Research and Development"
+  url: https://wfcommons.org/
+  description: Foundational tools for analyzing workflow execution instances, generating workflow recipes, and generating synthetic, yet realistic, workflow instances that can be used to develop new techniques, algorithms and systems that can overcome the challenges of efficient and robust execution of ever larger workflows on increasingly complex distributed infrastructures
+  icon: https://wfcommons.org/favicon.ico
+  github: https://github.com/wfcommons/wfcommons
+  documentation: https://docs.wfcommons.org
+  tags:
+    - generator
+    - modeling
+    - benchmark

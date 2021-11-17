@@ -2,3 +2,18 @@
   founding: true
   image: ornl.png
   link: https://www.ornl.gov/
+
+- name: Argonne National Laboratory
+  founding: true
+  image: anl.png
+  link: https://www.anl.gov/
+
+- name: University of Chicago
+  founding: true
+  image: uchicago.png
+  link: https://www.uchicago.edu/
+
+- name: University of Hawaii
+  founding: true
+  image: uhm.png
+  link: https://manoa.hawaii.edu/
