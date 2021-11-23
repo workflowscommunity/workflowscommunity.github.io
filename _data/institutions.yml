@@ -17,3 +17,18 @@
   founding: true
   image: uhm.png
   link: https://manoa.hawaii.edu/
+
+- name: University of Manchester
+  founding: true
+  image: umanchester.png
+  link: https://www.manchester.ac.uk/
+
+- name: University of Notre Dame
+  founding: true
+  image: nd.png
+  link: https://nd.edu
+
+- name: Barcelona Supercomputing Center
+  founding: true
+  image: bsc.png
+  link: https://www.bsc.es/

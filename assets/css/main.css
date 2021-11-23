@@ -4261,6 +4261,7 @@ li:nth-child(n+1):nth-last-child(-n+1) {
 .institution img, .institution a {
     max-height: 3em !important;
     border-bottom: 0 !important;
+    margin-bottom: 1.5em;
 }
 
 .post > header .meta .date {
