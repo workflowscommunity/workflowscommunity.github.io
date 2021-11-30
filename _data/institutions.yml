@@ -32,3 +32,8 @@
   founding: true
   image: bsc.png
   link: https://www.bsc.es/
+
+- name: National Energy Research Scientific Computing Center
+  founding: true
+  image: nersc.png
+  link: https://www.nersc.gov
