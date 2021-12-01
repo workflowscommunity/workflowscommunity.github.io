@@ -2,6 +2,7 @@
   role: Executive Director
   photo: ferreiradasilva.jpg
   link: https://rafaelsilva.com
+  leadership: true
   institution: 
     name: Oak Ridge National Laboratory
     image: ornl.png
@@ -11,6 +12,7 @@
   role: Deputy Executive Director
   photo: chard.jpg
   link: https://kylechard.com/
+  leadership: true
   institution: 
     name: University of Chicago
     image: uchicago.png
@@ -20,6 +22,7 @@
   role: Director of Systems and Applications Performance
   photo: badia.jpg
   link: https://www.bsc.es/badia-rosa-m
+  leadership: true
   institution:
     name: Barcelona Supercomputing Center
     image: bsc.png
@@ -29,6 +32,7 @@
   role: Director of Education 
   photo: casanova.jpg
   link: https://henricasanova.github.io/
+  leadership: true
   institution: 
     name: University of Hawaii
     image: uhm.png
@@ -38,11 +42,13 @@
   role: Director of APIs and Standards
   photo: crusoe.jpg
   link: https://orcid.org/0000-0002-2961-9670
+  leadership: true
 
 - name: Björn Enders
   role: Director of Facilities Operations
   photo: enders.jpg
   link: https://www.nersc.gov/about/nersc-staff/data-science-engagement-group/bjoern-enders/
+  leadership: true
   institution:
     name: National Energy Research Scientific Computing Center
     image: nersc.png
@@ -52,6 +58,7 @@
   role: Director of FAIR Computational Workflows
   photo: goble.jpg
   link: https://www.research.manchester.ac.uk/portal/carole.goble.html
+  leadership: true
   institution:
     name: University of Manchester
     image: umanchester.png
@@ -61,6 +68,7 @@
   role: Director of Training and User Engagement
   photo: ramakrishnan.jpg
   link: https://crd.lbl.gov/divisions/scidata/about-scidata/scidata-staff/office-of-the-director/lavanya-ramakrishnan/
+  leadership: true
   institution:
     name: Lawrence Berkeley National Laboratory
     image: lbnl.png
@@ -70,7 +78,18 @@
   role: Director of Distributed Computing Systems
   photo: thain.jpg
   link: https://www3.nd.edu/~dthain/
+  leadership: true
   institution:
     name: University of Notre Dame
     image: nd.png
     link: https://nd.edu
+
+- name: Daniel S. Katz
+  role: Chair
+  photo: katz.jpg
+  link: https://danielskatz.org/
+  leadership: false
+  institution:
+    name: University of Illinois at Urbana-Champaign
+    image: uiuc.png
+    link: https://illinois.edu/

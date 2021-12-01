@@ -18,7 +18,8 @@ permalink: /about
     <h2>Leadership</h2>
 
     <div class="row" style="padding: 1em">
-        {% for member in site.data.organization %}
+        {% assign leadership = site.data.organization | where: "leadership",true %}
+        {% for member in leadership %}
         <div class="member">
             <div class="header">
                 <div class="name">{{ member.name }}</div>
@@ -38,6 +39,27 @@ permalink: /about
     </div>
 
     <h2>Steering Committee</h2>
+
+    <div class="row" style="padding: 1em">
+        {% assign sc = site.data.organization | where: "leadership",false %}
+        {% for member in sc %}
+        <div class="member">
+            <div class="header">
+                <div class="name">{{ member.name }}</div>
+                <div class="role">{{ member.role }}</div>
+                <a href="{{ member.link }}" target="_blank">
+                    <img src="/images/about/{{ member.photo }}" alt="{{ member.name }}" />
+                </a>
+            </div>
+            <div class="content">
+                <a href="{{ member.institution.link }}" target="_blank">
+                    <img src="/images/institutions/{{ member.institution.image }}"
+                        alt="{{ member.institution.name }}" />
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
     <br />
 </article>
