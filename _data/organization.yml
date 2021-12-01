@@ -1,0 +1,76 @@
+- name: Rafael Ferreira da Silva
+  role: Executive Director
+  photo: ferreiradasilva.jpg
+  link: https://rafaelsilva.com
+  institution: 
+    name: Oak Ridge National Laboratory
+    image: ornl.png
+    link: https://www.ornl.gov/
+
+- name: Kyle Chard
+  role: Deputy Executive Director
+  photo: chard.jpg
+  link: https://kylechard.com/
+  institution: 
+    name: University of Chicago
+    image: uchicago.png
+    link: https://www.uchicago.edu/
+
+- name: Rosa M. Badia
+  role: Director of Systems and Applications Performance
+  photo: badia.jpg
+  link: https://www.bsc.es/badia-rosa-m
+  institution:
+    name: Barcelona Supercomputing Center
+    image: bsc.png
+    link: https://www.bsc.es/
+
+- name: Henri Casanova
+  role: Director of Education 
+  photo: casanova.jpg
+  link: https://henricasanova.github.io/
+  institution: 
+    name: University of Hawaii
+    image: uhm.png
+    link: https://manoa.hawaii.edu/
+
+- name: Michael R. Crusoe
+  role: Director of APIs and Standards
+  photo: crusoe.jpg
+  link: https://orcid.org/0000-0002-2961-9670
+
+- name: Björn Enders
+  role: Director of Facilities Operations
+  photo: enders.jpg
+  link: https://www.nersc.gov/about/nersc-staff/data-science-engagement-group/bjoern-enders/
+  institution:
+    name: National Energy Research Scientific Computing Center
+    image: nersc.png
+    link: https://www.nersc.gov
+
+- name: Carole Goble
+  role: Director of FAIR Computational Workflows
+  photo: goble.jpg
+  link: https://www.research.manchester.ac.uk/portal/carole.goble.html
+  institution:
+    name: University of Manchester
+    image: umanchester.png
+    link: https://www.manchester.ac.uk/
+
+- name: Lavanya Ramakrishnan
+  role: Director of Training and User Engagement
+  photo: ramakrishnan.jpg
+  link: https://crd.lbl.gov/divisions/scidata/about-scidata/scidata-staff/office-of-the-director/lavanya-ramakrishnan/
+  institution:
+    name: Lawrence Berkeley National Laboratory
+    image: lbnl.png
+    link: https://www.lbl.gov/
+
+- name: Douglas Thain
+  role: Director of Distributed Computing Systems
+  photo: thain.jpg
+  link: https://www3.nd.edu/~dthain/
+  institution:
+    name: University of Notre Dame
+    image: nd.png
+    link: https://nd.edu

@@ -3678,68 +3678,6 @@ body.is-menu-visible #menu {
 
 }
 
-.member {
-    border: 1px solid #ccc;
-    min-height: 18em;
-    max-height: 18em;
-    max-width: 14em;
-    display: inline-block;
-    margin-right: 1.5em;
-    margin-bottom: 1.5em;
-}
-
-.member:hover {
-    box-shadow: #ccc 3px 3px 3px;
-}
-
-.member img {
-    width: 12em;
-    margin: 0;
-    border-bottom: 1px solid #ccc;
-    float: left;
-    position: relative;
-}
-
-.member .social {
-    padding: 0.5em;
-    float: left;
-    position: relative;
-    border-left: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    min-height: 15.1em;
-    max-height: 15.1em;
-    min-width: 30px;
-    font-size: 0.8em;
-    color: #999;
-    text-align: center;
-    line-height: 2em;
-    background-color: #999;
-}
-
-.member .social a {
-    border-bottom: 0;
-    color: #fff;
-}
-
-.member .info {
-    padding: 0.5em;
-    line-height: 1.2em;
-    float: left;
-    background-color: #f7f7f7;
-    min-height: 5.8em;
-    min-width: 13.8em;
-}
-
-.member .title {
-    font-weight: bold;
-}
-
-.member .position {
-    text-transform: uppercase;
-    color: #999;
-    font-size: 0.8em;
-}
-
 .alumni {
     border: 1px solid #ccc;
     min-height: 4em;
@@ -4247,10 +4185,14 @@ li:nth-child(n+1):nth-last-child(-n+1) {
 }
 
 .color-5 {
-    color: #ED8D34;
+    color: #4CA8A9;
 }
 
 .color-6 {
+    color: #ED8D34;
+}
+
+.color-7 {
     color: #EA4727;
 }
 
@@ -4416,4 +4358,59 @@ li:nth-child(n+1):nth-last-child(-n+1) {
     padding: 0.25em 0.75em;
     background-color: #EC8B34;
     color: #fff;
+}
+
+.member {
+    border-top: 2px solid #999;
+    filter: grayscale(100%);
+    padding: 0;
+    margin-right: 3em;
+    margin-bottom: 3em;
+    max-width: 10em;
+}
+
+.member:hover {
+    filter: grayscale(0%);
+    color: #000;
+}
+
+.member>.header>.name {
+    font-size: 1em;
+    line-height: 1.2em;
+    margin: 0;
+    padding-top: 0.25em;
+    font-weight: 500;
+    color: #000
+}
+
+.member>.header>.role {
+    font-size: 0.8em;
+    line-height: 1em;
+    margin: 0;
+    padding-bottom: 0.5em;
+    color: #666;
+    min-height: 2.5em;
+}
+
+.member a {
+    border-bottom: 0;
+}
+
+.member>.header>a img {
+    border-radius: 0.5em;
+    max-width: 10em;
+    min-width: 10em;
+}
+
+.member>.content {
+    line-height: 1.2em;
+    font-size: 0.9em;
+}
+
+.member>.content>a {
+    border-bottom: 0;
+}
+
+.member>.content>a>img {
+    max-height: 2em;
 }

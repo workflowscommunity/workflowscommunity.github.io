@@ -1,0 +1,40 @@
+---
+layout: default
+title: About
+permalink: /about
+---
+
+<article class="post">
+    <header>
+        <div class="title">
+            <h2>About</h2>
+            <p>
+                The Workflows Community Initiative (WCI) is a community-centered effort for gathering and
+                promoting long-standing and recent community-focused efforts
+            </p>
+        </div>
+    </header>
+
+    <h2>Leadership</h2>
+
+    <div class="row" style="padding: 1em">
+        {% for member in site.data.organization %}
+        <div class="member">
+            <div class="header">
+                <div class="name">{{ member.name }}</div>
+                <div class="role">{{ member.role }}</div>
+                <a href="{{ member.link }}" target="_blank">
+                    <img src="/images/about/{{ member.photo }}" alt="{{ member.name }}" />
+                </a>
+            </div>
+            <div class="content">
+                <a href="{{ member.institution.link }}" target="_blank">
+                    <img src="/images/institutions/{{ member.institution.image }}"
+                        alt="{{ member.institution.name }}" />
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <br />
+</article>
