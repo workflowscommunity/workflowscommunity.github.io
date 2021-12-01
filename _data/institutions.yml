@@ -42,3 +42,9 @@
   founding: true
   image: lbnl.png
   link: https://www.lbl.gov/
+
+- name: University of Illinois at Urbana-Champaign
+  founding: true
+  image: uiuc.png
+  link: https://illinois.edu/
+  
