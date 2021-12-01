@@ -37,3 +37,8 @@
   founding: true
   image: nersc.png
   link: https://www.nersc.gov
+
+- name: Lawrence Berkeley National Laboratory
+  founding: true
+  image: lbnl.png
+  link: https://www.lbl.gov/
