@@ -93,3 +93,13 @@
     name: University of Illinois at Urbana-Champaign
     image: uiuc.png
     link: https://illinois.edu/
+
+- name: Matthew Wolf
+  role: Member
+  photo: wolf.jpg
+  link: https://csmd.ornl.gov/profile/matthew-wolf
+  leadership: false
+  institution: 
+    name: Oak Ridge National Laboratory
+    image: ornl.png
+    link: https://www.ornl.gov/
