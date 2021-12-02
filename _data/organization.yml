@@ -104,6 +104,16 @@
     image: ucsd.png
     link: https://ucsd.edu/
 
+- name: Thomas Fahringer
+  role: Member
+  photo: fahringer.jpg
+  link: http://www.dps.uibk.ac.at/~tf/
+  leadership: false
+  institution:
+    name: University of Innsbruck
+    image: uinnsbruck.png
+    link: https://www.uibk.ac.at/
+
 - name: Marta Mattoso
   role: Member
   photo: mattoso.jpg
@@ -123,3 +133,13 @@
     name: Oak Ridge National Laboratory
     image: ornl.png
     link: https://www.ornl.gov/
+
+- name: Justin M. Wozniak
+  role: Member
+  photo: wozniak.jpg
+  link: https://www.mcs.anl.gov/~wozniak/
+  leadership: false
+  institution:
+    name: Argonne National Laboratory
+    image: anl.png
+    link: https://www.anl.gov/
