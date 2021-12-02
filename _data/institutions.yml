@@ -72,3 +72,8 @@
   founding: true
   image: rutgers.png
   link: https://www.rutgers.edu/
+
+- name: Heriot-Watt University
+  founding: true
+  image: hwuniversity.png
+  link: https://www.hw.ac.uk/

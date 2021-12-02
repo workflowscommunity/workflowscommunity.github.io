@@ -114,6 +114,16 @@
     image: uinnsbruck.png
     link: https://www.uibk.ac.at/
 
+- name: Rosa Filgueira
+  role: Member
+  photo: filgueira.jpg
+  link: https://www.rosafilgueira.com/
+  leadership: false
+  institution:
+    name: Heriot-Watt University
+    image: hwuniversity.png
+    link: https://www.hw.ac.uk/
+    
 - name: Shantenu Jha
   role: Member
   photo: jha.jpg
