@@ -61,4 +61,14 @@
 - name: University of Innsbruck
   founding: true
   image: uinnsbruck.png
-  link: 
+  link: https://www.uibk.ac.at/
+
+- name: Brookhaven National Laboratory
+  founding: true
+  image: bnl.png
+  link: https://www.bnl.gov/
+
+- name: Rutgers University
+  founding: true
+  image: rutgers.png
+  link: https://www.rutgers.edu/

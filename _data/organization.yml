@@ -114,6 +114,16 @@
     image: uinnsbruck.png
     link: https://www.uibk.ac.at/
 
+- name: Shantenu Jha
+  role: Member
+  photo: jha.jpg
+  link: https://www.bnl.gov/staff/shantenu
+  leadership: false
+  institution:
+    name: Brookhaven National Laboratory
+    image: bnl.png
+    link: https://www.bnl.gov/
+
 - name: Marta Mattoso
   role: Member
   photo: mattoso.jpg
