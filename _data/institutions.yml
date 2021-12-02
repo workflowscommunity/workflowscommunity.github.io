@@ -47,4 +47,13 @@
   founding: true
   image: uiuc.png
   link: https://illinois.edu/
-  
+
+- name: Federal University of Rio de Janeiro
+  founding: true
+  image: ufrj.png
+  link: https://ufrj.br/en/
+
+- name: University of California San Diego
+  founding: true
+  image: ucsd.png
+  link: https://ucsd.edu/

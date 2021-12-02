@@ -94,6 +94,25 @@
     image: uiuc.png
     link: https://illinois.edu/
 
+- name: İlkay Altintaş
+  role: Member
+  photo: altintas.jpg
+  leadership: false
+  institution:
+    name: University of California San Diego
+    image: ucsd.png
+    link: https://ucsd.edu/
+
+- name: Marta Mattoso
+  role: Member
+  photo: mattoso.jpg
+  link: https://www.cos.ufrj.br/~marta/
+  leadership: false
+  institution:
+    name: Federal University of Rio de Janeiro
+    image: ufrj.png
+    link: https://ufrj.br/en/
+
 - name: Matthew Wolf
   role: Member
   photo: wolf.jpg
