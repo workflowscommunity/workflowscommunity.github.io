@@ -77,3 +77,13 @@
   founding: true
   image: hwuniversity.png
   link: https://www.hw.ac.uk/
+
+- name: University of Southern California
+  founding: true
+  image: usc.png
+  link: https://usc.edu
+
+- name: University of Freiburg
+  founding: true
+  image: ufreiburg.png
+  link: https://uni-freiburg.de

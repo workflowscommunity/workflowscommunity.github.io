@@ -104,6 +104,16 @@
     image: ucsd.png
     link: https://ucsd.edu/
 
+- name: Ewa Deelman
+  role: Member
+  photo: deelman.jpg
+  link: https://deelman.isi.edu
+  leadership: false
+  institution:
+    name: University of Southern California
+    image: usc.png
+    link: https://usc.edu
+
 - name: Thomas Fahringer
   role: Member
   photo: fahringer.jpg
@@ -124,6 +134,16 @@
     image: hwuniversity.png
     link: https://www.hw.ac.uk/
     
+- name: Björn Grüning
+  role: Member
+  photo: groening.jpg
+  link: https://orcid.org/0000-0002-3079-6586
+  leadership: false
+  institution:
+    name: University of Freiburg
+    image: ufreiburg.png
+    link: https://uni-freiburg.de
+
 - name: Shantenu Jha
   role: Member
   photo: jha.jpg
