@@ -114,6 +114,16 @@
     image: usc.png
     link: https://usc.edu
 
+- name: Frank Di Natale
+  role: Member
+  photo: dinatale.jpg
+  link: https://frankd412.github.io/
+  leadership: false
+  institution:
+    name: Nvidia
+    image: nvidia.png
+    link: https://www.nvidia.com/en-us/
+
 - name: Thomas Fahringer
   role: Member
   photo: fahringer.jpg

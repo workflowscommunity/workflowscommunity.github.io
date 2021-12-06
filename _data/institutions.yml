@@ -87,3 +87,8 @@
   founding: true
   image: ufreiburg.png
   link: https://uni-freiburg.de
+
+- name: Nvidia
+  founding: true
+  image: nvidia.png
+  link: https://www.nvidia.com/en-us/
