@@ -164,6 +164,16 @@
     image: bnl.png
     link: https://www.bnl.gov/
 
+- name: Ulf Leser
+  role: Member
+  photo: leser.jpg
+  link: https://www2.informatik.hu-berlin.de/~leser/
+  leadership: false
+  institution:
+    name: Humboldt University of Berlin
+    image: huberlin.png
+    link: https://www.hu-berlin.de
+
 - name: Marta Mattoso
   role: Member
   photo: mattoso.jpg

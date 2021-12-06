@@ -83,12 +83,17 @@
   image: usc.png
   link: https://usc.edu
 
-- name: University of Freiburg
+- name: Humboldt University of Berlin
   founding: true
-  image: ufreiburg.png
-  link: https://uni-freiburg.de
+  image: huberlin.png
+  link: https://www.hu-berlin.de
 
 - name: Nvidia
   founding: true
   image: nvidia.png
   link: https://www.nvidia.com/en-us/
+
+- name: University of Freiburg
+  founding: true
+  image: ufreiburg.png
+  link: https://uni-freiburg.de
