@@ -1,0 +1,4 @@
+- name: WorkflowHub
+  url: https://workflowhub.eu/
+  description: A registry for describing, sharing and publishing scientific computational workflows. WorkflowHub aims to facilitate discovery and re-use of workflows in an accessible and interoperable way.
+  icon: https://about.workflowhub.eu/logo/workflowhub-square.svg
