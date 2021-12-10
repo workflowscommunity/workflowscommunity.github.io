@@ -184,6 +184,16 @@
     image: ufrj.png
     link: https://ufrj.br/en/
 
+- name: J. Luc Peterson
+  role: Member
+  photo: peterson.jpg
+  link: https://github.com/lucpeterson
+  leadership: false
+  institution:
+    name: Lawrence Livermore National Laboratory
+    image: llnl.png
+    link: https://www.llnl.gov/
+
 - name: Matthew Wolf
   role: Member
   photo: wolf.jpg

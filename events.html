@@ -1,0 +1,38 @@
+---
+layout: default
+title: Workflow-Related Events
+permalink: /events/related
+---
+
+<article class="post">
+    <header>
+        <div class="title">
+            <h2>{{ page.title }}</h2>
+            <p>
+                Collection of conferences, workshops, meetings, etc. relevant to the workflows community suitable for workflows research
+            </p>
+        </div>
+    </header>
+
+    <div class="row">
+        {% assign events = site.data.events | sort: 'date' | reverse %}
+        {% for event in events %}
+        <div class="col-sm-12 col-md-12">
+            <a href="{{event.url}}" class="event" target="_blank">
+                <div class="event-date">
+                    <span class="header">{{event.date | date: "%b %d" }}</span><br />
+                    <span class="subheader">{{event.date | date: "%Y" }}</span>
+                </div>
+                <div class="event-content">
+                    <strong>{{event.name}}</strong><br />
+                    <i>{{summit.subtitle}}</i><br />
+                    {% if summit.report_link %}
+                    <img src="{{summit.report_badge}}" alt="DOI" style="padding-top: 0.5em" />
+                    {% endif %}
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <br />
+</article>

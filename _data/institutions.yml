@@ -93,6 +93,11 @@
   image: nvidia.png
   link: https://www.nvidia.com/en-us/
 
+- name: Lawrence Livermore National Laboratory
+  founding: true
+  image: llnl.png
+  link: https://www.llnl.gov/
+
 - name: University of Freiburg
   founding: true
   image: ufreiburg.png

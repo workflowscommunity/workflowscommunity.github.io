@@ -4247,7 +4247,7 @@ li:nth-child(n+1):nth-last-child(-n+1) {
     display: block;
     text-decoration: none;
     border-bottom: 0;
-    border-radius: 0.5em;
+    box-shadow: #ccc 0px 3px 3px -3px;
     padding: 1em 0.5em;
 }
 
@@ -4255,6 +4255,7 @@ li:nth-child(n+1):nth-last-child(-n+1) {
     text-decoration: none;
     background-color: #fafafa;
     box-shadow: #ccc 3px 3px 3px;
+    border-radius: 0.5em;
 }
 
 .event-date {
