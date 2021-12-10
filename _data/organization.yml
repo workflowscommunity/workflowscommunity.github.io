@@ -124,6 +124,16 @@
     image: nvidia.png
     link: https://www.nvidia.com/en-us/
 
+- name: Paolo Di Tommaso
+  role: Member
+  photo: ditommaso.jpg
+  link: https://seqera.io/about/
+  leadership: false
+  institution:
+    name: Seqera Labs
+    image: seqeralabs.png
+    link: https://seqera.io
+
 - name: Thomas Fahringer
   role: Member
   photo: fahringer.jpg

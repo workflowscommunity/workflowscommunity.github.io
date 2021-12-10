@@ -98,6 +98,11 @@
   image: llnl.png
   link: https://www.llnl.gov/
 
+- name: Seqera Labs
+  founding: true
+  image: seqeralabs.png
+  link: https://seqera.io
+
 - name: University of Freiburg
   founding: true
   image: ufreiburg.png
