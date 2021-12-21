@@ -15,8 +15,11 @@ permalink: /events/related
     </header>
 
     <div class="row">
-        {% assign events = site.data.events | sort: 'date' | reverse %}
+        {% assign events = site.data.events | sort: 'date' %}
+        {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
         {% for event in events %}
+        {% capture eventtime %}{{event.date | date: '%s'}}{% endcapture %}
+        {% if eventtime >= nowunix %}
         <div class="col-sm-12 col-md-12">
             <a href="{{event.url}}" class="event" target="_blank">
                 <div class="event-date">
@@ -25,13 +28,16 @@ permalink: /events/related
                 </div>
                 <div class="event-content">
                     <strong>{{event.name}}</strong><br />
-                    <i>{{summit.subtitle}}</i><br />
-                    {% if summit.report_link %}
-                    <img src="{{summit.report_badge}}" alt="DOI" style="padding-top: 0.5em" />
+                    <span class="location">{{event.location}}</span><br />
+                    {% if event.deadlines %}
+                    {% for d in event.deadlines %}
+                    <span class="deadlines">{{d.name}}: <strong>{{d.date | date: "%b %d, %Y"}}</strong>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    {% endfor %}
                     {% endif %}
                 </div>
             </a>
         </div>
+        {% endif %}
         {% endfor %}
     </div>
     <br />

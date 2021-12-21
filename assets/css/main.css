@@ -4415,3 +4415,17 @@ li:nth-child(n+1):nth-last-child(-n+1) {
 .member>.content>a>img {
     max-height: 2em;
 }
+
+.deadlines {
+    font-size: 0.8em;
+    color: #999;
+}
+
+.deadlines strong {
+    font-size: 1em;
+    color: #777;
+}
+
+.location {
+    color: #DB5C5F;
+}
