@@ -4242,7 +4242,7 @@ li:nth-child(n+1):nth-last-child(-n+1) {
     line-height: 1.2em;
 }
 
-.event, .framework {
+.event, .framework, .group {
     margin-bottom: 0.5em;
     display: block;
     text-decoration: none;
@@ -4251,7 +4251,7 @@ li:nth-child(n+1):nth-last-child(-n+1) {
     padding: 1em 0.5em;
 }
 
-.event:hover, .framework:hover {
+.event:hover, .framework:hover, .group:hover {
     text-decoration: none;
     background-color: #fafafa;
     box-shadow: #ccc 3px 3px 3px;
@@ -4428,4 +4428,43 @@ li:nth-child(n+1):nth-last-child(-n+1) {
 
 .location {
     color: #DB5C5F;
+}
+
+.group-members {
+    columns: 3; 
+    -webkit-columns: 3; 
+    -moz-columns: 3;
+    list-style: none;
+}
+
+.label {
+    border-radius: 1em;
+    background-color: #4CA8A9;
+    color: #fff;
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+    text-transform: none;
+}
+
+.label:hover {
+    text-decoration: none;
+    color: #fff !important;
+    font-weight: bold !important;
+}
+
+.status {
+    font-size: 0.8em;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    border: 1px solid #ccc;
+}
+
+.group-members li {
+    margin-right: 2em;
+}
+
+.group-members>li>strong {
+    font-size: 0.8em;
+    color: #999;
+    font-variant: small-caps;
 }

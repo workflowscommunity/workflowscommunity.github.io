@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<article class="post">
+    <header>
+        <div class="title">
+            <h2>{{page.title}}</h2>
+            <a href="#members" class="label"><i class="fas fa-users"></i>&nbsp;&nbsp;{{page.members| size}} members</a>
+            <span class="status">
+                <i class="fas fa-circle-notch {% if page.active %}color-1{% else %}color-6{% endif %}"></i>
+                &nbsp;{% if page.active %}Active{% else %}Inactive{% endif %}
+            </span>
+        </div>
+    </header>
+</article>
+
+<a id="members"></a>
+<article class="post">
+    <header>
+        <div class="title">
+            <h3>Members</h3>
+            <p>The {{page.title}} working group is composed of {{page.members | size}} members</p>
+        </div>
+    </header>
+    
+    <div class="row">
+        <ul class="group-members">
+            {% for member in page.members %}
+            <li>
+            {% if member.link %}
+            <a href="{{member.link}}" target="_blank">{{member.name}}</a>
+            {% else %}
+            {{member.name}}
+            {% endif %}
+            {% if member.role %}<strong>&nbsp;&nbsp;{{member.role}}</strong>{% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</article>

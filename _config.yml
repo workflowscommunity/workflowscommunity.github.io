@@ -18,7 +18,7 @@ collections:
     permalink: /events/summits/:path/
   working_groups:
     output: true
-    permalink: /research/working_groups/:path/
+    permalink: /groups/:path/
 
 plugins:
   - jekyll-sitemap    # Adds sitemap to the website at /sitemap.xml

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Working Groups
-permalink: /research/working_groups
+permalink: /groups
 ---
 
 <article class="post">
@@ -15,40 +15,18 @@ permalink: /research/working_groups
     </header>
 
     <div class="row">
-        {% assign frameworks = site.data.research_frameworks | sort: "name" %}
-        {% for framework in frameworks %}
-        <div class="col-sm-12 col-md-12 framework">
-            {% if framework.icon %}
-            <div class="framework-icon">
-                <a href="{{framework.url}}" target="_blank"><img src="{{framework.icon}}"
-                        alt="{{framework.name}}" /></a>
-            </div>
-            {% endif %}
-            <div class="framework-content">
-                <a href="{{framework.url}}" target="_blank"><strong>{{framework.name}}</strong></a>
+        {% assign groups = site.working_groups | sort: "name" %}
+        {% for group in groups %}
+        <div class="col-sm-12 col-md-12 group">
+            <div class="framework-content" style="margin-left: 0.5em">
+                <a href="{{group.url}}"><strong>{{group.title}}</strong></a>
                 <p class="description">{{framework.description}}</p>
-                <div class="badges">
-                    {% if framework.github %}
-                    <a href="{{framework.github}}" target="_blank" class="badge github"><i
-                            class="fab fa-github"></i>&nbsp;&nbsp;GitHub</a>
-                    {% endif %}
-                    {% if framework.gitlab %}
-                    <a href="{{framework.gitlab}}" target="_blank" class="badge gitlab"><i
-                            class="fab fa-gitlab"></i>&nbsp;&nbsp;GitLab</a>
-                    {% endif %}
-                    {% if framework.documentation %}
-                    <a href="{{framework.documentation}}" target="_blank" class="badge documentation"><i
-                            class="fas fa-book"></i>&nbsp;&nbsp;Documentation</a>
-                    {% endif %}
+                <div>
+                    <span class="badge"><i class="fas fa-users"></i>&nbsp;&nbsp;{{group.members | size}} Members</span> | 
+                    <span class="badge">
+                        <i class="fas fa-circle-notch {% if group.active %}color-1{% else %}color-6{% endif %}"></i>
+                        &nbsp;{% if group.active %}Active{% else %}Inactive{% endif %}</span>
                 </div>
-                {% if framework.tags %}
-                <div class="tags">
-                    {% assign tags = framework.tags | sort %}
-                    {% for tag in tags %}
-                    <span class="tag"><i class="fas fa-circle" style="font-size: 0.7em"></i>&nbsp;&nbsp;{{tag}}</span>
-                    {% endfor %}
-                </div>
-                {% endif %}
             </div>
         </div>
         {% endfor %}
