@@ -9,14 +9,56 @@ permalink: /
     </div>
 </article>
 
-<article class="post">
-    <header>
-        <div class="title">
-            <h1></h1>
+<div class="row" style="margin-left: 0.075em; margin-right: 0.075em; margin-bottom: 3em">
+    <div class="col-sm-12 col-md-6">
+        <div class="mini-box">
         </div>
-    </header>
+    </div>
 
-</article>
+    <!-- Events -->
+    <div class="col-sm-12 col-md-6">
+        <div class="mini-box events">
+            <header>
+                <div class="title" style="border-bottom: 1px solid #ccc;">
+                    <h3 style="margin: 0">Events</h3>
+                    <p style="margin: 0; margin-bottom: 0.5em;">Upcoming Events</p>
+                </div>
+            </header>
+            <div class="row">
+                {% assign events = site.data.events | sort: 'date' %}
+                {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+                {% for event in events %}
+                {% capture eventtime %}{{event.date | date: '%s'}}{% endcapture %}
+                {% if eventtime >= nowunix %}
+                <div class="col-sm-12 col-md-12" style="padding: 0 0.5em">
+                    <a href="{{event.url}}" class="event" target="_blank">
+                        <div class="event-date" style="min-width: 4em; max-width: 4em;">
+                            <span class="header" style="font-size: 1em">{{event.date | date: "%b %d" }}</span><br />
+                            <span class="subheader" style="font-size: 0.8em">{{event.date | date: "%Y" }}</span>
+                        </div>
+                        <div class="event-content" style="line-height: 1em;">
+                            <span class="
+                            {% if event.type == 'Conference' %}
+                                color-7
+                            {% endif %}
+                            ">{{event.name}}</span><br />
+                            <span style="font-size: 0.8em"><i class="fas fa-map-marker"
+                                    style="font-size: 0.8em; color: #999"></i> {{event.location}}</span><br />
+                            {% if event.deadlines %}
+                            {% for d in event.deadlines %}
+                            <span class="deadlines">{{d.name}}: <strong>{{d.date | date: "%b %d,
+                                    %Y"}}</strong></span><br />
+                            {% endfor %}
+                            {% endif %}
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
 
 <article class="post">
     <header>
