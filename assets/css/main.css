@@ -4488,3 +4488,7 @@ li:nth-child(n+1):nth-last-child(-n+1) {
     color: #999;
     font-variant: small-caps;
 }
+
+#twitter-widget-0 {
+    border-radius: 10px;
+}
