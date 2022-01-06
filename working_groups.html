@@ -18,8 +18,8 @@ permalink: /groups
         {% assign groups = site.working_groups | sort: "name" %}
         {% for group in groups %}
         <div class="col-sm-12 col-md-12 group">
-            <div class="framework-content" style="margin-left: 0.5em">
-                <a href="{{group.url}}"><strong>{{group.title}}</strong></a>
+            <a href="{{group.url}}" class="framework-content" style="margin-left: 0.5em; text-decoration: none;">
+                <strong>{{group.title}}</strong>
                 <p class="description">{{framework.description}}</p>
                 <div>
                     <span class="badge"><i class="fas fa-users"></i>&nbsp;&nbsp;{{group.members | size}} Members</span> | 
@@ -27,7 +27,7 @@ permalink: /groups
                         <i class="fas fa-circle-notch {% if group.active %}color-1{% else %}color-6{% endif %}"></i>
                         &nbsp;{% if group.active %}Active{% else %}Inactive{% endif %}</span>
                 </div>
-            </div>
+            </a>
         </div>
         {% endfor %}
     </div>
