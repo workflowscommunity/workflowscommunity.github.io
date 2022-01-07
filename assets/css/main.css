@@ -4311,6 +4311,7 @@ li:nth-child(n+1):nth-last-child(-n+1) {
 
 .events {
     min-height: 30em;
+    max-height: 30em;
     margin-left: 1em;
 }
 
