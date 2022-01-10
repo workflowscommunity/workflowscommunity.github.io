@@ -6,10 +6,10 @@
   repository: parsl
   type: github
 
-# - organization: nextflow-io
-#   repository: nextflow
-#   type: github
+- organization: nextflow-io
+  repository: nextflow
+  type: github
 
-# - organization: pegasus-isi
-#   repository: pegasus
-#   type: github
+- organization: pegasus-isi
+  repository: pegasus
+  type: github
