@@ -103,6 +103,11 @@
   image: seqeralabs.png
   link: https://seqera.io
 
+- name: University of Queensland, Australia
+  founding: true
+  image: uq.png
+  link: https://www.uq.edu.au/
+
 - name: University of Freiburg
   founding: true
   image: ufreiburg.png

@@ -94,6 +94,16 @@
     image: uiuc.png
     link: https://illinois.edu/
 
+- name: David Abramson
+  role: Member
+  photo: abramson.jpg
+  link: https://researchers.uq.edu.au/researcher/2986
+  leadership: false
+  institution:
+    name: University of Queensland, Australia
+    image: uq.png
+    link: https://www.uq.edu.au/
+
 - name: İlkay Altintaş
   role: Member
   photo: altintas.jpg
