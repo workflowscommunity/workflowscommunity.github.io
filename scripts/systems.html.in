@@ -1,0 +1,70 @@
+---
+layout: default
+title: $title
+organization: $organization
+repository: $repository
+headline: $subtitle
+last_update: $day $month $year
+date_sort: $year$monthn$day
+description: $subtitle
+tags: $tags
+avatar: $avatar
+---
+
+<article class="post">
+    <header>
+        <div class="title">
+            <a href="$website" target="_blank"><img src="$avatar" alt="$title" /></a>
+            <h1>$title</h1>
+            <p class="system-subtitle">
+                $subtitle<br />
+                <a href="$website" target="_blank">$website</a> - 
+                <span class="light-gray">&mdash;  <i class="far fa-clock"></i> Last updated: {{page.last_update}}</span>
+            </p>
+        </div>
+        <div class="meta">
+            <ul class="icons">
+                <li>
+                    <a href="https://github.com/$organization/$repository" target="_blank" class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i><i class="fab fa-github fa-stack-1x"></i></a>
+                </li>
+                $twitter
+                $youtube
+            </ul>
+            $release
+        </div>
+    </header>
+
+    <p>
+        $description
+    </p>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-4">
+            <ul class="system-learn">
+                <li class="title"><i class="fas fa-sort-down"></i> Project Information</li>
+                <li><a href="$website" target="_blank"><i class="fas fa-link"></i>Website</a></li>
+                $doc_installation
+                $doc_tutorial
+                $doc_general
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="contributors">
+            <span style="text-transform: uppercase; letter-spacing: 0.2em; color: #999; font-size: 0.8em; line-height: 2.5em">Contributors:</span><br />
+            $contributors_list
+        </div>
+        <!--ul class="actions">
+            <li><a href="single.html" class="button large">Continue Reading</a></li>
+        </ul-->
+        <ul class="stats">
+            <li><a href="https://github.com/$organization/$repository/network/members" target="_blank"><i class="fas fa-code-branch"></i> $forks</a></li>
+            <li><a href="https://github.com/$organization/$repository/stargazers" target="_blank"><i class="far fa-star"></i> $stargazers</a></li>
+            <li><a href="https://github.com/$organization/$repository/issues" target="_blank"><i class="far fa-dot-circle"></i> $issues</a></li>
+            <li><i class="fab fa-osi"></i> $license</li>
+        </ul>
+    </footer>
+
+</article>

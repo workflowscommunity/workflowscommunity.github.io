@@ -1,0 +1,37 @@
+---
+layout: default
+title: Workflows Systems
+permalink: /systems
+---
+
+<article class="post">
+    <header>
+        <div class="title">
+            <h2>{{page.title}}</h2>
+            <p>
+                Collection of actively-developed open source workflow systems
+            </p>
+        </div>
+    </header>
+
+    <div class="row">
+        {% assign systems = site.systems | sort: "date_sort" | reverse %}
+        {% for system in systems %}
+        <div class="col-sm-12 col-md-12">
+            <a href="{{system.url}}" class="system">
+                {% if system.avatar %}
+                <div class="system-avatar">
+                    <img src="{{system.avatar}}" alt="{{system.repository}}" />
+                </div>
+                {% endif %}
+                <div class="system-content">
+                    <strong>{{system.title}}</strong><br />
+                    {{system.headline}}<br />
+                    <span class="light-gray"><i class="far fa-clock"></i> {{system.last_update}}</span>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <br />
+</article>

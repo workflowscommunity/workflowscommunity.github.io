@@ -1,0 +1,15 @@
+- organization: workflowscommunity
+  repository: workflow-system-test-repo
+  type: github
+
+- organization: Parsl
+  repository: parsl
+  type: github
+
+# - organization: nextflow-io
+#   repository: nextflow
+#   type: github
+
+# - organization: pegasus-isi
+#   repository: pegasus
+#   type: github

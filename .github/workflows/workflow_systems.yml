@@ -1,0 +1,26 @@
+name: Build workflow systems
+
+on:
+  schedule:
+    - cron: "0 0,12 * * *"
+  push:
+    branches:
+      - master
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Generate workflows pages
+        env:
+          JEKYLL_TOKEN: ${{ secrets.JEKYLL_PAT }}
+        run: |
+          rm -rf _systems/*
+          python3 scripts/process_systems.py
+
+      - uses: helaili/jekyll-action@2.0.1
+        env:
+          JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+        with:
+          target_branch: 'gh-pages'

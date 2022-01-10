@@ -19,6 +19,9 @@ collections:
   working_groups:
     output: true
     permalink: /groups/:path/
+  systems:
+    output: true
+    permalink: /systems/:path/
 
 plugins:
   - jekyll-sitemap    # Adds sitemap to the website at /sitemap.xml
