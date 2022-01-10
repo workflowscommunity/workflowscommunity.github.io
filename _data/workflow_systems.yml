@@ -13,3 +13,11 @@
 - organization: pegasus-isi
   repository: pegasus
   type: github
+
+- organization: cooperative-computing-lab
+  repository: cctools
+  type: github
+
+- organization: bsc-wdc
+  repository: compss
+  type: github
