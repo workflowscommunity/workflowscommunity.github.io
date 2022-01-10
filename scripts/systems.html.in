@@ -39,17 +39,18 @@ avatar: $avatar
         $description
     </p>
 
-    <div class="row">
-        <div class="col-sm-12 col-md-4">
-            <ul class="system-learn">
-                <li class="title"><i class="fas fa-sort-down"></i> Project Information</li>
-                <li><a href="$website" target="_blank"><i class="fas fa-link"></i>Website</a></li>
-                $doc_installation
-                $doc_tutorial
-                $doc_general
-            </ul>
-        </div>
+    <div class="system-info">
+        <h1>Project Information</h1>
+        <ul>
+            <li><a href="$website" target="_blank"><i class="fas fa-link"></i><br />Website</a></li>
+            $doc_installation
+            $doc_tutorial
+            $doc_general
+            $language
+        </ul>
     </div>
+
+    $execution_environment
 
     <footer>
         <div class="contributors">
