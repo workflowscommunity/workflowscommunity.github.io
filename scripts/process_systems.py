@@ -18,6 +18,7 @@ def _get_value(key, obj, default_value):
 
 systems = []
 headers = {
+    "Accept": "application/vnd.github.scarlet-witch-preview+json",
     "Accept": "application/vnd.github.mercy-preview+json",
     "Authorization": f"token {os.environ['JEKYLL_TOKEN']}"
 }
@@ -31,6 +32,7 @@ for s in systems:
     url = f"https://api.github.com/repos/{s['organization']}/{s['repository']}"
     r = requests.get(url, headers=headers)
     response = r.json()
+    # print(json.dumps(response, indent=2))
 
     # repo general information
     s["title"] = response["name"]
@@ -43,9 +45,9 @@ for s in systems:
     s["stargazers"] = response["stargazers_count"]
     s["avatar"] = response["owner"]["avatar_url"]
     s["website"] = response["homepage"]
+    s["language"] = f"<li><i class=\"fas fa-code\"></i><br />{response['language']}</li>"
     s["twitter"] = ""
     s["youtube"] = ""
-    s["language"] = ""
     s["doc_general"] = ""
     s["doc_installation"] = ""
     s["doc_tutorial"] = ""
