@@ -37,3 +37,15 @@
 - organization: LLNL
   repository: maestrowf
   type: github
+
+- organization: galaxyproject
+  repository: galaxy
+  type: github
+
+- organization: snakemake
+  repository: snakemake
+  type: github
+
+- organization: materialsproject
+  repository: fireworks
+  type: github
