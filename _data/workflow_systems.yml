@@ -21,3 +21,19 @@
 - organization: bsc-wdc
   repository: compss
   type: github
+
+- organization: swift-lang
+  repository: swift-t
+  type: github
+
+- organization: radical-cybertools
+  repository: radical.entk
+  type: github
+
+- organization: LLNL
+  repository: merlin
+  type: github
+
+- organization: LLNL
+  repository: maestrowf
+  type: github

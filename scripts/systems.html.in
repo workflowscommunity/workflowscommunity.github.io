@@ -3,11 +3,11 @@ layout: default
 title: $title
 organization: $organization
 repository: $repository
-headline: $subtitle
+headline: "$subtitle"
 last_update: $day $month $year
 date_sort: $year$monthn$day
-description: $subtitle
-language: $language
+description: "$subtitle"
+language: "$language"
 tags: $tags
 avatar: $avatar
 ---
