@@ -27,7 +27,10 @@ permalink: /systems
                 <div class="system-content">
                     <strong>{{system.title}}</strong><br />
                     {{system.headline}}<br />
-                    <span class="light-gray"><i class="far fa-clock"></i> {{system.last_update}}</span>
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> {{system.language}}</span></li>
+                        <li><span class="light-gray"><i class="far fa-clock"></i> {{system.last_update}}</span></li>
+                    </ul>
                 </div>
             </a>
         </div>

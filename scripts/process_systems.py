@@ -45,7 +45,7 @@ for s in systems:
     s["stargazers"] = response["stargazers_count"]
     s["avatar"] = response["owner"]["avatar_url"]
     s["website"] = response["homepage"]
-    s["language"] = f"<li><i class=\"fas fa-code\"></i><br />{response['language']}</li>"
+    s["language"] = response['language']
     s["twitter"] = ""
     s["youtube"] = ""
     s["doc_general"] = ""
@@ -82,7 +82,7 @@ for s in systems:
             data[0]["published_at"], "%Y-%m-%dT%H:%M:%SZ")
         release_date = date.strftime("%d %b %Y")
         s["release"] = f"<a href=\"{data[0]['html_url']}\" target=\"_blank\" class=\"release-button\">{data[0]['name']} " \
-            f"<span class=\"light-gray\">({release_date})</span></a>"
+            f"</a><br /><span class=\"light-gray\"><i class=\"far fa-clock\"></i> Released on: {release_date}</span>"
 
     # contributors
     r = requests.get(response['contributors_url'], headers=headers)
@@ -105,11 +105,9 @@ for s in systems:
         s["subtitle"] = _get_value("headline", data, s["subtitle"])
         s["description"] = _get_value("description", data, s["description"])
         s["website"] = _get_value("website", data, s["website"])
+        s["avatar"] = _get_value("icon", data, s["avatar"])
+        s["language"] = _get_value("language", data, s["language"])
         
-        # language
-        if "language" in data:
-            s["language"] = f"<li><i class=\"fas fa-code\"></i><br />{data['language']}</li>"
-
         # social
         if "social" in data:
             if "twitter" in data["social"]:

@@ -7,6 +7,7 @@ headline: $subtitle
 last_update: $day $month $year
 date_sort: $year$monthn$day
 description: $subtitle
+language: $language
 tags: $tags
 avatar: $avatar
 ---
@@ -41,12 +42,12 @@ avatar: $avatar
 
     <div class="system-info">
         <h1>Project Information</h1>
-        <ul>
+        <ul style="justify-content: center">
             <li><a href="$website" target="_blank"><i class="fas fa-link"></i><br />Website</a></li>
             $doc_installation
             $doc_tutorial
             $doc_general
-            $language
+            <li><i class="fas fa-code"></i><br />$language</li>
         </ul>
     </div>
 
