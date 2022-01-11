@@ -12,9 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      
       - name: Generate workflows pages
-        with:
-          token: ${{ secrets.JEKYLL_PAT }}
+        env:
+          JEKYLL_TOKEN: ${{ secrets.JEKYLL_PAT }}
         run: |
           rm -rf _systems/*
           python3 scripts/process_systems.py
