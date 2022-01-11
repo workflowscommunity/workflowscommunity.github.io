@@ -10,6 +10,8 @@ description: "$subtitle"
 language: "$language"
 tags: $tags
 avatar: $avatar
+release_name: "$release_name"
+release_date: $release_date
 ---
 
 <article class="post">
@@ -19,7 +21,7 @@ avatar: $avatar
             <h1>$title</h1>
             <p class="system-subtitle">
                 $subtitle<br />
-                <a href="$website" target="_blank">$website</a> - 
+                <a href="$website" target="_blank">$website</a> 
                 <span class="light-gray">&mdash;  <i class="far fa-clock"></i> Last updated: {{page.last_update}}</span>
             </p>
         </div>

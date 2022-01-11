@@ -48,6 +48,9 @@ for s in systems:
     s["language"] = response['language']
     s["twitter"] = ""
     s["youtube"] = ""
+    s["release"] = ""
+    s["release_name"] = ""
+    s["release_date"] = ""
     s["doc_general"] = ""
     s["doc_installation"] = ""
     s["doc_tutorial"] = ""
@@ -75,14 +78,14 @@ for s in systems:
     url = response['releases_url']
     r = requests.get(url[:-5], headers=headers)
     data = r.json()
-    s["release"] = ""
-    s["releases"] = len(data)
+    release_url = None
     if len(data) > 0:
         date = datetime.datetime.strptime(
             data[0]["published_at"], "%Y-%m-%dT%H:%M:%SZ")
         release_date = date.strftime("%d %b %Y")
-        s["release"] = f"<a href=\"{data[0]['html_url']}\" target=\"_blank\" class=\"release-button\">{data[0]['name']} " \
-            f"</a><br /><span class=\"light-gray\"><i class=\"far fa-clock\"></i> Released on: {release_date}</span>"
+        release_url = data[0]["html_url"]
+        s["release_name"] = data[0]["name"]
+        s["release_date"] = release_date
 
     # contributors
     r = requests.get(response['contributors_url'], headers=headers)
@@ -107,7 +110,7 @@ for s in systems:
         s["website"] = _get_value("website", data, s["website"])
         s["avatar"] = _get_value("icon", data, s["avatar"])
         s["language"] = _get_value("language", data, s["language"])
-        
+
         # social
         if "social" in data:
             if "twitter" in data["social"]:
@@ -120,6 +123,12 @@ for s in systems:
                     f"<a href=\"{data['social']['youtube']}\" target=\"_blank\" class=\"fa-stack fa-2x\">" \
                     "<i class=\"fa fa-circle fa-stack-2x\" style=\"color: #fff\"></i><i class=\"fab fa-youtube fa-stack-1x\"></i></a></li>"
 
+        # release
+        if "release" in data:
+            if "date" in data["release"]:
+                s["release_date"] = data["release"]["date"].strftime("%d %b %Y")
+            s["release_name"] = _get_value("version", data["release"], s["release_name"])
+
         # documentation
         if "documentation" in data:
             s["doc_general"] = f"<li><a href=\"{data['documentation']['general']}\" target=\"_blank\"><i class=\"fas fa-book\"></i><br />Documentation</a></li>" if "general" in data["documentation"] else ""
@@ -128,7 +137,7 @@ for s in systems:
 
         # execution environment
         if "execution_environment" in data:
-            s["execution_environment"] = "<div class=\"system-info\"><h1>Execution Environment</h1>" 
+            s["execution_environment"] = "<div class=\"system-info\"><h1>Execution Environment</h1>"
 
             # user interfaces
             if "interfaces" in data["execution_environment"]:
@@ -152,6 +161,12 @@ for s in systems:
                 s["execution_environment"] += "</ul></div>"
 
         s["execution_environment"] += "</div>"
+
+    # release component
+    if s["release_name"]:
+        s["release"] = f"<a href=\"{release_url}\" target=\"_blank\" class=\"release-button\">{s['release_name']} " \
+            f"</a><br /><span class=\"light-gray\"><i class=\"far fa-clock\"></i> Released on: {s['release_date']}</span>"
+
 
     # fill template
     with open('scripts/systems.html.in') as f:
