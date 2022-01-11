@@ -13,8 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Generate workflows pages
-        env:
-          JEKYLL_TOKEN: ${{ secrets.JEKYLL_PAT }}
+        with:
+          token: ${{ secrets.JEKYLL_PAT }}
         run: |
           rm -rf _systems/*
           python3 scripts/process_systems.py
@@ -27,7 +27,6 @@ jobs:
             ${{ runner.os }}-gems-
 
       - uses: helaili/jekyll-action@v2
-        env:
-          JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
         with:
+          token: ${{ secrets.JEKYLL_PAT }}
           target_branch: 'gh-pages'
