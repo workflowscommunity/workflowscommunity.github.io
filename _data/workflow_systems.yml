@@ -49,3 +49,7 @@
 - organization: materialsproject
   repository: fireworks
   type: github
+
+- organization: broadinstitute
+  repository: cromwell
+  type: github
