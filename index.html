@@ -27,7 +27,7 @@ permalink: /
                 {% if eventtime >= nowunix %}
                 <div class="col-sm-12 col-md-12" style="padding: 0 0.5em">
                     <a href="{{event.url}}" class="event" target="_blank">
-                        <div class="event-date" style="min-width: 4em; max-width: 4em;">
+                        <div class="event-date" style="min-width: 5em; max-width: 5em; max-height: 10em;">
                             <span class="header" style="font-size: 1em">{{event.date | date: "%b %d" }}</span><br />
                             <span class="subheader" style="font-size: 0.8em">{{event.date | date: "%Y" }}</span>
                         </div>
@@ -36,7 +36,7 @@ permalink: /
                             {% if event.type == 'Conference' %}
                                 color-7
                             {% endif %}
-                            ">{{event.name}}</span><br />
+                            ">{{event.series}}</span><br />
                             <span style="font-size: 0.8em"><i class="fas fa-map-marker"
                                     style="font-size: 0.8em; color: #999"></i> {{event.location}}</span><br />
                             {% if event.deadlines %}

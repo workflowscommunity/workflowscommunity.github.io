@@ -1,4 +1,5 @@
 - name: 18th IEEE International Conference on e-Science
+  series: eScience 2022
   date: 2022-09-30
   location: Utah, USA
   url: https://escience-conference.org/2022
@@ -10,6 +11,7 @@
       date: 2022-07-11
 
 - name: 31st International Symposium on High-Performance Parallel and Distributed Computing
+  series: HPDC 2022
   date: 2022-06-27
   location: Minneapolis, USA
   url: http://www.hpdc.org/2022/
@@ -20,3 +22,17 @@
     - name: Poster Submissions
       date: 2022-04-04
       
+- name: The International Conference for High Performance Computing, Networking, Storage, and Analysis
+  series: SC'22
+  location: Dallas, USA
+  date: 2022-11-13
+  url: https://sc22.supercomputing.org/
+  type: Conference
+  deadlines:
+    - name: Paper Submissions
+      date: 2022-04-01
+    - name: Tutorial Submissions
+      date: 2022-04-22
+    - name: Posters Submissions
+      date: 2022-08-05
+  
