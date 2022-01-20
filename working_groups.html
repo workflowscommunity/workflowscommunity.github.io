@@ -17,6 +17,12 @@ permalink: /groups
     <div class="row">
         {% assign groups = site.working_groups | sort: "name" %}
         {% for group in groups %}
+        {% assign status_color = "color-2" %}
+        {% if group.status == "Establishing" %}
+            {% assign status_color = "#D4D62D" %}
+        {% elsif group.status == "Establishing" %}
+            {% assign status_color = "color-6" %}
+        {% endif %}
         <div class="col-sm-12 col-md-12 group">
             <a href="{{group.url}}" class="framework-content" style="margin-left: 0.5em; text-decoration: none;">
                 <strong>{{group.title}}</strong>
@@ -24,8 +30,8 @@ permalink: /groups
                 <div>
                     <span class="badge"><i class="fas fa-users"></i>&nbsp;&nbsp;{{group.members | size}} Members</span> | 
                     <span class="badge">
-                        <i class="fas fa-circle-notch {% if group.active %}color-1{% else %}color-6{% endif %}"></i>
-                        &nbsp;{% if group.active %}Active{% else %}Inactive{% endif %}</span>
+                        <i class="fas fa-circle-notch" style="color: {{status_color}}"></i>
+                        &nbsp;{{group.status}}</span>
                 </div>
             </a>
         </div>

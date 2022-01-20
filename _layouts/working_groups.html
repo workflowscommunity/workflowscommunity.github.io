@@ -2,17 +2,29 @@
 layout: default
 ---
 
+{% assign status_color = "color-2" %}
+{% if page.status == "Establishing" %}
+{% assign status_color = "#D4D62D" %}
+{% elsif page.status == "Establishing" %}
+{% assign status_color = "color-6" %}
+{% endif %}
+
 <article class="post">
     <header>
         <div class="title">
             <h2>{{page.title}}</h2>
             <a href="#members" class="label"><i class="fas fa-users"></i>&nbsp;&nbsp;{{page.members| size}} members</a>
             <span class="status">
-                <i class="fas fa-circle-notch {% if page.active %}color-1{% else %}color-6{% endif %}"></i>
-                &nbsp;{% if page.active %}Active{% else %}Inactive{% endif %}
+                <i class="fas fa-circle-notch" style="color: {{status_color}}"></i>
+                &nbsp;{{ page.status }}
             </span>
         </div>
     </header>
+
+    <div class="wg-content">
+        {{content | markdownify}}
+    </div>
+    <br /><br />
 </article>
 
 <a id="members"></a>

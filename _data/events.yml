@@ -36,3 +36,12 @@
     - name: Posters Submissions
       date: 2022-08-05
   
+- name: 28th International European Conference on Parallel and Distributed Computing
+  series: Euro-Par 2022
+  location: Glasgow, UK
+  date: 2022-08-22
+  url: https://2022.euro-par.org/
+  type: Conference
+  deadlines:
+    - name: Paper Submissions
+      date: 2022-02-11
