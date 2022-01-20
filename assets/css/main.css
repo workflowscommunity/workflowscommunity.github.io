@@ -2890,6 +2890,15 @@ ul.posts article header > :last-child {
     margin: 0;
 }
 
+.list-stats {
+    font-size: 0.6em;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    line-height: 1.3em;
+    font-variant: small-caps;
+    color: #999;
+}
+
 @media screen and (max-width: 980px) {
 
     .post {
@@ -3409,7 +3418,8 @@ body.single #wrapper {
     -ms-flex-grow: 1;
     flex-grow: 1;
     -ms-flex: 1;
-    width: 100%;
+    max-width: 100%;
+    min-width: 0;
 }
 
 #main .bb-title {
@@ -4663,7 +4673,7 @@ body.is-menu-visible #menu {
     color:rgb(204, 110, 3)
 }
 
-.corner-button {
+.bottom-button {
     position: absolute; 
     z-index: 100;
     bottom: 0; 
@@ -4679,7 +4689,32 @@ body.is-menu-visible #menu {
     text-align: center;
 }
 
-.corner-button:hover {
+.corner-button {
+    position: absolute; 
+    z-index: 100;
+    top: 0; 
+    right: 0;
+    background-color: #ED8D34;
+    color: #fff;
+    padding: 0.1em 1em;
+    font-size: 0.9em;
+    border-top-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    text-align: center;
+}
+
+.bottom-button:hover, .corner-button:hover {
     color: #fff !important;
     text-decoration: none;
+}
+
+.systems {
+    overflow-x: auto;
+    margin: -3em -1em -3em -1em; 
+    min-height: 10em;
+}
+
+.systems-list {
+    padding-top: 1em;
+    display: flex;
 }
