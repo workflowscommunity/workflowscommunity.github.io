@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Workflow-Related Events
-permalink: /events/related
+permalink: /events
 ---
 
 <article class="post">
@@ -27,7 +27,7 @@ permalink: /events/related
                     <span class="subheader">{{event.date | date: "%Y" }}</span>
                 </div>
                 <div class="event-content">
-                    <strong>{{event.name}}</strong><br />
+                    <strong>{{event.series}}</strong>: {{event.name}}<br />
                     <span class="location">{{event.location}}</span><br />
                     {% if event.deadlines %}
                     {% for d in event.deadlines %}

@@ -18,11 +18,12 @@ permalink: /
                     <h3 style="margin: 0">Events</h3>
                     <p style="margin: 0; margin-bottom: 0.5em;">Upcoming Community Events</p>
                 </div>
+                <a href="/events" class="corner-button">All Events</a>
             </header>
             <div class="row">
-                {% assign events = site.data.events | sort: 'date' %}
+                {% assign events = site.data.events | sort: 'date'%}
                 {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
-                {% for event in events %}
+                {% for event in events limit: 10 %}
                 {% capture eventtime %}{{event.date | date: '%s'}}{% endcapture %}
                 {% if eventtime >= nowunix %}
                 <div class="col-sm-12 col-md-12" style="padding: 0 0.5em">
@@ -54,8 +55,10 @@ permalink: /
         </div>
     </div>
     
+    <div class="col-sm-1">&nbsp;</div>
+
     <!-- Jobs -->
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-5">
         <div class="mini-box jobs">
         </div>
     </div>
