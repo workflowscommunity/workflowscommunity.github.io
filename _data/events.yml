@@ -8,3 +8,15 @@
       date: 2022-05-16
     - name: Poster and Abstract Submissions
       date: 2022-07-11
+
+- name: 31st International Symposium on High-Performance Parallel and Distributed Computing
+  date: 2022-06-27
+  location: Minneapolis, USA
+  url: http://www.hpdc.org/2022/
+  type: Conference
+  deadlines:
+    - name: Paper Submissions
+      date: 2022-01-27
+    - name: Poster Submissions
+      date: 2022-04-04
+      
