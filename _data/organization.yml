@@ -144,6 +144,16 @@
     image: seqeralabs.png
     link: https://seqera.io
 
+- name: Christopher Erdmann
+  role: Member
+  photo: erdmann.jpg
+  link: https://www.agu.org/Learn-About-AGU/About-AGU/Data-Leadership
+  leadership: false
+  institution:
+    name: American Geophysical Union
+    image: agu.png
+    link: https://www.agu.org/
+
 - name: Thomas Fahringer
   role: Member
   photo: fahringer.jpg
