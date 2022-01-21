@@ -1,6 +1,6 @@
-- organization: workflowscommunity
-  repository: workflow-system-test-repo
-  type: github
+# - organization: workflowscommunity
+#   repository: workflow-system-test-repo
+#   type: github
 
 - organization: Parsl
   repository: parsl

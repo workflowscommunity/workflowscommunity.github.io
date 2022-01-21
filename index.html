@@ -9,6 +9,43 @@ permalink: /
     </div>
 </article>
 
+<!-- Workflow Systems -->
+<article class="post">
+    <header>
+        <div class="title" style="padding-bottom: 1em; padding-top: 2em">
+            <h3 style="margin: 0">Workflow Systems</h3>
+            <p style="margin: 0; margin-bottom: 0.5em;">Last Updated Open Source Workflow Systems</p>
+        </div>
+        <a href="/systems" class="corner-button">All Systems</a>
+    </header>
+
+    <div class="systems">
+        <div class="systems-list">
+            {% assign systems = site.systems | sort: "date_sort" | reverse %}
+            {% for system in systems limit: 10 %}
+            <a href="{{system.url}}" class="system"
+                style="min-width: 15em; max-height: 6em; min-height: 6em; box-shadow: none; flex: 0 0 auto">
+                {% if system.avatar %}
+                <div class="system-avatar">
+                    <img src="{{system.avatar}}" alt="{{system.repository}}" />
+                </div>
+                {% endif %}
+                <div class="system-content">
+                    <strong>{{system.title}}</strong>
+                    <div class="list-stats">
+                        <i class="fas fa-code"></i> {{system.language}}</span><br />
+                        {% if system.release_name != "" %}
+                        <i class="fas fa-box-open"></i> {{system.release_name}}</span><br />
+                        {% endif %}
+                        <i class="far fa-clock"></i> {{system.last_update}}
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</article>
+
 <div class="row" style="margin-left: 0.075em; margin-right: 0.075em; margin-bottom: 3em">
     <!-- Events -->
     <div class="col-sm-12 col-md-6">
@@ -71,42 +108,7 @@ permalink: /
     </div>
 </div>
 
-<!-- Workflow Systems -->
-<article class="post">
-    <header>
-        <div class="title" style="padding-bottom: 1em; padding-top: 2em">
-            <h3 style="margin: 0">Workflow Systems</h3>
-            <p style="margin: 0; margin-bottom: 0.5em;">Last Updated Open Source Workflow Systems</p>
-        </div>
-        <a href="/systems" class="corner-button">All Systems</a>
-    </header>
 
-    <div class="systems">
-        <div class="systems-list">
-            {% assign systems = site.systems | sort: "date_sort" | reverse %}
-            {% for system in systems limit: 10 %}
-            <a href="{{system.url}}" class="system"
-                style="min-width: 15em; max-height: 6em; min-height: 6em; box-shadow: none; flex: 0 0 auto">
-                {% if system.avatar %}
-                <div class="system-avatar">
-                    <img src="{{system.avatar}}" alt="{{system.repository}}" />
-                </div>
-                {% endif %}
-                <div class="system-content">
-                    <strong>{{system.title}}</strong>
-                    <div class="list-stats">
-                        <i class="fas fa-code"></i> {{system.language}}</span><br />
-                        {% if system.release_name != "" %}
-                        <i class="fas fa-box-open"></i> {{system.release_name}}</span><br />
-                        {% endif %}
-                        <i class="far fa-clock"></i> {{system.last_update}}
-                    </div>
-                </div>
-            </a>
-            {% endfor %}
-        </div>
-    </div>
-</article>
 
 
 <article class="post">
