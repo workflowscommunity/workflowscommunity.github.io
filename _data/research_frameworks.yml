@@ -8,7 +8,7 @@
     - simulation
     - modeling
 
-- name: "WfCommons: Community Framework for Enabling Scientific Workflow Research and Development"
+- name: "WfCommons: A Framework for Enabling Scientific Workflow Research and Development"
   url: https://wfcommons.org/
   description: Foundational tools for analyzing workflow execution instances, generating workflow recipes, and generating synthetic, yet realistic, workflow instances that can be used to develop new techniques, algorithms and systems that can overcome the challenges of efficient and robust execution of ever larger workflows on increasingly complex distributed infrastructures
   icon: https://wfcommons.org/favicon.ico

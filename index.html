@@ -105,6 +105,32 @@ permalink: /
                 </div>
                 <a href="/jobs" class="bottom-button" style="background-color: steelblue;">All Jobs</a>
             </header>
+            <div class="row">
+                {% assign jobs = site.jobs | sort: "application_deadline" %}
+                {% for job in jobs limit: 10 %}
+                {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
+                {% if eventtime >= nowunix %}
+                <div class="col-sm-12 col-md-12" style="padding: 0 0.5em; vertical-align: top;">
+                    <a href="{{ job.url }}" class="job-item">
+                        <div>
+                            <strong>{{ job.title }}</strong><br />
+                            {{ job.organization }}<br />
+                            <span class="light-gray">
+                                <i class="fas fa-clock"></i>&nbsp;&nbsp;{{ job.application_deadline | date: "%b %d, %Y" }} 
+                                &nbsp;&nbsp;|&nbsp;&nbsp;
+                                <i class="fas fa-map-marker"></i>&nbsp;&nbsp;&nbsp;{{ job.location }}
+                                &nbsp;&nbsp;|&nbsp;&nbsp;
+                                <i class="fas fa-briefcase"></i>&nbsp;&nbsp;{{ job.employment_type }}
+                            </span>
+                        </div>
+                        <div>
+                            <img src="{{ job.organization_logo }}" alt="{{ job.title }}" />
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>

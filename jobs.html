@@ -18,11 +18,11 @@ permalink: /jobs
 
     <div class="row">
         <div class="jobs">
-        {% assign jobs = site.jobs | sort: "application_deadline" %}
-        {% capture nowunix %}{{'now' | date: '%Y-%m-%d' | date: '%s'}}{% endcapture %}
-        {% for job in jobs %}
-        {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
-        {% if eventtime >= nowunix %}
+            {% assign jobs = site.jobs | sort: "application_deadline" %}
+            {% capture nowunix %}{{'now' | date: '%Y-%m-%d' | date: '%s'}}{% endcapture %}
+            {% for job in jobs %}
+            {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
+            {% if eventtime >= nowunix %}
             <a href="{{ job.url }}" class="job">
                 <img src="{{ job.organization_logo }}" style="max-height: 2em; max-width: 8em;" alt="{{ job.title }}" /><br />
                 <div class="title">
@@ -35,8 +35,8 @@ permalink: /jobs
                     <i class="fas fa-briefcase"></i>&nbsp;&nbsp;{{ job.employment_type }}
                 </div>
             </a>
-        {% endif %}
-        {% endfor %}
+            {% endif %}
+            {% endfor %}
         </div>
     </div>
     <br /><br/>

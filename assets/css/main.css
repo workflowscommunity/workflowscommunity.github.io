@@ -4281,7 +4281,7 @@ body.is-menu-visible #menu {
     padding: 1em;
 }
 
-.event, .framework, .group, .system {
+.event, .framework, .group, .system, .job-item {
     margin-bottom: 0.5em;
     display: block;
     text-decoration: none;
@@ -4290,7 +4290,7 @@ body.is-menu-visible #menu {
     padding: 1em 0.5em;
 }
 
-.event:hover, .framework:hover, .group:hover, .system:hover {
+.event:hover, .framework:hover, .group:hover, .system:hover, .job-item:hover {
     text-decoration: none;
     background-color: #fafafa;
     box-shadow: #ccc 3px 3px 3px;
@@ -4788,4 +4788,15 @@ body.is-menu-visible #menu {
     padding: 1em;
     border-radius: 0.5em;   
     line-height: 1.2em;
+}
+
+.job-item {
+    display: flex;
+    min-width: 100%;
+    line-height: 1.3em;
+}
+
+.job-item img {
+    max-height: 2em; 
+    max-width: 4em;
 }
