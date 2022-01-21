@@ -59,7 +59,7 @@ permalink: /
             </header>
             <div class="row">
                 {% assign events = site.data.events | sort: 'date'%}
-                {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+                {% capture nowunix %}{{'now' | date: '%Y-%m-%d' | date: '%s'}}{% endcapture %}
                 {% for event in events limit: 10 %}
                 {% capture eventtime %}{{event.date | date: '%s'}}{% endcapture %}
                 {% if eventtime >= nowunix %}
@@ -95,12 +95,13 @@ permalink: /
     <div class="col-sm-1">&nbsp;</div>
 
     <!-- Jobs -->
+    {% assign num_jobs = site.jobs | size %}
     <div class="col-sm-12 col-md-5">
         <div class="mini-box jobs">
             <header>
                 <div class="title" style="border-bottom: 1px solid #ccc;">
                     <h3 style="margin: 0">Jobs</h3>
-                    <p style="margin: 0; margin-bottom: 0.5em;">Open Positions from the Community</p>
+                    <p style="margin: 0; margin-bottom: 0.5em;"><strong>{{ num_jobs }}</strong> Open Positions from the Community</p>
                 </div>
                 <a href="/jobs" class="bottom-button" style="background-color: steelblue;">All Jobs</a>
             </header>

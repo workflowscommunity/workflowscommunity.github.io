@@ -16,7 +16,7 @@ permalink: /events
 
     <div class="row">
         {% assign events = site.data.events | sort: 'date' %}
-        {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+        {% capture nowunix %}{{'now' | date: '%Y-%m-%d' | date: '%s'}}{% endcapture %}
         {% for event in events %}
         {% capture eventtime %}{{event.date | date: '%s'}}{% endcapture %}
         {% if eventtime >= nowunix %}

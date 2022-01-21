@@ -1,0 +1,43 @@
+---
+layout: default
+title: Jobs
+permalink: /jobs
+---
+
+{% assign num_jobs = site.jobs | size %}
+
+<article class="post">
+    <header>
+        <div class="title">
+            <h2>{{page.title}}</h2>
+            <p>
+                Open Positions from the Community. There are currently <strong>{{ num_jobs }}</strong> open positions.
+            </p>
+        </div>
+    </header>
+
+    <div class="row">
+        <div class="jobs">
+        {% assign jobs = site.jobs | sort: "application_deadline" %}
+        {% capture nowunix %}{{'now' | date: '%Y-%m-%d' | date: '%s'}}{% endcapture %}
+        {% for job in jobs %}
+        {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
+        {% if eventtime >= nowunix %}
+            <a href="{{ job.url }}" class="job">
+                <img src="{{ job.organization_logo }}" style="max-height: 2em; max-width: 8em;" alt="{{ job.title }}" /><br />
+                <div class="title">
+                    {{ job.title }}<br />
+                    <p>{{ job.organization }}</p>
+                </div>
+                <div class="description">
+                    <i class="fas fa-clock"></i>&nbsp;&nbsp;{{ job.application_deadline | date: "%b %d, %Y" }}<br />
+                    <i class="fas fa-map-marker"></i>&nbsp;&nbsp;&nbsp;{{ job.location }}<br />
+                    <i class="fas fa-briefcase"></i>&nbsp;&nbsp;{{ job.employment_type }}
+                </div>
+            </a>
+        {% endif %}
+        {% endfor %}
+        </div>
+    </div>
+    <br />
+</article>

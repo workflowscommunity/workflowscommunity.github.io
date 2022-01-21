@@ -22,6 +22,9 @@ collections:
   systems:
     output: true
     permalink: /systems/:path/
+  jobs:
+    output: true
+    permalink: /jobs/:path/
 
 plugins:
   - jekyll-sitemap    # Adds sitemap to the website at /sitemap.xml
