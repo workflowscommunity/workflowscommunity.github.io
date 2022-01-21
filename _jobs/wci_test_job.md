@@ -2,7 +2,7 @@
 layout: jobs
 title: "Test: Research Scientist"
 organization: Workflows Community Initiative
-organization_logo: http://localhost:4000/images/workflows-community-logo-horizontal.png
+organization_logo: https://workflows.community/images/workflows-community-logo-horizontal.png
 location: Los Angeles, USA
 application_deadline: 2022-02-01
 apply_link: https://workflows.community/jobs
