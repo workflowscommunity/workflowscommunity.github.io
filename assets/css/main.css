@@ -4662,25 +4662,25 @@ body.is-menu-visible #menu {
     text-decoration: none;
 }
 
-.wg-content p {
+.wg-content p, .job-content p {
     margin-bottom: 1em;
 }
 
-.wg-content h1 {
-    font-size: 1.3em;
+.wg-content h1, .job-content h1 {
+    font-size: 1.2em;
 }
 
-.wg-content h2 {
-    font-size: 1.2em;
+.wg-content h2, .job-content h2 {
+    font-size: 1.1em;
     letter-spacing: 0.15em;
 }
 
-.wg-content h3 {
+.wg-content h3, .job-content h3 {
     font-size: 1em;
     letter-spacing: 0.1em;
 }
 
-.wg-content a {
+.wg-content a, .job-content a {
     color:rgb(204, 110, 3)
 }
 
@@ -4733,6 +4733,7 @@ body.is-menu-visible #menu {
 .jobs {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     max-width: 100%;
 }
 
@@ -4740,10 +4741,10 @@ body.is-menu-visible #menu {
     display: block;
     padding: 1em;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
-    min-height: 15em;
-    max-height: 15em;
-    min-width: 15em;
-    max-width: 15em;
+    min-height: 13em;
+    max-height: 13em;
+    min-width: 17em;
+    max-width: 17em;
     border-bottom: 0;
     margin: 10px;
     border-radius: 0.5em;
@@ -4756,7 +4757,7 @@ body.is-menu-visible #menu {
 
 .job .title {
     font-weight: 510;
-    min-height: 6em;
+    min-height: 5em;
     line-height: 1.3em;
 }
 
@@ -4770,4 +4771,21 @@ body.is-menu-visible #menu {
     border-top: 1px solid #eee;
     color: #999;
     font-size: 0.8em;
+}
+
+.apply, .apply:hover {
+    background-color: #0A66C3;
+    color: #fff !important;
+    border-radius: 0.5em;
+    padding: 0.5em 1.5em;
+    border: 0;
+    text-decoration: none;
+}
+
+.job-panel {
+    margin-left: 1em;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    padding: 1em;
+    border-radius: 0.5em;   
+    line-height: 1.2em;
 }
