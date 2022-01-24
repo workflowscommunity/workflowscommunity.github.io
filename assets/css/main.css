@@ -2814,6 +2814,10 @@ ul.posts article header > :last-child {
     white-space: nowrap;
 }
 
+.post .content a {
+    color: #4DABAC;
+}
+
 .post > a.image.featured {
     overflow: hidden;
 }
@@ -4707,7 +4711,7 @@ body.is-menu-visible #menu {
     top: 0; 
     right: 0;
     background-color: #ED8D34;
-    color: #fff;
+    color: #fff !important;
     padding: 0.1em 1em;
     font-size: 0.9em;
     border-top-right-radius: 0.5em;

@@ -15,40 +15,102 @@ permalink: /systems/contribute
         </div>
     </header>
 
-    <p>
-        The Workflows Community Initiative (WCI) provides a curated collection of actively-developed open source
-        workflow
-        systems. The main goal of this collection is to showcase workflow system capabilities developed by the
-        community. We
-        invite all workflow system developers and users to share their workflow systems through this collection.
-    </p>
+    <div class="content">
+        <p>
+            The Workflows Community Initiative (WCI) provides a curated collection of actively-developed open source
+            workflow
+            systems. The main goal of this collection is to showcase workflow system capabilities developed by the
+            community. We
+            invite all workflow system developers and users to share their workflow systems through this collection.
+        </p>
 
-    <h3>Adding a Workflow Repository</h3>
-    <p>
-        In order to add a workflow system repository, you only need to add the organization and repository names into an
-        YAML
-        file hosted as part of the <a href="https://github.com/workflowscommunity/workflowscommunity.github.io"
-            target="_blank">WCI GitHub repository</a>. The preferred way to submit your changes is via creating a pull
-        request
-        with the changes. To this end, these are the recommended steps for adding a workflow system:
-    </p>
-    <ol>
-        <li><strong>Fork</strong> the WCI GitHub repository</li>
-        <li><strong>Clone</strong> your forked repository:
-            <pre>git clone https://github.com/&#60;your_username>/workflowscommunity.github.io</pre>
-        </li>
-        <li><strong>Edit</strong> the <code>_data/workflow_systems.yml</code> file, and add the information regarding
-            the workflow system repository:
-            <pre>
+        <h2>Adding a Workflow System Repository</h2>
+        <p>
+            In order to add a workflow system repository, you only need to add the organization and repository names
+            into an
+            YAML
+            file hosted as part of the <a href="https://github.com/workflowscommunity/workflowscommunity.github.io"
+                target="_blank">WCI GitHub repository</a>. The preferred way to submit your changes is via creating a
+            pull
+            request
+            with the changes. To this end, these are the recommended steps for adding a workflow system:
+        </p>
+        <ol>
+            <li><strong>Fork</strong> the WCI GitHub repository</li>
+            <li><strong>Clone</strong> your forked repository:
+                <pre>git clone https://github.com/&#60;your_username>/workflowscommunity.github.io</pre>
+            </li>
+            <li><strong>Edit</strong> the <code>_data/workflow_systems.yml</code> file, and add the information
+                regarding
+                the workflow system repository:
+                <pre>
 - organization: github-organization
   repository: workflow-system-repository
   type: github</pre>
-        </li>
-        <li><strong>Commit</strong> the changes, and create a <strong>pull request</strong> for the WCI GitHub
-            repository.</li>
-        <li>The WCI team will then evaluate your pull request, and merge the changes if the workflow system repository
-            and examples are properly documented.</li>
-    </ol>
+            </li>
+            <li><strong>Commit</strong> the changes, and create a <strong>pull request</strong> for the WCI GitHub
+                repository.</li>
+            <li>The WCI team will then evaluate your pull request, and merge the changes if the workflow system
+                repository
+                and examples are properly documented.</li>
+        </ol>
+
+
+        <h2>Providing a Rich Set of Information</h2>
+        <p>
+            Although the minimum requirement for publishing a workflow system is to only have an open source repository
+            with a
+            reasonable documentation, we strongly encourage workflow system developers to provide additional metadata.
+        </p>
+        <p>
+            WCI seeks for a <code>.wci.yml</code> file in the root folder of the workflow system repository. This file
+            is expected
+            to contain metadata that would enrich the workflow system description at WCI.
+        </p>
+        <p>
+            The following example summarizes the current list of available metadata keywords (all fields are optional):
+        </p>
+        <pre>
+name: &#60;workflow_system_name> <span style="color: #999"># will use GitHub repository name if not provided</span>
+
+icon: &#60;url_to_workflow_system_logo> <span style="color: #999"># will use GitHub organization icon if not provided</span>
+
+headline: &#60;brief_description> <span style="color: #999"># will use GitHub repository description if not provided</span>
+
+description: &#60;long_description> <span style="color: #999"># nothing will be used if not provided</span>
+
+language: &#60;workflow_system_language> <span style="color: #999"># will attempt to fetch GitHub repository main language if not provided</span>
+            
+release: <span style="color: #999"># will attempt to fetch latest release from GitHub repository if not provided</span>
+  version: &#60;release_name> 
+  date: &#60;release_date> <span style="color: #999"># format: YYYY-MM-DD</span>
+            
+documentation: <span style="color: #999"># nothing will be used if not provided</span>
+  general: &#60;documentation_url>
+  installation: &#60;installation_url>
+  tutorial: &#60;tutorial_url>
+            
+social: <span style="color: #999"># nothing will be used if not provided</span>
+  twitter: &#60;twitter_name>
+  youtube: &#60;youtube_channel_url>
+            
+execution_environment: <span style="color: #999"># nothing will be used if not provided</span>
+  interfaces: <span style="color: #999"># list of interfaces</span>
+    - &#60;interface_1>
+    - &#60;interface_2>
+  resource_managers: <span style="color: #999"># list of supported resource managers</span>
+    - &#60;resource_manager_1>
+    - &#60;resource_manager_2>
+  transfer_protocols: <span style="color: #999"># list of supported transfer protocols</span>
+    - &#60;transfer_protocol_1>
+    - &#60;transfer_protocol_2>            
+</pre>
+
+        <p>
+            WCI uses GitHub actions to fetch repository information and build the workflow systems' pages. Updates to the YAML files
+            are currently processed <strong>every 12 hours</strong>.
+        </p>
+    </div>
 
     <br />
 </article>
