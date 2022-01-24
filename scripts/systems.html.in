@@ -70,5 +70,5 @@ release_date: $release_date
             <li><i class="fab fa-osi"></i> $license</li>
         </ul>
     </footer>
-
+    <br />
 </article>

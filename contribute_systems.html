@@ -1,0 +1,54 @@
+---
+layout: default
+title: "Contribute: Workflows Systems"
+permalink: /systems/contribute
+---
+
+<article class="post">
+    <header>
+        <div class="title">
+            <h2>How to Contribute with a Workflow System</h2>
+            <p>
+                Register an actively-developed open source workflow system
+            </p>
+            <a href="/systems" class="corner-button">All Systems</a>
+        </div>
+    </header>
+
+    <p>
+        The Workflows Community Initiative (WCI) provides a curated collection of actively-developed open source
+        workflow
+        systems. The main goal of this collection is to showcase workflow system capabilities developed by the
+        community. We
+        invite all workflow system developers and users to share their workflow systems through this collection.
+    </p>
+
+    <h3>Adding a Workflow Repository</h3>
+    <p>
+        In order to add a workflow system repository, you only need to add the organization and repository names into an
+        YAML
+        file hosted as part of the <a href="https://github.com/workflowscommunity/workflowscommunity.github.io"
+            target="_blank">WCI GitHub repository</a>. The preferred way to submit your changes is via creating a pull
+        request
+        with the changes. To this end, these are the recommended steps for adding a workflow system:
+    </p>
+    <ol>
+        <li><strong>Fork</strong> the WCI GitHub repository</li>
+        <li><strong>Clone</strong> your forked repository:
+            <pre>git clone https://github.com/&#60;your_username>/workflowscommunity.github.io</pre>
+        </li>
+        <li><strong>Edit</strong> the <code>_data/workflow_systems.yml</code> file, and add the information regarding
+            the workflow system repository:
+            <pre>
+- organization: github-organization
+  repository: workflow-system-repository
+  type: github</pre>
+        </li>
+        <li><strong>Commit</strong> the changes, and create a <strong>pull request</strong> for the WCI GitHub
+            repository.</li>
+        <li>The WCI team will then evaluate your pull request, and merge the changes if the workflow system repository
+            and examples are properly documented.</li>
+    </ol>
+
+    <br />
+</article>
