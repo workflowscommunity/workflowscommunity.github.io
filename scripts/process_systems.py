@@ -51,6 +51,7 @@ for s in systems:
     s["release"] = ""
     s["release_name"] = ""
     s["release_date"] = ""
+    s["release_url"] = ""
     s["doc_general"] = ""
     s["doc_installation"] = ""
     s["doc_tutorial"] = ""
@@ -78,14 +79,13 @@ for s in systems:
     url = response['releases_url']
     r = requests.get(url[:-5], headers=headers)
     data = r.json()
-    release_url = None
     if len(data) > 0:
         date = datetime.datetime.strptime(
             data[0]["published_at"], "%Y-%m-%dT%H:%M:%SZ")
         release_date = date.strftime("%d %b %Y")
-        release_url = data[0]["html_url"]
         s["release_name"] = data[0]["name"]
         s["release_date"] = release_date
+        s["release_url"] = data[0]["html_url"]
 
     # contributors
     r = requests.get(response['contributors_url'], headers=headers)
@@ -128,6 +128,7 @@ for s in systems:
             if "date" in data["release"]:
                 s["release_date"] = data["release"]["date"].strftime("%d %b %Y")
             s["release_name"] = _get_value("version", data["release"], s["release_name"])
+            s["release_url"] = _get_value("url", data["release"], s["release_url"])
 
         # documentation
         if "documentation" in data:
@@ -164,9 +165,12 @@ for s in systems:
 
     # release component
     if s["release_name"]:
-        s["release"] = f"<a href=\"{release_url}\" target=\"_blank\" class=\"release-button\">{s['release_name']} " \
-            f"</a><br /><span class=\"light-gray\"><i class=\"far fa-clock\"></i> Released on: {s['release_date']}</span>"
-
+        if s["release_url"]:
+            s["release"] = f"<a href=\"{s['release_url']}\" target=\"_blank\" class=\"release-button\">{s['release_name']} " \
+                f"</a><br /><span class=\"light-gray\"><i class=\"far fa-clock\"></i> Released on: {s['release_date']}</span>"
+        else:
+            s["release"] = f"<span class=\"release-button\">{s['release_name']} " \
+                f"</span><br /><span class=\"light-gray\"><i class=\"far fa-clock\"></i> Released on: {s['release_date']}</span>"
 
     # fill template
     with open('scripts/systems.html.in') as f:
