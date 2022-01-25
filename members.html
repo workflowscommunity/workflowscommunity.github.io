@@ -1,0 +1,44 @@
+---
+layout: default
+title: Members
+permalink: /members
+---
+
+<article class="post">
+    <header>
+        <div class="title">
+            <h2>{{page.title}}</h2>
+            <p>
+                Collection of actively-developed open source workflow systems
+            </p>
+            <a href="/members/join" class="corner-button" style="background-color: #4CA8A9">Join</a>
+        </div>
+    </header>
+
+    <div class="row">
+        {% assign systems = site.systems | sort: "date_sort" | reverse %}
+        {% for system in systems %}
+        <div class="col-sm-12 col-md-12">
+            <a href="{{system.url}}" class="system">
+                {% if system.avatar %}
+                <div class="system-avatar">
+                    <img src="{{system.avatar}}" alt="{{system.repository}}" />
+                </div>
+                {% endif %}
+                <div class="system-content">
+                    <strong>{{system.title}}</strong><br />
+                    <span style="color: #666">{{system.headline}}</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> {{system.language}}</span></li>
+                        {% if system.release_name != "" %}
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> {{system.release_name}}</span></li>
+                        {% endif %}
+                        <li><span class="light-gray"><i class="far fa-clock"></i> {{system.last_update}}</span></li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <br />
+</article>
