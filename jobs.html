@@ -17,7 +17,7 @@ permalink: /jobs
     </header>
 
     <div class="row">
-        <div class="jobs">
+        <!-- <div class="jobs"> -->
             {% assign jobs = site.jobs | sort: "application_deadline" %}
             {% capture nowunix %}{{'now' | date: '%Y-%m-%d' | date: '%s'}}{% endcapture %}
             {% for job in jobs %}
@@ -37,7 +37,7 @@ permalink: /jobs
             </a>
             {% endif %}
             {% endfor %}
-        </div>
+        <!-- </div> -->
     </div>
     <br /><br/>
 </article>
