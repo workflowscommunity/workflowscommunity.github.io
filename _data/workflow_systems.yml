@@ -53,3 +53,11 @@
 - organization: broadinstitute
   repository: cromwell
   type: github
+
+- organization: dask
+  repository: dask
+  type: github
+
+- organization: mlflow
+  repository: mlflow
+  type: github
