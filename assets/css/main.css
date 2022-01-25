@@ -4823,3 +4823,25 @@ body.is-menu-visible #menu {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
     border-radius: 0.5em;
 }
+
+.ostats {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.ostats .nmembers, .ostats .nsystems {
+    flex: 1;
+    min-width: 7em;
+    padding: 1;
+    text-align: center;
+    line-height: 1.2em;
+}
+
+.ostats .nmembers strong, .ostats .nsystems strong {
+    font-size: 2em;
+    color: #8CCA60;
+}
+
+.ostats .nsystems strong {
+    color: #ED8D34;
+}

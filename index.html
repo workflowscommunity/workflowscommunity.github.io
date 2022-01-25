@@ -3,9 +3,23 @@ layout: default
 permalink: /
 ---
 
+{% assign total_systems = site.systems | size %}
+{% assign total_members = site.data.members | size %}
+
 <article class="post">
-    <div class="row" style="margin-bottom: 2em">
-        <i>We are still <strong>under development</strong>, but you can already enjoy some of our community-supported features.</i>
+    <div class="ostats">
+        <div>
+            <i>We are still <strong>under development</strong>, but you can already enjoy some of our community-supported features.</i>
+        </div>
+        <div class="nsystems">
+            <strong>{{ total_systems }}</strong><br />
+            workflow systems
+        </div>
+        <div class="nmembers">
+            <strong>{{ total_members }}</strong><br />
+            members<br />
+            <span style="color: #999; font-size: 0.7em; font-style: italic">and growing</span>
+        </div>
     </div>
 </article>
 
