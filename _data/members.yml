@@ -1,0 +1,141 @@
+- last_name: Ferreira da Silva
+  first_name: Rafael
+  institution: Oak Ridge National Laboratory
+  link: https://rafaelsilva.com
+  country: US
+
+- last_name: Chard
+  first_name: Kyle
+  institution: University of Chicago
+  link: https://kylechard.com/
+  country: US
+
+- last_name: Badia
+  first_name: Rosa M.
+  institution: Barcelona Supercomputing Center
+  link: https://www.bsc.es/badia-rosa-m
+
+- last_name: Casanova
+  first_name: Henri
+  institution: University of Hawaii
+  link: https://henricasanova.github.io/
+
+- last_name: Crusoe
+  first_name: Michael R.
+  link: https://orcid.org/0000-0002-2961-9670
+
+- last_name: Enders
+  first_name: Björn
+  institution: National Energy Research Scientific Computing Center
+  link: https://www.nersc.gov/about/nersc-staff/data-science-engagement-group/bjoern-enders/
+
+- last_name: Goble
+  first_name: Carole
+  institution: University of Manchester
+  link: https://www.research.manchester.ac.uk/portal/carole.goble.html
+
+- last_name: Ramakrishnan
+  first_name: Lavanya 
+  institution: Lawrence Berkeley National Laboratory
+  link: https://crd.lbl.gov/divisions/scidata/about-scidata/scidata-staff/office-of-the-director/lavanya-ramakrishnan/
+
+- last_name: Thain
+  first_name: Douglas 
+  institution: University of Notre Dame
+  link: https://www3.nd.edu/~dthain/
+
+- last_name: Katz
+  first_name: Daniel S.
+  institution: University of Illinois at Urbana-Champaign
+  link: https://danielskatz.org/
+
+- last_name: Abramson
+  first_name: David
+  institution: University of Queensland, Australia
+  link: https://researchers.uq.edu.au/researcher/2986
+
+- last_name: Altintaş
+  first_name: İlkay
+  institution: University of California San Diego
+  link: https://words.sdsc.edu/ilkay/
+
+- last_name: Deelman
+  first_name: Ewa
+  institution: University of Southern California
+  link: https://deelman.isi.edu
+
+- last_name: Di Natale
+  first_name: Frank
+  institution: Nvidia
+  link: https://frankd412.github.io/
+
+- last_name: Di Tommaso
+  first_name: Paolo
+  institution: Seqera Labs
+  link: https://seqera.io/about/
+
+- last_name: Erdmann
+  first_name: Christopher
+  link: https://www.agu.org/Learn-About-AGU/About-AGU/Data-Leadership
+  institution: American Geophysical Union
+
+- last_name: Fahringer
+  first_name: Thomas
+  institution: University of Innsbruck
+  link: http://www.dps.uibk.ac.at/~tf/
+
+- last_name: Filgueira
+  first_name: Rosa
+  institution: Heriot-Watt University
+  link: https://www.rosafilgueira.com/
+    
+- last_name: Grüning
+  first_name: Björn
+  institution: University of Freiburg
+  link: https://orcid.org/0000-0002-3079-6586
+
+- last_name: Jha
+  first_name: Shantenu
+  institution: Brookhaven National Laboratory
+  link: https://www.bnl.gov/staff/shantenu
+
+- last_name: Leser
+  first_name: Ulf
+  institution: Humboldt University of Berlin
+  link: https://www2.informatik.hu-berlin.de/~leser/
+
+- last_name: Mattoso
+  first_name: Marta
+  institution: Federal University of Rio de Janeiro
+  link: https://www.cos.ufrj.br/~marta/
+
+- last_name: Peterson
+  first_name: J. Luc
+  institution: Lawrence Livermore National Laboratory
+  link: https://github.com/lucpeterson
+
+- last_name: Wolf
+  first_name: Matthew
+  institution: Oak Ridge National Laboratory
+  link: https://csmd.ornl.gov/profile/matthew-wolf
+
+- last_name: Wozniak
+  first_name: Justin M.
+  institution: Argonne National Laboratory
+  link: https://www.mcs.anl.gov/~wozniak/
+
+- last_name: Soiland-Reyes
+  first_name: Stian
+  institution: The University of Manchester
+  link: https://orcid.org/0000-0001-9842-9718
+
+- last_name: Stall
+  first_name: Shelley
+  institution: American Geophysical Union
+  link: https://www.agu.org/Learn-About-AGU/About-AGU/Data-Leadership
+
+- last_name: Knight
+  first_name: Kathryn
+  institution: Oak Ridge National Laboratory
+  link: https://www.ornl.gov/staff-profile/kathryn-e-knight
+
