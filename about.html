@@ -20,7 +20,7 @@ permalink: /about
     <div class="row" style="padding: 1em">
         {% assign leadership = site.data.organization | where: "leadership",true %}
         {% for member in leadership %}
-        <div class="member">
+        <div class="amember">
             <div class="header">
                 <div class="name">{{ member.name }}</div>
                 <div class="role">{{ member.role }}</div>
@@ -43,7 +43,7 @@ permalink: /about
     <div class="row" style="padding: 1em">
         {% assign sc = site.data.organization | where: "leadership",false %}
         {% for member in sc %}
-        <div class="member">
+        <div class="amember">
             <div class="header">
                 <div class="name">{{ member.name }}</div>
                 <div class="role">{{ member.role }}</div>

@@ -4418,7 +4418,7 @@ body.is-menu-visible #menu {
     color: #fff;
 }
 
-.member {
+.amember {
     border-top: 2px solid #999;
     filter: grayscale(100%);
     padding: 0;
@@ -4427,12 +4427,12 @@ body.is-menu-visible #menu {
     max-width: 10em;
 }
 
-.member:hover {
+.amember:hover {
     filter: grayscale(0%);
     color: #000;
 }
 
-.member>.header>.name {
+.amember>.header>.name {
     font-size: 1em;
     line-height: 1.2em;
     margin: 0;
@@ -4441,7 +4441,7 @@ body.is-menu-visible #menu {
     color: #000
 }
 
-.member>.header>.role {
+.amember>.header>.role {
     font-size: 0.8em;
     line-height: 1em;
     margin: 0;
@@ -4450,26 +4450,26 @@ body.is-menu-visible #menu {
     min-height: 2.5em;
 }
 
-.member a {
+.amember a {
     border-bottom: 0;
 }
 
-.member>.header>a img {
+.amember>.header>a img {
     border-radius: 0.5em;
     max-width: 10em;
     min-width: 10em;
 }
 
-.member>.content {
+.amember>.content {
     line-height: 1.2em;
     font-size: 0.9em;
 }
 
-.member>.content>a {
+.amember>.content>a {
     border-bottom: 0;
 }
 
-.member>.content>a>img {
+.amember>.content>a>img {
     max-height: 2em;
 }
 
