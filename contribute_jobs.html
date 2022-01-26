@@ -1,0 +1,85 @@
+---
+layout: default
+title: "Contribute: Jobs"
+permalink: /jobs/add
+---
+
+<article class="post">
+    <header>
+        <div class="title">
+            <h2>How to Post a Job Opening</h2>
+            <p>
+                Register open workflow-related positions from the community
+            </p>
+            <a href="/jobs" class="corner-button">All Jobs</a>
+        </div>
+    </header>
+
+    <div class="content">
+        <p>
+            The Workflows Community Initiative (WCI) provides a common place for posting jobs related to workflows
+            research and development. Note that WCI does not conduct job interviews or provide references to
+            candidates. The goal of the jobs posting is to solely promote workflow-related job opennings to the
+            workflows community.
+        </p>
+
+        <h2>Adding a Job Posting</h2>
+        <p>
+            At the WCI website, job opennings are described using a <a
+                href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown
+                file</a>.
+            The preferred way to submit your changes is via creating a pull request with the changes. To this end,
+            these are the recommended steps for adding a job posting:
+        </p>
+        <ol>
+            <li><strong>Fork</strong> the WCI GitHub repository</li>
+            <li><strong>Clone</strong> your forked repository:
+                <pre>git clone https://github.com/&#60;your_username>/workflowscommunity.github.io</pre>
+            </li>
+            <li><strong>Create</strong> a Markdown file under the <code>_jobs/</code> directory (e.g.,
+                <code>my_institution_position_title.md</code>), and
+                add the information regarding the job posting (see below how to structure your <code>.md</code> file).
+            </li>
+            <li><strong>Commit</strong> the changes, and create a <strong>pull request</strong> for the WCI GitHub
+                repository.</li>
+            <li>The WCI team will then evaluate your pull request, and merge the changes if the job posting information
+                is properly documented.</li>
+        </ol>
+        <p>
+            <strong><i>Note:</i></strong> If you need to update the job posting, we recommend you to follow the same steps listed
+            above, except instead of creating a new file you would edit your own file(s).
+        </p>
+
+
+        <h2>Creating your Markdown File</h2>
+        <p>
+            In the WCI website, each job posting is described in a separate Markdown file. Although we do not enforce a strict
+            convention for the file name, we strongly encourage you to choose a unique and informative file name, such as 
+            <code>my_institution_position_title.md</code>. If two positions have the file name, the newest one will be renamed 
+            to avoid conflicts.
+        </p>
+        <p>The following example shows the structure of the Markdown file and summarizes the keywords that should be provided:
+        </p>
+        <pre>
+--- 
+layout: jobs <span style="color: #999"># do not change this line</span>
+title: "Position Title"
+organization: "Institution/Organization Name"
+organization_logo: "URL to institution logo"
+location: "Job Location" <span style="color: #999"># e.g., "Los Angeles, CA, USA" or "Full Remote", etc.</span>
+application_deadline: "Application deadline date" <span style="color: #999"># format: YYYY-MM-DD</span>
+apply_link: "URL to job application"
+employment_type: "Type of employment" <span style="color: #999"># e.g., Full-time, Part-time, Internship, etc.</span>
+---
+            
+Job description using Markdown syntax.         
+</pre>
+
+        <p>
+            WCI uses GitHub actions to build the job openning pages, which are currently processed at <strong>every 12
+                hours</strong>.
+        </p>
+    </div>
+
+    <br />
+</article>
