@@ -73,10 +73,10 @@
   image: rutgers.png
   link: https://www.rutgers.edu/
 
-- name: Heriot-Watt University
+- name: University of St Andrews 
   founding: true
-  image: hwuniversity.png
-  link: https://www.hw.ac.uk/
+  image: ustandrews.png
+  link: https://www.st-andrews.ac.uk/
 
 - name: University of Southern California
   founding: true
