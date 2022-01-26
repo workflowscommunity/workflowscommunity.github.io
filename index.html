@@ -11,15 +11,15 @@ permalink: /
         <div>
             <i>We are still <strong>under development</strong>, but you can already enjoy some of our community-supported features.</i>
         </div>
-        <div class="nsystems">
+        <a class="nsystems" href="/systems">
             <strong>{{ total_systems }}</strong><br />
             workflow systems
-        </div>
-        <div class="nmembers">
+        </a>
+        <a class="nmembers" href="/members">
             <strong>{{ total_members }}</strong><br />
             members<br />
-            <span style="color: #999; font-size: 0.7em; font-style: italic">and growing</span>
-        </div>
+            <span class="light-gray"><i>and growing</i></span>
+        </a>
     </div>
 </article>
 
@@ -56,6 +56,13 @@ permalink: /
                 </div>
             </a>
             {% endfor %}
+            <a href="/systems" class="system"
+                style="border: 1px solid #ddd; border-radius: 0.5em; box-shadow: none; flex: 0 0 auto; margin-left: 1em">
+                <div style="text-align: center; min-width: 6em; min-height: 3.5em; color: #aaa">
+                    <i class="fas fa-cogs" style="font-size: 1.5em"></i><br />
+                    See all Systems
+                </div>
+            </a>
         </div>
     </div>
 </article>

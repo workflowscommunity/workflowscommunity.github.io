@@ -4819,22 +4819,26 @@ body.is-menu-visible #menu {
     padding: 1em;
 }
 
-.member-contents:hover {
+.member-contents:hover, .ostats .nmembers:hover, .ostats .nsystems:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
     border-radius: 0.5em;
 }
 
 .ostats {
     display: flex;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .ostats .nmembers, .ostats .nsystems {
     flex: 1;
+    display: block;
     min-width: 7em;
-    padding: 1;
+    padding: 1em;
     text-align: center;
     line-height: 1.2em;
+    border-bottom: 0;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .ostats .nmembers strong, .ostats .nsystems strong {
