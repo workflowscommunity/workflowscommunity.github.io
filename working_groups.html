@@ -15,6 +15,7 @@ permalink: /groups
     </header>
 
     <div class="row">
+        <!-- WCI WGs -->
         {% assign groups = site.working_groups | sort: "name" %}
         {% for group in groups %}
         {% assign status_color = "color-2" %}
@@ -26,9 +27,31 @@ permalink: /groups
         <div class="col-sm-12 col-md-12 group">
             <a href="{{group.url}}" class="framework-content" style="margin-left: 0.5em; text-decoration: none;">
                 <img src="/favicon.ico" style="width: 25px; vertical-align: middle;" />&nbsp;&nbsp;<strong>{{group.title}}</strong>
-                <p class="description">{{framework.description}}</p>
+                <p class="description">{{group.description}}</p>
                 <div>
                     <span class="badge"><i class="fas fa-users"></i>&nbsp;&nbsp;{{group.members | size}} Members</span> | 
+                    <span class="badge">
+                        <i class="fas fa-circle-notch" style="color: {{status_color}}"></i>
+                        &nbsp;{{group.status}}</span>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+
+        <!-- External WGs-->
+        {% assign groups = site.data.working_groups | sort: "name" %}
+        {% for group in groups %}
+        {% assign status_color = "#8CCA60" %}
+        {% if group.status == "Establishing" %}
+            {% assign status_color = "#D4D62D" %}
+        {% elsif group.status == "Establishing" %}
+            {% assign status_color = "color-6" %}
+        {% endif %}
+        <div class="col-sm-12 col-md-12 group">
+            <a href="{{group.link}}" class="framework-content" style="margin-left: 0.5em; text-decoration: none;" target="_blank">
+                <strong>{{group.name}}</strong>
+                <p class="description">{{group.description}}</p>
+                <div>
                     <span class="badge">
                         <i class="fas fa-circle-notch" style="color: {{status_color}}"></i>
                         &nbsp;{{group.status}}</span>

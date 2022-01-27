@@ -18,6 +18,11 @@ layout: default
                 <i class="fas fa-circle-notch" style="color: {{status_color}}"></i>
                 &nbsp;{{ page.status }}
             </span>
+            {% if page.join %}
+            <a href="{{ page.join }}" target="_blank" class="corner-button"
+                style="background-color: steelblue">Join&nbsp;&nbsp;&nbsp;<i class="fas fa-user-plus"
+                    style="font-size: 0.8em"></i></a>
+            {% endif %}
         </div>
     </header>
 
@@ -35,17 +40,17 @@ layout: default
             <p>The {{page.title}} working group is composed of {{page.members | size}} members</p>
         </div>
     </header>
-    
+
     <div class="row">
         <ul class="group-members">
             {% for member in page.members %}
             <li>
-            {% if member.link %}
-            <a href="{{member.link}}" target="_blank">{{member.name}}</a>
-            {% else %}
-            {{member.name}}
-            {% endif %}
-            {% if member.role %}<strong>&nbsp;&nbsp;{{member.role}}</strong>{% endif %}
+                {% if member.link %}
+                <a href="{{member.link}}" target="_blank">{{member.name}}</a>
+                {% else %}
+                {{member.name}}
+                {% endif %}
+                {% if member.role %}<strong>&nbsp;&nbsp;{{member.role}}</strong>{% endif %}
             </li>
             {% endfor %}
         </ul>

@@ -1,0 +1,62 @@
+---
+layout: default
+title: "Contribute: Frameworks"
+permalink: /frameworks/contribute
+---
+
+<article class="post">
+    <header>
+        <div class="title">
+            <h2>How to Contribute with a Research Framework</h2>
+            <p>
+                Register an actively-developed open source workflow-related research frameworks
+            </p>
+            <a href="/frameworks" class="corner-button">All Research Frameworks</a>
+        </div>
+    </header>
+
+    <div class="content">
+        <p>
+            The Workflows Community Initiative (WCI) provides a curated collection of <strong>open source</strong> or
+            freely accessible tools and frameworks that can be used to support workflow research and development. The
+            main goal of this collection is to showcase workflow system capabilities developed by the community. We
+            invite all workflow researchers to share their tools and frameworks through this collection.
+        </p>
+
+        <h2>Adding a Workflow Research Framework</h2>
+        <p>
+            To add a workflow research framework, you only need to add the framework information into an YAML file
+            hosted as part of the <a href="https://github.com/workflowscommunity/workflowscommunity.github.io"
+                target="_blank">WCI GitHub repository</a>. The preferred way to submit your changes is via creating a
+            pull request with the changes. To this end, these are the recommended steps for adding a workflow research
+            framework:
+        </p>
+        <ol>
+            <li><strong>Fork</strong> the WCI GitHub repository</li>
+            <li><strong>Clone</strong> your forked repository:
+                <pre>git clone https://github.com/&#60;your_username>/workflowscommunity.github.io</pre>
+            </li>
+            <li><strong>Edit</strong> the <code>_data/research_frameworks.yml</code> file, and add the information
+                regarding the workflow research framework:
+                <pre>
+- name: "Research Framework Name"
+  url: &#60;framework_url>
+  description: "Short framework description" 
+  icon: &#60;url_to_framework_logo> <span style="color: #999"># square images are preferred (1:1 aspect ratio)</span>
+  github: &#60;url_to_github_repository> <span style="color: #999"># do not provide if hosted at GitLab</span>
+  gitlab: &#60;url_to_gitlab_repository> <span style="color: #999"># do not provide if hosted at GitHub</span>
+  documentation: &#60;documentation_url> <span style="color: #999"># optional</span>
+  tags: <span style="color: #999"># optional: provide up to 5 tags</span>
+    - my_tag_1
+    - my_tag_2
+                  </pre>
+            </li>
+            <li><strong>Commit</strong> the changes, and create a <strong>pull request</strong> for the WCI GitHub
+                repository.</li>
+            <li>The WCI team will then evaluate your pull request, and merge the changes if the workflow research
+                framework and examples are properly documented.</li>
+        </ol>
+    </div>
+
+    <br />
+</article>

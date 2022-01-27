@@ -1,0 +1,4 @@
+- name: Test Advanced Working Group
+  description: A test for an external working group
+  link: https://workflows.community
+  status: Active
