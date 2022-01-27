@@ -56,6 +56,7 @@ for s in systems:
     s["doc_installation"] = ""
     s["doc_tutorial"] = ""
     s["execution_environment"] = ""
+    s["wci_metadata"] = "false"
 
     # date
     date = datetime.datetime.strptime(
@@ -101,6 +102,7 @@ for s in systems:
 
     if r.ok:
         data = yaml.safe_load(r.text)
+        s["wci_metadata"] = "true"
         print(data)
 
         # description

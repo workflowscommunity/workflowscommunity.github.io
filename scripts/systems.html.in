@@ -12,6 +12,7 @@ tags: $tags
 avatar: $avatar
 release_name: "$release_name"
 release_date: $release_date
+wci_metadata: $wci_metadata
 ---
 
 <article class="post">

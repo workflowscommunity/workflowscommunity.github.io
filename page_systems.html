@@ -34,6 +34,9 @@ permalink: /systems
                         <li><span class="light-gray"><i class="fas fa-box-open"></i> {{system.release_name}}</span></li>
                         {% endif %}
                         <li><span class="light-gray"><i class="far fa-clock"></i> {{system.last_update}}</span></li>
+                        {% if system.wci_metadata %}
+                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
+                        {% endif %}
                     </ul>
                 </div>
             </a>

@@ -38,7 +38,7 @@ permalink: /
             {% assign systems = site.systems | sort: "date_sort" | reverse %}
             {% for system in systems limit: 10 %}
             <a href="{{system.url}}" class="system"
-                style="min-width: 15em; max-height: 6em; min-height: 6em; box-shadow: none; flex: 0 0 auto">
+                style="min-width: 15em; max-height: 6em; min-height: 6em; box-shadow: none; flex: 0 0 auto; position: relative">
                 {% if system.avatar %}
                 <div class="system-avatar">
                     <img src="{{system.avatar}}" alt="{{system.repository}}" />
@@ -54,6 +54,11 @@ permalink: /
                         <i class="far fa-clock"></i> {{system.last_update}}
                     </div>
                 </div>
+                {% if system.wci_metadata %}
+                <div style="position: absolute; bottom: 0; right: 1em; font-size: 0.8em">
+                    <img src="/favicon.ico" style="max-width: 1.5em; vertical-align: middle" /> <span class="light-gray">WCI metadata</span>
+                </div>
+                {% endif %}
             </a>
             {% endfor %}
             <a href="/systems" class="system"
