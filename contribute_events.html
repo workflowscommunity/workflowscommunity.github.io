@@ -1,0 +1,64 @@
+---
+layout: default
+title: "Contribute: Events"
+permalink: /events/contribute
+---
+
+<article class="post">
+    <header>
+        <div class="title">
+            <h2>How to Contribute with an Event</h2>
+            <p>
+                Register a conference, workshop, meeting, etc. relevant to the workflows community
+            </p>
+            <a href="/events" class="corner-button" style="background-color: #FAAB03">All Events</a>
+        </div>
+    </header>
+
+    <div class="content">
+        <p>
+            The Workflows Community Initiative (WCI) provides a curated list of <strong>workflow-related</strong>
+            community events suitable for workflow researchers, developers, and users. We invite all members of
+            the workflows community to publicize their events through this list.
+        </p>
+
+        <h2>Adding a Workflow-Related Event</h2>
+        <p>
+            To add an event, you only need to add the framework information into an YAML file hosted as part of the <a
+                href="https://github.com/workflowscommunity/workflowscommunity.github.io" target="_blank">WCI GitHub
+                repository</a>. The preferred way to submit your changes is via creating a pull request with the
+            changes.
+            To this end, these are the recommended steps for adding an event:
+        </p>
+        <ol>
+            <li><strong>Fork</strong> the WCI GitHub repository</li>
+            <li><strong>Clone</strong> your forked repository:
+                <pre>git clone https://github.com/&#60;your_username>/workflowscommunity.github.io</pre>
+            </li>
+            <li><strong>Edit</strong> the <code>_data/events.yml</code> file, and add the information
+                regarding the event:
+                <pre>
+- name: "Event Name"
+  series: "Event Series or Acronym" <span style="color: #999"># optional</span>
+  location: "Event Location" <span style="color: #999"># format: "City, Country" or "Virtual"</span>
+  date: &#60;event_start_date> <span style="color: #999"># format: YYYY-MM-DD</span>
+  url: &#60;event_url>
+  type: &#60;event_type> <span style="color: #999"># options: Conference, Workshop, Summit, Forum, Meeting, Other</span>
+  deadlines: <span style="color: #999"># optional: provide up to 3 deadlines</span>
+    - name: "Deadline Title 1"
+      date: &#60;deadline_date_1> <span style="color: #999"># format: YYYY-MM-DD</span>
+    - name: "Deadline Title 2"
+      date: &#60;deadline_date_2> <span style="color: #999"># format: YYYY-MM-DD</span>
+    - name: "Deadline Title 3"
+      date: &#60;deadline_date_3> <span style="color: #999"># format: YYYY-MM-DD</span>
+</pre>
+            </li>
+            <li><strong>Commit</strong> the changes, and create a <strong>pull request</strong> for the WCI GitHub
+                repository.</li>
+            <li>The WCI team will then evaluate your pull request, and merge the changes if the event is considered
+                relevant to the community.</li>
+        </ol>
+    </div>
+
+    <br />
+</article>
