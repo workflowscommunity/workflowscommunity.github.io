@@ -61,3 +61,7 @@
 - organization: mlflow
   repository: mlflow
   type: github
+
+- organization: common-workflow-language
+  repository: common-workflow-language
+  type: github
