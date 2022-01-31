@@ -137,7 +137,7 @@ Related standards for FAIR computational workflows:
 
 ## References
 
-_Articles below are published as [Open Access](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/), or with [green open access preprints](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/understanding/) where gold open access is not possible. Please [let us know](https://github.com/workflowhub-eu/about/issues) if you are unable to access any of our publications. To add to this list, please [suggest a change](https://github.com/workflowhub-eu/about/blob/master/fair-computational-workflows.md)._
+_Articles below are published as [Open Access](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/), or with [green open access preprints](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/understanding/) where gold open access is not possible. Please [let us know](https://github.com/workflowscommunity/workflowscommunity.github.io/issues) if you are unable to access any of our publications. To add to this list, please [suggest a change](https://github.com/workflowscommunity/workflowscommunity.github.io/blob/main/_working_groups/fair.md)._
 
 
 Stian Soiland-Reyes, Peter Sefton, Mercè Crosas, Leyla Jael Castro, Frederik Coppens, José M. Fernández, Daniel Garijo, Björn Grüning, Marco La Rosa, Simone Leo, Eoghan Ó Carragáin, Marc Portier, Ana Trisovic, RO-Crate Community, Paul Groth, Carole Goble (2022):  
