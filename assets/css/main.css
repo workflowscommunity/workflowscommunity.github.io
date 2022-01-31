@@ -4853,3 +4853,18 @@ body.is-menu-visible #menu {
 .ostats .nsystems strong {
     color: #ED8D34;
 }
+
+.btn-primary {
+    background-color: steelblue;
+    font-size: 0.8em;
+    border: 0;
+}
+
+.btn-primary:hover {
+    text-decoration: none;
+    color: #fff !important;
+}
+
+.sub {
+    padding: 2em 3em 1em 3em !important;
+}
