@@ -37,7 +37,13 @@ layout: default
     <header>
         <div class="title">
             <h3>Members</h3>
-            <p>The {{page.title}} working group is composed of {{page.members | size}} members</p>
+            <p>The {{page.title}} working group is composed of {{page.members | size}} members.</p>
+            {% if page.join %}
+            <p>
+            <a href="{{ page.join }}" target="_blank" class="btn btn-primary">Join working group<i class="fas fa-user-plus"
+                    style="font-size: 0.8em"></i></a>
+            </p>
+            {% endif %}
         </div>
     </header>
 
