@@ -3,3 +3,7 @@
   link: https://www.researchobject.org/workflow-run-crate/
   status: Active
 
+- name: RO-Crate community
+  description: This community group is evolving RO-Crate – a FAIR data packaging standard. Two monthly calls and Slack channel.
+  link: https://www.researchobject.org/ro-crate/community.html
+  status: Active
