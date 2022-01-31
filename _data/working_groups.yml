@@ -1,5 +1,5 @@
 - name: Workflow Run Crate working group
-  description: This working group is defining Workflow Run Crate – a profile of RO-Crate for capturing the provenance of an execution of a computational workflow.
+  description: This working group is defining Workflow Run Crate – a profile of RO-Crate for capturing the provenance of an execution of a computational workflow. Bi-weekly calls and Slack channel.
   link: https://www.researchobject.org/workflow-run-crate/
   status: Active
 
