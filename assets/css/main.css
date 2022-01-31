@@ -4723,6 +4723,10 @@ body.is-menu-visible #menu {
     text-align: center;
 }
 
+.corner-button:hover {
+    font-weight: 550 !important;
+}
+
 .bottom-button:hover, .corner-button:hover {
     color: #fff !important;
     text-decoration: none;

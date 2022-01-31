@@ -11,11 +11,13 @@ members:
     - name: Carole Goble
       role: Chair
       link: https://www.research.manchester.ac.uk/portal/carole.goble.html
+    - name: Kathryn E. Knight
+      role: Chair
+      link: https://www.ornl.gov/staff-profile/kathryn-e-knight
     - name: Christian Erdmann
-    - name: Kathryn Knight
     - name: Stian Soiland-Reyes
     - name: Shelly Stall
-    - name: Sean Wilkinson
+    - name: Sean R. Wilkinson
     - name: Matthew Wolf
 ---
 
