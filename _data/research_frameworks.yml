@@ -20,7 +20,10 @@
     - benchmark
 
 - name: "CWFR: Canonical Workflow Framework for Research"
-  description: A proposed framework for building workflow systems that support canonical workflows through FAIR Digital Objects, by identifying recurring canonical steps, building libraries of these steps, with corresponding tuned packages.
+  description: A proposed framework for building workflow systems that support canonical workflows through FAIR Digital Objects (FDO), by identifying recurring canonical steps, building libraries of these steps, with corresponding tuned packages.
   url: https://osf.io/2cy86/
   documentation: https://osf.io/3rekv/
+  tags:
+    - FDO
+    - FAIR
   
