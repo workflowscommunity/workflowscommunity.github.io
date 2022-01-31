@@ -1,4 +1,5 @@
-- name: Test Advanced Working Group
-  description: A test for an external working group
-  link: https://workflows.community
+- name: Workflow Run Crate working group
+  description: This working group is defining Workflow Run Crate – a profile of RO-Crate for capturing the provenance of an execution of a computational workflow.
+  link: https://www.researchobject.org/workflow-run-crate/
   status: Active
+
