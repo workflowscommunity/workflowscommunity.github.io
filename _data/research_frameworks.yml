@@ -18,3 +18,14 @@
     - generator
     - modeling
     - benchmark
+
+- name: "RO-Crate: Research Object Crate"
+  url: https://w3id.org/ro/crate/
+  description: RO-Crate is a community effort to establish a lightweight approach to packaging research data with their metadata. It aims to make best-practice in formal metadata description accessible and practical for use in a wider variety of situations, from an individual researcher working with a folder of data, to large data-intensive computational research environments.
+  icon: https://www.researchobject.org/ro-crate//assets/img/ro-crate.svg
+  github: https://github.com/researchobject/ro-crate
+  documentation: https://w3id.org/ro/crate/1.1
+  tags:
+    - metadata
+    - provenance
+    - packaging
