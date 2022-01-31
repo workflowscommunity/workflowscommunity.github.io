@@ -19,6 +19,14 @@
     - modeling
     - benchmark
 
+- name: "CWFR: Canonical Workflow Framework for Research"
+  description: A proposed framework for building workflow systems that support canonical workflows through FAIR Digital Objects (FDO), by identifying recurring canonical steps, building libraries of these steps, with corresponding tuned packages.
+  url: https://osf.io/2cy86/
+  documentation: https://osf.io/3rekv/
+  tags:
+    - FDO
+    - FAIR
+  
 - name: "RO-Crate: Research Object Crate"
   url: https://w3id.org/ro/crate/
   description: RO-Crate is a community effort to establish a lightweight approach to packaging research data with their metadata. It aims to make best-practice in formal metadata description accessible and practical for use in a wider variety of situations, from an individual researcher working with a folder of data, to large data-intensive computational research environments.
