@@ -2,3 +2,8 @@
   description: A test for an external working group
   link: https://workflows.community
   status: Active
+
+- name: "CWFR: Canonical Workflow Framework for Research"
+  description: This group at the FAIR Digital Objects Forum is working on building a workflow framework that enables FAIR practices and provides reusable canonical components.
+  link: https://fairdo.org/wg/fdo-cwfr/
+  status: Active
