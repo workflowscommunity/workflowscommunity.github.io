@@ -4827,7 +4827,7 @@ body.is-menu-visible #menu {
     padding: 1em;
 }
 
-.member-contents:hover, .ostats .nmembers:hover, .ostats .nsystems:hover {
+.member-contents:hover, .ostats .nmembers:hover, .ostats .nsystems:hover, .ostats .nframeworks:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
     border-radius: 0.5em;
 }
@@ -4837,7 +4837,7 @@ body.is-menu-visible #menu {
     margin-bottom: 1em;
 }
 
-.ostats .nmembers, .ostats .nsystems {
+.ostats .nmembers, .ostats .nsystems, .ostats .nframeworks {
     flex: 1;
     display: block;
     min-width: 7em;
@@ -4849,13 +4849,17 @@ body.is-menu-visible #menu {
     cursor: pointer;
 }
 
-.ostats .nmembers strong, .ostats .nsystems strong {
+.ostats .nmembers strong, .ostats .nsystems strong, .ostats .nframeworks strong {
     font-size: 2em;
     color: #8CCA60;
 }
 
 .ostats .nsystems strong {
     color: #ED8D34;
+}
+
+.ostats .nframeworks strong {
+    color: #FAAB03;
 }
 
 .btn-primary {

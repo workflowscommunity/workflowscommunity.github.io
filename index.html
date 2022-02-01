@@ -5,6 +5,7 @@ permalink: /
 
 {% assign total_systems = site.systems | size %}
 {% assign total_members = site.data.members | size %}
+{% assign total_frameworks = site.data.research_frameworks | size %}
 
 <article class="post">
     <div class="ostats">
@@ -19,6 +20,10 @@ permalink: /
             <strong>{{ total_members }}</strong><br />
             members<br />
             <span class="light-gray"><i>and growing</i></span>
+        </a>
+        <a class="nframeworks" href="/frameworks">
+            <strong>{{ total_frameworks }}</strong><br />
+            research frameworks
         </a>
     </div>
 </article>
