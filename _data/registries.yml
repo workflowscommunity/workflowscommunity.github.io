@@ -12,3 +12,9 @@
   url: https://snakemake.github.io/snakemake-workflow-catalog/
   description: A comprehensive catalog of standards compliant, public, Snakemake workflows
   icon: https://snakemake.github.io/snakemake-workflow-catalog/logo-snake.svg
+
+- name: Dockstore
+  url: https://dockstore.org/
+  description: Sharing Docker Tools and Workflows for the Sciences
+  icon: https://gui.dockstore.org/2.8.4-5642f1f/assets/svg/Dockstore-logo-horizontal-white.svg
+
