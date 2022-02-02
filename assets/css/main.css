@@ -4598,6 +4598,7 @@ body.is-menu-visible #menu {
     display: flex;
     padding: 0;
     margin: auto;
+    flex-flow: wrap;
 }
 
 .system-info li {
