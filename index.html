@@ -6,6 +6,9 @@ permalink: /
 {% assign total_systems = site.systems | size %}
 {% assign total_members = site.data.members | size %}
 {% assign total_frameworks = site.data.research_frameworks | size %}
+{% assign total_wci_wg = site.working_groups | size %}
+{% assign total_ext_wg = site.data.working_groups | size %}
+{% assign total_wg = total_wci_wg | plus: total_ext_wg %}
 
 <article class="post">
     <div class="ostats">
@@ -24,6 +27,10 @@ permalink: /
         <a class="nframeworks" href="/frameworks">
             <strong>{{ total_frameworks }}</strong><br />
             research frameworks
+        </a>
+        <a class="nwg" href="/groups">
+            <strong>{{ total_wg }}</strong><br />
+            working groups
         </a>
     </div>
 </article>
