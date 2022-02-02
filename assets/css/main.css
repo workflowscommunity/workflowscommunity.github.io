@@ -4671,25 +4671,25 @@ body.is-menu-visible #menu {
     text-decoration: none;
 }
 
-.wg-content p, .job-content p {
+main p {
     margin-bottom: 1em;
 }
 
-.wg-content h1, .job-content h1 {
+main h1 {
     font-size: 1.2em;
 }
 
-.wg-content h2, .job-content h2 {
+main h2 {
     font-size: 1.1em;
     letter-spacing: 0.15em;
 }
 
-.wg-content h3, .job-content h3 {
+main h3 {
     font-size: 1em;
     letter-spacing: 0.1em;
 }
 
-.wg-content a, .job-content a {
+main a {
     color:rgb(204, 110, 3)
 }
 
