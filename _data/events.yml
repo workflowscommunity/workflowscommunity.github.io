@@ -67,3 +67,13 @@
   deadlines:
     - name: Paper Submissions
       date: 2022-02-11
+
+- name: 2022 Common Workflow Language Conference
+  series: CWL 2022
+  location: Virtual
+  date: 2022-02-28
+  url: https://cwl.discourse.group/t/2022-cwl-conference-feb-28-mar-4-2022
+  type: Conference
+  deadlines:
+    - name: Talk Submissions
+      date: 2022-02-28
