@@ -10,6 +10,18 @@
     - name: Poster and Abstract Submissions
       date: 2022-07-11
 
+- name: Bioinformatics Open Source Conference
+  series: BOSC 2022
+  date: 2022-07-13
+  location: Madison, Wisconsin, USA & online
+  url: https://www.open-bio.org/events/bosc-2022/
+  type: Conference
+  deadlines:
+    - name: Abstract Submissions
+      date: 2022-04-21
+    - name: Poster Submissions
+      date: 2022-05-19
+
 - name: 31st International Symposium on High-Performance Parallel and Distributed Computing
   series: HPDC 2022
   date: 2022-06-27
