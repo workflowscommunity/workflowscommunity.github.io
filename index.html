@@ -111,6 +111,8 @@ permalink: /
                             <span class="
                             {% if event.type == 'Conference' %}
                                 color-7
+                            {% elsif event.type == 'Workshop' %}
+                                color-6
                             {% endif %}
                             ">{{event.series}}</span><br />
                             <span style="font-size: 0.8em"><i class="fas fa-map-marker"
