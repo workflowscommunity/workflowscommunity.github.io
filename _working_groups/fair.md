@@ -17,6 +17,8 @@ members:
     - name: Christian Erdmann
     - name: Stian Soiland-Reyes
     - name: Shelly Stall
+    - name: Ziheng Sun
+      link: https://zihengsun.github.io
     - name: Sean R. Wilkinson
     - name: Matthew Wolf
 ---
