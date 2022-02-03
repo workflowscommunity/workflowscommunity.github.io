@@ -68,5 +68,8 @@
 
 - organization: esipfed
   repository: geoweaver
-  type github
+  type: github
 
+- organization: Apollo-Core
+  repository: EE-Demo
+  type: github
