@@ -65,3 +65,8 @@
 - organization: common-workflow-language
   repository: common-workflow-language
   type: github
+
+- organization: esipfed
+  repository: geoweaver
+  type github
+
