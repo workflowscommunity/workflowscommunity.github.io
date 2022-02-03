@@ -163,7 +163,7 @@ for s in systems:
                     s["execution_environment"] += f"<li>{tp}</li>"
                 s["execution_environment"] += "</ul></div>"
 
-        s["execution_environment"] += "</div>"
+            s["execution_environment"] += "</div>"
 
     # release component
     if s["release_name"]:

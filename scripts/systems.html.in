@@ -61,9 +61,6 @@ wci_metadata: $wci_metadata
             <span style="text-transform: uppercase; letter-spacing: 0.2em; color: #999; font-size: 0.8em; line-height: 2.5em">Contributors:</span><br />
             $contributors_list
         </div>
-        <!--ul class="actions">
-            <li><a href="single.html" class="button large">Continue Reading</a></li>
-        </ul-->
         <ul class="stats">
             <li><a href="https://github.com/$organization/$repository/network/members" target="_blank"><i class="fas fa-code-branch"></i> $forks</a></li>
             <li><a href="https://github.com/$organization/$repository/stargazers" target="_blank"><i class="far fa-star"></i> $stargazers</a></li>
