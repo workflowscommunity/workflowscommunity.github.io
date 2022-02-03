@@ -66,6 +66,10 @@
   repository: common-workflow-language
   type: github
 
+- organization: esipfed
+  repository: geoweaver
+  type: github
+
 - organization: Apollo-Core
   repository: EE-Demo
   type: github
