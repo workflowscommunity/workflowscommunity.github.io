@@ -38,6 +38,11 @@ social:
   name: Workflows Community Initiative
   links: 
     - https://twitter.com/WorkflowsCI
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/wci-default-card.png
 
 plugins:
   - jekyll-sitemap    # Adds sitemap to the website at /sitemap.xml
