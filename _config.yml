@@ -26,6 +26,19 @@ collections:
     output: true
     permalink: /jobs/:path/
 
+# SEO
+author:
+  name: Workflows Community Initiative
+  twitter: WorkflowsCI
+  image: favicon.ico
+twitter:
+  username: WorkflowsCI
+  card: summary_large_image
+social:
+  name: Workflows Community Initiative
+  links: 
+    - https://twitter.com/WorkflowsCI
+
 plugins:
   - jekyll-sitemap    # Adds sitemap to the website at /sitemap.xml
   - jekyll-feed       # Adds feed to the website at /feed.xml
