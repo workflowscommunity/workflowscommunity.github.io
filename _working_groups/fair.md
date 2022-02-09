@@ -14,6 +14,8 @@ members:
     - name: Kathryn E. Knight
       role: Chair
       link: https://www.ornl.gov/staff-profile/kathryn-e-knight
+    - name: Michael R. Crusoe
+      link: https://orcid.org/0000-0002-2961-9670
     - name: Christian Erdmann
     - name: Stian Soiland-Reyes
     - name: Shelly Stall
