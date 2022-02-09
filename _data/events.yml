@@ -77,3 +77,10 @@
   deadlines:
     - name: Talk Submissions
       date: 2022-02-28
+
+- name: "2022 Galaxy Community Conference"
+  series: "GCC2022"
+  location: "Minneapolis, MN, USA"
+  date: 2022-07-16
+  url: https://galaxyproject.org/events/gcc2022/
+  type: Conference
