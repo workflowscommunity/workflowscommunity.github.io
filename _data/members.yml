@@ -2,217 +2,260 @@
   first_name: Rafael
   institution: Oak Ridge National Laboratory
   link: https://rafaelsilva.com
-  country: US
+  country: us
 
 - last_name: Chard
   first_name: Kyle
   institution: University of Chicago
   link: https://kylechard.com/
-  country: US
+  country: us
 
 - last_name: Badia
   first_name: Rosa M.
   institution: Barcelona Supercomputing Center
   link: https://www.bsc.es/badia-rosa-m
+  country: es
 
 - last_name: Casanova
   first_name: Henri
   institution: University of Hawaii
   link: https://henricasanova.github.io/
+  country: us
 
 - last_name: Crusoe
   first_name: Michael R.
   link: https://orcid.org/0000-0002-2961-9670
+  country: de
 
 - last_name: Enders
   first_name: Björn
   institution: National Energy Research Scientific Computing Center
   link: https://www.nersc.gov/about/nersc-staff/data-science-engagement-group/bjoern-enders/
+  country: us
 
 - last_name: Goble
   first_name: Carole
   institution: University of Manchester
   link: https://www.research.manchester.ac.uk/portal/carole.goble.html
+  country: uk
 
 - last_name: Ramakrishnan
   first_name: Lavanya 
   institution: Lawrence Berkeley National Laboratory
   link: https://crd.lbl.gov/divisions/scidata/about-scidata/scidata-staff/office-of-the-director/lavanya-ramakrishnan/
+  country: us
 
 - last_name: Thain
   first_name: Douglas 
   institution: University of Notre Dame
   link: https://www3.nd.edu/~dthain/
+  country: us
 
 - last_name: Katz
   first_name: Daniel S.
   institution: University of Illinois at Urbana-Champaign
   link: https://danielskatz.org/
+  country: us
 
 - last_name: Abramson
   first_name: David
   institution: University of Queensland, Australia
   link: https://researchers.uq.edu.au/researcher/2986
+  country: au
 
 - last_name: Altintaş
   first_name: İlkay
   institution: University of California San Diego
   link: https://words.sdsc.edu/ilkay/
+  country: us
 
 - last_name: Deelman
   first_name: Ewa
   institution: University of Southern California
   link: https://deelman.isi.edu
+  country: us
 
 - last_name: Di Natale
   first_name: Frank
   institution: Nvidia
   link: https://frankd412.github.io/
+  country: us
 
 - last_name: Di Tommaso
   first_name: Paolo
   institution: Seqera Labs
   link: https://seqera.io/about/
+  country: es
 
 - last_name: Erdmann
   first_name: Christopher
   link: https://www.agu.org/Learn-About-AGU/About-AGU/Data-Leadership
   institution: American Geophysical Union
+  country: us
 
 - last_name: Fahringer
   first_name: Thomas
   institution: University of Innsbruck
   link: http://www.dps.uibk.ac.at/~tf/
+  country: at
 
 - last_name: Filgueira
   first_name: Rosa
   institution: Heriot-Watt University
   link: https://www.rosafilgueira.com/
+  country: uk
     
 - last_name: Grüning
   first_name: Björn
   institution: University of Freiburg
   link: https://orcid.org/0000-0002-3079-6586
+  country: de
 
 - last_name: Jha
   first_name: Shantenu
   institution: Brookhaven National Laboratory
   link: https://www.bnl.gov/staff/shantenu
+  country: us
 
 - last_name: Leser
   first_name: Ulf
   institution: Humboldt University of Berlin
   link: https://www2.informatik.hu-berlin.de/~leser/
+  country: de
 
 - last_name: Mattoso
   first_name: Marta
   institution: Federal University of Rio de Janeiro
   link: https://www.cos.ufrj.br/~marta/
+  country: br
 
 - last_name: Peterson
   first_name: J. Luc
   institution: Lawrence Livermore National Laboratory
   link: https://github.com/lucpeterson
+  country: us
 
 - last_name: Wolf
   first_name: Matthew
   institution: Oak Ridge National Laboratory
   link: https://csmd.ornl.gov/profile/matthew-wolf
+  country: us
 
 - last_name: Wozniak
   first_name: Justin M.
   institution: Argonne National Laboratory
   link: https://www.mcs.anl.gov/~wozniak/
+  country: us
 
 - last_name: Soiland-Reyes
   first_name: Stian
   institution: The University of Manchester
   link: https://orcid.org/0000-0001-9842-9718
+  country: uk
 
 - last_name: Stall
   first_name: Shelley
   institution: American Geophysical Union
   link: https://www.agu.org/Learn-About-AGU/About-AGU/Data-Leadership
+  country: us
 
 - last_name: Knight
   first_name: Kathryn
   institution: Oak Ridge National Laboratory
   link: https://www.ornl.gov/staff-profile/kathryn-e-knight
+  country: us
 
 - last_name: Wilkinson
   first_name: Sean
   institution: Oak Ridge National Laboratory
   link: http://seanwilkinson.info
+  country: us
 
 - last_name: Maheshwari
   first_name: Ketan
   institution: Oak Ridge National Laboratory
+  country: us
 
 - last_name: Pottier
   first_name: Loïc
   institution: University of Southern California
   link: https://loicpottier.com
+  country: us
 
 - last_name: Schneider
   first_name: Juliane
   institution: Sage Bionetworks
   link: https://www.linkedin.com/in/juliane-schneider-4a06535/
+  country: us
 
 - last_name: Sirvent
   first_name: Raül
   institution: Barcelona Supercomputing Center
   link: https://personals.ac.upc.edu/rsirvent/
+  country: es
 
 - last_name: Conejero
   first_name: Javier
   institution: Barcelona Supercomputing Center
   link: https://www.bsc.es/conejero-francisco-javier
+  country: es
 
 - last_name: Puigdemunt
   first_name: Gabriel
   institution: Barcelona Supercomputing Center
+  country: es
   
 - last_name: Sun
   first_name: Ziheng
   institution: George Mason University
   link: https://zihengsun.github.io
+  country: us
 
 - last_name: Ozik
   first_name: Jonathan
   institution: Argonne National Laboratory
+  country: us
 
 - last_name: Soranzo
   first_name: Nicola
   institution: Earlham Institute
   link: https://www.earlham.ac.uk/nicola-soranzo
+  country: uk
 
 - last_name: Irrgang
   first_name: Eric
   institution: University of Virginia
+  country: us
 
 - last_name: Becker
   first_name: Soeren
   institution: Technical University of Berlin
+  country: de
 
 - last_name: Mohammadi
   first_name: Somayeh
   institution: Freie University of Berlin
+  country: de
 
 - last_name: De Mecquenem
   first_name: Ninon
   institution: Humboldt University Berlin
+  country: de
 
 - last_name: Weidlich
   first_name: Matthias
   institution: Humboldt-Universität zu Berlin
   link: http://hu.berlin/data
+  country: de
 
 - last_name: Stolte
   first_name: Hermann
   institution: Humboldt University Berlin
   link: hermannstolte.com
+  country: de
 
 - last_name: Eberlein
   first_name: Martin
   institution: Humboldt-Universität zu Berlin
   link: https://martineberlein.github.io
+  country: de
