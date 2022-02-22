@@ -47,8 +47,36 @@ permalink: /
 
     <div class="systems">
         <div class="systems-list">
-            {% assign systems = site.systems | sort: "date_sort" | reverse %}
-            {% for system in systems limit: 10 %}
+            {% assign systems_wci = site.systems | where: "wci_metadata", "true" | sort: "date_sort" | reverse %}
+            {% assign systems_wci_size = systems_wci | size %}
+            {% assign systems = site.systems | where: "wci_metadata", "false" | sort: "date_sort" | reverse %}
+            {% assign systems_limit = 10 | minus: systems_wci_size %}
+            {% for system in systems_wci limit: 10 %}
+            <a href="{{system.url}}" class="system"
+                style="min-width: 15em; max-height: 6em; min-height: 6em; box-shadow: none; flex: 0 0 auto; position: relative">
+                {% if system.avatar %}
+                <div class="system-avatar">
+                    <img src="{{system.avatar}}" alt="{{system.repository}}" />
+                </div>
+                {% endif %}
+                <div class="system-content">
+                    <strong>{{system.title}}</strong>
+                    <div class="list-stats">
+                        <i class="fas fa-code"></i> {{system.language}}</span><br />
+                        {% if system.release_name != "" %}
+                        <i class="fas fa-box-open"></i> {{system.release_name}}</span><br />
+                        {% endif %}
+                        <i class="far fa-clock"></i> {{system.last_update}}
+                    </div>
+                </div>
+                {% if system.wci_metadata %}
+                <div style="position: absolute; bottom: 0; right: 1em; font-size: 0.8em">
+                    <img src="/favicon.ico" style="max-width: 1.5em; vertical-align: middle" /> <span class="light-gray">WCI metadata</span>
+                </div>
+                {% endif %}
+            </a>
+            {% endfor %}
+            {% for system in systems limit: systems_limit %}
             <a href="{{system.url}}" class="system"
                 style="min-width: 15em; max-height: 6em; min-height: 6em; box-shadow: none; flex: 0 0 auto; position: relative">
                 {% if system.avatar %}
@@ -174,9 +202,6 @@ permalink: /
         </div>
     </div>
 </div>
-
-
-
 
 <article class="post">
     <header>
