@@ -73,3 +73,7 @@
 - organization: Apollo-Core
   repository: EE-Demo
   type: github
+
+- organization: aiidateam
+  repository: aiida-core
+  type: github
