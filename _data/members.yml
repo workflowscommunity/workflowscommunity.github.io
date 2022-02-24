@@ -275,3 +275,13 @@
   institution: Humboldt University of Berlin 
   link: https://fabian-lehmann.eu/
   country: de
+
+- last_name: Tovar
+  first_name: Ben
+  institution: University of Notre Dame
+  country: us
+
+- last_name: Williams
+  first_name: Alan
+  institution: The University of Manchester
+  country: us
