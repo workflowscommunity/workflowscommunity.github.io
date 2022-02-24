@@ -2,7 +2,7 @@
   role: Executive Director
   photo: ferreiradasilva.jpg
   link: https://rafaelsilva.com
-  leadership: true
+  category: leadership
   institution: 
     name: Oak Ridge National Laboratory
     image: ornl.png
@@ -12,7 +12,7 @@
   role: Deputy Executive Director
   photo: chard.jpg
   link: https://kylechard.com/
-  leadership: true
+  category: leadership
   institution: 
     name: University of Chicago
     image: uchicago.png
@@ -22,7 +22,7 @@
   role: Director of Systems and Applications Performance
   photo: badia.jpg
   link: https://www.bsc.es/badia-rosa-m
-  leadership: true
+  category: leadership
   institution:
     name: Barcelona Supercomputing Center
     image: bsc.png
@@ -32,7 +32,7 @@
   role: Director of Education 
   photo: casanova.jpg
   link: https://henricasanova.github.io/
-  leadership: true
+  category: leadership
   institution: 
     name: University of Hawaii
     image: uhm.png
@@ -42,13 +42,13 @@
   role: Director of APIs and Standards
   photo: crusoe.jpg
   link: https://orcid.org/0000-0002-2961-9670
-  leadership: true
+  category: leadership
 
 - name: Björn Enders
   role: Director of Facilities Operations
   photo: enders.jpg
   link: https://www.nersc.gov/about/nersc-staff/data-science-engagement-group/bjoern-enders/
-  leadership: true
+  category: leadership
   institution:
     name: National Energy Research Scientific Computing Center
     image: nersc.png
@@ -58,7 +58,7 @@
   role: Director of FAIR Computational Workflows
   photo: goble.jpg
   link: https://www.research.manchester.ac.uk/portal/carole.goble.html
-  leadership: true
+  category: leadership
   institution:
     name: University of Manchester
     image: umanchester.png
@@ -68,7 +68,7 @@
   role: Director of Training and User Engagement
   photo: ramakrishnan.jpg
   link: https://crd.lbl.gov/divisions/scidata/about-scidata/scidata-staff/office-of-the-director/lavanya-ramakrishnan/
-  leadership: true
+  category: leadership
   institution:
     name: Lawrence Berkeley National Laboratory
     image: lbnl.png
@@ -78,7 +78,7 @@
   role: Director of Distributed Computing Systems
   photo: thain.jpg
   link: https://www3.nd.edu/~dthain/
-  leadership: true
+  category: leadership
   institution:
     name: University of Notre Dame
     image: nd.png
@@ -88,7 +88,7 @@
   role: Chair
   photo: katz.jpg
   link: https://danielskatz.org/
-  leadership: false
+  category: sc
   institution:
     name: University of Illinois at Urbana-Champaign
     image: uiuc.png
@@ -98,7 +98,7 @@
   role: Member
   photo: abramson.jpg
   link: https://researchers.uq.edu.au/researcher/2986
-  leadership: false
+  category: sc
   institution:
     name: University of Queensland, Australia
     image: uq.png
@@ -108,7 +108,7 @@
   role: Member
   photo: altintas.jpg
   link: https://words.sdsc.edu/ilkay/
-  leadership: false
+  category: sc
   institution:
     name: University of California San Diego
     image: ucsd.png
@@ -118,7 +118,7 @@
   role: Member
   photo: deelman.jpg
   link: https://deelman.isi.edu
-  leadership: false
+  category: sc
   institution:
     name: University of Southern California
     image: usc.png
@@ -128,7 +128,7 @@
   role: Member
   photo: dinatale.jpg
   link: https://frankd412.github.io/
-  leadership: false
+  category: sc
   institution:
     name: Nvidia
     image: nvidia.png
@@ -138,7 +138,7 @@
   role: Member
   photo: ditommaso.jpg
   link: https://seqera.io/about/
-  leadership: false
+  category: sc
   institution:
     name: Seqera Labs
     image: seqeralabs.png
@@ -148,7 +148,7 @@
   role: Member
   photo: erdmann.jpg
   link: https://www.agu.org/Learn-About-AGU/About-AGU/Data-Leadership
-  leadership: false
+  category: sc
   institution:
     name: American Geophysical Union
     image: agu.png
@@ -158,7 +158,7 @@
   role: Member
   photo: fahringer.jpg
   link: http://www.dps.uibk.ac.at/~tf/
-  leadership: false
+  category: sc
   institution:
     name: University of Innsbruck
     image: uinnsbruck.png
@@ -168,7 +168,7 @@
   role: Member
   photo: filgueira.jpg
   link: https://www.rosafilgueira.com/
-  leadership: false
+  category: sc
   institution:
     name: University of St Andrews 
     image: ustandrews.png
@@ -178,7 +178,7 @@
   role: Member
   photo: groening.jpg
   link: https://orcid.org/0000-0002-3079-6586
-  leadership: false
+  category: sc
   institution:
     name: University of Freiburg
     image: ufreiburg.png
@@ -188,7 +188,7 @@
   role: Member
   photo: jha.jpg
   link: https://www.bnl.gov/staff/shantenu
-  leadership: false
+  category: sc
   institution:
     name: Brookhaven National Laboratory
     image: bnl.png
@@ -198,7 +198,7 @@
   role: Member
   photo: leser.jpg
   link: https://www2.informatik.hu-berlin.de/~leser/
-  leadership: false
+  category: sc
   institution:
     name: Humboldt University of Berlin
     image: huberlin.png
@@ -208,7 +208,7 @@
   role: Member
   photo: mattoso.jpg
   link: https://www.cos.ufrj.br/~marta/
-  leadership: false
+  category: sc
   institution:
     name: Federal University of Rio de Janeiro
     image: ufrj.png
@@ -218,7 +218,7 @@
   role: Member
   photo: peterson.jpg
   link: https://github.com/lucpeterson
-  leadership: false
+  category: sc
   institution:
     name: Lawrence Livermore National Laboratory
     image: llnl.png
@@ -228,7 +228,7 @@
   role: Member
   photo: wolf.jpg
   link: https://csmd.ornl.gov/profile/matthew-wolf
-  leadership: false
+  category: sc
   institution: 
     name: Oak Ridge National Laboratory
     image: ornl.png
@@ -238,8 +238,18 @@
   role: Member
   photo: wozniak.jpg
   link: https://www.mcs.anl.gov/~wozniak/
-  leadership: false
+  category: sc
   institution:
     name: Argonne National Laboratory
     image: anl.png
     link: https://www.anl.gov/
+
+- name: Stian Soiland-Reys
+  role: Technical and Community Advisor
+  photo: soiland-reys.jpg
+  link: https://www.research.manchester.ac.uk/portal/soiland-reyes.html
+  category: technical
+  institution:
+    name: University of Manchester
+    image: umanchester.png
+    link: https://www.manchester.ac.uk/
