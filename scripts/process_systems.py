@@ -97,8 +97,11 @@ for s in systems:
         s["contributors_list"] += f'<a href="{c["html_url"]}" target="_blank"><img src="{c["avatar_url"]}" width="32" height="32" alt="{c["login"]}"/></a>'
 
     # metadata file
+    metadata = f"{s['metadata']}" if "metadata" in s else ".wci.yml"
+    if ".wci.yml" not in metadata:
+        metadata = f"{metadata}/.wci.yml"
     r = requests.get(
-        f"https://raw.githubusercontent.com/{s['organization']}/{s['repository']}/{s['default_branch']}/.wci.yml")
+        f"https://raw.githubusercontent.com/{s['organization']}/{s['repository']}/{s['default_branch']}/{metadata}")
 
     if r.ok:
         data = yaml.safe_load(r.text)
