@@ -12,11 +12,11 @@ employment_type: Full-time
 
 ## Job Description
 
-As a member of the Globus software development team the focus of this position is to contribute to the development of a new Function as a Service (FaaS) product called funcX (www.funcx.org). FuncX is designed to enable managed function execution across a distributed ecosystem of function execution endpoints deployed on heterogeneous computers: from laptops to supercomputers. We’re looking for skilled Python developers to create and operate the funcX service and endpoint software through the use of advanced technologies and techniques from Web and Cloud computing.
+As a member of the Globus software development team the focus of this position is to contribute to the development of a new Function as a Service (FaaS) product called [funcX](www.funcx.org). FuncX is designed to enable managed function execution across a distributed ecosystem of function execution endpoints deployed on heterogeneous computers: from laptops to supercomputers. We’re looking for skilled Python developers to create and operate the funcX service and endpoint software through the use of advanced technologies and techniques from Web and Cloud computing.
 
 ## Globus Overview
 
-Globus (www.globus.org) is a sustainable, non-profit business within The University of Chicago delivering solutions to the research community worldwide. Globus develops and provides critical services that support scientific research for governmental, academic, and commercial organizations in a wide range of disciplines including life sciences, physics, and astronomy.  We develop, operate, and sell commercial-quality, cloud-based software application and platform services used by 10s of thousands of researchers to manage their large–and growing–data management challenges. We have offices located at 401 North Michigan Avenue in the heart of downtown Chicago and remote employees who work-from-home.  Globus, together with Globus Labs, a research group within the University of Chicago, and part of the Data Science and Learning Division at Argonne National Labs, develop and deploy cutting edge technologies to solve new challenges facing the scientific community and enable break-through scientific discoveries.
+[Globus](www.globus.org) is a sustainable, non-profit business within The University of Chicago delivering solutions to the research community worldwide. Globus develops and provides critical services that support scientific research for governmental, academic, and commercial organizations in a wide range of disciplines including life sciences, physics, and astronomy.  We develop, operate, and sell commercial-quality, cloud-based software application and platform services used by 10s of thousands of researchers to manage their large–and growing–data management challenges. We have offices located at 401 North Michigan Avenue in the heart of downtown Chicago and remote employees who work-from-home.  Globus, together with Globus Labs, a research group within the University of Chicago, and part of the Data Science and Learning Division at Argonne National Labs, develop and deploy cutting edge technologies to solve new challenges facing the scientific community and enable break-through scientific discoveries.
 
 ### Responsibilities: 
 
@@ -26,9 +26,9 @@ Globus (www.globus.org) is a sustainable, non-profit business within The Univers
 - Team Coordination and Professional Development - maintains a working knowledge of relevant software technologies being used in scientific and commercial communities; contributes to  project planning and project reporting, and recruitment.
 - Investigates, analyzes and resolves day-to-day technical problems using standard procedures. 
 - Works with stakeholders to gather and analyze requirements for developmental programs. Receives a moderate level of guidance to design applications to meet University and business requirements.
-- Performs other related work as needed..
+- Performs other related work as needed.
  
 ### Basic Qualifications:
 
-- Acollege or university degree in related field.
+- A college or university degree in related field.
 - Knowledge and skills developed through 2-5 years of work experience in a related job discipline..
