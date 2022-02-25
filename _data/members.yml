@@ -285,3 +285,9 @@
   first_name: Alan
   institution: The University of Manchester
   country: us
+
+- last_name: Talirz
+  first_name: Leopold
+  institution: Microsoft
+  country: Switzerland
+  link: https://ltalirz.github.io/
