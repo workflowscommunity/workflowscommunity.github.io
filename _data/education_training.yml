@@ -1,0 +1,8 @@
+- name: "eduWRENCH: Parallel and Distributed Computing Courseware"
+  url: https://eduwrench.org/
+  description: |
+    A set of pedagogic modules for teaching workflow concepts and practices. 
+    These modules include simulation-based pedagogic activities through which 
+    users can learn in a hands-on manner by experimenting with various 
+    application and platform scenarios.
+  icon: https://wrench-project.org/favicon.ico
