@@ -297,3 +297,8 @@
   institution: VIB
   country: be
   link: https://www.elixir-belgium.org/
+
+- last_name: Collier
+  first_name: Nick
+  institution: Argonne National Laboratory
+  country: us
