@@ -77,3 +77,4 @@
 - organization: aiidateam
   repository: aiida-core
   type: github
+  metadata: docs
