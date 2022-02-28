@@ -36,8 +36,8 @@
 - last_name: Goble
   first_name: Carole
   institution: University of Manchester
-  link: https://www.research.manchester.ac.uk/portal/carole.goble.html
-  country: uk
+  link: https://www.research.manchester.ac.gb/portal/carole.goble.html
+  country: gb
 
 - last_name: Ramakrishnan
   first_name: Lavanya 
@@ -103,7 +103,7 @@
   first_name: Rosa
   institution: Heriot-Watt University
   link: https://www.rosafilgueira.com/
-  country: uk
+  country: gb
     
 - last_name: Grüning
   first_name: Björn
@@ -151,7 +151,7 @@
   first_name: Stian
   institution: The University of Manchester
   link: https://orcid.org/0000-0001-9842-9718
-  country: uk
+  country: gb
 
 - last_name: Stall
   first_name: Shelley
@@ -219,8 +219,8 @@
 - last_name: Soranzo
   first_name: Nicola
   institution: Earlham Institute
-  link: https://www.earlham.ac.uk/nicola-soranzo
-  country: uk
+  link: https://www.earlham.ac.gb/nicola-soranzo
+  country: gb
 
 - last_name: Irrgang
   first_name: Eric
@@ -268,7 +268,7 @@
 - last_name: Burel
   first_name: Jean-Marie
   institution: University of Dundee
-  country: uk
+  country: gb
 
 - last_name: Lehmann
   first_name: Fabian
@@ -289,5 +289,5 @@
 - last_name: Talirz
   first_name: Leopold
   institution: Microsoft
-  country: Switzerland
+  country: ch
   link: https://ltalirz.github.io/
