@@ -302,3 +302,8 @@
   first_name: Nick
   institution: Argonne National Laboratory
   country: us
+
+- last_name: Fernández
+  first_name: José María
+  institution: Barcelona Supercomputing Center / ELIXIR ES
+  country: es
