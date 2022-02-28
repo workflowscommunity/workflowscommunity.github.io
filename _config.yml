@@ -30,7 +30,7 @@ collections:
 author:
   name: Workflows Community Initiative
   twitter: WorkflowsCI
-  image: favicon.ico
+  image: https://workflows.community/favicon.ico
 twitter:
   username: WorkflowsCI
   card: summary_large_image
@@ -42,7 +42,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /images/wci-default-card.png
+      image: https://workflows.community/images/wci-default-card.png
 
 plugins:
   - jekyll-sitemap    # Adds sitemap to the website at /sitemap.xml
