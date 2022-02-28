@@ -84,3 +84,10 @@
   date: 2022-07-16
   url: https://galaxyproject.org/events/gcc2022/
   type: Conference
+
+- name: March 2022 Hackathon
+  series: nf-core
+  location: Virtual
+  date: 2022-06-16
+  url: https://nf-co.re/events/2022/hackathon-march-2022
+  type: Workshop
