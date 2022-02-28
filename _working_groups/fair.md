@@ -14,6 +14,8 @@ members:
     - name: Kathryn E. Knight
       role: Chair
       link: https://www.ornl.gov/staff-profile/kathryn-e-knight
+    - name: Frederik Coppens
+      link: https://www.elixir-belgium.org/
     - name: Michael R. Crusoe
       link: https://orcid.org/0000-0002-2961-9670
     - name: Christian Erdmann
