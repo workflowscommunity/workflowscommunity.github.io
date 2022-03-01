@@ -307,3 +307,9 @@
   first_name: José María
   institution: Barcelona Supercomputing Center / ELIXIR ES
   country: es
+
+- last_name: de Oliveira
+  first_name: Daniel
+  institution: Universidade Federal Fluminense
+  country: br
+  link: http://www.ic.uff.br/~danielcmo/
