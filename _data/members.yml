@@ -313,3 +313,14 @@
   institution: Universidade Federal Fluminense
   country: br
   link: http://www.ic.uff.br/~danielcmo/
+
+- last_name: Bader
+  first_name: Jonathan
+  institution: Technical University of Berlin
+  country: de
+
+- last_name: Keller
+  first_name: Trevor
+  institution: NIST
+  country: us
+  link: trevorkeller.com
