@@ -124,16 +124,16 @@ permalink: /
                 <a href="/events" class="bottom-button">All Events</a>
             </header>
             <div class="row">
-                {% assign events = site.data.events | sort: 'date'%}
+                {% assign events = site.data.events | sort: 'start_date'%}
                 {% capture nowunix %}{{'now' | date: '%Y-%m-%d' | date: '%s'}}{% endcapture %}
                 {% for event in events limit: 10 %}
-                {% capture eventtime %}{{event.date | date: '%s'}}{% endcapture %}
+                {% capture eventtime %}{{event.end_date | date: '%s'}}{% endcapture %}
                 {% if eventtime >= nowunix %}
                 <div class="col-sm-12 col-md-12" style="padding: 0 0.5em">
                     <a href="{{event.url}}" class="event" target="_blank">
                         <div class="event-date" style="min-width: 5em; max-width: 5em; max-height: 10em;">
-                            <span class="header" style="font-size: 1em">{{event.date | date: "%b %d" }}</span><br />
-                            <span class="subheader" style="font-size: 0.8em">{{event.date | date: "%Y" }}</span>
+                            <span class="header" style="font-size: 1em">{{event.start_date | date: "%b %d" }}</span><br />
+                            <span class="subheader" style="font-size: 0.8em">{{event.start_date | date: "%Y" }}</span>
                         </div>
                         <div class="event-content" style="line-height: 1em;">
                             <span class="

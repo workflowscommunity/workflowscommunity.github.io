@@ -1,6 +1,7 @@
 - name: "2nd International Workshop on Scientific Knowledge: Representation, Discovery, and Assessment"
   series: Sci-k 2022
-  date: 2022-04-05
+  start_date: 2022-04-26
+  end_date: 2022-04-26
   location: Online (part of The Web Conference 2022)
   url: https://sci-k.github.io/2022/
   type: Workshop
@@ -10,7 +11,8 @@
 
 - name: 18th IEEE International Conference on e-Science
   series: eScience 2022
-  date: 2022-09-30
+  start_date: 2022-10-11
+  end_date: 2022-10-14
   location: Utah, USA
   url: https://escience-conference.org/2022
   type: Conference
@@ -22,7 +24,8 @@
 
 - name: Bioinformatics Open Source Conference
   series: BOSC 2022
-  date: 2022-07-13
+  start_date: 2022-07-13
+  end_date: 2022-07-14
   location: Madison, Wisconsin, USA & online
   url: https://www.open-bio.org/events/bosc-2022/
   type: Conference
@@ -34,7 +37,8 @@
 
 - name: 31st International Symposium on High-Performance Parallel and Distributed Computing
   series: HPDC 2022
-  date: 2022-06-27
+  start_date: 2022-06-27
+  end_date: 2022-07-01
   location: Minneapolis, USA
   url: http://www.hpdc.org/2022/
   type: Conference
@@ -47,7 +51,8 @@
 - name: The International Conference for High Performance Computing, Networking, Storage, and Analysis
   series: SC'22
   location: Dallas, USA
-  date: 2022-11-13
+  start_date: 2022-11-13
+  end_date: 2022-11-18
   url: https://sc22.supercomputing.org/
   type: Conference
   deadlines:
@@ -61,7 +66,8 @@
 - name: 28th International European Conference on Parallel and Distributed Computing
   series: Euro-Par 2022
   location: Glasgow, UK
-  date: 2022-08-22
+  start_date: 2022-08-22
+  end_date: 2022-08-26
   url: https://2022.euro-par.org/
   type: Conference
   deadlines:
@@ -71,7 +77,8 @@
 - name: 2022 Common Workflow Language Conference
   series: CWL 2022
   location: Virtual
-  date: 2022-02-28
+  start_date: 2022-02-28
+  end_date: 2022-03-04
   url: https://cwl.discourse.group/t/2022-cwl-conference-feb-28-mar-4-2022
   type: Conference
   deadlines:
@@ -81,13 +88,15 @@
 - name: "2022 Galaxy Community Conference"
   series: "GCC2022"
   location: "Minneapolis, MN, USA"
-  date: 2022-07-16
+  start_date: 2022-07-17
+  end_date: 2022-07-23
   url: https://galaxyproject.org/events/gcc2022/
   type: Conference
 
 - name: March 2022 Hackathon
   series: nf-core
   location: Virtual
-  date: 2022-03-16
+  start_date: 2022-03-16
+  end_date: 2022-03-18
   url: https://nf-co.re/events/2022/hackathon-march-2022
   type: Workshop

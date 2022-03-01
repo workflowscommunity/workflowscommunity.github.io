@@ -16,16 +16,16 @@ permalink: /events
     </header>
 
     <div class="row">
-        {% assign events = site.data.events | sort: 'date' %}
+        {% assign events = site.data.events | sort: 'start_date' %}
         {% capture nowunix %}{{'now' | date: '%Y-%m-%d' | date: '%s'}}{% endcapture %}
         {% for event in events %}
-        {% capture eventtime %}{{event.date | date: '%s'}}{% endcapture %}
+        {% capture eventtime %}{{event.end_date | date: '%s'}}{% endcapture %}
         {% if eventtime >= nowunix %}
         <div class="col-sm-12 col-md-12">
             <a href="{{event.url}}" class="event" target="_blank">
                 <div class="event-date">
-                    <span class="header">{{event.date | date: "%b %d" }}</span><br />
-                    <span class="subheader">{{event.date | date: "%Y" }}</span>
+                    <span class="header">{{event.start_date | date: "%b %d" }}</span><br />
+                    <span class="subheader">{{event.start_date | date: "%Y" }}</span>
                 </div>
                 <div class="event-content">
                     <strong>{{event.series}}</strong>: {{event.name}}<br />

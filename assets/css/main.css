@@ -4315,7 +4315,6 @@ body.is-menu-visible #menu {
     text-align: center;
     line-height: 1.2em;
     text-transform: uppercase;
-    min-height: 4em;
     padding-top: 0.2em;
 }
 
@@ -4347,13 +4346,11 @@ body.is-menu-visible #menu {
 .events {
     min-height: 30em;
     max-height: 30em;
-    /* margin-right: 1em; */
 }
 
 .jobs {
     min-height: 30em;
     max-height: 30em;
-    /* margin-left: 1em; */
 }
 
 .framework, .system, .event {   
