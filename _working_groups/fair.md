@@ -20,6 +20,7 @@ members:
       link: https://orcid.org/0000-0002-2961-9670
     - name: Christian Erdmann
     - name: Stian Soiland-Reyes
+    - name: Nicola Soranzo
     - name: Shelly Stall
     - name: Ziheng Sun
       link: https://zihengsun.github.io
