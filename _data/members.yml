@@ -356,3 +356,9 @@
   first_name: Vivek
   institution: Flagship Labs 75
   country: us
+
+- last_name: Stracquadanio
+  first_name: Giovanni
+  institution: University of Edinburgh
+  country: gb
+  link: www.stracquadaniolab.org
