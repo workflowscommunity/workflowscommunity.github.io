@@ -346,3 +346,8 @@
   first_name: Patricia
   institution: Los Alamos National Laboratory
   country: us
+
+- last_name: James
+  first_name: Chela
+  institution: Institute of Child Health
+  country: gb
