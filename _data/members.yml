@@ -373,3 +373,8 @@
   first_name: Priyanka
   institution: Wellcome Sanger Institute
   country: gb
+
+- last_name: Laney
+  first_name: Daniel
+  institution: Lawrence Livermore National Laboratory
+  country: us
