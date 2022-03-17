@@ -124,7 +124,7 @@ Registries:
 
 Related projects and initiatives supporting FAIR Computational Workflows aims:
 
-* [WorkflowsHub Club](https://about.workflowhub.eu//)
+* [WorkflowHub Club](https://about.workflowhub.eu/)
 * [EOSC-Life](https://www.eosc-life.eu/)
 * [ELIXIR Europe](https://elixir-europe.org/)
 * [BioExcel](https://bioexcel.eu/)
