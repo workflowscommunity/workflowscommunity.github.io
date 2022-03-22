@@ -1,3 +1,14 @@
+- name: 2nd Workshop on E-science ReseaRch leading tO negative Results
+  series: ERROR 2022
+  start_date: 2022-10-11
+  end_date: 2022-10-14
+  location: Salt Lake City, USA
+  url: https://error-workshop.org/
+  type: Workshop
+  deadlines:
+    - name: Paper Submissions
+      date: 2022-07-08
+
 - name: "2nd International Workshop on Scientific Knowledge: Representation, Discovery, and Assessment"
   series: Sci-k 2022
   start_date: 2022-04-26
@@ -13,7 +24,7 @@
   series: eScience 2022
   start_date: 2022-10-11
   end_date: 2022-10-14
-  location: Utah, USA
+  location: Salt Lake City, USA
   url: https://escience-conference.org/2022
   type: Conference
   deadlines:
@@ -26,7 +37,7 @@
   series: BOSC 2022
   start_date: 2022-07-13
   end_date: 2022-07-14
-  location: Madison, Wisconsin, USA & online
+  location: Madison, WI, USA & online
   url: https://www.open-bio.org/events/bosc-2022/
   type: Conference
   deadlines:
