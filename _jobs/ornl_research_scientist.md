@@ -4,7 +4,7 @@ title: "Research Scientist, Workflows / R&D Staff Member"
 organization: Oak Ridge National Laboratory
 organization_logo: https://rmkcdn.successfactors.com/bc9eb071/f39dcf2f-8a25-41be-9f40-6.png
 location: Oak Ridge, TN, USA
-application_deadline: 2022-03-31
+application_deadline: 2022-04-14
 apply_link: https://jobs.ornl.gov/job/Oak-Ridge-Research-Scientist%2C-Workflows-R&D-Staff-Member-TN-37830/839093500/
 employment_type: Full-time
 ---
