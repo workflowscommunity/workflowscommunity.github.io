@@ -435,3 +435,20 @@
   first_name: Maciej
   institution: AGH University of Science and Technology
   country: pl
+
+- last_name: Viviani
+  first_name: Paolo
+  institution: LINKS Foundation
+  country: it
+  link: https://paoloviviani.github.io
+
+- last_name: Vitali
+  first_name: Giacomo
+  institution: LINKS Foundation
+  country: it
+
+- last_name: Colonnelli
+  first_name: Iacopo
+  institution: University of Torino
+  country: it
+  link: https://alpha.di.unito.it/iacopo-colonnelli/
