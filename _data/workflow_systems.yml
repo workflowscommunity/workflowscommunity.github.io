@@ -78,3 +78,8 @@
   repository: aiida-core
   type: github
   metadata: docs
+
+- organization: alpha-unito
+  repository: streamflow
+  type: github
+  metadata: docs 
