@@ -83,3 +83,8 @@
   repository: streamflow
   type: github
   metadata: docs 
+
+- organization: scipipe
+  repository: scipipe
+  type: github
+  metadata: docs
