@@ -467,3 +467,9 @@
   first_name: Peter
   institution: Curii
   country: us
+
+- last_name: Lampa
+  first_name: Samuel
+  institution: Savantic AB
+  country: se
+  link: https://rillabs.org
