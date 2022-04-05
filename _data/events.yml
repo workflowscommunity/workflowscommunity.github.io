@@ -111,3 +111,11 @@
   end_date: 2022-03-18
   url: https://nf-co.re/events/2022/hackathon-march-2022
   type: Workshop
+
+- name: 17th Workshop on Workflows in Support of Large-Scale Science
+  series: WORKS22
+  location: Dallas, TX, USA
+  start_date: 2022-11-13
+  end_date: 2022-11-18
+  url: https://works-workshop.org/
+  type: Workshop
