@@ -3,7 +3,7 @@ layout: working_groups
 title: "WfBG: Workflow Benchmarking Group"
 description: Define methodology to collect meaningful performance metrics; share exemplar workflows written in multiple workflow languages
 status: Establishing
-join: [Signup for the WCI Slack team](https://join.slack.com/t/workflowscommunity/shared_invite/zt-10tn61tdy-p9sExEOBoCDpaPmj3G3Jtg) and [join the #benchmarking channel](https://workflowscommunity.slack.com/archives/C039VUMHMHP)
+join: https://workflowscommunity.slack.com/archives/C039VUMHMHP
 members:
     - name: Iacopo Colonnelli
       role: Chair
