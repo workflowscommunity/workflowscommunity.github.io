@@ -3,10 +3,11 @@ layout: default
 permalink: /
 ---
 
+{% capture nowunix %}{{'now' | date: '%Y-%m-%d' | date: '%s'}}{% endcapture %}
 {% assign total_systems = site.systems | size %}
 {% assign total_members = site.data.members | size %}
 {% assign total_frameworks = site.data.research_frameworks | size %}
-{% assign total_wci_wg = site.working_groups | size %}
+{% assign total_wci_wg = site.working_groups | where:"layout","working_groups" | size %}
 {% assign total_ext_wg = site.data.working_groups | size %}
 {% assign total_wg = total_wci_wg | plus: total_ext_wg %}
 
@@ -125,7 +126,6 @@ permalink: /
             </header>
             <div class="row">
                 {% assign events = site.data.events | sort: 'start_date'%}
-                {% capture nowunix %}{{'now' | date: '%Y-%m-%d' | date: '%s'}}{% endcapture %}
                 {% for event in events limit: 10 %}
                 {% capture eventtime %}{{event.end_date | date: '%s'}}{% endcapture %}
                 {% if eventtime >= nowunix %}
@@ -163,7 +163,14 @@ permalink: /
     <div class="col-sm-1">&nbsp;</div>
 
     <!-- Jobs -->
-    {% assign num_jobs = site.jobs | size %}
+    {% assign jobs = site.jobs | sort: "application_deadline" %}
+    {% assign num_jobs = 0 %}
+    {% for job in jobs limit: 10 %}
+    {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
+    {% if eventtime >= nowunix %}
+    {% assign num_jobs = num_jobs | plus: 1 %}
+    {% endif %}
+    {% endfor %}
     <div class="col-sm-12 col-md-5">
         <div class="mini-box jobs">
             <header>
@@ -174,7 +181,6 @@ permalink: /
                 <a href="/jobs" class="bottom-button" style="background-color: steelblue;">All Jobs</a>
             </header>
             <div class="row">
-                {% assign jobs = site.jobs | sort: "application_deadline" %}
                 {% for job in jobs limit: 10 %}
                 {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
                 {% if eventtime >= nowunix %}

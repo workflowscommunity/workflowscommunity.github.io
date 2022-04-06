@@ -4,7 +4,15 @@ title: Jobs
 permalink: /jobs
 ---
 
-{% assign num_jobs = site.jobs | size %}
+{% capture nowunix %}{{'now' | date: '%Y-%m-%d' | date: '%s'}}{% endcapture %}
+{% assign jobs = site.jobs | sort: "application_deadline" %}
+{% assign num_jobs = 0 %}
+{% for job in jobs limit: 10 %}
+{% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
+{% if eventtime >= nowunix %}
+{% assign num_jobs = num_jobs | plus: 1 %}
+{% endif %}
+{% endfor %}
 
 <article class="post">
     <header>
@@ -19,8 +27,6 @@ permalink: /jobs
 
     <div class="row">
         <!-- <div class="jobs"> -->
-            {% assign jobs = site.jobs | sort: "application_deadline" %}
-            {% capture nowunix %}{{'now' | date: '%Y-%m-%d' | date: '%s'}}{% endcapture %}
             {% for job in jobs %}
             {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
             {% if eventtime >= nowunix %}
