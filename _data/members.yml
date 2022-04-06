@@ -494,3 +494,14 @@
   first_name: Doriana
   institution: University of Turin
   country: it
+
+- last_name: Nash
+  first_name: Rupert
+  institution: The University of Edinburgh
+  country: uk
+
+- last_name: Mittone
+  first_name: Gianluca
+  institution: University of Turin
+  country: it
+  link: https://alpha.di.unito.it/gianluca-mittone/
