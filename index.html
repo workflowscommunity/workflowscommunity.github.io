@@ -17,20 +17,20 @@ permalink: /
             <i style="color: #999">A community-supported common knowledge-base for workflows research and development</i>
         </div>
         <a class="nsystems" href="/systems">
-            <strong>{{ total_systems }}</strong><br />
+            <strong class="timer" data-from="1" data-to="{{ total_systems }}"></strong><br />
             workflow systems
         </a>
         <a class="nmembers" href="/members">
-            <strong>{{ total_members }}</strong><br />
+            <strong class="timer" data-from="1" data-to="{{ total_members }}"></strong><br />
             members<br />
             <span class="light-gray"><i>and growing</i></span>
         </a>
         <a class="nframeworks" href="/frameworks">
-            <strong>{{ total_frameworks }}</strong><br />
+            <strong class="timer" data-from="1" data-to="{{ total_frameworks }}"></strong><br />
             research frameworks
         </a>
         <a class="nwg" href="/groups">
-            <strong>{{ total_wg }}</strong><br />
+            <strong class="timer" data-from="1" data-to="{{ total_wg }}"></strong><br />
             working groups
         </a>
     </div>
@@ -39,11 +39,13 @@ permalink: /
 <!-- Workflow Systems -->
 <article class="post">
     <header>
-        <div class="title" style="padding-bottom: 1em; padding-top: 2em">
-            <h3 style="margin: 0">Workflow Systems</h3>
-            <p style="margin: 0; margin-bottom: 0.5em;">Last Updated Open Source Workflow Systems</p>
+        <div class="top-button" style="background-color: #e27d60;">
+            <h3 style="margin: 0; color: #fff">Workflow Systems</h3>
+            <p style="margin: 0; line-height: 1.5em; font-size: 0.6em">
+                Last Updated Open Source Workflow Systems
+            </p>
         </div>
-        <a href="/systems" class="corner-button">All Systems</a>
+        <a href="/systems" class="bottom-button" style="background-color: #FA8B6C;">All Systems</a>
     </header>
 
     <div class="systems">
@@ -120,7 +122,7 @@ permalink: /
             <header>
                 <div class="top-button" style="border-bottom: 1px solid #ccc;">
                     <h3 style="margin: 0; color: #fff">Events</h3>
-                    <p style="margin: 0; line-height: 1.5em">Upcoming Community Events</p>
+                    <p style="margin: 0; line-height: 1.5em; font-size: 0.6em">Upcoming Community Events</p>
                 </div>
                 <a href="/events" class="bottom-button">All Events</a>
             </header>
@@ -176,7 +178,7 @@ permalink: /
             <header>
                 <div class="top-button" style="background-color: steelblue;">
                     <h3 style="margin: 0; color: #fff">Jobs</h3>
-                    <p style="margin: 0; line-height: 1.5em;">
+                    <p style="margin: 0; line-height: 1.5em; font-size: 0.6em">
                         <strong style="color: #fff">{{ num_jobs }}</strong> Open Positions from the Community
                     </p>
                 </div>
@@ -213,13 +215,15 @@ permalink: /
 
 <article class="post">
     <header>
-        <div class="title">
-            <h3>Founding Members</h3>
-            <p>Since 2021</p>
+        <div class="top-button" style="background-color: #adadad;">
+            <h3 style="margin: 0; color: #fff">Founding Members</h3>
+            <p style="margin: 0; line-height: 1.5em;">
+                Since 2021
+            </p>
         </div>
     </header>
 
-    <div class="row">
+    <div class="row" style="margin-top: 5em">
         {% assign institutions = site.data.institutions | where: "founding",true %}
         {% for institution in institutions %}
         <div class="col-sm-6 col-md-3 institution">
