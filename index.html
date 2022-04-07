@@ -118,13 +118,13 @@ permalink: /
     <div class="col-sm-12 col-md-6">
         <div class="mini-box events">
             <header>
-                <div class="title" style="border-bottom: 1px solid #ccc;">
-                    <h3 style="margin: 0">Events</h3>
-                    <p style="margin: 0; margin-bottom: 0.5em;">Upcoming Community Events</p>
+                <div class="top-button" style="border-bottom: 1px solid #ccc;">
+                    <h3 style="margin: 0; color: #fff">Events</h3>
+                    <p style="margin: 0; line-height: 1.5em">Upcoming Community Events</p>
                 </div>
                 <a href="/events" class="bottom-button">All Events</a>
             </header>
-            <div class="row">
+            <div class="row" style="margin-top: 2.5em">
                 {% assign events = site.data.events | sort: 'start_date'%}
                 {% for event in events limit: 10 %}
                 {% capture eventtime %}{{event.end_date | date: '%s'}}{% endcapture %}
@@ -174,21 +174,23 @@ permalink: /
     <div class="col-sm-12 col-md-5">
         <div class="mini-box jobs">
             <header>
-                <div class="title" style="border-bottom: 1px solid #ccc;">
-                    <h3 style="margin: 0">Jobs</h3>
-                    <p style="margin: 0; margin-bottom: 0.5em;"><strong>{{ num_jobs }}</strong> Open Positions from the Community</p>
+                <div class="top-button" style="background-color: steelblue;">
+                    <h3 style="margin: 0; color: #fff">Jobs</h3>
+                    <p style="margin: 0; line-height: 1.5em;">
+                        <strong style="color: #fff">{{ num_jobs }}</strong> Open Positions from the Community
+                    </p>
                 </div>
-                <a href="/jobs" class="bottom-button" style="background-color: steelblue;">All Jobs</a>
+                <a href="/jobs" class="bottom-button" style="background-color: #659AD4;">All Jobs</a>
             </header>
-            <div class="row">
+            <div class="row" style="margin-top: 2.5em">
                 {% for job in jobs limit: 10 %}
                 {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
                 {% if eventtime >= nowunix %}
                 <div class="col-sm-12 col-md-12" style="padding: 0 0.5em; vertical-align: top;">
                     <a href="{{ job.url }}" class="job-item">
                         <div>
-                            <strong>{{ job.title }}</strong><br />
-                            {{ job.organization }}<br />
+                            <span style="color: steelblue">{{ job.title }}</span><br />
+                            <span style="font-size: 0.9em">{{ job.organization }}</span><br />
                             <span class="light-gray">
                                 <i class="fas fa-clock"></i>&nbsp;&nbsp;{{ job.application_deadline | date: "%b %d, %Y" }} 
                                 &nbsp;&nbsp;|&nbsp;&nbsp;
