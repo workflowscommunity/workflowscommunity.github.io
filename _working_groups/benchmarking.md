@@ -13,6 +13,8 @@ members:
       link: https://orcid.org/0000-0002-2961-9670
     - name: Rafael Ferreira da Silva
       link: https://orcid.org/0000-0002-1720-0928
+    - name: Javier Conejero
+      link: https://orcid.org/0000-0001-6401-6229
 ---
 
 ## Goals
