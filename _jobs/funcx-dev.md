@@ -4,7 +4,7 @@ title: "Backend Software Engineer"
 organization: funcX/Globus (University of Chicago)
 organization_logo: https://mc-1b49d921-43a2-4264-88fd-647979-cdn-endpoint.azureedge.net/-/jssmedia/images/logo-background.svg
 location: Chicago, IL (or Remote)
-application_deadline: 2022-04-30
+application_deadline: 2022-04-20
 apply_link: https://www.globus.org/jobs/backend-software-engineer-funcx
 employment_type: Full-time
 ---
