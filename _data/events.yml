@@ -119,3 +119,11 @@
   end_date: 2022-11-14
   url: https://works-workshop.org/
   type: Workshop
+
+- name: Platform for Advanced Scientific Computing
+  series: PASC 2022
+  location: Basel, Switzerland
+  start_date: 2022-06-27
+  end_date: 2022-06-29
+  url: https://pasc22.pasc-conference.org/
+  type: Conference
