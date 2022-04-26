@@ -127,3 +127,11 @@
   end_date: 2022-06-29
   url: https://pasc22.pasc-conference.org/
   type: Conference
+
+- name: ISC High Performance
+  series: ISC 2022
+  location: Hamburg, Germany
+  start_date: 2022-05-29
+  end_date: 2022-06-02
+  url: https://www.isc-hpc.com
+  type: Conference
