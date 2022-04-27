@@ -17,6 +17,7 @@
 - organization: cooperative-computing-lab
   repository: cctools
   type: github
+  metadata: makeflow/.wci.yml
 
 - organization: bsc-wdc
   repository: compss
