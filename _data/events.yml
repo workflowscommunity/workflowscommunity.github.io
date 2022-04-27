@@ -135,3 +135,14 @@
   end_date: 2022-06-02
   url: https://www.isc-hpc.com
   type: Conference
+
+- name: 2nd Workshop on Reproducible Workflows, Data Management, and Security
+  series: ReWords 2022
+  location: Salt Lake City, UT, USA
+  start_date: 2022-10-11
+  end_date: 2022-10-11
+  url: https://sites.google.com/view/rewords22
+  type: Workshop
+  deadlines:
+    - name: Paper Submissions
+      date: 2022-07-08
