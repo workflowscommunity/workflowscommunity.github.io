@@ -148,6 +148,67 @@ Related standards for FAIR computational workflows:
 
 _Articles below are published as [Open Access](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/), or with [green open access preprints](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/understanding/) where gold open access is not possible. Please [let us know](https://github.com/workflowscommunity/workflowscommunity.github.io/issues) if you are unable to access any of our publications. To add to this list, please [suggest a change](https://github.com/workflowscommunity/workflowscommunity.github.io/blob/main/_working_groups/fair.md)._
 
+Michael R. Crusoe, Sanne Abeln, Alexandru Iosup, Peter Amstutz, John Chilton, Nebojša Tijanić, Hervé Ménager, Stian Soiland-Reyes, Carole Goble, CWL Community (2022):  
+[**Methods Included: Standardizing Computational Reuse and Portability with the Common Workflow Language**](https://arxiv.org/pdf/2105.07028).  
+_Communications of the ACM_ **65**(6)  (in print).
+To appear as <https://doi.org/10.1145/3486897>  
+preprint: [arXiv:2105.07028 [cs.DC]](https://arxiv.org/abs/2105.07028)
+
+Peter Wittenburg, Alex Hardisty, Amirpasha Mozzafari, Limor Peer, Nikolay Skvortsov, Alessandro Spinuso, Zhiming Zhao (2022):  
+**Editors’ Note: [Special Issue on Canonical Workflow Frameworks for Research](https://direct.mit.edu/dint/issue/4/2)**.  
+_Data Intelligence_ **4**(2)  
+<https://doi.org/10.1162/dint_e_00122>
+
+Stian Soiland-Reyes, Genís Bayarri, Pau Andrio, Robin Long, Douglas Lowe, Ania Niewielska, Adam Hospital, Paul Groth (2022):  
+[**Making Canonical Workflow Building Blocks interoperable across workflow languages**](https://direct.mit.edu/dint/article-pdf/doi/10.1162/dint_a_00135/1996729/dint_a_00135.pdf).  
+_Data Intelligence_ **4**(2)  
+<https://doi.org/10.1162/dint_a_00135>
+
+Alex Hardisty, Paul Brack, Carole Goble, Laurence Livermore, Ben Scott, Quentin Groom, Stuart Owen, Stian Soiland-Reyes (2022):  
+[**The Specimen Data Refinery: A canonical workflow framework and FAIR Digital Object approach to speeding up digital mobilisation of natural history collections**](https://direct.mit.edu/dint/article-pdf/doi/10.1162/dint_a_00134/1996727/dint_a_00134.pdf).  
+_Data Intelligence_ **4**(2)  
+<https://doi.org/10.1162/dint_a_00134>
+
+Amirpasha Mozaffari, Michael Langguth, Bing Gong, Jessica Ahring, Adrian Rojas Campos, Pascal Nieters, Otoniel José Campos Escobar, Martin Wittenbrink,
+Peter Baumann, Martin G. Schultz (2022):  
+[**HPC-oriented Canonical Workflows for Machine Learning Applications in Climate and Weather Prediction**](https://doi.org/10.1162/dint_a_00131).  
+_Data Intelligence_ **4**(2)  
+<https://doi.org/10.1162/dint_a_00131>
+
+Peter Wittenburg, Alex Hardisty, Yann Le Franc, Amirpasha Mozaffari, Limor Peer, Nikolay A. Skvortsov, Zhiming Zhao, Alessandro Spinuso (2022):  
+[**Canonical Workflows to Make Data FAIR**](https://doi.org/10.1162/dint_a_00132).  
+_Data Intelligence_ **4**(2)  
+<https://doi.org/10.1162/dint_a_00132>
+
+Beatriz Serrano-Solano, Anne Fouilloux, Ignacio Eguinoa, Matúš Kalaš, Björn Grüning, Frederik Coppens (2022):  
+[**Galaxy: A Decade of Realising CWFR Concepts**](https://doi.org/10.1162/dint_a_00136).  
+_Data Intelligence_ **4**(2)  
+<https://doi.org/10.1162/dint_a_00136>
+
+Thomas Jejkal, Sabrine Chelbi, Andreas Pfeil, Peter Wittenburg (2022):  
+[**Evaluation of Application Possibilities for Packaging Technologies in Canonical Workflows**](https://doi.org/10.1162/dint_a_00137).  
+_Data Intelligence_ **4**(2)  
+<https://doi.org/10.1162/dint_a_00137>
+
+Hendrik Nolte, Philipp Wieder (2022):  
+[**Realising Data-Centric Scientific Workflows with Provenance-Capturing on Data Lakes**](https://doi.org/10.1162/dint_a_00141).  
+_Data Intelligence_ **4**(2)  
+<https://doi.org/10.1162/dint_a_00141>
+
+Nikolay A. Skvortsov, Sergey A. Stupnikov (2022):  
+[**A Semantic Approach to Workflow Management and Reuse for Research Problem Solving**](https://doi.org/10.1162/dint_a_00142).  
+_Data Intelligence_ **4**(2)  
+<https://doi.org/10.1162/dint_a_00142>
+
+Alessandro Spinuso, Mats Veldhuizen, Daniele Bailo, Valerio Vinciarelli, Tor Langeland (2022):  
+[**SWIRRL. Managing Provenance-aware and Reproducible Workspaces**](https://doi.org/10.1162/dint_a_00129).  
+_Data Intelligence_ **4**(2)  
+<https://doi.org/10.1162/dint_a_00129>
+
+Christian Ohmann, Romain David, Mónica Cano Abadia, Florence Bietrix, Jan-Willem Boiten, Steve Canham, Maria Luisa Chiusano, Walter Dastrù, Arnaud Laroquette, Dario Longo, Michaela Theresia Mayrhofer, Maria Panagiotopoulou, Audrey Richard, Pablo Emilio Verde (2022):  
+[**Pilot Study on the Intercalibration of a Categorisation System for FAIRer Digital Objects Related to Sensitive Data in the Life Sciences**]().  
+_Data Intelligence_ **4**(2)  
+<https://doi.org/10.1162/dint_a_00126>
 
 Stian Soiland-Reyes, Peter Sefton, Mercè Crosas, Leyla Jael Castro, Frederik Coppens, José M. Fernández, Daniel Garijo, Björn Grüning, Marco La Rosa, Simone Leo, Eoghan Ó Carragáin, Marc Portier, Ana Trisovic, RO-Crate Community, Paul Groth, Carole Goble (2022):  
 [**Packaging research artefacts with RO-Crate**](https://www.researchobject.org/2021-packaging-research-artefacts-with-ro-crate/manuscript.html).  
@@ -155,18 +216,22 @@ _Data Science_ (in press)
 <https://doi.org/10.3233/DS-210053> 
 
 Paul Brack, Peter Crowther, Stian Soiland-Reyes, Stuart Owen, Douglas Lowe, Alan R Williams, Quentin Groom, Mathias Dillen, Frederik Coppens, Björn Grüning, Ignacio Eguinoa, Philip Ewels, Carole Goble (2022):  
-[**10 Simple Rules for making a software tool workflow-ready**](https://zenodo.org/record/5636487/preview/10_simple_rules_for_making_a_software_tool_workflow-ready--PREPRINT.pdf)  
-_PLOS Computational Biology_ (accepted) 
-<https://doi.org/10.5281/zenodo.5636487>
+[**10 Simple Rules for making a software tool workflow-ready**](https://doi.org/10.1371/journal.pcbi.1009823)  
+_PLOS Computational Biology_ **18**(3):e1009823
+<https://doi.org/10.1371/journal.pcbi.1009823>
 
-Stian Soiland-Reyes, Genís Bayarri, Pau Andrio, Robin Long, Douglas Lowe, Ania Niewielska, Adam Hospital, Paul Groth (2022):  
-[**Making Canonical Workflow Building Blocks interoperable across workflow languages**](https://zenodo.org/record/5542553/preview/canonical-workflow-building-blocks--submitted.pdf.pdf).
-_Data Intelligence_ (accepted) [[preprint](https://doi.org/10.5281/zenodo.5542553)]
+Neil P. Chue Hong, Daniel S. Katz, Michelle Barker; Anna-Lena Lamprecht, Carlos Martinez, Fotis E. Psomopoulos, Jen Harrow, Leyla Jael Castro, Morane Gruenpeter, Paula Andrea Martinez, Tom Honeyman; Alexander Struck, Allen Lee, Axel Loewe, Ben van Werkhoven, Catherine Jones, Daniel Garijo, Esther Plomp, Francoise Genova, Hugh Shanahan, Joanna Leng, Maggie Hellström, Malin Sandström, Manodeep Sinha, Mateusz Kuzak, Patricia Herterich, Qian Zhang, Sharif Islam, Susanna-Assunta Sansone, Tom Pollard, Udayanto Dwi Atmojo; Alan Williams, Andreas Czerniak, Anna Niehues, Anne Claire Fouilloux, Bala Desinghu, Carole Goble, Céline Richard, Charles Gray, Chris Erdmann, Daniel Nüst, Daniele Tartarini, Elena Ranguelova, Hartwig Anzt, Ilian Todorov, James McNally, Javier Moldon, Jessica Burnett, Julián Garrido-Sánchez, Khalid Belhajjame, Laurents Sesink, Lorraine Hwang, Marcos Roberto Tovani-Palone, Mark D. Wilkinson, Mathieu Servillat, Matthias Liffers, Merc Fox, Nadica Miljković, Nick Lynch, Paula Martinez Lavanchy, Sandra Gesing, Sarah Stevens, Sergio Martinez Cuesta, Silvio Peroni, Stian Soiland-Reyes, Tom Bakker, Tovo Rabemanantsoa, Vanessa Sochat, Yo Yehudi, FAIR4RS WG (2022):  
+[**FAIR Principles for Research Software version 1.0 (FAIR4RS Principles v1.0)**](https://www.rd-alliance.org/system/files/FAIR4RS%20principles%20v1.0.pdf).  
+_Research Data Alliance_  
+<https://doi.org/10.15497/RDA00068>
+
+
+## 2021
 
 Rafael Ferreira da Silva, Henri Casanova, Kyle Chard, Ilkay Altintas, Rosa M Badia, Bartosz Balis, Tainã Coleman, Frederik Coppens, Frank Di Natale, Bjoern Enders, Thomas Fahringer, Rosa Filgueira, Grigori Fursin, Daniel Garijo, Carole Goble, Dorran Howell, Shantenu Jha, Daniel S. Katz, Daniel Laney, Ulf Leser, Maciej Malawski, Kshitij Mehta, Loïc Pottier, Jonathan Ozik, J. Luc Peterson, Lavanya Ramakrishnan, Stian Soiland-Reyes, Douglas Thain, Matthew Wolf (2021):  
 [**A Community Roadmap for Scientific Workflows Research and Development**](https://arxiv.org/pdf/2110.02168).  
 [arXiv:2110.02168 [cs.DC]](https://arxiv.org/abs/2110.02168)
-_2021 IEEE Workshop on Workflows in Support of Large-Scale Science ([WORKS](https://works-workshop.org/))_, pp 81–90. 
+_2021 IEEE Workshop on Workflows in Support of Large-Scale Science ([WORKS](https://works-workshop.org/))_, pp 81–90.  
 <https://doi.org/10.1109/WORKS54523.2021.00016>
 
 Robin A Richardson, Remzi Celebi, Sven van der Burg, Djura Smits, Lars Ridder, Michel Dumontier, Tobias Kuhn (2021):  
@@ -176,12 +241,12 @@ _The Eleventh International Conference on Knowledge Capture ([K-Cap2021](https:/
 
 Jeremy Leipzig, Daniel Nüst, Charles Tapley Hoyt, Karthik Ram, Jane Greenberg (2021):  
 [**The role of metadata in reproducible computational research**](https://arxiv.org/pdf/2006.08589.pdf)  
-_Patterns_ **2**(1):100322
+_Patterns_ **2**(1):100322  
 <https://doi.org/10.1016/j.patter.2021.100322>
 
 Sveinung Gundersen, Sanjay Boddu, Salvador Capella-Gutierrez, Finn Drabløs, José M. Fernández, Radmila Kompova, Kieron Taylor, Dmytro Titov, Daniel Zerbino, Eivind Hovig (2021):  
-[**Recommendations for the FAIRification of genomic track metadata** [version 1; peer review: 2 approved]](https://doi.org/10.12688/f1000research.28449.1)
-_F1000Research_ **10**(ELIXIR):268 
+[**Recommendations for the FAIRification of genomic track metadata** [version 1; peer review: 2 approved]](https://doi.org/10.12688/f1000research.28449.1).  
+_F1000Research_ **10**(ELIXIR):268  
 <https://doi.org/10.12688/f1000research.28449.1>
 
 Anna-Lena Lamprecht, Magnus Palmblad, Jon Ison, Veit Schwämmle,
@@ -198,8 +263,8 @@ _F1000Research_ **10**:897
 <https://doi.org/10.12688/f1000research.54159.1>
 
 Rafael Ferreira da Silva, Henri Casanova, Kyle Chard, Dan Laney, Dong Ahn, Shantenu Jha, Carole Goble, Lavanya Ramakrishnan, Luc Peterson, Bjoern Enders, Douglas Thain, Ilkay Altintas, Yadu Babuji, Rosa Badia, Vivien Bonazzi, Taina Coleman, Michael Crusoe, Ewa Deelman, Frank Di Natale & Paolo Di Tommaso (2021):  
-[**Workflows Community Summit: Bringing the Scientific Workflows Community Together**](https://arxiv.org/pdf/2103.09181.pdf). 
-_Workflows RI_ Technical Report. [arXiv:2103.09181](https://arxiv.org/abs/2103.09181)
+[**Workflows Community Summit: Bringing the Scientific Workflows Community Together**](https://arxiv.org/pdf/2103.09181.pdf).  
+_Workflows RI_ Technical Report. [arXiv:2103.09181](https://arxiv.org/abs/2103.09181)  
 <https://doi.org/10.5281/zenodo.4606958>
 
 Carole Goble, Stian Soiland-Reyes, Finn Bacall, Stuart Owen, Alan Williams, Ignacio Eguinoa, Bert Droesbeke, Simone Leo, Luca Pireddu, Laura Rodriguez-Navas, José Mª Fernández, Salvador Capella-Gutierrez, Hervé Ménager, Björn Grüning, Beatriz Serrano-Solano, Philip Ewels, Frederik Coppens (2021):  
@@ -208,8 +273,10 @@ _Zenodo_
 <https://doi.org/10.5281/zenodo.4605654>
 
 Daniel S. Katz, Morane Gruenpeter, Tom Honeyman, Lorraine Hwang, Mark D. Wilkinson, Vanessa Sochat, Hartwig Anzt, Carole Goble, FAIR4RS Subgroup 1 (2021):  
-[**A Fresh Look at FAIR for Research Software**](https://arxiv.org/ftp/arxiv/papers/2101/2101.10883.pdf).  
-[arXiv:2101.10883](https://arxiv.org/abs/2101.10883) [[pdf](https://arxiv.org/ftp/arxiv/papers/2101/2101.10883.pdf)]
+[**A Fresh Look at FAIR for Research Software**](https://arxiv.org/pdf/2101.10883).  
+[arXiv:2101.10883](https://arxiv.org/abs/2101.10883) [[pdf](https://arxiv.org/pdf/2101.10883)]
+
+## 2020
 
 Carole Goble, Sarah Cohen-Boulakia, Stian Soiland-Reyes, Daniel Garijo, Yolanda Gil, Michael R. Crusoe, Kristian Peters, Daniel Schober (2020):  
 [**FAIR Computational Workflows**](https://doi.org/10.1162/dint_a_00033).  
@@ -217,21 +284,32 @@ _Data Intelligence_  **2**(1):108–121
 <https://doi.org/10.1162/dint_a_00033>
 
 Janno Harjes, Anton Link, Tanja Weibulat, Dagmar Triebel, Gerhard Rambold (2020):  
-[**FAIR digital objects in environmental and life sciences should comprise workflow operation design data and method information for repeatability of study setups and reproducibility of results**](https://doi.org/10.1093/database/baaa059)
+[**FAIR digital objects in environmental and life sciences should comprise workflow operation design data and method information for repeatability of study setups and reproducibility of results**](https://doi.org/10.1093/database/baaa059).  
 _Database_ **2020**:baaa059   
-<https://doi.org/10.1093/database/baaa059
+<https://doi.org/10.1093/database/baaa059>
 
 Anna-Lena Lamprecht, Leyla Garcia, Mateusz Kuzak, Carlos Martinez, Ricardo Arcila, Eva Martin Del Pico, Victoria Dominguez Del Angel, Stephanie Van De Sandt, Jon Ison, Paula Andrea Martinez, Peter Mcquilton, Alfonso Valencia, Jennifer Harrow, Fotis Psomopoulos, Josep Ll. Gelpi, Neil Chue Hong, Carole Goble, Salvador Capella-Gutierrez (2020):  
 [**Towards FAIR principles for research software**](https://doi.org/10.3233/DS-190026).  
 _Data Science_ **3**(1) pp. 37–59.  
 <https://doi.org/10.3233/DS-190026>
 
+
+## 2019
+
 Farah Zaib Khan, Stian Soiland-Reyes, Richard O. Sinnott, Andrew Lonie, Carole Goble, Michael R. Crusoe (2019):  
 [**Sharing interoperable workflow provenance: A review of best practices and their practical application in CWLProv**](https://doi.org/10.1093/gigascience/giz095).  
 _GigaScience_ **8**(11):giz095  
 <https://doi.org/10.1093/gigascience/giz095>
 
-Jeffrey M. Perkel (2018):
+Jeffrey M. Perkel (2019):  
+[**Workflow systems turn raw data into scientific knowledge**](https://doi.org/10.1038/d41586-019-02619-z) 
+_Nature_ **573**  
+<https://doi.org/10.1038/d41586-019-02619-z>
+
+
+## 2018
+
+Jeffrey M. Perkel (2018):  
 [**That's the way we flow**](https://doi.org/10.1038/d41586-019-02619-z).  
 _Nature_ **573** 149-150.  
 <https://doi.org/10.1038/d41586-019-02619-z>
@@ -252,6 +330,8 @@ Pablo Carbonell, Adrian J. Jervis, Christopher J. Robinson, Cunyu Yan, Mark Duns
 [**An automated Design-Build-Test-Learn pipeline for enhanced microbial production of fine chemicals**](https://doi.org/10.1038/s42003-018-0076-9).  
 _Communications Biology_ **1**:66  
 <https://doi.org/10.1038/s42003-018-0076-9>
+
+## 2017
 
 Stephen J Eglen, Ben Marwick, Yaroslav O Halchenko, Michael Hanke, Shoaib Sufi, Padraig Gleeson, R Angus Silver, Andrew P Davison, Linda Lanyon, Mathew Abrams, Thomas Wachtler, David J Willshaw, Christophe Pouzat, Jean-Baptiste Poline (2017):  
 [**Toward standard practices for sharing computer code and programs in neuroscience**](https://doi.org/10.1038/nn.4550).  
