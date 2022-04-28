@@ -146,3 +146,12 @@
   deadlines:
     - name: Paper Submissions
       date: 2022-07-08
+
+- name: 1st International Conference on FAIR Digital Objects
+  series: FDO 2022
+  location: Leiden, The Netherlands
+  start_date: 2022-10-26
+  end_date: 2022-10-28
+  url: https://www.fdo2022.org/
+  type: Conference
+
