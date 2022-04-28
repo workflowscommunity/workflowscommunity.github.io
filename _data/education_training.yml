@@ -6,3 +6,9 @@
     users can learn in a hands-on manner by experimenting with various 
     application and platform scenarios.
   icon: https://wrench-project.org/favicon.ico
+- name: "ELIXIR Research Data Management Kit (RDMKit)"
+  url: https://rdmkit.elixir-europe.org/data_analysis
+  description: |
+    The ELIXIR Research Data Management Kit (RDMkit) is an online guide 
+    containing good data management practices applicable to research projects
+    in life sciences, including data analysis.
