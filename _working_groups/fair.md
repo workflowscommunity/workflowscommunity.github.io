@@ -72,6 +72,7 @@ Events, presentations and activities are also available in WorkflowHub in the [*
 
 Related past and upcoming events:
 
+* 2022-10-26/--28: [1st International Conference on FAIR Digital Objects](https://www.fdo2022.org/) (FDO 2022),Leiden, The Netherlands
 * 2022-01-10/--13: [Semantic Web Infrastructures and Resources in Healthcare and Life Science](http://www.swat4ls.org/workshops/leiden2022/call-for-papers/) (SWAT4LS), Leiden, The Netherlands
 * 2021-11-03/--11: [Research Data Alliance (RDA) 18th Plenary Meeting](https://www.rd-alliance.org/plenaries/rda-18th-plenary-meeting-virtual) (virtual)
 * 2021-12-07/--09: [FORCE2021](https://www.force11.org/meetings/force2021), FORCE11 annual conference (virtual)
