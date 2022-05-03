@@ -89,3 +89,7 @@
   repository: scipipe
   type: github
   metadata: docs
+
+- organization: Libensemble
+  repository: libensemble
+  type: github
