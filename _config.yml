@@ -25,6 +25,9 @@ collections:
   jobs:
     output: true
     permalink: /jobs/:path/
+  stories:
+    output: true
+    permalink: /stories/:year/:month/:day/:slug/
 
 # SEO
 author:
