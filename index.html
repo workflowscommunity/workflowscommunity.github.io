@@ -167,7 +167,7 @@ permalink: /
     <!-- Jobs -->
     {% assign jobs = site.jobs | sort: "application_deadline" %}
     {% assign num_jobs = 0 %}
-    {% for job in jobs limit: 10 %}
+    {% for job in jobs %}
     {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
     {% if eventtime >= nowunix %}
     {% assign num_jobs = num_jobs | plus: 1 %}
@@ -185,9 +185,10 @@ permalink: /
                 <a href="/jobs" class="bottom-button" style="background-color: #659AD4;">All Jobs</a>
             </header>
             <div class="row" style="margin-top: 2.5em">
-                {% for job in jobs limit: 10 %}
+                {% assign count_jobs = 0 %}
+                {% for job in jobs %}
                 {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
-                {% if eventtime >= nowunix %}
+                {% if eventtime >= nowunix and count_jobs < 10 %}
                 <div class="col-sm-12 col-md-12" style="padding: 0 0.5em; vertical-align: top;">
                     <a href="{{ job.url }}" class="job-item">
                         <div>
@@ -206,6 +207,7 @@ permalink: /
                         </div>
                     </a>
                 </div>
+                {% assign count_jobs = count_jobs | plus: 1 %}
                 {% endif %}
                 {% endfor %}
             </div>
