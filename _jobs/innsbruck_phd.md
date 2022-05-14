@@ -4,7 +4,7 @@ title: "PhD Positions in Cloud-Edge Computing"
 organization: University of Innsbruck
 organization_logo: https://workflows.community/images/institutions/uinnsbruck.png
 location: Innsbruck, Austria
-application_deadline: 2022-05-31
+application_deadline: 2022-08-31
 apply_link: https://www.linkedin.com/jobs/view/3060279037/?refId=S12VDfNO%2B%2FlbPgbiEJd1mw%3D%3D
 employment_type: Full-time
 ---
