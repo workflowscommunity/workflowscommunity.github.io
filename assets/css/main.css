@@ -4928,3 +4928,48 @@ main a {
     padding: 0.1em 1em;
     color: #999;
 }
+
+.story-date {
+    text-align: center;
+    line-height: 1em;
+}
+
+.story-date .month-day {
+    font-size: 1.5em;
+}
+
+.story-date .year {
+    color: #999;
+}
+
+.story-author {
+    text-align: left;
+    line-height: 1em;
+}
+
+.story-author img {
+    float: left;
+    margin-right: 1em;
+    margin-top: 1em;
+    max-height: 2em; 
+    max-width: 2em; 
+    border-radius: 50%;
+}
+
+.story-author .institution {
+    color: #999;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.story-content img {
+    border-radius: 0.5em;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+
+.story-content .caption {
+    line-height: 1em;
+    color: #999;
+    font-size: 0.8em;
+    font-style: italic;
+}

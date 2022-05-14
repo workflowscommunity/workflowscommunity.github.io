@@ -5,36 +5,29 @@ layout: default
 <article class="post">
     <header>
         <div class="title" style="margin-bottom: -1em">
-            <h2 style="margin-bottom: 0.5em">{{ page.title }}</h2>
-            <i>{{ page.organization }}</i><br />
-            
+            <h2 style="margin-bottom: 0.5em">{{ page.title }}</h2>            
         </div>
         <div class="meta">
-            <img src="{{ page.organization_logo }}" style="max-height: 3em; max-width: 10em;" alt="{{ page.title }}" />
+            <div class="story-date">
+                <span class="month-day">{{ page.date | date: "%b %d" }}</span><br />
+                <span class="year">{{ page.date | date: "%Y" }}</span>
+            </div>
+            <div class="story-author">
+                <img src="{{ page.author_photo }}" alt="{{ page.author }}" /><br />
+                {{ page.author }}<br />
+                <span class="institution">{{ page.author_institution }}</span>
+            </div>
+            
             {% if page.apply_link %}
             <br /><br /><a href="{{ page.apply_link }}" target="_blank" class="apply"><i class="fas fa-check"></i> Apply Now</a>
             {% endif %}
         </div>
     </header>
 
-    <main class="job-content">
+    <main class="story-content">
         <div class="row">
-            <div class="col-sm-12 col-md-8">
+            <div class="col-sm-12 col-md-12">
                 {{content | markdownify}}
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="job-panel">
-                    <span class="light-gray">
-                        <i class="fas fa-clock"></i>&nbsp;&nbsp;Application Deadline<br />
-                        <strong>{{ page.application_deadline | date: "%b %d, %Y" }}</strong>
-                        <br /><br />
-                        <i class="fas fa-map-marker"></i>&nbsp;&nbsp;&nbsp;Location<br />
-                        <strong>{{ page.location }}</strong>
-                        <br /><br />
-                        <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Employment Type<br />
-                        <strong>{{ page.employment_type }}</strong>
-                    </span>
-                </div>
             </div>
         </div>
     </main>
