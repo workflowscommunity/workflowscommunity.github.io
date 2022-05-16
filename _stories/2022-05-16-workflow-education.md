@@ -1,10 +1,11 @@
 ---
 layout: story
-title: A Point of View on Workflows Education
-date: 2022-05-13
+title: "Workflows Education:  Underlying  Computer Science Concepts"
+date: 2022-05-16
 author: Henri Casanova
 author_photo: https://workflows.community/images/about/casanova.jpg
 author_institution: University of Hawaii
+image: /images/stories/eduwrench.png
 ---
 
 Workflow applications have become mainstream in many domains, including most of the sciences, engineering, as well as AI. It is thus crucial that educational and training opportunities be available to help grow an effective workflow workforce. Several institutions have already developed and made available training material for particular workflow systems, so that users can learn how to deploy and execute their workflow applications on hardware platforms on which these systems are installed. Less developed, but no less crucial, are pedagogic materials that target the fundamental concepts necessary to understand workflow applications and reason about their executions and the performance thereof. One of the reasons why these pedagogic materials are less developed is that many of the relevant concepts belong to "standard" parallel and distributed computing (PDC) topics, and it is assumed that these topics are already covered in university computer science curricula. 
