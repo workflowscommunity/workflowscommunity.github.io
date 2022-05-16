@@ -2,7 +2,7 @@
 layout: jobs
 title: "Postdoctoral Appointee - High-Performance Computing System and AI for X-Ray Science"
 organization: Argonne National Laboratory
-organization_logo: https://argonne.wd1.myworkdayjobs.com/Argonne_Careers/assets/logo
+organization_logo: https://workflows.community/images/institutions/anl.png
 location: Lemont, IL, USA
 application_deadline: 2022-05-31
 apply_link: https://argonne.wd1.myworkdayjobs.com/Argonne_Careers/job/Lemont-IL-USA/Postdoctoral-Appointee---High-Performance-Computing-System-and-AI-for-X-Ray-Science_413177

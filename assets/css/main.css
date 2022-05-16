@@ -5031,3 +5031,13 @@ main a {
     margin: 0;
     padding-right: 1em;
 }
+
+.see-all-button {
+    text-align: center; 
+    color: steelblue; 
+    border: 1px solid steelblue; 
+    padding: 0.5em; 
+    border-radius: 0.5em; 
+    font-size: 0.8em; 
+    font-weight: bold;
+}
