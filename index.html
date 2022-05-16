@@ -11,30 +11,66 @@ permalink: /
 {% assign total_ext_wg = site.data.working_groups | size %}
 {% assign total_wg = total_wci_wg | plus: total_ext_wg %}
 
-<article class="post">
-    <div class="ostats">
-        <div>
-            <i style="color: #999">A community-supported common knowledge-base for workflows research and development</i>
+<div class="row" style="margin-left: 0.075em; margin-right: 0.075em; margin-bottom: 3em">
+    <!-- Latest Story -->
+    {% assign story = site.stories | sort: "date" | reverse %}
+    {% for s in story %}
+    <div class="col-sm-12 col-md-9">
+        <div class="mini-box story-main">
+            <header>
+                <div class="top-button" style="border-bottom: 1px solid #ccc;">
+                    <h3 style="margin: 0; color: #fff">Latest Story</h3>
+                    <p style="margin: 0; line-height: 1.5em; font-size: 0.6em">Perspectives on workflows-related topics</p>
+                </div>
+                <a href="/stories" class="bottom-button">All Stories</a>
+            </header>
+            <div class="story-image">
+                <img src="{{s.image}}" />
+            </div>
+            <div class="row" style="margin-top: 13em; padding: 0.5em 1em">
+                <div class="col-sm-12 col-md-12" style="padding: 0 0.5em">
+                    <a href="{{s.url}}" style="text-decoration: none;">
+                        <h1>{{s.title}}</h1>
+                        <p class="story-excerpt">{{s.excerpt| strip_html | strip_newlines | truncate: 450}}</p>
+                    </a>
+                    <span class="author">
+                        {{ s.date | date: "%b %d, %Y" }}<br />
+                        by {{s.author}}, {{s.author_institution}}
+                    </span>
+                </div>
+            </div>
         </div>
-        <a class="nsystems" href="/systems">
-            <strong class="timer" data-from="1" data-to="{{ total_systems }}"></strong><br />
-            workflow systems
-        </a>
-        <a class="nmembers" href="/members">
-            <strong class="timer" data-from="1" data-to="{{ total_members }}"></strong><br />
-            members<br />
-            <span class="light-gray"><i>and growing</i></span>
-        </a>
-        <a class="nframeworks" href="/frameworks">
-            <strong class="timer" data-from="1" data-to="{{ total_frameworks }}"></strong><br />
-            research frameworks
-        </a>
-        <a class="nwg" href="/groups">
-            <strong class="timer" data-from="1" data-to="{{ total_wg }}"></strong><br />
-            working groups
-        </a>
+
     </div>
-</article>
+    {% endfor %}
+
+    <div class="col-sm-1">&nbsp;</div>
+
+    <!-- Stats -->
+    <div class="col-sm-12 col-md-2">
+        <div class="mini-box">
+            <div class="ostats">
+                <a class="nsystems" href="/systems">
+                    <strong class="timer" data-from="1" data-to="{{ total_systems }}"></strong><br />
+                    workflow systems
+                </a>
+                <a class="nmembers" href="/members">
+                    <strong class="timer" data-from="1" data-to="{{ total_members }}"></strong><br />
+                    members<br />
+                    <span class="light-gray"><i>and growing</i></span>
+                </a>
+                <a class="nframeworks" href="/frameworks">
+                    <strong class="timer" data-from="1" data-to="{{ total_frameworks }}"></strong><br />
+                    research frameworks
+                </a>
+                <a class="nwg" href="/groups">
+                    <strong class="timer" data-from="1" data-to="{{ total_wg }}"></strong><br />
+                    working groups
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Workflow Systems -->
 <article class="post">

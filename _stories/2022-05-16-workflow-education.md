@@ -1,0 +1,21 @@
+---
+layout: story
+title: "Workflows Education:  Underlying  Computer Science Concepts"
+date: 2022-05-16
+author: Henri Casanova
+author_photo: https://workflows.community/images/about/casanova.jpg
+author_institution: University of Hawaii
+image: /images/stories/eduwrench.png
+---
+
+Workflow applications have become mainstream in many domains, including most of the sciences, engineering, as well as AI. It is thus crucial that educational and training opportunities be available to help grow an effective workflow workforce. Several institutions have already developed and made available training material for particular workflow systems, so that users can learn how to deploy and execute their workflow applications on hardware platforms on which these systems are installed. Less developed, but no less crucial, are pedagogic materials that target the fundamental concepts necessary to understand workflow applications and reason about their executions and the performance thereof. One of the reasons why these pedagogic materials are less developed is that many of the relevant concepts belong to "standard" parallel and distributed computing (PDC) topics, and it is assumed that these topics are already covered in university computer science curricula. 
+
+This assumption is problematic for several reasons. First, it is well recognized that PDC is not sufficiently included in undergraduate computer science curricula, which has motivated the establishment of the [NSF/IEEE-TCPP Curriculum Initiative on Parallel and Distributed Computing](https://tcpp.cs.gsu.edu/curriculum/). Although progress is being made, many computer science college graduates still do not have sufficient, or any, PDC exposure. Second, many potential members of the workflow workforce will not be computer science graduates. Third, even if students have been taught the relevant concepts at different times throughout their education, they may not have retained them effectively. There is a thus need for a one-stop, self-contained ``these are the concepts needed for being able understand and reason about workflow executions" pedagogic package. This content of this package should draw from multiple sources, and should be curated and vetted by the Workflow Community Initiative. Its main use would be to provide "prerequisite concepts you need to know for workflows" to students (as a complement to or a component of university courses, before starting a workflow-related internship, before engaging on graduate-level workflow-related projects, etc.) and professionals (e.g., before beginning to use workflows, to better understand workflow behavior and performance in various professional contexts).
+
+<img src="/images/stories/nsf-ieee-tcpp.png" alt="NSF/IEEE-TCPP" width="60%" /><br />
+<span class="caption">NSF/IEEE-TCPP Curriculum Initiative on Parallel and Distributed Computing.</span>
+
+A project that could provide useful components to include in this envisioned pedagogic package is [EduWRENCH](https://eduwrench.org). EduWRENCH provides many pedagogic modules, each one including a pedagogic narrative, practice questions, open questions, and in-the-browser simulation-driven activities. Basic EduWRENCH modules target fundamental concepts of computation, I/O, and networking and explain how they drive application performance. Some modules focus on principles of parallel computation on multi-core machines, including notions of parallelism, speedup, efficiency, overhead, and load balancing. Other modules focus on principles of distributed computation over a network, including notions of data proximity. Several more advanced build on the aforementioned modules to teach workflow concepts and/or to use workflows as case-studies for more advanced topics such as scheduling, energy efficiency, etc. Most EduWRENCH modules have already been used effectively not only in university courses, but also to train beginning graduate students who are about to join a workflow research and development group. EduWRENCH by no means provides a comprehensive pedagogic package for workflows, but it may serve as a good starting point for the Workflow Community Initiative to define what such a package should and should not contain.
+
+<img src="/images/stories/eduwrench.png" alt="EduWRENCH" width="80%" /><br />
+<span class="caption">EduWRENCH website.</span>

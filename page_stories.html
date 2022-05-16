@@ -1,0 +1,40 @@
+---
+layout: default
+title: Stories
+permalink: /stories
+---
+
+<article class="post">
+    <header>
+        <div class="title">
+            <h2>{{ page.title }}</h2>
+            <p>
+                Perspectives on workflows-related topics
+            </p>
+        </div>
+    </header>
+
+    <div class="row">
+        {% assign stories = site.stories | sort: 'date' | reverse %}
+        {% for s in stories %}
+        <div class="col-sm-12 col-md-12">
+            <a href="{{s.url}}" class="event">
+                <div class="story-image-thumb">
+                    <img src="{{s.image}}" />
+                </div>
+                <div class="event-content" style="width: 100%">
+                    <strong>{{s.title}}</strong><br />
+                    <span class="author" style="float: left">
+                        by {{s.author}}, {{s.author_institution}}
+                    </span>
+                </div>
+                <div class="event-date">
+                    <span class="header">{{s.date | date: "%b %d" }}</span><br />
+                    <span class="subheader">{{s.date | date: "%Y" }}</span>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <br />
+</article>

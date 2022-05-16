@@ -3147,6 +3147,10 @@ table.alt tfoot {
 
 body {
     padding-top: 3.5em;
+    background-image: url("images/intro.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 #header {
@@ -4850,6 +4854,7 @@ main a {
 .ostats {
     display: flex;
     margin-bottom: 1em;
+    flex-wrap: wrap;
 }
 
 .ostats .nmembers, .ostats .nsystems, .ostats .nframeworks, .ostats .nwg {
@@ -4927,4 +4932,102 @@ main a {
 .contact-button>.content {
     padding: 0.1em 1em;
     color: #999;
+}
+
+.story-date {
+    text-align: center;
+    line-height: 1em;
+}
+
+.story-date .month-day {
+    font-size: 1.5em;
+}
+
+.story-date .year {
+    color: #999;
+}
+
+.story-author {
+    text-align: left;
+    line-height: 1em;
+}
+
+.story-author img {
+    float: left;
+    margin-right: 1em;
+    margin-top: 1em;
+    max-height: 2em; 
+    max-width: 2em; 
+    border-radius: 50%;
+}
+
+.story-author .institution {
+    color: #999;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.story-content img {
+    border-radius: 0.5em;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+
+.story-content .caption {
+    line-height: 1em;
+    color: #999;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.story-main {
+    min-height: 10em;
+}
+
+.story-main .top-button {
+    background-color: #e7717d !important;    background-attachment: fixed;
+}
+
+.story-main .bottom-button {
+    background-color: #c0545f !important;
+}
+
+.story-main h1 {
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1.3em;
+    letter-spacing: 0.1em;
+}
+
+.story-excerpt {
+    line-height: 1.2em;
+    color: #999;
+    margin-bottom: 1em;
+}
+
+.story-main .author {
+    color: #999;
+    text-align: right;
+    font-size: 0.5em;
+}
+
+.story-image {
+    position: absolute; 
+    top: 2em;
+    left: 0;
+    width: 100%;
+    display: block;
+}
+
+.story-image img, .story-image-thumb img {
+    height: 12em;
+    width: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+
+.story-image-thumb img {
+    height: 3.5em;
+    width: 10em;
+    margin: 0;
+    padding-right: 1em;
 }
