@@ -74,7 +74,8 @@ permalink: /
                 </div>
                 {% if system.wci_metadata %}
                 <div style="position: absolute; bottom: 0; right: 1em; font-size: 0.8em">
-                    <img src="/favicon.ico" style="max-width: 1.5em; vertical-align: middle" /> <span class="light-gray">WCI metadata</span>
+                    <img src="/favicon.ico" style="max-width: 1.5em; vertical-align: middle" /> 
+                    <span class="light-gray">WCI metadata</span>
                 </div>
                 {% endif %}
             </a>
@@ -99,7 +100,8 @@ permalink: /
                 </div>
                 {% if system.wci_metadata %}
                 <div style="position: absolute; bottom: 0; right: 1em; font-size: 0.8em">
-                    <img src="/favicon.ico" style="max-width: 1.5em; vertical-align: middle" /> <span class="light-gray">WCI metadata</span>
+                    <img src="/favicon.ico" style="max-width: 1.5em; vertical-align: middle" /> 
+                    <span class="light-gray">WCI metadata</span>
                 </div>
                 {% endif %}
             </a>
@@ -128,13 +130,15 @@ permalink: /
             </header>
             <div class="row" style="margin-top: 2.5em">
                 {% assign events = site.data.events | sort: 'start_date'%}
-                {% for event in events limit: 10 %}
+                {% assign count_events = 0 %}
+                {% for event in events %}
                 {% capture eventtime %}{{event.end_date | date: '%s'}}{% endcapture %}
-                {% if eventtime >= nowunix %}
-                <div class="col-sm-12 col-md-12" style="padding: 0 0.5em">
+                {% if eventtime >= nowunix and count_events < 15 %} <div class="col-sm-12 col-md-12"
+                    style="padding: 0 0.5em">
                     <a href="{{event.url}}" class="event" target="_blank">
                         <div class="event-date" style="min-width: 5em; max-width: 5em; max-height: 10em;">
-                            <span class="header" style="font-size: 1em">{{event.start_date | date: "%b %d" }}</span><br />
+                            <span class="header" style="font-size: 1em">{{event.start_date | date: "%b %d"
+                                }}</span><br />
                             <span class="subheader" style="font-size: 0.8em">{{event.start_date | date: "%Y" }}</span>
                         </div>
                         <div class="event-content" style="line-height: 1em;">
@@ -155,64 +159,79 @@ permalink: /
                             {% endif %}
                         </div>
                     </a>
-                </div>
-                {% endif %}
-                {% endfor %}
+            </div>
+            {% assign count_events = count_events | plus: 1 %}
+            {% endif %}
+            {% endfor %}
+            <div class="col-sm-12 col-md-12" style="padding: 0 0.5em">
+                <a href="/events" style="text-decoration: none">
+                    <div style="text-align: center; color: #4CA8A9; border: 1px solid #4CA8A9; padding: 0.5em; border-radius: 0.5em; font-size: 0.8em; font-weight: bold;">
+                        See all Events
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="col-sm-1">&nbsp;</div>
+<div class="col-sm-1">&nbsp;</div>
 
-    <!-- Jobs -->
-    {% assign jobs = site.jobs | sort: "application_deadline" %}
-    {% assign num_jobs = 0 %}
-    {% for job in jobs %}
-    {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
-    {% if eventtime >= nowunix %}
-    {% assign num_jobs = num_jobs | plus: 1 %}
-    {% endif %}
-    {% endfor %}
-    <div class="col-sm-12 col-md-5">
-        <div class="mini-box jobs">
-            <header>
-                <div class="top-button" style="background-color: steelblue;">
-                    <h3 style="margin: 0; color: #fff">Jobs</h3>
-                    <p style="margin: 0; line-height: 1.5em; font-size: 0.6em">
-                        <strong style="color: #fff">{{ num_jobs }}</strong> Open Positions from the Community
-                    </p>
-                </div>
-                <a href="/jobs" class="bottom-button" style="background-color: #659AD4;">All Jobs</a>
-            </header>
-            <div class="row" style="margin-top: 2.5em">
-                {% assign count_jobs = 0 %}
-                {% for job in jobs %}
-                {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
-                {% if eventtime >= nowunix and count_jobs < 10 %}
-                <div class="col-sm-12 col-md-12" style="padding: 0 0.5em; vertical-align: top;">
-                    <a href="{{ job.url }}" class="job-item">
-                        <div>
-                            <span style="color: steelblue">{{ job.title }}</span><br />
-                            <span style="font-size: 0.9em">{{ job.organization }}</span><br />
-                            <span class="light-gray">
-                                <i class="fas fa-clock"></i>&nbsp;&nbsp;{{ job.application_deadline | date: "%b %d, %Y" }} 
-                                &nbsp;&nbsp;|&nbsp;&nbsp;
-                                <i class="fas fa-map-marker"></i>&nbsp;&nbsp;&nbsp;{{ job.location }}
-                                &nbsp;&nbsp;|&nbsp;&nbsp;
-                                <i class="fas fa-briefcase"></i>&nbsp;&nbsp;{{ job.employment_type }}
-                            </span>
-                        </div>
-                        <div>
-                            <img src="{{ job.organization_logo }}" alt="{{ job.title }}" />
-                        </div>
-                    </a>
-                </div>
-                {% assign count_jobs = count_jobs | plus: 1 %}
-                {% endif %}
-                {% endfor %}
+<!-- Jobs -->
+{% assign jobs = site.jobs | sort: "application_deadline" %}
+{% assign num_jobs = 0 %}
+{% for job in jobs %}
+{% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
+{% if eventtime >= nowunix %}
+{% assign num_jobs = num_jobs | plus: 1 %}
+{% endif %}
+{% endfor %}
+<div class="col-sm-12 col-md-5">
+    <div class="mini-box jobs">
+        <header>
+            <div class="top-button" style="background-color: steelblue;">
+                <h3 style="margin: 0; color: #fff">Jobs</h3>
+                <p style="margin: 0; line-height: 1.5em; font-size: 0.6em">
+                    <strong style="color: #fff">{{ num_jobs }}</strong> Open Positions from the Community
+                </p>
             </div>
+            <a href="/jobs" class="bottom-button" style="background-color: #659AD4;">All Jobs</a>
+        </header>
+        <div class="row" style="margin-top: 2.5em">
+            {% assign count_jobs = 0 %}
+            {% for job in jobs %}
+            {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
+            {% if eventtime >= nowunix and count_jobs < 10 %} <div class="col-sm-12 col-md-12"
+                style="padding: 0 0.5em; vertical-align: top;">
+                <a href="{{ job.url }}" class="job-item">
+                    <div>
+                        <span style="color: steelblue">{{ job.title }}</span><br />
+                        <span style="font-size: 0.9em">{{ job.organization }}</span><br />
+                        <span class="light-gray">
+                            <i class="fas fa-clock"></i>&nbsp;&nbsp;{{ job.application_deadline | date: "%b %d, %Y" }}
+                            &nbsp;&nbsp;|&nbsp;&nbsp;
+                            <i class="fas fa-map-marker"></i>&nbsp;&nbsp;&nbsp;{{ job.location }}
+                            &nbsp;&nbsp;|&nbsp;&nbsp;
+                            <i class="fas fa-briefcase"></i>&nbsp;&nbsp;{{ job.employment_type }}
+                        </span>
+                    </div>
+                    <div>
+                        <img src="{{ job.organization_logo }}" alt="{{ job.title }}" />
+                    </div>
+                </a>
+        </div>
+        {% assign count_jobs = count_jobs | plus: 1 %}
+        {% endif %}
+        {% endfor %}
+        <div class="col-sm-12 col-md-12" style="padding: 0 0.5em">
+            <a href="/jobs" style="text-decoration: none">
+                <div class="see-all-button" style="text-align: center; color: steelblue; border: 1px solid steelblue; padding: 0.5em; border-radius: 0.5em; font-size: 0.8em; font-weight: bold;">
+                    See all Jobs
+                </div>
+            </a>
         </div>
     </div>
+</div>
+</div>
 </div>
 
 <article class="post">
