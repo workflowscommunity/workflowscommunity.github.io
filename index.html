@@ -241,12 +241,12 @@ permalink: /
             {% if eventtime >= nowunix and count_jobs < 10 %} <div class="col-sm-12 col-md-12"
                 style="padding: 0 0.5em; vertical-align: top;">
                 <a href="{{ job.url }}" class="job-item">
-                    <div>
+                    <div style="width: 100%">
                         <span style="color: steelblue">{{ job.title }}</span><br />
                         <span style="font-size: 0.9em">{{ job.organization }}</span><br />
                         <span class="light-gray">
-                            <i class="fas fa-clock"></i>&nbsp;&nbsp;{{ job.application_deadline | date: "%b %d, %Y" }}
-                            &nbsp;&nbsp;|&nbsp;&nbsp;
+                            <!-- <i class="fas fa-clock"></i>&nbsp;&nbsp;{{ job.application_deadline | date: "%b %d, %Y" }}
+                            &nbsp;&nbsp;|&nbsp;&nbsp; -->
                             <i class="fas fa-map-marker"></i>&nbsp;&nbsp;&nbsp;{{ job.location }}
                             &nbsp;&nbsp;|&nbsp;&nbsp;
                             <i class="fas fa-briefcase"></i>&nbsp;&nbsp;{{ job.employment_type }}
