@@ -528,3 +528,13 @@
   institution: DNAstack
   country: ca
   link: heatherward.dev
+
+- last_name: Pedratscher
+  first_name: Stefan
+  institution: University of Innsbruck
+  country: at
+
+- last_name: Aznar
+  first_name: Juan
+  institution: University of Innsbruck
+  country: at
