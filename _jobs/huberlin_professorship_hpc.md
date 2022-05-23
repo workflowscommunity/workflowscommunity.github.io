@@ -2,6 +2,7 @@
 layout: jobs # do not change this line
 title: "Open Full Professorship in High Performance Computing"
 organization: "Humboldt-Universität zu Berlin"
+organization_logo: http://localhost:4000/images/institutions/huberlin.png
 location: "Berlin, Germany"
 application_deadline: "2022-07-10"
 apply_link: "https://hu.berlin/w3_hpc"
