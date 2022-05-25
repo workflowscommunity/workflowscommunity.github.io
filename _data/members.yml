@@ -543,3 +543,9 @@
   first_name: Johan
   institution: University of Melbourne
   country: au
+
+- last_name: Rowell
+  first_name: William
+  institution: Pacific Biosciences
+  country: us
+  link: http://wjrowell.info
