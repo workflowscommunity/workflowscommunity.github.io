@@ -194,6 +194,16 @@
     image: bnl.png
     link: https://www.bnl.gov/
 
+- name: Johannes Köster
+  role: Member
+  photo: koster.jpg
+  link: https://johanneskoester.bitbucket.io/
+  category: sc
+  institution:
+    name: University of Duisburg-Essen
+    image: ude.png
+    link: https://www.uni-due.de/en/
+
 - name: Ulf Leser
   role: Member
   photo: leser.jpg
