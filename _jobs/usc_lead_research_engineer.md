@@ -4,7 +4,7 @@ title: "Lead Research Engineer"
 organization: University of Southern California
 organization_logo: https://customsitesmedia.usc.edu/wp-content/uploads/sites/55/2019/01/15234736/PrimShield-Word_SmallUse_CardOnTrans.png
 location: Marina del Rey, CA, USA
-application_deadline: 2022-06-30
+application_deadline: 2022-05-31
 apply_link: https://usccareers.usc.edu/job/los-angeles/lead-research-engineer-scitech-group/1209/28729368096
 employment_type: Full-time
 ---
