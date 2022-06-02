@@ -560,3 +560,9 @@
   first_name: Mehdi
   institution: Karlsruhe Institute of Technology 
   country: de
+
+- last_name: Kondov
+  first_name: Ivan
+  institution: Karlsruhe Institute of Technology
+  country: de
+  link: https://www.scc.kit.edu/en/staff/ivan.kondov.php
