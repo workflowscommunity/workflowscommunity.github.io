@@ -576,3 +576,9 @@
   first_name: Alberto Riccardo
   institution: University of Turin
   country: it
+
+- last_name: Cunningham
+  first_name: Will
+  institution: Agnostiq
+  country: ca
+  link: https://willcunningham.net
