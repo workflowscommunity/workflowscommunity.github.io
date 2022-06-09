@@ -93,3 +93,7 @@
 - organization: Libensemble
   repository: libensemble
   type: github
+
+- organization: AgnostiqHQ
+  repository: covalent
+  type: github
