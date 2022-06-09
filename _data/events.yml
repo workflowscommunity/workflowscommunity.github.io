@@ -1,3 +1,11 @@
+- name: Nextflow Summit
+  series: Nextflow Summit
+  start_date: 2022-10-12
+  end_date: 2022-10-14
+  location: Barcelona, Spain
+  url: https://summit.nextflow.io/
+  type: Summit
+
 - name: 2nd Workshop on E-science ReseaRch leading tO negative Results
   series: ERROR 2022
   start_date: 2022-10-11
