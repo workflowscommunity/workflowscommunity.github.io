@@ -5,7 +5,7 @@ organization: University of Innsbruck
 organization_logo: https://workflows.community/images/institutions/uinnsbruck.png
 location: Innsbruck, Austria
 application_deadline: 2022-08-31
-apply_link: https://www.linkedin.com/jobs/view/3060279037/?refId=S12VDfNO%2B%2FlbPgbiEJd1mw%3D%3D
+apply_link: https://dps.uibk.ac.at/phd-positions-in-cloud-fog-and-edge-computing/
 employment_type: Full-time
 ---
 
