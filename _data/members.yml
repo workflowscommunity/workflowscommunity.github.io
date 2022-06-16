@@ -588,3 +588,14 @@
   institution: Lifebit
   country: gb
   link: https://github.com/cgpu
+
+- last_name: Johansson
+  first_name: Annika
+  institution: Columbia University
+  country: us
+
+- last_name: Mays
+  first_name: Jennifer
+  institution: Columbia University
+  country: us
+  
