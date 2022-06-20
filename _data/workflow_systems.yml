@@ -97,3 +97,7 @@
 - organization: AgnostiqHQ
   repository: covalent
   type: github
+
+- organization: nnodes
+  repository: nnodes
+  type: github
