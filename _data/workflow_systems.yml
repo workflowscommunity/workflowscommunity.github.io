@@ -98,6 +98,6 @@
   repository: covalent
   type: github
 
-- organization: nnodes
-  repository: nnodes
-  type: github
+# - organization: nnodes
+#   repository: nnodes
+#   type: github
