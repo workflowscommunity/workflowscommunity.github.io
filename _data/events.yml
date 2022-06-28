@@ -162,4 +162,7 @@
   end_date: 2022-10-28
   url: https://www.fdo2022.org/
   type: Conference
+  deadlines:
+    - name: Abstracts
+      date: 2022-07-10
 
