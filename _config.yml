@@ -13,21 +13,24 @@ paginate_path: /blog/page:num/
 
 # Collections
 collections:
-  summits:
+  bofs:
     output: true
-    permalink: /summits/:path/
-  working_groups:
-    output: true
-    permalink: /groups/:path/
-  systems:
-    output: true
-    permalink: /systems/:path/
+    permalink: /bof/:path/
   jobs:
     output: true
     permalink: /jobs/:path/
   stories:
     output: true
     permalink: /stories/:year/:month/:day/:slug/
+  summits:
+    output: true
+    permalink: /summits/:path/
+  systems:
+    output: true
+    permalink: /systems/:path/
+  working_groups:
+    output: true
+    permalink: /groups/:path/
 
 # SEO
 author:
