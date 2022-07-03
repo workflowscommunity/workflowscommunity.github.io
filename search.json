@@ -6,8 +6,32 @@
       "title"       : "{{ system.title }}",
       "url"         : "{{ site.baseurl }}{{ system.url }}",
       "description" : "{{ system.description | strip_html | strip_newlines | escape }}",
-      "tags"        : "{{ system.tags | strip_html | strip_newlines | escape }}",
+      "tags"        : "{{ system.tags | array_to_sentence_string: '' }}",
       "category"    : "system"
+    },
+  {% endfor %}
+  {% for job in site.jobs %}
+    {
+      "title"       : "{{ job.title }}",
+      "url"         : "{{ site.baseurl }}{{ job.url }}",
+      "description" : "{{ job.content | strip_html | strip_newlines | escape }}",
+      "category"    : "job"
+    },
+  {% endfor %}
+  {% for story in site.stories %}
+    {
+      "title"       : "{{ story.title }}",
+      "url"         : "{{ site.baseurl }}{{ story.url }}",
+      "description" : "{{ story.content | strip_html | strip_newlines | escape }}",
+      "category"    : "story"
+    },
+  {% endfor %}
+  {% for event in site.data.events %}
+    {
+      "title"       : "{{ event.series }} ({{ event.type }})",
+      "url"         : "{{ event.url }}",
+      "description" : "{{ event.name }}",
+      "category"    : "event"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]

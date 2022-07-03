@@ -16,16 +16,34 @@
         json: "/search.json",
         searchResultTemplate: `
             <a href="{url}">
+                {category}
                 <strong>{title}</strong><br/>
-                <span class="search-desc">{description}</span>
+                {description}
             </a>
-            <div class="search-cat">{category}</div>
         `,
         templateMiddleware: function (prop, value, template) {
             if (prop == "description") {
-                return value.substring(0,50) + "...";
+                if (value.length > 0) {
+                    value = '<span class="search-desc">' + value + '</span>'
+                    if (value.length > 75) {
+                        return value.substring(0, 75) + "...";
+                    }
+                } else {
+                    return ""
+                }
+            }
+            if (prop == "category") {
+                let color = "f2b3a2"
+                if (value == "story") {
+                    color = "D89398"
+                } else if (value == "event") {
+                    color = "85BCC2"
+                } else if (value == "job") {
+                    color = "6689BA"
+                }
+                return '<span class="search-cat" style="background-color: #' + color + ';">' + value + '</span>'
             }
         },
-        noResultsText: '<span style="padding: 1em">No results found</span>'
+        noResultsText: '<span style="padding: 1em; line-height: 2em">No results found</span>'
     })
 </script>
