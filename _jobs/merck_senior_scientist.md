@@ -4,7 +4,7 @@ title: "Senior Scientist, AI/ML Cheminformatics"
 organization: Merck
 organization_logo: https://www.merck.com/wp-content/themes/mhh-merck-mco-theme/images/site-logo.svg
 location: San Francisco, CA, USA
-application_deadline: 2022-06-30
+application_deadline: 2022-07-31
 apply_link: https://www.linkedin.com/jobs/view/3106089179/?alternateChannel=search&refId=23WRr8dhsLrcjk0XeQq7%2BA%3D%3D&trackingId=MtocU9Hhf%2F1v0Rvf%2FgpXJw%3D%3D
 employment_type: Full-time
 ---

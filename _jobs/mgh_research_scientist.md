@@ -4,7 +4,7 @@ title: "Research Scientist"
 organization: Massachusetts General Hospital
 organization_logo: https://www.massgeneral.org/assets/MGH/images/logos/mgh-logo-rgb.svg
 location: Boston, MA, USA
-application_deadline: 2022-06-30
+application_deadline: 2022-07-31
 apply_link: https://www.linkedin.com/jobs/view/3095151667/?eBP=JOB_SEARCH_ORGANIC&recommendedFlavor=IN_NETWORK&refId=23WRr8dhsLrcjk0XeQq7%2BA%3D%3D
 employment_type: Full-time
 ---

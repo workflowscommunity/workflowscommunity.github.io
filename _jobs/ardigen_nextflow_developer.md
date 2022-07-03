@@ -4,7 +4,7 @@ title: "Nextflow Developer"
 organization: Ardigen
 organization_logo: https://media-exp2.licdn.com/dms/image/C560BAQHdYlQeE4nBMQ/company-logo_200_200/0/1646061381661?e=1663200000&v=beta&t=HkIZjJ-zmeEdcCTztI_RuO3XiEohvkkPsf_Yz2plW30
 location: Cracow, Małopolskie, Poland
-application_deadline: 2022-06-30
+application_deadline: 2022-08-31
 apply_link: https://www.linkedin.com/jobs/view/3116618764/?eBP=JOB_SEARCH_ORGANIC&refId=44S%2FltkQx46UjsRA0B3ZZA%3D%3D&trackingId=e79FYLF5rYLUwf%2FtkmPjsA%3D%3D
 employment_type: Full-time (Remote)
 ---

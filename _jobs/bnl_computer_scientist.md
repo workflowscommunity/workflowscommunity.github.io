@@ -4,7 +4,7 @@ title: "Computer Scientist"
 organization: Brookhaven National Laboratory
 organization_logo: https://workflows.community/images/institutions/bnl.png
 location: Upton, NY, USA
-application_deadline: 2022-07-31
+application_deadline: 2022-08-31
 apply_link: https://jobs.bnl.gov/job/upton/computer-scientist/3437/28300522848
 employment_type: Full-time
 ---
