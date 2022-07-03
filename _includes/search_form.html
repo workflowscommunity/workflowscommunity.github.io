@@ -1,0 +1,31 @@
+<!-- HTML search field -->
+<div class="search-container">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" id="search-input" class="input-field" placeholder="Search" autofocus>
+    <div id="results-container"></div>
+</div>
+
+<!-- Grab search-script.js -->
+<script src="/assets/js/search.script.js" type="text/javascript"></script>
+
+<!-- Configuration -->
+<script>
+    SimpleJekyllSearch({
+        searchInput: document.getElementById("search-input"),
+        resultsContainer: document.getElementById("results-container"),
+        json: "/search.json",
+        searchResultTemplate: `
+            <a href="{url}">
+                <strong>{title}</strong><br/>
+                <span class="search-desc">{description}</span>
+            </a>
+            <div class="search-cat">{category}</div>
+        `,
+        templateMiddleware: function (prop, value, template) {
+            if (prop == "description") {
+                return value.substring(0,50) + "...";
+            }
+        },
+        noResultsText: '<span style="padding: 1em">No results found</span>'
+    })
+</script>

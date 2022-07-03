@@ -1,0 +1,13 @@
+---
+---
+[
+  {% for system in site.systems %}
+    {
+      "title"       : "{{ system.title }}",
+      "url"         : "{{ site.baseurl }}{{ system.url }}",
+      "description" : "{{ system.description | strip_html | strip_newlines | escape }}",
+      "tags"        : "{{ system.tags | strip_html | strip_newlines | escape }}",
+      "category"    : "system"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
