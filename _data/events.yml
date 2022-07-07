@@ -166,3 +166,10 @@
     - name: Abstracts
       date: 2022-07-10
 
+- name: Parsl & funcX Fest 2022
+  series: Parsl & funcX Fest 2022
+  location: Chicago, IL, USA
+  start_date: 2022-09-13
+  end_date: 2022-09-14
+  url: https://parsl-project.org/parslfest2022.html
+  type: Workshop
