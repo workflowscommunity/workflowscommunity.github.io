@@ -4,7 +4,7 @@ title: "Assistant Professor of Computer Science in the area of Cloud, Edge and I
 organization: University of Innsbruck
 organization_logo: https://workflows.community/images/institutions/uinnsbruck.png
 location: Innsbruck, Austria
-application_deadline: 2022-12-01
+application_deadline: 2022-09-09
 apply_link: https://lfuonline.uibk.ac.at/public/karriereportal.details?asg_id_in=12846
 employment_type: Full-time
 ---
