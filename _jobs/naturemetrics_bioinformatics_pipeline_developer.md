@@ -2,7 +2,7 @@
 layout: jobs # do not change this line
 title: "Bioinformatics Pipeline Developer"
 organization: "NatureMetrics"
-organization_logo: "https://www.naturemetrics.co.uk/wp-content/uploads/2021/01/nature-metrics-web-logo.png"
+organization_logo: "https://gallery-cdn.breezy.hr/1a1f6fcf-0833-4db5-a5a3-5ddf8ecffa89/logo%20thumbnail.png"
 location: "Hybrid"
 application_deadline: "Until filled" 
 apply_link: "https://naturemetrics.breezy.hr/p/de0604a10edf01-bioinformatics-pipeline-developer"
