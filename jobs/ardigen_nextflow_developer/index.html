@@ -1,0 +1,461 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> Nextflow Developer - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility" />
+<meta name="author" content="Rafael Ferreira da Silva" />
+<meta name="author" content="Henri Casanova" />
+<meta name="author" content="Kyle Chard" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Nextflow Developer" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="About the job" />
+<meta property="og:description" content="About the job" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-07-30T12:09:56+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="twitter:title" content="Nextflow Developer" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2022-07-30T12:09:56+00:00","datePublished":"2022-07-30T12:09:56+00:00","description":"About the job","headline":"Nextflow Developer","image":"https://workflows.community/images/wci-default-card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/jobs/ardigen_nextflow_developer/"},"url":"/jobs/ardigen_nextflow_developer/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/main.css" />
+
+<!-- scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.countTo.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $('.dropdown-toggle').dropdown();
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <header id="header">
+    <h1><a href="/"><img src="/images/workflows-community-logo-horizontal.png" style="width: 10em" alt="" /></a></h1>
+    <nav class="links">
+        <ul>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="workflowsDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Resources
+                </a>
+                <div class="dropdown-menu" aria-labelledby="workflowsDropdown">
+                    <a class="dropdown-item" href="/systems">
+                        <i class="fas fa-dot-circle color-1"></i> Workflow Systems</a>
+                    <a class="dropdown-item" href="/registries">
+                        <i class="fas fa-dot-circle color-2"></i> Workflow Registries</a>
+                    <a class="dropdown-item" href="/education">
+                        <i class="fas fa-dot-circle color-6"></i> Education and Training</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="researchDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Research
+                </a>
+                <div class="dropdown-menu" aria-labelledby="researchDropdown">
+                    <!--
+                    <a class="dropdown-item" href="/task_forces">
+                        <i class="fas fa-dot-circle color-3"></i> Task Forces</a>
+                    -->
+                    <a class="dropdown-item" href="/groups">
+                        <i class="fas fa-dot-circle color-3"></i> Working Groups</a>
+                    <a class="dropdown-item" href="/frameworks">
+                        <i class="fas fa-dot-circle color-5"></i> Research Frameworks</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="eventsDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Events
+                </a>
+                <div class="dropdown-menu" aria-labelledby="eventsDropdown">
+                    <a class="dropdown-item" href="/summits">
+                        <i class="fas fa-dot-circle color-6"></i> Workflows Community Summits</a>
+                    <a class="dropdown-item" href="/events">
+                        <i class="fas fa-dot-circle color-7"></i> Workflows-Related Events</a>
+                </div>
+            </li>
+            <li><a href="/members" title="List of Members">Members</a></li>
+            <li><a href="/jobs" title="Jobs Market">Jobs</a></li>
+            <li><a href="/about" title="Who are we?">About</a></li>
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            <li>
+                <a href="/contact" class="getinvolved">Get Involved!</a>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+        <!-- Menu -->
+<section id="menu">
+
+    <!-- Links -->
+    <section>
+        <ul class="links">
+            <li>
+                <a href="/systems">
+                    <h3>Workflow Systems</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/registries">
+                    <h3>Workflow Registries</h3>
+                </a>
+            </li>
+            <!--
+            <li>
+                <a href="/task_forces">
+                    <h3>Task Forces</h3>
+                </a>
+            </li>
+            -->
+            <li>
+                <a href="/groups">
+                    <h3>Working Groups</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/frameworks">
+                    <h3>Research Frameworks</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/summits">
+                    <h3>Workflows Community Summits</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/events">
+                    <h3>Workflow-Related Events</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/members">
+                    <h3>Members</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/jobs">
+                    <h3>Jobs</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/about">
+                    <h3>About</h3>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+</section>
+
+        <!-- Main -->
+        <div id="main">
+            <article class="post">
+    <header>
+        <div class="title" style="margin-bottom: -1em">
+            <h2 style="margin-bottom: 0.5em">Nextflow Developer</h2>
+            <i>Ardigen</i><br />
+            
+        </div>
+        <div class="meta">
+            <img src="https://media-exp2.licdn.com/dms/image/C560BAQHdYlQeE4nBMQ/company-logo_200_200/0/1646061381661?e=1663200000&v=beta&t=HkIZjJ-zmeEdcCTztI_RuO3XiEohvkkPsf_Yz2plW30" style="max-height: 3em; max-width: 10em;" alt="Nextflow Developer" />
+            
+            <br /><br /><a href="https://www.linkedin.com/jobs/view/3116618764/?eBP=JOB_SEARCH_ORGANIC&refId=44S%2FltkQx46UjsRA0B3ZZA%3D%3D&trackingId=e79FYLF5rYLUwf%2FtkmPjsA%3D%3D" target="_blank" class="apply"><i class="fas fa-check"></i> Apply Now</a>
+            
+        </div>
+    </header>
+
+    <main class="job-content">
+        <div class="row">
+            <div class="col-sm-12 col-md-8">
+                <h2 id="about-the-job">About the job</h2>
+
+<p>Ardigen is harnessing advanced Artificial Intelligence methods for novel precision medicine. The company accelerates therapy development by designing immunity, decoding microbiome, analysing biomedical images and providing digital drug discovery services. Ardigen’s team is rooted in biology and holds deep expertise in bioinformatics, machine learning, and software engineering. The company’s in-house datasets together with advanced AI platforms empower the development of effective precision therapies.</p>
+
+<p><strong>Let’s grow together &amp; code against cancer!</strong></p>
+
+<h2 id="job-description">Job description:</h2>
+
+<ul>
+  <li>Development of scripts and pipelines that transform and aggregate data to create new scientific workflows</li>
+  <li>Maintenance of existing pipelines written in Nextflow</li>
+  <li>Development of new pipelines in Nextflow</li>
+  <li>Work in multidisciplinary teams: software developers, bioinformaticians and data scientists</li>
+</ul>
+
+<h3 id="requirements">Requirements</h3>
+
+<ul>
+  <li>Knowledge of pipeline building tools / workflow composition tools e.g. <strong>Jenkins, Groovy, Nextflow, Snakemake</strong>, etc.</li>
+  <li>Knowledge of relational databases (eg. MySQL, PostgreSQL)</li>
+  <li>Documented work experience at least 2-3 years</li>
+  <li>Familiarity with distributed version control systems (Git)</li>
+  <li>Experience with automated unit and integration testing</li>
+  <li>Proficient in English with good written and verbal communication skills</li>
+</ul>
+
+<h3 id="you-get-bonus-points-for">You get bonus points for</h3>
+
+<ul>
+  <li>Knowledge of <strong>Python</strong></li>
+  <li>Experience working with <strong>AWS</strong> cloud services or other Clouds (S3, EC2, Batch)</li>
+  <li>Familiarity with <strong>Docker</strong></li>
+</ul>
+
+<h3 id="we-offer">We offer</h3>
+
+<ul>
+  <li>An opportunity to shape the <strong>breakthrough solutions in the fight against cancer</strong></li>
+  <li>Permanent position that can be <strong>adjusted to your preferences in terms of employment form</strong> (“UoP”/B2B)</li>
+  <li>Fully <strong>remote or hybrid</strong> working model</li>
+  <li><strong>Flexible</strong> working hours</li>
+  <li><strong>Mental health</strong> support</li>
+  <li><strong>Multisport Card</strong>, Private Healthcare (<strong>LuxMed</strong>), Life Insurance</li>
+  <li>Yearly <strong>bonus up to 20%</strong> of your annual income</li>
+  <li>Clearly defined career paths, <strong>funding for professional development</strong>, trainings and conference attendance</li>
+  <li><strong>Mentoring</strong> program</li>
+  <li>Internal <strong>library</strong></li>
+  <li><strong>Knowledge sharing sessions</strong>, company events, meetups, webinars, activity groups (professional, sports, hobbies)</li>
+  <li>By cooperating with a non-profit <strong>Foundation #CodeAgainstCancer</strong> we have a real impact in helping children with cancer</li>
+  <li>Work with world-class companies and institutions on <strong>the cutting-edge of Life Science</strong> industry</li>
+  <li><strong>Experts community</strong> of tech specialists, scientists and people with passion for their craft</li>
+</ul>
+
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="job-panel">
+                    <span class="light-gray">
+                        <i class="fas fa-clock"></i>&nbsp;&nbsp;Application Deadline<br />
+                        <strong>Aug 31, 2022</strong>
+                        <br /><br />
+                        <i class="fas fa-map-marker"></i>&nbsp;&nbsp;&nbsp;Location<br />
+                        <strong>Cracow, Małopolskie, Poland</strong>
+                        <br /><br />
+                        <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Employment Type<br />
+                        <strong>Full-time (Remote)</strong>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</article>
+        </div>
+
+        <section id="sidebar">
+
+    <!-- Intro -->
+    <section id="intro">
+        <a href="/" class="logo"><img src="/images/workflows-community-logo.png" alt="" style="max-width: 20em" /></a>
+
+        <ul class="icons">
+            <li>
+                <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                    class="fa-stack fa-2x" style="font-size: 1.5em">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                    <i class="fab fa-youtube fa-stack-1x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:contact@workflows.community" class="fa-stack fa-2x" style="font-size: 1.5em">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="http://twitter.com/WorkflowsCI" target="_blank" class="fa-stack fa-2x"
+                    style="font-size: 1.5em">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                    <i class="fab fa-twitter fa-stack-1x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-14l57ruzl-cCue46GoRt_4txhXfYHrtA"
+                    target="_blank" class="fa-stack fa-2x" style="font-size: 1.5em">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                    <i class="fab fa-slack fa-stack-1x"></i>
+                </a>
+            </li>
+        </ul>
+
+        <!-- HTML search field -->
+<div class="search-container">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" id="search-input" class="input-field" placeholder="Search" autofocus>
+    <div id="results-container"></div>
+</div>
+
+<!-- Grab search-script.js -->
+<script src="/assets/js/search.script.js" type="text/javascript"></script>
+
+<!-- Configuration -->
+<script>
+    SimpleJekyllSearch({
+        searchInput: document.getElementById("search-input"),
+        resultsContainer: document.getElementById("results-container"),
+        json: "/search.json",
+        searchResultTemplate: `
+            <a href="{url}">
+                {category}
+                <strong>{title}</strong><br/>
+                {description}
+            </a>
+        `,
+        templateMiddleware: function (prop, value, template) {
+            if (prop == "description") {
+                if (value.length > 0) {
+                    value = '<span class="search-desc">' + value + '</span>'
+                    if (value.length > 75) {
+                        return value.substring(0, 75) + "...";
+                    }
+                } else {
+                    return ""
+                }
+            }
+            if (prop == "category") {
+                let color = "f2b3a2"
+                if (value == "story") {
+                    color = "D89398"
+                } else if (value == "event") {
+                    color = "85BCC2"
+                } else if (value == "job") {
+                    color = "6689BA"
+                }
+                return '<span class="search-cat" style="background-color: #' + color + ';">' + value + '</span>'
+            }
+        },
+        noResultsText: '<span style="padding: 1em; line-height: 2em">No results found</span>'
+    })
+</script>
+
+    </section>
+
+    <!-- About -->
+    <div class="blurb">
+        <p>The goal of the <strong>Workflows Community Initiative (WCI)</strong> is to bring the workflows community
+            together (<i>users, developers, researchers</i>, and <i>facilities</i>) to provide community resources and
+            capabilities to enable scientists and workflow systems developers to discover software products, related
+            efforts, events, technical reports, etc. and engage in community-wide efforts to tackle workflows grand
+            challenges.
+        </p>
+    </div>
+
+    <!-- Tweets -->
+    <section>
+        <div class="mini-post" style="padding: 0">
+            <div class="twitter-header">
+                <i class="fab fa-twitter"></i>&nbsp;&nbsp;&nbsp;@WorkflowsCI
+            </div>
+            <a class="twitter-timeline" data-lang="en" data-height="75em" data-width="100%" data-theme="light"
+                data-chrome="nofooter noheader" href="https://twitter.com/WorkflowsCI">Tweets by WorkflowsCI</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </section>
+
+    <section id="footer">
+    <p class="copyright" style="margin-bottom: 1em">
+        &copy;2022 Workflows.Community Initiative
+    </p>
+    <ul class="icons" style="margin-top: 0">
+        <li>
+            <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                class="fa-stack fa-2x" style="font-size: 1em">
+                <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                <i class="fab fa-youtube fa-stack-1x"></i>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:contact@workflows.community" class="fa-stack fa-2x" style="font-size: 1em">
+                <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                <i class="fa fa-envelope fa-stack-1x"></i>
+            </a>
+        </li>
+        <li>
+            <a href="http://twitter.com/WorkflowsCI" target="_blank" class="fa-stack fa-2x"
+                style="font-size: 1em">
+                <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                <i class="fab fa-twitter fa-stack-1x"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-14l57ruzl-cCue46GoRt_4txhXfYHrtA"
+                target="_blank" class="fa-stack fa-2x" style="font-size: 1em">
+                <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                <i class="fab fa-slack fa-stack-1x"></i>
+            </a>
+        </li>
+    </ul>
+    
+    <p class="copyright" style="font-size: 0.6em; margin-top: 2em !important;">
+    </p>
+    <p class="copyright" style="font-size: 0.6em">
+    </p>
+</section>
+
+
+</section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>

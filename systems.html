@@ -1,0 +1,938 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> Workflows Systems - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility" />
+<meta name="author" content="Rafael Ferreira da Silva" />
+<meta name="author" content="Henri Casanova" />
+<meta name="author" content="Kyle Chard" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Workflows Systems" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="twitter:title" content="Workflows Systems" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Workflows Community Initiative"},"headline":"Workflows Systems","image":"https://workflows.community/images/wci-default-card.png","url":"/systems"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/main.css" />
+
+<!-- scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.countTo.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $('.dropdown-toggle').dropdown();
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <header id="header">
+    <h1><a href="/"><img src="/images/workflows-community-logo-horizontal.png" style="width: 10em" alt="" /></a></h1>
+    <nav class="links">
+        <ul>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="workflowsDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Resources
+                </a>
+                <div class="dropdown-menu" aria-labelledby="workflowsDropdown">
+                    <a class="dropdown-item" href="/systems">
+                        <i class="fas fa-dot-circle color-1"></i> Workflow Systems</a>
+                    <a class="dropdown-item" href="/registries">
+                        <i class="fas fa-dot-circle color-2"></i> Workflow Registries</a>
+                    <a class="dropdown-item" href="/education">
+                        <i class="fas fa-dot-circle color-6"></i> Education and Training</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="researchDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Research
+                </a>
+                <div class="dropdown-menu" aria-labelledby="researchDropdown">
+                    <!--
+                    <a class="dropdown-item" href="/task_forces">
+                        <i class="fas fa-dot-circle color-3"></i> Task Forces</a>
+                    -->
+                    <a class="dropdown-item" href="/groups">
+                        <i class="fas fa-dot-circle color-3"></i> Working Groups</a>
+                    <a class="dropdown-item" href="/frameworks">
+                        <i class="fas fa-dot-circle color-5"></i> Research Frameworks</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="eventsDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Events
+                </a>
+                <div class="dropdown-menu" aria-labelledby="eventsDropdown">
+                    <a class="dropdown-item" href="/summits">
+                        <i class="fas fa-dot-circle color-6"></i> Workflows Community Summits</a>
+                    <a class="dropdown-item" href="/events">
+                        <i class="fas fa-dot-circle color-7"></i> Workflows-Related Events</a>
+                </div>
+            </li>
+            <li><a href="/members" title="List of Members">Members</a></li>
+            <li><a href="/jobs" title="Jobs Market">Jobs</a></li>
+            <li><a href="/about" title="Who are we?">About</a></li>
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            <li>
+                <a href="/contact" class="getinvolved">Get Involved!</a>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+        <!-- Menu -->
+<section id="menu">
+
+    <!-- Links -->
+    <section>
+        <ul class="links">
+            <li>
+                <a href="/systems">
+                    <h3>Workflow Systems</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/registries">
+                    <h3>Workflow Registries</h3>
+                </a>
+            </li>
+            <!--
+            <li>
+                <a href="/task_forces">
+                    <h3>Task Forces</h3>
+                </a>
+            </li>
+            -->
+            <li>
+                <a href="/groups">
+                    <h3>Working Groups</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/frameworks">
+                    <h3>Research Frameworks</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/summits">
+                    <h3>Workflows Community Summits</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/events">
+                    <h3>Workflow-Related Events</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/members">
+                    <h3>Members</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/jobs">
+                    <h3>Jobs</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/about">
+                    <h3>About</h3>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+</section>
+
+        <!-- Main -->
+        <div id="main">
+            <article class="post">
+    <header>
+        <div class="title">
+            <h2>Workflows Systems</h2>
+            <p>
+                Collection of actively-developed open source workflow systems
+            </p>
+            <a href="/systems/contribute" class="corner-button" style="background-color: #4CA8A9">Contribute</a>
+        </div>
+    </header>
+
+    <div class="row">
+        
+        
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/scipipe/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/16351522?v=4" alt="scipipe" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>SciPipe</strong><br />
+                    <span style="color: #666">Robust, flexible and resource-efficient pipelines using Go and the commandline.</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Go</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> v0.12.0: Important bugfix. Minor API change.</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 29 Jul 2022</span></li>
+                        
+                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/covalent/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://raw.githubusercontent.com/AgnostiqHQ/covalent/master/doc/source/_static/covalent-logo-blue-favicon.png" alt="covalent" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>Covalent</strong><br />
+                    <span style="color: #666">Distributed workflows for quantum and HPC</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Python</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> v0.155.0</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 29 Jul 2022</span></li>
+                        
+                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/snakemake/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/33450111?v=4" alt="snakemake" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>Snakemake</strong><br />
+                    <span style="color: #666">This is the development home of the workflow management system Snakemake. For general information, see</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Python</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> v7.12.0</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 28 Jul 2022</span></li>
+                        
+                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/common-workflow-language/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://raw.githubusercontent.com/common-workflow-language/media/main/CWL-Logo-nofonts.svg" alt="common-workflow-language" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>Common Workflow Language</strong><br />
+                    <span style="color: #666">Interoperable workflow execution of containerized command line tools</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> YAML</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> 1.2.0</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 28 Jul 2022</span></li>
+                        
+                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/streamflow/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://raw.githubusercontent.com/alpha-unito/streamflow/master/docs/logo.png" alt="streamflow" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>StreamFlow</strong><br />
+                    <span style="color: #666">Towards Cloud-HPC Continuum</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Python</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> 0.2.0.dev0</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 21 Jul 2022</span></li>
+                        
+                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/parsl/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://parsl-project.org/images/logos/parsl-logo.png" alt="parsl" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>Parsl</strong><br />
+                    <span style="color: #666">Productive parallel programming in Python</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Python</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> 1.2.0</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 20 Jul 2022</span></li>
+                        
+                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/aiida-core/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/22181836?v=4" alt="aiida-core" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>AiiDA</strong><br />
+                    <span style="color: #666">A workflow manager for computational science with a strong focus on provenance, performance and extensibility.</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Python</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> AiiDA v2.0.2</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 19 Jul 2022</span></li>
+                        
+                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/geoweaver/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://raw.githubusercontent.com/ESIPFed/Geoweaver/master/docs/img/header.png" alt="geoweaver" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>Geoweaver</strong><br />
+                    <span style="color: #666">a lightweight workflow software to easily orchestrate pipelines from Python and shell scripts and preserve history of every execution</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> JavaScript</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> v1.0.0-rc2</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 18 Jul 2022</span></li>
+                        
+                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/libensemble/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://raw.githubusercontent.com/Libensemble/libensemble/main/docs/images/libE_logo.png" alt="libensemble" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>libEnsemble</strong><br />
+                    <span style="color: #666">Tool for running dynamic ensembles.</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Python</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> 0.9.2</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 07 Jul 2022</span></li>
+                        
+                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/maestrowf/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://raw.githubusercontent.com/LLNL/maestrowf/develop/assets/logo_icon.png" alt="maestrowf" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>Maestro Workflow Conductor</strong><br />
+                    <span style="color: #666">Orchestrate your HPC workflows with ease</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Python</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 30 Jun 2022</span></li>
+                        
+                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/cctools/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/2520573?v=4" alt="cctools" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>Makeflow</strong><br />
+                    <span style="color: #666">Makeflow is a workflow system for parallel and distributed computing that uses a language very similar to Make.</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Make</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> release/7.4.10</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 27 Jun 2022</span></li>
+                        
+                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/compss/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/37080113?v=4" alt="compss" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>PyCOMPSs/COMPSs</strong><br />
+                    <span style="color: #666">Easy task-based parallelization and efficient execution in distributed infrastructures.</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> ['Python', 'Java', 'C/C++']</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> 3.0 Lavender</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 16 Jun 2022</span></li>
+                        
+                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/merlin/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://raw.githubusercontent.com/LLNL/merlin/main/docs/images/merlin_icon.png" alt="merlin" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>Merlin</strong><br />
+                    <span style="color: #666">Enabling Machine Learning HPC Workflows</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Python</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> v1.8.5</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 15 Jun 2022</span></li>
+                        
+                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/EE-Demo/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/76112493?v=4" alt="EE-Demo" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>Apollo Runtime System</strong><br />
+                    <span style="color: #666">A runtime system for the orchestration of workflows across the cloud-edge-Iot continuum.</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Polyglot for Functions, AFCL for workflows</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> v1.1.0</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 13 Dec 2021</span></li>
+                        
+                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/mlflow/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/39938107?v=4" alt="mlflow" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>mlflow</strong><br />
+                    <span style="color: #666">Open source platform for the machine learning lifecycle</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Python</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> MLflow 1.27.0</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 30 Jul 2022</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/dask/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/17131925?v=4" alt="dask" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>dask</strong><br />
+                    <span style="color: #666">Parallel computing with task scheduling</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Python</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 30 Jul 2022</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/nextflow/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/6698688?v=4" alt="nextflow" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>nextflow</strong><br />
+                    <span style="color: #666">A DSL for data-driven computational pipelines</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Groovy</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> Version 22.04.5</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 29 Jul 2022</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/cromwell/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/393552?v=4" alt="cromwell" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>cromwell</strong><br />
+                    <span style="color: #666">Scientific workflow engine designed for simplicity & scalability. Trivially transition between one off use cases to massive scale production environments</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Scala</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> 83</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 29 Jul 2022</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/galaxy/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/7937847?v=4" alt="galaxy" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>galaxy</strong><br />
+                    <span style="color: #666">Data intensive science for everyone.</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Python</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 29 Jul 2022</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/fireworks/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/867057?v=4" alt="fireworks" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>fireworks</strong><br />
+                    <span style="color: #666">The Fireworks Workflow Management Repo.</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Python</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> v2.0.2</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 26 Jul 2022</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/pegasus/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/3019875?v=4" alt="pegasus" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>pegasus</strong><br />
+                    <span style="color: #666">Pegasus Workflow Management System - Automate, recover, and debug scientific computations.</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Java</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 25 Jul 2022</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/swift-t/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/5695311?v=4" alt="swift-t" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>swift-t</strong><br />
+                    <span style="color: #666">Swift/T: High Performance Parallel Scripting Language</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Java</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 17 Jun 2022</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/radical.entk/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/5244521?v=4" alt="radical.entk" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>radical.entk</strong><br />
+                    <span style="color: #666">The RADICAL Ensemble Toolkit</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Python</span></li>
+                        
+                        <li><span class="light-gray"><i class="fas fa-box-open"></i> v1.6.7</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 30 Apr 2022</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-sm-12 col-md-12">
+            <a href="/systems/nnodes/" class="system">
+                
+                <div class="system-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/44066357?v=4" alt="nnodes" />
+                </div>
+                
+                <div class="system-content">
+                    <strong>nnodes</strong><br />
+                    <span style="color: #666">None</span><br />
+                    <ul class="stats sys-stats">
+                        <li><span class="light-gray"><i class="fas fa-code"></i> Python</span></li>
+                        
+                        <li><span class="light-gray"><i class="far fa-clock"></i> 18 Mar 2022</span></li>
+                        
+                    </ul>
+                </div>
+            </a>
+        </div>
+        
+    </div>
+
+    <footer>
+        <div style="margin: 2.5em auto; color: #aaa; font-size: 0.9em; line-height: 1.2em; max-width: 80%; text-align: center">
+            For a comprehensive lists of all known computational workflow systems, see <a
+                href="https://s.apache.org/existing-workflow-systems">Computational Data Analysis Workflow Systems</a> maintained by
+            the CWL community.
+        </div>
+    </footer>
+</article>
+        </div>
+
+        <section id="sidebar">
+
+    <!-- Intro -->
+    <section id="intro">
+        <a href="/" class="logo"><img src="/images/workflows-community-logo.png" alt="" style="max-width: 20em" /></a>
+
+        <ul class="icons">
+            <li>
+                <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                    class="fa-stack fa-2x" style="font-size: 1.5em">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                    <i class="fab fa-youtube fa-stack-1x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:contact@workflows.community" class="fa-stack fa-2x" style="font-size: 1.5em">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="http://twitter.com/WorkflowsCI" target="_blank" class="fa-stack fa-2x"
+                    style="font-size: 1.5em">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                    <i class="fab fa-twitter fa-stack-1x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-14l57ruzl-cCue46GoRt_4txhXfYHrtA"
+                    target="_blank" class="fa-stack fa-2x" style="font-size: 1.5em">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                    <i class="fab fa-slack fa-stack-1x"></i>
+                </a>
+            </li>
+        </ul>
+
+        <!-- HTML search field -->
+<div class="search-container">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" id="search-input" class="input-field" placeholder="Search" autofocus>
+    <div id="results-container"></div>
+</div>
+
+<!-- Grab search-script.js -->
+<script src="/assets/js/search.script.js" type="text/javascript"></script>
+
+<!-- Configuration -->
+<script>
+    SimpleJekyllSearch({
+        searchInput: document.getElementById("search-input"),
+        resultsContainer: document.getElementById("results-container"),
+        json: "/search.json",
+        searchResultTemplate: `
+            <a href="{url}">
+                {category}
+                <strong>{title}</strong><br/>
+                {description}
+            </a>
+        `,
+        templateMiddleware: function (prop, value, template) {
+            if (prop == "description") {
+                if (value.length > 0) {
+                    value = '<span class="search-desc">' + value + '</span>'
+                    if (value.length > 75) {
+                        return value.substring(0, 75) + "...";
+                    }
+                } else {
+                    return ""
+                }
+            }
+            if (prop == "category") {
+                let color = "f2b3a2"
+                if (value == "story") {
+                    color = "D89398"
+                } else if (value == "event") {
+                    color = "85BCC2"
+                } else if (value == "job") {
+                    color = "6689BA"
+                }
+                return '<span class="search-cat" style="background-color: #' + color + ';">' + value + '</span>'
+            }
+        },
+        noResultsText: '<span style="padding: 1em; line-height: 2em">No results found</span>'
+    })
+</script>
+
+    </section>
+
+    <!-- About -->
+    <div class="blurb">
+        <p>The goal of the <strong>Workflows Community Initiative (WCI)</strong> is to bring the workflows community
+            together (<i>users, developers, researchers</i>, and <i>facilities</i>) to provide community resources and
+            capabilities to enable scientists and workflow systems developers to discover software products, related
+            efforts, events, technical reports, etc. and engage in community-wide efforts to tackle workflows grand
+            challenges.
+        </p>
+    </div>
+
+    <!-- Tweets -->
+    <section>
+        <div class="mini-post" style="padding: 0">
+            <div class="twitter-header">
+                <i class="fab fa-twitter"></i>&nbsp;&nbsp;&nbsp;@WorkflowsCI
+            </div>
+            <a class="twitter-timeline" data-lang="en" data-height="75em" data-width="100%" data-theme="light"
+                data-chrome="nofooter noheader" href="https://twitter.com/WorkflowsCI">Tweets by WorkflowsCI</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </section>
+
+    <section id="footer">
+    <p class="copyright" style="margin-bottom: 1em">
+        &copy;2022 Workflows.Community Initiative
+    </p>
+    <ul class="icons" style="margin-top: 0">
+        <li>
+            <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                class="fa-stack fa-2x" style="font-size: 1em">
+                <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                <i class="fab fa-youtube fa-stack-1x"></i>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:contact@workflows.community" class="fa-stack fa-2x" style="font-size: 1em">
+                <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                <i class="fa fa-envelope fa-stack-1x"></i>
+            </a>
+        </li>
+        <li>
+            <a href="http://twitter.com/WorkflowsCI" target="_blank" class="fa-stack fa-2x"
+                style="font-size: 1em">
+                <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                <i class="fab fa-twitter fa-stack-1x"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-14l57ruzl-cCue46GoRt_4txhXfYHrtA"
+                target="_blank" class="fa-stack fa-2x" style="font-size: 1em">
+                <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                <i class="fab fa-slack fa-stack-1x"></i>
+            </a>
+        </li>
+    </ul>
+    
+    <p class="copyright" style="font-size: 0.6em; margin-top: 2em !important;">
+    </p>
+    <p class="copyright" style="font-size: 0.6em">
+    </p>
+</section>
+
+
+</section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>

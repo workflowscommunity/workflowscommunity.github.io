@@ -1,0 +1,845 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> FAIR Computational Workflows - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility" />
+<meta name="author" content="Rafael Ferreira da Silva" />
+<meta name="author" content="Henri Casanova" />
+<meta name="author" content="Kyle Chard" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="FAIR Computational Workflows" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Define FAIR principles for computational workflows that consider the complex lifecycle from specification to execution and data products" />
+<meta property="og:description" content="Define FAIR principles for computational workflows that consider the complex lifecycle from specification to execution and data products" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-07-30T12:09:56+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="twitter:title" content="FAIR Computational Workflows" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2022-07-30T12:09:56+00:00","datePublished":"2022-07-30T12:09:56+00:00","description":"Define FAIR principles for computational workflows that consider the complex lifecycle from specification to execution and data products","headline":"FAIR Computational Workflows","image":"https://workflows.community/images/wci-default-card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/groups/fair/"},"url":"/groups/fair/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/main.css" />
+
+<!-- scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.countTo.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $('.dropdown-toggle').dropdown();
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <header id="header">
+    <h1><a href="/"><img src="/images/workflows-community-logo-horizontal.png" style="width: 10em" alt="" /></a></h1>
+    <nav class="links">
+        <ul>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="workflowsDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Resources
+                </a>
+                <div class="dropdown-menu" aria-labelledby="workflowsDropdown">
+                    <a class="dropdown-item" href="/systems">
+                        <i class="fas fa-dot-circle color-1"></i> Workflow Systems</a>
+                    <a class="dropdown-item" href="/registries">
+                        <i class="fas fa-dot-circle color-2"></i> Workflow Registries</a>
+                    <a class="dropdown-item" href="/education">
+                        <i class="fas fa-dot-circle color-6"></i> Education and Training</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="researchDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Research
+                </a>
+                <div class="dropdown-menu" aria-labelledby="researchDropdown">
+                    <!--
+                    <a class="dropdown-item" href="/task_forces">
+                        <i class="fas fa-dot-circle color-3"></i> Task Forces</a>
+                    -->
+                    <a class="dropdown-item" href="/groups">
+                        <i class="fas fa-dot-circle color-3"></i> Working Groups</a>
+                    <a class="dropdown-item" href="/frameworks">
+                        <i class="fas fa-dot-circle color-5"></i> Research Frameworks</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" id="eventsDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Events
+                </a>
+                <div class="dropdown-menu" aria-labelledby="eventsDropdown">
+                    <a class="dropdown-item" href="/summits">
+                        <i class="fas fa-dot-circle color-6"></i> Workflows Community Summits</a>
+                    <a class="dropdown-item" href="/events">
+                        <i class="fas fa-dot-circle color-7"></i> Workflows-Related Events</a>
+                </div>
+            </li>
+            <li><a href="/members" title="List of Members">Members</a></li>
+            <li><a href="/jobs" title="Jobs Market">Jobs</a></li>
+            <li><a href="/about" title="Who are we?">About</a></li>
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            <li>
+                <a href="/contact" class="getinvolved">Get Involved!</a>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+        <!-- Menu -->
+<section id="menu">
+
+    <!-- Links -->
+    <section>
+        <ul class="links">
+            <li>
+                <a href="/systems">
+                    <h3>Workflow Systems</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/registries">
+                    <h3>Workflow Registries</h3>
+                </a>
+            </li>
+            <!--
+            <li>
+                <a href="/task_forces">
+                    <h3>Task Forces</h3>
+                </a>
+            </li>
+            -->
+            <li>
+                <a href="/groups">
+                    <h3>Working Groups</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/frameworks">
+                    <h3>Research Frameworks</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/summits">
+                    <h3>Workflows Community Summits</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/events">
+                    <h3>Workflow-Related Events</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/members">
+                    <h3>Members</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/jobs">
+                    <h3>Jobs</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/about">
+                    <h3>About</h3>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+</section>
+
+        <!-- Main -->
+        <div id="main">
+            
+
+
+<article class="post">
+    <header>
+        <div class="title">
+            <h2>FAIR Computational Workflows</h2>
+            <a href="#members" class="label"><i class="fas fa-users"></i>&nbsp;&nbsp;12 members</a>
+            <span class="status">
+                <i class="fas fa-circle-notch" style="color: #D4D62D"></i>
+                &nbsp;Establishing
+            </span>
+            
+            <a href="https://forms.gle/5ZNJ8Vxdu5X3SCaw7" target="_blank" class="corner-button"
+                style="background-color: steelblue">Join&nbsp;&nbsp;&nbsp;<i class="fas fa-user-plus"
+                    style="font-size: 0.8em"></i></a>
+            
+        </div>
+    </header>
+
+    <main class="wg-content">
+        <p>The FAIR principles have laid a foundation for sharing and publishing digital assets and, in particular, data. The
+FAIR principles emphasize machine accessibility and that all digital assets should be Findable, Accessible, Interoperable,
+and Reusable. Workflows encode the methods by which the scientific process is conducted and via which data are created.
+It is thus important that workflows both support the creation of FAIR data and themselves adhere to the FAIR principles.</p>
+
+<hr />
+
+<h2 id="goals">Goals</h2>
+
+<p>In this working group, we seek to:</p>
+<ul>
+  <li>Define FAIR principles for computational workflows that consider the complex lifecycle from specification to execution and data products</li>
+  <li>Define metrics to measure the FAIRness of a workflow</li>
+  <li>Define recommendations for FAIR workflow developers and systems</li>
+  <li>Define processes to automate FAIRness in workflows by recording necessary provenance data</li>
+</ul>
+
+<h2 id="what-are-fair-computational-workflows">What are FAIR Computational Workflows?</h2>
+
+<p>Adapted from the article <strong>FAIR Computational Workflows</strong> <a href="https://doi.org/10.1162/dint_a_00033">https://doi.org/10.1162/dint_a_00033</a>:</p>
+
+<blockquote>
+  <p><strong>Computational workflows</strong> describe the complex multi-step methods that are used for data collection, data preparation, analytics, predictive modelling, and simulation that lead to new data products.</p>
+
+  <p>Workflows can inherently contribute to the <a href="https://www.go-fair.org/fair-principles/">FAIR data principles</a>: by <em>processing data</em> according to established metadata; by <em>creating metadata</em> themselves during the processing of data; and by tracking and recording <em>data provenance</em>.</p>
+
+  <p>These properties aid <em>data quality assessment</em> and contribute to secondary <em>data usage</em>. Moreover, workflows are <strong>digital objects in their own right</strong>.</p>
+
+  <p>We argue that <strong>FAIR principles for workflows</strong> need to address their specific nature in terms of their composition of executable software steps, their provenance, and their development.</p>
+</blockquote>
+
+<p>This group is a gathering of community resources and literature on FAIR Computational Workflows. Feel free to <a href="https://github.com/workflowscommunity/workflowscommunity.github.io/blob/main/_working_groups/fair.md">suggest a change</a> to help improve this page!</p>
+
+<h2 id="cite-fair-computational-workflows">Cite FAIR Computational Workflows</h2>
+
+<p>Carole Goble, Sarah Cohen-Boulakia, Stian Soiland-Reyes, Daniel Garijo, Yolanda Gil, Michael R. Crusoe, Kristian Peters, Daniel Schober (2020):<br />
+<a href="https://doi.org/10.1162/dint_a_00033"><strong>FAIR Computational Workflows</strong></a>.<br />
+<em>Data Intelligence</em>  <strong>2</strong>(1):108–121
+<a href="https://doi.org/10.1162/dint_a_00033">https://doi.org/10.1162/dint_a_00033</a></p>
+
+<h2 id="events-and-talks">Events and talks</h2>
+
+<p>Events, presentations and activities are also available in WorkflowHub in the <a href="https://workflowhub.eu/projects/76"><strong>FAIR Computational Workflows Team</strong></a></p>
+
+<p>Related past and upcoming events:</p>
+
+<ul>
+  <li>2022-10-26/–28: <a href="https://www.fdo2022.org/">1st International Conference on FAIR Digital Objects</a> (FDO 2022), Leiden, The Netherlands</li>
+  <li>2022-05-13: <a href="https://www.slideshare.net/carolegoble/fair-computational-workflows-251775741"><strong>FAIR Computational Workflows</strong></a>, <em>SERC Swedish e-Science Research Center Annual Meeting</em></li>
+  <li>2022-01-10/–13: <a href="http://www.swat4ls.org/workshops/leiden2022/call-for-papers/">Semantic Web Infrastructures and Resources in Healthcare and Life Science</a> (SWAT4LS), Leiden, The Netherlands</li>
+  <li>2021-11-03/–11: <a href="https://www.rd-alliance.org/plenaries/rda-18th-plenary-meeting-virtual">Research Data Alliance (RDA) 18th Plenary Meeting</a> (virtual)</li>
+  <li>2021-12-07/–09: <a href="https://www.force11.org/meetings/force2021">FORCE2021</a>, FORCE11 annual conference (virtual)</li>
+  <li>2021-11-15: <a href="https://works-workshop.org/">16th Workshop on Workflows in Support of Large-Scale Science</a>, SC21: The International Conference for High Performance Computing (Virtual)
+    <ul>
+      <li>Carole Goble: FAIR Computational Workflows <a href="https://www.slideshare.net/carolegoble/fair-computational-workflows-250656159">(keynote)</a></li>
+    </ul>
+  </li>
+  <li>2021-10-24: <a href="https://zbmed.github.io/damalos/">DaMaLOS 2021</a> – 2nd Workshop on Data and research objects management for Linked Open Science, co-located with <a href="https://iswc2021.semanticweb.org/">ISWC 2021</a>
+    <ul>
+      <li><a href="https://zbmed.github.io/damalos/docs/schedule.html">Programme</a> (proceedings to appear)</li>
+    </ul>
+  </li>
+  <li>2021-06-16: <a href="https://gofair.us/events/2021-06-16-FAIR-Workflows.html"><strong>GO FAIR US webinar: FAIR Workflows</strong></a>
+    <ul>
+      <li>Carole Goble (2021): <a href="https://gofair.us/assets/slides/2021-06-16-towards-FAIR-workflows.pdf"><strong>Towards FAIR Workflows</strong></a></li>
+      <li>Denis Yuen (2021): <a href="https://gofair.us/assets/slides/2021-06-16-dockstore-and-FAIR.pdf"><strong>Dockstore and FAIR</strong></a></li>
+      <li>[<a href="https://www.youtube.com/watch?v=eaObgNzxsqw">Video recording</a>]</li>
+    </ul>
+  </li>
+  <li>2021-04-07: WorkflowsRI <a href="https://workflowsri.org/summits/community">Workflows Community Summit: Advancing the State-of-the-art of Scientific Workflows Management Systems Research and Development </a></li>
+  <li>2021-03-30/2021-04-01: <a href="https://www.software.ac.uk/cw21">Collaboration Workshop CW21</a> – themes FAIR Research Software, Diversity and Inclusion, Software Sustainability
+    <ul>
+      <li>Michelle Parker: <a href="https://www.youtube.com/watch?v=6qNZxho8ib8">FAIR for research software</a> [<a href="https://docs.google.com/presentation/d/1eTG57TOeEL79QidUe-m1WVBut5mbJfDBlNSM6kCsIXk/edit#slide=id.p">slides</a>]</li>
+      <li><a href="https://software.ac.uk/blog/2021-05-19-implementing-fair-research-software-attitudes-advantages-and-challenges-part-one">Implementing FAIR for research software: attitudes, advantages and challenges (part 1)</a> and <a href="https://www.software.ac.uk/blog/2021-05-20-implementing-fair-research-software-attitudes-advantages-and-challenges-part-two">part 2</a></li>
+    </ul>
+  </li>
+  <li>2021-01-13: WorkflowsRI <a href="https://workflowsri.org/summits/community">Workflows Community Summit: Bringing the Scientific Workflows Community Together </a>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=VN706j9DTcw&amp;list=PLAtmuqHExRvNf5zmggm2VwDedGoibO69U&amp;index=3">Carole Goble: FAIR Computational Workflows</a></li>
+      <li>Report: <a href="https://doi.org/10.5281/zenodo.4606958">https://doi.org/10.5281/zenodo.4606958</a> section <a href="https://arxiv.org/pdf/2103.09181.pdf#subsection.2.1">2.1: FAIR computational workflows</a></li>
+    </ul>
+  </li>
+  <li><a href="https://zbmed.github.io/damalos/docs/2020.html">DaMaLOS 2020</a> – Workshop on Data and research objects management for Linked Open Science, co-located with <a href="https://iswc2021.semanticweb.org/">ISWC</a></li>
+  <li>2020-11-30: <em>FAIR Workflows</em> workshop at <a href="https://www.go-fair.org/events/international-fair-convergence-symposium/">International FAIR Convergence Symposium</a>_, 2020-11-27 / 2020-12-04.
+    <ul>
+      <li><a href="https://vimeo.com/499270810">Video recording</a></li>
+      <li><a href="https://drive.google.com/file/d/1lYAdqm7RESqA9zplTXd4JFJUmome66ui/view?usp=sharing">Slides</a></li>
+    </ul>
+  </li>
+  <li>2020-09-12: <a href="https://eccb2020.info/ntbew01-workshop-on-fair-computational-workflows/">Workshop on FAIR Computational Workflows</a>, 19th European Conference on Computational Biology (<a href="https://eccb2020.info/">ECCB 2020</a>)
+    <ul>
+      <li><a href="https://doi.org/10.5281/zenodo.4071482">Combined slide deck</a></li>
+      <li><a href="https://www.youtube.com/watch?v=M7C4o0mDZLw">Video recording</a> incl. talks:</li>
+      <li><a href="https://youtu.be/M7C4o0mDZLw?t=299">Carole Goble: Introducing FAIR Computational Workflows</a>  [<a href="https://doi.org/10.5281/zenodo.4071482">slides</a>]</li>
+      <li><a href="https://youtu.be/M7C4o0mDZLw?t=562">Sarah Cohen: A Review on the FAIR principles for computational workflows</a> [<a href="https://doi.org/10.5281/zenodo.4025295">slides</a>]</li>
+      <li><a href="https://youtu.be/M7C4o0mDZLw?t=562">Mateusz Kuzak: Toward defining and implementing FAIR for research software</a> [<a href="https://docs.google.com/presentation/d/15113lwn8_H7ftDF9I650O3rZGeAVr6LVSU4-XDkBgA0/edit#slide=id.g9337569ecf_2_123">slides</a>]</li>
+      <li><a href="https://youtu.be/M7C4o0mDZLw?t=2638">Carole Goble: WorkflowHub and the Bioschemas profile</a> [<a href="https://doi.org/10.5281/zenodo.4012124">slides</a>]</li>
+      <li><a href="https://youtu.be/M7C4o0mDZLw?t=4286">Michael Crusoe: The Common Workflow Language and CWLProv</a></li>
+      <li><a href="https://youtu.be/M7C4o0mDZLw?t=5105">Stian Soiland-Reyes: Packaging workflows with RO-Crate</a> [<a href="https://doi.org/10.5281/zenodo.4011999">slides</a>]</li>
+      <li><a href="https://youtu.be/M7C4o0mDZLw?t=6768">Simone Leo: Testing workflows: Life Monitor and OpenEBench</a> [<a href="https://docs.google.com/presentation/d/15113lwn8_H7ftDF9I650O3rZGeAVr6LVSU4-XDkBgA0/edit#slide=id.g9337569ecf_1_0">slides</a>]</li>
+      <li><a href="https://youtu.be/M7C4o0mDZLw?t=7199">Salvador Capella-Gutierrez: OpenEBench</a> [<a href="https://zenodo.org/record/4071482/preview/ECCB2020_%20Workshop%20on%20FAIR%20Computational%20Workflows%20%282%29.pdf#page=91">slides</a>]</li>
+      <li><a href="https://youtu.be/M7C4o0mDZLw?t=8039">Björn Grüning: FAIR computational data analysis with Galaxy</a> [<a href="https://zenodo.org/record/4071482/preview/ECCB2020_%20Workshop%20on%20FAIR%20Computational%20Workflows%20%282%29.pdf#page=108">slides</a>]</li>
+      <li><a href="https://youtu.be/M7C4o0mDZLw?t=9722">Alexander Peltzer: Nextflow &amp; nf-core</a> [<a href="http://slides.com/apeltzer/eccb2020-nf-nf-core">slides</a>]</li>
+      <li><a href="https://youtu.be/M7C4o0mDZLw?t=10847">Carole Goble: Wrapup, FAIR for workflows</a> [<a href="https://zenodo.org/record/4071482/preview/ECCB2020_%20Workshop%20on%20FAIR%20Computational%20Workflows%20%282%29.pdf#page=141">slides</a>]</li>
+    </ul>
+  </li>
+  <li>2019-09-24: <a href="https://www.researchobject.org/ro2019/proceedings">Workshop on Research Objects (RO2019)</a> at <a href="https://escience2019.sdsc.edu/">IEEE eScience 2019</a></li>
+  <li>2018-10-29: <a href="https://www.researchobject.org/ro2018/ro2018-proceedings/">Workshop on Research Objects (RO2018)</a> at IEEE eScience 2018.</li>
+</ul>
+
+<h2 id="projects-and-initiatives">Projects and initiatives</h2>
+
+<p>Registries:</p>
+
+<ul>
+  <li><a href="https://workflowhub.eu/">WorkflowHub</a> – a repository and registry of life science workflows</li>
+  <li><a href="https://dockstore.org/">Dockstore</a> – sharing Docker Tools and Workflows for the Sciences</li>
+  <li><a href="https://bio.tools/">bio.tools</a> – registry of tools in life sciences</li>
+  <li><a href="nf-co.re/">nf-core</a> – curated <a href="https://www.nextflow.io/">Nextflow</a> workflows for bioinformatics</li>
+  <li>Published Galaxy workflows on <a href="https://usegalaxy.eu/workflows/list_published">usegalaxy.eu</a> and <a href="https://usegalaxy.org/workflows/list_published">usegalaxy.org</a></li>
+</ul>
+
+<p>Related projects and initiatives supporting FAIR Computational Workflows aims:</p>
+
+<ul>
+  <li><a href="https://about.workflowhub.eu/">WorkflowHub Club</a></li>
+  <li><a href="https://www.eosc-life.eu/">EOSC-Life</a></li>
+  <li><a href="https://elixir-europe.org/">ELIXIR Europe</a></li>
+  <li><a href="https://bioexcel.eu/">BioExcel</a>
+    <ul>
+      <li><a href="http://mmb.irbbarcelona.org/biobb/">BioExcel Building Blocks</a> (biobb) – software library for interoperable biomolecular simulation workflows</li>
+    </ul>
+  </li>
+  <li><a href="https://workflowsri.org/">WorkflowsRI</a> – Towards an Infrastructure for Enabling Systematic Development and Research of Scientific Workflow Management Systems</li>
+  <li><a href="https://fair-workflows.github.io/project.html">FAIR Workflows</a> – an NWO/eScience Center project</li>
+  <li><a href="https://www.rd-alliance.org/groups/fair-research-software-fair4rs-wg">FAIR for Research Software</a> (FAIR4RS) – working group at Research Data Alliance</li>
+  <li><a href="https://usegalaxy.eu/">UseGalaxy.eu</a> – a European-wide Galaxy workflow platform</li>
+</ul>
+
+<p><em>Note that the similarly named project <a href="https://www.stage.datacite.org/fair-workflows.html">Implementing FAIR Workflows</a> is about making the overall research process FAIR, not necessarily related to computational workflows.</em></p>
+
+<p>Related standards for FAIR computational workflows:</p>
+
+<ul>
+  <li><a href="http://commonwl.org/">Common Workflow Language</a> – Interoperable execution of computational workflows, supported by multiple engines and with strong support for <a href="https://www.commonwl.org/user_guide/17-metadata/">workflow metadata</a></li>
+  <li><a href="https://w3id.org/ro/crate">RO-Crate</a> – FAIR packaging of research outputs and metadata, <a href="https://www.researchobject.org/ro-crate/1.1/workflows.html">including workflows</a></li>
+  <li><a href="https://bioschemas.org/">Bioschemas</a> – improve findability of FAIR life science resources on the Web, including <a href="https://bioschemas.org/profiles/ComputationalWorkflow/">computational workflows</a> and <a href="https://bioschemas.org/profiles/ComputationalTool/">computational tools</a></li>
+  <li><a href="https://www.biocomputeobject.org/">Biocompute Objects</a> and <a href="https://doi.org/10.1109/IEEESTD.2020.9094416">IEEE 2791-2020</a>: standard for describing workflows in regulatory sciences.</li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<p><em>Articles below are published as <a href="https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/">Open Access</a>, or with <a href="https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/understanding/">green open access preprints</a> where gold open access is not possible. Please <a href="https://github.com/workflowscommunity/workflowscommunity.github.io/issues">let us know</a> if you are unable to access any of our publications. To add to this list, please <a href="https://github.com/workflowscommunity/workflowscommunity.github.io/blob/main/_working_groups/fair.md">suggest a change</a>.</em></p>
+
+<p>Michael R. Crusoe, Sanne Abeln, Alexandru Iosup, Peter Amstutz, John Chilton, Nebojša Tijanić, Hervé Ménager, Stian Soiland-Reyes, Carole Goble, CWL Community (2022):<br />
+<a href="https://arxiv.org/pdf/2105.07028"><strong>Methods Included: Standardizing Computational Reuse and Portability with the Common Workflow Language</strong></a>.<br />
+<em>Communications of the ACM</em> <strong>65</strong>(6)  (in print).
+To appear as <a href="https://doi.org/10.1145/3486897">https://doi.org/10.1145/3486897</a><br />
+preprint: <a href="https://arxiv.org/abs/2105.07028">arXiv:2105.07028 [cs.DC]</a></p>
+
+<p>Peter Wittenburg, Alex Hardisty, Amirpasha Mozzafari, Limor Peer, Nikolay Skvortsov, Alessandro Spinuso, Zhiming Zhao (2022):<br />
+<strong>Editors’ Note: <a href="https://direct.mit.edu/dint/issue/4/2">Special Issue on Canonical Workflow Frameworks for Research</a></strong>.<br />
+<em>Data Intelligence</em> <strong>4</strong>(2)<br />
+<a href="https://doi.org/10.1162/dint_e_00122">https://doi.org/10.1162/dint_e_00122</a></p>
+
+<p>Stian Soiland-Reyes, Genís Bayarri, Pau Andrio, Robin Long, Douglas Lowe, Ania Niewielska, Adam Hospital, Paul Groth (2022):<br />
+<a href="https://direct.mit.edu/dint/article-pdf/doi/10.1162/dint_a_00135/1996729/dint_a_00135.pdf"><strong>Making Canonical Workflow Building Blocks interoperable across workflow languages</strong></a>.<br />
+<em>Data Intelligence</em> <strong>4</strong>(2)<br />
+<a href="https://doi.org/10.1162/dint_a_00135">https://doi.org/10.1162/dint_a_00135</a></p>
+
+<p>Alex Hardisty, Paul Brack, Carole Goble, Laurence Livermore, Ben Scott, Quentin Groom, Stuart Owen, Stian Soiland-Reyes (2022):<br />
+<a href="https://direct.mit.edu/dint/article-pdf/doi/10.1162/dint_a_00134/1996727/dint_a_00134.pdf"><strong>The Specimen Data Refinery: A canonical workflow framework and FAIR Digital Object approach to speeding up digital mobilisation of natural history collections</strong></a>.<br />
+<em>Data Intelligence</em> <strong>4</strong>(2)<br />
+<a href="https://doi.org/10.1162/dint_a_00134">https://doi.org/10.1162/dint_a_00134</a></p>
+
+<p>Amirpasha Mozaffari, Michael Langguth, Bing Gong, Jessica Ahring, Adrian Rojas Campos, Pascal Nieters, Otoniel José Campos Escobar, Martin Wittenbrink,
+Peter Baumann, Martin G. Schultz (2022):<br />
+<a href="https://doi.org/10.1162/dint_a_00131"><strong>HPC-oriented Canonical Workflows for Machine Learning Applications in Climate and Weather Prediction</strong></a>.<br />
+<em>Data Intelligence</em> <strong>4</strong>(2)<br />
+<a href="https://doi.org/10.1162/dint_a_00131">https://doi.org/10.1162/dint_a_00131</a></p>
+
+<p>Peter Wittenburg, Alex Hardisty, Yann Le Franc, Amirpasha Mozaffari, Limor Peer, Nikolay A. Skvortsov, Zhiming Zhao, Alessandro Spinuso (2022):<br />
+<a href="https://doi.org/10.1162/dint_a_00132"><strong>Canonical Workflows to Make Data FAIR</strong></a>.<br />
+<em>Data Intelligence</em> <strong>4</strong>(2)<br />
+<a href="https://doi.org/10.1162/dint_a_00132">https://doi.org/10.1162/dint_a_00132</a></p>
+
+<p>Beatriz Serrano-Solano, Anne Fouilloux, Ignacio Eguinoa, Matúš Kalaš, Björn Grüning, Frederik Coppens (2022):<br />
+<a href="https://doi.org/10.1162/dint_a_00136"><strong>Galaxy: A Decade of Realising CWFR Concepts</strong></a>.<br />
+<em>Data Intelligence</em> <strong>4</strong>(2)<br />
+<a href="https://doi.org/10.1162/dint_a_00136">https://doi.org/10.1162/dint_a_00136</a></p>
+
+<p>Thomas Jejkal, Sabrine Chelbi, Andreas Pfeil, Peter Wittenburg (2022):<br />
+<a href="https://doi.org/10.1162/dint_a_00137"><strong>Evaluation of Application Possibilities for Packaging Technologies in Canonical Workflows</strong></a>.<br />
+<em>Data Intelligence</em> <strong>4</strong>(2)<br />
+<a href="https://doi.org/10.1162/dint_a_00137">https://doi.org/10.1162/dint_a_00137</a></p>
+
+<p>Hendrik Nolte, Philipp Wieder (2022):<br />
+<a href="https://doi.org/10.1162/dint_a_00141"><strong>Realising Data-Centric Scientific Workflows with Provenance-Capturing on Data Lakes</strong></a>.<br />
+<em>Data Intelligence</em> <strong>4</strong>(2)<br />
+<a href="https://doi.org/10.1162/dint_a_00141">https://doi.org/10.1162/dint_a_00141</a></p>
+
+<p>Nikolay A. Skvortsov, Sergey A. Stupnikov (2022):<br />
+<a href="https://doi.org/10.1162/dint_a_00142"><strong>A Semantic Approach to Workflow Management and Reuse for Research Problem Solving</strong></a>.<br />
+<em>Data Intelligence</em> <strong>4</strong>(2)<br />
+<a href="https://doi.org/10.1162/dint_a_00142">https://doi.org/10.1162/dint_a_00142</a></p>
+
+<p>Alessandro Spinuso, Mats Veldhuizen, Daniele Bailo, Valerio Vinciarelli, Tor Langeland (2022):<br />
+<a href="https://doi.org/10.1162/dint_a_00129"><strong>SWIRRL. Managing Provenance-aware and Reproducible Workspaces</strong></a>.<br />
+<em>Data Intelligence</em> <strong>4</strong>(2)<br />
+<a href="https://doi.org/10.1162/dint_a_00129">https://doi.org/10.1162/dint_a_00129</a></p>
+
+<p>Christian Ohmann, Romain David, Mónica Cano Abadia, Florence Bietrix, Jan-Willem Boiten, Steve Canham, Maria Luisa Chiusano, Walter Dastrù, Arnaud Laroquette, Dario Longo, Michaela Theresia Mayrhofer, Maria Panagiotopoulou, Audrey Richard, Pablo Emilio Verde (2022):<br />
+<a href=""><strong>Pilot Study on the Intercalibration of a Categorisation System for FAIRer Digital Objects Related to Sensitive Data in the Life Sciences</strong></a>.<br />
+<em>Data Intelligence</em> <strong>4</strong>(2)<br />
+<a href="https://doi.org/10.1162/dint_a_00126">https://doi.org/10.1162/dint_a_00126</a></p>
+
+<p>Stian Soiland-Reyes, Peter Sefton, Mercè Crosas, Leyla Jael Castro, Frederik Coppens, José M. Fernández, Daniel Garijo, Björn Grüning, Marco La Rosa, Simone Leo, Eoghan Ó Carragáin, Marc Portier, Ana Trisovic, RO-Crate Community, Paul Groth, Carole Goble (2022):<br />
+<a href="https://www.researchobject.org/2021-packaging-research-artefacts-with-ro-crate/manuscript.html"><strong>Packaging research artefacts with RO-Crate</strong></a>.<br />
+<em>Data Science</em> (in press)
+<a href="https://doi.org/10.3233/DS-210053">https://doi.org/10.3233/DS-210053</a></p>
+
+<p>Paul Brack, Peter Crowther, Stian Soiland-Reyes, Stuart Owen, Douglas Lowe, Alan R Williams, Quentin Groom, Mathias Dillen, Frederik Coppens, Björn Grüning, Ignacio Eguinoa, Philip Ewels, Carole Goble (2022):<br />
+<a href="https://doi.org/10.1371/journal.pcbi.1009823"><strong>10 Simple Rules for making a software tool workflow-ready</strong></a><br />
+<em>PLOS Computational Biology</em> <strong>18</strong>(3):e1009823
+<a href="https://doi.org/10.1371/journal.pcbi.1009823">https://doi.org/10.1371/journal.pcbi.1009823</a></p>
+
+<p>Neil P. Chue Hong, Daniel S. Katz, Michelle Barker; Anna-Lena Lamprecht, Carlos Martinez, Fotis E. Psomopoulos, Jen Harrow, Leyla Jael Castro, Morane Gruenpeter, Paula Andrea Martinez, Tom Honeyman; Alexander Struck, Allen Lee, Axel Loewe, Ben van Werkhoven, Catherine Jones, Daniel Garijo, Esther Plomp, Francoise Genova, Hugh Shanahan, Joanna Leng, Maggie Hellström, Malin Sandström, Manodeep Sinha, Mateusz Kuzak, Patricia Herterich, Qian Zhang, Sharif Islam, Susanna-Assunta Sansone, Tom Pollard, Udayanto Dwi Atmojo; Alan Williams, Andreas Czerniak, Anna Niehues, Anne Claire Fouilloux, Bala Desinghu, Carole Goble, Céline Richard, Charles Gray, Chris Erdmann, Daniel Nüst, Daniele Tartarini, Elena Ranguelova, Hartwig Anzt, Ilian Todorov, James McNally, Javier Moldon, Jessica Burnett, Julián Garrido-Sánchez, Khalid Belhajjame, Laurents Sesink, Lorraine Hwang, Marcos Roberto Tovani-Palone, Mark D. Wilkinson, Mathieu Servillat, Matthias Liffers, Merc Fox, Nadica Miljković, Nick Lynch, Paula Martinez Lavanchy, Sandra Gesing, Sarah Stevens, Sergio Martinez Cuesta, Silvio Peroni, Stian Soiland-Reyes, Tom Bakker, Tovo Rabemanantsoa, Vanessa Sochat, Yo Yehudi, FAIR4RS WG (2022):<br />
+<a href="https://www.rd-alliance.org/system/files/FAIR4RS%20principles%20v1.0.pdf"><strong>FAIR Principles for Research Software version 1.0 (FAIR4RS Principles v1.0)</strong></a>.<br />
+<em>Research Data Alliance</em><br />
+<a href="https://doi.org/10.15497/RDA00068">https://doi.org/10.15497/RDA00068</a></p>
+
+<h2 id="2021">2021</h2>
+
+<p>Rafael Ferreira da Silva, Henri Casanova, Kyle Chard, Ilkay Altintas, Rosa M Badia, Bartosz Balis, Tainã Coleman, Frederik Coppens, Frank Di Natale, Bjoern Enders, Thomas Fahringer, Rosa Filgueira, Grigori Fursin, Daniel Garijo, Carole Goble, Dorran Howell, Shantenu Jha, Daniel S. Katz, Daniel Laney, Ulf Leser, Maciej Malawski, Kshitij Mehta, Loïc Pottier, Jonathan Ozik, J. Luc Peterson, Lavanya Ramakrishnan, Stian Soiland-Reyes, Douglas Thain, Matthew Wolf (2021):<br />
+<a href="https://arxiv.org/pdf/2110.02168"><strong>A Community Roadmap for Scientific Workflows Research and Development</strong></a>.<br />
+<a href="https://arxiv.org/abs/2110.02168">arXiv:2110.02168 [cs.DC]</a>
+<em>2021 IEEE Workshop on Workflows in Support of Large-Scale Science (<a href="https://works-workshop.org/">WORKS</a>)</em>, pp 81–90.<br />
+<a href="https://doi.org/10.1109/WORKS54523.2021.00016">https://doi.org/10.1109/WORKS54523.2021.00016</a></p>
+
+<p>Robin A Richardson, Remzi Celebi, Sven van der Burg, Djura Smits, Lars Ridder, Michel Dumontier, Tobias Kuhn (2021):<br />
+<a href="https://arxiv.org/pdf/2111.00831"><strong>User-friendly Composition of FAIR Workflows in a Notebook Environment</strong></a>.<br />
+<em>The Eleventh International Conference on Knowledge Capture (<a href="https://www.k-cap.org/2021/">K-Cap2021</a>)</em>.<br />
+<a href="https://arxiv.org/abs/2111.00831">https://arxiv.org/abs/2111.00831</a></p>
+
+<p>Jeremy Leipzig, Daniel Nüst, Charles Tapley Hoyt, Karthik Ram, Jane Greenberg (2021):<br />
+<a href="https://arxiv.org/pdf/2006.08589.pdf"><strong>The role of metadata in reproducible computational research</strong></a><br />
+<em>Patterns</em> <strong>2</strong>(1):100322<br />
+<a href="https://doi.org/10.1016/j.patter.2021.100322">https://doi.org/10.1016/j.patter.2021.100322</a></p>
+
+<p>Sveinung Gundersen, Sanjay Boddu, Salvador Capella-Gutierrez, Finn Drabløs, José M. Fernández, Radmila Kompova, Kieron Taylor, Dmytro Titov, Daniel Zerbino, Eivind Hovig (2021):<br />
+<a href="https://doi.org/10.12688/f1000research.28449.1"><strong>Recommendations for the FAIRification of genomic track metadata</strong> [version 1; peer review: 2 approved]</a>.<br />
+<em>F1000Research</em> <strong>10</strong>(ELIXIR):268<br />
+<a href="https://doi.org/10.12688/f1000research.28449.1">https://doi.org/10.12688/f1000research.28449.1</a></p>
+
+<p>Anna-Lena Lamprecht, Magnus Palmblad, Jon Ison, Veit Schwämmle,
+Mohammad Sadnan Al Manir, Ilkay Altintas, Christopher J. O. Baker, Ammar Ben Hadj Amor, Salvador Capella-Gutierrez,
+Paulos Charonyktakis, Michael R. Crusoe,
+Yolanda Gil, Carole Goble, Timothy J. Griffin,
+Paul Groth, Hans Ienasescu, Pratik Jagtap,
+Matúš Kalaš, Vedran Kasalica, Alireza Khanteymoori,
+Tobias Kuhn, Hailiang Mei, Hervé Ménager, Steffen Möller, Robin A. Richardson,
+Vincent Robert, Stian Soiland-Reyes, Robert Stevens, Szoke Szaniszlo, 
+Suzan Verberne, Aswin Verhoeven, Katherine Wolstencroft (2021):<br />
+<a href="https://doi.org/10.12688/f1000research.54159.1"><strong>Perspectives on automated composition of workflows in the life sciences</strong> [version 1; peer review: 2 approved]</a>.<br />
+<em>F1000Research</em> <strong>10</strong>:897<br />
+<a href="https://doi.org/10.12688/f1000research.54159.1">https://doi.org/10.12688/f1000research.54159.1</a></p>
+
+<p>Rafael Ferreira da Silva, Henri Casanova, Kyle Chard, Dan Laney, Dong Ahn, Shantenu Jha, Carole Goble, Lavanya Ramakrishnan, Luc Peterson, Bjoern Enders, Douglas Thain, Ilkay Altintas, Yadu Babuji, Rosa Badia, Vivien Bonazzi, Taina Coleman, Michael Crusoe, Ewa Deelman, Frank Di Natale &amp; Paolo Di Tommaso (2021):<br />
+<a href="https://arxiv.org/pdf/2103.09181.pdf"><strong>Workflows Community Summit: Bringing the Scientific Workflows Community Together</strong></a>.<br />
+<em>Workflows RI</em> Technical Report. <a href="https://arxiv.org/abs/2103.09181">arXiv:2103.09181</a><br />
+<a href="https://doi.org/10.5281/zenodo.4606958">https://doi.org/10.5281/zenodo.4606958</a></p>
+
+<p>Carole Goble, Stian Soiland-Reyes, Finn Bacall, Stuart Owen, Alan Williams, Ignacio Eguinoa, Bert Droesbeke, Simone Leo, Luca Pireddu, Laura Rodriguez-Navas, José Mª Fernández, Salvador Capella-Gutierrez, Hervé Ménager, Björn Grüning, Beatriz Serrano-Solano, Philip Ewels, Frederik Coppens (2021):<br />
+<a href="https://doi.org/10.5281/zenodo.4605654"><strong>Implementing FAIR Digital Objects in the EOSC-Life Workflow Collaboratory</strong></a>.<br />
+<em>Zenodo</em><br />
+<a href="https://doi.org/10.5281/zenodo.4605654">https://doi.org/10.5281/zenodo.4605654</a></p>
+
+<p>Daniel S. Katz, Morane Gruenpeter, Tom Honeyman, Lorraine Hwang, Mark D. Wilkinson, Vanessa Sochat, Hartwig Anzt, Carole Goble, FAIR4RS Subgroup 1 (2021):<br />
+<a href="https://arxiv.org/pdf/2101.10883"><strong>A Fresh Look at FAIR for Research Software</strong></a>.<br />
+<a href="https://arxiv.org/abs/2101.10883">arXiv:2101.10883</a> [<a href="https://arxiv.org/pdf/2101.10883">pdf</a>]</p>
+
+<h2 id="2020">2020</h2>
+
+<p>Carole Goble, Sarah Cohen-Boulakia, Stian Soiland-Reyes, Daniel Garijo, Yolanda Gil, Michael R. Crusoe, Kristian Peters, Daniel Schober (2020):<br />
+<a href="https://doi.org/10.1162/dint_a_00033"><strong>FAIR Computational Workflows</strong></a>.<br />
+<em>Data Intelligence</em>  <strong>2</strong>(1):108–121
+<a href="https://doi.org/10.1162/dint_a_00033">https://doi.org/10.1162/dint_a_00033</a></p>
+
+<p>Janno Harjes, Anton Link, Tanja Weibulat, Dagmar Triebel, Gerhard Rambold (2020):<br />
+<a href="https://doi.org/10.1093/database/baaa059"><strong>FAIR digital objects in environmental and life sciences should comprise workflow operation design data and method information for repeatability of study setups and reproducibility of results</strong></a>.<br />
+<em>Database</em> <strong>2020</strong>:baaa059<br />
+<a href="https://doi.org/10.1093/database/baaa059">https://doi.org/10.1093/database/baaa059</a></p>
+
+<p>Anna-Lena Lamprecht, Leyla Garcia, Mateusz Kuzak, Carlos Martinez, Ricardo Arcila, Eva Martin Del Pico, Victoria Dominguez Del Angel, Stephanie Van De Sandt, Jon Ison, Paula Andrea Martinez, Peter Mcquilton, Alfonso Valencia, Jennifer Harrow, Fotis Psomopoulos, Josep Ll. Gelpi, Neil Chue Hong, Carole Goble, Salvador Capella-Gutierrez (2020):<br />
+<a href="https://doi.org/10.3233/DS-190026"><strong>Towards FAIR principles for research software</strong></a>.<br />
+<em>Data Science</em> <strong>3</strong>(1) pp. 37–59.<br />
+<a href="https://doi.org/10.3233/DS-190026">https://doi.org/10.3233/DS-190026</a></p>
+
+<h2 id="2019">2019</h2>
+
+<p>Farah Zaib Khan, Stian Soiland-Reyes, Richard O. Sinnott, Andrew Lonie, Carole Goble, Michael R. Crusoe (2019):<br />
+<a href="https://doi.org/10.1093/gigascience/giz095"><strong>Sharing interoperable workflow provenance: A review of best practices and their practical application in CWLProv</strong></a>.<br />
+<em>GigaScience</em> <strong>8</strong>(11):giz095<br />
+<a href="https://doi.org/10.1093/gigascience/giz095">https://doi.org/10.1093/gigascience/giz095</a></p>
+
+<p>Jeffrey M. Perkel (2019):<br />
+<a href="https://doi.org/10.1038/d41586-019-02619-z"><strong>Workflow systems turn raw data into scientific knowledge</strong></a> 
+<em>Nature</em> <strong>573</strong><br />
+<a href="https://doi.org/10.1038/d41586-019-02619-z">https://doi.org/10.1038/d41586-019-02619-z</a></p>
+
+<h2 id="2018">2018</h2>
+
+<p>Jeffrey M. Perkel (2018):<br />
+<a href="https://doi.org/10.1038/d41586-019-02619-z"><strong>That’s the way we flow</strong></a>.<br />
+<em>Nature</em> <strong>573</strong> 149-150.<br />
+<a href="https://doi.org/10.1038/d41586-019-02619-z">https://doi.org/10.1038/d41586-019-02619-z</a></p>
+
+<p>Natalie J Stanford, Finn Bacall, Fatemeh Zamanzad Ghavidel, Martin Golebiewski, Inge Jonassen, Rune Kleppe, Olga Krebs, Hadas Leonov, Stuart Owen, Kjell Petersen, Maja Rey, Stian Soiland-Reyes, Kidane Tekle, Andreas Weidemann, Alan Williams, Ulrike Wittig, Katy Wolstencroft, Anders Goksøyr, Jacky L. Snoep, Jon Olav Vik, Wolfgang Müller, Carole Goble (2018):<br />
+<a href="https://www.research.manchester.ac.uk/portal/files/70129474/NETTAB2018_paper_8.pdf"><strong>FAIR Bioinformatics computation and data management: FAIRDOM and the Norwegian Digital Life initiative</strong></a>.<br />
+<em>NETTAB 2018 Network Tools and Applications in Biology</em>.<br />
+<a href="https://www.research.manchester.ac.uk/portal/files/70129474/NETTAB2018_paper_8.pdf">[preprint]</a>
+<a href="https://www.research.manchester.ac.uk/portal/en/publications/fair-bioinformatics-computation-and-data-management-fairdom-and-the-norwegian-digital-life-initiative(c4b199b1-95c9-4ab2-85ff-87681e1cc971).html">[preprint server]</a></p>
+
+<p>Gil Alterovitz, Dennis A Dean II, Carole Goble, Michael R Crusoe, Stian Soiland-Reyes, Amanda Bell, Anais Hayes, Anita Suresh, Charles Hadley S King IV, Dan Taylor, KanakaDurga Addepalli, Elaine Johanson, Elaine E Thompson, Eric Donaldson, Hiroki Morizono, Hsinyi Tsang, Jeet K Vora, Jeremy Goecks, Jianchao Yao, Jonas S Almeida, Konstantinos Krampis, Krista Smith, Lydia Guo, Mark Walderhaug, Marco Schito, Matthew Ezewudo, Nuria Guimera, Paul Walsh, Robel Kahsay, Srikanth Gottipati, Timothy C Rodwell, Toby Bloom, Yuching Lai, Vahan Simonyan, Raja Mazumder (2018):<br />
+<a href="https://doi.org/10.1371/journal.pbio.3000099"><strong>Enabling Precision Medicine via standard communication of NGS provenance, analysis, and results</strong></a>.<br />
+<em>PLOS Biology.</em>  <strong>16</strong>(12):e3000099<br />
+<a href="https://doi.org/10.1371/journal.pbio.3000099">https://doi.org/10.1371/journal.pbio.3000099</a>
+(<a href="https://doi.org/10.1101/191783">bioXriv:191783</a>)</p>
+
+<p>Pablo Carbonell, Adrian J. Jervis, Christopher J. Robinson, Cunyu Yan, Mark Dunstan, Neil Swainston, Maria Vinaixa, Katherine A. Hollywood, Andrew Currin, Nicholas J. W. Rattray, Sandra Taylor, Reynard Spiess, Rehana Sung, Alan R. Williams, Donal Fellows, Natalie J. Stanford, Paul Mulherin, Rosalind Le Feuvre, Perdita Barran, Royston Goodacre, Nicholas J. Turner, Carole Goble, George Guoqiang Chen, Douglas B. Kell, Jason Micklefield, Rainer Breitling, Eriko Takano, Jean-Loup Faulon, Nigel S. Scrutton (2018):<br />
+<a href="https://doi.org/10.1038/s42003-018-0076-9"><strong>An automated Design-Build-Test-Learn pipeline for enhanced microbial production of fine chemicals</strong></a>.<br />
+<em>Communications Biology</em> <strong>1</strong>:66<br />
+<a href="https://doi.org/10.1038/s42003-018-0076-9">https://doi.org/10.1038/s42003-018-0076-9</a></p>
+
+<h2 id="2017">2017</h2>
+
+<p>Stephen J Eglen, Ben Marwick, Yaroslav O Halchenko, Michael Hanke, Shoaib Sufi, Padraig Gleeson, R Angus Silver, Andrew P Davison, Linda Lanyon, Mathew Abrams, Thomas Wachtler, David J Willshaw, Christophe Pouzat, Jean-Baptiste Poline (2017):<br />
+<a href="https://doi.org/10.1038/nn.4550"><strong>Toward standard practices for sharing computer code and programs in neuroscience</strong></a>.<br />
+<em>Nature Neuroscience</em> <strong>20</strong>, 770–773.
+<a href="https://doi.org/10.1038/nn.4550">https://doi.org/10.1038/nn.4550</a> <a href="https://doi.org/10.1101/045104">[bioRxiv preprint]</a></p>
+
+<p>Steffen Möller, Stuart W. Prescott, Lars Wirzenius; Petter Reinholdtsen, Brad Chapman, Pjotr Prins, Stian Soiland-Reyes, Fabian Klötzl, Andrea Bagnacani, Matúš Kalaš, Andreas Tille, Michael R. Crusoe (2017): 
+<a href="https://doi.org/10.1007/s41019-017-0050-4"><strong>Robust cross-platform workflows: how technical and scientific communities collaborate to develop, test and share best practices for data analysis.</strong></a><br />
+<em>Data Science and Engineering</em> <strong>2</strong>:232 pp 232–244.<br />
+<a href="https://doi.org/10.1007/s41019-017-0050-4">https://doi.org/10.1007/s41019-017-0050-4</a></p>
+
+    </main>
+    <br /><br />
+</article>
+
+<a id="members"></a>
+<article class="post">
+    <header>
+        <div class="sub title">
+            <h3>Members</h3>
+            <p>The FAIR Computational Workflows working group is composed of 12 members.</p>
+            
+            <a href="https://forms.gle/5ZNJ8Vxdu5X3SCaw7" target="_blank" class="btn btn-primary" style="margin-top: -2em; margin-bottom: 0;">Join Working Group&nbsp;&nbsp;<i class="fas fa-user-plus"
+                    style="font-size: 0.8em"></i></a>
+                            
+        </div>
+    </header>
+
+    <div class="row">
+        <ul class="group-members">
+            
+            <li>
+                
+                <a href="https://rafaelsilva.com" target="_blank">Rafael Ferreira da Silva</a>
+                
+                <strong>&nbsp;&nbsp;Chair</strong>
+            </li>
+            
+            <li>
+                
+                <a href="https://www.research.manchester.ac.uk/portal/carole.goble.html" target="_blank">Carole Goble</a>
+                
+                <strong>&nbsp;&nbsp;Chair</strong>
+            </li>
+            
+            <li>
+                
+                <a href="https://www.ornl.gov/staff-profile/kathryn-e-knight" target="_blank">Kathryn E. Knight</a>
+                
+                <strong>&nbsp;&nbsp;Chair</strong>
+            </li>
+            
+            <li>
+                
+                <a href="https://www.elixir-belgium.org/" target="_blank">Frederik Coppens</a>
+                
+                
+            </li>
+            
+            <li>
+                
+                <a href="https://orcid.org/0000-0002-2961-9670" target="_blank">Michael R. Crusoe</a>
+                
+                
+            </li>
+            
+            <li>
+                
+                Christian Erdmann
+                
+                
+            </li>
+            
+            <li>
+                
+                Stian Soiland-Reyes
+                
+                
+            </li>
+            
+            <li>
+                
+                Nicola Soranzo
+                
+                
+            </li>
+            
+            <li>
+                
+                Shelly Stall
+                
+                
+            </li>
+            
+            <li>
+                
+                <a href="https://zihengsun.github.io" target="_blank">Ziheng Sun</a>
+                
+                
+            </li>
+            
+            <li>
+                
+                Sean R. Wilkinson
+                
+                
+            </li>
+            
+            <li>
+                
+                Matthew Wolf
+                
+                
+            </li>
+            
+        </ul>
+    </div>
+</article>
+        </div>
+
+        <section id="sidebar">
+
+    <!-- Intro -->
+    <section id="intro">
+        <a href="/" class="logo"><img src="/images/workflows-community-logo.png" alt="" style="max-width: 20em" /></a>
+
+        <ul class="icons">
+            <li>
+                <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                    class="fa-stack fa-2x" style="font-size: 1.5em">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                    <i class="fab fa-youtube fa-stack-1x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:contact@workflows.community" class="fa-stack fa-2x" style="font-size: 1.5em">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="http://twitter.com/WorkflowsCI" target="_blank" class="fa-stack fa-2x"
+                    style="font-size: 1.5em">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                    <i class="fab fa-twitter fa-stack-1x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-14l57ruzl-cCue46GoRt_4txhXfYHrtA"
+                    target="_blank" class="fa-stack fa-2x" style="font-size: 1.5em">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                    <i class="fab fa-slack fa-stack-1x"></i>
+                </a>
+            </li>
+        </ul>
+
+        <!-- HTML search field -->
+<div class="search-container">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" id="search-input" class="input-field" placeholder="Search" autofocus>
+    <div id="results-container"></div>
+</div>
+
+<!-- Grab search-script.js -->
+<script src="/assets/js/search.script.js" type="text/javascript"></script>
+
+<!-- Configuration -->
+<script>
+    SimpleJekyllSearch({
+        searchInput: document.getElementById("search-input"),
+        resultsContainer: document.getElementById("results-container"),
+        json: "/search.json",
+        searchResultTemplate: `
+            <a href="{url}">
+                {category}
+                <strong>{title}</strong><br/>
+                {description}
+            </a>
+        `,
+        templateMiddleware: function (prop, value, template) {
+            if (prop == "description") {
+                if (value.length > 0) {
+                    value = '<span class="search-desc">' + value + '</span>'
+                    if (value.length > 75) {
+                        return value.substring(0, 75) + "...";
+                    }
+                } else {
+                    return ""
+                }
+            }
+            if (prop == "category") {
+                let color = "f2b3a2"
+                if (value == "story") {
+                    color = "D89398"
+                } else if (value == "event") {
+                    color = "85BCC2"
+                } else if (value == "job") {
+                    color = "6689BA"
+                }
+                return '<span class="search-cat" style="background-color: #' + color + ';">' + value + '</span>'
+            }
+        },
+        noResultsText: '<span style="padding: 1em; line-height: 2em">No results found</span>'
+    })
+</script>
+
+    </section>
+
+    <!-- About -->
+    <div class="blurb">
+        <p>The goal of the <strong>Workflows Community Initiative (WCI)</strong> is to bring the workflows community
+            together (<i>users, developers, researchers</i>, and <i>facilities</i>) to provide community resources and
+            capabilities to enable scientists and workflow systems developers to discover software products, related
+            efforts, events, technical reports, etc. and engage in community-wide efforts to tackle workflows grand
+            challenges.
+        </p>
+    </div>
+
+    <!-- Tweets -->
+    <section>
+        <div class="mini-post" style="padding: 0">
+            <div class="twitter-header">
+                <i class="fab fa-twitter"></i>&nbsp;&nbsp;&nbsp;@WorkflowsCI
+            </div>
+            <a class="twitter-timeline" data-lang="en" data-height="75em" data-width="100%" data-theme="light"
+                data-chrome="nofooter noheader" href="https://twitter.com/WorkflowsCI">Tweets by WorkflowsCI</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </section>
+
+    <section id="footer">
+    <p class="copyright" style="margin-bottom: 1em">
+        &copy;2022 Workflows.Community Initiative
+    </p>
+    <ul class="icons" style="margin-top: 0">
+        <li>
+            <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                class="fa-stack fa-2x" style="font-size: 1em">
+                <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                <i class="fab fa-youtube fa-stack-1x"></i>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:contact@workflows.community" class="fa-stack fa-2x" style="font-size: 1em">
+                <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                <i class="fa fa-envelope fa-stack-1x"></i>
+            </a>
+        </li>
+        <li>
+            <a href="http://twitter.com/WorkflowsCI" target="_blank" class="fa-stack fa-2x"
+                style="font-size: 1em">
+                <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                <i class="fab fa-twitter fa-stack-1x"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-14l57ruzl-cCue46GoRt_4txhXfYHrtA"
+                target="_blank" class="fa-stack fa-2x" style="font-size: 1em">
+                <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                <i class="fab fa-slack fa-stack-1x"></i>
+            </a>
+        </li>
+    </ul>
+    
+    <p class="copyright" style="font-size: 0.6em; margin-top: 2em !important;">
+    </p>
+    <p class="copyright" style="font-size: 0.6em">
+    </p>
+</section>
+
+
+</section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
