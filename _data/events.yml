@@ -1,3 +1,29 @@
+- name: 37th IEEE International Parallel & Distributed Processing Symposium
+  series: IPDPS 2023
+  start_date: 2023-05-15
+  end_date: 2023-05-19
+  location: St. Petersburg, USA
+  url: https://www.ipdps.org/
+  type: Conference
+  deadlines:
+    - name: Workshop Proposals
+      date: 2022-08-22
+    - name: Main Conference Abstracts
+      date: 2022-09-29
+    - name: Main Conference Submissions
+      date: 2022-10-06
+
+- name: 23rd IEEE/ACM international Symposium on Cluster, Cloud and Internet Computing
+  series: CCGrid 2023
+  start_date: 2023-05-01
+  end_date: 2023-05-04
+  location: Bangalore, India
+  url: http://cds.iisc.ac.in/faculty/simmhan/ccgrid2023//
+  type: Conference
+  deadlines:
+    - name: Papers Submission
+      date: 2022-12-09
+
 - name: Nextflow Summit
   series: Nextflow Summit
   start_date: 2022-10-12
@@ -127,6 +153,9 @@
   end_date: 2022-11-14
   url: https://works-workshop.org/
   type: Workshop
+  deadlines:
+    - name: Paper submissions
+      date: 2022-08-22
 
 - name: Platform for Advanced Scientific Computing
   series: PASC 2022
