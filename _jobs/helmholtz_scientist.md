@@ -4,7 +4,7 @@ title: "Scientist Position in Computational Biology/ Bioinformatics/ AI in Epige
 organization: Helmholtz Munich
 organization_logo: https://upload.wikimedia.org/wikipedia/commons/3/3d/Helmholtz_Munich_Logo.jpg
 location: Oberschleißheim, Bavaria, Germany
-application_deadline: 2022-07-31
+application_deadline: 2022-08-31
 apply_link: https://www.linkedin.com/jobs/view/3146370952/?alternateChannel=search&refId=hFSkPQpmHp0NrbHR9H%2BN8w%3D%3D&trackingId=4DV%2BFd97IF4xHtoMf1Qrzg%3D%3D
 employment_type: Full-time
 ---

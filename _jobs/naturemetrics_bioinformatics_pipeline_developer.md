@@ -4,7 +4,7 @@ title: "Bioinformatics Pipeline Developer"
 organization: "NatureMetrics"
 organization_logo: "https://gallery-cdn.breezy.hr/1a1f6fcf-0833-4db5-a5a3-5ddf8ecffa89/logo%20thumbnail.png"
 location: "Hybrid"
-application_deadline: "Until filled" 
+application_deadline: "2022-09-30" 
 apply_link: "https://naturemetrics.breezy.hr/p/de0604a10edf01-bioinformatics-pipeline-developer"
 employment_type: "Full-time"
 ---

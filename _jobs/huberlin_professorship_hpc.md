@@ -4,7 +4,7 @@ title: "Open Full Professorship in High Performance Computing"
 organization: "Humboldt-Universität zu Berlin"
 organization_logo: https://workflows.community/images/institutions/huberlin.png
 location: "Berlin, Germany"
-application_deadline: "2022-07-10"
+application_deadline: "2022-10-1"
 apply_link: "https://hu.berlin/w3_hpc"
 employment_type: "Full time, tenured"
 ---

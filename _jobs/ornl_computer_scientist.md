@@ -4,7 +4,7 @@ title: "Computer Scientist"
 organization: Oak Ridge National Laboratory
 organization_logo: https://rmkcdn.successfactors.com/bc9eb071/f39dcf2f-8a25-41be-9f40-6.png
 location: Oak Ridge, TN, USA
-application_deadline: 2022-07-31
+application_deadline: 2022-09-30
 apply_link: https://jobs.ornl.gov/job/Oak-Ridge-Computer-Scientist-TN-37830/883927400/
 employment_type: Full-time
 ---
