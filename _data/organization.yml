@@ -173,7 +173,17 @@
     name: University of St Andrews 
     image: ustandrews.png
     link: https://www.st-andrews.ac.uk/
-    
+
+- name: Tom Gibbs
+  role: Member
+  photo: gibbs.png
+  link: https://www.linkedin.com/in/tom-gibbs-9485ab1
+  category: sc
+  institution:
+    name: Nvidia
+    image: nvidia.png
+    link: https://www.nvidia.com/en-us/
+
 - name: Björn Grüning
   role: Member
   photo: groening.jpg
