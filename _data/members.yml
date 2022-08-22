@@ -634,3 +634,14 @@
   institution: Nvidia
   country: us
   link: https://www.linkedin.com/in/tom-gibbs-9485ab1
+
+- last_name: Gotz
+  first_name: Andy
+  institution: ESRF
+  country: fr
+
+- last_name: Ristov
+  first_name: Sashko
+  institution: University of Innsbruck
+  country: at
+  link: https://qe-informatik.uibk.ac.at/team/?doctors=sashko-ristov
