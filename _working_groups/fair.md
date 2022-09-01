@@ -150,11 +150,20 @@ Related standards for FAIR computational workflows:
 
 _Articles below are published as [Open Access](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/), or with [green open access preprints](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/understanding/) where gold open access is not possible. Please [let us know](https://github.com/workflowscommunity/workflowscommunity.github.io/issues) if you are unable to access any of our publications. To add to this list, please [suggest a change](https://github.com/workflowscommunity/workflowscommunity.github.io/blob/main/_working_groups/fair.md)._
 
+Rudolf Wittner, Cecilia Mascia, Matej Gallo, Francesca Frexia, Heimo Müller, Markus Plass, Jörg Geiger, Petr Holub (2022):  
+**Lightweight Distributed Provenance Model for Complex Real–world Environments**.  
+_Scientific Data_ **9**(1)  
+<https://doi.org/10.1038/s41597-022-01537-6>
+
+J. Machicao, A. Ben Abbes, L. Meneguzzi, P. L. P. Corrêa, A. Specht, R. David, G. Subsol, D. Vellenich, R. Devillers, S. Stall, N. Mouquet, M. Chaumont, L. Berti‐Equille, D. Mouillot (2022):  
+**Mitigation Strategies to Improve Reproducibility of Poverty Estimations From Remote Sensing Images Using Deep Learning**.  
+_Earth and Space Science_ **9**(8)  
+<https://doi.org/10.1029/2022ea002379>
+
 Michael R. Crusoe, Sanne Abeln, Alexandru Iosup, Peter Amstutz, John Chilton, Nebojša Tijanić, Hervé Ménager, Stian Soiland-Reyes, Carole Goble, CWL Community (2022):  
 [**Methods Included: Standardizing Computational Reuse and Portability with the Common Workflow Language**](https://arxiv.org/pdf/2105.07028).  
-_Communications of the ACM_ **65**(6)  (in print).
-To appear as <https://doi.org/10.1145/3486897>  
-preprint: [arXiv:2105.07028 [cs.DC]](https://arxiv.org/abs/2105.07028)
+_Communications of the ACM_ **65**(6)  
+<https://doi.org/10.1145/3486897>  
 
 Peter Wittenburg, Alex Hardisty, Amirpasha Mozzafari, Limor Peer, Nikolay Skvortsov, Alessandro Spinuso, Zhiming Zhao (2022):  
 **Editors’ Note: [Special Issue on Canonical Workflow Frameworks for Research](https://direct.mit.edu/dint/issue/4/2)**.  
