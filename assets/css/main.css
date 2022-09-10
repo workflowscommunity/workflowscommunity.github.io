@@ -5097,3 +5097,10 @@ main a {
     padding: 0.1em 1em;
     border-radius: 0.5em;
 }
+
+.dark {
+    width: 12em !important;
+    min-width: 0 !important;
+    color: #fff !important;
+    padding: 3em 1em !important;
+}

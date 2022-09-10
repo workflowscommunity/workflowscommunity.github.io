@@ -9,13 +9,13 @@ time: "12:15pm-1:15pm CT"
 <article class="post">
     <header>
         <div class="title">
-            <h1>{{page.title}}</h1>
+            <h2>{{page.title}}</h2>
             <p>{{page.subtitle}}</p>
         </div>
-        <div class="meta">
+        <div class="meta dark" style="background-color: #999; border-top-right-radius: 0.5em; color: #fff">
             <div>
-                <p class="date">{{page.event_date | date: "%A - %b %d, %Y" }}</p>
-                <p class="time">{{page.time}}</p>
+                <p class="date" style="line-height: 1.5em;"><strong>{{page.event_date | date: "%A <br /> %b %d, %Y" }}</strong><br />Room D161</p>
+                <p class="time" style="color: #fff">{{page.time}}</p>
             </div>
         </div>
     </header>
@@ -28,4 +28,46 @@ time: "12:15pm-1:15pm CT"
         computing. The session will present an update on challenges, opportunities, new research directions, and future
         pathways, and will seek input for updating a community roadmap on HPC and AI workflows research and development.
     </p>
+
+    <p>
+        In this first edition of this BoF session (<i>{{page.event_date | date: "%A %b %d, %Y" }}, {{page.time}}</i>), we 
+        will bring together members of the Workflows Community Initiative to provide an update on challenges, 
+        opportunities, new research directions, and future pathways on HPC and AI workflows. 
+    </p>
+
+    <h1>Agenda</h1>
+
+    <ul>
+        <li style="color: rgb(5, 135, 215)">
+            12:15pm-12:20pm &mdash; Opening remarks<br />
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                Rafael Ferreira da Silva – <span style="font-style: italic; color: #999">Oak Ridge National Laboratory</span><br />
+                Rosa M. Badia – <span style="font-style: italic; color: #999">Barcelona Supercomputing Center)</span><br />
+                Kyle Chard – <span style="font-style: italic; color: #999">University of Chicago</span><br />
+                Olivier Terzo – <span style="font-style: italic; color: #999">LINKS Foundation</span>
+            </p>
+        </li>
+        <li style="color: rgb(5, 135, 215)">
+            12:20pm-12:45pm &mdash; Lightning talks: Challenges, opportunities, new research directions, and future pathways<br />
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                Overview of European initiatives focusing on the orchestration of HPC, AI, and Big data<br />
+                <span style="font-style: italic; color: #999">Alberto Scionti, ACROSS/LINKS - Jorge Ejarque, eFlows4HPC/BSC</span>
+            </p>
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                Adaptive multi-scale molecular simulations for studying complex biological phenomena<br />
+                <span style="font-style: italic; color: #999">Arvind Ramanathan, ANL</span>
+            </p>
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                Machine Learning Driven Dynamic workflows on Leadership Class Systems to Resolve Multiscale Phenomena<br />
+                <span style="font-style: italic; color: #999">Timo Bremer, LLNL</span>
+            </p>
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                DOE's Integrated Research Infrastructure Initiative<br />
+                <span style="font-style: italic; color: #999">Ben Brown, DOE - Bill Miller, DOE</span>
+            </p>
+        </li>
+        <li style="color: rgb(5, 135, 215)">
+            12:45pm-1:15pm &mdash; Community roadmap discussions<br />
+        </li>
+    </ul>
 </article>
