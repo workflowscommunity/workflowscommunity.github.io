@@ -150,6 +150,11 @@ Related standards for FAIR computational workflows:
 
 _Articles below are published as [Open Access](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/), or with [green open access preprints](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/understanding/) where gold open access is not possible. Please [let us know](https://github.com/workflowscommunity/workflowscommunity.github.io/issues) if you are unable to access any of our publications. To add to this list, please [suggest a change](https://github.com/workflowscommunity/workflowscommunity.github.io/blob/main/_working_groups/fair.md)._
 
+Hirotaka Suetake, Tsukasa Fukusato, Takeo Igarashi, Tazro Ohta (2022):  
+[**Workflow sharing with automated metadata validation and test execution to improve the reusability of published workflows**](https://doi.org/10.1101/2022.07.08.499265).  
+_bioRxiv_  
+<https://doi.org/10.1101/2022.07.08.499265>
+
 Rudolf Wittner, Cecilia Mascia, Matej Gallo, Francesca Frexia, Heimo Müller, Markus Plass, Jörg Geiger, Petr Holub (2022):  
 [**Lightweight Distributed Provenance Model for Complex Real–world Environments**](https://doi.org/10.1038/s41597-022-01537-6).  
 _Scientific Data_ **9**(1)  
