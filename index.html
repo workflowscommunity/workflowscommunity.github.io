@@ -14,7 +14,7 @@ permalink: /
 <div class="row" style="margin-left: 0.075em; margin-right: 0.075em; margin-bottom: 3em">
     <!-- Latest Story -->
     {% assign story = site.stories | sort: "date" | reverse %}
-    {% for s in story %}
+    {% for s in story limit: 1 %}
     <div class="col-sm-12 col-md-9">
         <div class="mini-box story-main">
             <header>
