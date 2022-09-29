@@ -4870,7 +4870,7 @@ main a {
 }
 
 .ostats .nmembers strong, .ostats .nsystems strong, .ostats .nframeworks strong, .ostats .nwg strong {
-    font-size: 2em;
+    font-size: 1.75em;
     color: #8CCA60;
 }
 
@@ -5006,14 +5006,16 @@ main a {
 
 .story-main .author {
     color: #999;
-    text-align: right;
+    /* text-align: right; */
     font-size: 0.5em;
+    overflow-wrap: break-word;
+    justify-content: left;
 }
 
 .story-image {
-    position: absolute; 
-    top: 2em;
-    left: 0;
+    /* position: absolute;  */
+    margin-top: 2em;
+    /* left: 0; */
     width: 100%;
     display: block;
 }
