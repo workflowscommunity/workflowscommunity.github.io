@@ -1,0 +1,39 @@
+---
+layout: default
+title: Birds of a Feather
+permalink: /bof
+---
+
+<article class="post">
+    <header>
+        <div class="title">
+            <h2>Birds of a Feather</h2>
+            <p>
+                
+            </p>
+        </div>
+    </header>
+
+    <div class="row">
+        {% assign bofs = site.bofs | sort: 'order' | reverse %}
+        {% for bof in bofs %}
+        <div class="col-sm-12 col-md-12">
+            <a href="{{bof.url}}" class="event">
+                <div class="event-date">
+                    <span class="header">{{bof.event_date | date: "%b %d" }}</span><br />
+                    <span class="subheader">{{bof.event_date | date: "%Y" }}</span>
+                </div>
+                <div class="event-content">
+                    <span class="time">{{bof.time}}</span><br />
+                    <strong>{{bof.title}}</strong><br />
+                    <i style="font-size: 0.9em">{{bof.subtitle}}</i><br />
+                    {% if bof.report_link %}
+                    <img src="{{bof.report_badge}}" alt="DOI" style="padding-top: 0.5em" />
+                    {% endif %}
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <br />
+</article>
