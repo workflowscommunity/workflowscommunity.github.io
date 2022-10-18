@@ -673,4 +673,8 @@
   first_name: Silvina
   institution: University of Tennessee
   country: us
-  
+
+- last_name: Simpson
+  first_name: Christine
+  institution: ALCF
+  country: us
