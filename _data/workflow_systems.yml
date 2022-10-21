@@ -9,6 +9,7 @@
 - organization: nextflow-io
   repository: nextflow
   type: github
+  metadata: docs
 
 - organization: pegasus-isi
   repository: pegasus
