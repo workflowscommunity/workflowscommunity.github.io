@@ -5027,11 +5027,15 @@ main a {
     margin: 0;
 }
 
+.story-image-thumb {
+    padding-right: 0.5em;
+}
+
 .story-image-thumb img {
     height: 3.5em;
     width: 10em;
     margin: 0;
-    padding-right: 1em;
+    border-radius: 0.25em;
 }
 
 .see-all-button {
