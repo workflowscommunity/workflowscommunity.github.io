@@ -174,6 +174,16 @@
     image: ustandrews.png
     link: https://www.st-andrews.ac.uk/
 
+- name: Andrew Gallo
+  role: Member
+  photo: gallo.jpg
+  link: https://518computing.com/
+  category: sc
+  institution:
+    name: GE Research
+    image: ge-research.jpeg
+    link: https://www.ge.com/research/
+
 - name: Tom Gibbs
   role: Member
   photo: gibbs.png
