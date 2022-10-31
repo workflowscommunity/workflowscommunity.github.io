@@ -99,6 +99,6 @@
   repository: covalent
   type: github
 
-- organization: icui
-  repository: nnodes
-  type: github
+# - organization: icui
+#   repository: nnodes
+#   type: github
