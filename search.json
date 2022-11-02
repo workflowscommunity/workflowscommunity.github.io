@@ -32,6 +32,22 @@
       "url"         : "{{ event.url }}",
       "description" : "{{ event.name }}",
       "category"    : "event"
+    },
+  {% endfor %}
+  {% for bof in site.bofs %}
+    {
+      "title"       : "{{ bof.title }}",
+      "url"         : "{{ bof.url }}",
+      "description" : "{{bof.event_date | date: '%b %d, %Y' }}<br />{{ bof.subtitle }}",
+      "category"    : "bof"
+    },
+  {% endfor %}
+  {% for summit in site.summits %}
+    {
+      "title"       : "{{ summit.title }}",
+      "url"         : "{{ summit.url }}",
+      "description" : "{{summit.event_date | date: '%b %d, %Y' }}<br />{{ summit.subtitle }}",
+      "category"    : "summit"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
