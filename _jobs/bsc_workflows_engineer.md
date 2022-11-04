@@ -4,7 +4,7 @@ title: "HPC Workflows Engineer (RE1)"
 organization: "Barcelona Supercomputing Center"
 organization_logo: https://workflows.community/images/institutions/bsc.png
 location: "Barcelona, Spain"
-application_deadline: "2022-10-31"
+application_deadline: "2022-11-30"
 apply_link: "https://www.bsc.es/join-us/job-opportunities/25822escesre1"
 employment_type: "Full time"
 ---
