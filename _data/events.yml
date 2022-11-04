@@ -1,3 +1,24 @@
+- name: 19th IEEE International Conference on eScience
+  series: eScience 2023
+  start_date: 2023-10-09
+  end_date: 2023-10-13
+  location: Limassol, Cyprus
+  url: https://www.escience-conference.org/2023/
+  type: Conference
+
+- name: Platform for Advanced Scientific Computing
+  series: PASC 2023
+  location: Davos, Switzerland
+  start_date: 2022-06-26
+  end_date: 2022-06-28
+  url: https://pasc23.pasc-conference.org/
+  type: Conference
+  deadlines:
+    - name: Papers Submissions
+      date: 2022-12-11
+    - name: Posters Submissions
+      date: 2023-01-22
+
 - name: 37th IEEE International Parallel & Distributed Processing Symposium
   series: IPDPS 2023
   start_date: 2023-05-15
