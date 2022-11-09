@@ -1,3 +1,18 @@
+- name: 29th International European Conference on Parallel and Distributed Computing
+  series: Euro-Par 2023
+  location: Limassol, Cyprus
+  start_date: 2023-08-28
+  end_date: 2023-09-01
+  url: https://2023.euro-par.org/
+  type: Conference
+  deadlines:
+    - name: Abstract Submission
+      date: 2023-02-17
+    - name: Paper Submission
+      date: 2023-02-24
+    - name: Poster Submission
+      date: 2023-05-20
+
 - name: 19th IEEE International Conference on eScience
   series: eScience 2023
   start_date: 2023-10-09
