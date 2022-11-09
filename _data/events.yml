@@ -1,3 +1,14 @@
+- name: 32nd ACM International Symposium on High-Performance Parallel and Distributed Computing
+  series: HPDC 2023
+  start_date: 2023-06-16
+  end_date: 2023-06-23
+  location: Orlando, FL, USA
+  url: https://www.hpdc.org/2023
+  type: Conference
+  deadlines:
+    - name: Paper Submissions
+      date: 2023-01-27
+
 - name: 29th International European Conference on Parallel and Distributed Computing
   series: Euro-Par 2023
   location: Limassol, Cyprus
