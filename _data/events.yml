@@ -39,11 +39,13 @@
   start_date: 2023-05-01
   end_date: 2023-05-04
   location: Bangalore, India
-  url: http://cds.iisc.ac.in/faculty/simmhan/ccgrid2023//
+  url: https://ccgrid2023.iisc.ac.in/
   type: Conference
   deadlines:
     - name: Papers Submission
       date: 2022-12-09
+    - name: Posters Submission
+      date: 2023-01-31
 
 - name: "European HTCondor Week 2022"
   series: HTCondor Week
