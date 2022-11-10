@@ -699,3 +699,9 @@
   first_name: Ian
   institution: Agnostiq
   country: ca
+
+- last_name: Ejarque
+  first_name: Jorge
+  institution: Barcelona Supercomputing Center
+  country: es
+  link: https://www.bsc.es/ejarque-jorge
