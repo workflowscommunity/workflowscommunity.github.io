@@ -711,3 +711,20 @@
   institution: CIQ
   country: us
   link: forrestburt.com
+
+- last_name: Kougkas
+  first_name: Anthony
+  institution: Illinois Institute of Technology 
+  country: us
+  link: https://akougkas.com/
+
+- last_name: Pawlik
+  first_name: Maciej
+  institution: AGH University of Science and Technology
+  country: pl
+
+- last_name: Sparks
+  first_name: Jonathan
+  institution: HPE
+  country: us
+  
