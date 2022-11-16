@@ -727,4 +727,13 @@
   first_name: Jonathan
   institution: HPE
   country: us
-  
+
+- last_name: Kremer-Herman
+  first_name: Nate
+  institution: Seattle University
+  country: us
+
+- last_name: Chan
+  first_name: Steve
+  institution: Lawrence Berkeley National Lab
+  country: us
