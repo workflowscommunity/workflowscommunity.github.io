@@ -1,0 +1,30 @@
+---
+layout: default
+title: Reports
+permalink: /reports
+---
+
+<article class="post">
+    <header>
+        <div class="title">
+            <h2>{{page.title}}</h2>
+            <p>
+                Collection of community reports related to workflows research
+            </p>
+        </div>
+    </header>
+
+    <div class="row">
+        {% assign reports = site.data.reports | sort: "date" | reverse %}
+        {% for r in reports %}
+        <div class="col-sm-12 col-md-12 framework">
+            <a class="framework-content" href="{{r.url}}" target="_blank">
+                <strong>{{r.title}}</strong>
+                <p class="description">{{r.subtitle}}<br />
+                <i>{{r.publisher}}, {{r.date | date: "%Y"}}</i></p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <br />
+</article>
