@@ -1,3 +1,14 @@
+- name: IEEE International Conference on Cloud Computing
+  series: CLOUD 2023
+  start_date: 2023-07-02
+  end_date: 2023-07-08
+  location: Chicago, IL, USA
+  url: https://conferences.computer.org/cloud/2023/
+  type: Conference
+  deadlines:
+    - name: Paper Submissions
+      date: 2023-02-12
+
 - name: 32nd ACM International Symposium on High-Performance Parallel and Distributed Computing
   series: HPDC 2023
   start_date: 2023-06-16
