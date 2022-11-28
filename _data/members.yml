@@ -737,3 +737,9 @@
   first_name: Steve
   institution: Lawrence Berkeley National Lab
   country: us
+
+- last_name: Romano
+  first_name: Paul
+  institution: Argonne National Laboratory
+  country: us
+  link: https://github.com/paulromano
