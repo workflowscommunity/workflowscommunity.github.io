@@ -84,7 +84,7 @@
 - organization: alpha-unito
   repository: streamflow
   type: github
-  metadata: docs 
+  metadata: docs
 
 - organization: scipipe
   repository: scipipe
@@ -97,6 +97,10 @@
 
 - organization: AgnostiqHQ
   repository: covalent
+  type: github
+
+- organization: watts-dev
+  repository: watts
   type: github
 
 # - organization: icui
