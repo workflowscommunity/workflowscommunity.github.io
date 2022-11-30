@@ -1,3 +1,16 @@
+- name: "2023 Common Workflow Language community conference"
+  series: CWL Community Conference
+  location: Virtual
+  start_date: 2023-02-27
+  end_date: 2023-03-03
+  url: https://cwl.discourse.group/c/cwlcon-2023/13
+  type: Conference
+  deadlines:
+    - name: Abstract Submissions
+      date: 2023-01-16
+    - name: Presentation Videos Due
+      date: 2023-02-13
+
 - name: IEEE International Conference on Cloud Computing
   series: CLOUD 2023
   start_date: 2023-07-02
