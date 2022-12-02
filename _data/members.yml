@@ -776,3 +776,15 @@
   institution: Brookhaven National Lab
   country: us
   link: https://www.bnl.gov/staff/pouchard
+
+- last_name: Balouek-Thomert
+  first_name: Daniel
+  institution: University of Utah
+  country: us
+  link: https://daniel-balouek.com
+
+- last_name: Papadimitriou
+  first_name: George
+  institution: University of Southern California
+  country: us
+  link: https://georgpap.com
