@@ -101,7 +101,7 @@
 
 - last_name: Filgueira
   first_name: Rosa
-  institution: Heriot-Watt University
+  institution: University of St Andrews
   link: https://www.rosafilgueira.com/
   country: gb
     
@@ -788,3 +788,19 @@
   institution: University of Southern California
   country: us
   link: https://georgpap.com
+
+- last_name: Savchenko
+  first_name: Volodymyr
+  institution: EPFL
+  country: ch
+  link: https://volodymyrsavchenko.com/
+
+- last_name: Sussman
+  first_name: Alan
+  institution: University of Maryland
+  country: us
+
+- last_name: Turilli
+  first_name: Matteo
+  institution: Rutgers University
+  country: us
