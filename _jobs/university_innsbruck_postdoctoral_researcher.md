@@ -4,7 +4,7 @@ title: "Postdoctoral Research and Teaching Position in the field of Cloud-Edge C
 organization: University of Innsbruck
 organization_logo: https://workflows.community/images/institutions/uinnsbruck.png
 location: Innsbruck, Austria
-application_deadline: 2023-02-01
+application_deadline: 2023-01-31
 apply_link: https://dps.uibk.ac.at/open-positions/
 employment_type: Full-time
 ---
