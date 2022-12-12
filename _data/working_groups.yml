@@ -12,3 +12,8 @@
   description: This group at the FAIR Digital Objects Forum is working on building a workflow framework that enables FAIR practices and provides reusable canonical components.
   link: https://fairdo.org/wg/fdo-cwfr/
   status: Active
+
+- name: FONDA - Foundations of Workflows for Large-Scale Scientific Data Analysis
+  description: DFG Collaborative Research Center 1404 at Humboldt-Universität zu Berlin, Germany
+  link: https://fonda.hu-berlin.de/
+  status: Active
