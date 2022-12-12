@@ -97,6 +97,17 @@
     - name: Posters Submission
       date: 2023-01-31
 
+- name: International Conference on Computational Science
+  series: ICCS 2023
+  start_date: 2023-07-03
+  end_date: 2023-07-05
+  location: Prague, Czechia
+  url: https://www.iccs-meeting.org/iccs2023/
+  type: Conference
+  deadlines:
+    - name: Papers Submission
+      date: 2023-02-03
+
 - name: "European HTCondor Week 2022"
   series: HTCondor Week
   start_date: 2022-10-11
