@@ -55,6 +55,9 @@
   location: Limassol, Cyprus
   url: https://www.escience-conference.org/2023/
   type: Conference
+  deadlines:
+    - name: Paper Submissions
+      date: 2023-05-26
 
 - name: Platform for Advanced Scientific Computing
   series: PASC 2023
