@@ -74,6 +74,8 @@ Related past and upcoming events:
 
 * 2022-10-26/--28: [1st International Conference on FAIR Digital Objects](https://www.fdo2022.org/) (FDO 2022), Leiden, The Netherlands
 * 2022-05-13: [**FAIR Computational Workflows**](https://www.slideshare.net/carolegoble/fair-computational-workflows-251775741), _SERC Swedish e-Science Research Center Annual Meeting_
+* 2022-06-14/--16: [Dataverse Community Meeting 2022](https://projects.iq.harvard.edu/dcm2022/agenda), virtual 
+ - Mahmood Shad, Ana Trisovic, Sonia Barbosa, Gustavo Durand, Katherine McNeill, Ceilyn Boyd, Robin Wendler, Julian Gautier, Tania Schlatter, Krista Valladares: [**FAIR Computational Workflow support in Dataverse**](https://youtu.be/4b-1jwxKb9A?t=5677)
 * 2022-01-10/--13: [Semantic Web Infrastructures and Resources in Healthcare and Life Science](http://www.swat4ls.org/workshops/leiden2022/call-for-papers/) (SWAT4LS), Leiden, The Netherlands
 * 2021-11-03/--11: [Research Data Alliance (RDA) 18th Plenary Meeting](https://www.rd-alliance.org/plenaries/rda-18th-plenary-meeting-virtual) (virtual)
 * 2021-12-07/--09: [FORCE2021](https://www.force11.org/meetings/force2021), FORCE11 annual conference (virtual)
@@ -150,6 +152,7 @@ Related standards for FAIR computational workflows:
 
 _Articles below are published as [Open Access](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/), or with [green open access preprints](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/understanding/) where gold open access is not possible. Please [let us know](https://github.com/workflowscommunity/workflowscommunity.github.io/issues) if you are unable to access any of our publications. To add to this list, please [suggest a change](https://github.com/workflowscommunity/workflowscommunity.github.io/blob/main/_working_groups/fair.md)._
 
+
 Hirotaka Suetake, Tsukasa Fukusato, Takeo Igarashi, Tazro Ohta (2022):  
 [**Workflow sharing with automated metadata validation and test execution to improve the reusability of published workflows**](https://doi.org/10.1101/2022.07.08.499265).  
 _bioRxiv_  
@@ -164,6 +167,11 @@ J. Machicao, A. Ben Abbes, L. Meneguzzi, P. L. P. Corrêa, A. Specht, R. David, 
 [**Mitigation Strategies to Improve Reproducibility of Poverty Estimations From Remote Sensing Images Using Deep Learning**](https://doi.org/10.1029/2022ea002379).  
 _Earth and Space Science_ **9**(8)  
 <https://doi.org/10.1029/2022ea002379>
+
+Mahmood Shad, Ana Trisovic, Sonia Barbosa, Gustavo Durand, Katherine McNeill, Ceilyn Boyd, Robin Wendler, Julian Gautier, Tania Schlatter, Krista Valladares (2022): 
+[**Supporting FAIR Workflows at Harvard Data Commons**](https://doi.org/10.5281/zenodo.6640461).  
+_17th International Digital Curation Conference_ ([IDCCC 2022](https://www.dcc.ac.uk/events/idcc22), 2022-06-13/--16.  
+<https://doi.org/10.5281/zenodo.6640461>
 
 Michael R. Crusoe, Sanne Abeln, Alexandru Iosup, Peter Amstutz, John Chilton, Nebojša Tijanić, Hervé Ménager, Stian Soiland-Reyes, Carole Goble, CWL Community (2022):  
 [**Methods Included: Standardizing Computational Reuse and Portability with the Common Workflow Language**](https://arxiv.org/pdf/2105.07028).  
