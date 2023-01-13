@@ -24,9 +24,11 @@ permalink: /stories
                 </div>
                 <div class="event-content" style="width: 100%">
                     <strong>{{s.title}}</strong><br />
+                    {% for author in s.authors %}
                     <span class="author" style="float: left">
-                        by {{s.author}}, {{s.author_institution}}
+                        {{author.name}} &mdash; {{author.institution}}
                     </span>
+                    {% endfor %}
                 </div>
                 <div class="event-date">
                     <span class="header">{{s.date | date: "%b %d" }}</span><br />

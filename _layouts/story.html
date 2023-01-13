@@ -11,13 +11,7 @@ layout: default
             <div class="story-date">
                 <span class="month-day">{{ page.date | date: "%b %d" }}</span><br />
                 <span class="year">{{ page.date | date: "%Y" }}</span>
-            </div>
-            <div class="story-author">
-                <img src="{{ page.author_photo }}" alt="{{ page.author }}" /><br />
-                {{ page.author }}<br />
-                <span class="institution">{{ page.author_institution }}</span>
-            </div>
-            
+            </div>            
             {% if page.apply_link %}
             <br /><br /><a href="{{ page.apply_link }}" target="_blank" class="apply"><i class="fas fa-check"></i> Apply Now</a>
             {% endif %}
@@ -25,6 +19,18 @@ layout: default
     </header>
 
     <main class="story-content">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                {% for author in page.authors %}
+                <div class="col-sm-4 col-md-4 story-author">
+                    <img src="{{ author.photo }}" alt="{{ author.name }}" />
+                    {{ author.name }}<br />
+                    <span class="institution">{{ author.institution }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-sm-12 col-md-12">
                 {{content | markdownify}}

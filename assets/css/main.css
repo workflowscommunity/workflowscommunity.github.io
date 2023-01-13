@@ -4936,26 +4936,30 @@ main a {
 
 .story-date {
     text-align: center;
-    line-height: 1em;
+    line-height: 1.5em;
 }
 
 .story-date .month-day {
-    font-size: 1.5em;
+    font-size: 1.75em;
 }
 
 .story-date .year {
     color: #999;
+    font-size: 1.3em;
 }
 
 .story-author {
     text-align: left;
     line-height: 1em;
+    margin-bottom: 2em;
+    padding-left: 0em;
+    float: left;
 }
 
 .story-author img {
     float: left;
     margin-right: 1em;
-    margin-top: 1em;
+    margin-top: 0em;
     max-height: 2em; 
     max-width: 2em; 
     border-radius: 50%;

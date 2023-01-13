@@ -2,9 +2,10 @@
 layout: story
 title: "Workflows Education:  Underlying  Computer Science Concepts"
 date: 2022-05-16
-author: Henri Casanova
-author_photo: https://workflows.community/images/about/casanova.jpg
-author_institution: University of Hawaii
+authors: 
+    - name: Henri Casanova
+      photo: https://workflows.community/images/about/casanova.jpg
+      institution: University of Hawaii
 image: /images/stories/eduwrench.png
 ---
 
