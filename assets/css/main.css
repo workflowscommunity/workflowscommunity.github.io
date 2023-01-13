@@ -3395,7 +3395,7 @@ body.is-menu-visible #wrapper {
 @media screen and (max-width: 1680px) {
 
     #wrapper {
-        padding: 3em;
+        padding: 1em;
     }
 
 }
