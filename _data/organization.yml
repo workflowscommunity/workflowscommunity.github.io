@@ -260,9 +260,9 @@
   link: https://csmd.ornl.gov/profile/matthew-wolf
   category: sc
   institution: 
-    name: Oak Ridge National Laboratory
-    image: ornl.png
-    link: https://www.ornl.gov/
+    name: Samsung Electronics
+    image: samsung.png
+    link: https://www.samsung.com/us/
 
 - name: Justin M. Wozniak
   role: Member
@@ -283,3 +283,13 @@
     name: University of Manchester
     image: umanchester.png
     link: https://www.manchester.ac.uk/
+
+- name: Sean R. Wilkinson
+  role: FAIR Computational Workflows
+  photo: wilkinson.jpg
+  link: https://www.ornl.gov/staff-profile/sean-r-wilkinson
+  category: technical
+  institution:
+    name: Oak Ridge National Laboratory
+    image: ornl.png
+    link: https://www.ornl.gov/
