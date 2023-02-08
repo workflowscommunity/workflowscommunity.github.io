@@ -848,3 +848,9 @@
   first_name: Motohiko
   institution: RIKEN R-CCS
   country: jp
+
+- last_name: Sovacool
+  first_name: Kelly
+  institution: University of Michigan
+  country: us
+  link: https://sovacool.dev
