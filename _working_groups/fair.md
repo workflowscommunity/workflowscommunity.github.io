@@ -5,26 +5,28 @@ description: Define FAIR principles for computational workflows that consider th
 status: Establishing
 join: https://forms.gle/5ZNJ8Vxdu5X3SCaw7
 members:
-    - name: Rafael Ferreira da Silva
-      role: Chair
-      link: https://rafaelsilva.com
     - name: Carole Goble
       role: Chair
-      link: https://www.research.manchester.ac.uk/portal/carole.goble.html
-    - name: Kathryn E. Knight
+    - name: Stian Soiland-Reyes
       role: Chair
-      link: https://www.ornl.gov/staff-profile/kathryn-e-knight
+    - name: Sean R. Wilkinson
+      role: Chair
+      link: https://www.research.manchester.ac.uk/portal/carole.goble.html
     - name: Frederik Coppens
       link: https://www.elixir-belgium.org/
     - name: Michael R. Crusoe
       link: https://orcid.org/0000-0002-2961-9670
     - name: Christian Erdmann
-    - name: Stian Soiland-Reyes
+    - name: Rafael Ferreira da Silva
+      link: https://rafaelsilva.com
+    - name: Kathryn E. Knight
+      link: https://www.ornl.gov/staff-profile/kathryn-e-knight
+    - name: Randy K Rannow
+      link: https://www.silverdraft.com
     - name: Nicola Soranzo
     - name: Shelly Stall
     - name: Ziheng Sun
       link: https://zihengsun.github.io
-    - name: Sean R. Wilkinson
     - name: Matthew Wolf
 ---
 
