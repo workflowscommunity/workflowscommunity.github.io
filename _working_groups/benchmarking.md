@@ -67,6 +67,8 @@ the role of HPLinpack in the High-Performance Computing community or the ongoing
 
 <https://github.com/SooLee/Benchmark>
 
+<https://wfcommons.org/>
+
 Potential performance reporting formats:
 
 1. [Workflow Trace Archive](https://wta.atlarge-research.com/)
@@ -86,6 +88,11 @@ unable to access any of these publications. To add to this list, please
 
 
 ### Benchmark suites
+
+Tainã Coleman, Henri Casanova, Ketan Maheshwari, Loïc Pottier, Sean R. Wilkinson, Justin Wozniak, Frédéric Suter, Mallikarjun Shankar, Rafael Ferreira da Silva (2022):
+[**WfBench: Automated Generation of Scientific Workflow Benchmarks**](https://doi.org/10.1109/PMBS56514.2022.00014)
+*2022 IEEE/ACM International Workshop on Performance Modeling, Benchmarking and Simulation of High Performance Computer Systems (PMBS)*, pp. 100-111
+<https://doi.org/10.1109/PMBS56514.2022.00014> ([arXiv:2210.03170](https://doi.org/10.48550/arXiv.2210.03170))
 
 Elliott Slaughter, Wei Wu, Yuankun Fu, Legend Brandenburg, Nicolai Garcia, Wilhem Kautz, Emily Marx, Kaleb S. Morris, Qinglei Cao, George Bosilca,
 Seema Mirchandaney, Wonchan Lee, Sean Treichler, Patrick S. McCormick, Alex Aiken (2020):
