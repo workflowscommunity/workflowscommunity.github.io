@@ -7,11 +7,12 @@ join: https://forms.gle/5ZNJ8Vxdu5X3SCaw7
 members:
     - name: Carole Goble
       role: Chair
+      link: https://www.research.manchester.ac.uk/portal/carole.goble.html
     - name: Stian Soiland-Reyes
       role: Chair
     - name: Sean R. Wilkinson
       role: Chair
-      link: https://www.research.manchester.ac.uk/portal/carole.goble.html
+      link: https://www.ornl.gov/staff-profile/sean-r-wilkinson
     - name: Frederik Coppens
       link: https://www.elixir-belgium.org/
     - name: Michael R. Crusoe
