@@ -11,16 +11,16 @@ permalink: /
 {% assign total_ext_wg = site.data.working_groups | size %}
 {% assign total_wg = total_wci_wg | plus: total_ext_wg %}
 
-<article class="post story-main" style="padding: 1em">
+<!-- <article class="post story-main" style="padding: 1em">
     <a href="/summits/2022" style="border-bottom: none">
         <img src="/images/summits/wcs-2022-short-banner.png" width="64%" style="border-radius: 0.5em"/></a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="/bof/ecpam23" style="border-bottom: none">
         <img src="/images/bof/exaworks-bof-ecpam23.png" width="30%" style="border-radius: 0.75em"/></a>
-</article>
+</article> -->
 
 <article class="post story-main">
-    
+
     <!-- Latest Story -->
     {% assign story = site.stories | sort: "date" | reverse %}
     <header>
@@ -33,29 +33,29 @@ permalink: /
         <a href="/stories" class="bottom-button">All Stories</a>
     </header>
     <div class="row">
-    {% for s in story limit: 2 %}
+        {% for s in story limit: 2 %}
         <div class="col-sm-6 col-md-6" style="padding: 0em 0.5em">
             <div class="story-image">
                 <a href="{{s.url}}" style="border-bottom: 0;">
                     <img src="{{s.image}}" style="border-radius: 0.5em" />
                 </a>
             </div>
-                <div class="col-sm-12 col-md-12" style="padding: 0 0.5em">
-                    <a href="{{s.url}}" style="text-decoration: none;">
-                        <h1>{{s.title}}</h1>
-                        <p class="story-excerpt">{{s.excerpt| strip_html | strip_newlines | truncate: 350}}</p>
-                    </a>
-                    <div class="author">
-                        {{ s.date | date: "%b %d, %Y" }}<br />
-                        {% for author in s.authors %}
-                            {{author.name}} &mdash; {{author.institution}}<br />
-                        {% endfor %}
-                    </div>
+            <div class="col-sm-12 col-md-12" style="padding: 0 0.5em">
+                <a href="{{s.url}}" style="text-decoration: none;">
+                    <h1>{{s.title}}</h1>
+                    <p class="story-excerpt">{{s.excerpt| strip_html | strip_newlines | truncate: 350}}</p>
+                </a>
+                <div class="author">
+                    {{ s.date | date: "%b %d, %Y" }}<br />
+                    {% for author in s.authors %}
+                    {{author.name}} &mdash; {{author.institution}}<br />
+                    {% endfor %}
                 </div>
+            </div>
         </div>
-    {% endfor %}
+        {% endfor %}
     </div>
-            
+
     <!-- Stats -->
     <footer style="background-color: #fafafa; width: 100%; left: -3em; margin: 2em 2em -1em 0em; position: relative; width: calc(100% + 6em); border-bottom-right-radius: 0.5em;
     border-bottom-left-radius: 0.5em;">
@@ -278,6 +278,84 @@ permalink: /
 </div>
 </div>
 </div>
+
+
+<article class="post">
+    <header>
+        <div class="top-button" style="background-color: #D09236;">
+            <h3 style="margin: 0; color: #fff">Workflows Community Initiative Events</h3>
+            <p style="margin: 0; line-height: 1.5em;">
+                Collection of videos and documents from our events
+            </p>
+        </div>
+    </header>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-7"
+            style="width: 100%; min-height: 300px; object-fit: cover; padding: 2em 0 1em 0; margin-left: -1em;">
+            <script>
+                var videos = [
+                    "https://www.youtube.com/embed/esTQ8BhzDQg",
+                    "https://www.youtube.com/embed/SCvjK9RA6Lw",
+                    "https://www.youtube.com/embed/BvwZDPngZ1c",
+                    "https://www.youtube.com/embed/lTDjtSNCVPY",
+                    "https://www.youtube.com/embed/pWLZIL5iQw0",
+                    "https://www.youtube.com/embed/2XUncYFJgpc",
+                    "https://www.youtube.com/embed/MBMUqV--XnE",
+                    "https://www.youtube.com/embed/_p1XqYohUu8"
+                ];
+
+                window.onload = function () {
+                    var playerDiv = document.getElementById("random_player");
+                    var player = document.createElement("IFRAME");
+                    var randomVideoUrl = videos[Math.floor(Math.random() * videos.length)];
+                    player.setAttribute('width', '100%');
+                    player.setAttribute('height', '300');
+                    player.setAttribute('borderRadius', '100');
+                    player.setAttribute('src', randomVideoUrl);
+
+                    playerDiv.appendChild(player);
+                };
+            </script>
+            <div id="random_player" style="box-shadow: #ccc 3px 3px 3px"></div>
+        </div>
+
+        <div class="col-sm-12 col-md-5" style="padding: 2em 0 1em 2em">
+            <div class="row">
+                <div class="col-sm-12 col-md-12" style="padding: 0; vertical-align: top;">
+                    <a href="/bof/ecpam23/" class="job-item" style="line-height: 1.2em; padding: 0.5em">
+                        <div style="width: 100%">
+                            <span style="color: steelblue">2023 ECP Annual Meeting BoF</span><br />
+                            <span style="font-size: 0.9em">Exascale Workflows Community: A Post-ECP Roadmap for Workflow Systems and Applications</span><br />
+                            <span class="light-gray">
+                                <i class="fas fa-clock"></i>&nbsp;&nbsp;&nbsp;JAN 19, 2023
+                            </span>
+                        </div>
+                    </a>
+                    <a href="/summits/2022/" class="job-item" style="line-height: 1.2em; padding: 0.5em">
+                        <div style="width: 100%">
+                            <span style="color: steelblue">Workflows Community Summit 2022</span><br />
+                            <span style="font-size: 0.9em">A Roadmap Revolution</span><br />
+                            <span class="light-gray">
+                                <i class="fas fa-clock"></i>&nbsp;&nbsp;&nbsp;NOV 29, 2022
+                            </span>
+                        </div>
+                    </a>
+                    <a href="/bof/sc22/" class="job-item" style="line-height: 1.2em; padding: 0.5em">
+                        <div style="width: 100%">
+                            <span style="color: steelblue">SC22 BoF</span><br />
+                            <span style="font-size: 0.9em">An Update on the Community Roadmap for HPC and AI Scientific Workflows Research and Development</span><br />
+                            <span class="light-gray">
+                                <i class="fas fa-clock"></i>&nbsp;&nbsp;&nbsp;NOV 15, 2022
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>        
+</article>
+
+</article>
 
 <article class="post">
     <header>
