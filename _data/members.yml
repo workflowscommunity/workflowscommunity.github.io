@@ -497,7 +497,7 @@
 - last_name: Nash
   first_name: Rupert
   institution: The University of Edinburgh
-  country: uk
+  country: gb
 
 - last_name: Mittone
   first_name: Gianluca
@@ -835,7 +835,7 @@
 - last_name: Ghafouri
   first_name: Saeid
   institution: Queen Mary University of London
-  country: uk
+  country: gb
   link: https://www.linkedin.com/in/saeid-ghafouri/
 
 - last_name: Okoniewski
