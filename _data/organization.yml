@@ -254,6 +254,16 @@
     image: llnl.png
     link: https://www.llnl.gov/
 
+- name: Frédéric Suter
+  role: Member
+  photo: suter.jpeg
+  link: 
+  category: sc
+  institution:
+    name: Oak Ridge National Laboratory
+    image: ornl.png
+    link: https://www.ornl.gov/  
+
 - name: Matthew Wolf
   role: Member
   photo: wolf.jpg

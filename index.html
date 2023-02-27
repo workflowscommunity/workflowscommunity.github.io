@@ -370,3 +370,27 @@ permalink: /
     </div>
     </div>
 </section>
+
+<!-- Founders -->
+<section class="ftco-section" style="background-color: #fff;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center heading-section ftco-animate">
+                <span class="subheading">Since 2021</span>
+                <h2 class="mb-4">Founding Members</h2>
+
+                <div class="row">
+                    {% assign institutions = site.data.institutions | where: "founding",true %}
+                    {% for institution in institutions %}
+                    <div class="col-sm-6 col-md-3">
+                        <a href="{{institution.link}}" target="_blank">
+                            <img src="/images/institutions/{{institution.image}}" alt="{{institution.name}}" style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>

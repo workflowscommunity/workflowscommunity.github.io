@@ -78,10 +78,10 @@
   image: ustandrews.png
   link: https://www.st-andrews.ac.uk/
 
-- name: University of Southern California
-  founding: true
-  image: usc.png
-  link: https://usc.edu
+# - name: University of Southern California
+#   founding: true
+#   image: usc.png
+#   link: https://usc.edu
 
 - name: Humboldt University of Berlin
   founding: true
