@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Jobs
 permalink: /jobs
 ---
@@ -14,37 +14,34 @@ permalink: /jobs
 {% endif %}
 {% endfor %}
 
-<article class="post">
-    <header>
-        <div class="title">
-            <h2>{{page.title}}</h2>
-            <p>
-                Open Positions from the Community. There are currently <strong>{{ num_jobs }}</strong> open positions.
-            </p>
-        </div>
-        <a href="/jobs/add" class="corner-button" style="background-color: #8CCA60;"><i class="fas fa-plus"></i> Add New</a>
-    </header>
-
-    <div class="row">
-        <!-- <div class="jobs"> -->
-            {% for job in jobs %}
-            {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
-            {% if eventtime >= nowunix %}
-            <a href="{{ job.url }}" class="job">
-                <img src="{{ job.organization_logo }}" style="max-height: 2em; max-width: 8em;" alt="{{ job.title }}" /><br />
-                <div class="title">
-                    {{ job.title }}<br />
-                    <p>{{ job.organization }}</p>
-                </div>
-                <div class="description">
-                    <i class="fas fa-clock"></i>&nbsp;&nbsp;{{ job.application_deadline | date: "%b %d, %Y" }}<br />
-                    <i class="fas fa-map-marker"></i>&nbsp;&nbsp;&nbsp;{{ job.location }}<br />
-                    <i class="fas fa-briefcase"></i>&nbsp;&nbsp;{{ job.employment_type }}
-                </div>
-            </a>
-            {% endif %}
-            {% endfor %}
-        <!-- </div> -->
+<div class="row justify-content-center mb-4 pb-5">
+    <div class="col-md-8 text-center heading-section ftco-animate">
+        <p>
+            Open positions from the community.<br />There are currently <strong>{{ num_jobs }} open positions</strong>.
+        </p>
+        <a href="/jobs/add" class="btn btn-primary mt-3 py-3 px-5">Add an Open Job Position</a>
     </div>
-    <br /><br/>
-</article>
+</div>
+
+<div class="row">
+    {% for job in jobs %}
+    {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
+    {% if eventtime >= nowunix %}
+    <div class="col-md-4 ftco-animate">
+        <div class="blog-entry" style="min-height: 23em;">
+            <div class="text p-4 d-block">
+                <img src="{{ job.organization_logo }}" style="max-height: 2em; max-width: 8em;"
+                    alt="{{ job.title }}" /><br />
+                <div class="meta mb-3">
+                    {{ job.organization }}
+                </div>
+                <h3 class="heading"><a href="{{job.url}}">{{job.title}}</a></h3>
+                <p style="font-size: 0.9em; color: #e83e8c">{{job.location}}</p>
+                <span class="position" style="font-size: 0.9em;"><i class="fas fa-briefcase"></i>&nbsp;&nbsp;{{
+                    job.employment_type }}</span>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>

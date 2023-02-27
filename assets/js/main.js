@@ -132,7 +132,7 @@
 			if ( st > 250 ) {
 				if ( !navbar.hasClass('awake') ) {
 					navbar.addClass('awake');	
-					$('#logo').attr('src', "images/workflows-community-logo-horizontal.png");
+					$('#logo').attr('src', "/images/workflows-community-logo-horizontal.png");
 				}
 				
 				if(sd.length > 0) {
