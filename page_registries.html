@@ -1,35 +1,38 @@
 ---
-layout: default
+layout: page
 title: Workflows Registries
 permalink: /registries
 ---
 
-<article class="post">
-    <header>
-        <div class="title">
-            <h2>Workflows Registries</h2>
-            <p>
-                Collection of workflow repositories that host workflow applications
-            </p>
-            <a href="/registries/contribute" class="corner-button" style="background-color: #4CA8A9">Contribute</a>
-        </div>
-    </header>
-
-    <div class="row">
-        {% assign registries = site.data.registries | sort: "name" %}
-        {% for registry in registries %}
-        <a class="col-sm-12 col-md-12 framework" href="{{registry.url}}" target="_blank">
-            {% if registry.icon %}
-            <div class="framework-icon">
-                <img src="{{registry.icon}}" alt="{{registry.name}}" />
-            </div>
-            {% endif %}
-            <div class="framework-content">
-                <strong>{{registry.name}}</strong>
-                <p class="description">{{registry.description}}</p>
-            </div>
-        </a>
-        {% endfor %}
+<div class="row justify-content-center mb-4 pb-5">
+    <div class="col-md-8 text-center heading-section ftco-animate">
+        <p>
+            Collection of workflow repositories that host workflow applications
+        </p>
+        <a href="/registries/contribute" class="btn btn-primary mt-3 py-3 px-5">Contribute</a>
     </div>
-    <br />
-</article>
+</div>
+
+<div class="row">
+    {% assign registries = site.data.registries | sort: "name" %}
+    {% for registry in registries %}
+    <div class="col-md-6 ftco-animate">
+        <div class="blog-entry" style="min-height: 23em;">
+            <div class="text p-4 d-block">
+                {% if registry.icon %}
+                <p class="text-center">
+                    <a href="{{registry.url}}" target="_blank">
+                        <img src="{{ registry.icon }}" style="max-height: 6em; max-width: 8em;"
+                            alt="{{ registry.name }}" />
+                    </a>
+                </p>
+                {% endif %}
+                <h3 class="heading"><a href="{{framework.url}}" target="_blank">{{registry.name}}</a></h3>
+                <div class="meta mb-3">
+                    {{ registry.description }}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

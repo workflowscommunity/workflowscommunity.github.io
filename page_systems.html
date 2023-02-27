@@ -1,80 +1,92 @@
 ---
-layout: default
+layout: page
 title: Workflows Systems
 permalink: /systems
 ---
 
-<article class="post">
-    <header>
-        <div class="title">
-            <h2>{{page.title}}</h2>
-            <p>
-                Collection of actively-developed open source workflow systems
-            </p>
-            <a href="/systems/contribute" class="corner-button" style="background-color: #4CA8A9">Contribute</a>
-        </div>
-    </header>
+{% assign wci_systems = site.systems | where: "wci_metadata", "true" | size %}
+{% assign systems_wci = site.systems | where: "wci_metadata", "true" | sort: "date_sort" | reverse %}
+{% assign systems = site.systems | where: "wci_metadata", "false" | sort: "date_sort" | reverse %}
 
-    <div class="row">
-        {% assign systems_wci = site.systems | where: "wci_metadata", "true" | sort: "date_sort" | reverse %}
-        {% assign systems = site.systems | where: "wci_metadata", "false" | sort: "date_sort" | reverse %}
-        {% for system in systems_wci %}
-        <div class="col-sm-12 col-md-12">
-            <a href="{{system.url}}" class="system">
-                {% if system.avatar %}
-                <div class="system-avatar">
-                    <img src="{{system.avatar}}" alt="{{system.repository}}" />
-                </div>
-                {% endif %}
-                <div class="system-content">
-                    <strong>{{system.title}}</strong><br />
-                    <span style="color: #666">{{system.headline}}</span><br />
-                    <ul class="stats sys-stats">
-                        <li><span class="light-gray"><i class="fas fa-code"></i> {{system.language}}</span></li>
-                        {% if system.release_name != "" %}
-                        <li><span class="light-gray"><i class="fas fa-box-open"></i> {{system.release_name}}</span></li>
-                        {% endif %}
-                        <li><span class="light-gray"><i class="far fa-clock"></i> {{system.last_update}}</span></li>
-                        {% if system.wci_metadata %}
-                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
-                        {% endif %}
-                    </ul>
-                </div>
-            </a>
-        </div>
-        {% endfor %}
-        {% for system in systems %}
-        <div class="col-sm-12 col-md-12">
-            <a href="{{system.url}}" class="system">
-                {% if system.avatar %}
-                <div class="system-avatar">
-                    <img src="{{system.avatar}}" alt="{{system.repository}}" />
-                </div>
-                {% endif %}
-                <div class="system-content">
-                    <strong>{{system.title}}</strong><br />
-                    <span style="color: #666">{{system.headline}}</span><br />
-                    <ul class="stats sys-stats">
-                        <li><span class="light-gray"><i class="fas fa-code"></i> {{system.language}}</span></li>
-                        {% if system.release_name != "" %}
-                        <li><span class="light-gray"><i class="fas fa-box-open"></i> {{system.release_name}}</span></li>
-                        {% endif %}
-                        <li><span class="light-gray"><i class="far fa-clock"></i> {{system.last_update}}</span></li>
-                        {% if system.wci_metadata %}
-                        <li><span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" /> WCI metadata</span></li>
-                        {% endif %}
-                    </ul>
-                </div>
-            </a>
-        </div>
-        {% endfor %}
+<div class="row justify-content-center mb-4 pb-5">
+    <div class="col-md-8 text-center heading-section ftco-animate">
+        <p>
+            Collection of actively-developed open source workflow systems. Currently, <strong>{{ wci_systems }} workflow systems provide WCI metadata.</strong>
+        </p>
+        <a href="/systems/contribute" class="btn btn-primary mt-3 py-3 px-5">Contribute</a>
     </div>
+</div>
 
-    <footer>
-        <div style="margin: 2.5em auto; color: #aaa; font-size: 0.9em; line-height: 1.2em; max-width: 80%; text-align: center">
-            For a comprehensive lists of all known computational workflow systems, see <a
-                href="https://s.apache.org/existing-workflow-systems">Computational Data Analysis Workflow Systems</a> maintained by
-            the CWL community.
+<div class="row">
+    <!-- WCI Metadata -->
+    {% for system in systems_wci %}
+    <div class="col-md-6 ftco-animate">
+        <div class="blog-entry" style="min-height: 27em;">
+            <div class="text p-4 d-block">
+                {% if system.avatar %}
+                <p class="text-center">
+                    <a href="{{system.url}}">
+                        <img src="{{ system.avatar }}" style="max-height: 6em; max-width: 8em;"
+                            alt="{{ system.repository }}" />
+                    </a>
+                </p>
+                {% endif %}
+                <h3 class="heading"><a href="{{system.url}}">{{system.title}}</a></h3>
+                <div class="meta mb-3">
+                    {{ system.headline }}
+                </div>
+                <p style="font-size: 0.8em">
+                    <span class="light-gray"><i class="fas fa-code"></i> {{system.language}}</span><br />
+                    {% if system.release_name != "" %}
+                    <span class="light-gray"><i class="fas fa-box-open"></i> {{system.release_name}}</span><br />
+                    {% endif %}
+                    <span class="light-gray"><i class="far fa-clock"></i> {{system.last_update}}</span><br />
+                    {% if system.wci_metadata %}
+                    <span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" />
+                        WCI metadata</span>
+                    {% endif %}
+                </p>
+            </div>
         </div>
-    </footer>
-</article>
+    </div>
+    {% endfor %}
+
+    <!-- No WCI Metadata -->
+    {% for system in systems %}
+    <div class="col-md-6 ftco-animate">
+        <div class="blog-entry" style="min-height: 27em;">
+            <div class="text p-4 d-block">
+                {% if system.avatar %}
+                <p class="text-center">
+                    <a href="{{system.url}}">
+                        <img src="{{ system.avatar }}" style="max-height: 6em; max-width: 8em;"
+                            alt="{{ system.repository }}" />
+                    </a>
+                </p>
+                {% endif %}
+                <h3 class="heading"><a href="{{system.url}}">{{system.title}}</a></h3>
+                <div class="meta mb-3">
+                    {{ system.headline }}
+                </div>
+                <p style="font-size: 0.8em">
+                    <span class="light-gray"><i class="fas fa-code"></i> {{system.language}}</span><br />
+                    {% if system.release_name != "" %}
+                    <span class="light-gray"><i class="fas fa-box-open"></i> {{system.release_name}}</span><br />
+                    {% endif %}
+                    <span class="light-gray"><i class="far fa-clock"></i> {{system.last_update}}</span><br />
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="row justify-content-center mb-4 pb-5 mt-5">
+    <div class="col-md-8 text-center heading-section ftco-animate">
+        <p>
+            For a comprehensive lists of all known computational workflow systems, see <a
+                href="https://s.apache.org/existing-workflow-systems">Computational Data Analysis Workflow Systems</a>
+            maintained by the CWL community.
+        </p>
+    </div>
+</div>
