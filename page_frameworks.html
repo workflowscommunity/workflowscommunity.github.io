@@ -1,35 +1,38 @@
 ---
-layout: default
+layout: page
 title: Research Frameworks
 permalink: /frameworks
 ---
 
-<article class="post">
-    <header>
-        <div class="title">
-            <h2>Research Frameworks</h2>
-            <p>
-                Collection of open source or freely accessible tools and frameworks that can be used to support workflow
-                research and development
-            </p>
-            <a href="/frameworks/contribute" class="corner-button" style="background-color: #4CA8A9">Contribute</a>
-        </div>
-    </header>
+<div class="row justify-content-center mb-4 pb-5">
+    <div class="col-md-8 text-center heading-section ftco-animate">
+        <p>
+            Collection of open source or freely accessible tools and frameworks that can be used to support workflow
+            research and development
+        </p>
+        <a href="/frameworks/contribute" class="btn btn-primary mt-3 py-3 px-5">Contribute</a>
+    </div>
+</div>
 
-    <div class="row">
-        {% assign frameworks = site.data.research_frameworks | sort: "name" %}
-        {% for framework in frameworks %}
-        <div class="col-sm-12 col-md-12 framework">
-            {% if framework.icon %}
-            <div class="framework-icon">
-                <a href="{{framework.url}}" target="_blank"><img src="{{framework.icon}}"
-                        alt="{{framework.name}}" /></a>
-            </div>
-            {% endif %}
-            <div class="framework-content">
-                <a href="{{framework.url}}" target="_blank"><strong>{{framework.name}}</strong></a>
-                <p class="description">{{framework.description}}</p>
-                <div class="badges">
+<div class="row">
+    {% assign frameworks = site.data.research_frameworks | sort: "name" %}
+    {% for framework in frameworks %}
+    <div class="col-md-6 ftco-animate">
+        <div class="blog-entry" style="min-height: 23em;">
+            <div class="text p-4 d-block">
+                {% if framework.icon %}
+                <p class="text-center">
+                    <a href="{{framework.url}}" target="_blank">
+                        <img src="{{ framework.icon }}" style="max-height: 6em; max-width: 8em;"
+                            alt="{{ job.title }}" />
+                    </a>
+                </p>
+                {% endif %}
+                <h3 class="heading"><a href="{{framework.url}}">{{framework.name}}</a></h3>
+                <div class="meta mb-3">
+                    {{ framework.description }}
+                </div>
+                <p>
                     {% if framework.github %}
                     <a href="{{framework.github}}" target="_blank" class="badge github"><i
                             class="fab fa-github"></i>&nbsp;&nbsp;GitHub</a>
@@ -42,18 +45,17 @@ permalink: /frameworks
                     <a href="{{framework.documentation}}" target="_blank" class="badge documentation"><i
                             class="fas fa-book"></i>&nbsp;&nbsp;Documentation</a>
                     {% endif %}
-                </div>
+                </p>
                 {% if framework.tags %}
-                <div class="tags">
+                <p style="font-size: 0.8em; color: #e83e8c">
                     {% assign tags = framework.tags | sort %}
                     {% for tag in tags %}
-                    <span class="tag"><i class="fas fa-circle" style="font-size: 0.7em"></i>&nbsp;&nbsp;{{tag}}</span>
+                    <span class="tag">/ {{tag}} </span>
                     {% endfor %}
-                </div>
+                </p>
                 {% endif %}
             </div>
         </div>
-        {% endfor %}
     </div>
-    <br />
-</article>
+    {% endfor %}
+</div>
