@@ -103,6 +103,10 @@
   repository: watts
   type: github
 
+- organization: CrayLabs
+  repository: SmartSim
+  type: github
+
 # - organization: icui
 #   repository: nnodes
 #   type: github
