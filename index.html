@@ -283,7 +283,7 @@ permalink: /
                     {% for event in events %}
                     {% capture eventtime %}{{event.end_date | date: '%s'}}{% endcapture %}
                     {% if eventtime >= nowunix and count_events < 10 %} <div
-                        class="col-md-6 col-lg-6 d-flex align-self-stretch ftco-animate" style="margin: auto">
+                        class="col-md-6 col-lg-6 ftco-animate" style="margin: auto">
                         <div class="media block-6 services d-block text-center">
                             <div class="d-flex justify-content-center" style="font-size: 0.9em">
                                 {{event.start_date | date: "%b %d, %Y" }}
@@ -293,7 +293,7 @@ permalink: /
                                     <span style="font-size: 0.7em; color: #e83e8c">{{event.location}}</span>
                                 </h3>
                                 {% if event.deadlines %}
-                                <p style="text-align: left; font-size: 0.9em; line-height: 1.3em;">
+                                <p style="font-size: 0.9em; line-height: 1.3em;">
                                     {% for d in event.deadlines %}
                                     {{d.name}}: <strong>{{d.date | date: "%b %d, %Y"}}</strong><br />
                                     {% endfor %}
