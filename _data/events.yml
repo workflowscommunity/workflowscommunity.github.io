@@ -313,3 +313,14 @@
   end_date: 2022-09-14
   url: https://parsl-project.org/parslfest2022.html
   type: Workshop
+
+- name: 35th International Conference on Scientific and Statistical Database Management
+  series: SSDBM 2023
+  start_date: 2023-07-10
+  end_date: 2023-07-12
+  location: Los Angeles, California, USA
+  url: https://ssdbm.org/2023/
+  type: Conference
+  deadlines:
+    - name: Papers Submission
+      date: 2023-04-16
