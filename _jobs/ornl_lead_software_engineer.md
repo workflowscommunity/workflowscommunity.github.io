@@ -4,7 +4,7 @@ title: "Lead Full Stack Software Developer"
 organization: Oak Ridge National Laboratory
 organization_logo: https://rmkcdn.successfactors.com/bc9eb071/f39dcf2f-8a25-41be-9f40-6.png
 location: Oak Ridge, TN, USA
-application_deadline: 2023-02-28
+application_deadline: 2023-03-31
 apply_link: https://jobs.ornl.gov/job/Oak-Ridge-Lead-Full-Stack-Software-Developer-TN-37830/955426100/
 employment_type: Full-time
 ---

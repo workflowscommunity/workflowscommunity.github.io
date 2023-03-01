@@ -4,7 +4,7 @@ title: "PhD Positions in Cloud-Edge Computing"
 organization: University of Innsbruck
 organization_logo: https://workflows.community/images/institutions/uinnsbruck.png
 location: Innsbruck, Austria
-application_deadline: 2023-03-28
+application_deadline: 2023-03-31
 apply_link: https://dps.uibk.ac.at/phd-positions-in-cloud-fog-and-edge-computing/
 employment_type: Full-time
 ---
