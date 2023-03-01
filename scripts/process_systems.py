@@ -94,7 +94,8 @@ for s in systems:
     s["contributors"] = len(data)
     s["contributors_list"] = ""
     for c in data:
-        s["contributors_list"] += f'<a href="{c["html_url"]}" target="_blank"><img src="{c["avatar_url"]}" width="32" height="32" alt="{c["login"]}"/></a>'
+        s["contributors_list"] += f'<a href="{c["html_url"]}" target="_blank">' \
+                                  f'<img src="{c["avatar_url"]}" width="48" height="48" alt="{c["login"]}" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a>'
 
     # metadata file
     metadata = f"{s['metadata']}" if "metadata" in s else ".wci.yml"
@@ -119,14 +120,14 @@ for s in systems:
         # social
         if "social" in data:
             if "twitter" in data["social"]:
-                s["twitter"] = "<li>" \
-                    f"<a href=\"https://twitter.com/{data['social']['twitter']}\" target=\"_blank\" class=\"fa-stack fa-2x\">" \
-                    "<i class=\"fa fa-circle fa-stack-2x\" style=\"color: #fff\"></i><i class=\"fab fa-twitter fa-stack-1x\"></i></a></li>"
+                s["twitter"] = "" \
+                    f"<a href=\"https://twitter.com/{data['social']['twitter']}\" target=\"_blank\">" \
+                    f"<i class=\"fab fa-twitter\"></i> https://twitter.com/{data['social']['twitter']}</a></li>"
 
             if "youtube" in data["social"]:
-                s["youtube"] = "<li>" \
-                    f"<a href=\"{data['social']['youtube']}\" target=\"_blank\" class=\"fa-stack fa-2x\">" \
-                    "<i class=\"fa fa-circle fa-stack-2x\" style=\"color: #fff\"></i><i class=\"fab fa-youtube fa-stack-1x\"></i></a></li>"
+                s["youtube"] = "" \
+                    f"<a href=\"{data['social']['youtube']}\" target=\"_blank\">" \
+                    f"<i class=\"fab fa-youtube\"></i> {data['social']['youtube']}</a></li>"
 
         # release
         if "release" in data:
@@ -137,45 +138,69 @@ for s in systems:
 
         # documentation
         if "documentation" in data:
-            s["doc_general"] = f"<li><a href=\"{data['documentation']['general']}\" target=\"_blank\"><i class=\"fas fa-book\"></i><br />Documentation</a></li>" if "general" in data["documentation"] else ""
-            s["doc_installation"] = f"<li><a href=\"{data['documentation']['installation']}\" target=\"_blank\"><i class=\"fas fa-download\"></i><br />Installation</a></li>" if "installation" in data["documentation"] else ""
-            s["doc_tutorial"] = f"<li><a href=\"{data['documentation']['tutorial']}\" target=\"_blank\"><i class=\"fas fa-user-cog\"></i><br />Tutorial</a></li>" if "tutorial" in data["documentation"] else ""
+            s["doc_general"] = f"<a href=\"{data['documentation']['general']}\" class=\"col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate\" target=\"_blank\">" \
+                                    "<div class=\"media block-6 services d-block text-center\">" \
+                                    "<div class=\"d-flex justify-content-center\">" \
+                                    "<div class=\"icon color-2 d-flex justify-content-center mb-3\">" \
+                                    "<span class=\"fas fa-book color-2\"></span></div></div>" \
+                                    "<div class=\"media-body p-2 mt-3\"><h3 class=\"heading\">Docs</h3></div></div></a>" if "general" in data["documentation"] else ""
+            s["doc_installation"] = f"<a href=\"{data['documentation']['installation']}\" class=\"col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate\" target=\"_blank\">" \
+                                    "<div class=\"media block-6 services d-block text-center\">" \
+                                    "<div class=\"d-flex justify-content-center\">" \
+                                    "<div class=\"icon color-3 d-flex justify-content-center mb-3\">" \
+                                    "<span class=\"fas fa-download colro-3\"></span></div></div>" \
+                                    "<div class=\"media-body p-2 mt-3\"><h3 class=\"heading\">Install</h3></div></div></a>" if "installation" in data["documentation"] else ""
+            s["doc_tutorial"] = f"<a href=\"{data['documentation']['tutorial']}\" class=\"col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate\" target=\"_blank\">" \
+                                    "<div class=\"media block-6 services d-block text-center\">" \
+                                    "<div class=\"d-flex justify-content-center\">" \
+                                    "<div class=\"icon color-1 d-flex justify-content-center mb-3\">" \
+                                    "<span class=\"fas fa-user-cog color-1\"></span></div></div>" \
+                                    "<div class=\"media-body p-2 mt-3\"><h3 class=\"heading\">Tutorial</h3></div></div></a>" if "tutorial" in data["documentation"] else ""
 
         # execution environment
         if "execution_environment" in data:
-            s["execution_environment"] = "<div class=\"system-info\"><h1>Execution Environment</h1>"
+            s["execution_environment"] = "<div class=\"row justify-content-center mt-5\">" \
+                                         "<div class=\"col-md-7 text-center heading-section ftco-animate\">" \
+                                         "<h3 class=\"mb-4\">Execution Environment</h3></div></div>" \
+                                         "<div class=\"row\">"
 
             # user interfaces
             if "interfaces" in data["execution_environment"]:
-                s["execution_environment"] += "<div class=\"system-info-sub\"><h2>User Interfaces</h2><ul class=\"list-tags color-2\">"
+                s["execution_environment"] += "<div class=\"col-md-4 ftco-animate\">" \
+                                              "<ul class=\"list-services\">" \
+                                              "<li><h4>User Interfaces</h4></li>"
                 for i in data["execution_environment"]["interfaces"]:
                     s["execution_environment"] += f"<li>{i}</li>"
                 s["execution_environment"] += "</ul></div>"
 
             # resource managers
             if "resource_managers" in data["execution_environment"]:
-                s["execution_environment"] += "<div class=\"system-info-sub\"><h2>Supported Resource Managers</h2><ul class=\"list-tags color-4\">"
+                s["execution_environment"] += "<div class=\"col-md-4 ftco-animate\">" \
+                                              "<ul class=\"list-services\">" \
+                                              "<li><h4>Resource Managers</h4></li>"
                 for rm in data["execution_environment"]["resource_managers"]:
                     s["execution_environment"] += f"<li>{rm}</li>"
                 s["execution_environment"] += "</ul></div>"
 
             # transfer protocols
             if "transfer_protocols" in data["execution_environment"]:
-                s["execution_environment"] += "<div class=\"system-info-sub\"><h2>Supported Transfer Protocols</h2><ul class=\"list-tags color-6\">"
+                s["execution_environment"] += "<div class=\"col-md-4 ftco-animate\">" \
+                                              "<ul class=\"list-services\">" \
+                                              "<li><h4>Transfer Protocols</h4></li>"
                 for tp in data["execution_environment"]["transfer_protocols"]:
                     s["execution_environment"] += f"<li>{tp}</li>"
                 s["execution_environment"] += "</ul></div>"
-
+            
             s["execution_environment"] += "</div>"
 
     # release component
     if s["release_name"]:
         if s["release_url"]:
-            s["release"] = f"<a href=\"{s['release_url']}\" target=\"_blank\" class=\"release-button\">{s['release_name']} " \
-                f"</a><br /><span class=\"light-gray\"><i class=\"far fa-clock\"></i> Released on: {s['release_date']}</span>"
+            s["release"] = f"<a href=\"{s['release_url']}\" target=\"_blank\"><strong>{s['release_name']}</strong> " \
+                f"</a> &mdash; Released on: {s['release_date']}"
         else:
-            s["release"] = f"<span class=\"release-button\">{s['release_name']} " \
-                f"</span><br /><span class=\"light-gray\"><i class=\"far fa-clock\"></i> Released on: {s['release_date']}</span>"
+            s["release"] = f"{s['release_name']} " \
+                f" &mdash; Released on: {s['release_date']}"
 
     # fill template
     with open('scripts/systems.html.in') as f:

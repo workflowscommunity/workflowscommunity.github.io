@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Workflows Community Summit
+layout: page
+title: Workflows Community Summit 2021.11
 subtitle: Tightening the Integration between Computing Facilities and Scientific Workflows
 event_date: Monday – November 8, 2021
 times: 10:30am-1:00pm PST / 1:30pm-4:00pm EST
@@ -12,19 +12,15 @@ photo: wcs-facilities-participants.png
 order: 3
 ---
 
-<article class="post">
-    <header>
-        <div class="title">
-            <h1>{{page.title}}</h1>
-            <p>{{page.subtitle}}</p>
-        </div>
-        <div class="meta">
-            <div>
-                <p class="date">{{page.event_date | date: "%a - %b %d, %Y" }}</p>
-                <p class="time">{{page.times}}</p>
-            </div>
-        </div>
-    </header>
+<div class="row justify-content-center mb-5 pb-5">
+    <div class="col-md-7 text-center heading-section ftco-animate">
+        <span class="subheading">{{page.subtitle}}</span>
+        <h2 class="mb-4">{{page.title}}</h2>
+    </div>
+    <div class="text-center col-md-12 mb-5">
+        {{page.event_date | date: "%a - %b %d, %Y" }}<br />
+        {{page.times}}
+    </div>
 
     <p>
         The third Workflows Community Summit will explore workflows challenges and opportunities from the perspective of
@@ -57,90 +53,84 @@ order: 3
         for tighter integration between facilities and workflows.
     </p>
 
-    <div class="message">
+    <p class="bg-light p-3">
         We thank all participants for their valuable contributions. The event
         report is available here: <a href="{{page.report_link}}" style="border: 0" target="_blank">
             <img src="{{page.report_badge}}" alt="DOI"
                 style="transform: none; -webkit-transform: none; position: inherit; margin: 0; vertical-align: middle;"></a>
+    </p>
+
+    <p><img src="/images/summits/{{page.photo}}" style="width: 100%;" /></p>
+</div>
+
+<div class="row justify-content-center mb-5 pb-5">
+    <div class="col-md-7 text-center heading-section ftco-animate">
+        <h2 class="mb-4">Agenda</h2>
     </div>
-
-    <img src="/images/summits/{{page.photo}}" />
-
-    <br />
-
-</article>
-
-<article class="post">
-    <header>
-        <div class="title">
-            <h1>Agenda</h1>
-        </div>
-    </header>
-
-    <table class="agenda">
-        <thead>
-            <tr>
-                <th>Time</th>
-                <th>Topic</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td style="min-width: 11em">
-                    10-30:45am PST<br/>
-                    1:30-1:45pm EST
-                </td>
-                <td>
-                    <strong>Welcome and Introductions</strong>
-                    <br/>
-                    <i>Rafael Ferreira da Silva (Oak Ridge National Laboratory)</i>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    10:45-11:45am PST<br/>
-                    1:45-2:45pm EST
-                </td>
-                <td>
-                    <strong>Facility Perspectives on Workflows</strong>
-                    <ul style="margin-bottom: 0">
-                        <li>What is a workflow for you?</li>
-                        <li>What are some of the challenges you see supporting workflows?</li>
-                        <li>What are your current practices to support workflows (e.g., documentation, native systems, etc.)?</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    11:45-noon PST<br/>
-                    2:45-3:00pm EST
-                </td>
-                <td><strong>15min Break</strong></td>
-            </tr>
-            <tr>
-                <td>
-                    noon-12:10pm PST<br/>
-                    3:00-3:10pm EST
-                </td>
-                <td>
-                    <strong>ExaWorks Introduction</strong>
-                    <br/>
-                    <i>Shantenu Jha (Brookhaven National Laboratory / Rutgers University)</i>
-                    <br/>
-                    <i>Kyle Chard (University of Chicago / Argonne National Laboratory)</i>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    12:10-1:00pm PST<br/>
-                    3:10-4:00pm EST
-                </td>
-                <td>
-                    <strong>Review Roadmap Developed by Workflows User and Developer Communities</strong>
-                </td>
-            </tr>
-            </tbody>
-    </table>
-    <br />
-
-</article>
+    <div class="col-md-12 ftco-animate">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Topic</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td style="min-width: 11em">
+                        10-30:45am PST<br/>
+                        1:30-1:45pm EST
+                    </td>
+                    <td>
+                        <strong>Welcome and Introductions</strong>
+                        <br/>
+                        <i>Rafael Ferreira da Silva (Oak Ridge National Laboratory)</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        10:45-11:45am PST<br/>
+                        1:45-2:45pm EST
+                    </td>
+                    <td>
+                        <strong>Facility Perspectives on Workflows</strong>
+                        <ul style="margin-bottom: 0">
+                            <li>What is a workflow for you?</li>
+                            <li>What are some of the challenges you see supporting workflows?</li>
+                            <li>What are your current practices to support workflows (e.g., documentation, native systems, etc.)?</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        11:45-noon PST<br/>
+                        2:45-3:00pm EST
+                    </td>
+                    <td><strong>15min Break</strong></td>
+                </tr>
+                <tr>
+                    <td>
+                        noon-12:10pm PST<br/>
+                        3:00-3:10pm EST
+                    </td>
+                    <td>
+                        <strong>ExaWorks Introduction</strong>
+                        <br/>
+                        <i>Shantenu Jha (Brookhaven National Laboratory / Rutgers University)</i>
+                        <br/>
+                        <i>Kyle Chard (University of Chicago / Argonne National Laboratory)</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        12:10-1:00pm PST<br/>
+                        3:10-4:00pm EST
+                    </td>
+                    <td>
+                        <strong>Review Roadmap Developed by Workflows User and Developer Communities</strong>
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+    </div>
+</div>

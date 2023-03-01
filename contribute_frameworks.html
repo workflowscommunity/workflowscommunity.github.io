@@ -1,21 +1,17 @@
 ---
-layout: default
+layout: page
 title: "Contribute: Frameworks"
 permalink: /frameworks/contribute
 ---
 
-<article class="post">
-    <header>
-        <div class="title">
-            <h2>How to Contribute with a Research Framework</h2>
-            <p>
-                Register an actively-developed open source workflow-related research frameworks
-            </p>
-            <a href="/frameworks" class="corner-button">All Research Frameworks</a>
-        </div>
-    </header>
+<div class="row justify-content-center mb-5 pb-5">
+    <div class="col-md-7 text-center heading-section ftco-animate mb-5">
+        <span class="subheading">Register an actively-developed open source workflow-related research frameworks</span>
+        <h2 class="mb-4">How to Contribute with a Research Framework</h2>
+        <a href="/frameworks" class="btn btn-primary mt-3 py-3 px-5">All Research Frameworks</a>
+    </div>
 
-    <div class="content">
+    <div class="col-md-12">
         <p>
             The Workflows Community Initiative (WCI) provides a curated collection of <strong>open source</strong> or
             freely accessible tools and frameworks that can be used to support workflow research and development. The
@@ -23,7 +19,7 @@ permalink: /frameworks/contribute
             invite all workflow researchers to share their tools and frameworks through this collection.
         </p>
 
-        <h2>Adding a Workflow Research Framework</h2>
+        <h3 class="mt-5">Adding a Workflow Research Framework</h3>
         <p>
             To add a workflow research framework, you only need to add the framework information into an YAML file
             hosted as part of the <a href="https://github.com/workflowscommunity/workflowscommunity.github.io"
@@ -34,11 +30,11 @@ permalink: /frameworks/contribute
         <ol>
             <li><strong>Fork</strong> the WCI GitHub repository</li>
             <li><strong>Clone</strong> your forked repository:
-                <pre>git clone https://github.com/&#60;your_username>/workflowscommunity.github.io</pre>
+                <pre class="bg-light p-3">git clone https://github.com/&#60;your_username>/workflowscommunity.github.io</pre>
             </li>
             <li><strong>Edit</strong> the <code>_data/research_frameworks.yml</code> file, and add the information
                 regarding the workflow research framework:
-                <pre>
+                <pre class="bg-light p-3">
 - name: "Research Framework Name"
   url: &#60;framework_url>
   description: "Short framework description" 
@@ -57,6 +53,4 @@ permalink: /frameworks/contribute
                 framework and examples are properly documented.</li>
         </ol>
     </div>
-
-    <br />
-</article>
+</div>

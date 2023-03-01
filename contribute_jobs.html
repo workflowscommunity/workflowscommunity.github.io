@@ -1,21 +1,17 @@
 ---
-layout: default
+layout: page
 title: "Contribute: Jobs"
 permalink: /jobs/add
 ---
 
-<article class="post">
-    <header>
-        <div class="title">
-            <h2>How to Post a Job Opening</h2>
-            <p>
-                Register open workflow-related positions from the community
-            </p>
-            <a href="/jobs" class="corner-button">All Jobs</a>
-        </div>
-    </header>
+<div class="row justify-content-center mb-5 pb-5">
+    <div class="col-md-7 text-center heading-section ftco-animate mb-5">
+        <span class="subheading">Register open workflow-related positions from the community</span>
+        <h2 class="mb-4">How to Post a Job Opening</h2>
+        <a href="/jobs" class="btn btn-primary mt-3 py-3 px-5">All Jobs</a>
+    </div>
 
-    <div class="content">
+    <div class="col-md-12">
         <p>
             The Workflows Community Initiative (WCI) provides a common place for posting jobs related to workflows
             research and development. Note that WCI does not conduct job interviews or provide references to
@@ -23,7 +19,7 @@ permalink: /jobs/add
             workflows community.
         </p>
 
-        <h2>Adding a Job Posting</h2>
+        <h3 class="mt-5">Adding a Job Posting</h3>
         <p>
             At the WCI website, job opennings are described using a <a
                 href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown
@@ -34,7 +30,7 @@ permalink: /jobs/add
         <ol>
             <li><strong>Fork</strong> the WCI GitHub repository</li>
             <li><strong>Clone</strong> your forked repository:
-                <pre>git clone https://github.com/&#60;your_username>/workflowscommunity.github.io</pre>
+                <pre class="bg-light p-3">git clone https://github.com/&#60;your_username>/workflowscommunity.github.io</pre>
             </li>
             <li><strong>Create</strong> a Markdown file under the <code>_jobs/</code> directory (e.g.,
                 <code>my_institution_position_title.md</code>), and
@@ -51,7 +47,7 @@ permalink: /jobs/add
         </p>
 
 
-        <h2>Creating your Markdown File</h2>
+        <h3 class="mt-5">Creating your Markdown File</h3>
         <p>
             In the WCI website, each job posting is described in a separate Markdown file. Although we do not enforce a strict
             convention for the file name, we strongly encourage you to choose a unique and informative file name, such as 
@@ -60,7 +56,7 @@ permalink: /jobs/add
         </p>
         <p>The following example shows the structure of the Markdown file and summarizes the keywords that should be provided:
         </p>
-        <pre>
+        <pre class="bg-light p-3">
 --- 
 layout: jobs <span style="color: #999"># do not change this line</span>
 title: "Position Title"
@@ -80,6 +76,4 @@ Job description using Markdown syntax.
                 hours</strong>.
         </p>
     </div>
-
-    <br />
-</article>
+</div>

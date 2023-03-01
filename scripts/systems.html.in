@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: $title
 organization: $organization
 repository: $repository
@@ -15,58 +15,60 @@ release_date: $release_date
 wci_metadata: $wci_metadata
 ---
 
-<article class="post">
-    <header>
-        <div class="title">
-            <a href="$website" target="_blank"><img src="$avatar" alt="$title" /></a>
-            <h1>$title</h1>
-            <p class="system-subtitle">
-                $subtitle<br />
-                <a href="$website" target="_blank">$website</a> 
-                <span class="light-gray">&mdash;  <i class="far fa-clock"></i> Last updated: {{page.last_update}}</span>
-            </p>
-        </div>
-        <div class="meta">
-            <ul class="icons">
-                <li>
-                    <a href="https://github.com/$organization/$repository" target="_blank" class="fa-stack fa-2x">
-                        <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i><i class="fab fa-github fa-stack-1x"></i></a>
-                </li>
-                $twitter
-                $youtube
-            </ul>
-            $release
-        </div>
-    </header>
-
-    <p>
-        $description
-    </p>
-
-    <div class="system-info">
-        <h1>Project Information</h1>
-        <ul style="justify-content: center">
-            <li><a href="$website" target="_blank"><i class="fas fa-link"></i><br />Website</a></li>
-            $doc_installation
-            $doc_tutorial
-            $doc_general
-            <li><i class="fas fa-code"></i><br />$language</li>
-        </ul>
+<div class="row justify-content-center mb-2 pb-2">
+    <div class="col-md-7 text-center heading-section ftco-animate mb-5">
+        <span class="subheading"><a href="$website" target="_blank">$website</a></span><br />
+        <a href="$website" target="_blank"><img src="{{ page.avatar }}" style="max-height: 5em; max-width: 10em;"
+                alt="{{ page.title }}" /></a>
+        <h2 class="mb-4">$title</h2>
+        <i class="far fa-clock"></i> Last updated: {{page.last_update}}<br />
+        $release<br />
+        <a href="https://github.com/$organization/$repository" target="_blank">
+            <i class="fab fa-github"></i> https://github.com/$organization/$repository</a><br />
+        $twitter<br />
+        $youtube
     </div>
 
-    $execution_environment
+    <div class="col-md-12 ftco-animate mb-5">
+        <p>$description</p>
+    </div>
+</div>
 
-    <footer>
-        <div class="contributors">
-            <span style="text-transform: uppercase; letter-spacing: 0.2em; color: #999; font-size: 0.8em; line-height: 2.5em">Contributors:</span><br />
-            $contributors_list
-        </div>
-        <ul class="stats">
-            <li><a href="https://github.com/$organization/$repository/network/members" target="_blank"><i class="fas fa-code-branch"></i> $forks</a></li>
-            <li><a href="https://github.com/$organization/$repository/stargazers" target="_blank"><i class="far fa-star"></i> $stargazers</a></li>
-            <li><a href="https://github.com/$organization/$repository/issues" target="_blank"><i class="far fa-dot-circle"></i> $issues</a></li>
-            <li><i class="fab fa-osi"></i> $license</li>
-        </ul>
-    </footer>
-    <br />
-</article>
+<div class="row mb-4">
+    $doc_installation
+    $doc_tutorial
+    $doc_general
+    <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center">
+            <div class="d-flex justify-content-center">
+                <div class="icon color-4 d-flex justify-content-center mb-3">
+                    <span class="fas fa-code color-4"></i>
+                </div>
+            </div>
+            <div class="media-body p-2 mt-3">
+                <h3 class="heading">$language</h3>
+            </div>
+        </div>      
+    </div>
+</div>
+
+$execution_environment
+
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-7 text-center heading-section ftco-animate">
+        <h3 class="mb-4">Contributors</h3>
+        <p>
+            <a href="https://github.com/$organization/$repository/network/members" target="_blank"><i class="fas fa-code-branch"></i> $forks</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="https://github.com/$organization/$repository/stargazers" target="_blank"><i class="far fa-star"></i> $stargazers</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="https://github.com/$organization/$repository/issues" target="_blank"><i class="far fa-dot-circle"></i> $issues</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <i class="fab fa-osi"></i> $license
+        </p>
+    </div>
+    <div class="col-md-12 text-center ftco-animate">
+        $contributors_list
+    </div>
+</div>

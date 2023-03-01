@@ -1,88 +1,98 @@
 ---
-layout: default
+layout: page
 title: About
 permalink: /about
 ---
 
-<article class="post">
-    <header>
-        <div class="title">
-            <h2>About</h2>
-            <p>
-                The Workflows Community Initiative (WCI) is a community-centered effort for gathering and
-                promoting long-standing and recent community-focused efforts
-            </p>
-        </div>
-    </header>
-
-    <h2>Leadership</h2>
-
-    <div class="row" style="padding: 1em">
-        {% assign leadership = site.data.organization | where: "category","leadership" %}
-        {% for member in leadership %}
-        <div class="amember">
-            <div class="header">
-                <div class="name">{{ member.name }}</div>
-                <div class="role">{{ member.role }}</div>
-                <a href="{{ member.link }}" target="_blank">
-                    <img src="/images/about/{{ member.photo }}" alt="{{ member.name }}" />
-                </a>
-            </div>
-            <div class="content">
-                <a href="{{ member.institution.link }}" target="_blank">
-                    <img src="/images/institutions/{{ member.institution.image }}"
-                        alt="{{ member.institution.name }}" />
-                </a>
-            </div>
-        </div>
-        {% endfor %}
+<div class="row justify-content-center mb-5 pb-5">
+    <div class="col-md-7 text-center heading-section ftco-animate">
+        <p>The Workflows Community Initiative (WCI) is a community-centered effort for gathering and
+            promoting long-standing and recent community-focused efforts</p>
     </div>
+</div>
 
-    <h2>Steering Committee</h2>
-
-    <div class="row" style="padding: 1em">
-        {% assign sc = site.data.organization | where: "category","sc" %}
-        {% for member in sc %}
-        <div class="amember">
-            <div class="header">
-                <div class="name">{{ member.name }}</div>
-                <div class="role">{{ member.role }}</div>
-                <a href="{{ member.link }}" target="_blank">
-                    <img src="/images/about/{{ member.photo }}" alt="{{ member.name }}" />
-                </a>
-            </div>
-            <div class="content">
-                <a href="{{ member.institution.link }}" target="_blank">
-                    <img src="/images/institutions/{{ member.institution.image }}"
-                        alt="{{ member.institution.name }}" />
-                </a>
-            </div>
-        </div>
-        {% endfor %}
+<div class="row justify-content-center mb-5 pb-5">
+    <div class="col-md-7 text-center heading-section ftco-animate">
+        <span class="subheading">Our Board of Directors</span>
+        <h2 class="mb-4">Leadership</h2>
     </div>
+</div>
 
-    <h2>Technical Leads</h2>
-
-    <div class="row" style="padding: 1em">
-        {% assign sc = site.data.organization | where: "category","technical" %}
-        {% for member in sc %}
-        <div class="amember">
-            <div class="header">
-                <div class="name">{{ member.name }}</div>
-                <div class="role">{{ member.role }}</div>
-                <a href="{{ member.link }}" target="_blank">
-                    <img src="/images/about/{{ member.photo }}" alt="{{ member.name }}" />
-                </a>
+<div class="row">
+    {% assign leadership = site.data.organization | where: "category","leadership" %}
+    {% for member in leadership %}
+    <div class="col-md-4 mb-5 ftco-animate">
+        <div class="block-10">
+            <div class="person-info mb-2">
+                <span class="name">{{ member.name }}</span>
+                <span class="position">{{ member.role }}</span>
             </div>
-            <div class="content">
-                <a href="{{ member.institution.link }}" target="_blank">
-                    <img src="/images/institutions/{{ member.institution.image }}"
-                        alt="{{ member.institution.name }}" />
-                </a>
-            </div>
+            <a href="{{ member.link }}" target="_blank">
+                <img src="/images/about/{{ member.photo }}" alt="{{ member.name }}" class="img-fluid mb-3" style="width: 100%">
+            </a>
+            <a href="{{ member.institution.link }}" target="_blank">
+                <img src="/images/institutions/{{ member.institution.image }}"
+                    alt="{{ member.institution.name }}" style="max-height: 2em" />
+            </a>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
+</div>
 
-    <br />
-</article>
+<br />
+<div class="row justify-content-center mb-5 mt-5 pb-5">
+    <div class="col-md-7 text-center heading-section ftco-animate">
+        <span class="subheading">Our Board of Advisors</span>
+        <h2 class="mb-4">Steering Committee</h2>
+    </div>
+</div>
+
+<div class="row">
+    {% assign sc = site.data.organization | where: "category","sc" %}
+    {% for member in sc %}
+    <div class="col-md-4 mb-5 ftco-animate">
+        <div class="block-10">
+            <div class="person-info mb-2">
+                <span class="name">{{ member.name }}</span>
+                <span class="position">{{ member.role }}</span>
+            </div>
+            <a href="{{ member.link }}" target="_blank">
+                <img src="/images/about/{{ member.photo }}" alt="{{ member.name }}" class="img-fluid mb-3" style="width: 100%">
+            </a>
+            <a href="{{ member.institution.link }}" target="_blank">
+                <img src="/images/institutions/{{ member.institution.image }}"
+                    alt="{{ member.institution.name }}" style="max-height: 2em" />
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<br />
+<div class="row justify-content-center mb-5 mt-5 pb-5">
+    <div class="col-md-7 text-center heading-section ftco-animate">
+        <span class="subheading">Our Techincal Experts</span>
+        <h2 class="mb-4">Technical Leads</h2>
+    </div>
+</div>
+
+<div class="row">
+    {% assign tl = site.data.organization | where: "category","technical" %}
+    {% for member in tl %}
+    <div class="col-md-4 mb-5 ftco-animate">
+        <div class="block-10">
+            <div class="person-info mb-2">
+                <span class="name">{{ member.name }}</span>
+                <span class="position">{{ member.role }}</span>
+            </div>
+            <a href="{{ member.link }}" target="_blank">
+                <img src="/images/about/{{ member.photo }}" alt="{{ member.name }}" class="img-fluid mb-3" style="width: 100%">
+            </a>
+            <a href="{{ member.institution.link }}" target="_blank">
+                <img src="/images/institutions/{{ member.institution.image }}"
+                    alt="{{ member.institution.name }}" style="max-height: 2em" />
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>

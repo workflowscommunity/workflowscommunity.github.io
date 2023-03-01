@@ -1,39 +1,32 @@
 ---
-layout: default
+layout: page
 title: Birds of a Feather
 permalink: /bof
 ---
 
-<article class="post">
-    <header>
-        <div class="title">
-            <h2>Birds of a Feather</h2>
-            <p>
-                
-            </p>
-        </div>
-    </header>
-
-    <div class="row">
-        {% assign bofs = site.bofs | sort: 'order' | reverse %}
-        {% for bof in bofs %}
-        <div class="col-sm-12 col-md-12">
-            <a href="{{bof.url}}" class="event">
-                <div class="event-date">
-                    <span class="header">{{bof.event_date | date: "%b %d" }}</span><br />
-                    <span class="subheader">{{bof.event_date | date: "%Y" }}</span>
-                </div>
-                <div class="event-content">
-                    <span class="time">{{bof.time}}</span><br />
-                    <strong>{{bof.title}}</strong><br />
-                    <i style="font-size: 0.9em">{{bof.subtitle}}</i><br />
-                    {% if bof.report_link %}
-                    <img src="{{bof.report_badge}}" alt="DOI" style="padding-top: 0.5em" />
-                    {% endif %}
-                </div>
-            </a>
-        </div>
-        {% endfor %}
+<div class="row justify-content-center mb-4 pb-5">
+    <div class="col-md-8 text-center heading-section ftco-animate">
+        <p class="heading-section">
+            Bird of a Feather (BoF) events are typically associated with a major conference/meeting in which
+            researchers, developers, and users from distinct workflow systems and applications meet to discuss the
+            current state-of-the-art and crucial challenges in the workflow community.
+        </p>
     </div>
-    <br />
-</article>
+</div>
+
+<div class="row">
+    {% assign bofs = site.bofs | sort: 'order' | reverse %}
+    {% for bof in bofs %}
+    <div class="col-md-4 ftco-animate">
+        <div class="blog-entry" style="min-height: 15em;">
+            <div class="text p-4 d-block">
+                <div class="meta mb-3">
+                    {{bof.event_date | date: "%b %d, %Y" }}
+                </div>
+                <h3 class="heading"><a href="{{bof.url}}">{{bof.title}}</a></h3>
+                <span class="position">{{bof.subtitle}}</span>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

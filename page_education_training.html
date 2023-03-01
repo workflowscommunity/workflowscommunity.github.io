@@ -1,36 +1,37 @@
 ---
-layout: default
+layout: page
 title: Education and Training
 permalink: /education
 ---
 
-<article class="post">
-    <header>
-        <div class="title">
-            <h2>Education and Training</h2>
-            <p>
-                Collection of educational and training materials agnostic to workflow systems
-            </p>
-            <!-- <a href="/frameworks/contribute" class="corner-button" style="background-color: #4CA8A9">Contribute</a> -->
-        </div>
-    </header>
-
-    <div class="row">
-        {% assign education = site.data.education_training | sort: "name" %}
-        {% for e in education %}
-        <div class="col-sm-12 col-md-12 framework">
-            {% if e.icon %}
-            <div class="framework-icon">
-                <a href="{{e.url}}" target="_blank"><img src="{{e.icon}}"
-                        alt="{{e.name}}" /></a>
-            </div>
-            {% endif %}
-            <a class="framework-content" href="{{e.url}}" target="_blank">
-                <strong>{{e.name}}</strong>
-                <p class="description">{{e.description}}</p>
-            </a>
-        </div>
-        {% endfor %}
+<div class="row justify-content-center mb-4 pb-5">
+    <div class="col-md-8 text-center heading-section ftco-animate">
+        <p class="heading-section">
+            Collection of educational and training materials agnostic to workflow systems
+        </p>
     </div>
-    <br />
-</article>
+</div>
+
+<div class="row">
+    {% assign education = site.data.education_training | sort: "name" %}
+    {% for e in education %}
+    <div class="col-md-6 ftco-animate">
+        <div class="blog-entry" style="min-height: 23em;">
+            <div class="text p-4 d-block">
+                {% if e.icon %}
+                <p class="text-center">
+                    <a href="{{e.url}}" target="_blank">
+                        <img src="{{ e.icon }}" style="max-height: 6em; max-width: 8em;"
+                            alt="{{ e.name }}" />
+                    </a>
+                </p>
+                {% endif %}
+                <h3 class="heading"><a href="{{e.url}}" target="_blank">{{e.name}}</a></h3>
+                <div class="meta mb-3">
+                    {{e.description}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

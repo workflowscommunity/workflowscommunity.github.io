@@ -1,3 +1,14 @@
+- name: 1st IEEE International Workshop on Workflows in Distributed Environments
+  series: WiDE 2023
+  location: Torino, Italy
+  start_date: 2023-06-26
+  end_date: 2023-06-26
+  url: https://ieeecompsac.computer.org/2023/wide-2023/
+  type: Workshop
+  deadlines:
+    - name: Paper Submissions
+      date: 2023-04-07
+
 - name: "2023 Common Workflow Language community conference"
   series: CWL Community Conference
   location: Virtual

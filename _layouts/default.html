@@ -9,25 +9,69 @@ image: "https://workflows.community/images/wci-default-card.png"
 </head>
 
 <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper">
-        {% include header.html %}
-        {% include menu.html %}
+    {% include header.html %}
 
-        <!-- Main -->
-        <div id="main">
-            {{ content }}
+    <div class="hero-wrap js-fullheight">
+        <div class="overlay"></div>
+        <div id="particles-js"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+                <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+                    <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                        <a href="#">
+                            <img src="/images/wci-white-logo.png" style="width: 90%" alt="" />
+                        </a>
+                    </p>
+                    <br />
+                    <h1 class="" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" style="font-size: 1.5em">
+                        Our goal is to bring the workflows community together (users, developers, researchers, and
+                        facilities) to provide <strong>community resources and capabilities</strong> to enable scientists
+                        and workflow systems developers to discover software products, related efforts, events, technical
+                        reports, etc. and engage in community-wide efforts to tackle workflows grand challenges.
+                    </h1>
+                    <br />
+                    <div class="ftco-footer-widget mb-4">
+                        <ul class="ftco-footer-social list-unstyled">
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                                    class="fa-stack fa-2x" style="font-size: 1.5em">
+                                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                                    <i class="fab fa-youtube fa-stack-1x"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:contact@workflows.community" class="fa-stack fa-2x"
+                                    style="font-size: 1.5em">
+                                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                                    <i class="fa fa-envelope fa-stack-1x"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://twitter.com/WorkflowsCI" target="_blank" class="fa-stack fa-2x"
+                                    style="font-size: 1.5em">
+                                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                                    <i class="fab fa-twitter fa-stack-1x"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-14l57ruzl-cCue46GoRt_4txhXfYHrtA"
+                                    target="_blank" class="fa-stack fa-2x" style="font-size: 1.5em">
+                                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
+                                    <i class="fab fa-slack fa-stack-1x"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        {% include sidebar.html %}
+    </div>
+    
+    <div class="bg-light">
+        {{ content }}
     </div>
 
-    <!-- Scripts -->
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/browser.min.js"></script>
-    <script src="/assets/js/breakpoints.min.js"></script>
-    <script src="/assets/js/util.js"></script>
-    <script src="/assets/js/main.js"></script>
+    {% include footer.html %}
 
 </body>
 

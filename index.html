@@ -11,215 +11,308 @@ permalink: /
 {% assign total_ext_wg = site.data.working_groups | size %}
 {% assign total_wg = total_wci_wg | plus: total_ext_wg %}
 
-<!-- <article class="post story-main" style="padding: 1em">
-    <a href="/summits/2022" style="border-bottom: none">
-        <img src="/images/summits/wcs-2022-short-banner.png" width="64%" style="border-radius: 0.5em"/></a>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="/bof/ecpam23" style="border-bottom: none">
-        <img src="/images/bof/exaworks-bof-ecpam23.png" width="30%" style="border-radius: 0.75em"/></a>
-</article> -->
+<!-- Stories -->
+{% assign story = site.stories | sort: "date" | reverse %}
+<section class="ftco-section-featured ftco-animate">
+    <div class="container-fluid" data-scrollax-parent="true">
+        <div class="row no-gutters d-flex align-items-center" data-scrollax=" properties: { translateY: '-30%'}">
 
-<article class="post story-main">
-
-    <!-- Latest Story -->
-    {% assign story = site.stories | sort: "date" | reverse %}
-    <header>
-        <div class="top-button" style="border-bottom: 1px solid #ccc;">
-            <h3 style="margin: 0; color: #fff">Latest Stories</h3>
-            <p style="margin: 0; line-height: 1.5em; font-size: 0.6em">
-                Perspectives on workflows-related topics
-            </p>
-        </div>
-        <a href="/stories" class="bottom-button">All Stories</a>
-    </header>
-    <div class="row">
-        {% for s in story limit: 2 %}
-        <div class="col-sm-6 col-md-6" style="padding: 0em 0.5em">
-            <div class="story-image">
-                <a href="{{s.url}}" style="border-bottom: 0;">
-                    <img src="{{s.image}}" style="border-radius: 0.5em" />
+            <div class="col-md-3 mb-3">
+                <a href="{{ story[2].url }}" class="featured-img">
+                    <div class="text-1 p-4 d-flex align-items-center">
+                        <h3 style="font-size: 1.1em">
+                            {{ story[2].title }}<br />
+                            <span class="tag">{{ story[2].date | date: "%b %d, %Y" }}</span>
+                        </h3>
+                    </div>
+                    <img src="{{ story[2].image }}" class="img-fluid" alt="">
+                    <div class="text p-4 d-flex align-items-center">
+                        <div class="user d-flex align-items-center">
+                            <h3>
+                                {% for author in story[2].authors %}
+                                {{author.name}} <span class="position">{{author.institution}}</span><br />
+                                {% endfor %}
+                            </h3>
+                        </div>
+                    </div>
                 </a>
             </div>
-            <div class="col-sm-12 col-md-12" style="padding: 0 0.5em">
-                <a href="{{s.url}}" style="text-decoration: none;">
-                    <h1>{{s.title}}</h1>
-                    <p class="story-excerpt">{{s.excerpt| strip_html | strip_newlines | truncate: 350}}</p>
+
+            <div class="col-md-6">
+                <div class="row no-gutters">
+                    <div class="col-md-12">
+                        <div class="row no-gutters d-flex align-items-end">
+                            <div class="col-md-7">
+                                <a href="{{ story[0].url }}" class="featured-img">
+                                    <div class="text-1 p-4 d-flex align-items-center">
+                                        <h3 style="font-size: 1.1em">
+                                            {{ story[0].title }}<br />
+                                            <span class="tag">{{ story[0].date | date: "%b %d, %Y" }}</span>
+                                        </h3>
+                                    </div>
+                                    <img src="{{ story[0].image }}" class="img-fluid" alt="">
+                                    <div class="text p-4 d-flex align-items-center">
+                                        <div class="user d-flex align-items-center">
+                                            <h3>
+                                                {% for author in story[0].authors %}
+                                                {{author.name}} <span
+                                                    class="position">{{author.institution}}</span><br />
+                                                {% endfor %}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-5">
+                                <a href="{{ story[4].url }}" class="featured-img">
+                                    <div class="text-1 p-4 d-flex align-items-center">
+                                        <h3 style="font-size: 1em">
+                                            {{ story[4].title }}<br />
+                                            <span class="tag">{{ story[4].date | date: "%b %d, %Y" }}</span>
+                                        </h3>
+                                    </div>
+                                    <img src="{{ story[4].image }}" class="img-fluid" alt="">
+                                    <div class="text p-4 d-flex align-items-center">
+                                        <div class="user d-flex align-items-center">
+                                            <h3>
+                                                {% for author in story[4].authors %}
+                                                {{author.name}} <span
+                                                    class="position">{{author.institution}}</span><br />
+                                                {% endfor %}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="row no-gutters d-flex align-items-start">
+                            <div class="col-md-7">
+                                <a href="{{ story[1].url }}" class="featured-img">
+                                    <div class="text-1 p-4 d-flex align-items-center">
+                                        <h3 style="font-size: 1.1em">
+                                            {{ story[1].title }}<br />
+                                            <span class="tag">{{ story[1].date | date: "%b %d, %Y" }}</span>
+                                        </h3>
+                                    </div>
+                                    <img src="{{ story[1].image }}" class="img-fluid" alt="">
+                                    <div class="text p-4 d-flex align-items-center">
+                                        <div class="user d-flex align-items-center">
+                                            <h3>
+                                                {% for author in story[1].authors %}
+                                                {{author.name}} <span
+                                                    class="position">{{author.institution}}</span><br />
+                                                {% endfor %}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-5">
+                                <a href="{{ story[5].url }}" class="featured-img">
+                                    <div class="text-1 p-4 d-flex align-items-center">
+                                        <h3 style="font-size: 1em">
+                                            {{ story[5].title }}<br />
+                                            <span class="tag">{{ story[5].date | date: "%b %d, %Y" }}</span>
+                                        </h3>
+                                    </div>
+                                    <img src="{{ story[5].image }}" class="img-fluid" alt="">
+                                    <div class="text p-4 d-flex align-items-center">
+                                        <div class="user d-flex align-items-center">
+                                            <h3>
+                                                {% for author in story[5].authors %}
+                                                {{author.name}} <span
+                                                    class="position">{{author.institution}}</span><br />
+                                                {% endfor %}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <a href="{{ story[3].url }}" class="featured-img">
+                    <div class="text-1 p-4 d-flex align-items-center">
+                        <h3 style="font-size: 1.1em">
+                            {{ story[3].title }}<br />
+                            <span class="tag">{{ story[3].date | date: "%b %d, %Y" }}</span>
+                        </h3>
+                    </div>
+                    <img src="{{ story[3].image }}" class="img-fluid" alt="">
+                    <div class="text p-4 d-flex align-items-center">
+                        <div class="user d-flex align-items-center">
+                            <h3>
+                                {% for author in story[3].authors %}
+                                {{author.name}} <span class="position">{{author.institution}}</span><br />
+                                {% endfor %}
+                            </h3>
+                        </div>
+                    </div>
                 </a>
-                <div class="author">
-                    {{ s.date | date: "%b %d, %Y" }}<br />
-                    {% for author in s.authors %}
-                    {{author.name}} &mdash; {{author.institution}}<br />
-                    {% endfor %}
+            </div>
+        </div>
+        <br />
+        <div class="row mt-5 d-flex justify-content-center">
+            <div class="col-md-8 text-center heading-section ftco-animate">
+                <h2 style="font-size: 1.2em">Perspectives on <strong class="px-3">workflows-related</strong> topics from
+                    the community.</h2>
+                <p><a href="/stories" class="btn btn-primary mt-3 py-3 px-5">See all stories...</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Numbers -->
+<section class="ftco-section ftco-counter" id="section-counter" style="padding: 4em 0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                <h2>The Workflows Community in Numbers</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 text-center">
+                    <a href="/members" class="text">
+                        <strong class="number" data-number="{{ total_members }}">0</strong>
+                        <span>members</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 text-center">
+                    <a href="/systems" class="text">
+                        <strong class="number" data-number="{{ total_systems }}">0</strong>
+                        <span>workflow systems</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 text-center">
+                    <a href="/frameworks" class="text">
+                        <strong class="number" data-number="{{ total_frameworks }}">0</strong>
+                        <span>research frameworks</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 text-center">
+                    <a href="/groups" class="text">
+                        <strong class="number" data-number="{{ total_wg }}">0</strong>
+                        <span>working groups</span>
+                    </a>
                 </div>
             </div>
         </div>
-        {% endfor %}
     </div>
-
-    <!-- Stats -->
-    <footer style="background-color: #fafafa; width: 100%; left: -3em; margin: 2em 2em -1em 0em; position: relative; width: calc(100% + 6em); border-bottom-right-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;">
-        <div class="ostats" style="margin: auto">
-            <a class="nsystems" href="/systems">
-                <strong class="timer" data-from="1" data-to="{{ total_systems }}"></strong><br />
-                workflow systems
-            </a>
-            <a class="nmembers" href="/members">
-                <strong class="timer" data-from="1" data-to="{{ total_members }}"></strong><br />
-                members<br />
-                <span class="light-gray"><i>and growing</i></span>
-            </a>
-            <a class="nframeworks" href="/frameworks">
-                <strong class="timer" data-from="1" data-to="{{ total_frameworks }}"></strong><br />
-                research frameworks
-            </a>
-            <a class="nwg" href="/groups">
-                <strong class="timer" data-from="1" data-to="{{ total_wg }}"></strong><br />
-                working groups
-            </a>
-        </div>
-    </footer>
-</article>
+</section>
 
 <!-- Workflow Systems -->
-<article class="post">
-    <header>
-        <div class="top-button" style="background-color: #e27d60;">
-            <h3 style="margin: 0; color: #fff">Workflow Systems</h3>
-            <p style="margin: 0; line-height: 1.5em; font-size: 0.6em">
-                Last Updated Open Source Workflow Systems
-            </p>
-        </div>
-        <a href="/systems" class="bottom-button" style="background-color: #FA8B6C;">All Systems</a>
-    </header>
-
-    <div class="systems">
-        <div class="systems-list">
-            {% assign systems_wci = site.systems | where: "wci_metadata", "true" | sort: "date_sort" | reverse %}
-            {% assign systems_wci_size = systems_wci | size %}
-            {% assign systems = site.systems | where: "wci_metadata", "false" | sort: "date_sort" | reverse %}
-            {% assign systems_limit = 10 | minus: systems_wci_size %}
-            {% for system in systems_wci limit: 10 %}
-            <a href="{{system.url}}" class="system"
-                style="min-width: 15em; max-height: 6em; min-height: 6em; box-shadow: none; flex: 0 0 auto; position: relative">
-                {% if system.avatar %}
-                <div class="system-avatar">
-                    <img src="{{system.avatar}}" alt="{{system.repository}}" />
-                </div>
-                {% endif %}
-                <div class="system-content">
-                    <strong>{{system.title}}</strong>
-                    <div class="list-stats">
-                        <i class="fas fa-code"></i> {{system.language}}</span><br />
-                        {% if system.release_name != "" %}
-                        <i class="fas fa-box-open"></i> {{system.release_name}}</span><br />
-                        {% endif %}
-                        <i class="far fa-clock"></i> {{system.last_update}}
-                    </div>
-                </div>
-                {% if system.wci_metadata %}
-                <div style="position: absolute; bottom: 0; right: 1em; font-size: 0.8em">
-                    <img src="/favicon.ico" style="max-width: 1.5em; vertical-align: middle" />
-                    <span class="light-gray">WCI metadata</span>
-                </div>
-                {% endif %}
-            </a>
-            {% endfor %}
-            {% for system in systems limit: systems_limit %}
-            <a href="{{system.url}}" class="system"
-                style="min-width: 15em; max-height: 6em; min-height: 6em; box-shadow: none; flex: 0 0 auto; position: relative">
-                {% if system.avatar %}
-                <div class="system-avatar">
-                    <img src="{{system.avatar}}" alt="{{system.repository}}" />
-                </div>
-                {% endif %}
-                <div class="system-content">
-                    <strong>{{system.title}}</strong>
-                    <div class="list-stats">
-                        <i class="fas fa-code"></i> {{system.language}}</span><br />
-                        {% if system.release_name != "" %}
-                        <i class="fas fa-box-open"></i> {{system.release_name}}</span><br />
-                        {% endif %}
-                        <i class="far fa-clock"></i> {{system.last_update}}
-                    </div>
-                </div>
-                {% if system.wci_metadata %}
-                <div style="position: absolute; bottom: 0; right: 1em; font-size: 0.8em">
-                    <img src="/favicon.ico" style="max-width: 1.5em; vertical-align: middle" />
-                    <span class="light-gray">WCI metadata</span>
-                </div>
-                {% endif %}
-            </a>
-            {% endfor %}
-            <a href="/systems" class="system"
-                style="border: 1px solid #ddd; border-radius: 0.5em; box-shadow: none; flex: 0 0 auto; margin-left: 1em">
-                <div style="text-align: center; min-width: 6em; min-height: 3.5em; color: #aaa">
-                    <i class="fas fa-cogs" style="font-size: 1.5em"></i><br />
-                    See all Systems
-                </div>
-            </a>
-        </div>
-    </div>
-</article>
-
-<div class="row" style="margin-left: 0.075em; margin-right: 0.075em; margin-bottom: 3em">
-    <!-- Events -->
-    <div class="col-sm-12 col-md-6">
-        <div class="mini-box events">
-            <header>
-                <div class="top-button" style="border-bottom: 1px solid #ccc;">
-                    <h3 style="margin: 0; color: #fff">Events</h3>
-                    <p style="margin: 0; line-height: 1.5em; font-size: 0.6em">Upcoming Community Events</p>
-                </div>
-                <a href="/events" class="bottom-button">All Events</a>
-            </header>
-            <div class="row" style="margin-top: 2.5em">
-                {% assign events = site.data.events | sort: 'start_date'%}
-                {% assign count_events = 0 %}
-                {% for event in events %}
-                {% capture eventtime %}{{event.end_date | date: '%s'}}{% endcapture %}
-                {% if eventtime >= nowunix and count_events < 15 %} <div class="col-sm-12 col-md-12"
-                    style="padding: 0 0.5em">
-                    <a href="{{event.url}}" class="event" target="_blank">
-                        <div class="event-date" style="min-width: 5em; max-width: 5em; max-height: 10em;">
-                            <span class="header" style="font-size: 1em">{{event.start_date | date: "%b %d"
-                                }}</span><br />
-                            <span class="subheader" style="font-size: 0.8em">{{event.start_date | date: "%Y" }}</span>
-                        </div>
-                        <div class="event-content" style="line-height: 1em;">
-                            <span class="
-                            {% if event.type == 'Conference' %}
-                                color-7
-                            {% elsif event.type == 'Workshop' %}
-                                color-6
-                            {% endif %}
-                            ">{{event.series}}</span><br />
-                            <span style="font-size: 0.8em"><i class="fas fa-map-marker"
-                                    style="font-size: 0.8em; color: #999"></i> {{event.location}}</span><br />
-                            {% if event.deadlines %}
-                            {% for d in event.deadlines %}
-                            <span class="deadlines">{{d.name}}: <strong>{{d.date | date: "%b %d,
-                                    %Y"}}</strong></span><br />
-                            {% endfor %}
-                            {% endif %}
-                        </div>
-                    </a>
+<section class="ftco-section testimony-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-3 pb-3">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <span class="subheading">Last updated open-source workflow systems</span>
+                <h2 class="mb-4">Workflow Systems</h2>
             </div>
-            {% assign count_events = count_events | plus: 1 %}
-            {% endif %}
-            {% endfor %}
-            <div class="col-sm-12 col-md-12" style="padding: 0 0.5em">
-                <a href="/events" style="text-decoration: none">
-                    <div class="see-all-button" style="color: #4CA8A9; border: 1px solid #4CA8A9">
-                        See all Events
+        </div>
+        <div class="row ftco-animate">
+            <div class="col-md-12">
+                <div class="carousel-testimony owl-carousel ftco-owl">
+                    {% assign systems_wci = site.systems | where: "wci_metadata", "true" | sort: "date_sort" | reverse
+                    %}
+                    {% assign systems_wci_size = systems_wci | size %}
+                    {% assign systems = site.systems | where: "wci_metadata", "false" | sort: "date_sort" | reverse %}
+                    {% assign systems_limit = 10 | minus: systems_wci_size %}
+                    {% for system in systems_wci limit: 10 %}
+                    <div class="item text-center">
+                        <a href="{{system.url}}" class="testimony-wrap p-3 pb-3" style="min-height: 25em;">
+                            <img src="{{system.avatar}}" style="width: 30%; margin: auto;" />
+                            <div class="text">
+                                <h3>{{system.title}}</h3>
+                                <p class="mb-3">
+                                    {{ system.headline | excerpt | strip_html | strip_newlines | truncate: 150}}
+                                </p>
+                                <span class="position"><i class="fas fa-code"></i> {{system.language}}</span><br />
+                                {% if system.release_name != "" %}<span class="position"><i class="fas fa-box-open"></i>
+                                    {{system.release_name}}</span><br />{% endif %}
+                                <span class="position"><i class="far fa-clock"></i> {{system.last_update}}</span>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                    {% endfor %}
+                    <div class="item text-center">
+                        <a href="/systems" class="testimony-wrap p-3 pb-3" style="min-height: 25em;">
+                            <br /><br /><br />
+                            <i class="fas fa-cogs" style="font-size: 5em"></i>
+                            <div class="text">
+                                <br />
+                                <h4>See all Systems</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="col-sm-1">&nbsp;</div>
+<!-- Twitter and Events -->
+<section class="ftco-section" style="background-color: #fff;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-4 d-flex align-self-stretch">
+                <a class="twitter-timeline" data-lang="en" data-height="1150" data-width="100%" data-theme="light"
+                    data-chrome="nofooter" href="https://twitter.com/WorkflowsCI">Tweets by WorkflowsCI</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+            <div class="col-md-6 col-lg-8 text-center heading-section ftco-animate">
+                <span class="subheading">Upcoming Community Events</span>
+                <h2 class="mb-4">Events</h2>
+
+                <div class="row">
+                    {% assign events = site.data.events | sort: 'start_date'%}
+                    {% assign count_events = 0 %}
+                    {% for event in events %}
+                    {% capture eventtime %}{{event.end_date | date: '%s'}}{% endcapture %}
+                    {% if eventtime >= nowunix and count_events < 10 %} <div
+                        class="col-md-6 col-lg-6 ftco-animate" style="margin: auto">
+                        <div class="media block-6 services d-block text-center">
+                            <div class="d-flex justify-content-center" style="font-size: 0.9em">
+                                {{event.start_date | date: "%b %d, %Y" }}
+                            </div>
+                            <div class="media-body">
+                                <h3 class="heading" style="line-height: 1.1em">{{event.series}}<br />
+                                    <span style="font-size: 0.7em; color: #e83e8c">{{event.location}}</span>
+                                </h3>
+                                {% if event.deadlines %}
+                                <p style="font-size: 0.9em; line-height: 1.3em;">
+                                    {% for d in event.deadlines %}
+                                    {{d.name}}: <strong>{{d.date | date: "%b %d, %Y"}}</strong><br />
+                                    {% endfor %}
+                                </p>
+                                {% endif %}
+                            </div>
+                        </div>
+                </div>
+                {% assign count_events = count_events | plus: 1 %}
+                {% endif %}
+                {% endfor %}
+                <div class="col-md-12 col-lg-12 mt-5 text-center heading-section ftco-animate">
+                    <p><a href="/events" class="btn btn-primary mt-3 py-3 px-5">See all events...</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
 
 <!-- Jobs -->
 {% assign jobs = site.jobs | sort: "application_deadline" %}
@@ -230,156 +323,74 @@ permalink: /
 {% assign num_jobs = num_jobs | plus: 1 %}
 {% endif %}
 {% endfor %}
-<div class="col-sm-12 col-md-5">
-    <div class="mini-box jobs">
-        <header>
-            <div class="top-button" style="background-color: steelblue;">
-                <h3 style="margin: 0; color: #fff">Jobs</h3>
-                <p style="margin: 0; line-height: 1.5em; font-size: 0.6em">
-                    <strong style="color: #fff">{{ num_jobs }}</strong> Open Positions from the Community
-                </p>
-            </div>
-            <a href="/jobs" class="bottom-button" style="background-color: #659AD4;">All Jobs</a>
-        </header>
-        <div class="row" style="margin-top: 2.5em">
-            {% assign count_jobs = 0 %}
-            {% for job in jobs %}
-            {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
-            {% if eventtime >= nowunix and count_jobs < 10 %} <div class="col-sm-12 col-md-12"
-                style="padding: 0 0.5em; vertical-align: top;">
-                <a href="{{ job.url }}" class="job-item">
-                    <div style="width: 100%">
-                        <span style="color: steelblue">{{ job.title }}</span><br />
-                        <span style="font-size: 0.9em">{{ job.organization }}</span><br />
-                        <span class="light-gray">
-                            <!-- <i class="fas fa-clock"></i>&nbsp;&nbsp;{{ job.application_deadline | date: "%b %d, %Y" }}
-                            &nbsp;&nbsp;|&nbsp;&nbsp; -->
-                            <i class="fas fa-map-marker"></i>&nbsp;&nbsp;&nbsp;{{ job.location }}
-                            &nbsp;&nbsp;|&nbsp;&nbsp;
-                            <i class="fas fa-briefcase"></i>&nbsp;&nbsp;{{ job.employment_type }}
-                        </span>
-                    </div>
-                    <div>
-                        <img src="{{ job.organization_logo }}" alt="{{ job.title }}" />
-                    </div>
-                </a>
-        </div>
-        {% assign count_jobs = count_jobs | plus: 1 %}
-        {% endif %}
-        {% endfor %}
-        <div class="col-sm-12 col-md-12" style="padding: 0 0.5em">
-            <a href="/jobs" style="text-decoration: none">
-                <div class="see-all-button">
-                    See all Jobs
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-
-
-<article class="post">
-    <header>
-        <div class="top-button" style="background-color: #D09236;">
-            <h3 style="margin: 0; color: #fff">Workflows Community Initiative Events</h3>
-            <p style="margin: 0; line-height: 1.5em;">
-                Collection of videos and documents from our events
-            </p>
-        </div>
-    </header>
-
-    <div class="row">
-        <div class="col-sm-12 col-md-7"
-            style="width: 100%; min-height: 300px; object-fit: cover; padding: 2em 0 1em 0; margin-left: -1em;">
-            <script>
-                var videos = [
-                    "https://www.youtube.com/embed/esTQ8BhzDQg",
-                    "https://www.youtube.com/embed/SCvjK9RA6Lw",
-                    "https://www.youtube.com/embed/BvwZDPngZ1c",
-                    "https://www.youtube.com/embed/lTDjtSNCVPY",
-                    "https://www.youtube.com/embed/pWLZIL5iQw0",
-                    "https://www.youtube.com/embed/2XUncYFJgpc",
-                    "https://www.youtube.com/embed/MBMUqV--XnE",
-                    "https://www.youtube.com/embed/_p1XqYohUu8"
-                ];
-
-                window.onload = function () {
-                    var playerDiv = document.getElementById("random_player");
-                    var player = document.createElement("IFRAME");
-                    var randomVideoUrl = videos[Math.floor(Math.random() * videos.length)];
-                    player.setAttribute('width', '100%');
-                    player.setAttribute('height', '300');
-                    player.setAttribute('borderRadius', '100');
-                    player.setAttribute('src', randomVideoUrl);
-
-                    playerDiv.appendChild(player);
-                };
-            </script>
-            <div id="random_player" style="box-shadow: #ccc 3px 3px 3px"></div>
-        </div>
-
-        <div class="col-sm-12 col-md-5" style="padding: 2em 0 1em 2em">
-            <div class="row">
-                <div class="col-sm-12 col-md-12" style="padding: 0; vertical-align: top;">
-                    <a href="/bof/ecpam23/" class="job-item" style="line-height: 1.2em; padding: 0.5em">
-                        <div style="width: 100%">
-                            <span style="color: steelblue">2023 ECP Annual Meeting BoF</span><br />
-                            <span style="font-size: 0.9em">Exascale Workflows Community: A Post-ECP Roadmap for Workflow Systems and Applications</span><br />
-                            <span class="light-gray">
-                                <i class="fas fa-clock"></i>&nbsp;&nbsp;&nbsp;JAN 19, 2023
-                            </span>
-                        </div>
-                    </a>
-                    <a href="/summits/2022/" class="job-item" style="line-height: 1.2em; padding: 0.5em">
-                        <div style="width: 100%">
-                            <span style="color: steelblue">Workflows Community Summit 2022</span><br />
-                            <span style="font-size: 0.9em">A Roadmap Revolution</span><br />
-                            <span class="light-gray">
-                                <i class="fas fa-clock"></i>&nbsp;&nbsp;&nbsp;NOV 29, 2022
-                            </span>
-                        </div>
-                    </a>
-                    <a href="/bof/sc22/" class="job-item" style="line-height: 1.2em; padding: 0.5em">
-                        <div style="width: 100%">
-                            <span style="color: steelblue">SC22 BoF</span><br />
-                            <span style="font-size: 0.9em">An Update on the Community Roadmap for HPC and AI Scientific Workflows Research and Development</span><br />
-                            <span class="light-gray">
-                                <i class="fas fa-clock"></i>&nbsp;&nbsp;&nbsp;NOV 15, 2022
-                            </span>
-                        </div>
-                    </a>
+<section class="ftco-section-parallax">
+    <div class="parallax-img d-flex align-items-center" style="padding: 5em 0">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-self-stretch">
+                <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                    <span class="subheading"><strong>{{ num_jobs }}</strong> Open Positions from the Community</span>
+                    <h2>Jobs</h2>
                 </div>
             </div>
-        </div>        
-</article>
-
-</article>
-
-<article class="post">
-    <header>
-        <div class="top-button" style="background-color: #adadad;">
-            <h3 style="margin: 0; color: #fff">Founding Members</h3>
-            <p style="margin: 0; line-height: 1.5em;">
-                Since 2021
-            </p>
+            <div class="row ftco-animate">
+                <div class="col-md-12">
+                    <div class="carousel-testimony owl-carousel ftco-owl">
+                        {% assign count_jobs = 0 %}
+                        {% for job in jobs %}
+                        {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
+                        {% if eventtime >= nowunix and count_jobs < 10 %} <div class="item text-center">
+                            <a href="{{job.url}}" class="testimony-wrap p-3 pb-3" style="min-height: 15em">
+                                <img src="{{job.organization_logo}}" style="width: 50%; margin: auto;" />
+                                <div class="text" style="line-height: 1.2em; padding-top: 1em;">
+                                    <strong>{{job.title}}</strong><br /><br />
+                                    {{ job.organization }}<br /><br />
+                                    <span class="position">
+                                        <i class="fas fa-map-marker"></i>&nbsp;&nbsp;&nbsp;{{job.location}}
+                                        <br />
+                                        <i class="fas fa-briefcase"></i>&nbsp;&nbsp;{{job.employment_type}}
+                                    </span>
+                                </div>
+                            </a>
+                    </div>
+                    {% assign count_jobs = count_jobs | plus: 1 %}
+                    {% endif %}
+                    {% endfor %}
+                    <div class="item text-center">
+                        <a href="/jobs" class="testimony-wrap p-3 pb-3" style="min-height: 15em;">
+                            <br /><br />
+                            <i class="fas fa-briefcase" style="font-size: 3.5em"></i>
+                            <div class="text">
+                                See all Jobs
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
-
-    <div class="row" style="margin-top: 5em">
-        {% assign institutions = site.data.institutions | where: "founding",true %}
-        {% for institution in institutions %}
-        <div class="col-sm-6 col-md-3 institution">
-            <a href="{{institution.link}}" target="_blank">
-                <img src="/images/institutions/{{institution.image}}" alt="{{institution.name}}" />
-            </a>
-        </div>
-        {% endfor %}
     </div>
-    <br />
-</article>
+    </div>
+</section>
 
-<script type="text/javascript">
-    $('.timer').countTo();
-</script>
+<!-- Founders -->
+<section class="ftco-section" style="background-color: #fff;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center heading-section ftco-animate">
+                <span class="subheading">Since 2021</span>
+                <h2 class="mb-4">Founding Members</h2>
+
+                <div class="row">
+                    {% assign institutions = site.data.institutions | where: "founding",true %}
+                    {% for institution in institutions %}
+                    <div class="col-sm-6 col-md-3">
+                        <a href="{{institution.link}}" target="_blank">
+                            <img src="/images/institutions/{{institution.image}}" alt="{{institution.name}}" style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>

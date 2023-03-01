@@ -1,65 +1,67 @@
 ---
-layout: default
+layout: page
 title: Working Groups
 permalink: /groups
 ---
 
-<article class="post">
-    <header>
-        <div class="title">
-            <h2>{{page.title}}</h2>
-            <p>
-                Collection of working group efforts related to workflows research, development, and application
-            </p>
-        </div>
-    </header>
-
-    <div class="row">
-        <!-- WCI WGs -->
-        {% assign groups = site.working_groups | where:"layout","working_groups" | sort: "name" %}
-        {% for group in groups %}
-        {% assign status_color = "color-2" %}
-        {% if group.status == "Establishing" %}
-            {% assign status_color = "#D4D62D" %}
-        {% elsif group.status == "Establishing" %}
-            {% assign status_color = "color-6" %}
-        {% endif %}
-        <div class="col-sm-12 col-md-12 group">
-            <a href="{{group.url}}" class="framework-content" style="margin-left: 0.5em; text-decoration: none;">
-                <img src="/favicon.ico" style="width: 25px; vertical-align: middle;" />&nbsp;&nbsp;<strong>{{group.title}}</strong>
-                <p class="description">{{group.description}}</p>
-                <div>
-                    <span class="badge"><i class="fas fa-users"></i>&nbsp;&nbsp;{{group.members | size}} Members</span> | 
-                    <span class="badge">
-                        <i class="fas fa-circle-notch" style="color: {{status_color}}"></i>
-                        &nbsp;{{group.status}}</span>
-                </div>
-            </a>
-        </div>
-        {% endfor %}
-
-        <!-- External WGs-->
-        {% assign groups = site.data.working_groups | sort: "name" %}
-        {% for group in groups %}
-        {% assign status_color = "#8CCA60" %}
-        {% if group.status == "Establishing" %}
-            {% assign status_color = "#D4D62D" %}
-        {% elsif group.status == "Establishing" %}
-            {% assign status_color = "color-6" %}
-        {% endif %}
-        <div class="col-sm-12 col-md-12 group">
-            <a href="{{group.link}}" class="framework-content" style="margin-left: 0.5em; text-decoration: none;" target="_blank">
-                <strong>{{group.name}}</strong>
-                <p class="description">{{group.description}}</p>
-                <div>
-                    <span class="badge">
-                        <i class="fas fa-circle-notch" style="color: {{status_color}}"></i>
-                        &nbsp;{{group.status}}</span> 
-                        <span class="light-gray">|&nbsp;&nbsp;External</span>
-                </div>
-            </a>
-        </div>
-        {% endfor %}
+<div class="row justify-content-center mb-4 pb-5">
+    <div class="col-md-8 text-center heading-section ftco-animate">
+        <p>
+            Collection of working group and task forces efforts related to workflows research, development, and
+            application
+        </p>
     </div>
-    <br />
-</article>
+</div>
+
+<div class="row">
+    <!-- WCI Groups -->
+    {% assign groups = site.working_groups | where:"layout","working_groups" | sort: "name" %}
+    {% for group in groups %}
+    {% assign status_color = "color-2" %}
+    {% if group.status == "Establishing" %}
+    {% assign status_color = "#D4D62D" %}
+    {% elsif group.status == "Establishing" %}
+    {% assign status_color = "color-6" %}
+    {% endif %}
+    <div class="col-md-6 ftco-animate">
+        <div class="blog-entry" style="min-height: 20em;">
+            <div class="text p-4 d-block">
+                <h3 class="heading"><a href="{{group.url}}"><img src="/favicon.ico"
+                            style="width: 30px; vertical-align: middle;" /> {{group.title}}</a></h3>
+                <div class="meta mb-3">
+                    {{ group.description }}
+                </div>
+                <p class="position" style="font-size: 0.9em">
+                    <i class="fas fa-users"></i>&nbsp;&nbsp;{{group.members | size}} Members<br />
+                    <i class="fas fa-circle-notch" style="color: {{status_color}}"></i> &nbsp;{{group.status}}
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- External WGs-->
+    {% assign groups = site.data.working_groups | sort: "name" %}
+    {% for group in groups %}
+    {% assign status_color = "#8CCA60" %}
+    {% if group.status == "Establishing" %}
+    {% assign status_color = "#D4D62D" %}
+    {% elsif group.status == "Establishing" %}
+    {% assign status_color = "color-6" %}
+    {% endif %}
+    <div class="col-md-6 ftco-animate">
+        <div class="blog-entry" style="min-height: 20em;">
+            <div class="text p-4 d-block">
+                <h3 class="heading"><a href="{{group.link}}" target="_blank">{{group.name}}</a></h3>
+                <div class="meta mb-3">
+                    {{ group.description }}
+                </div>
+                <p class="position" style="font-size: 0.9em">
+                    <i class="fas fa-circle-notch" style="color: {{status_color}}"></i> &nbsp;{{group.status}}
+                    (External)
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

@@ -1,41 +1,23 @@
 ---
-layout: default
+layout: page
 ---
 
-<article class="post">
-    <header>
-        <div class="title" style="margin-bottom: -1em">
-            <h2 style="margin-bottom: 0.5em">{{ page.title }}</h2>            
-        </div>
-        <div class="meta">
-            <div class="story-date">
-                <span class="month-day">{{ page.date | date: "%b %d" }}</span><br />
-                <span class="year">{{ page.date | date: "%Y" }}</span>
-            </div>            
-            {% if page.apply_link %}
-            <br /><br /><a href="{{ page.apply_link }}" target="_blank" class="apply"><i class="fas fa-check"></i> Apply Now</a>
-            {% endif %}
-        </div>
-    </header>
-
-    <main class="story-content">
-        <div class="row">
-            <div class="col-sm-12 col-md-12">
-                {% for author in page.authors %}
-                <div class="col-sm-4 col-md-4 story-author">
-                    <img src="{{ author.photo }}" alt="{{ author.name }}" />
-                    {{ author.name }}<br />
-                    <span class="institution">{{ author.institution }}</span>
-                </div>
-                {% endfor %}
+<div class="row justify-content-center mb-2 pb-2">
+    <div class="col-md-8 text-center heading-section ftco-animate mb-5">
+        <span class="subheading">{{ page.date | date: "%b %d, %Y" }}</span><br />
+        <div class="row mt-4">
+            {% for author in page.authors %}
+            <div class="col-md-6" style="margin: auto">
+                <img src="{{ author.photo }}" alt="{{ author.name }}"
+                    style="width: 3.5em; height: 3.5em; border-radius: 50%; margin-right: 1em;" /><br />
+                <div><span class="subheading" style="color: #999">{{ author.name }}</span></div>
+                <div style="color: #bbb">{{ author.institution }}</div>
             </div>
+            {% endfor %}
         </div>
+    </div>
+</div>
 
-        <div class="row">
-            <div class="col-sm-12 col-md-12">
-                {{content | markdownify}}
-            </div>
-        </div>
-    </main>
-
-</article>
+<div class="col-md-12 ftco-animate mb-5">
+    {{content | markdownify}}
+</div>
