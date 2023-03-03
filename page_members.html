@@ -6,12 +6,13 @@ permalink: /members
 
 {% assign total_members = site.data.members | size %}
 {% assign members = site.data.members | sort: "last_name" %}
+{% assign total_countries = site.data.members | map: "country" | join: "," | split: "," | uniq | size %}
 {% assign countries = site.data.members | map: "country" | join: "," | split: "," | uniq %}
 
 <div class="row justify-content-center mb-4 pb-5">
     <div class="col-md-7 text-center heading-section ftco-animate">
         <span class="subheading">The Workflows Community Inititative Currently has <strong>{{total_members}}</strong>
-            Members</span>
+            Members from <strong>{{total_countries}} countries</strong></span>
         <h2 class="mb-4">Members</h2>
         <p>
             <a href="https://forms.gle/ihiyRoZJMYeWXJid6" target="_blank" class="btn btn-primary mt-3 py-3 px-5">
