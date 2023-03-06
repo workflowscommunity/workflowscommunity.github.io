@@ -176,7 +176,7 @@ Rosa M. Badia (2022):
 **Automatic, Efficient and Scalable Provenance Registration for FAIR HPC Workflows**.  
 _2022 IEEE/ACM Workshop on Workflows in Support of Large-Scale Science (WORKS)_  
 <https://doi.org/10.1109/WORKS56498.2022.00006>  (No OA preprint available)
-
+[[slides](https://doi.org/10.5281/zenodo.7701868)]
 
 Rudolf Wittner, Cecilia Mascia, Matej Gallo, Francesca Frexia, Heimo Müller, Markus Plass, Jörg Geiger, Petr Holub (2022):  
 [**Lightweight Distributed Provenance Model for Complex Real–world Environments**](https://doi.org/10.1038/s41597-022-01537-6).  
