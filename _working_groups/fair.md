@@ -155,11 +155,28 @@ Related standards for FAIR computational workflows:
 
 _Articles below are published as [Open Access](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/), or with [green open access preprints](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/understanding/) where gold open access is not possible. Please [let us know](https://github.com/workflowscommunity/workflowscommunity.github.io/issues) if you are unable to access any of our publications. To add to this list, please [suggest a change](https://github.com/workflowscommunity/workflowscommunity.github.io/blob/main/_working_groups/fair.md)._
 
+### 2023
 
-Hirotaka Suetake, Tsukasa Fukusato, Takeo Igarashi, Tazro Ohta (2022):  
+Hirotaka Suetake, Tsukasa Fukusato, Takeo Igarashi, Tazro Ohta (2023):  
 [**Workflow sharing with automated metadata validation and test execution to improve the reusability of published workflows**](https://doi.org/10.1101/2022.07.08.499265).  
-_bioRxiv_  
-<https://doi.org/10.1101/2022.07.08.499265>
+_GigaScience_ **12**:giad006  
+<https://doi.org/10.1093/gigascience/giad006>
+
+
+### 2022
+
+Raül Sirvent,  
+Javier Conejero, 
+Francesc Lordan, 
+Jorge Ejarque, 
+Laura Rodríguez-Navas, 
+José M. Fernández, 
+Salvador Capella-Gutiérrez, 
+Rosa M. Badia (2022):  
+**Automatic, Efficient and Scalable Provenance Registration for FAIR HPC Workflows**.  
+_2022 IEEE/ACM Workshop on Workflows in Support of Large-Scale Science (WORKS)_  
+<https://doi.org/10.1109/WORKS56498.2022.00006>  (No OA preprint available)
+
 
 Rudolf Wittner, Cecilia Mascia, Matej Gallo, Francesca Frexia, Heimo Müller, Markus Plass, Jörg Geiger, Petr Holub (2022):  
 [**Lightweight Distributed Provenance Model for Complex Real–world Environments**](https://doi.org/10.1038/s41597-022-01537-6).  
@@ -253,7 +270,7 @@ _Research Data Alliance_
 <https://doi.org/10.15497/RDA00068>
 
 
-## 2021
+### 2021
 
 Rafael Ferreira da Silva, Henri Casanova, Kyle Chard, Ilkay Altintas, Rosa M Badia, Bartosz Balis, Tainã Coleman, Frederik Coppens, Frank Di Natale, Bjoern Enders, Thomas Fahringer, Rosa Filgueira, Grigori Fursin, Daniel Garijo, Carole Goble, Dorran Howell, Shantenu Jha, Daniel S. Katz, Daniel Laney, Ulf Leser, Maciej Malawski, Kshitij Mehta, Loïc Pottier, Jonathan Ozik, J. Luc Peterson, Lavanya Ramakrishnan, Stian Soiland-Reyes, Douglas Thain, Matthew Wolf (2021):  
 [**A Community Roadmap for Scientific Workflows Research and Development**](https://arxiv.org/pdf/2110.02168).  
@@ -303,7 +320,7 @@ Daniel S. Katz, Morane Gruenpeter, Tom Honeyman, Lorraine Hwang, Mark D. Wilkins
 [**A Fresh Look at FAIR for Research Software**](https://arxiv.org/pdf/2101.10883).  
 [arXiv:2101.10883](https://arxiv.org/abs/2101.10883) [[pdf](https://arxiv.org/pdf/2101.10883)]
 
-## 2020
+### 2020
 
 Carole Goble, Sarah Cohen-Boulakia, Stian Soiland-Reyes, Daniel Garijo, Yolanda Gil, Michael R. Crusoe, Kristian Peters, Daniel Schober (2020):  
 [**FAIR Computational Workflows**](https://doi.org/10.1162/dint_a_00033).  
@@ -321,7 +338,7 @@ _Data Science_ **3**(1) pp. 37–59.
 <https://doi.org/10.3233/DS-190026>
 
 
-## 2019
+### 2019
 
 Farah Zaib Khan, Stian Soiland-Reyes, Richard O. Sinnott, Andrew Lonie, Carole Goble, Michael R. Crusoe (2019):  
 [**Sharing interoperable workflow provenance: A review of best practices and their practical application in CWLProv**](https://doi.org/10.1093/gigascience/giz095).  
@@ -334,7 +351,7 @@ _Nature_ **573**
 <https://doi.org/10.1038/d41586-019-02619-z>
 
 
-## 2018
+### 2018
 
 Jeffrey M. Perkel (2018):  
 [**That's the way we flow**](https://doi.org/10.1038/d41586-019-02619-z).  
@@ -358,7 +375,7 @@ Pablo Carbonell, Adrian J. Jervis, Christopher J. Robinson, Cunyu Yan, Mark Duns
 _Communications Biology_ **1**:66  
 <https://doi.org/10.1038/s42003-018-0076-9>
 
-## 2017
+### 2017
 
 Stephen J Eglen, Ben Marwick, Yaroslav O Halchenko, Michael Hanke, Shoaib Sufi, Padraig Gleeson, R Angus Silver, Andrew P Davison, Linda Lanyon, Mathew Abrams, Thomas Wachtler, David J Willshaw, Christophe Pouzat, Jean-Baptiste Poline (2017):  
 [**Toward standard practices for sharing computer code and programs in neuroscience**](https://doi.org/10.1038/nn.4550).  
