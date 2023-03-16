@@ -107,6 +107,10 @@
   repository: SmartSim
   type: github
 
+- organization: pyiron
+  repository: pyiron_base
+  type: github
+
 # - organization: icui
 #   repository: nnodes
 #   type: github
