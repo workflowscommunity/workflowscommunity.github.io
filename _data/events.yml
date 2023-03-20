@@ -1,3 +1,13 @@
+- name: DOE Cross-facility Workflows training
+  location: virtual
+  start_date: 2023-04-12
+  end_date: 2023-04-12
+  url: https://docs.google.com/forms/d/e/1FAIpQLSee89GYqzFdLvrdtUiUdPDz0-WqgybD8pUts-gupEHwf6VbPA/viewform
+  type: Workshop
+  deadlines:
+    - name: Registration
+      date: 2023-04-05
+
 - name: 1st IEEE International Workshop on Workflows in Distributed Environments
   series: WiDE 2023
   location: Torino, Italy
