@@ -1,4 +1,5 @@
-- name: DOE Cross-facility Workflows training
+- name: DOE Cross-facility Workflows Training
+  series: DOE Workflows Training
   location: virtual
   start_date: 2023-04-12
   end_date: 2023-04-12
