@@ -880,3 +880,8 @@
   first_name: Simon
   institution: CSIRO
   country: au
+
+- last_name: McBride
+  first_name: Chris
+  institution: HPE - Cray 
+  country: us
