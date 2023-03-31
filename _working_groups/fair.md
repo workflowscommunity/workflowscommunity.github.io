@@ -10,6 +10,7 @@ members:
       link: https://www.research.manchester.ac.uk/portal/carole.goble.html
     - name: Stian Soiland-Reyes
       role: Chair
+      link: https://s11.no/
     - name: Sean R. Wilkinson
       role: Chair
       link: https://www.ornl.gov/staff-profile/sean-r-wilkinson
@@ -29,6 +30,7 @@ members:
     - name: Ziheng Sun
       link: https://zihengsun.github.io
     - name: Matthew Wolf
+      link: https://orcid.org/0000-0002-8393-4436
 ---
 
 The FAIR principles have laid a foundation for sharing and publishing digital assets and, in particular, data. The
@@ -74,6 +76,17 @@ _Data Intelligence_  **2**(1):108–121
 Events, presentations and activities are also available in WorkflowHub in the [**FAIR Computational Workflows Team**](https://workflowhub.eu/projects/76)
 
 Related past and upcoming events:
+
+
+
+* 2023-09-25/--27: [Open Science Fair](https://www.opensciencefair.eu/), 2023-09-25/–27, Madrid, Spain. 
+  - Papers due 2023-04-17.
+* 2023-05-29: [3rd Workshop on Metadata and Research (objects) Management for Linked Open Science](https://zbmed.github.io/damalos/) (DaMaLOS 2023)
+  - Abstract deadline 2023-04-07
+* 2023-05-22: [Galaxy Smörgåsbord 2023](https://gallantries.github.io/video-library/events/smorgasbord3/)
+* 2023-03-21: [**Make your bioinformatics workflows findable and citable**](https://www.biocommons.org.au/events/findable-workflows) workshop by [Australian BioCommons](https://www.biocommons.org.au/), [[videos](https://youtu.be/2kGKxaPuQN8)] [[materials](https://doi.org/10.5281/zenodo.7787488)]
+  - Ove Johan Ragnar Gustafsson (2023): [FAIR workflows](https://doi.org/10.5281/zenodo.7783773)
+* 2023-02-21: [**FAIRPoints 'Ask Me Anything' webinar on Software & Workflows**](https://www.youtube.com/watch?v=bvA8jiAs5tQ)
 
 * 2022-10-26/--28: [1st International Conference on FAIR Digital Objects](https://www.fdo2022.org/) (FDO 2022), Leiden, The Netherlands
 * 2022-05-13: [**FAIR Computational Workflows**](https://www.slideshare.net/carolegoble/fair-computational-workflows-251775741), _SERC Swedish e-Science Research Center Annual Meeting_
@@ -156,6 +169,11 @@ Related standards for FAIR computational workflows:
 _Articles below are published as [Open Access](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/), or with [green open access preprints](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/understanding/) where gold open access is not possible. Please [let us know](https://github.com/workflowscommunity/workflowscommunity.github.io/issues) if you are unable to access any of our publications. To add to this list, please [suggest a change](https://github.com/workflowscommunity/workflowscommunity.github.io/blob/main/_working_groups/fair.md)._
 
 ### 2023
+
+Marine Djaffardjy, George Marchment, Clémence Sebe, Raphael Blanchet, Khalid Bellajhame, Alban Gaignard, Frédéric Lemoine, Sarah Cohen-Boulakia (2023):  
+[**Developing and reusing bioinformatics data analysis pipelines using scientific workflow systems**]().  
+_Computational and Structural Biotechnology Journal_ **21**  
+https://doi.org/10.1016/j.csbj.2023.03.003
 
 Hirotaka Suetake, Tsukasa Fukusato, Takeo Igarashi, Tazro Ohta (2023):  
 [**Workflow sharing with automated metadata validation and test execution to improve the reusability of published workflows**](https://doi.org/10.1101/2022.07.08.499265).  
