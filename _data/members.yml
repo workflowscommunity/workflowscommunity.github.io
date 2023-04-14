@@ -911,3 +911,15 @@
   first_name: Patrick
   institution: Oak Ridge National Laboratory
   country: us
+
+- last_name: Rosen
+  first_name: Andrew
+  institution: University of California, Berkeley
+  country: us
+  link: https://asrosen.com
+
+- last_name: Duan
+  first_name: Dawn
+  institution: Northwestern University
+  country: us
+  link: https://jdawnduan.com/
