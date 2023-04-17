@@ -60,10 +60,6 @@
   repository: atomate2
   type: github
 
-- organization: materialsproject
-  repository: fireworks
-  type: github
-
 - organization: broadinstitute
   repository: cromwell
   type: github
