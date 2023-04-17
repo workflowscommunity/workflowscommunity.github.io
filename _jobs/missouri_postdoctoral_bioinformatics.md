@@ -4,7 +4,7 @@ title: "Postdoctoral Fellow - Bioinformatics & Computational Biology"
 organization: The University of Missouri
 organization_logo: https://missouri.edu/images/signatures/university/MUstacked.png
 location: Columbia, MO, USA
-application_deadline: 2023-03-31
+application_deadline: 2023-05-31
 apply_link: https://erecruit.umsystem.edu/psc/tamext/COLUM/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_JBPST_FL&Action=U&SiteId=9&FOCUS=Applicant&SiteId=9&JobOpeningId=42433&PostingSeq=1&
 employment_type: Full-time
 ---
