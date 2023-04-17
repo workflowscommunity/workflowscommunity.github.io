@@ -2,7 +2,7 @@
 layout: working_groups
 title: FAIR Computational Workflows
 description: Define FAIR principles for computational workflows that consider the complex lifecycle from specification to execution and data products
-status: Establishing
+status: Active
 join: https://forms.gle/5ZNJ8Vxdu5X3SCaw7
 members:
     - name: Carole Goble
