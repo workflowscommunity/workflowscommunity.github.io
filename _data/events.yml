@@ -78,8 +78,10 @@
   url: https://www.escience-conference.org/2023/
   type: Conference
   deadlines:
-    - name: Paper Submissions
+    - name: Papers Submission
       date: 2023-05-26
+    - name: Posters Submission
+      date: 2023-07-07
 
 - name: Platform for Advanced Scientific Computing
   series: PASC 2023
