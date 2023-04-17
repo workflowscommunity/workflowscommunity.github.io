@@ -115,6 +115,10 @@
   repository: pyiron_base
   type: github
 
+- organization: glotzerlab
+  repository: signac-flow
+  type: github
+ 
 # - organization: icui
 #   repository: nnodes
 #   type: github
