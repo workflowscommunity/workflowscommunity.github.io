@@ -52,6 +52,10 @@
   repository: fireworks
   type: github
 
+- organization: materialsproject
+  repository: jobflow
+  type: github
+
 - organization: broadinstitute
   repository: cromwell
   type: github
@@ -111,6 +115,10 @@
   repository: pyiron_base
   type: github
 
+- organization: glotzerlab
+  repository: signac-flow
+  type: github
+ 
 # - organization: icui
 #   repository: nnodes
 #   type: github
