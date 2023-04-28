@@ -211,6 +211,6 @@ for s in systems:
         Path("_systems").mkdir(parents=True, exist_ok=True)
 
         # write workflows data
-        filename = s["name"] if s["name"] else s["repository"]
+        filename = s["name"] if "name" in s else s["repository"]
         with open(f"_systems/{filename}.html", 'w') as f:
             f.write(contents)
