@@ -19,11 +19,13 @@
   repository: cctools
   type: github
   metadata: makeflow/.wci.yml
+  name: makeflow
 
 - organization: cooperative-computing-lab
   repository: cctools
   type: github
   metadata: taskvine/.wci.yml
+  name: taskvine
 
 - organization: bsc-wdc
   repository: compss
