@@ -20,6 +20,11 @@
   type: github
   metadata: makeflow/.wci.yml
 
+- organization: cooperative-computing-lab
+  repository: cctools
+  type: github
+  metadata: taskvine/.wci.yml
+
 - organization: bsc-wdc
   repository: compss
   type: github
