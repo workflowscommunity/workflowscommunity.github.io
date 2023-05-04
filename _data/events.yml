@@ -337,3 +337,13 @@
   deadlines:
     - name: Papers Submission
       date: 2023-04-16
+
+- name: 3rd Workshop on Reproducible Workflows, Data Management, and Security
+  series: ReWoRDS 2023
+  start_date: 2023-10-10
+  end_date: 2023-10-10
+  location: Limassol, Cyprus
+  url: https://sites.google.com/vols.utk.edu/rewords23/home
+  deadlines:
+    - name: Papers Submission
+      date: 2023-07-10
