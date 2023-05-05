@@ -82,8 +82,9 @@ Related past and upcoming events:
 * 2023-09-25/--27: [Open Science Fair](https://www.opensciencefair.eu/), 2023-09-25/–27, Madrid, Spain. 
   - Papers due 2023-04-17.
 * 2023-05-29: [3rd Workshop on Metadata and Research (objects) Management for Linked Open Science](https://zbmed.github.io/damalos/) (DaMaLOS 2023)
-  - Abstract deadline 2023-04-07
 * 2023-05-22: [Galaxy Smörgåsbord 2023](https://gallantries.github.io/video-library/events/smorgasbord3/)
+* 2023-04-15/--16: The First Practically FAIR 2023 (PFAIR 2023) at [ICPE 2023](https://icpe2023.spec.org/workshops/)
+  - Line Pouchard: [FAIR enabling reuse of data-intensive workflows and scientific reproducibility](https://doi.org/10.5281/zenodo.7893867) (keynote)
 * 2023-03-21: [**Make your bioinformatics workflows findable and citable**](https://www.biocommons.org.au/events/findable-workflows) workshop by [Australian BioCommons](https://www.biocommons.org.au/), [[videos](https://youtu.be/2kGKxaPuQN8)] [[materials](https://doi.org/10.5281/zenodo.7787488)]
   - Ove Johan Ragnar Gustafsson (2023): [FAIR workflows](https://doi.org/10.5281/zenodo.7783773)
 * 2023-02-21: [**FAIRPoints 'Ask Me Anything' webinar on Software & Workflows**](https://www.youtube.com/watch?v=bvA8jiAs5tQ)
@@ -180,6 +181,15 @@ Hirotaka Suetake, Tsukasa Fukusato, Takeo Igarashi, Tazro Ohta (2023):
 _GigaScience_ **12**:giad006  
 <https://doi.org/10.1093/gigascience/giad006>
 
+Line Pouchard (2023):  
+[**FAIR enabling reuse of data-intensive workflows and scientific reproducibility**](https://doi.org/10.5281/zenodo.7893867).  
+_ICPE '23 Companion: Companion of the 2023 ACM/SPEC International Conference on Performance Engineering_  
+<https://doi.org/10.1145/3578245.3586012>
+
+Fadoua Rafii, Horacio Gonzalez-Velez, Adriana E. Chis (2023):  
+[**Automatic FAIR Provenance Collection and Visualization for Time Series**](https://doi.org/10.1145/3578245.3585026).  
+_ICPE '23 Companion: Companion of the 2023 ACM/SPEC International Conference on Performance Engineering_  
+<https://doi.org/10.1145/3578245.3585026>
 
 ### 2022
 
