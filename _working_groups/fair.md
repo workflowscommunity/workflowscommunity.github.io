@@ -48,6 +48,15 @@ In this working group, we seek to:
 - Define recommendations for FAIR workflow developers and systems
 - Define processes to automate FAIRness in workflows by recording necessary provenance data
 
+## Working Group meetings
+
+This working Group is open for anyone interested, please feel free to [join the Workflows Community Initiative](https://workflows.community/contact) or attend one of our calls.
+
+* **Meeting schedule**:  Monthly 2nd Thursday 16:00 UTC (no daylight savings observed)
+* **Meeting agenda/telcon**: [Meeting notes](https://docs.google.com/document/d/1sULkJwVACjSxQnM5bvjgYSkawZhUEkC3s-A5CvgmNT4/edit)
+* **Slack chat**: [#fair-computational-workflows](https://workflowscommunity.slack.com/archives/C034U2NEUTS) on workflowscommunity.slack.com ([invite link](https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ))
+
+
 ## What are FAIR Computational Workflows?
 
 Adapted from the article **FAIR Computational Workflows** <https://doi.org/10.1162/dint_a_00033>:
