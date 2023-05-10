@@ -945,3 +945,13 @@
   first_name: Jonathan
   institution: HPE
   country: us
+
+- last_name: Seinen
+  first_name: Clint
+  institution: The Canadian Centre for Climate Modelling and Analysis
+  country: ca
+
+- last_name: Shao
+  first_name: Andrew
+  institution: HPE
+  country: ca
