@@ -955,3 +955,9 @@
   first_name: Andrew
   institution: HPE
   country: ca
+
+- last_name: Ganose
+  first_name: Alex
+  institution: Imperial College London
+  country: gb
+  link: https://virtualatoms.org
