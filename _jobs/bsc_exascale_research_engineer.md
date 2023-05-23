@@ -1,11 +1,11 @@
 ---
 layout: jobs
-title: "Exascale Supercomputer Software Container Engineer (RE2)"
+title: "Exascale Supercomputer Software Container Engineer (RE1)"
 organization: Barcelona Supercomputing Center
 organization_logo: /images/institutions/bsc.png
 location: Barcelona, Spain
-application_deadline: 2023-03-31
-apply_link: https://www.bsc.es/join-us/job-opportunities/922cswdcre2
+application_deadline: 2023-06-30
+apply_link: https://www.bsc.es/join-us/job-opportunities/922cswdcre1
 employment_type: Full-time
 ---
 
@@ -21,8 +21,7 @@ Look at the BSC experience:
 
 BSC is looking for a research engineer that contributes to the container support and to an ecosystem targeting RISC-V-based ISA for a European HPC accelerator. The position is funded by a project aiming to build the software infrastructure and toolchain for an FPGA-based emulator for an energy-efficient Exascale system.
 
-More specifically, the candidate will collaborate with the Workflows and Distributed Computing (WDC) group to validate container images running PyCOMPSs applications ([compss.bsc.es](compss.bsc.es)). PyCOMPSs is a task-based programming model developed by the WDC group, that aims at easing the development of parallel applications for distributed computing. Between the applications to validate, the candidate will work with machine learning applications (dislib scripts, see [dislib.bsc.es](dislib.bsc.es)) parallelized with COMPSs. In addition, the candidate will support 
-the whole project on its CD/CI infrastructure.
+More specifically, the candidate will collaborate with the Workflows and Distributed Computing (WDC) group to validate container images running PyCOMPSs applications ([compss.bsc.es](compss.bsc.es)). PyCOMPSs is a task-based programming model developed by the WDC group, that aims at easing the development of parallel applications for distributed computing. Between the applications to validate, the candidate will work with machine learning applications (dislib scripts, see [dislib.bsc.es](dislib.bsc.es)) parallelized with COMPSs. In addition, the candidate will support the whole project on its CD/CI infrastructure.
 
 ## Key Duties
 

@@ -289,7 +289,8 @@ permalink: /
                                 {{event.start_date | date: "%b %d, %Y" }}
                             </div>
                             <div class="media-body">
-                                <h3 class="heading" style="line-height: 1.1em">{{event.series}}<br />
+                                <h3 class="heading" style="line-height: 1.1em">
+                                    <a href="{{event.url}}" target="_blank" style="color: #000">{{event.series}}</a><br />
                                     <span style="font-size: 0.7em; color: #e83e8c">{{event.location}}</span>
                                 </h3>
                                 {% if event.deadlines %}

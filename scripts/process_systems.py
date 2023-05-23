@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2022 Workflows Community Initiative.
+# Copyright (c) 2023 Workflows Community Initiative.
 
 import datetime
 import os
@@ -211,5 +211,6 @@ for s in systems:
         Path("_systems").mkdir(parents=True, exist_ok=True)
 
         # write workflows data
-        with open(f"_systems/{s['repository']}.html", 'w') as f:
+        filename = s["name"] if "name" in s else s["repository"]
+        with open(f"_systems/{filename}.html", 'w') as f:
             f.write(contents)

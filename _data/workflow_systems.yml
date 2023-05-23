@@ -19,6 +19,13 @@
   repository: cctools
   type: github
   metadata: makeflow/.wci.yml
+  name: makeflow
+
+- organization: cooperative-computing-lab
+  repository: cctools
+  type: github
+  metadata: taskvine/.wci.yml
+  name: taskvine
 
 - organization: bsc-wdc
   repository: compss
@@ -50,6 +57,10 @@
 
 - organization: materialsproject
   repository: fireworks
+  type: github
+
+- organization: materialsproject
+  repository: jobflow
   type: github
 
 - organization: broadinstitute
@@ -107,6 +118,14 @@
   repository: SmartSim
   type: github
 
+- organization: pyiron
+  repository: pyiron_base
+  type: github
+
+- organization: glotzerlab
+  repository: signac-flow
+  type: github
+ 
 # - organization: icui
 #   repository: nnodes
 #   type: github

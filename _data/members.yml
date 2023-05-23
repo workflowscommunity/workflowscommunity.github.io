@@ -865,3 +865,110 @@
   institution: U of Houston - Clear Lake
   country: us
   link: https://www.linkedin.com/in/liwen-shih-%E6%96%BD%E9%BA%97%E7%B4%8B-08263b33/
+
+- last_name: Downton
+  first_name: Matthew
+  institution: NCI Australia
+  country: au
+
+- last_name: Zulfiqar
+  first_name: Mahnoor
+  institution: Friedrich Schiller University Jena
+  country: de
+
+- last_name: Pigot
+  first_name: Simon
+  institution: CSIRO
+  country: au
+
+- last_name: McBride
+  first_name: Chris
+  institution: HPE - Cray 
+  country: us
+
+- last_name: Saurav
+  first_name: Sumit Kumar 
+  institution: Centre for Development of Advanced Computing  
+  country: in
+
+- last_name: Antonio
+  first_name: Vicente
+  institution: AIEP
+  country: cl
+
+- last_name: Pradal
+  first_name: Christophe
+  institution: CIRAD & Inria
+  country: fr
+
+- last_name: Marozzo
+  first_name: Fabrizio
+  institution: University of Calabria
+  country: it
+  link: https://scalab.dimes.unical.it/marozzo/
+
+- last_name: Widener
+  first_name: Patrick
+  institution: Oak Ridge National Laboratory
+  country: us
+
+- last_name: Rosen
+  first_name: Andrew
+  institution: University of California, Berkeley
+  country: us
+  link: https://asrosen.com
+
+- last_name: Duan
+  first_name: Dawn
+  institution: Northwestern University
+  country: us
+  link: https://jdawnduan.com/
+
+- last_name: Alam
+  first_name: Mohsin
+  institution: Netsol Technologies
+  country: pk
+
+- last_name: Zhu
+  first_name: Ruijie
+  institution: Northwestern University
+  country: us
+  link: https://ruijiezhu.us
+
+- last_name: Marquez
+  first_name: Jack
+  institution: University of Tennessee
+  country: us
+  link: https://www.linkedin.com/in/jack-marquez/
+
+- last_name: Sparks
+  first_name: Jonathan
+  institution: HPE
+  country: us
+
+- last_name: Seinen
+  first_name: Clint
+  institution: The Canadian Centre for Climate Modelling and Analysis
+  country: ca
+
+- last_name: Shao
+  first_name: Andrew
+  institution: HPE
+  country: ca
+
+- last_name: Ganose
+  first_name: Alex
+  institution: Imperial College London
+  country: gb
+  link: https://virtualatoms.org
+
+- last_name: Titov
+  first_name: Mikhail
+  institution: Brookhaven National Laboratory
+  country: us
+  link: https://www.bnl.gov/staff/mtitov
+
+- last_name: Pritchard
+  first_name: Howard
+  institution: Los Alamos National Laboratory
+  country: us

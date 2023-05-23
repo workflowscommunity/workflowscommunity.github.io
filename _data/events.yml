@@ -1,3 +1,14 @@
+- name: DOE Cross-facility Workflows Training
+  series: DOE Workflows Training
+  location: virtual
+  start_date: 2023-04-12
+  end_date: 2023-04-12
+  url: https://docs.google.com/forms/d/e/1FAIpQLSee89GYqzFdLvrdtUiUdPDz0-WqgybD8pUts-gupEHwf6VbPA/viewform
+  type: Workshop
+  deadlines:
+    - name: Registration
+      date: 2023-04-05
+
 - name: 1st IEEE International Workshop on Workflows in Distributed Environments
   series: WiDE 2023
   location: Torino, Italy
@@ -7,7 +18,7 @@
   type: Workshop
   deadlines:
     - name: Paper Submissions
-      date: 2023-04-07
+      date: 2023-04-15
 
 - name: "2023 Common Workflow Language community conference"
   series: CWL Community Conference
@@ -67,8 +78,10 @@
   url: https://www.escience-conference.org/2023/
   type: Conference
   deadlines:
-    - name: Paper Submissions
+    - name: Papers Submission
       date: 2023-05-26
+    - name: Posters Submission
+      date: 2023-07-07
 
 - name: Platform for Advanced Scientific Computing
   series: PASC 2023
@@ -325,14 +338,12 @@
     - name: Papers Submission
       date: 2023-04-16
 
-
-- name: 2023 IEEE International Conference on Big Data
-  series: IEEE BigData 2023
-  start_date: 2023-12-15
-  end_date: 2023-12-18
-  location: Sorrento, Italy
-  url: https://bigdataieee.org/BigData2023
-  type: Conference
+- name: 3rd Workshop on Reproducible Workflows, Data Management, and Security
+  series: ReWoRDS 2023
+  start_date: 2023-10-10
+  end_date: 2023-10-10
+  location: Limassol, Cyprus
+  url: https://sites.google.com/vols.utk.edu/rewords23/home
   deadlines:
     - name: Papers Submission
-      date: 2023-09-03
+      date: 2023-07-10

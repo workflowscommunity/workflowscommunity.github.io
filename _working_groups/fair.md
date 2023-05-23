@@ -2,7 +2,7 @@
 layout: working_groups
 title: FAIR Computational Workflows
 description: Define FAIR principles for computational workflows that consider the complex lifecycle from specification to execution and data products
-status: Establishing
+status: Active
 join: https://forms.gle/5ZNJ8Vxdu5X3SCaw7
 members:
     - name: Carole Goble
@@ -10,6 +10,7 @@ members:
       link: https://www.research.manchester.ac.uk/portal/carole.goble.html
     - name: Stian Soiland-Reyes
       role: Chair
+      link: https://s11.no/
     - name: Sean R. Wilkinson
       role: Chair
       link: https://www.ornl.gov/staff-profile/sean-r-wilkinson
@@ -29,6 +30,7 @@ members:
     - name: Ziheng Sun
       link: https://zihengsun.github.io
     - name: Matthew Wolf
+      link: https://orcid.org/0000-0002-8393-4436
 ---
 
 The FAIR principles have laid a foundation for sharing and publishing digital assets and, in particular, data. The
@@ -45,6 +47,15 @@ In this working group, we seek to:
 - Define metrics to measure the FAIRness of a workflow
 - Define recommendations for FAIR workflow developers and systems
 - Define processes to automate FAIRness in workflows by recording necessary provenance data
+
+## Working Group meetings
+
+This working Group is open for anyone interested, please feel free to [join the Workflows Community Initiative](https://workflows.community/contact) or attend one of our calls.
+
+* **Meeting schedule**:  Monthly 2nd Thursday 16:00 UTC (no daylight savings observed)
+* **Meeting agenda/telcon**: [Meeting notes](https://docs.google.com/document/d/1sULkJwVACjSxQnM5bvjgYSkawZhUEkC3s-A5CvgmNT4/edit)
+* **Slack chat**: [#fair-computational-workflows](https://workflowscommunity.slack.com/archives/C034U2NEUTS) on workflowscommunity.slack.com ([invite link](https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ))
+
 
 ## What are FAIR Computational Workflows?
 
@@ -74,6 +85,18 @@ _Data Intelligence_  **2**(1):108–121
 Events, presentations and activities are also available in WorkflowHub in the [**FAIR Computational Workflows Team**](https://workflowhub.eu/projects/76)
 
 Related past and upcoming events:
+
+
+
+* 2023-09-25/--27: [Open Science Fair](https://www.opensciencefair.eu/), 2023-09-25/–27, Madrid, Spain. 
+  - Papers due 2023-04-17.
+* 2023-05-29: [3rd Workshop on Metadata and Research (objects) Management for Linked Open Science](https://zbmed.github.io/damalos/) (DaMaLOS 2023)
+* 2023-05-22: [Galaxy Smörgåsbord 2023](https://gallantries.github.io/video-library/events/smorgasbord3/)
+* 2023-04-15/--16: The First Practically FAIR 2023 (PFAIR 2023) at [ICPE 2023](https://icpe2023.spec.org/workshops/)
+  - Line Pouchard: [FAIR enabling reuse of data-intensive workflows and scientific reproducibility](https://doi.org/10.5281/zenodo.7893867) (keynote)
+* 2023-03-21: [**Make your bioinformatics workflows findable and citable**](https://www.biocommons.org.au/events/findable-workflows) workshop by [Australian BioCommons](https://www.biocommons.org.au/), [[videos](https://youtu.be/2kGKxaPuQN8)] [[materials](https://doi.org/10.5281/zenodo.7787488)]
+  - Ove Johan Ragnar Gustafsson (2023): [FAIR workflows](https://doi.org/10.5281/zenodo.7783773)
+* 2023-02-21: [**FAIRPoints 'Ask Me Anything' webinar on Software & Workflows**](https://www.youtube.com/watch?v=bvA8jiAs5tQ)
 
 * 2022-10-26/--28: [1st International Conference on FAIR Digital Objects](https://www.fdo2022.org/) (FDO 2022), Leiden, The Netherlands
 * 2022-05-13: [**FAIR Computational Workflows**](https://www.slideshare.net/carolegoble/fair-computational-workflows-251775741), _SERC Swedish e-Science Research Center Annual Meeting_
@@ -155,11 +178,36 @@ Related standards for FAIR computational workflows:
 
 _Articles below are published as [Open Access](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/), or with [green open access preprints](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/understanding/) where gold open access is not possible. Please [let us know](https://github.com/workflowscommunity/workflowscommunity.github.io/issues) if you are unable to access any of our publications. To add to this list, please [suggest a change](https://github.com/workflowscommunity/workflowscommunity.github.io/blob/main/_working_groups/fair.md)._
 
+### 2023
 
-Hirotaka Suetake, Tsukasa Fukusato, Takeo Igarashi, Tazro Ohta (2022):  
+Marine Djaffardjy, George Marchment, Clémence Sebe, Raphael Blanchet, Khalid Bellajhame, Alban Gaignard, Frédéric Lemoine, Sarah Cohen-Boulakia (2023):  
+[**Developing and reusing bioinformatics data analysis pipelines using scientific workflow systems**]().  
+_Computational and Structural Biotechnology Journal_ **21**  
+https://doi.org/10.1016/j.csbj.2023.03.003
+
+Hirotaka Suetake, Tsukasa Fukusato, Takeo Igarashi, Tazro Ohta (2023):  
 [**Workflow sharing with automated metadata validation and test execution to improve the reusability of published workflows**](https://doi.org/10.1101/2022.07.08.499265).  
-_bioRxiv_  
-<https://doi.org/10.1101/2022.07.08.499265>
+_GigaScience_ **12**:giad006  
+<https://doi.org/10.1093/gigascience/giad006>
+
+Line Pouchard (2023):  
+[**FAIR enabling reuse of data-intensive workflows and scientific reproducibility**](https://doi.org/10.5281/zenodo.7893867).  
+_ICPE '23 Companion: Companion of the 2023 ACM/SPEC International Conference on Performance Engineering_  
+<https://doi.org/10.1145/3578245.3586012>
+
+Fadoua Rafii, Horacio Gonzalez-Velez, Adriana E. Chis (2023):  
+[**Automatic FAIR Provenance Collection and Visualization for Time Series**](https://doi.org/10.1145/3578245.3585026).  
+_ICPE '23 Companion: Companion of the 2023 ACM/SPEC International Conference on Performance Engineering_  
+<https://doi.org/10.1145/3578245.3585026>
+
+### 2022
+
+Raül Sirvent, Javier Conejero, Francesc Lordan, Jorge Ejarque, Laura Rodríguez-Navas, José M. Fernández, Salvador Capella-Gutiérrez, Rosa M. Badia (2022):  
+[**Automatic, Efficient and Scalable Provenance Registration for FAIR HPC Workflows**](http://hdl.handle.net/2117/384589).  
+_2022 IEEE/ACM Workshop on Workflows in Support of Large-Scale Science (WORKS)_  
+<https://doi.org/10.1109/WORKS56498.2022.00006>
+[[preprint](http://hdl.handle.net/2117/384589)]
+[[slides](https://doi.org/10.5281/zenodo.7701868)]
 
 Rudolf Wittner, Cecilia Mascia, Matej Gallo, Francesca Frexia, Heimo Müller, Markus Plass, Jörg Geiger, Petr Holub (2022):  
 [**Lightweight Distributed Provenance Model for Complex Real–world Environments**](https://doi.org/10.1038/s41597-022-01537-6).  
@@ -253,7 +301,7 @@ _Research Data Alliance_
 <https://doi.org/10.15497/RDA00068>
 
 
-## 2021
+### 2021
 
 Rafael Ferreira da Silva, Henri Casanova, Kyle Chard, Ilkay Altintas, Rosa M Badia, Bartosz Balis, Tainã Coleman, Frederik Coppens, Frank Di Natale, Bjoern Enders, Thomas Fahringer, Rosa Filgueira, Grigori Fursin, Daniel Garijo, Carole Goble, Dorran Howell, Shantenu Jha, Daniel S. Katz, Daniel Laney, Ulf Leser, Maciej Malawski, Kshitij Mehta, Loïc Pottier, Jonathan Ozik, J. Luc Peterson, Lavanya Ramakrishnan, Stian Soiland-Reyes, Douglas Thain, Matthew Wolf (2021):  
 [**A Community Roadmap for Scientific Workflows Research and Development**](https://arxiv.org/pdf/2110.02168).  
@@ -303,7 +351,7 @@ Daniel S. Katz, Morane Gruenpeter, Tom Honeyman, Lorraine Hwang, Mark D. Wilkins
 [**A Fresh Look at FAIR for Research Software**](https://arxiv.org/pdf/2101.10883).  
 [arXiv:2101.10883](https://arxiv.org/abs/2101.10883) [[pdf](https://arxiv.org/pdf/2101.10883)]
 
-## 2020
+### 2020
 
 Carole Goble, Sarah Cohen-Boulakia, Stian Soiland-Reyes, Daniel Garijo, Yolanda Gil, Michael R. Crusoe, Kristian Peters, Daniel Schober (2020):  
 [**FAIR Computational Workflows**](https://doi.org/10.1162/dint_a_00033).  
@@ -321,7 +369,7 @@ _Data Science_ **3**(1) pp. 37–59.
 <https://doi.org/10.3233/DS-190026>
 
 
-## 2019
+### 2019
 
 Farah Zaib Khan, Stian Soiland-Reyes, Richard O. Sinnott, Andrew Lonie, Carole Goble, Michael R. Crusoe (2019):  
 [**Sharing interoperable workflow provenance: A review of best practices and their practical application in CWLProv**](https://doi.org/10.1093/gigascience/giz095).  
@@ -334,7 +382,7 @@ _Nature_ **573**
 <https://doi.org/10.1038/d41586-019-02619-z>
 
 
-## 2018
+### 2018
 
 Jeffrey M. Perkel (2018):  
 [**That's the way we flow**](https://doi.org/10.1038/d41586-019-02619-z).  
@@ -358,7 +406,7 @@ Pablo Carbonell, Adrian J. Jervis, Christopher J. Robinson, Cunyu Yan, Mark Duns
 _Communications Biology_ **1**:66  
 <https://doi.org/10.1038/s42003-018-0076-9>
 
-## 2017
+### 2017
 
 Stephen J Eglen, Ben Marwick, Yaroslav O Halchenko, Michael Hanke, Shoaib Sufi, Padraig Gleeson, R Angus Silver, Andrew P Davison, Linda Lanyon, Mathew Abrams, Thomas Wachtler, David J Willshaw, Christophe Pouzat, Jean-Baptiste Poline (2017):  
 [**Toward standard practices for sharing computer code and programs in neuroscience**](https://doi.org/10.1038/nn.4550).  
