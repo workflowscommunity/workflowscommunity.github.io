@@ -324,3 +324,15 @@
   deadlines:
     - name: Papers Submission
       date: 2023-04-16
+
+
+- name: 2023 IEEE International Conference on Big Data
+  series: IEEE BigData 2023
+  start_date: 2023-12-15
+  end_date: 2023-12-18
+  location: Sorrento, Italy
+  url: https://bigdataieee.org/BigData2023
+  type: Conference
+  deadlines:
+    - name: Papers Submission
+      date: 2023-09-03
