@@ -972,3 +972,9 @@
   first_name: Howard
   institution: Los Alamos National Laboratory
   country: us
+
+- last_name: Hudson
+  first_name: Stephen
+  institution: Argonne National Laboratory
+  country: us
+  link: https://github.com/shuds13
