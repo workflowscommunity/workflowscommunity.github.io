@@ -14,6 +14,8 @@ This is a list of best practices references for [FAIR Computational Workflows](.
 * [Ten simple rules for responsible big data research](https://doi.org/10.1371/journal.pcbi.1005399)
 * [Ten simple rules for documenting scientific software](https://doi.org/10.1371/journal.pcbi.1006561)
 * [Streamlining data-intensive biology with workflow systems](https://doi.org/10.1093/gigascience/giaa140)
+* [Galaxy Training Network: FAIR Data, Workflows, and Research](https://training.galaxyproject.org/training-material/topics/fair/)
+* [Galaxy Training Network: Foundations of Data Science](https://training.galaxyproject.org/training-material/topics/data-science/)
 
 
 ## Best practices for Common Workflow Language
@@ -38,4 +40,9 @@ This is a list of best practices references for [FAIR Computational Workflows](.
 ## Best practices for Nextflow
 
 * [nf-core pipeline structure](https://nf-co.re/docs/contributing/adding_pipelines#nf-core-pipeline-structure)
+
+<!--
+## Best practice for R
+
+-->
 
