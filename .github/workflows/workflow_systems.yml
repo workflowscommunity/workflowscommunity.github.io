@@ -2,7 +2,7 @@ name: Build workflow systems
 
 on:
   schedule:
-    - cron: "0 0,12 * * *"
+    - cron: "0 0,8,16 * * *"
   push:
     branches:
       - main
