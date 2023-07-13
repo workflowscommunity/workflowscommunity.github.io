@@ -1,3 +1,37 @@
+- name: Nextflow Summit - Barcelona 2023
+  location: Barcelona, Spain
+  start_date: 2023-10-16
+  end_date: 2023-10-20
+  url: https://summit.nextflow.io
+  type: Summit
+  deadlines:
+    - name: Call for abstracts
+      date: 2023-07-31
+
+- name: Nextflow Summit - Boston 2023
+  location: Boston, USA
+  start_date: 2023-11-28
+  end_date: 2023-11-30
+  url: https://summit.nextflow.io/boston/
+  type: Summit
+  deadlines:
+    - name: Call for abstracts
+      date: 2023-07-31
+
+- name: Nextflow foundational (basics) training
+  location: virtual
+  start_date: 2023-09-06
+  end_date: 2023-09-08
+  url: https://nf-co.re/events/2023/training-basic-2023
+  type: Workshop
+
+- name: Nextflow advanced training
+  location: virtual
+  start_date: 2023-09-27
+  end_date: 2023-09-28
+  url: https://nf-co.re/events/2023/training-sept-2023
+  type: Workshop
+
 - name: DOE Cross-facility Workflows Training
   series: DOE Workflows Training
   location: virtual
