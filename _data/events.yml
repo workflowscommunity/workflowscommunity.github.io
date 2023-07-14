@@ -1,4 +1,5 @@
 - name: Nextflow Summit - Barcelona 2023
+  series: Nextflow Summit - Barcelona 2023
   location: Barcelona, Spain
   start_date: 2023-10-16
   end_date: 2023-10-20
@@ -9,6 +10,7 @@
       date: 2023-07-31
 
 - name: Nextflow Summit - Boston 2023
+  series: Nextflow Summit - Boston 2023
   location: Boston, USA
   start_date: 2023-11-28
   end_date: 2023-11-30
@@ -19,6 +21,7 @@
       date: 2023-07-31
 
 - name: Nextflow foundational (basics) training
+  series: Nextflow foundational (basics) training
   location: virtual
   start_date: 2023-09-06
   end_date: 2023-09-08
@@ -26,6 +29,7 @@
   type: Workshop
 
 - name: Nextflow advanced training
+  series: Nextflow advanced training
   location: virtual
   start_date: 2023-09-27
   end_date: 2023-09-28
