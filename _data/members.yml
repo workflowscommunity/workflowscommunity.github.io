@@ -1001,3 +1001,8 @@
   first_name: Meznah
   institution: University of Manchester
   country: gb
+
+- last_name: White
+  first_name: Alainna
+  institution: NVIDIA
+  country: us
