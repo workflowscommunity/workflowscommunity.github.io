@@ -125,6 +125,11 @@
 - organization: glotzerlab
   repository: signac-flow
   type: github
+
+- organization: frobnitzem
+  repository: mpi_list
+  type: github
+  metadata: docs
  
 # - organization: icui
 #   repository: nnodes
