@@ -1,4 +1,5 @@
 [codespell]
-skip = .git,*.pdf,*.svg
-#
-# ignore-words-list =
+skip = .git,*.pdf,*.svg,.*.min.js,aos.js,bibliography.*
+# some case sensitive abbreviations etc
+ignore-regex = \b(Braket|COLUM|IMPRes|NWO|SLAC|VertX)\b
+ignore-words-list = crate,nd,theses
