@@ -10,7 +10,7 @@ This is a list of best practices references for [FAIR Computational Workflows](.
 
 * [Dockstore: Best Practices for Secure and FAIR Workflows](https://docs.dockstore.org/en/stable/advanced-topics/best-practices/best-practices-secure-fair-workflows.html)
 * [Ten simple rules for making a software tool workflow-ready](https://doi.org/10.1371/journal.pcbi.1009823)
-* [Ten simple fules for reprodicible computational research](https://doi.org/10.1371/journal.pcbi.1003285)
+* [Ten simple fules for reproducible computational research](https://doi.org/10.1371/journal.pcbi.1003285)
 * [Ten simple rules for responsible big data research](https://doi.org/10.1371/journal.pcbi.1005399)
 * [Ten simple rules for documenting scientific software](https://doi.org/10.1371/journal.pcbi.1006561)
 * [Streamlining data-intensive biology with workflow systems](https://doi.org/10.1093/gigascience/giaa140)
