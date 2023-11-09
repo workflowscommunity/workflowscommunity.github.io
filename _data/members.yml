@@ -987,6 +987,117 @@
 
 - last_name: Garijo
   first_name: Daniel
-  insitution: Universidad Politécnica de Madrid
+  institution: Universidad Politécnica de Madrid
   country: es
   link: https://dgarijo.com
+
+- last_name: Bhattarai
+  first_name: Rajat
+  intitution: Tennessee Tech University
+  country: us
+  link: https://rajatbhattarai.com.np/
+
+- last_name: Aloqalaa
+  first_name: Meznah
+  institution: University of Manchester
+  country: gb
+
+- last_name: White
+  first_name: Alainna
+  institution: NVIDIA
+  country: us
+
+- last_name: Dakle
+  first_name: Pushkar
+  institution: Monash University
+  country: au
+  link: https://github.com/pd321
+
+- last_name: Capella-Gutierrez
+  first_name: Salvador
+  institution: Barcelona Supercomputing Center
+  country: es
+
+- last_name: Kirkpatrick
+  first_name: Christine
+  institution: SDSC 
+  country: us
+
+- last_name: BERTI-EQUILLE
+  first_name: Laure
+  institution: IRD
+  country: fr
+  link: https://laureberti.github.io/website/
+
+- last_name: Missier
+  first_name: Paolo
+  institution: Newcastle University 
+  country: gb
+  link: https://sites.google.com/site/paolomissier/
+
+- last_name: Rogers
+  first_name: David
+  institution: ORNL
+  country: us
+  link: https://www.olcf.ornl.gov/directory/staff-member/david-rogers/
+
+- last_name: Rybicki
+  first_name: Jedrzej
+  institution: Forschungszentrum Juelich GmbH
+  country: de
+
+- last_name: Waroquiers
+  first_name: David
+  institution: Matgenix
+  country: be
+  link: https://matgenix.com/
+
+- last_name: Kanwal
+  first_name: Sehrish
+  institution: University of Melbourne
+  country: au
+  link: https://findanexpert.unimelb.edu.au/profile/685501-sehrish-kanwal
+
+- last_name: Uddin
+  first_name: Aleem
+  institution: Australian Research Data Commons
+  country: au
+  link: www.linkedin.com/in/aleem1uddin
+
+- last_name: Momin
+  first_name: Saim
+  institution: Max Planck Institute of Immunobiology and Epigenetics, Freiburg
+  country: de
+  link: https://www.linkedin.com/in/saim-momin/
+
+- last_name: Khan
+  first_name: Farah Zaib
+  institution: Australian BioCommons
+  country: au
+
+- last_name: Montella
+  first_name: Raffaele
+  institution: University of Naples "Parthenope"
+  country: it
+  link: https://raffaelemontella.it
+
+- last_name: Gueroudji
+  first_name: Amal
+  institution: Argonne National Laboratory 
+  country: us
+
+- last_name: Di Luccio
+  first_name: Diana
+  institution: University of Naples "Parthenope"
+  country: it
+
+- last_name: De Vita
+  first_name: Ciro
+  institution: University of Naples "Parthenope"
+  country: it
+
+# - last_name:
+#   first_name:
+#   institution: 
+#   country:
+#   link: 

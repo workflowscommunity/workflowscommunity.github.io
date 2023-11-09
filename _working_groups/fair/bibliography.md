@@ -12,6 +12,13 @@ _Articles below are published as [Open Access](https://www.library.manchester.ac
 
 ### 2023
 
+
+
+Casper de Visser, Lennart F. Johansson, Purva Kulkarni, Hailiang Mei, Pieter Neerincx, K. Joeri van der Velde, Péter Horvatovich, Alain J. van Gool, Morris A. Swertz, Peter A. C. ‘t Hoen, Anna Niehues (2023):  
+[**Ten quick tips for building FAIR workflows**](https://doi.org/10.1371/journal.pcbi.1011369).  
+_PLOS Computational Biology_  **19**(9): e1011369   
+<https://doi.org/10.1371/journal.pcbi.1011369>
+
 Marine Djaffardjy, George Marchment, Clémence Sebe, Raphael Blanchet, Khalid Bellajhame, Alban Gaignard, Frédéric Lemoine, Sarah Cohen-Boulakia (2023):  
 [**Developing and reusing bioinformatics data analysis pipelines using scientific workflow systems**]().  
 _Computational and Structural Biotechnology Journal_ **21**  

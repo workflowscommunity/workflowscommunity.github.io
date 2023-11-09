@@ -33,7 +33,7 @@ We do NOT aim to do any of the following:
 - Define **which performance metrics are essential** for the workflow research domain. Instead, we want to define several benchmarking suites to evaluate
   different metrics
 - Determine the **universally best tool** for running workflows. Instead, we want to help users compare the performances of the different Workflow
-  Managment Systems for their specific needs
+  Management Systems for their specific needs
 
 ## Why is benchmarking important?
 

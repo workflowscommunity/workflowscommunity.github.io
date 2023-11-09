@@ -13,156 +13,47 @@ permalink: /
 
 <!-- Stories -->
 {% assign story = site.stories | sort: "date" | reverse %}
-<section class="ftco-section-featured ftco-animate">
-    <div class="container-fluid" data-scrollax-parent="true">
-        <div class="row no-gutters d-flex align-items-center" data-scrollax=" properties: { translateY: '-30%'}">
-
-            <div class="col-md-3 mb-3">
-                <a href="{{ story[2].url }}" class="featured-img">
-                    <div class="text-1 p-4 d-flex align-items-center">
-                        <h3 style="font-size: 1.1em">
-                            {{ story[2].title }}<br />
-                            <span class="tag">{{ story[2].date | date: "%b %d, %Y" }}</span>
-                        </h3>
-                    </div>
-                    <img src="{{ story[2].image }}" class="img-fluid" alt="">
-                    <div class="text p-4 d-flex align-items-center">
-                        <div class="user d-flex align-items-center">
-                            <h3>
-                                {% for author in story[2].authors %}
-                                {{author.name}} <span class="position">{{author.institution}}</span><br />
-                                {% endfor %}
-                            </h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-6">
-                <div class="row no-gutters">
-                    <div class="col-md-12">
-                        <div class="row no-gutters d-flex align-items-end">
-                            <div class="col-md-7">
-                                <a href="{{ story[0].url }}" class="featured-img">
-                                    <div class="text-1 p-4 d-flex align-items-center">
-                                        <h3 style="font-size: 1.1em">
-                                            {{ story[0].title }}<br />
-                                            <span class="tag">{{ story[0].date | date: "%b %d, %Y" }}</span>
-                                        </h3>
-                                    </div>
-                                    <img src="{{ story[0].image }}" class="img-fluid" alt="">
-                                    <div class="text p-4 d-flex align-items-center">
-                                        <div class="user d-flex align-items-center">
-                                            <h3>
-                                                {% for author in story[0].authors %}
-                                                {{author.name}} <span
-                                                    class="position">{{author.institution}}</span><br />
-                                                {% endfor %}
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-5">
-                                <a href="{{ story[4].url }}" class="featured-img">
-                                    <div class="text-1 p-4 d-flex align-items-center">
-                                        <h3 style="font-size: 1em">
-                                            {{ story[4].title }}<br />
-                                            <span class="tag">{{ story[4].date | date: "%b %d, %Y" }}</span>
-                                        </h3>
-                                    </div>
-                                    <img src="{{ story[4].image }}" class="img-fluid" alt="">
-                                    <div class="text p-4 d-flex align-items-center">
-                                        <div class="user d-flex align-items-center">
-                                            <h3>
-                                                {% for author in story[4].authors %}
-                                                {{author.name}} <span
-                                                    class="position">{{author.institution}}</span><br />
-                                                {% endfor %}
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-12">
-                        <div class="row no-gutters d-flex align-items-start">
-                            <div class="col-md-7">
-                                <a href="{{ story[1].url }}" class="featured-img">
-                                    <div class="text-1 p-4 d-flex align-items-center">
-                                        <h3 style="font-size: 1.1em">
-                                            {{ story[1].title }}<br />
-                                            <span class="tag">{{ story[1].date | date: "%b %d, %Y" }}</span>
-                                        </h3>
-                                    </div>
-                                    <img src="{{ story[1].image }}" class="img-fluid" alt="">
-                                    <div class="text p-4 d-flex align-items-center">
-                                        <div class="user d-flex align-items-center">
-                                            <h3>
-                                                {% for author in story[1].authors %}
-                                                {{author.name}} <span
-                                                    class="position">{{author.institution}}</span><br />
-                                                {% endfor %}
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-5">
-                                <a href="{{ story[5].url }}" class="featured-img">
-                                    <div class="text-1 p-4 d-flex align-items-center">
-                                        <h3 style="font-size: 1em">
-                                            {{ story[5].title }}<br />
-                                            <span class="tag">{{ story[5].date | date: "%b %d, %Y" }}</span>
-                                        </h3>
-                                    </div>
-                                    <img src="{{ story[5].image }}" class="img-fluid" alt="">
-                                    <div class="text p-4 d-flex align-items-center">
-                                        <div class="user d-flex align-items-center">
-                                            <h3>
-                                                {% for author in story[5].authors %}
-                                                {{author.name}} <span
-                                                    class="position">{{author.institution}}</span><br />
-                                                {% endfor %}
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <a href="{{ story[3].url }}" class="featured-img">
-                    <div class="text-1 p-4 d-flex align-items-center">
-                        <h3 style="font-size: 1.1em">
-                            {{ story[3].title }}<br />
-                            <span class="tag">{{ story[3].date | date: "%b %d, %Y" }}</span>
-                        </h3>
-                    </div>
-                    <img src="{{ story[3].image }}" class="img-fluid" alt="">
-                    <div class="text p-4 d-flex align-items-center">
-                        <div class="user d-flex align-items-center">
-                            <h3>
-                                {% for author in story[3].authors %}
-                                {{author.name}} <span class="position">{{author.institution}}</span><br />
-                                {% endfor %}
-                            </h3>
-                        </div>
-                    </div>
-                </a>
+<section class="ftco-section testimony-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-3 pb-3">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <span class="subheading">Perspectives on workflows-related topics from
+                    the community</span>
+                <h2 class="mb-4">Stories</h2>
             </div>
         </div>
-        <br />
-        <div class="row mt-5 d-flex justify-content-center">
-            <div class="col-md-8 text-center heading-section ftco-animate">
-                <h2 style="font-size: 1.2em">Perspectives on <strong class="px-3">workflows-related</strong> topics from
-                    the community.</h2>
-                <p><a href="/stories" class="btn btn-primary mt-3 py-3 px-5">See all stories...</a></p>
+        <div class="row ftco-animate">
+            <div class="col-md-12">
+                <div class="carousel-testimony owl-carousel ftco-owl">
+                    {% for s in story limit: 10 %}
+                    <div class="item text-center">
+                        <a href="{{s.url}}" class="testimony-wrap p-3 pb-3" style="min-height: 25em;">
+                            <img src="{{s.image}}" class="img-fluid" style="width: 100%; height: 7em; object-fit: cover;" />
+                            <div class="text">
+                                <p style="font-size: 1.3em; line-height: 1.3em; margin-top: 1em;"><strong>{{s.title}}</strong></p>
+                                <p class="mb-3 position">
+                                    {{ s.date | date: "%b %d, %Y" }}
+                                </p>
+                                <div style="line-height: 1.2em; text-align: left;">
+                                    {% for author in s.authors %}
+                                    <span class="position">{{author.name}} – {{author.institution}}</span><br />
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+                    <div class="item text-center">
+                        <a href="/stories" class="testimony-wrap p-3 pb-3" style="min-height: 25em;">
+                            <br /><br /><br />
+                            <i class="fas fa-newspaper" style="font-size: 5em"></i>
+                            <div class="text">
+                                <br />
+                                <h4>See all Stories</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -268,11 +159,11 @@ permalink: /
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-lg-4 d-flex align-self-stretch">
-		    <!-- Disabled as Twitter broke their own Widget. See issue #65
-                <a class="twitter-timeline" data-lang="en" data-height="1150" data-width="100%" data-theme="light"
+                <!-- <a class="twitter-timeline" data-lang="en" data-height="1150" data-width="100%" data-theme="light"
                     data-chrome="nofooter" href="https://twitter.com/WorkflowsCI">Tweets by WorkflowsCI</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		-->
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                <!-- LINKED IN -->
+                <div class='sk-ww-linkedin-page-post' style="border: 1px solid #ccc; max-height: 50em;" data-embed-id='198292'></div><script src='https://widgets.sociablekit.com/linkedin-page-posts/widget.js' async defer></script>
             </div>
 
             <div class="col-md-6 col-lg-8 text-center heading-section ftco-animate">

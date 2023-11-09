@@ -50,7 +50,10 @@ Subsections:
 
 ## Goals
 
-In this working group, we seek to:
+The working group is seeking workflow developers and users to directly inform the standards, processes and recommendations 
+that make computational workflows FAIR.
+
+In this working group, we aim to:
 - Define FAIR principles for computational workflows that consider the complex lifecycle from specification to execution and data products
 - Define metrics to measure the FAIRness of a workflow
 - Define recommendations for FAIR workflow developers and systems
@@ -58,10 +61,12 @@ In this working group, we seek to:
 
 ## Working Group meetings
 
-This working Group is open for anyone interested, please feel free to [join the Workflows Community Initiative](https://workflows.community/contact) or attend one of our calls.
+This working Group is open for anyone interested, please feel free to [join the Workflows Community Initiative](https://workflows.community/contact) or attend one of our calls. To ensure more people can get involved in this international effort, the Australian BioCommons is collaborating with the WCI to run a second working group meeting at a time convenient for the Asia Pacific region. Everyone is welcome, regardless of your timezone.
 
-* **Meeting schedule**:  Monthly 2nd Thursday 16:00 UTC (no daylight savings observed)
-* **Meeting agenda/telcon**: [Meeting notes](https://docs.google.com/document/d/1sULkJwVACjSxQnM5bvjgYSkawZhUEkC3s-A5CvgmNT4/edit)
+* **Meeting schedule**:  
+  * Meeting #1: Monthly 2nd Thursday 16:00 UTC (no daylight savings observed)
+  * Meeting #2: Monthly 2nd Friday 02:30 UTC 
+* **Meeting agendas/telcon**: [Meeting notes](https://docs.google.com/document/d/1sULkJwVACjSxQnM5bvjgYSkawZhUEkC3s-A5CvgmNT4/edit)
 * **Slack chat**: [#fair-computational-workflows](https://workflowscommunity.slack.com/archives/C034U2NEUTS) on workflowscommunity.slack.com ([invite link](https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ))
 
 
