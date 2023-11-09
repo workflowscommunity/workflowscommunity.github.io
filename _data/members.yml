@@ -1063,3 +1063,41 @@
   institution: Australian Research Data Commons
   country: au
   link: www.linkedin.com/in/aleem1uddin
+
+- last_name: Momin
+  first_name: Saim
+  institution: Max Planck Institute of Immunobiology and Epigenetics, Freiburg
+  country: de
+  link: https://www.linkedin.com/in/saim-momin/
+
+- last_name: Khan
+  first_name: Farah Zaib
+  institution: Australian BioCommons
+  country: au
+
+- last_name: Montella
+  first_name: Raffaele
+  institution: University of Naples "Parthenope"
+  country: it
+  link: https://raffaelemontella.it
+
+- last_name: Gueroudji
+  first_name: Amal
+  institution: Argonne National Laboratory 
+  country: us
+
+- last_name: Di Luccio
+  first_name: Diana
+  institution: University of Naples "Parthenope"
+  country: it
+
+- last_name: De Vita
+  first_name: Ciro
+  institution: University of Naples "Parthenope"
+  country: it
+
+# - last_name:
+#   first_name:
+#   institution: 
+#   country:
+#   link: 
