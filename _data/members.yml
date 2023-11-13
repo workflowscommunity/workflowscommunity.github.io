@@ -1096,6 +1096,17 @@
   institution: University of Naples "Parthenope"
   country: it
 
+- last_name: Swain
+  first_name: Chinmaya Kumar
+  institution: SRM University, AP
+  country: in
+  link: https://srmap.edu.in/faculty/chinmaya-kumar-swain/
+
+- last_name: Lazik
+  first_name: Christopher
+  institution: Humboldt-Universität zu Berlin
+  country: de
+
 # - last_name:
 #   first_name:
 #   institution: 
