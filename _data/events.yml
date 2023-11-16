@@ -398,6 +398,7 @@
       date: 2023-09-03
 
 - name: 2nd International Workshop on FAIR Containerized Computational Software
+  series: FAIR Containerized Computational Software
   url: https://www.nist.gov/news-events/events/2023/12/2nd-international-workshop-fair-containerized-computational-software
   location: virtual
   start_date: 2023-12-03
