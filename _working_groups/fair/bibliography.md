@@ -41,6 +41,13 @@ _ICPE '23 Companion: Companion of the 2023 ACM/SPEC International Conference on 
 
 ### 2022
 
+Sean R. Wilkinson, Greg Eisenhauer, Anuj J. Kapadia, Kathryn Knight, Jeremy Logan, Patrick Widener, Matthew Wolf (2022):  
+[**F\*\*\* workflows: when parts of FAIR are missing**](https://doi.org/10.1109/eScience55777.2022.00090).  
+_IEEE 18th International Conference on e-Science_ (e-Science 2022)  
+<https://doi.org/10.1109/eScience55777.2022.00090> 
+[arXiv:2209.09022](https://arxiv.org/abs/2209.09022v1)
+
+
 Raül Sirvent, Javier Conejero, Francesc Lordan, Jorge Ejarque, Laura Rodríguez-Navas, José M. Fernández, Salvador Capella-Gutiérrez, Rosa M. Badia (2022):  
 [**Automatic, Efficient and Scalable Provenance Registration for FAIR HPC Workflows**](http://hdl.handle.net/2117/384589).  
 _2022 IEEE/ACM Workshop on Workflows in Support of Large-Scale Science (WORKS)_  
