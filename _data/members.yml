@@ -1152,6 +1152,12 @@
   institution: University of Amsterdam
   country: nl
 
+- last_name: DeGram
+  first_name: Sue
+  institution: Adaptive Computing
+  country: us
+  link: www.adaptivecomputing.com
+
 # - last_name:
 #   first_name:
 #   institution: 
