@@ -64,8 +64,9 @@ In this working group, we aim to:
 This working Group is open for anyone interested, please feel free to [join the Workflows Community Initiative](https://workflows.community/contact) or attend one of our calls. To ensure more people can get involved in this international effort, the Australian BioCommons is collaborating with the WCI to run a second working group meeting at a time convenient for the Asia Pacific region. Everyone is welcome, regardless of your timezone.
 
 * **Meeting schedule**:  
-  * Meeting #1: Monthly 2nd Thursday 16:00 UTC (no daylight savings observed)
-  * Meeting #2: Monthly 2nd Friday 02:30 UTC 
+  - Monthly 2nd Thursday 17:00 CET (note: daylight savings follows EU)
+  - Monthly 2nd Thursday 13:30 AEDT (note: daylight savings follows Australia)
+  - Monthly 4th Thursday 17:00 CET (note: daylight savings follows EU)
 * **Meeting agendas/telcon**: [Meeting notes](https://docs.google.com/document/d/1sULkJwVACjSxQnM5bvjgYSkawZhUEkC3s-A5CvgmNT4/edit)
 * **Slack chat**: [#fair-computational-workflows](https://workflowscommunity.slack.com/archives/C034U2NEUTS) on workflowscommunity.slack.com ([invite link](https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ))
 
