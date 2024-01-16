@@ -58,12 +58,16 @@ _ICPE '23 Companion: Companion of the 2023 ACM/SPEC International Conference on 
 
 ### 2022
 
+Sonia Natalie Mitchell, Andrew Lahiff, Nathan Cummings, Jonathan Hollocombe, Bram Boskamp, Ryan Field, Dennis Reddyhoff, Kristian Zarebski, Antony Wilson, Bruno Viola, Martin Burke, Blair Archibald, Paul Bessell, Richard Blackwell, Lisa A. Boden, Alys Brett, Sam Brett, Ruth Dundas, Jessica Enright, Alejandra N. Gonzalez-Beltran, Claire Harris, Ian Hinder, Christopher David Hughes, Martin Knight, Vino Mano, Ciaran McMonagle, Dominic Mellor, Sibylle Mohr, Glenn Marion, Louise Matthews, Iain J. McKendrick, Christopher Mark Pooley, Thibaud Porphyre, Aaron Reeves, Edward Townsend, Robert Turner, Jeremy Walton, Richard Reeve (2022):  
+[**FAIR data pipeline: provenance-driven data management for traceable scientific workflows**](https://doi.org/10.1098/rsta.2021.0300).  
+_Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences_ **380**(2232)  
+<https://doi.org/10.1098/rsta.2021.0300>
+
 Sean R. Wilkinson, Greg Eisenhauer, Anuj J. Kapadia, Kathryn Knight, Jeremy Logan, Patrick Widener, Matthew Wolf (2022):  
 [**F\*\*\* workflows: when parts of FAIR are missing**](https://doi.org/10.1109/eScience55777.2022.00090).  
 _IEEE 18th International Conference on e-Science_ (e-Science 2022)  
 <https://doi.org/10.1109/eScience55777.2022.00090> 
 [arXiv:2209.09022](https://arxiv.org/abs/2209.09022v1)
-
 
 Raül Sirvent, Javier Conejero, Francesc Lordan, Jorge Ejarque, Laura Rodríguez-Navas, José M. Fernández, Salvador Capella-Gutiérrez, Rosa M. Badia (2022):  
 [**Automatic, Efficient and Scalable Provenance Registration for FAIR HPC Workflows**](http://hdl.handle.net/2117/384589).  
