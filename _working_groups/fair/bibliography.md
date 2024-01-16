@@ -10,9 +10,26 @@ This is a list of academic publications related to [FAIR Computational Workflows
 
 _Articles below are published as [Open Access](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/), or with [green open access preprints](https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/understanding/) where gold open access is not possible. Please [let us know](https://github.com/workflowscommunity/workflowscommunity.github.io/issues) if you are unable to access any of our publications. To add to this list, please [suggest a change](https://github.com/workflowscommunity/workflowscommunity.github.io/blob/main/_working_groups/fair.md)._
 
+### 2024
+
+Scott Edmunds (2024):
+[**A Decade of FAIR – and what next? Q&A on FAIR workflows with the Netherlands X-omics Initiative**](http://gigasciencejournal.com/blog/fair-workflows/).
+_GIGAblog_
+<http://gigasciencejournal.com/blog/fair-workflows/>
+
+Anna Niehues, Casper de Visser, Fiona A Hagenbeek, Purva Kulkarni, René Pool, Naama Karu, Alida S D Kindt, Gurnoor Singh, Robert R J M Vermeiren, Dorret I Boomsma, Jenny van Dongen, Peter A C ’t Hoen, Alain J van Gool (2024):
+[**A multi-omics data analysis workflow packaged as a FAIR Digital Object**](https://doi.org/10.1093/gigascience/giad115).
+_GigaScience_ **13**:giad115
+<https://doi.org/10.1093/gigascience/giad115>
+
+
+
 ### 2023
 
-
+Simone Leo, Michael R. Crusoe, Laura Rodríguez-Navas, Raül Sirvent, Alexander Kanitz, Paul De Geest, Rudolf Wittner, Luca Pireddu, Daniel Garijo, José M. Fernández, Iacopo Colonnelli, Matej Gallo, Tazro Ohta, Hirotaka Suetake, Salvador Capella-Gutierrez, Renske de Wit, Bruno de Paula Kinoshita, Stian Soiland-Reyes (2023):
+[**Recording provenance of workflow runs with RO-Crate**](https://doi.org/10.48550/arXiv.2312.07852).
+_arXiv_
+<https://doi.org/10.48550/arXiv.2312.07852>
 
 Casper de Visser, Lennart F. Johansson, Purva Kulkarni, Hailiang Mei, Pieter Neerincx, K. Joeri van der Velde, Péter Horvatovich, Alain J. van Gool, Morris A. Swertz, Peter A. C. ‘t Hoen, Anna Niehues (2023):  
 [**Ten quick tips for building FAIR workflows**](https://doi.org/10.1371/journal.pcbi.1011369).  
