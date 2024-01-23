@@ -415,3 +415,14 @@
   start_date: 2023-12-03
   end_date: 2023-12-05
   type: Workshop
+
+- name: 2024 IEEE International Conference on Big Data
+  series: IEEE BigData 2024
+  start_date: 2024-12-15
+  end_date: 2024-12-18
+  location: Washington DC, USA
+  url: https://bigdataieee.org/BigData2024
+  type: Conference
+  deadlines:
+    - name: Papers Submission
+      date: 2024-09-03
