@@ -22,6 +22,8 @@ members:
       link: https://www.ghga.de/about-us/team-members/gadelha-luiz
     - name: Daniel Garijo
       link: https://w3id.org/people/dgarijo
+    - name: Sandra Gesing
+      link: http://sandra-gesing.com/
     - name: Johan Gustafsson
       link: https://www.linkedin.com/in/johan-gustafsson-96374399/
     - name: Bruno de Paula Kinoshita
