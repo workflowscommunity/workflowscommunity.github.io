@@ -14,23 +14,28 @@ members:
     - name: Sean R. Wilkinson
       role: Chair
       link: https://www.ornl.gov/staff-profile/sean-r-wilkinson
-    - name: Frederik Coppens
-      link: https://www.elixir-belgium.org/
     - name: Michael R. Crusoe
       link: https://orcid.org/0000-0002-2961-9670
-    - name: Christian Erdmann
-    - name: Rafael Ferreira da Silva
-      link: https://rafaelsilva.com
-    - name: Kathryn E. Knight
-      link: https://www.ornl.gov/staff-profile/kathryn-e-knight
+    - name: Rosa Figueira
+      link: https://www.rosafilgueira.com/
+    - name: Luiz Gadelha
+      link: https://www.ghga.de/about-us/team-members/gadelha-luiz
+    - name: Daniel Garijo
+      link: https://w3id.org/people/dgarijo
+    - name: Johan Gustafsson
+      link: https://www.linkedin.com/in/johan-gustafsson-96374399/
+    - name: Bruno de Paula Kinoshita
+      link: https://kinoshita.eti.br/
+    - name: Farah Zaib Khan
+      link: https://www.linkedin.com/in/farahzk/
+    - name: Karsten Peters-von Gehlen
+      link: https://www.dkrz.de/en/about-en/staff/dr-karsten-peters?set_language=en
     - name: Randy K Rannow
       link: https://www.silverdraft.com
     - name: Nicola Soranzo
-    - name: Shelly Stall
+      link: https://www.earlham.ac.uk/profile/nicola-soranzo
     - name: Ziheng Sun
       link: https://zihengsun.github.io
-    - name: Matthew Wolf
-      link: https://orcid.org/0000-0002-8393-4436
 ---
 
 The FAIR principles have laid a foundation for sharing and publishing digital assets and, in particular, data. The
