@@ -1,4 +1,4 @@
-- name: 2nd IEEE International Workshop on Workflows in Distributed Environments
+- name: 2nd International Workshop on Workflows in Distributed Environments
   series: WiDE 2024
   location: Athens, Greece
   start_date: 2024-04-22
@@ -7,7 +7,7 @@
   type: Workshop
   deadlines:
     - name: Paper Submissions
-      date: 2024-02-10
+      date: 2024-02-17
 
 - name: Nextflow Summit - Barcelona 2023
   series: Nextflow Summit - Barcelona 2023
