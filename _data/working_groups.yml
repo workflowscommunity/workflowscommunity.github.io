@@ -17,3 +17,8 @@
   description: DFG Collaborative Research Center 1404 at Humboldt-Universität zu Berlin, Germany
   link: https://fonda.hu-berlin.de/
   status: Active
+
+- name: CWL4HPC
+  description: This group aims to identify workflow patterns capable of modeling large-scale scientific applications and implement the related Common Workflow Language enhancement proposals.
+  link: https://www.commonwl.org/working-groups/cwl4hpc
+  status: Active
