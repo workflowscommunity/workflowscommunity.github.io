@@ -24,7 +24,7 @@ permalink: /events
         <div class="blog-entry" style="min-height: 23em;">
             <div class="text p-4 d-block">
                 <div class="meta mb-3">
-                    {{event.start_date | date: "%b %d" }}&mdash;{{event.end_date | date: "%b %d, %Y" }}
+		   {% if event.start_date != event.end_date %}{{event.start_date | date: "%b %d" }}&mdash;{% endif %}{{event.end_date | date: "%b %d, %Y" }}
                 </div>
                 <h3 class="heading"><a href="{{event.url}}">{{event.short_name}}</a></h3>
                 <span class="position">{{event.name}}</span><br />
