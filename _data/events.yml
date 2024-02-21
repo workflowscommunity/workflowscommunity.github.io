@@ -1,5 +1,5 @@
 - name: 2nd International Workshop on Workflows in Distributed Environments
-  series: WiDE 2024
+  short_name: WiDE 2024
   location: Athens, Greece
   start_date: 2024-04-22
   end_date: 2024-04-22
@@ -10,7 +10,7 @@
       date: 2024-02-17
 
 - name: Nextflow Summit - Barcelona 2023
-  series: Nextflow Summit - Barcelona 2023
+  short_name: Nextflow Summit - Barcelona 2023
   location: Barcelona, Spain
   start_date: 2023-10-16
   end_date: 2023-10-20
@@ -21,7 +21,7 @@
       date: 2023-07-31
 
 - name: Nextflow Summit - Boston 2023
-  series: Nextflow Summit - Boston 2023
+  short_name: Nextflow Summit - Boston 2023
   location: Boston, USA
   start_date: 2023-11-28
   end_date: 2023-11-30
@@ -32,7 +32,7 @@
       date: 2023-07-31
 
 - name: Nextflow foundational (basics) training
-  series: Nextflow foundational (basics) training
+  short_name: Nextflow foundational (basics) training
   location: virtual
   start_date: 2023-09-06
   end_date: 2023-09-08
@@ -40,7 +40,7 @@
   type: Workshop
 
 - name: Nextflow advanced training
-  series: Nextflow advanced training
+  short_name: Nextflow advanced training
   location: virtual
   start_date: 2023-09-27
   end_date: 2023-09-28
@@ -48,7 +48,7 @@
   type: Workshop
 
 - name: DOE Cross-facility Workflows Training
-  series: DOE Workflows Training
+  short_name: DOE Workflows Training
   location: virtual
   start_date: 2023-04-12
   end_date: 2023-04-12
@@ -59,7 +59,7 @@
       date: 2023-04-05
 
 - name: 1st IEEE International Workshop on Workflows in Distributed Environments
-  series: WiDE 2023
+  short_name: WiDE 2023
   location: Torino, Italy
   start_date: 2023-06-26
   end_date: 2023-06-26
@@ -70,7 +70,7 @@
       date: 2023-04-15
 
 - name: "2023 Common Workflow Language community conference"
-  series: CWL Community Conference
+  short_name: CWL Community Conference
   location: Virtual
   start_date: 2023-02-27
   end_date: 2023-03-03
@@ -83,7 +83,7 @@
       date: 2023-02-13
 
 - name: IEEE International Conference on Cloud Computing
-  series: CLOUD 2023
+  short_name: CLOUD 2023
   start_date: 2023-07-02
   end_date: 2023-07-08
   location: Chicago, IL, USA
@@ -94,7 +94,7 @@
       date: 2023-02-12
 
 - name: 32nd ACM International Symposium on High-Performance Parallel and Distributed Computing
-  series: HPDC 2023
+  short_name: HPDC 2023
   start_date: 2023-06-16
   end_date: 2023-06-23
   location: Orlando, FL, USA
@@ -105,7 +105,7 @@
       date: 2023-01-27
 
 - name: 29th International European Conference on Parallel and Distributed Computing
-  series: Euro-Par 2023
+  short_name: Euro-Par 2023
   location: Limassol, Cyprus
   start_date: 2023-08-28
   end_date: 2023-09-01
@@ -120,7 +120,7 @@
       date: 2023-05-20
 
 - name: 19th IEEE International Conference on eScience
-  series: eScience 2023
+  short_name: eScience 2023
   start_date: 2023-10-09
   end_date: 2023-10-13
   location: Limassol, Cyprus
@@ -133,7 +133,7 @@
       date: 2023-07-07
 
 - name: Platform for Advanced Scientific Computing
-  series: PASC 2023
+  short_name: PASC 2023
   location: Davos, Switzerland
   start_date: 2023-06-26
   end_date: 2023-06-28
@@ -146,7 +146,7 @@
       date: 2023-01-22
 
 - name: 37th IEEE International Parallel & Distributed Processing Symposium
-  series: IPDPS 2023
+  short_name: IPDPS 2023
   start_date: 2023-05-15
   end_date: 2023-05-19
   location: St. Petersburg, USA
@@ -161,7 +161,7 @@
       date: 2022-10-06
 
 - name: 23rd IEEE/ACM international Symposium on Cluster, Cloud and Internet Computing
-  series: CCGrid 2023
+  short_name: CCGrid 2023
   start_date: 2023-05-01
   end_date: 2023-05-04
   location: Bangalore, India
@@ -174,7 +174,7 @@
       date: 2023-01-31
 
 - name: International Conference on Computational Science
-  series: ICCS 2023
+  short_name: ICCS 2023
   start_date: 2023-07-03
   end_date: 2023-07-05
   location: Prague, Czechia
@@ -185,7 +185,7 @@
       date: 2023-02-03
 
 - name: "European HTCondor Week 2022"
-  series: HTCondor Week
+  short_name: HTCondor Week
   start_date: 2022-10-11
   end_date: 2022-10-14
   location: Cuneo, Italy
@@ -198,7 +198,7 @@
       date: 2022-10-06
 
 - name: Nextflow Summit
-  series: Nextflow Summit
+  short_name: Nextflow Summit
   start_date: 2022-10-12
   end_date: 2022-10-14
   location: Barcelona, Spain
@@ -206,7 +206,7 @@
   type: Summit
 
 - name: 2nd Workshop on E-science ReseaRch leading tO negative Results
-  series: ERROR 2022
+  short_name: ERROR 2022
   start_date: 2022-10-11
   end_date: 2022-10-14
   location: Salt Lake City, USA
@@ -217,7 +217,7 @@
       date: 2022-07-08
 
 - name: "2nd International Workshop on Scientific Knowledge: Representation, Discovery, and Assessment"
-  series: Sci-k 2022
+  short_name: Sci-k 2022
   start_date: 2022-04-26
   end_date: 2022-04-26
   location: Online (part of The Web Conference 2022)
@@ -228,7 +228,7 @@
       date: 2022-02-07
 
 - name: 18th IEEE International Conference on e-Science
-  series: eScience 2022
+  short_name: eScience 2022
   start_date: 2022-10-11
   end_date: 2022-10-14
   location: Salt Lake City, USA
@@ -241,7 +241,7 @@
       date: 2022-07-11
 
 - name: Bioinformatics Open Source Conference
-  series: BOSC 2022
+  short_name: BOSC 2022
   start_date: 2022-07-13
   end_date: 2022-07-14
   location: Madison, WI, USA & online
@@ -254,7 +254,7 @@
       date: 2022-05-19
 
 - name: 31st International Symposium on High-Performance Parallel and Distributed Computing
-  series: HPDC 2022
+  short_name: HPDC 2022
   start_date: 2022-06-27
   end_date: 2022-07-01
   location: Minneapolis, USA
@@ -267,7 +267,7 @@
       date: 2022-04-04
       
 - name: The International Conference for High Performance Computing, Networking, Storage, and Analysis
-  series: SC'22
+  short_name: SC'22
   location: Dallas, USA
   start_date: 2022-11-13
   end_date: 2022-11-18
@@ -282,7 +282,7 @@
       date: 2022-08-05
   
 - name: 28th International European Conference on Parallel and Distributed Computing
-  series: Euro-Par 2022
+  short_name: Euro-Par 2022
   location: Glasgow, UK
   start_date: 2022-08-22
   end_date: 2022-08-26
@@ -293,7 +293,7 @@
       date: 2022-02-11
 
 - name: 2022 Common Workflow Language Conference
-  series: CWL 2022
+  short_name: CWL 2022
   location: Virtual
   start_date: 2022-02-28
   end_date: 2022-03-04
@@ -304,7 +304,7 @@
       date: 2022-02-28
 
 - name: "2022 Galaxy Community Conference"
-  series: "GCC2022"
+  short_name: "GCC2022"
   location: "Minneapolis, MN, USA"
   start_date: 2022-07-17
   end_date: 2022-07-23
@@ -312,7 +312,7 @@
   type: Conference
 
 - name: March 2022 Hackathon
-  series: nf-core
+  short_name: nf-core
   location: Virtual
   start_date: 2022-03-16
   end_date: 2022-03-18
@@ -320,7 +320,7 @@
   type: Workshop
 
 - name: 17th Workshop on Workflows in Support of Large-Scale Science
-  series: WORKS22
+  short_name: WORKS22
   location: Dallas, TX, USA
   start_date: 2022-11-14
   end_date: 2022-11-14
@@ -331,7 +331,7 @@
       date: 2022-08-22
 
 - name: Platform for Advanced Scientific Computing
-  series: PASC 2022
+  short_name: PASC 2022
   location: Basel, Switzerland
   start_date: 2022-06-27
   end_date: 2022-06-29
@@ -339,7 +339,7 @@
   type: Conference
 
 - name: ISC High Performance
-  series: ISC 2022
+  short_name: ISC 2022
   location: Hamburg, Germany
   start_date: 2022-05-29
   end_date: 2022-06-02
@@ -347,7 +347,7 @@
   type: Conference
 
 - name: 2nd Workshop on Reproducible Workflows, Data Management, and Security
-  series: ReWords 2022
+  short_name: ReWords 2022
   location: Salt Lake City, UT, USA
   start_date: 2022-10-11
   end_date: 2022-10-11
@@ -358,7 +358,7 @@
       date: 2022-07-08
 
 - name: 1st International Conference on FAIR Digital Objects
-  series: FDO 2022
+  short_name: FDO 2022
   location: Leiden, The Netherlands
   start_date: 2022-10-26
   end_date: 2022-10-28
@@ -369,7 +369,7 @@
       date: 2022-07-10
 
 - name: Parsl & funcX Fest 2022
-  series: Parsl & funcX Fest 2022
+  short_name: Parsl & funcX Fest 2022
   location: Chicago, IL, USA
   start_date: 2022-09-13
   end_date: 2022-09-14
@@ -377,7 +377,7 @@
   type: Workshop
 
 - name: 35th International Conference on Scientific and Statistical Database Management
-  series: SSDBM 2023
+  short_name: SSDBM 2023
   start_date: 2023-07-10
   end_date: 2023-07-12
   location: Los Angeles, California, USA
@@ -388,7 +388,7 @@
       date: 2023-04-16
 
 - name: 3rd Workshop on Reproducible Workflows, Data Management, and Security
-  series: ReWoRDS 2023
+  short_name: ReWoRDS 2023
   start_date: 2023-10-10
   end_date: 2023-10-10
   location: Limassol, Cyprus
@@ -398,7 +398,7 @@
       date: 2023-07-10
 
 - name: 2023 IEEE International Conference on Big Data
-  series: IEEE BigData 2023
+  short_name: IEEE BigData 2023
   start_date: 2023-12-15
   end_date: 2023-12-18
   location: Sorrento, Italy
@@ -409,7 +409,7 @@
       date: 2023-09-03
 
 - name: 2nd International Workshop on FAIR Containerized Computational Software
-  series: FAIR Containerized Computational Software
+  short_name: FAIR Containerized Computational Software
   url: https://www.nist.gov/news-events/events/2023/12/2nd-international-workshop-fair-containerized-computational-software
   location: virtual
   start_date: 2023-12-03
@@ -417,7 +417,7 @@
   type: Workshop
 
 - name: 2024 IEEE International Conference on Big Data
-  series: IEEE BigData 2024
+  short_name: IEEE BigData 2024
   start_date: 2024-12-15
   end_date: 2024-12-18
   location: Washington DC, USA

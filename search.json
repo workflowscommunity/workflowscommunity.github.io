@@ -28,7 +28,7 @@
   {% endfor %}
   {% for event in site.data.events %}
     {
-      "title"       : "{{ event.series }} ({{ event.type }})",
+      "title"       : "{{ event.short_name }} ({{ event.type }})",
       "url"         : "{{ event.url }}",
       "description" : "{{ event.name }}",
       "category"    : "event"
