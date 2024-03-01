@@ -471,7 +471,7 @@
 - name: 20th IEEE International Conference on eScience
   short_name: eScience 2024
   start_date: 2024-09-16
-  end_date: 2023-09-20
+  end_date: 2024-09-20
   location: Osaka, Japan
   url: https://www.escience-conference.org/2024/
   type: Conference
@@ -479,4 +479,4 @@
     - name: Papers Submission
       date: 2024-05-06
     - name: Posters Submission
-      date: 2023-07-22
+      date: 2024-07-22
