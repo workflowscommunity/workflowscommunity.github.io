@@ -467,3 +467,16 @@
   end_date: 2024-05-17
   type: Hackathon
   location: VU Amsterdam, Amsterdam, the Netherlands
+
+- name: 20th IEEE International Conference on eScience
+  short_name: eScience 2024
+  start_date: 2024-09-16
+  end_date: 2024-09-20
+  location: Osaka, Japan
+  url: https://www.escience-conference.org/2024/
+  type: Conference
+  deadlines:
+    - name: Papers Submission
+      date: 2024-05-06
+    - name: Posters Submission
+      date: 2024-07-22
