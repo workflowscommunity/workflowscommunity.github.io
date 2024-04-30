@@ -1,3 +1,14 @@
+- name: 1st Workshop about High-Performance e-Science
+  short_name: HiPES 2024
+  location: Madrid, Spain
+  start_date: 2024-08-26
+  end_date: 2024-08-26
+  url: https://www.hipes-workshop.org/
+  type: Workshop
+  deadlines:
+    - name: Paper Submissions
+      date: 2024-05-20
+
 - name: 2nd International Workshop on Workflows in Distributed Environments
   short_name: WiDE 2024
   location: Athens, Greece
