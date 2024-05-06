@@ -138,3 +138,8 @@
 # - organization: icui
 #   repository: nnodes
 #   type: github
+
+- organization: mrhedmad
+  repository: kerblam
+  type: github
+  metadata: .wci.yml
