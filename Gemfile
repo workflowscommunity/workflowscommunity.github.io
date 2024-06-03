@@ -1,8 +1,6 @@
 source "https://rubygems.org"
 ruby RUBY_VERSION
 
-gem 'ffi', '1.16.3'
-
 # This will help ensure the proper Jekyll version is running.
 gem 'jekyll', '~> 4.2.0'
 
@@ -15,3 +13,4 @@ gem "jekyll-feed"
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "webrick", "~> 1.7"
+gem "ffi", "1.16.3"
