@@ -295,22 +295,26 @@
   });
 
   var bgColors = [
-	{"color1": "#ee76ad", "color2": "#efac78"},
-	{"color1": "#96C93D", "color2": "#00B09B"},
-	{"color1": "#78FFD6", "color2": "#007991"},
-	{"color1": "#56CCF2", "color2": "#2F80ED"},
-	{"color1": "#FFC0CB", "color2": "#800080"},
-	{"color1": "#FF9966", "color2": "#FF5E62"},
-	{"color1": "#DCE35B", "color2": "#45B649"},
-	{"color1": "#614385", "color2": "#516395"},
-	{"color1": "#eacda3", "color2": "#d6ae7b"},
-	{"color1": "#43cea2", "color2": "#185a9d"},
-	{"color1": "#ffd89b", "color2": "#19547b"},
-	{"color1": "#eebd89", "color2": "#d13abd"},
-	{"color1": "#a3c9e2", "color2": "#9618f7"},
-	{"color1": "#bfffc7", "color2": "#849b5c"},
-	{"color1": "#e65758", "color2": "#771d32"},
-	{"color1": "#f2ecb6", "color2": "#a96f44"},
+	{"color1": "#6A0572", "color2": "#A40A3C"},
+	{"color1": "#0B486B", "color2": "#F56217"},
+	{"color1": "#3A1C71", "color2": "#D76D77"},
+	{"color1": "#3F5EFB", "color2": "#FC466B"},
+	{"color1": "#42275A", "color2": "#734B6D"},
+	{"color1": "#FF512F", "color2": "#DD2476"},
+	{"color1": "#2C3E50", "color2": "#FD746C"},
+	{"color1": "#000428", "color2": "#004E92"},
+	{"color1": "#373B44", "color2": "#4286F4"},
+	{"color1": "#8360C3", "color2": "#2EBF91"},
+	{"color1": "#141E30", "color2": "#243B55"},
+	{"color1": "#4B79A1", "color2": "#283E51"},
+	{"color1": "#232526", "color2": "#414345"},
+	{"color1": "#0F2027", "color2": "#2C5364"},
+	{"color1": "#4568DC", "color2": "#B06AB3"},
+	{"color1": "#FF0099", "color2": "#493240"},
+	{"color1": "#1D4350", "color2": "#A43931"},
+	{"color1": "#457FCA", "color2": "#5691C8"},
+	{"color1": "#283048", "color2": "#859398"},
+	{"color1": "#16222A", "color2": "#3A6073"}
   ]
   var randomColor = bgColors[Math.floor(Math.random() * bgColors.length)]; 
   console.log(randomColor);
