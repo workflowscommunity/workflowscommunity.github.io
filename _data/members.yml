@@ -1158,6 +1158,76 @@
   country: us
   link: www.adaptivecomputing.com
 
+- last_name: Vilne
+  first_name: Baiba
+  institution: Rīga Stradiņš University
+  country: lv
+  link: https://www.rsu.lv/en/bioinformatics-group
+
+- last_name: Kanitz
+  first_name: Alex
+  institution: Biozentrum, University of Basel
+  country: ch
+
+- last_name: Muffato
+  first_name: Matthieu
+  institution: Wellcome Sanger Institute
+  country: gb
+  link: https://muffato.github.io/
+
+- last_name: Paul
+  first_name: Taylor
+  institution: University of Maryland
+  country: us
+
+- last_name: Shorte
+  first_name: Spencer
+  institution: Institut Pasteur
+  country: fr
+  link: https://research.pasteur.fr/en/center/c2rt/
+
+- last_name: Vartina
+  first_name: Edite
+  institution: Riga Stradins University
+  country: lv
+
+- last_name: Geiger
+  first_name: Julian
+  institution: Paul-Scherrer Institut
+  country: ch
+
+- last_name: Quinn
+  first_name: Paul
+  institution: STFC Scientific Computing
+  country: gb
+
+- last_name: Alidu 
+  first_name: Abubakari 
+  institution: University of Milano Bicocca 
+  country: it
+
+- last_name: Alonen
+  first_name: Miika
+  institution: CSC - IT Center for Science
+  country: fi
+
+- last_name: Abdi
+  first_name: Somayeh
+  institution: Mälardalen university
+  country: se
+
+- last_name: Babuji
+  first_name: Yadu
+  institution: University of Chicago
+  country: us
+  link: https://yadunand.com/
+
+- last_name: Rowell
+  first_name: William
+  institution: Pacific Biosciences
+  country: us
+  link: https://williamrowell.dev
+
 # - last_name:
 #   first_name:
 #   institution: 
