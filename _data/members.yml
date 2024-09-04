@@ -1250,6 +1250,17 @@
   country: fr
   link: https://sites.google.com/site/kbelhajjame/
 
+- last_name: Jordan
+  first_name: Joe
+  institution: Uppsala University
+  country: se
+
+- last_name: Da Silva
+  first_name: Anderson Andrei
+  institution: Hewlett Packard Enterprise Labs
+  country: us
+  link: https://andersonandrei.github.io/
+
 # - last_name:
 #   first_name:
 #   institution: 
