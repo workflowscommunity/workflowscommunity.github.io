@@ -1266,6 +1266,18 @@
   institution: Peter MacCallum Cancer Centre
   country: au
 
+- last_name: Sly-Delgado
+  first_name: Barry
+  institution: University of Notre Dame
+  country: us
+  link: https://barryslydelgado.github.io/
+
+- last_name: Gritsch
+  first_name: Philipp
+  institution: University of Innsbruck
+  country: at
+  link: https://www.linkedin.com/in/philippgritsch/
+
 # - last_name:
 #   first_name:
 #   institution: 
