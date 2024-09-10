@@ -138,3 +138,7 @@
 # - organization: icui
 #   repository: nnodes
 #   type: github
+
+- organization: PrefectHQ
+  repository: prefect
+  type: github
