@@ -12,6 +12,12 @@ _Articles below are published as [Open Access](https://www.library.manchester.ac
 
 ### 2024
 
+
+Simone Leo, Michael R. Crusoe, Laura Rodríguez-Navas, Raül Sirvent, Alexander Kanitz, Paul De Geest, Rudolf Wittner, Luca Pireddu, Daniel Garijo, José M. Fernández, Iacopo Colonnelli, Matej Gallo, Tazro Ohta, Hirotaka Suetake, Salvador Capella-Gutierrez, Renske de Wit, Bruno P. Kinoshita, Stian Soiland-Reyes (2024):  
+[**Recording provenance of workflow runs with RO-Crate**](https://doi.org/10.1371/journal.pone.0309210).  
+_PLOS One_ **19**(9):e0309210  
+<https://doi.org/10.1371/journal.pone.0309210>
+
 Scott Edmunds (2024):  
 [**A Decade of FAIR – and what next? Q&A on FAIR workflows with the Netherlands X-omics Initiative**](http://gigasciencejournal.com/blog/fair-workflows/).  
 _GIGAblog_  
@@ -22,14 +28,28 @@ Anna Niehues, Casper de Visser, Fiona A Hagenbeek, Purva Kulkarni, René Pool, N
 _GigaScience_ **13**:giad115  
 <https://doi.org/10.1093/gigascience/giad115>
 
+Magali Do Patrocínio Gonçalves (2024):  
+[**Workflow Sharing Based on Semantics** - A Case Study in Marine Spatial Planning](https://hdl.handle.net/20.500.12932/47041).  
+_Utrecht University_ (dissertation)  
+<https://hdl.handle.net/20.500.12932/47041>
+
+George Marchment, Bryan Brancotte, Marie Schmit, Frédéric Lemoine, Sarah Cohen-Boulakia (2024):  
+[**BioFlow-Insight**: facilitating reuse of Nextflow workflows with structure reconstruction and visualization](https://doi.org/10.1093/nargab/lqae092).  
+_NAR Genomics and Bioinformatics_ **6**(3):lqae092  
+<https://doi.org/10.1093/nargab/lqae092>
+
+Florian Schintke, Khalid Belhajjame, Ninon De Mecquenem, David Frantz, Vanessa Emanuela Guarino, Marcus Hilbrich, Fabian Lehmann, Paolo Missier, Rebecca Sattler, Jan Arne Sparka, Daniel T. Speckhard, Hermann Stolte, Anh Duc Vu, Ulf Leser  (2024):  
+**Validity constraints for data analysis workflows**.  
+_Future Generation Computer Systems_ **157**  
+<https://doi.org/10.1016/j.future.2024.03.037>
+
+Nathan Maligeay, Noémie Bossut, Khalid Belhajjame (2024):  
+[**Why Do Scientific Workflows Still Break?**](http://doi.org/10.1145/3676288.3676300)  
+_Proceedings of the 36th International Conference on Scientific and Statistical Database Management_ (SSDBM '24)  
+<https://doi.org/10.1145/3676288.3676300>
 
 
 ### 2023
-
-Simone Leo, Michael R. Crusoe, Laura Rodríguez-Navas, Raül Sirvent, Alexander Kanitz, Paul De Geest, Rudolf Wittner, Luca Pireddu, Daniel Garijo, José M. Fernández, Iacopo Colonnelli, Matej Gallo, Tazro Ohta, Hirotaka Suetake, Salvador Capella-Gutierrez, Renske de Wit, Bruno de Paula Kinoshita, Stian Soiland-Reyes (2023):  
-[**Recording provenance of workflow runs with RO-Crate**](https://doi.org/10.48550/arXiv.2312.07852).  
-_arXiv_:2312.07852  
-<https://doi.org/10.48550/arXiv.2312.07852>
 
 Casper de Visser, Lennart F. Johansson, Purva Kulkarni, Hailiang Mei, Pieter Neerincx, K. Joeri van der Velde, Péter Horvatovich, Alain J. van Gool, Morris A. Swertz, Peter A. C. ‘t Hoen, Anna Niehues (2023):  
 [**Ten quick tips for building FAIR workflows**](https://doi.org/10.1371/journal.pcbi.1011369).  
