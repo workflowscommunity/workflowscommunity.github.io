@@ -17,6 +17,11 @@ Sean Wilkinson, Meznah Aloqalaa, Khalid Belhajjame, Michael R. Crusoe, Bruno de 
 _arXiv_ 2410.03490 [cs.DL]  
 <https://doi.org/10.48550/arXiv.2410.03490>
 
+Ove Johan Ragnar Gustafsson, Sean R. Wilkinson, Finn Bacall, Stian Soiland-Reyes, Simone Leo, Luca Pireddu, Stuart Owen, Nick Juty, José Mª Fernández, Tom Brown, Hervé Ménager, Björn Grüning, Salvador Capella-Gutierrez, Frederik Coppens, Carole Goble (2024):  
+[**WorkflowHub: a registry for computational workflows**](https://doi.org/10.48550/arXiv.2410.06941).  
+_arXiv_:2410.06941 [cs.DL]  
+<https://doi.org/10.48550/arXiv.2410.06941>
+
 Simone Leo, Michael R. Crusoe, Laura Rodríguez-Navas, Raül Sirvent, Alexander Kanitz, Paul De Geest, Rudolf Wittner, Luca Pireddu, Daniel Garijo, José M. Fernández, Iacopo Colonnelli, Matej Gallo, Tazro Ohta, Hirotaka Suetake, Salvador Capella-Gutierrez, Renske de Wit, Bruno P. Kinoshita, Stian Soiland-Reyes (2024):  
 [**Recording provenance of workflow runs with RO-Crate**](https://doi.org/10.1371/journal.pone.0309210).  
 _PLOS One_ **19**(9):e0309210  
@@ -51,6 +56,11 @@ Nathan Maligeay, Noémie Bossut, Khalid Belhajjame (2024):
 [**Why Do Scientific Workflows Still Break?**](http://doi.org/10.1145/3676288.3676300)  
 _Proceedings of the 36th International Conference on Scientific and Statistical Database Management_ (SSDBM '24)  
 <https://doi.org/10.1145/3676288.3676300>
+
+José M. Fernández, Paula Iborra, Sébastien Moretti, Arun Isaac, Paul De Geest, Stian Soiland-Reyes (2024):  
+**BioHackEU23: FAIR Workflow Execution with WfExS and Workflow Run Crate**.  
+_BioHackrXiv_  
+<https://doi.org/10.37044/osf.io/7f94w>
 
 
 ### 2023
