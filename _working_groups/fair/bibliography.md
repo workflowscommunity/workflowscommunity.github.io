@@ -58,7 +58,7 @@ _Proceedings of the 36th International Conference on Scientific and Statistical 
 <https://doi.org/10.1145/3676288.3676300>
 
 José M. Fernández, Paula Iborra, Sébastien Moretti, Arun Isaac, Paul De Geest, Stian Soiland-Reyes (2024):  
-**BioHackEU23: FAIR Workflow Execution with WfExS and Workflow Run Crate**.  
+[**BioHackEU23: FAIR Workflow Execution with WfExS and Workflow Run Crate**](https://doi.org/10.37044/osf.io/7f94w).  
 _BioHackrXiv_  
 <https://doi.org/10.37044/osf.io/7f94w>
 
