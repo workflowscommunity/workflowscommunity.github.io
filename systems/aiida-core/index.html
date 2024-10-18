@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> AiiDA - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="AiiDA" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A workflow manager for computational science with a strong focus on provenance, performance and extensibility." />
+<meta property="og:description" content="A workflow manager for computational science with a strong focus on provenance, performance and extensibility." />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-10-18T16:19:46+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="twitter:title" content="AiiDA" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2024-10-18T16:19:46+00:00","datePublished":"2024-10-18T16:19:46+00:00","description":"A workflow manager for computational science with a strong focus on provenance, performance and extensibility.","headline":"AiiDA","image":"https://workflows.community/images/wci-default-card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/systems/aiida-core/"},"url":"/systems/aiida-core/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/open-iconic-bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/animate.css" />
+<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="/assets/css/jquery.timepicker.css">
+<!-- <link rel="stylesheet" href="/assets/css/bootstrap.min.css" /> -->
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<!-- <link rel="stylesheet" href="/assets/css/main.css" /> -->
+
+<!-- scripts -->
+<!-- <script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.countTo.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script> -->
+
+<!-- <script type="text/javascript">
+    $('.dropdown-toggle').dropdown();
+</script> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="/"><img src="/images/wci-white-logo.png" style="width: 8em" alt="" id="logo" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <!-- RESOURCES -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Resources</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="/systems">Workflow Systems</a>
+                        <a class="dropdown-item" href="/registries">Workflow Registries</a>
+                        <a class="dropdown-item" href="/education">Education and Training</a>
+                        <a class="dropdown-item" href="/reports">Reports</a>
+                    </div>
+                </li>
+                <!-- RESEARCH -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Research</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown02">
+                        <a class="dropdown-item" href="/groups">Working Groups</a>
+                        <a class="dropdown-item" href="/frameworks">Research Frameworks</a>
+                    </div>
+                </li>
+                <!-- EVENTS -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Events</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown03">
+                        <a class="dropdown-item" href="/summits">Workflows Community Summits</a>
+                        <a class="dropdown-item" href="/bof">Birds of a Feather (BoF)</a>
+                        <a class="dropdown-item" href="/events">Workflows-Related Events</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="/members" class="nav-link">Members</a></li>
+                <li class="nav-item"><a href="/jobs" class="nav-link">Jobs</a></li>
+                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                <li class="nav-item cta"><a href="/contact" class="nav-link"><span>Get involved!</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="hero-wrap js-fullheight" style="max-height: 300px">
+        <div class="overlay" style="max-height: 300px"></div>
+        <div id="particles-js" style="max-height: 300px"></div>
+        <div class="container" style="max-height: 300px">
+            <div class="row no-gutters slider-text justify-content-center" data-scrollax-parent="true">
+                <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+                    <h1 class="" data-scrollax="properties: { translateY: '90%', opacity: 1.6 }"
+                        style="font-size: 2em; padding-top: 5.5em; font-weight: bold;">
+                        AiiDA
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-12 ftco-animate">
+                    <div class="row justify-content-center mb-2 pb-2">
+    <div class="col-md-7 text-center heading-section ftco-animate mb-5">
+        <span class="subheading"><a href="https://aiida-core.readthedocs.io" target="_blank">https://aiida-core.readthedocs.io</a></span><br />
+        <a href="https://aiida-core.readthedocs.io" target="_blank"><img src="https://avatars.githubusercontent.com/u/22181836?v=4" style="max-height: 5em; max-width: 10em;"
+                alt="AiiDA" /></a>
+        <h2 class="mb-4">AiiDA</h2>
+        <i class="far fa-clock"></i> Last updated: 17 Oct 2024<br />
+        <a href="https://github.com/aiidateam/aiida-core/releases/tag/v2.6.2" target="_blank"><strong>AiiDA v2.6.2</strong> </a> &mdash; Released on: 07 Aug 2024<br />
+        <a href="https://github.com/aiidateam/aiida-core" target="_blank">
+            <i class="fab fa-github"></i> https://github.com/aiidateam/aiida-core</a><br />
+        <a href="https://twitter.com/aiidateam" target="_blank"><i class="fab fa-twitter"></i> https://twitter.com/aiidateam</a></li><br />
+        <a href="https://www.youtube.com/c/MaterialsCloud" target="_blank"><i class="fab fa-youtube"></i> https://www.youtube.com/c/MaterialsCloud</a></li>
+    </div>
+
+    <div class="col-md-12 ftco-animate mb-5">
+        <p>AiiDA is an open-source Python infrastructure to help researchers with automating, managing, persisting, sharing and reproducing
+the complex workflows associated with modern computational science and all associated data.
+</p>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <a href="https://aiida.readthedocs.io/projects/aiida-core/en/latest/intro/get_started.html" class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate" target="_blank"><div class="media block-6 services d-block text-center"><div class="d-flex justify-content-center"><div class="icon color-3 d-flex justify-content-center mb-3"><span class="fas fa-download colro-3"></span></div></div><div class="media-body p-2 mt-3"><h3 class="heading">Install</h3></div></div></a>
+    <a href="https://aiida.readthedocs.io/projects/aiida-core/en/latest/intro/tutorial.html" class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate" target="_blank"><div class="media block-6 services d-block text-center"><div class="d-flex justify-content-center"><div class="icon color-1 d-flex justify-content-center mb-3"><span class="fas fa-user-cog color-1"></span></div></div><div class="media-body p-2 mt-3"><h3 class="heading">Tutorial</h3></div></div></a>
+    <a href="http://aiida-core.readthedocs.io" class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate" target="_blank"><div class="media block-6 services d-block text-center"><div class="d-flex justify-content-center"><div class="icon color-2 d-flex justify-content-center mb-3"><span class="fas fa-book color-2"></span></div></div><div class="media-body p-2 mt-3"><h3 class="heading">Docs</h3></div></div></a>
+    <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center">
+            <div class="d-flex justify-content-center">
+                <div class="icon color-4 d-flex justify-content-center mb-3">
+                    <span class="fas fa-code color-4"></i>
+                </div>
+            </div>
+            <div class="media-body p-2 mt-3">
+                <h3 class="heading">Python</h3>
+            </div>
+        </div>      
+    </div>
+</div>
+
+<div class="row justify-content-center mt-5"><div class="col-md-7 text-center heading-section ftco-animate"><h3 class="mb-4">Execution Environment</h3></div></div><div class="row"><div class="col-md-4 ftco-animate"><ul class="list-services"><li><h4>User Interfaces</h4></li><li>Python</li><li>Command Line</li><li>REST</li></ul></div><div class="col-md-4 ftco-animate"><ul class="list-services"><li><h4>Resource Managers</h4></li><li>Slurm</li><li>LSF</li><li>PBS</li><li>SGE</li></ul></div><div class="col-md-4 ftco-animate"><ul class="list-services"><li><h4>Transfer Protocols</h4></li><li>SCP</li></ul></div></div>
+
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-7 text-center heading-section ftco-animate">
+        <h3 class="mb-4">Contributors</h3>
+        <p>
+            <a href="https://github.com/aiidateam/aiida-core/network/members" target="_blank"><i class="fas fa-code-branch"></i> 186</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="https://github.com/aiidateam/aiida-core/stargazers" target="_blank"><i class="far fa-star"></i> 433</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="https://github.com/aiidateam/aiida-core/issues" target="_blank"><i class="far fa-dot-circle"></i> 434</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <i class="fab fa-osi"></i> NOASSERTION
+        </p>
+    </div>
+    <div class="col-md-12 text-center ftco-animate">
+        <a href="https://github.com/sphuber" target="_blank"><img src="https://avatars.githubusercontent.com/u/6992332?v=4" width="48" height="48" alt="sphuber" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/giovannipizzi" target="_blank"><img src="https://avatars.githubusercontent.com/u/16132028?v=4" width="48" height="48" alt="giovannipizzi" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/cepellotti" target="_blank"><img src="https://avatars.githubusercontent.com/u/24702581?v=4" width="48" height="48" alt="cepellotti" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/szoupanos" target="_blank"><img src="https://avatars.githubusercontent.com/u/24694976?v=4" width="48" height="48" alt="szoupanos" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/muhrin" target="_blank"><img src="https://avatars.githubusercontent.com/u/1628907?v=4" width="48" height="48" alt="muhrin" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/lekah" target="_blank"><img src="https://avatars.githubusercontent.com/u/15344896?v=4" width="48" height="48" alt="lekah" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/ltalirz" target="_blank"><img src="https://avatars.githubusercontent.com/u/1053245?v=4" width="48" height="48" alt="ltalirz" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/greschd" target="_blank"><img src="https://avatars.githubusercontent.com/u/5692808?v=4" width="48" height="48" alt="greschd" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/DropD" target="_blank"><img src="https://avatars.githubusercontent.com/u/1255940?v=4" width="48" height="48" alt="DropD" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/chrisjsewell" target="_blank"><img src="https://avatars.githubusercontent.com/u/2997570?v=4" width="48" height="48" alt="chrisjsewell" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/fernandogargiulo1986" target="_blank"><img src="https://avatars.githubusercontent.com/u/11215858?v=4" width="48" height="48" alt="fernandogargiulo1986" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/dev-zero" target="_blank"><img src="https://avatars.githubusercontent.com/u/11307?v=4" width="48" height="48" alt="dev-zero" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/unkcpz" target="_blank"><img src="https://avatars.githubusercontent.com/u/8831685?v=4" width="48" height="48" alt="unkcpz" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/CasperWA" target="_blank"><img src="https://avatars.githubusercontent.com/u/43357585?v=4" width="48" height="48" alt="CasperWA" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/riccardosabatini" target="_blank"><img src="https://avatars.githubusercontent.com/u/617096?v=4" width="48" height="48" alt="riccardosabatini" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/phisch124" target="_blank"><img src="https://avatars.githubusercontent.com/u/3951108?v=4" width="48" height="48" alt="phisch124" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/csadorf" target="_blank"><img src="https://avatars.githubusercontent.com/u/1441208?v=4" width="48" height="48" alt="csadorf" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/mbercx" target="_blank"><img src="https://avatars.githubusercontent.com/u/25607960?v=4" width="48" height="48" alt="mbercx" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/merkys" target="_blank"><img src="https://avatars.githubusercontent.com/u/10404021?v=4" width="48" height="48" alt="merkys" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/yakutovicha" target="_blank"><img src="https://avatars.githubusercontent.com/u/13118485?v=4" width="48" height="48" alt="yakutovicha" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/ramirezfranciscof" target="_blank"><img src="https://avatars.githubusercontent.com/u/6209267?v=4" width="48" height="48" alt="ramirezfranciscof" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/danielhollas" target="_blank"><img src="https://avatars.githubusercontent.com/u/9539441?v=4" width="48" height="48" alt="danielhollas" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/apps/dependabot" target="_blank"><img src="https://avatars.githubusercontent.com/in/29110?v=4" width="48" height="48" alt="dependabot[bot]" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/zhubonan" target="_blank"><img src="https://avatars.githubusercontent.com/u/33688599?v=4" width="48" height="48" alt="zhubonan" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/borellim" target="_blank"><img src="https://avatars.githubusercontent.com/u/6683587?v=4" width="48" height="48" alt="borellim" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/ConradJohnston" target="_blank"><img src="https://avatars.githubusercontent.com/u/40352432?v=4" width="48" height="48" alt="ConradJohnston" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/elsapassaro" target="_blank"><img src="https://avatars.githubusercontent.com/u/10634826?v=4" width="48" height="48" alt="elsapassaro" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/khsrali" target="_blank"><img src="https://avatars.githubusercontent.com/u/26275340?v=4" width="48" height="48" alt="khsrali" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/apps/pre-commit-ci" target="_blank"><img src="https://avatars.githubusercontent.com/in/68672?v=4" width="48" height="48" alt="pre-commit-ci[bot]" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/waychal" target="_blank"><img src="https://avatars.githubusercontent.com/u/25031092?v=4" width="48" height="48" alt="waychal" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a>
+    </div>
+</div>
+
+                </div>
+                <!-- <div class="col-md-6 col-lg-3 ftco-animate"> -->
+		   <!-- Disabled as Twitter broke their own Widget. See issue #65
+                    <a class="twitter-timeline" data-lang="en" data-height="1500" data-width="100%" data-theme="light"
+                        data-chrome="nofooter" href="https://twitter.com/WorkflowsCI">Tweets by WorkflowsCI</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		   -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Workflows Community Initiative</h2>
+                    <p>Our goal is to bring the workflows community together (users, developers, researchers, and
+                        facilities) to provide <strong>community resources and capabilities</strong> to enable
+                        scientists
+                        and workflow systems developers to discover software products, related efforts, events,
+                        technical
+                        reports, etc. and engage in community-wide efforts to tackle workflows grand challenges.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="ftco-footer-widget mb-4">
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                                class="fa-stack fa-2x" style="font-size: 1.5em">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #aaa"></i>
+                                <i class="fab fa-youtube fa-stack-1x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:contact@workflows.community" class="fa-stack fa-2x"
+                                style="font-size: 1.5em">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #aaa"></i>
+                                <i class="fa fa-envelope fa-stack-1x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/company/workflows-community" target="_blank" class="fa-stack fa-2x"
+                                style="font-size: 1.5em">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #aaa"></i>
+                                <i class="fab fa-linkedin fa-stack-1x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                                target="_blank" class="fa-stack fa-2x" style="font-size: 1.5em">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #aaa"></i>
+                                <i class="fab fa-slack fa-stack-1x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    &copy;2022&mdash;2024 Workflows.Community Initiative
+                    <br />
+                    <span style="color: #888">This template is made with
+                        <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"
+                            style="color: #888">Colorlib</a>
+                    </span>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.easing.1.3.js"></script>
+<script src="/assets/js/jquery.waypoints.min.js"></script>
+<script src="/assets/js/jquery.stellar.min.js"></script>
+<script src="/assets/js/owl.carousel.min.js"></script>
+<script src="/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/jquery.animateNumber.min.js"></script>
+<script src="/assets/js/bootstrap-datepicker.js"></script>
+<!-- <script src="/assets/js/jquery.timepicker.min.js"></script> -->
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/particle.js"></script>
+<script src="/assets/js/scrollax.min.js"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
+<!-- <script src="/assets/js/google-map.js"></script> -->
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>
