@@ -345,6 +345,7 @@
   first_name: Patricia
   institution: Los Alamos National Laboratory
   country: us
+  link: https://github.com/pagrubel 
 
 - last_name: James
   first_name: Chela
@@ -1292,6 +1293,18 @@
   first_name: Manuel
   institution: Barcelona Supercomputing Center 
   country: es
+
+- last_name: Lu
+  first_name: Shiyong
+  institution: Wayne State University
+  country: us
+  link: https://shiyong.eng.wayne.edu
+
+- last_name: Dolas
+  first_name: Sagar
+  institution: SURF - Dutch ICT Cooperative for Education & Research
+  country: nl
+  link: 
 
 # - last_name:
 #   first_name:
