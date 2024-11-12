@@ -1311,6 +1311,17 @@
   institution: Lawrence Berkeley National Lab
   country: us
 
+- last_name: Behr
+  first_name: Yannik
+  institution: GNS Science
+  country: nz
+
+- last_name: Dudley
+  first_name: Kevin
+  institution: Queensland University of Technology
+  country: au
+  link: 
+
 # - last_name:
 #   first_name:
 #   institution: 
