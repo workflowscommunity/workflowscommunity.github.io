@@ -142,3 +142,8 @@
 - organization: PrefectHQ
   repository: prefect
   type: github
+
+- organization: DagOnStar
+  repository: dagonstar
+  type: github
+  metadata: docs
