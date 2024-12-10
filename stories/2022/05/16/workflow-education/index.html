@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> Workflows Education:  Underlying  Computer Science Concepts - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Workflows Education: Underlying Computer Science Concepts" />
+<meta name="author" content="Henri Casanova" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Workflow applications have become mainstream in many domains, including most of the sciences, engineering, as well as AI. It is thus crucial that educational and training opportunities be available to help grow an effective workflow workforce. Several institutions have already developed and made available training material for particular workflow systems, so that users can learn how to deploy and execute their workflow applications on hardware platforms on which these systems are installed. Less developed, but no less crucial, are pedagogic materials that target the fundamental concepts necessary to understand workflow applications and reason about their executions and the performance thereof. One of the reasons why these pedagogic materials are less developed is that many of the relevant concepts belong to “standard” parallel and distributed computing (PDC) topics, and it is assumed that these topics are already covered in university computer science curricula." />
+<meta property="og:description" content="Workflow applications have become mainstream in many domains, including most of the sciences, engineering, as well as AI. It is thus crucial that educational and training opportunities be available to help grow an effective workflow workforce. Several institutions have already developed and made available training material for particular workflow systems, so that users can learn how to deploy and execute their workflow applications on hardware platforms on which these systems are installed. Less developed, but no less crucial, are pedagogic materials that target the fundamental concepts necessary to understand workflow applications and reason about their executions and the performance thereof. One of the reasons why these pedagogic materials are less developed is that many of the relevant concepts belong to “standard” parallel and distributed computing (PDC) topics, and it is assumed that these topics are already covered in university computer science curricula." />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="/images/stories/eduwrench.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="/images/stories/eduwrench.png" />
+<meta property="twitter:title" content="Workflows Education: Underlying Computer Science Concepts" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@Henri Casanova" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Henri Casanova"},"dateModified":"2022-05-16T00:00:00+00:00","datePublished":"2022-05-16T00:00:00+00:00","description":"Workflow applications have become mainstream in many domains, including most of the sciences, engineering, as well as AI. It is thus crucial that educational and training opportunities be available to help grow an effective workflow workforce. Several institutions have already developed and made available training material for particular workflow systems, so that users can learn how to deploy and execute their workflow applications on hardware platforms on which these systems are installed. Less developed, but no less crucial, are pedagogic materials that target the fundamental concepts necessary to understand workflow applications and reason about their executions and the performance thereof. One of the reasons why these pedagogic materials are less developed is that many of the relevant concepts belong to “standard” parallel and distributed computing (PDC) topics, and it is assumed that these topics are already covered in university computer science curricula.","headline":"Workflows Education: Underlying Computer Science Concepts","image":"/images/stories/eduwrench.png","mainEntityOfPage":{"@type":"WebPage","@id":"/stories/2022/05/16/workflow-education/"},"url":"/stories/2022/05/16/workflow-education/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/open-iconic-bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/animate.css" />
+<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="/assets/css/jquery.timepicker.css">
+<!-- <link rel="stylesheet" href="/assets/css/bootstrap.min.css" /> -->
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<!-- <link rel="stylesheet" href="/assets/css/main.css" /> -->
+
+<!-- scripts -->
+<!-- <script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.countTo.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script> -->
+
+<!-- <script type="text/javascript">
+    $('.dropdown-toggle').dropdown();
+</script> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="/"><img src="/images/wci-white-logo.png" style="width: 8em" alt="" id="logo" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <!-- RESOURCES -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Resources</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="/systems">Workflow Systems</a>
+                        <a class="dropdown-item" href="/registries">Workflow Registries</a>
+                        <a class="dropdown-item" href="/education">Education and Training</a>
+                        <a class="dropdown-item" href="/reports">Reports</a>
+                    </div>
+                </li>
+                <!-- RESEARCH -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Research</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown02">
+                        <a class="dropdown-item" href="/groups">Working Groups</a>
+                        <a class="dropdown-item" href="/frameworks">Research Frameworks</a>
+                    </div>
+                </li>
+                <!-- EVENTS -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Events</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown03">
+                        <a class="dropdown-item" href="/summits">Workflows Community Summits</a>
+                        <a class="dropdown-item" href="/bof">Birds of a Feather (BoF)</a>
+                        <a class="dropdown-item" href="/events">Workflows-Related Events</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="/members" class="nav-link">Members</a></li>
+                <li class="nav-item"><a href="/jobs" class="nav-link">Jobs</a></li>
+                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                <li class="nav-item cta"><a href="/contact" class="nav-link"><span>Get involved!</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="hero-wrap js-fullheight" style="max-height: 300px">
+        <div class="overlay" style="max-height: 300px"></div>
+        <div id="particles-js" style="max-height: 300px"></div>
+        <div class="container" style="max-height: 300px">
+            <div class="row no-gutters slider-text justify-content-center" data-scrollax-parent="true">
+                <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+                    <h1 class="" data-scrollax="properties: { translateY: '90%', opacity: 1.6 }"
+                        style="font-size: 2em; padding-top: 5.5em; font-weight: bold;">
+                        Workflows Education:  Underlying  Computer Science Concepts
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-12 ftco-animate">
+                    <div class="row justify-content-center mb-2 pb-2">
+    <div class="col-md-8 text-center heading-section ftco-animate mb-5">
+        <span class="subheading">May 16, 2022</span><br />
+        <div class="row mt-4">
+            
+            <div class="col-md-6" style="margin: auto">
+                <img src="https://workflows.community/images/about/casanova.jpg" alt="Henri Casanova"
+                    style="width: 3.5em; height: 3.5em; border-radius: 50%; margin-right: 1em;" /><br />
+                <div><span class="subheading" style="color: #999">Henri Casanova</span></div>
+                <div style="color: #bbb">University of Hawaii</div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12 ftco-animate mb-5">
+    <p>Workflow applications have become mainstream in many domains, including most of the sciences, engineering, as well as AI. It is thus crucial that educational and training opportunities be available to help grow an effective workflow workforce. Several institutions have already developed and made available training material for particular workflow systems, so that users can learn how to deploy and execute their workflow applications on hardware platforms on which these systems are installed. Less developed, but no less crucial, are pedagogic materials that target the fundamental concepts necessary to understand workflow applications and reason about their executions and the performance thereof. One of the reasons why these pedagogic materials are less developed is that many of the relevant concepts belong to “standard” parallel and distributed computing (PDC) topics, and it is assumed that these topics are already covered in university computer science curricula.</p>
+
+<p>This assumption is problematic for several reasons. First, it is well recognized that PDC is not sufficiently included in undergraduate computer science curricula, which has motivated the establishment of the <a href="https://tcpp.cs.gsu.edu/curriculum/">NSF/IEEE-TCPP Curriculum Initiative on Parallel and Distributed Computing</a>. Although progress is being made, many computer science college graduates still do not have sufficient, or any, PDC exposure. Second, many potential members of the workflow workforce will not be computer science graduates. Third, even if students have been taught the relevant concepts at different times throughout their education, they may not have retained them effectively. There is a thus need for a one-stop, self-contained ``these are the concepts needed for being able understand and reason about workflow executions” pedagogic package. This content of this package should draw from multiple sources, and should be curated and vetted by the Workflow Community Initiative. Its main use would be to provide “prerequisite concepts you need to know for workflows” to students (as a complement to or a component of university courses, before starting a workflow-related internship, before engaging on graduate-level workflow-related projects, etc.) and professionals (e.g., before beginning to use workflows, to better understand workflow behavior and performance in various professional contexts).</p>
+
+<p><img src="/images/stories/nsf-ieee-tcpp.png" alt="NSF/IEEE-TCPP" width="60%" /><br />
+<span><i>NSF/IEEE-TCPP Curriculum Initiative on Parallel and Distributed Computing.</i></span></p>
+
+<p>A project that could provide useful components to include in this envisioned pedagogic package is <a href="https://eduwrench.org">EduWRENCH</a>. EduWRENCH provides many pedagogic modules, each one including a pedagogic narrative, practice questions, open questions, and in-the-browser simulation-driven activities. Basic EduWRENCH modules target fundamental concepts of computation, I/O, and networking and explain how they drive application performance. Some modules focus on principles of parallel computation on multi-core machines, including notions of parallelism, speedup, efficiency, overhead, and load balancing. Other modules focus on principles of distributed computation over a network, including notions of data proximity. Several more advanced build on the aforementioned modules to teach workflow concepts and/or to use workflows as case-studies for more advanced topics such as scheduling, energy efficiency, etc. Most EduWRENCH modules have already been used effectively not only in university courses, but also to train beginning graduate students who are about to join a workflow research and development group. EduWRENCH by no means provides a comprehensive pedagogic package for workflows, but it may serve as a good starting point for the Workflow Community Initiative to define what such a package should and should not contain.</p>
+
+<p><img src="/images/stories/eduwrench.png" alt="EduWRENCH" width="80%" /><br />
+<span><i>EduWRENCH website.</i></span></p>
+
+</div>
+                </div>
+                <!-- <div class="col-md-6 col-lg-3 ftco-animate"> -->
+		   <!-- Disabled as Twitter broke their own Widget. See issue #65
+                    <a class="twitter-timeline" data-lang="en" data-height="1500" data-width="100%" data-theme="light"
+                        data-chrome="nofooter" href="https://twitter.com/WorkflowsCI">Tweets by WorkflowsCI</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		   -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Workflows Community Initiative</h2>
+                    <p>Our goal is to bring the workflows community together (users, developers, researchers, and
+                        facilities) to provide <strong>community resources and capabilities</strong> to enable
+                        scientists
+                        and workflow systems developers to discover software products, related efforts, events,
+                        technical
+                        reports, etc. and engage in community-wide efforts to tackle workflows grand challenges.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="ftco-footer-widget mb-4">
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                                class="fa-stack fa-2x" style="font-size: 1.5em">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #aaa"></i>
+                                <i class="fab fa-youtube fa-stack-1x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:contact@workflows.community" class="fa-stack fa-2x"
+                                style="font-size: 1.5em">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #aaa"></i>
+                                <i class="fa fa-envelope fa-stack-1x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/company/workflows-community" target="_blank" class="fa-stack fa-2x"
+                                style="font-size: 1.5em">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #aaa"></i>
+                                <i class="fab fa-linkedin fa-stack-1x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                                target="_blank" class="fa-stack fa-2x" style="font-size: 1.5em">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #aaa"></i>
+                                <i class="fab fa-slack fa-stack-1x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    &copy;2022&mdash;2024 Workflows.Community Initiative
+                    <br />
+                    <span style="color: #888">This template is made with
+                        <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"
+                            style="color: #888">Colorlib</a>
+                    </span>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.easing.1.3.js"></script>
+<script src="/assets/js/jquery.waypoints.min.js"></script>
+<script src="/assets/js/jquery.stellar.min.js"></script>
+<script src="/assets/js/owl.carousel.min.js"></script>
+<script src="/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/jquery.animateNumber.min.js"></script>
+<script src="/assets/js/bootstrap-datepicker.js"></script>
+<!-- <script src="/assets/js/jquery.timepicker.min.js"></script> -->
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/particle.js"></script>
+<script src="/assets/js/scrollax.min.js"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
+<!-- <script src="/assets/js/google-map.js"></script> -->
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>
