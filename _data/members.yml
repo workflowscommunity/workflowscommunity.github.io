@@ -1333,6 +1333,17 @@
   institution: University of Chicago
   country: us
 
+- last_name: Farahani
+  first_name: Reza
+  institution: University of Klagenfurt
+  country: at
+  link: https://www.linkedin.com/in/reza-farahani/
+
+- last_name: Rêgo
+  first_name: Celso
+  institution: Karlsruhe Institute of Technology
+  country: de
+
 # - last_name:
 #   first_name:
 #   institution: 
