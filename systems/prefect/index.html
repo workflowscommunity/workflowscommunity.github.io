@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> prefect - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="prefect" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Prefect is a workflow orchestration framework for building resilient data pipelines in Python." />
+<meta property="og:description" content="Prefect is a workflow orchestration framework for building resilient data pipelines in Python." />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-12T16:21:32+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="twitter:title" content="prefect" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2024-12-12T16:21:32+00:00","datePublished":"2024-12-12T16:21:32+00:00","description":"Prefect is a workflow orchestration framework for building resilient data pipelines in Python.","headline":"prefect","image":"https://workflows.community/images/wci-default-card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/systems/prefect/"},"url":"/systems/prefect/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/open-iconic-bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/animate.css" />
+<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="/assets/css/jquery.timepicker.css">
+<!-- <link rel="stylesheet" href="/assets/css/bootstrap.min.css" /> -->
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<!-- <link rel="stylesheet" href="/assets/css/main.css" /> -->
+
+<!-- scripts -->
+<!-- <script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.countTo.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script> -->
+
+<!-- <script type="text/javascript">
+    $('.dropdown-toggle').dropdown();
+</script> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="/"><img src="/images/wci-white-logo.png" style="width: 8em" alt="" id="logo" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <!-- RESOURCES -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Resources</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="/systems">Workflow Systems</a>
+                        <a class="dropdown-item" href="/registries">Workflow Registries</a>
+                        <a class="dropdown-item" href="/education">Education and Training</a>
+                        <a class="dropdown-item" href="/reports">Reports</a>
+                    </div>
+                </li>
+                <!-- RESEARCH -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Research</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown02">
+                        <a class="dropdown-item" href="/groups">Working Groups</a>
+                        <a class="dropdown-item" href="/frameworks">Research Frameworks</a>
+                    </div>
+                </li>
+                <!-- EVENTS -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Events</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown03">
+                        <a class="dropdown-item" href="/summits">Workflows Community Summits</a>
+                        <a class="dropdown-item" href="/bof">Birds of a Feather (BoF)</a>
+                        <a class="dropdown-item" href="/events">Workflows-Related Events</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="/members" class="nav-link">Members</a></li>
+                <li class="nav-item"><a href="/jobs" class="nav-link">Jobs</a></li>
+                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                <li class="nav-item cta"><a href="/contact" class="nav-link"><span>Get involved!</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="hero-wrap js-fullheight" style="max-height: 300px">
+        <div class="overlay" style="max-height: 300px"></div>
+        <div id="particles-js" style="max-height: 300px"></div>
+        <div class="container" style="max-height: 300px">
+            <div class="row no-gutters slider-text justify-content-center" data-scrollax-parent="true">
+                <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+                    <h1 class="" data-scrollax="properties: { translateY: '90%', opacity: 1.6 }"
+                        style="font-size: 2em; padding-top: 5.5em; font-weight: bold;">
+                        prefect
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-12 ftco-animate">
+                    <div class="row justify-content-center mb-2 pb-2">
+    <div class="col-md-7 text-center heading-section ftco-animate mb-5">
+        <span class="subheading"><a href="https://prefect.io" target="_blank">https://prefect.io</a></span><br />
+        <a href="https://prefect.io" target="_blank"><img src="https://avatars.githubusercontent.com/u/39270919?v=4" style="max-height: 5em; max-width: 10em;"
+                alt="prefect" /></a>
+        <h2 class="mb-4">prefect</h2>
+        <i class="far fa-clock"></i> Last updated: 12 Dec 2024<br />
+        <a href="https://github.com/PrefectHQ/prefect/releases/tag/3.1.7.dev1" target="_blank"><strong>3.1.7.dev1: Nightly Development Release</strong> </a> &mdash; Released on: 12 Dec 2024<br />
+        <a href="https://github.com/PrefectHQ/prefect" target="_blank">
+            <i class="fab fa-github"></i> https://github.com/PrefectHQ/prefect</a><br />
+        <br />
+        
+    </div>
+
+    <div class="col-md-12 ftco-animate mb-5">
+        <p>Prefect is a workflow orchestration framework for building resilient data pipelines in Python.</p>
+    </div>
+</div>
+
+<div class="row mb-4">
+    
+    
+    
+    <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center">
+            <div class="d-flex justify-content-center">
+                <div class="icon color-4 d-flex justify-content-center mb-3">
+                    <span class="fas fa-code color-4"></i>
+                </div>
+            </div>
+            <div class="media-body p-2 mt-3">
+                <h3 class="heading">Python</h3>
+            </div>
+        </div>      
+    </div>
+</div>
+
+
+
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-7 text-center heading-section ftco-animate">
+        <h3 class="mb-4">Contributors</h3>
+        <p>
+            <a href="https://github.com/PrefectHQ/prefect/network/members" target="_blank"><i class="fas fa-code-branch"></i> 1658</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="https://github.com/PrefectHQ/prefect/stargazers" target="_blank"><i class="far fa-star"></i> 17764</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="https://github.com/PrefectHQ/prefect/issues" target="_blank"><i class="far fa-dot-circle"></i> 947</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <i class="fab fa-osi"></i> Apache-2.0
+        </p>
+    </div>
+    <div class="col-md-12 text-center ftco-animate">
+        <a href="https://github.com/zanieb" target="_blank"><img src="https://avatars.githubusercontent.com/u/2586601?v=4" width="48" height="48" alt="zanieb" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/pleek91" target="_blank"><img src="https://avatars.githubusercontent.com/u/6200442?v=4" width="48" height="48" alt="pleek91" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/jlowin" target="_blank"><img src="https://avatars.githubusercontent.com/u/153965?v=4" width="48" height="48" alt="jlowin" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/cicdw" target="_blank"><img src="https://avatars.githubusercontent.com/u/13255838?v=4" width="48" height="48" alt="cicdw" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/anticorrelator" target="_blank"><img src="https://avatars.githubusercontent.com/u/1688064?v=4" width="48" height="48" alt="anticorrelator" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/znicholasbrown" target="_blank"><img src="https://avatars.githubusercontent.com/u/27291717?v=4" width="48" height="48" alt="znicholasbrown" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/zangell44" target="_blank"><img src="https://avatars.githubusercontent.com/u/42625717?v=4" width="48" height="48" alt="zangell44" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/apps/dependabot" target="_blank"><img src="https://avatars.githubusercontent.com/in/29110?v=4" width="48" height="48" alt="dependabot[bot]" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/desertaxle" target="_blank"><img src="https://avatars.githubusercontent.com/u/12350579?v=4" width="48" height="48" alt="desertaxle" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/stackoverfloweth" target="_blank"><img src="https://avatars.githubusercontent.com/u/6098901?v=4" width="48" height="48" alt="stackoverfloweth" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/zzstoatzz" target="_blank"><img src="https://avatars.githubusercontent.com/u/31014960?v=4" width="48" height="48" alt="zzstoatzz" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/discdiver" target="_blank"><img src="https://avatars.githubusercontent.com/u/7703961?v=4" width="48" height="48" alt="discdiver" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/zhen0" target="_blank"><img src="https://avatars.githubusercontent.com/u/40272060?v=4" width="48" height="48" alt="zhen0" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/peytonrunyan" target="_blank"><img src="https://avatars.githubusercontent.com/u/44583861?v=4" width="48" height="48" alt="peytonrunyan" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/bunchesofdonald" target="_blank"><img src="https://avatars.githubusercontent.com/u/354286?v=4" width="48" height="48" alt="bunchesofdonald" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/chrisguidry" target="_blank"><img src="https://avatars.githubusercontent.com/u/8194?v=4" width="48" height="48" alt="chrisguidry" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/serinamarie" target="_blank"><img src="https://avatars.githubusercontent.com/u/42048900?v=4" width="48" height="48" alt="serinamarie" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/billpalombi" target="_blank"><img src="https://avatars.githubusercontent.com/u/3407835?v=4" width="48" height="48" alt="billpalombi" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/jakekaplan" target="_blank"><img src="https://avatars.githubusercontent.com/u/40362401?v=4" width="48" height="48" alt="jakekaplan" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/marvin-robot" target="_blank"><img src="https://avatars.githubusercontent.com/u/41086007?v=4" width="48" height="48" alt="marvin-robot" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/abrookins" target="_blank"><img src="https://avatars.githubusercontent.com/u/97182?v=4" width="48" height="48" alt="abrookins" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/tpdorsey" target="_blank"><img src="https://avatars.githubusercontent.com/u/370316?v=4" width="48" height="48" alt="tpdorsey" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/ahuang11" target="_blank"><img src="https://avatars.githubusercontent.com/u/15331990?v=4" width="48" height="48" alt="ahuang11" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/anna-geller" target="_blank"><img src="https://avatars.githubusercontent.com/u/86264395?v=4" width="48" height="48" alt="anna-geller" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/ThatGalNatalie" target="_blank"><img src="https://avatars.githubusercontent.com/u/40726391?v=4" width="48" height="48" alt="ThatGalNatalie" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/apps/github-actions" target="_blank"><img src="https://avatars.githubusercontent.com/in/15368?v=4" width="48" height="48" alt="github-actions[bot]" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/marichka-offen" target="_blank"><img src="https://avatars.githubusercontent.com/u/40467112?v=4" width="48" height="48" alt="marichka-offen" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/jawnsy" target="_blank"><img src="https://avatars.githubusercontent.com/u/52710?v=4" width="48" height="48" alt="jawnsy" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/aaazzam" target="_blank"><img src="https://avatars.githubusercontent.com/u/33043305?v=4" width="48" height="48" alt="aaazzam" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/collincchoy" target="_blank"><img src="https://avatars.githubusercontent.com/u/22418768?v=4" width="48" height="48" alt="collincchoy" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a>
+    </div>
+</div>
+
+                </div>
+                <!-- <div class="col-md-6 col-lg-3 ftco-animate"> -->
+		   <!-- Disabled as Twitter broke their own Widget. See issue #65
+                    <a class="twitter-timeline" data-lang="en" data-height="1500" data-width="100%" data-theme="light"
+                        data-chrome="nofooter" href="https://twitter.com/WorkflowsCI">Tweets by WorkflowsCI</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		   -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Workflows Community Initiative</h2>
+                    <p>Our goal is to bring the workflows community together (users, developers, researchers, and
+                        facilities) to provide <strong>community resources and capabilities</strong> to enable
+                        scientists
+                        and workflow systems developers to discover software products, related efforts, events,
+                        technical
+                        reports, etc. and engage in community-wide efforts to tackle workflows grand challenges.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="ftco-footer-widget mb-4">
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                                class="fa-stack fa-2x" style="font-size: 1.5em">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #aaa"></i>
+                                <i class="fab fa-youtube fa-stack-1x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:contact@workflows.community" class="fa-stack fa-2x"
+                                style="font-size: 1.5em">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #aaa"></i>
+                                <i class="fa fa-envelope fa-stack-1x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/company/workflows-community" target="_blank" class="fa-stack fa-2x"
+                                style="font-size: 1.5em">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #aaa"></i>
+                                <i class="fab fa-linkedin fa-stack-1x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                                target="_blank" class="fa-stack fa-2x" style="font-size: 1.5em">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #aaa"></i>
+                                <i class="fab fa-slack fa-stack-1x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    &copy;2022&mdash;2024 Workflows.Community Initiative
+                    <br />
+                    <span style="color: #888">This template is made with
+                        <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"
+                            style="color: #888">Colorlib</a>
+                    </span>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.easing.1.3.js"></script>
+<script src="/assets/js/jquery.waypoints.min.js"></script>
+<script src="/assets/js/jquery.stellar.min.js"></script>
+<script src="/assets/js/owl.carousel.min.js"></script>
+<script src="/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/jquery.animateNumber.min.js"></script>
+<script src="/assets/js/bootstrap-datepicker.js"></script>
+<!-- <script src="/assets/js/jquery.timepicker.min.js"></script> -->
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/particle.js"></script>
+<script src="/assets/js/scrollax.min.js"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
+<!-- <script src="/assets/js/google-map.js"></script> -->
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>
