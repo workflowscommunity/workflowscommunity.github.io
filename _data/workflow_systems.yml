@@ -126,14 +126,9 @@
   repository: signac-flow
   type: github
 
-# - organization: frobnitzem
-#   repository: mpi_list
+# - organization: nipy
+#   repository: nipype
 #   type: github
-#   metadata: docs
-
-- organization: nipy
-  repository: nipype
-  type: github
  
 # - organization: icui
 #   repository: nnodes
