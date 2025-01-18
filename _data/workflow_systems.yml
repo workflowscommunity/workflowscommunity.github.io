@@ -126,9 +126,9 @@
   repository: signac-flow
   type: github
 
-# - organization: nipy
-#   repository: nipype
-#   type: github
+- organization: nipy
+  repository: nipype
+  type: github
  
 # - organization: icui
 #   repository: nnodes
