@@ -28,6 +28,9 @@ collections:
   systems:
     output: true
     permalink: /systems/:path/
+  talks:
+    output: true
+    permalink: /talks/:path/
   working_groups:
     output: true
     permalink: /groups/:path/
