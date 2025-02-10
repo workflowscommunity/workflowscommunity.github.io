@@ -4,6 +4,7 @@ title: Placeholder talk
 authors: Stephen Hudson (Argonne National Lab)
 event_date: February 26, 2025 (Tentative)
 times: 9am-9.30 PST / noon-12.30pm EST / 17:00-17:30 CET
+talk_number: 1
 <!-- video_playlist: https://www.youtube.com/watch?v=STy5HwEVj8k&list=PLAtmuqHExRvOzPOvJfSH8PwjbVJFyulCy -->
 <!-- report_badge: https://zenodo.org/badge/DOI/10.5281/zenodo.13844759.svg -->
 <!-- report_doi: 10.5281/zenodo.13844759 -->
@@ -45,7 +46,7 @@ order: 5
 <!-- Text under pictures -->
 
 <!--<div class="row">
-    {% assign speaker = site.data.speakers | where: "talk_num","1" %}
+    {% assign speaker = site.data.speakers | where: "talk_num",{{page.talk_number}} %}
     {% for member in speaker %}
     <div class="col-md-4 mb-5 ftco-animate">
         <div class="block-10">
@@ -71,7 +72,7 @@ order: 5
 <!-- Text beside picture -->
 
 <div class="row">
-    {% assign speaker = site.data.speakers | where: "talk_num", "1" %}
+    {% assign speaker = site.data.speakers | where: "talk_num", {{page.talk_number}} %}
     {% for member in speaker %}
     <div class="col-md-6 mb-5 ftco-animate">
         <div class="d-flex">
