@@ -24,7 +24,7 @@ permalink: /talks
 
 
 <div class="row">
-    {% assign talks = site.talks | sort: 'order' | reverse %}
+    {% assign talks = site.talks | sort: 'talk_number' | reverse %}
     {% for talk in talks %}
     <div class="col-md-4 ftco-animate">
         <div class="blog-entry" style="min-height: 15.5em;">
