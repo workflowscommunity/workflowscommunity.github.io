@@ -46,7 +46,7 @@ order: 5
 <!-- Text under pictures -->
 
 <!--<div class="row">
-    {% assign speaker = site.data.speakers | where: "talk_num",{{page.talk_number}} %}
+    {% assign speaker = site.data.speakers | where: "talk_num", page.talk_number %}
     {% for member in speaker %}
     <div class="col-md-4 mb-5 ftco-animate">
         <div class="block-10">
@@ -72,7 +72,7 @@ order: 5
 <!-- Text beside picture -->
 
 <div class="row">
-    {% assign speaker = site.data.speakers | where: "talk_num", {{page.talk_number}} %}
+    {% assign speaker = site.data.speakers | where: "talk_num", page.talk_number %}
     {% for member in speaker %}
     <div class="col-md-6 mb-5 ftco-animate">
         <div class="d-flex">
