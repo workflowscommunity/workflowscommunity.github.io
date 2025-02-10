@@ -1,0 +1,11 @@
+- name: Stephen Hudson
+  role: Principal Software Engineer
+  institution:
+    name: Argonne National Laboratory
+    link: https://www.anl.gov
+    image: argonne.png
+  country: us
+  link: https://www.anl.gov/profile/stephen-hudson
+  talk_num: 1
+  photo: hudson.jpg
+  bio: "Stephen Hudson is a Principal Software Engineer at Argonne National Laboratory, working on workflow systems for high-performance computing."
