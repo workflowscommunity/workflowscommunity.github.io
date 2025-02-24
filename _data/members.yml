@@ -1349,6 +1349,35 @@
   institution: Case Western Reserve University
   country: us
 
+- last_name: Gruber
+  first_name: Lorenz
+  institution: University of Wuerzburg
+  country: de
+  link: https://se.informatik.uni-wuerzburg.de/software-engineering-group/staff/lorenz-gruber/
+
+- last_name: Herbst
+  first_name: Nikolas
+  institution: University of Würzburg
+  country: de
+  link: https://go.uni-wuerzburg.de/herbst
+
+- last_name: Kounev
+  first_name: Samuel
+  institution: University of Würzburg
+  country: de
+  link: https://se.informatik.uni-wuerzburg.de/software-engineering-group/staff/samuel-kounev/
+
+- last_name: von Laszewski
+  first_name: Gregor
+  institution: University of Virginia
+  country: us
+  link: https://laszewski.github.io/
+
+- last_name: Correa
+  first_name: Alan Jason
+  institution: RWTH Aachen University
+  country: de
+
 # - last_name:
 #   first_name:
 #   institution: 
