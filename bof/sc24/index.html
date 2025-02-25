@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> SC24 BoF - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="SC24 BoF" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Collaborative Pathways for Designing an Integrated Infrastructure for Research Excellence SC24 BoF Tuesday - Nov 19, 2024 5:15pm-6:45pm ET Room B212 In modern science, integrating scientific workflows, especially those involving AI and spanning multiple facilities, is paramount. AI workflows, leveraging machine learning and data analytics, are crucial for processing and interpreting vast amounts of data, driving unprecedented breakthroughs. Multi-facility workflows have expanded the horizons of scientific research by enabling the seamless integration of computational resources, data, and experiments across different locations, fostering collaboration and resource sharing. The inaugural BoF session at SC22 focused on integrating HPC and AI workflows. Building on this, the second BoF at SC23 gathered the Workflows Community to explore challenges, opportunities, and future pathways for continuum and multi-facility workflows. Scientists provided insights into domain-specific challenges, discussing coordination among computing and experimental facilities, metadata tracking, co-design of experiment facilities, task standardization, edge-to-cloud data exchange, adaptive compression, and defining common workflow concepts. These sessions highlighted the importance of seamless integration across cloud-based data pipelines, multi-facility instruments, and HPC infrastructures. The enthusiasm and feedback underscored the need for deeper exploration of continuum and multi-facility workflows, critical for the resilience and real-time demands of modern scientific workflows. In this BoF session, we will deepen the discourse initiated during the previous BoF sessions and elevate these discussions by incorporating a wider array of perspectives, including those of scientists who develop and utilize these workflow systems within their specific domains. By examining the challenges and opportunities within multi-facility workflows, the session will explore themes such as near real-time processing and integration of data from multiple sources and further discuss the topics of coordination among different computing and experimental facilities, and co-design of experiment facilities. This initiative is motivated by the need to address the continuum of workflows that demand uninterrupted computing access and multi-facility workflows that enhance resilience and efficiency across distributed environments." />
+<meta property="og:description" content="Collaborative Pathways for Designing an Integrated Infrastructure for Research Excellence SC24 BoF Tuesday - Nov 19, 2024 5:15pm-6:45pm ET Room B212 In modern science, integrating scientific workflows, especially those involving AI and spanning multiple facilities, is paramount. AI workflows, leveraging machine learning and data analytics, are crucial for processing and interpreting vast amounts of data, driving unprecedented breakthroughs. Multi-facility workflows have expanded the horizons of scientific research by enabling the seamless integration of computational resources, data, and experiments across different locations, fostering collaboration and resource sharing. The inaugural BoF session at SC22 focused on integrating HPC and AI workflows. Building on this, the second BoF at SC23 gathered the Workflows Community to explore challenges, opportunities, and future pathways for continuum and multi-facility workflows. Scientists provided insights into domain-specific challenges, discussing coordination among computing and experimental facilities, metadata tracking, co-design of experiment facilities, task standardization, edge-to-cloud data exchange, adaptive compression, and defining common workflow concepts. These sessions highlighted the importance of seamless integration across cloud-based data pipelines, multi-facility instruments, and HPC infrastructures. The enthusiasm and feedback underscored the need for deeper exploration of continuum and multi-facility workflows, critical for the resilience and real-time demands of modern scientific workflows. In this BoF session, we will deepen the discourse initiated during the previous BoF sessions and elevate these discussions by incorporating a wider array of perspectives, including those of scientists who develop and utilize these workflow systems within their specific domains. By examining the challenges and opportunities within multi-facility workflows, the session will explore themes such as near real-time processing and integration of data from multiple sources and further discuss the topics of coordination among different computing and experimental facilities, and co-design of experiment facilities. This initiative is motivated by the need to address the continuum of workflows that demand uninterrupted computing access and multi-facility workflows that enhance resilience and efficiency across distributed environments." />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-25T08:21:12+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="twitter:title" content="SC24 BoF" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2025-02-25T08:21:12+00:00","datePublished":"2025-02-25T08:21:12+00:00","description":"Collaborative Pathways for Designing an Integrated Infrastructure for Research Excellence SC24 BoF Tuesday - Nov 19, 2024 5:15pm-6:45pm ET Room B212 In modern science, integrating scientific workflows, especially those involving AI and spanning multiple facilities, is paramount. AI workflows, leveraging machine learning and data analytics, are crucial for processing and interpreting vast amounts of data, driving unprecedented breakthroughs. Multi-facility workflows have expanded the horizons of scientific research by enabling the seamless integration of computational resources, data, and experiments across different locations, fostering collaboration and resource sharing. The inaugural BoF session at SC22 focused on integrating HPC and AI workflows. Building on this, the second BoF at SC23 gathered the Workflows Community to explore challenges, opportunities, and future pathways for continuum and multi-facility workflows. Scientists provided insights into domain-specific challenges, discussing coordination among computing and experimental facilities, metadata tracking, co-design of experiment facilities, task standardization, edge-to-cloud data exchange, adaptive compression, and defining common workflow concepts. These sessions highlighted the importance of seamless integration across cloud-based data pipelines, multi-facility instruments, and HPC infrastructures. The enthusiasm and feedback underscored the need for deeper exploration of continuum and multi-facility workflows, critical for the resilience and real-time demands of modern scientific workflows. In this BoF session, we will deepen the discourse initiated during the previous BoF sessions and elevate these discussions by incorporating a wider array of perspectives, including those of scientists who develop and utilize these workflow systems within their specific domains. By examining the challenges and opportunities within multi-facility workflows, the session will explore themes such as near real-time processing and integration of data from multiple sources and further discuss the topics of coordination among different computing and experimental facilities, and co-design of experiment facilities. This initiative is motivated by the need to address the continuum of workflows that demand uninterrupted computing access and multi-facility workflows that enhance resilience and efficiency across distributed environments.","headline":"SC24 BoF","image":"https://workflows.community/images/wci-default-card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/bof/sc24/"},"url":"/bof/sc24/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/open-iconic-bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/animate.css" />
+<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="/assets/css/jquery.timepicker.css">
+<!-- <link rel="stylesheet" href="/assets/css/bootstrap.min.css" /> -->
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<!-- <link rel="stylesheet" href="/assets/css/main.css" /> -->
+
+<!-- scripts -->
+<!-- <script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.countTo.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script> -->
+
+<!-- <script type="text/javascript">
+    $('.dropdown-toggle').dropdown();
+</script> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="/"><img src="/images/wci-white-logo.png" style="width: 8em" alt="" id="logo" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <!-- RESOURCES -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Resources</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="/systems">Workflow Systems</a>
+                        <a class="dropdown-item" href="/registries">Workflow Registries</a>
+                        <a class="dropdown-item" href="/education">Education and Training</a>
+                        <a class="dropdown-item" href="/reports">Reports</a>
+                    </div>
+                </li>
+                <!-- RESEARCH -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Research</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown02">
+                        <a class="dropdown-item" href="/groups">Working Groups</a>
+                        <a class="dropdown-item" href="/frameworks">Research Frameworks</a>
+                    </div>
+                </li>
+                <!-- EVENTS -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Events</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown03">
+                        <a class="dropdown-item" href="/summits">Workflows Community Summits</a>
+                        <a class="dropdown-item" href="/bof">Birds of a Feather (BoF)</a>
+                        <a class="dropdown-item" href="/talks">Workflows Community Talks</a>
+                        <a class="dropdown-item" href="/events">Workflows-Related Events</a>
+
+                    </div>
+                </li>
+                <li class="nav-item"><a href="/members" class="nav-link">Members</a></li>
+                <li class="nav-item"><a href="/jobs" class="nav-link">Jobs</a></li>
+                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                <li class="nav-item cta"><a href="/contact" class="nav-link"><span>Get involved!</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="hero-wrap js-fullheight" style="max-height: 300px">
+        <div class="overlay" style="max-height: 300px"></div>
+        <div id="particles-js" style="max-height: 300px"></div>
+        <div class="container" style="max-height: 300px">
+            <div class="row no-gutters slider-text justify-content-center" data-scrollax-parent="true">
+                <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+                    <h1 class="" data-scrollax="properties: { translateY: '90%', opacity: 1.6 }"
+                        style="font-size: 2em; padding-top: 5.5em; font-weight: bold;">
+                        SC24 BoF
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-12 ftco-animate">
+                    <div class="row justify-content-center mb-5">
+    <div class="col-md-7 text-center heading-section ftco-animate">
+        <img src="https://starfishstorage.com/wp-content/uploads/2024/05/SC24-600x300-1.jpg"
+            style="width: 15em;" /><br />
+        <span class="subheading">Collaborative Pathways for Designing an Integrated Infrastructure for Research Excellence</span>
+        <h2 class="mb-4">SC24 BoF</h2>
+    </div>
+    <div class="col-md-12">
+        <p class="text-center mb-5">
+            Tuesday - Nov 19, 2024<br />
+            5:15pm-6:45pm ET<br />
+            Room B212
+        </p>
+        <p>
+            In modern science, integrating scientific workflows, especially those involving AI and spanning multiple
+            facilities, is paramount. AI workflows, leveraging machine learning and data analytics, are crucial for
+            processing and interpreting vast amounts of data, driving unprecedented breakthroughs. Multi-facility
+            workflows have expanded the horizons of scientific research by enabling the seamless integration of
+            computational resources, data, and experiments across different locations, fostering collaboration and
+            resource sharing.
+        </p>
+        <p>
+            The inaugural BoF session at <a href="/bof/sc22">SC22</a> focused on integrating HPC and AI workflows.
+            Building on this, the second BoF at <a href="/bof/sc22">SC23</a> gathered the Workflows Community to explore
+            challenges, opportunities, and future pathways for continuum and multi-facility workflows. Scientists
+            provided insights into domain-specific challenges, discussing coordination among computing and experimental
+            facilities, metadata tracking, co-design of experiment facilities, task standardization, edge-to-cloud data
+            exchange, adaptive compression, and defining common workflow concepts. These sessions highlighted the
+            importance of seamless integration across cloud-based data pipelines, multi-facility instruments, and HPC
+            infrastructures. The enthusiasm and feedback underscored the need for deeper exploration of continuum and
+            multi-facility workflows, critical for the resilience and real-time demands of modern scientific workflows.
+        </p>
+        <p>
+            In this BoF session, we will deepen the discourse initiated during the previous BoF sessions and elevate
+            these discussions by incorporating a wider array of perspectives, including those of scientists who develop
+            and utilize these workflow systems within their specific domains. By examining the challenges and
+            opportunities within multi-facility workflows, the session will explore themes such as near real-time
+            processing and integration of data from multiple sources and further discuss the topics of coordination
+            among different computing and experimental facilities, and co-design of experiment facilities. This
+            initiative is motivated by the need to address the continuum of workflows that demand uninterrupted
+            computing access and multi-facility workflows that enhance resilience and efficiency across distributed
+            environments.
+        </p>
+        <img src="/images/bof/wci-bof-sc24.jpeg" style="width: 100%; border-radius: 1em;" />
+    </div>
+</div>
+
+<div class="row justify-content-center mb-5 pb-5">
+    <div class="col-md-7 text-center heading-section ftco-animate">
+        <h2 class="mb-4">Agenda</h2>
+    </div>
+    <div class="col-md-12 ftco-animate">
+        <ul>
+            <li style="color: rgb(5, 135, 215)">
+                5:15pm-5:20pm &mdash; Opening Remarks
+                <!-- <a href="/files/bof/bof_sc22_opening_remarks.pdf">Opening Remarks</a><br /> -->
+                <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                    Rafael Ferreira da Silva &mdash; <span style="font-style: italic; color: #999">Oak Ridge Leadership Computing Facility (OLCF)</span><br />
+                    Debbie Bard &mdash; <span style="font-style: italic; color: #999">National Energy Research Scientific Computing Center (NERSC)</span><br />
+                    Fred Suter &mdash; <span style="font-style: italic; color: #999">Oak Ridge National
+                        Laboratory (ORNL)</span><br />
+                    Kyle Chard &mdash; <span style="font-style: italic; color: #999">University of Chicago</span><br />
+                </p>
+            </li>
+            <li style="color: rgb(5, 135, 215)">
+                5:20pm-6:20pm &mdash; Lightning talks: Collaborative Pathways for Designing an Integrated Infrastructure for Research Excellence<br />
+
+                <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                    <a href="/files/bof/">
+                        Advancing DOE's Integrated Research Infrastructure</a><br />
+                    <span style="font-style: italic; color: #999"><strong>Ben Brown</strong>, U.S. Department of Energy (DOE)</span>
+                </p>
+                <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                    <a href="/files/bof/">
+                        Evolving HP+AI workflows for the needs of Digital Twins in Science and Industry</a><br />
+                    <span style="font-style: italic; color: #999"><strong>Rosa M. Badia</strong>, Barcelona Supercomputing Center (BSC)</span>
+                </p>
+                <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                    <a href="/files/bof/">
+                        TBA</a><br />
+                    <span style="font-style: italic; color: #999"><strong>Manish Parashar</strong>, University of Utah</span>
+                </p>
+                <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                    <a href="/files/bof/">
+                        Achieving Seamless Integration for Next-Generations Scientific Workflows</a><br />
+                    <span style="font-style: italic; color: #999"><strong>Lavanya Ramakrishnan</strong>, Lawrence Berkeley National Laboratory (LBNL)</span>
+                </p>
+                <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                    <a href="/files/bof/">
+                        TBA</a><br />
+                    <span style="font-style: italic; color: #999"><strong>Ian T. Foster</strong>, Argonne National Laboratory (ANL)</span>
+                </p>
+                <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                    <a href="/files/bof/">
+                        A Use-Inspired Approach to Bridge the Data Gaps for AI-Integrated Research and Education Workflows</a><br />
+                    <span style="font-style: italic; color: #999"><strong>İlkay Altıntaş</strong>, San Diego Supercomputing Center (SDSC)</span>
+                </p>
+            </li>
+            <li style="color: rgb(5, 135, 215)">
+                6:20pm-6:45pm &mdash; Interactive Activity<br />
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="row justify-content-center mb-5 pb-5">
+    <div class="col-md-7 text-center heading-section ftco-animate">
+        <h2 class="mb-5">Supporters</h2>
+    </div>
+    <div class="col-md-12 ftco-animate">
+        <a href="https://ornl.gov/" target="_blank">
+            <img src="https://www.hpcwire.com/wp-content/uploads/2019/07/ORNL-OLCF-logo-700x.jpg" height="50px" class="mb-3 mr-3" />
+        </a>
+        <a href="https://www.nersc.gov/" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzKv5LXRUBcMbGsXmwhEVArUKYup-AJjDs8g&s" height="30px"
+                class="mb-3 mr-3" />
+        </a>
+        <a href="https://www.uchicago.edu/en" target="_blank">
+            <img src="https://data.org/wp-content/uploads/2021/09/uc_logo.jpeg" height="30px" class="mb-3 mr-3" />
+        </a>
+        <a href="https://www.anl.gov/" target="_blank">
+            <img src="https://www.cerebras.net/wp-content/uploads/2021/09/ANL_logo.png" height="30px" class="mb-3 mr-3" />
+        </a>
+        <a href="https://www.bsc.es/" target="_blank">
+            <img src="https://www.hpcwire.com/wp-content/uploads/2020/10/Barcelona-Supercomputing-Center-logo.png" height="40px" class="mb-3 mr-3" />
+        </a>
+        <a href="https://lbl.gov/" target="_blank">
+            <img src="https://www.lbl.gov/wp-content/uploads/2022/09/berkeley-logo.svg" height="30px" class="mb-3 mr-3" />
+        </a>
+        <a href="https://www.sdsc.edu/" target="_blank">
+            <img src="https://www.sdsc.edu/assets/images/logos/sdsclogo-plusname-horiz-red.jpg" height="30px" class="mb-3 mr-3" />
+        </a>
+        <a href="https://www.sci.utah.edu/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/University_of_Utah_horizontal_logo.svg/1280px-University_of_Utah_horizontal_logo.svg.png" height="30px" class="mb-3 mr-3" />
+        </a>
+        <a href="https://science.osti.gov/" target="_blank">
+            <img src="/images/bof/DOE-SC-COLOR.png" height="30px" class="mb-3 mr-3" />
+        </a>
+    </div>
+</div>
+                </div>
+                <!-- <div class="col-md-6 col-lg-3 ftco-animate"> -->
+		   <!-- Disabled as Twitter broke their own Widget. See issue #65
+                    <a class="twitter-timeline" data-lang="en" data-height="1500" data-width="100%" data-theme="light"
+                        data-chrome="nofooter" href="https://twitter.com/WorkflowsCI">Tweets by WorkflowsCI</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		   -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Workflows Community Initiative</h2>
+                    <p>Our goal is to bring the workflows community together (users, developers, researchers, and
+                        facilities) to provide <strong>community resources and capabilities</strong> to enable
+                        scientists
+                        and workflow systems developers to discover software products, related efforts, events,
+                        technical
+                        reports, etc. and engage in community-wide efforts to tackle workflows grand challenges.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="ftco-footer-widget mb-4">
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                                class="fa-stack fa-2x" style="font-size: 1.5em">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #aaa"></i>
+                                <i class="fab fa-youtube fa-stack-1x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:contact@workflows.community" class="fa-stack fa-2x"
+                                style="font-size: 1.5em">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #aaa"></i>
+                                <i class="fa fa-envelope fa-stack-1x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/company/workflows-community" target="_blank" class="fa-stack fa-2x"
+                                style="font-size: 1.5em">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #aaa"></i>
+                                <i class="fab fa-linkedin fa-stack-1x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                                target="_blank" class="fa-stack fa-2x" style="font-size: 1.5em">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #aaa"></i>
+                                <i class="fab fa-slack fa-stack-1x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    &copy;2022&mdash;2025 Workflows.Community Initiative
+                    <br />
+                    <span style="color: #888">This template is made with
+                        <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"
+                            style="color: #888">Colorlib</a>
+                    </span>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.easing.1.3.js"></script>
+<script src="/assets/js/jquery.waypoints.min.js"></script>
+<script src="/assets/js/jquery.stellar.min.js"></script>
+<script src="/assets/js/owl.carousel.min.js"></script>
+<script src="/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/jquery.animateNumber.min.js"></script>
+<script src="/assets/js/bootstrap-datepicker.js"></script>
+<!-- <script src="/assets/js/jquery.timepicker.min.js"></script> -->
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/particle.js"></script>
+<script src="/assets/js/scrollax.min.js"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
+<!-- <script src="/assets/js/google-map.js"></script> -->
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>
