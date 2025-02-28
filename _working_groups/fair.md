@@ -95,10 +95,10 @@ This group is gathering community resources and literature on FAIR Computational
 
 ## Cite FAIR Computational Workflows
 
-Sean Wilkinson, Meznah Aloqalaa, Khalid Belhajjame, Michael R. Crusoe, Bruno de Paula Kinoshita, Luiz Gadelha, Daniel Garijo, Ove Johan Ragnar Gustafsson, Nick Juty, Sehrish Kanwal, Farah Zaib Khan, Johannes Köster, Karsten Peters-von Gehlen, Line Pouchard, Randy K. Rannow, Stian Soiland-Reyes, Nicola Soranzo, Shoaib Sufi, Ziheng Sun, Baiba Vilne, Merridee A. Wouters, Denis Yuen, Carole Goble (2024):  
-[**Applying the FAIR Principles to Computational Workflows**](https://doi.org/10.48550/arXiv.2410.03490).  
-_arXiv_ 2410.03490 [cs.DL]  
-<https://doi.org/10.48550/arXiv.2410.03490>
+Sean R. Wilkinson, Meznah Aloqalaa, Khalid Belhajjame, Michael R. Crusoe, Bruno de Paula Kinoshita, Luiz Gadelha, Daniel Garijo, Ove Johan Ragnar Gustafsson, Nick Juty, Sehrish Kanwal, Farah Zaib Khan, Johannes Köster, Karsten Peters-von Gehlen, Line Pouchard, Randy K. Rannow, Stian Soiland-Reyes, Nicola Soranzo, Shoaib Sufi, Ziheng Sun, Baiba Vilne, Merridee A. Wouters, Denis Yuen, Carole Goble (2024):  
+[**Applying the FAIR Principles to computational workflows**](https://doi.org/10.1038/s41597-025-04451-9).
+_Sci Data_ **12**, 328 (2025).
+<https://doi.org/10.1038/s41597-025-04451-9>
 
 Carole Goble, Sarah Cohen-Boulakia, Stian Soiland-Reyes, Daniel Garijo, Yolanda Gil, Michael R. Crusoe, Kristian Peters, Daniel Schober (2020):  
 [**FAIR Computational Workflows**](https://doi.org/10.1162/dint_a_00033).  
