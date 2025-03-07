@@ -142,3 +142,7 @@
   repository: dagonstar
   type: github
   metadata: docs
+
+- organization: cylc
+  repository: cylc-flow 
+  type: github
