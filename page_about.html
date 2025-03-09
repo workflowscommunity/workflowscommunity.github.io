@@ -4,95 +4,73 @@ title: About
 permalink: /about
 ---
 
-<div class="row justify-content-center mb-5 pb-5">
-    <div class="col-md-7 text-center heading-section ftco-animate">
-        <p>The Workflows Community Initiative (WCI) is a community-centered effort for gathering and
-            promoting long-standing and recent community-focused efforts</p>
-    </div>
+<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
+    <h4>Uniting the <strong style="color: #db8e1b">Workflows Ecosystem</strong></h4>
+    <p>A collaborative hub championing both established and emerging community-driven innovations in workflow
+        technologies and methodologies.</p>
 </div>
 
-<div class="row justify-content-center mb-5 pb-5">
-    <div class="col-md-7 text-center heading-section ftco-animate">
+<section id="team" class="team sections-bg">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
         <span class="subheading">Our Board of Directors</span>
         <h2 class="mb-4">Leadership</h2>
-    </div>
-</div>
-
-<div class="row">
-    {% assign leadership = site.data.organization | where: "category","leadership" %}
-    {% for member in leadership %}
-    <div class="col-md-4 mb-5 ftco-animate">
-        <div class="block-10">
-            <div class="person-info mb-2">
-                <span class="name">{{ member.name }}</span>
-                <span class="position">{{ member.role }}</span>
+        <div class="row gy-4">
+            {% assign leadership = site.data.organization | where: "category","leadership" %}
+            {% for member in leadership %}
+            <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                <div class="member">
+                    <img src="/images/about/{{ member.photo }}" class="img-fluid" alt="">
+                    <h4><a href="{{member.link}}" target="_blank">{{ member.name }}</a></h4>
+                    <p>{{ member.role }}</p>
+                    <a href="{{ member.institution.link }}" target="_blank">
+                        <img src="/images/institutions/{{ member.institution.image }}"
+                            alt="{{ member.institution.name }}" style="max-height: 2em" />
+                    </a>
+                </div>
             </div>
-            <a href="{{ member.link }}" target="_blank">
-                <img src="/images/about/{{ member.photo }}" alt="{{ member.name }}" class="img-fluid mb-3" style="width: 100%">
-            </a>
-            <a href="{{ member.institution.link }}" target="_blank">
-                <img src="/images/institutions/{{ member.institution.image }}"
-                    alt="{{ member.institution.name }}" style="max-height: 2em" />
-            </a>
+            {% endfor %}
         </div>
-    </div>
-    {% endfor %}
-</div>
 
-<br />
-<div class="row justify-content-center mb-5 mt-5 pb-5">
-    <div class="col-md-7 text-center heading-section ftco-animate">
+        <br /><br /><br />
         <span class="subheading">Our Board of Advisors</span>
         <h2 class="mb-4">Steering Committee</h2>
-    </div>
-</div>
-
-<div class="row">
-    {% assign sc = site.data.organization | where: "category","sc" %}
-    {% for member in sc %}
-    <div class="col-md-4 mb-5 ftco-animate">
-        <div class="block-10">
-            <div class="person-info mb-2">
-                <span class="name">{{ member.name }}</span>
-                <span class="position">{{ member.role }}</span>
+        <div class="row gy-4">
+            {% assign sc = site.data.organization | where: "category","sc" %}
+            {% for member in sc %}
+            <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                <div class="member">
+                    <img src="/images/about/{{ member.photo }}" class="img-fluid" alt="">
+                    <h4><a href="{{member.link}}" target="_blank">{{ member.name }}</a></h4>
+                    <p>{{ member.role }}</p>
+                    <a href="{{ member.institution.link }}" target="_blank">
+                        <img src="/images/institutions/{{ member.institution.image }}"
+                            alt="{{ member.institution.name }}" style="max-height: 2em" />
+                    </a>
+                </div>
             </div>
-            <a href="{{ member.link }}" target="_blank">
-                <img src="/images/about/{{ member.photo }}" alt="{{ member.name }}" class="img-fluid mb-3" style="width: 100%">
-            </a>
-            <a href="{{ member.institution.link }}" target="_blank">
-                <img src="/images/institutions/{{ member.institution.image }}"
-                    alt="{{ member.institution.name }}" style="max-height: 2em" />
-            </a>
+            {% endfor %}
         </div>
-    </div>
-    {% endfor %}
-</div>
 
-<br />
-<div class="row justify-content-center mb-5 mt-5 pb-5">
-    <div class="col-md-7 text-center heading-section ftco-animate">
+        <br /><br /><br />
         <span class="subheading">Our Technical Experts</span>
         <h2 class="mb-4">Technical Leads</h2>
-    </div>
-</div>
-
-<div class="row">
-    {% assign tl = site.data.organization | where: "category","technical" %}
-    {% for member in tl %}
-    <div class="col-md-4 mb-5 ftco-animate">
-        <div class="block-10">
-            <div class="person-info mb-2">
-                <span class="name">{{ member.name }}</span>
-                <span class="position">{{ member.role }}</span>
+        <div class="row gy-4">
+            {% assign tl = site.data.organization | where: "category","technical" %}
+            {% for member in tl %}
+            <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                <div class="member">
+                    <img src="/images/about/{{ member.photo }}" class="img-fluid" alt="">
+                    <h4><a href="{{member.link}}" target="_blank">{{ member.name }}</a></h4>
+                    <p>{{ member.role }}</p>
+                    <a href="{{ member.institution.link }}" target="_blank">
+                        <img src="/images/institutions/{{ member.institution.image }}"
+                            alt="{{ member.institution.name }}" style="max-height: 2em" />
+                    </a>
+                </div>
             </div>
-            <a href="{{ member.link }}" target="_blank">
-                <img src="/images/about/{{ member.photo }}" alt="{{ member.name }}" class="img-fluid mb-3" style="width: 100%">
-            </a>
-            <a href="{{ member.institution.link }}" target="_blank">
-                <img src="/images/institutions/{{ member.institution.image }}"
-                    alt="{{ member.institution.name }}" style="max-height: 2em" />
-            </a>
+            {% endfor %}
         </div>
+
     </div>
-    {% endfor %}
-</div>
+</section>

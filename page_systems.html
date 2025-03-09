@@ -4,89 +4,77 @@ title: Workflows Systems
 permalink: /systems
 ---
 
+{% assign n_systems = site.systems | size %}
 {% assign wci_systems = site.systems | where: "wci_metadata", "true" | size %}
 {% assign systems_wci = site.systems | where: "wci_metadata", "true" | sort: "date_sort" | reverse %}
 {% assign systems = site.systems | where: "wci_metadata", "false" | sort: "date_sort" | reverse %}
 
-<div class="row justify-content-center mb-4 pb-5">
-    <div class="col-md-8 text-center heading-section ftco-animate">
-        <p>
-            Collection of actively-developed open source workflow systems. Currently, <strong>{{ wci_systems }} workflow systems provide WCI metadata.</strong>
-        </p>
-        <a href="/systems/contribute" class="btn btn-primary mt-3 py-3 px-5">Contribute</a>
-    </div>
+<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
+    <h1>{{ n_systems }}</h1>
+    <h4>open-source workflow systems</h4>
+    <p><strong style="color: #db8e1b">{{wci_systems}}</strong> workflow systems provide WCI metadata</p>
+    <a href="/systems/contribute" class="btn btn-primary mt-3 py-3 px-5">Contribute</a>
 </div>
 
-<div class="row">
-    <!-- WCI Metadata -->
-    {% for system in systems_wci %}
-    <div class="col-md-6 ftco-animate">
-        <div class="blog-entry" style="min-height: 27em;">
-            <div class="text p-4 d-block">
-                {% if system.avatar %}
-                <p class="text-center">
-                    <a href="{{system.url}}">
-                        <img src="{{ system.avatar }}" style="max-height: 6em; max-width: 8em;"
-                            alt="{{ system.repository }}" />
-                    </a>
-                </p>
-                {% endif %}
-                <h3 class="heading"><a href="{{system.url}}">{{system.title}}</a></h3>
-                <div class="meta mb-3">
-                    {{ system.headline }}
+<section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
+    <div class="container" data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-delay="100">
+            <!-- WCI Metadata -->
+            {% for system in systems_wci %}
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="{{system.avatar}}" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="{{system.url}}">{{system.title}}</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">{{system.headline}}</h4>
+                                <h4>{{system.language}}
+                                    {% if system.release_name != "" %}
+                                    &mdash; <i class="fas fa-box-open"></i> {{system.release_name}}
+                                    {% endif %}
+                                    &mdash; <i class="far fa-clock"></i> {{system.last_update}}
+                                    {% if system.wci_metadata %}
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    {% endif %}
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p style="font-size: 0.8em">
-                    <span class="light-gray"><i class="fas fa-code"></i> {{system.language}}</span><br />
-                    {% if system.release_name != "" %}
-                    <span class="light-gray"><i class="fas fa-box-open"></i> {{system.release_name}}</span><br />
-                    {% endif %}
-                    <span class="light-gray"><i class="far fa-clock"></i> {{system.last_update}}</span><br />
-                    {% if system.wci_metadata %}
-                    <span class="light-gray"><img src="/favicon.ico" style="max-width: 2.5em; vertical-align: middle" />
-                        WCI metadata</span>
-                    {% endif %}
-                </p>
             </div>
+            {% endfor %}
+
+            <!-- No WCI Metadata -->
+            {% for system in systems %}
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="{{system.avatar}}" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="{{system.url}}">{{system.title}}</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">{{system.headline}}</h4>
+                                <h4>{{system.language}}
+                                    {% if system.release_name != "" %}
+                                    &mdash; <i class="fas fa-box-open"></i> {{system.release_name}}
+                                    {% endif %}
+                                    &mdash; <i class="far fa-clock"></i> {{system.last_update}}
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
-    {% endfor %}
+</section>
 
-    <!-- No WCI Metadata -->
-    {% for system in systems %}
-    <div class="col-md-6 ftco-animate">
-        <div class="blog-entry" style="min-height: 27em;">
-            <div class="text p-4 d-block">
-                {% if system.avatar %}
-                <p class="text-center">
-                    <a href="{{system.url}}">
-                        <img src="{{ system.avatar }}" style="max-height: 6em; max-width: 8em;"
-                            alt="{{ system.repository }}" />
-                    </a>
-                </p>
-                {% endif %}
-                <h3 class="heading"><a href="{{system.url}}">{{system.title}}</a></h3>
-                <div class="meta mb-3">
-                    {{ system.headline }}
-                </div>
-                <p style="font-size: 0.8em">
-                    <span class="light-gray"><i class="fas fa-code"></i> {{system.language}}</span><br />
-                    {% if system.release_name != "" %}
-                    <span class="light-gray"><i class="fas fa-box-open"></i> {{system.release_name}}</span><br />
-                    {% endif %}
-                    <span class="light-gray"><i class="far fa-clock"></i> {{system.last_update}}</span><br />
-                </p>
-            </div>
-        </div>
-    </div>
-    {% endfor %}
-</div>
 
-<div class="row justify-content-center mb-4 pb-5 mt-5">
-    <div class="col-md-8 text-center heading-section ftco-animate">
-        <p>
-            For a comprehensive lists of all known computational workflow systems, see <a
-                href="https://s.apache.org/existing-workflow-systems">Computational Data Analysis Workflow Systems</a>
-            maintained by the CWL community.
-        </p>
-    </div>
+<div class="container text-center" data-aos="fade-up" style="padding: 4em 0">
+    <p>For a comprehensive lists of all known computational workflow systems, see <a
+            href="https://s.apache.org/existing-workflow-systems" target="_blank">Computational Data Analysis Workflow
+            Systems</a> maintained by the CWL community.</p>
 </div>

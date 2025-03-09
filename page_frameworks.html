@@ -4,58 +4,54 @@ title: Research Frameworks
 permalink: /frameworks
 ---
 
-<div class="row justify-content-center mb-4 pb-5">
-    <div class="col-md-8 text-center heading-section ftco-animate">
-        <p>
-            Collection of open source or freely accessible tools and frameworks that can be used to support workflow
-            research and development
-        </p>
-        <a href="/frameworks/contribute" class="btn btn-primary mt-3 py-3 px-5">Contribute</a>
-    </div>
+<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
+    <h4><strong style="color: #db8e1b">Free & Open Source</strong> Workflow Tools and Frameworks</h4>
+    <p>Explore our curated collection of freely accessible software tools, libraries, and frameworks designed to
+        accelerate your workflow research and development projects.</p>
+    <a href="/frameworks/contribute" class="btn btn-primary mt-3 py-3 px-5">Contribute</a>
 </div>
 
-<div class="row">
-    {% assign frameworks = site.data.research_frameworks | sort: "name" %}
-    {% for framework in frameworks %}
-    <div class="col-md-6 ftco-animate">
-        <div class="blog-entry" style="min-height: 23em;">
-            <div class="text p-4 d-block">
-                {% if framework.icon %}
-                <p class="text-center">
-                    <a href="{{framework.url}}" target="_blank">
-                        <img src="{{ framework.icon }}" style="max-height: 6em; max-width: 8em;"
-                            alt="{{ framework.name }}" />
-                    </a>
-                </p>
-                {% endif %}
-                <h3 class="heading"><a href="{{framework.url}}" target="_blank">{{framework.name}}</a></h3>
-                <div class="meta mb-3">
-                    {{ framework.description }}
+<section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
+    <div class="container" data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-delay="100">
+            {% assign frameworks = site.data.research_frameworks | sort: "name" %}
+            {% for f in frameworks %}
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="{{f.icon}}" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="{{f.url}}" target="_blank">{{f.name}}</a></h3>
+                                <h4>{{f.description}}</h4>
+                                <p style="color: #3a3a3a !important; margin-left: 0;">
+                                    {% if f.github %}
+                                    <a href="{{f.github}}" target="_blank" class="badge"><i class="fab fa-github"></i>
+                                        GitHub</a>
+                                    {% endif %}
+                                    {% if f.gitlab %}
+                                    <a href="{{f.gitlab}}" target="_blank" class="badge"><i class="fab fa-gitlab"></i>
+                                        GitLab</a>
+                                    {% endif %}
+                                    {% if f.documentation %}
+                                    <a href="{{f.documentation}}" target="_blank" class="badge"><i
+                                            class="fas fa-book"></i> Documentation</a>
+                                    {% endif %}
+                                </p>
+                                {% if f.tags %}
+                                <p style="font-size: 0.8em; color: #e83e8c">
+                                    {% assign tags = f.tags | sort %}
+                                    {% for tag in tags %}
+                                    <span class="tag">/ {{tag}} </span>
+                                    {% endfor %}
+                                </p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p>
-                    {% if framework.github %}
-                    <a href="{{framework.github}}" target="_blank" class="badge github"><i
-                            class="fab fa-github"></i>&nbsp;&nbsp;GitHub</a>
-                    {% endif %}
-                    {% if framework.gitlab %}
-                    <a href="{{framework.gitlab}}" target="_blank" class="badge gitlab"><i
-                            class="fab fa-gitlab"></i>&nbsp;&nbsp;GitLab</a>
-                    {% endif %}
-                    {% if framework.documentation %}
-                    <a href="{{framework.documentation}}" target="_blank" class="badge documentation"><i
-                            class="fas fa-book"></i>&nbsp;&nbsp;Documentation</a>
-                    {% endif %}
-                </p>
-                {% if framework.tags %}
-                <p style="font-size: 0.8em; color: #e83e8c">
-                    {% assign tags = framework.tags | sort %}
-                    {% for tag in tags %}
-                    <span class="tag">/ {{tag}} </span>
-                    {% endfor %}
-                </p>
-                {% endif %}
             </div>
+            {% endfor %}
         </div>
     </div>
-    {% endfor %}
-</div>
+</section>

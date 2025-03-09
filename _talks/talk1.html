@@ -11,87 +11,47 @@ talk_number: 1
 <!-- report_link: https://doi.org/10.5281/zenodo.13844759 -->
 ---
 
-<div class="row justify-content-center mb-5 pb-5">
-    <div class="col-md-7 text-center heading-section ftco-animate">
-        <h2 class="mb-4">{{page.title}}</h2>
-        <span class="subheading">{{page.authors}}</span>
-        <p class="event-date">{{page.event_date}} {{page.times}} </p>
-    </div>
-    <div class="col-md-12 text-center heading-section ftco-animate">
-        <p class="mb-3" style="text-align: left;">
-            TBC. The first talk will soon be announced.
-        </p>
-        <p class="mb-3" style="text-align: left !important;">
-            Topics (EXAMPLE):
-        </p>
-        <ul style="text-align: left;">
-            <li>Dynamic steering of HPC Workflows</li>
-            <li>Heterogeneous Workflows</li>
-            <li>Modelling of laser plasma accelerators with libEnsemble and WarpX</li>
-            <li>Using ProxyStore when transferring large data</li>
-        </ul>
-    </div>
+<div class="container" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-8 wg">
+            <h2 class="mb-4">{{page.title}}</h2>
+            <span class="subheading">{{page.authors}}</span>
+            <p class="event-date">{{page.event_date}} {{page.times}} </p>
 
-
-</div>
-
-
-<div class="row justify-content-center mb-5 pb-5">
-    <div class="col-md-7 text-center heading-section ftco-animate">
-        <h2 class="mb-4">About the authors</h2>
-    </div>
-</div>
-
-<!-- Text under pictures -->
-
-<!--<div class="row">
-    {% assign speaker = site.data.speakers | where: "talk_num", page.talk_number %}
-    {% for member in speaker %}
-    <div class="col-md-4 mb-5 ftco-animate">
-        <div class="block-10">
-            <div class="person-info mb-2">
-                <span class="name">{{ member.name }}</span>
-                <span class="role">{{ member.role }}</span>
-            </div>
-            <a href="{{ member.link }}" target="_blank">
-                <img src="/images/talks/{{ member.photo }}" alt="{{ member.name }}" class="img-fluid mb-3" style="width: 100%">
-            </a>
-            <a href="{{ member.institution.link }}" target="_blank">
-                <img src="/images/institutions/{{ member.institution.image }}"
-                    alt="{{ member.institution.name }}" style="max-height: 2em" />
-            </a>s
-             <p class="mt-2">{{ member.bio }}</p>
+            <p class="mb-3" style="text-align: left;">
+                TBC. The first talk will soon be announced.
+            </p>
+            <p class="mb-3" style="text-align: left !important;">
+                Topics (EXAMPLE):
+            </p>
+            <ul>
+                <li>Dynamic steering of HPC Workflows</li>
+                <li>Heterogeneous Workflows</li>
+                <li>Modelling of laser plasma accelerators with libEnsemble and WarpX</li>
+                <li>Using ProxyStore when transferring large data</li>
+            </ul>
         </div>
-    </div>
-    {% endfor %}
-</div>
--->
 
-
-<!-- Text beside picture -->
-
-<div class="row">
-    {% assign speaker = site.data.speakers | where: "talk_num", page.talk_number %}
-    {% for member in speaker %}
-    <div class="col-md-6 mb-5 ftco-animate">
-        <div class="d-flex">
-            <div class="pr-4">
+        <div class="col-lg-4">
+            <div class="blog-sidbar">
+                <h4 class="mb-4">About the Authors</h4>
+                {% assign speaker = site.data.speakers | where: "talk_num", page.talk_number %}
+                {% for member in speaker %}
                 <a href="{{ member.link }}" target="_blank">
-                    <img src="/images/talks/{{ member.photo }}" alt="{{ member.name }}" class="img-fluid mb-3" style="width: 150px; height: 150px; object-fit: cover; border-radius: 0.5em;">
+                    <img src="/images/talks/{{ member.photo }}" alt="{{ member.name }}" class="img-fluid mb-3"
+                        style="width: 150px; height: 150px; object-fit: cover; border-radius: 0.5em;">
                 </a>
-                <a href="{{ member.institution.link }}" target="_blank">
-                    <img src="/images/institutions/{{ member.institution.image }}" alt="{{ member.institution.name }}" style="max-height: 2em;" />
-                </a>
-            </div>
-            <div>
-                <div class="person-info mb-2">
-                    <span class="name font-weight-bold">{{ member.name }}</span><br>
-                    <span class="role text-muted">{{ member.role }}</span>
-                </div>
+                <p class="font-weight-bold">{{ member.name }}<br />
+                    <span class="text-muted">{{ member.role }}</span>
+                </p>
                 <p class="bio" style="font-size: 0.8em;">{{ member.bio }}</p>
+                <a href="{{ member.institution.link }}" target="_blank">
+                    <img src="/images/institutions/{{ member.institution.image }}" alt="{{ member.institution.name }}"
+                        style="max-height: 2em;" />
+                </a>
+                <hr />
+                {% endfor %}
             </div>
         </div>
     </div>
-    {% endfor %}
 </div>
-

@@ -5,167 +5,211 @@ permalink: /
 
 {% capture nowunix %}{{'now' | date: '%Y-%m-%d' | date: '%s'}}{% endcapture %}
 {% assign total_systems = site.systems | size %}
-{% assign total_members = site.data.members | size %}
-{% assign total_frameworks = site.data.research_frameworks | size %}
-{% assign total_wci_wg = site.working_groups | where:"layout","working_groups" | size %}
-{% assign total_ext_wg = site.data.working_groups | size %}
-{% assign total_wg = total_wci_wg | plus: total_ext_wg %}
+{% assign total_members = 1 %}
+{% for m in site.data.members %}
+    {% assign e = m.entries | size %}
+    {% assign total_members = total_members | plus: e %}
+{% endfor %}
+{% assign total_wcs = site.summits | size %}
+{% assign total_bofs = site.bofs | size %}
+{% assign total_events = total_wcs | plus: total_bofs %}
 
-<!-- Stories -->
+<section id="recent-posts" class="recent-posts sections-bg">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+            <h2>What's Happening in the Community</h2>
+            <p>Recent innovations, events, and contributions from workflow practitioners worldwide</p>
+        </div>
+
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <!-- RECENT SUMMIT -->
+                <article>
+                    {% assign summits = site.summits | sort: 'order' | reverse %}
+                    {% for summit in summits limit: 1 %}
+                    <div class="post-img">
+                        <img src="{{ summit.image }}" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">RECENT SUMMIT</p>
+                    <h2 class="title">
+                        <a href="{{ summit.url }}">{{ summit.title }}</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author">{{ summit.subtitle }}</p>
+                            <p class="post-date">
+                                <time datetime="2022-01-01">{{ summit.event_date }}</time>
+                            </p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </article>
+            </div>
+
+            <div class="col-lg-4">
+                <!-- COMMUNITY TALKS -->
+                <article>
+                    {% assign talks = site.talks | sort: 'order' | reverse %}
+                    {% for talk in talks limit: 1 %}
+                    <div class="post-img">
+                        <img src="assets/images/blog/blog-2.jpg" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">RECENT COMMUNITY TALK</p>
+                    <h2 class="title">
+                        <a href="{{ talk.url }}">{{ talk.title }}</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author">{{ talk.authors }}</p>
+                            <p class="post-date">
+                                <time datetime="2022-01-01">{{ talk.event_date }}</time>
+                            </p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </article>
+            </div>
+
+            <div class="col-lg-4">
+                <!-- YOUTUBE -->
+                <article>
+                    <div class="post-img">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?si=zT3yNiHZKonANj9c&amp;list=PLAtmuqHExRvOzPOvJfSH8PwjbVJFyulCy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="post-category">MEDIA</p>
+                    <h2 class="title">
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw/" target="_blank">Workflow Innovation in Action</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author">Subscribe to our YouTube channel</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NUMBERS -->
+<div id="stats-counter" class="call-to-action stats-counter section">
+    <div class="container" data-aos="fade-up">
+        <div class="row gy-4 align-items-center">
+            <div class="col-lg-4">
+                <div class="stats-item d-flex flex-column align-items-center">
+                    <span data-purecounter-start="0" data-purecounter-end="{{total_members}}" data-purecounter-duration="5"
+                        class="purecounter" style="font-size: 4em;"></span><br />
+                    <p><span>Members</span> worldwide</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="stats-item d-flex flex-column align-items-center">
+                    <span data-purecounter-start="0" data-purecounter-end="{{total_systems}}" data-purecounter-duration="5"
+                        class="purecounter" style="font-size: 4em;"></span><br />
+                    <p><span>Workflow Systems</span> open-source workflow systems</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="stats-item d-flex flex-column align-items-center">
+                    <span data-purecounter-start="0" data-purecounter-end="{{total_events}}" data-purecounter-duration="5"
+                        class="purecounter" style="font-size: 4em;"></span><br />
+                    <p><span>Events</span> Workflow Community Summits and BoF sessions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- WORKFLOW SYSTEMS -->
+<div id="services" class="section sections-bg">
+    <div class="top-icon-box position-relative">
+        <div class="container position-relative">
+            <div class="section-header">
+                <h2>Workflow Systems</h2>
+                <p>Last updated open-source workflow systems</p>
+            </div>
+            <div class="row gy-4">
+
+                {% assign systems_wci = site.systems | where: "wci_metadata", "true" | sort: "date_sort" | reverse %}
+                {% assign systems_wci_size = systems_wci | size %}
+                {% assign systems = site.systems | where: "wci_metadata", "false" | sort: "date_sort" | reverse %}
+                {% assign systems_limit = 10 | minus: systems_wci_size %}
+                {% for system in systems_wci limit: 5 %}
+                <div class="col-xl-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img src="{{system.avatar}}" alt="icon"></div>
+                        <h4 class="title"><a href="{{system.url}}" class="stretched-link">{{system.title}}</a></h4>
+                        <p>{{ system.headline | excerpt | strip_html | strip_newlines | truncate: 150}}</p>
+                        <p style="font-size: 0.8em;">
+                            <i class="fas fa-code"></i> {{system.language}}</span><br />
+                            {% if system.release_name != "" %}<i
+                                class="fas fa-box-open"></i>{{system.release_name}}<br />{% endif %}
+                            <i class="far fa-clock"></i> {{system.last_update}}
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <div class="col-xl-4 col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-cogs" style="font-size: 1.5em"></i></div>
+                        <h4 class="title"><a href="/systems" class="stretched-link">See all Systems</a></h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- STORIES -->
 {% assign story = site.stories | sort: "date" | reverse %}
-<section class="ftco-section testimony-section bg-light">
-    <div class="container">
-        <div class="row justify-content-center mb-3 pb-3">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-                <span class="subheading">Perspectives on workflows-related topics from
-                    the community</span>
-                <h2 class="mb-4">Stories</h2>
-            </div>
+<section id="recent-posts" class="recent-posts sections-bg bg-light">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+            <h2>Stories</h2>
+            <p>Perspectives on workflows-related topics from the community</p>
         </div>
-        <div class="row ftco-animate">
-            <div class="col-md-12">
-                <div class="carousel-testimony owl-carousel ftco-owl">
-                    {% for s in story limit: 10 %}
-                    <div class="item text-center">
-                        <a href="{{s.url}}" class="testimony-wrap p-3 pb-3" style="min-height: 25em;">
-                            <img src="{{s.image}}" class="img-fluid" style="width: 100%; height: 7em; object-fit: cover;" />
-                            <div class="text">
-                                <p style="font-size: 1.3em; line-height: 1.3em; margin-top: 1em;"><strong>{{s.title}}</strong></p>
-                                <p class="mb-3 position">
-                                    {{ s.date | date: "%b %d, %Y" }}
-                                </p>
-                                <div style="line-height: 1.2em; text-align: left;">
-                                    {% for author in s.authors %}
-                                    <span class="position">{{author.name}} – {{author.institution}}</span><br />
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        </a>
+
+        <div class="row gy-4">
+            {% for s in story limit: 6 %}
+            <div class="col-lg-4">
+                <article>
+                    <div class="post-img">
+                        <img src="{{ s.image }}" alt="" class="img-fluid">
                     </div>
-                    {% endfor %}
-                    <div class="item text-center">
-                        <a href="/stories" class="testimony-wrap p-3 pb-3" style="min-height: 25em;">
-                            <br /><br /><br />
-                            <i class="fas fa-newspaper" style="font-size: 5em"></i>
-                            <div class="text">
-                                <br />
-                                <h4>See all Stories</h4>
-                            </div>
-                        </a>
+                    <p class="post-category"></p>
+                    <h2 class="title">
+                        <a href="{{ s.url }}">{{ s.title }}</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author">{{ summit.subtitle }}</p>
+                            <p class="post-date">
+                                {% for author in s.authors %}
+                                {{author.name}} – {{author.institution}}<br />
+                                {% endfor %}
+                                <time datetime="2022-01-01">{{ s.date | date: "%b %d, %Y" }}</time>
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </article>
             </div>
+            {% endfor %}
+        </div>
+
+        <div style="margin-top: 2em;" class="text-center">
+            <a href="/stories" class="btn-get-started hide-on-mobile">See all Stories</a>
         </div>
     </div>
 </section>
 
-<!-- Numbers -->
-<section class="ftco-section ftco-counter" id="section-counter" style="padding: 4em 0">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-                <h2>The Workflows Community in Numbers</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 text-center">
-                    <a href="/members" class="text">
-                        <strong class="number" data-number="{{ total_members }}">0</strong>
-                        <span>members</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 text-center">
-                    <a href="/systems" class="text">
-                        <strong class="number" data-number="{{ total_systems }}">0</strong>
-                        <span>workflow systems</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 text-center">
-                    <a href="/frameworks" class="text">
-                        <strong class="number" data-number="{{ total_frameworks }}">0</strong>
-                        <span>research frameworks</span>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 text-center">
-                    <a href="/groups" class="text">
-                        <strong class="number" data-number="{{ total_wg }}">0</strong>
-                        <span>working groups</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Workflow Systems -->
-<section class="ftco-section testimony-section bg-light">
-    <div class="container">
-        <div class="row justify-content-center mb-3 pb-3">
-            <div class="col-md-7 text-center heading-section ftco-animate">
-                <span class="subheading">Last updated open-source workflow systems</span>
-                <h2 class="mb-4">Workflow Systems</h2>
-            </div>
-        </div>
-        <div class="row ftco-animate">
-            <div class="col-md-12">
-                <div class="carousel-testimony owl-carousel ftco-owl">
-                    {% assign systems_wci = site.systems | where: "wci_metadata", "true" | sort: "date_sort" | reverse
-                    %}
-                    {% assign systems_wci_size = systems_wci | size %}
-                    {% assign systems = site.systems | where: "wci_metadata", "false" | sort: "date_sort" | reverse %}
-                    {% assign systems_limit = 10 | minus: systems_wci_size %}
-                    {% for system in systems_wci limit: 10 %}
-                    <div class="item text-center">
-                        <a href="{{system.url}}" class="testimony-wrap p-3 pb-3" style="min-height: 25em;">
-                            <img src="{{system.avatar}}" style="width: 30%; margin: auto;" />
-                            <div class="text">
-                                <h3>{{system.title}}</h3>
-                                <p class="mb-3">
-                                    {{ system.headline | excerpt | strip_html | strip_newlines | truncate: 150}}
-                                </p>
-                                <span class="position"><i class="fas fa-code"></i> {{system.language}}</span><br />
-                                {% if system.release_name != "" %}<span class="position"><i class="fas fa-box-open"></i>
-                                    {{system.release_name}}</span><br />{% endif %}
-                                <span class="position"><i class="far fa-clock"></i> {{system.last_update}}</span>
-                            </div>
-                        </a>
-                    </div>
-                    {% endfor %}
-                    <div class="item text-center">
-                        <a href="/systems" class="testimony-wrap p-3 pb-3" style="min-height: 25em;">
-                            <br /><br /><br />
-                            <i class="fas fa-cogs" style="font-size: 5em"></i>
-                            <div class="text">
-                                <br />
-                                <h4>See all Systems</h4>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- Twitter and Events -->
-<section class="ftco-section" style="background-color: #fff;">
+<!-- <section class="ftco-section" style="background-color: #fff;">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-lg-4 d-flex align-self-stretch">
-                <!-- <a class="twitter-timeline" data-lang="en" data-height="1150" data-width="100%" data-theme="light"
-                    data-chrome="nofooter" href="https://twitter.com/WorkflowsCI">Tweets by WorkflowsCI</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-                <!-- LINKED IN -->
-                <div class='sk-ww-linkedin-page-post' style="border: 1px solid #ccc; max-height: 50em;" data-embed-id='198292'></div><script src='https://widgets.sociablekit.com/linkedin-page-posts/widget.js' async defer></script>
-            </div>
-
             <div class="col-md-6 col-lg-8 text-center heading-section ftco-animate">
                 <span class="subheading">Upcoming Community Events</span>
                 <h2 class="mb-4">Events</h2>
@@ -175,15 +219,17 @@ permalink: /
                     {% assign count_events = 0 %}
                     {% for event in events %}
                     {% capture eventtime %}{{event.end_date | date: '%s'}}{% endcapture %}
-                    {% if eventtime >= nowunix and count_events < 10 %} <div
-                        class="col-md-6 col-lg-6 ftco-animate" style="margin: auto">
+                    {% if eventtime >= nowunix and count_events < 10 %} <div class="col-md-6 col-lg-6 ftco-animate"
+                        style="margin: auto">
                         <div class="media block-6 services d-block text-center">
                             <div class="d-flex justify-content-center" style="font-size: 0.9em">
-				    {% if event.start_date != event.end_date %}{{event.start_date | date: "%b %d" }}&mdash;{% endif %}{{event.end_date | date: "%b %d, %Y" }}
+                                {% if event.start_date != event.end_date %}{{event.start_date | date: "%b %d"
+                                }}&mdash;{% endif %}{{event.end_date | date: "%b %d, %Y" }}
                             </div>
                             <div class="media-body">
                                 <h3 class="heading" style="line-height: 1.1em">
-                                    <a href="{{event.url}}" target="_blank" style="color: #000">{{event.short_name}}</a><br />
+                                    <a href="{{event.url}}" target="_blank"
+                                        style="color: #000">{{event.short_name}}</a><br />
                                     <span style="font-size: 0.7em; color: #e83e8c">{{event.location}}</span>
                                 </h3>
                                 {% if event.deadlines %}
@@ -206,66 +252,9 @@ permalink: /
         </div>
     </div>
     </div>
-</section>
+</section> -->
 
-<!-- Jobs -->
-{% assign jobs = site.jobs | sort: "application_deadline" %}
-{% assign num_jobs = 0 %}
-{% for job in jobs %}
-{% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
-{% if eventtime >= nowunix %}
-{% assign num_jobs = num_jobs | plus: 1 %}
-{% endif %}
-{% endfor %}
-<section class="ftco-section-parallax">
-    <div class="parallax-img d-flex align-items-center" style="padding: 5em 0">
-        <div class="container">
-            <div class="row d-flex justify-content-center align-self-stretch">
-                <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-                    <span class="subheading"><strong>{{ num_jobs }}</strong> Open Positions from the Community</span>
-                    <h2>Jobs</h2>
-                </div>
-            </div>
-            <div class="row ftco-animate">
-                <div class="col-md-12">
-                    <div class="carousel-testimony owl-carousel ftco-owl">
-                        {% assign count_jobs = 0 %}
-                        {% for job in jobs %}
-                        {% capture eventtime %}{{job.application_deadline | date: '%s'}}{% endcapture %}
-                        {% if eventtime >= nowunix and count_jobs < 10 %} <div class="item text-center">
-                            <a href="{{job.url}}" class="testimony-wrap p-3 pb-3" style="min-height: 15em">
-                                <img src="{{job.organization_logo}}" style="width: 50%; margin: auto;" />
-                                <div class="text" style="line-height: 1.2em; padding-top: 1em;">
-                                    <strong>{{job.title}}</strong><br /><br />
-                                    {{ job.organization }}<br /><br />
-                                    <span class="position">
-                                        <i class="fas fa-map-marker"></i>&nbsp;&nbsp;&nbsp;{{job.location}}
-                                        <br />
-                                        <i class="fas fa-briefcase"></i>&nbsp;&nbsp;{{job.employment_type}}
-                                    </span>
-                                </div>
-                            </a>
-                    </div>
-                    {% assign count_jobs = count_jobs | plus: 1 %}
-                    {% endif %}
-                    {% endfor %}
-                    <div class="item text-center">
-                        <a href="/jobs" class="testimony-wrap p-3 pb-3" style="min-height: 15em;">
-                            <br /><br />
-                            <i class="fas fa-briefcase" style="font-size: 3.5em"></i>
-                            <div class="text">
-                                See all Jobs
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</section>
-
-<!-- Founders -->
+<!-- Founders
 <section class="ftco-section" style="background-color: #fff;">
     <div class="container">
         <div class="row">
@@ -278,7 +267,8 @@ permalink: /
                     {% for institution in institutions %}
                     <div class="col-sm-6 col-md-3">
                         <a href="{{institution.link}}" target="_blank">
-                            <img src="/images/institutions/{{institution.image}}" alt="{{institution.name}}" style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                            <img src="/images/institutions/{{institution.image}}" alt="{{institution.name}}"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
                         </a>
                     </div>
                     {% endfor %}
@@ -287,4 +277,4 @@ permalink: /
         </div>
     </div>
     </div>
-</section>
+</section> -->

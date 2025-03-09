@@ -8,84 +8,55 @@ image: "https://workflows.community/images/wci-default-card.png"
     {% include head.html %}
 </head>
 
-<body class="is-preload">
+<body class="is-preload dark">
     {% include header.html %}
 
-    <div class="hero-wrap js-fullheight">
-        <div class="overlay"></div>
+    <section id="hero" class="hero sticked-header-offset">
         <div id="particles-js"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-center"
-                data-scrollax-parent="true">
-                <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                    <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-                        <a href="#">
-                            <img src="/images/wci-white-logo.png" style="width: 90%" alt="" />
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row gy-5 aos-init aos-animate">
+                <div class="col-lg-7 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h2 data-aos="fade-up">Elevating community-centered scientific workflow solutions <span>through
+                            collective expertise</span><span class="circle" data-aos="fade-right"
+                            data-aos-delay="800">.</span></h2>
+                    <p data-aos="fade-up" data-aos-delay="400">Our goal is to bring the workflows community together
+                        (users, developers, researchers, and facilities) to provide <strong>community resources and
+                            capabilities</strong> to enable scientists and workflow systems developers to discover
+                        software products, related efforts, events, technical reports, etc. and engage in community-wide
+                        efforts to tackle workflows grand challenges.</p>
+                    <div class="social" data-aos="fade-up" data-aos-delay="600">
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank">
+                            <i class="fab fa-youtube" style="font-size: 1.5em; color: #fff !important"></i>
                         </a>
-                    </p>
-                    <br />
-                    <h1 class="" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
-                        style="font-size: 1.5em">
-                        Our goal is to bring the workflows community together (users, developers, researchers, and
-                        facilities) to provide <strong>community resources and capabilities</strong> to enable
-                        scientists and workflow systems developers to discover software products, related efforts,
-                        events, technical reports, etc. and engage in community-wide efforts to tackle workflows grand
-                        challenges.
-                    </h1>
-                    <br />
-
-                    <div style="background: rgba(255, 255, 255, .1); padding: 1em; border-radius: 1em;">
-                        <a href="/bof/sc24" style="line-height: 1.3em; color: #fff !important;">
-                            <strong style="font-size: 1.75em">Workflows Community BoF @ SC24</strong><br />
-                            <span>Collaborative Pathways for Designing an Integrated Infrastructure for Research Excellence</span><br />
-                            <span>November 19, 2024 &mdash; 5:15pm-6:45pm EST &mdash; Room B212</span><br />
-                            <!-- > REGISTER NOW!! -->
+                        <a href="mailto:contact@workflows.community">
+                            <i class="fa fa-envelope" style="font-size: 1.5em; color: #fff !important"></i>
                         </a>
-                    </div>
-                    <br /><br />
-                    <div class="ftco-footer-widget mb-4">
-                        <ul class="ftco-footer-social list-unstyled">
-                            <li>
-                                <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
-                                    class="fa-stack fa-2x" style="font-size: 1.5em">
-                                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
-                                    <i class="fab fa-youtube fa-stack-1x"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="mailto:contact@workflows.community" class="fa-stack fa-2x"
-                                    style="font-size: 1.5em">
-                                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
-                                    <i class="fa fa-envelope fa-stack-1x"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://linkedin.com/company/workflows-community" target="_blank"
-                                    class="fa-stack fa-2x" style="font-size: 1.5em">
-                                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
-                                    <i class="fab fa-linkedin fa-stack-1x"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
-                                    target="_blank" class="fa-stack fa-2x" style="font-size: 1.5em">
-                                    <i class="fa fa-circle fa-stack-2x" style="color: #fff"></i>
-                                    <i class="fab fa-slack fa-stack-1x"></i>
-                                </a>
-                            </li>
-                        </ul>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank">
+                            <i class="fab fa-linkedin" style="font-size: 1.5em; color: #fff !important"></i>
+                        </a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank">
+                            <i class="fab fa-slack" style="font-size: 1.5em; color: #fff !important"></i>
+                        </a>
                     </div>
                 </div>
+                <div class="col-lg-5 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <div style="border: 3px solid #fff; border-radius: .5em; padding: 1em;">
+                        <strong>FEATURED EVENT</strong>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="bg-light">
+    <main id="main" class="bg-light">
         {{ content }}
-    </div>
+    </main>
 
     {% include footer.html %}
-
+    
 </body>
 
 </html>

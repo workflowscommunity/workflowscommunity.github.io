@@ -4,35 +4,33 @@ title: Workflows Registries
 permalink: /registries
 ---
 
-<div class="row justify-content-center mb-4 pb-5">
-    <div class="col-md-8 text-center heading-section ftco-animate">
-        <p>
-            Collection of workflow repositories that host workflow applications
-        </p>
-        <a href="/registries/contribute" class="btn btn-primary mt-3 py-3 px-5">Contribute</a>
-    </div>
+<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
+    <h4>Collection of workflow repositories that host workflow applications</h4>
+    <a href="/registries/contribute" class="btn btn-primary mt-3 py-3 px-5">Contribute</a>
 </div>
 
-<div class="row">
-    {% assign registries = site.data.registries | sort: "name" %}
-    {% for registry in registries %}
-    <div class="col-md-6 ftco-animate">
-        <div class="blog-entry" style="min-height: 23em;">
-            <div class="text p-4 d-block">
-                {% if registry.icon %}
-                <p class="text-center">
-                    <a href="{{registry.url}}" target="_blank">
-                        <img src="{{ registry.icon }}" style="max-height: 6em; max-width: 8em;"
-                            alt="{{ registry.name }}" />
-                    </a>
-                </p>
-                {% endif %}
-                <h3 class="heading"><a href="{{framework.url}}" target="_blank">{{registry.name}}</a></h3>
-                <div class="meta mb-3">
-                    {{ registry.description }}
+
+<section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
+    <div class="container" data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-delay="100">
+            {% assign registries = site.data.registries | sort: "name" %}
+            {% for registry in registries %}
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="{{registry.icon}}" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="{{registry.url}}" target="_blank">{{registry.name}}</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">{{system.headline}}</h4>
+                                <h4>{{registry.description}}
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
-    {% endfor %}
-</div>
+</section>

@@ -7,143 +7,171 @@ time: "5:15pm-6:45pm ET"
 order: 5
 ---
 
-<div class="row justify-content-center mb-5">
-    <div class="col-md-7 text-center heading-section ftco-animate">
-        <img src="https://starfishstorage.com/wp-content/uploads/2024/05/SC24-600x300-1.jpg"
-            style="width: 15em;" /><br />
-        <span class="subheading">{{page.subtitle}}</span>
-        <h2 class="mb-4">{{page.title}}</h2>
-    </div>
-    <div class="col-md-12">
-        <p class="text-center mb-5">
-            {{page.event_date | date: "%A - %b %d, %Y" }}<br />
-            {{page.time}}<br />
-            Room B212
-        </p>
-        <p>
-            In modern science, integrating scientific workflows, especially those involving AI and spanning multiple
-            facilities, is paramount. AI workflows, leveraging machine learning and data analytics, are crucial for
-            processing and interpreting vast amounts of data, driving unprecedented breakthroughs. Multi-facility
-            workflows have expanded the horizons of scientific research by enabling the seamless integration of
-            computational resources, data, and experiments across different locations, fostering collaboration and
-            resource sharing.
-        </p>
-        <p>
-            The inaugural BoF session at <a href="/bof/sc22">SC22</a> focused on integrating HPC and AI workflows.
-            Building on this, the second BoF at <a href="/bof/sc22">SC23</a> gathered the Workflows Community to explore
-            challenges, opportunities, and future pathways for continuum and multi-facility workflows. Scientists
-            provided insights into domain-specific challenges, discussing coordination among computing and experimental
-            facilities, metadata tracking, co-design of experiment facilities, task standardization, edge-to-cloud data
-            exchange, adaptive compression, and defining common workflow concepts. These sessions highlighted the
-            importance of seamless integration across cloud-based data pipelines, multi-facility instruments, and HPC
-            infrastructures. The enthusiasm and feedback underscored the need for deeper exploration of continuum and
-            multi-facility workflows, critical for the resilience and real-time demands of modern scientific workflows.
-        </p>
-        <p>
-            In this BoF session, we will deepen the discourse initiated during the previous BoF sessions and elevate
-            these discussions by incorporating a wider array of perspectives, including those of scientists who develop
-            and utilize these workflow systems within their specific domains. By examining the challenges and
-            opportunities within multi-facility workflows, the session will explore themes such as near real-time
-            processing and integration of data from multiple sources and further discuss the topics of coordination
-            among different computing and experimental facilities, and co-design of experiment facilities. This
-            initiative is motivated by the need to address the continuum of workflows that demand uninterrupted
-            computing access and multi-facility workflows that enhance resilience and efficiency across distributed
-            environments.
-        </p>
-        <img src="/images/bof/wci-bof-sc24.jpeg" style="width: 100%; border-radius: 1em;" />
-    </div>
-</div>
+<div class="container" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-8 wg">
+            <p class="text-center">
+                <img src="https://starfishstorage.com/wp-content/uploads/2024/05/SC24-600x300-1.jpg"
+                    style="width: 15em; margin: auto;" />
+            </p>
+            <p class="subheading text-center">{{page.subtitle}}</p>
+            <h2 class="mb-4 text-center">{{page.title}}</h2>
 
-<div class="row justify-content-center mb-5 pb-5">
-    <div class="col-md-7 text-center heading-section ftco-animate">
-        <h2 class="mb-4">Agenda</h2>
-    </div>
-    <div class="col-md-12 ftco-animate">
-        <ul>
-            <li style="color: rgb(5, 135, 215)">
-                5:15pm-5:20pm &mdash; Opening Remarks
-                <!-- <a href="/files/bof/bof_sc22_opening_remarks.pdf">Opening Remarks</a><br /> -->
-                <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                    Rafael Ferreira da Silva &mdash; <span style="font-style: italic; color: #999">Oak Ridge Leadership Computing Facility (OLCF)</span><br />
-                    Debbie Bard &mdash; <span style="font-style: italic; color: #999">National Energy Research Scientific Computing Center (NERSC)</span><br />
-                    Fred Suter &mdash; <span style="font-style: italic; color: #999">Oak Ridge National
-                        Laboratory (ORNL)</span><br />
-                    Kyle Chard &mdash; <span style="font-style: italic; color: #999">University of Chicago</span><br />
-                </p>
-            </li>
-            <li style="color: rgb(5, 135, 215)">
-                5:20pm-6:20pm &mdash; Lightning talks: Collaborative Pathways for Designing an Integrated Infrastructure for Research Excellence<br />
+            <p class="text-center mb-5">
+                {{page.event_date | date: "%A - %b %d, %Y" }}<br />
+                {{page.time}}<br />
+                Room B212
+            </p>
+            <p>
+                In modern science, integrating scientific workflows, especially those involving AI and spanning multiple
+                facilities, is paramount. AI workflows, leveraging machine learning and data analytics, are crucial for
+                processing and interpreting vast amounts of data, driving unprecedented breakthroughs. Multi-facility
+                workflows have expanded the horizons of scientific research by enabling the seamless integration of
+                computational resources, data, and experiments across different locations, fostering collaboration and
+                resource sharing.
+            </p>
+            <p>
+                The inaugural BoF session at <a href="/bof/sc22">SC22</a> focused on integrating HPC and AI workflows.
+                Building on this, the second BoF at <a href="/bof/sc22">SC23</a> gathered the Workflows Community to
+                explore
+                challenges, opportunities, and future pathways for continuum and multi-facility workflows. Scientists
+                provided insights into domain-specific challenges, discussing coordination among computing and
+                experimental
+                facilities, metadata tracking, co-design of experiment facilities, task standardization, edge-to-cloud
+                data
+                exchange, adaptive compression, and defining common workflow concepts. These sessions highlighted the
+                importance of seamless integration across cloud-based data pipelines, multi-facility instruments, and
+                HPC
+                infrastructures. The enthusiasm and feedback underscored the need for deeper exploration of continuum
+                and
+                multi-facility workflows, critical for the resilience and real-time demands of modern scientific
+                workflows.
+            </p>
+            <p>
+                In this BoF session, we will deepen the discourse initiated during the previous BoF sessions and elevate
+                these discussions by incorporating a wider array of perspectives, including those of scientists who
+                develop
+                and utilize these workflow systems within their specific domains. By examining the challenges and
+                opportunities within multi-facility workflows, the session will explore themes such as near real-time
+                processing and integration of data from multiple sources and further discuss the topics of coordination
+                among different computing and experimental facilities, and co-design of experiment facilities. This
+                initiative is motivated by the need to address the continuum of workflows that demand uninterrupted
+                computing access and multi-facility workflows that enhance resilience and efficiency across distributed
+                environments.
+            </p>
+            <img src="/images/bof/wci-bof-sc24.jpeg" style="width: 100%; border-radius: 1em;" />
 
-                <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                    <a href="/files/bof/">
-                        Advancing DOE's Integrated Research Infrastructure</a><br />
-                    <span style="font-style: italic; color: #999"><strong>Ben Brown</strong>, U.S. Department of Energy (DOE)</span>
-                </p>
-                <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                    <a href="/files/bof/">
-                        Evolving HP+AI workflows for the needs of Digital Twins in Science and Industry</a><br />
-                    <span style="font-style: italic; color: #999"><strong>Rosa M. Badia</strong>, Barcelona Supercomputing Center (BSC)</span>
-                </p>
-                <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                    <a href="/files/bof/">
-                        TBA</a><br />
-                    <span style="font-style: italic; color: #999"><strong>Manish Parashar</strong>, University of Utah</span>
-                </p>
-                <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                    <a href="/files/bof/">
-                        Achieving Seamless Integration for Next-Generations Scientific Workflows</a><br />
-                    <span style="font-style: italic; color: #999"><strong>Lavanya Ramakrishnan</strong>, Lawrence Berkeley National Laboratory (LBNL)</span>
-                </p>
-                <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                    <a href="/files/bof/">
-                        TBA</a><br />
-                    <span style="font-style: italic; color: #999"><strong>Ian T. Foster</strong>, Argonne National Laboratory (ANL)</span>
-                </p>
-                <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                    <a href="/files/bof/">
-                        A Use-Inspired Approach to Bridge the Data Gaps for AI-Integrated Research and Education Workflows</a><br />
-                    <span style="font-style: italic; color: #999"><strong>İlkay Altıntaş</strong>, San Diego Supercomputing Center (SDSC)</span>
-                </p>
-            </li>
-            <li style="color: rgb(5, 135, 215)">
-                6:20pm-6:45pm &mdash; Interactive Activity<br />
-            </li>
-        </ul>
-    </div>
-</div>
+            <p>&nbsp;</p>
+            <h2 class="mb-4">Agenda</h2>
+            <div class="col-md-12 ftco-animate">
+                <ul>
+                    <li style="color: rgb(5, 135, 215)">
+                        5:15pm-5:20pm &mdash; Opening Remarks
+                        <!-- <a href="/files/bof/bof_sc22_opening_remarks.pdf">Opening Remarks</a><br /> -->
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            Rafael Ferreira da Silva &mdash; <span style="font-style: italic; color: #999">Oak Ridge
+                                Leadership Computing Facility (OLCF)</span><br />
+                            Debbie Bard &mdash; <span style="font-style: italic; color: #999">National Energy Research
+                                Scientific Computing Center (NERSC)</span><br />
+                            Fred Suter &mdash; <span style="font-style: italic; color: #999">Oak Ridge National
+                                Laboratory (ORNL)</span><br />
+                            Kyle Chard &mdash; <span style="font-style: italic; color: #999">University of
+                                Chicago</span><br />
+                        </p>
+                    </li>
+                    <li style="color: rgb(5, 135, 215)">
+                        5:20pm-6:20pm &mdash; Lightning talks: Collaborative Pathways for Designing an Integrated
+                        Infrastructure for Research Excellence<br />
 
-<div class="row justify-content-center mb-5 pb-5">
-    <div class="col-md-7 text-center heading-section ftco-animate">
-        <h2 class="mb-5">Supporters</h2>
-    </div>
-    <div class="col-md-12 ftco-animate">
-        <a href="https://ornl.gov/" target="_blank">
-            <img src="https://www.hpcwire.com/wp-content/uploads/2019/07/ORNL-OLCF-logo-700x.jpg" height="50px" class="mb-3 mr-3" />
-        </a>
-        <a href="https://www.nersc.gov/" target="_blank">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzKv5LXRUBcMbGsXmwhEVArUKYup-AJjDs8g&s" height="30px"
-                class="mb-3 mr-3" />
-        </a>
-        <a href="https://www.uchicago.edu/en" target="_blank">
-            <img src="https://data.org/wp-content/uploads/2021/09/uc_logo.jpeg" height="30px" class="mb-3 mr-3" />
-        </a>
-        <a href="https://www.anl.gov/" target="_blank">
-            <img src="https://www.cerebras.net/wp-content/uploads/2021/09/ANL_logo.png" height="30px" class="mb-3 mr-3" />
-        </a>
-        <a href="https://www.bsc.es/" target="_blank">
-            <img src="https://www.hpcwire.com/wp-content/uploads/2020/10/Barcelona-Supercomputing-Center-logo.png" height="40px" class="mb-3 mr-3" />
-        </a>
-        <a href="https://lbl.gov/" target="_blank">
-            <img src="https://www.lbl.gov/wp-content/uploads/2022/09/berkeley-logo.svg" height="30px" class="mb-3 mr-3" />
-        </a>
-        <a href="https://www.sdsc.edu/" target="_blank">
-            <img src="https://www.sdsc.edu/assets/images/logos/sdsclogo-plusname-horiz-red.jpg" height="30px" class="mb-3 mr-3" />
-        </a>
-        <a href="https://www.sci.utah.edu/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/University_of_Utah_horizontal_logo.svg/1280px-University_of_Utah_horizontal_logo.svg.png" height="30px" class="mb-3 mr-3" />
-        </a>
-        <a href="https://science.osti.gov/" target="_blank">
-            <img src="/images/bof/DOE-SC-COLOR.png" height="30px" class="mb-3 mr-3" />
-        </a>
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <a href="/files/bof/">
+                                Advancing DOE's Integrated Research Infrastructure</a><br />
+                            <span style="font-style: italic; color: #999"><strong>Ben Brown</strong>, U.S. Department of
+                                Energy (DOE)</span>
+                        </p>
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <a href="/files/bof/">
+                                Evolving HP+AI workflows for the needs of Digital Twins in Science and
+                                Industry</a><br />
+                            <span style="font-style: italic; color: #999"><strong>Rosa M. Badia</strong>, Barcelona
+                                Supercomputing Center (BSC)</span>
+                        </p>
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <a href="/files/bof/">
+                                TBA</a><br />
+                            <span style="font-style: italic; color: #999"><strong>Manish Parashar</strong>, University
+                                of
+                                Utah</span>
+                        </p>
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <a href="/files/bof/">
+                                Achieving Seamless Integration for Next-Generations Scientific Workflows</a><br />
+                            <span style="font-style: italic; color: #999"><strong>Lavanya Ramakrishnan</strong>,
+                                Lawrence
+                                Berkeley National Laboratory (LBNL)</span>
+                        </p>
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <a href="/files/bof/">
+                                TBA</a><br />
+                            <span style="font-style: italic; color: #999"><strong>Ian T. Foster</strong>, Argonne
+                                National
+                                Laboratory (ANL)</span>
+                        </p>
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <a href="/files/bof/">
+                                A Use-Inspired Approach to Bridge the Data Gaps for AI-Integrated Research and Education
+                                Workflows</a><br />
+                            <span style="font-style: italic; color: #999"><strong>İlkay Altıntaş</strong>, San Diego
+                                Supercomputing Center (SDSC)</span>
+                        </p>
+                    </li>
+                    <li style="color: rgb(5, 135, 215)">
+                        6:20pm-6:45pm &mdash; Interactive Activity<br />
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="blog-sidbar">
+                <h2 class="mb-5">Supporters</h2>
+                <div class="col-md-12 ftco-animate">
+                    <a href="https://ornl.gov/" target="_blank">
+                        <img src="https://www.hpcwire.com/wp-content/uploads/2019/07/ORNL-OLCF-logo-700x.jpg"
+                            height="50px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://www.nersc.gov/" target="_blank">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzKv5LXRUBcMbGsXmwhEVArUKYup-AJjDs8g&s"
+                            height="30px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://www.uchicago.edu/en" target="_blank">
+                        <img src="https://data.org/wp-content/uploads/2021/09/uc_logo.jpeg" height="30px"
+                            class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://www.anl.gov/" target="_blank">
+                        <img src="https://www.cerebras.net/wp-content/uploads/2021/09/ANL_logo.png" height="30px"
+                            class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://www.bsc.es/" target="_blank">
+                        <img src="https://www.hpcwire.com/wp-content/uploads/2020/10/Barcelona-Supercomputing-Center-logo.png"
+                            height="40px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://lbl.gov/" target="_blank">
+                        <img src="https://www.lbl.gov/wp-content/uploads/2022/09/berkeley-logo.svg" height="30px"
+                            class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://www.sdsc.edu/" target="_blank">
+                        <img src="https://www.hpcwire.com/wp-content/uploads/2013/07/SDSC-logo-hires.gif"
+                            height="30px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://www.sci.utah.edu/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/University_of_Utah_horizontal_logo.svg/1280px-University_of_Utah_horizontal_logo.svg.png"
+                            height="30px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://science.osti.gov/" target="_blank">
+                        <img src="/images/bof/DOE-SC-COLOR.png" height="30px" class="mb-3 mr-3" />
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

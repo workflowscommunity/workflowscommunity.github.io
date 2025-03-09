@@ -4,38 +4,47 @@ title: Stories
 permalink: /stories
 ---
 
-<div class="row justify-content-center mb-4 pb-5">
-    <div class="col-md-7 text-center heading-section ftco-animate">
-        <p class="heading-section">
-            Perspectives on workflows-related topics
-        </p>
-    </div>
+<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
+    <h4><strong style="color: #db8e1b">Expert Perspectives</strong> on Workflow Innovation</h4>
+    <p>Discover diverse viewpoints and thought leadership from research pioneers exploring the evolving landscape of
+        workflow technologies, methodologies, and applications.</p>
 </div>
-<div class="row">
-    {% assign count = 1 %}
-    {% assign stories = site.stories | sort: 'date' | reverse %}
-    {% for s in stories %}
-    {% assign img_class = '' %}
-    {% assign remainder = count | modulo: 2 %}
-    {% if remainder == 0 %}
-    {% assign img_class = 'image-2 order-2' %}
-    {% endif %}
-    <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-        <a href="{{s.url}}" class="image {{img_class}}" style="background-image: url('{{s.image}}'); "
-            data-scrollax=" properties: { translateY: '-20%'}">
-        </a>
-        <div class="text">
-            <h4 class="subheading">{{s.date | date: "%b %d, %Y" }}</h4>
-            <h2 class="heading"><a href="{{s.url}}">{{s.title}}</a></h2>
-            <p>
-                {% for author in s.authors %}
-            <h4 class="subheading" style="margin: 0">{{author.name}}</h4>
-            {{author.institution}}<br /><br />
+
+
+<section id="recent-posts" class="recent-posts sections-bg">
+    <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+            {% assign count = 1 %}
+            {% assign stories = site.stories | sort: 'date' | reverse %}
+            {% for s in stories %}
+            {% assign img_class = '' %}
+            {% assign remainder = count | modulo: 2 %}
+            {% if remainder == 0 %}
+            {% assign img_class = 'image-2 order-2' %}
+            {% endif %}
+            <div class="col-lg-4">
+                <article>
+                    <div class="post-img">
+                        <img src="{{s.image}}" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">{{s.date | date: "%b %d, %Y" }}</p>
+                    <h2 class="title">
+                        <a href="{{s.url}}">{{s.title}}</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author">{{r.subtitle}}</p>
+                            <p class="post-date">
+                                {% for author in s.authors %}
+                                {{author.name}} ({{author.institution}})<br />
+                                {% endfor %}
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            {% assign count = count | plus: 1 %}
             {% endfor %}
-            </p>
-            <p><a href="{{s.url}}" class="btn btn-primary px-4">View Story</a></p>
         </div>
     </div>
-    {% assign count = count | plus: 1 %}
-    {% endfor %}
-</div>
+</section>

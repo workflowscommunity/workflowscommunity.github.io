@@ -4,29 +4,36 @@ title: Reports
 permalink: /reports
 ---
 
-<div class="row justify-content-center mb-4 pb-5">
-    <div class="col-md-8 text-center heading-section ftco-animate">
-        <p>
-            Collection of community reports related to workflows research
-        </p>
-    </div>
+<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
+    <h4><strong style="color: #db8e1b">Workflow Research</strong> Community Reports</h4>
+    <p>Explore peer-contributed insights, findings, and advancements from our global community of workflow researchers
+        and practitioners.</p>
 </div>
 
-<div class="row">
-    {% assign reports = site.data.reports | sort: "date" | reverse %}
-    {% for r in reports %}
-    <div class="col-md-4 ftco-animate">
-        <div class="blog-entry" style="min-height: 40em;">
-            <a href="{{r.url}}" target="_blank" class="block-20" style="background-image: url('images/reports/{{r.image}}');">
-            </a>
-            <div class="text p-4 d-block">
-                <div lcass="meta mb-3">{{r.publisher}}, {{r.date | date: "%Y"}}</div>
-                <h3 class="heading"><a href="{{r.url}}" target="_blank">{{r.title}}</a></h3>
-                <div class="meta mb-3">
-                    {{ r.subtitle }}
-                </div>
+<section id="recent-posts" class="recent-posts sections-bg">
+    <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+            {% assign reports = site.data.reports | sort: "date" | reverse %}
+            {% for r in reports %}
+            <div class="col-lg-4">
+                <article>
+                    <div class="post-img">
+                        <img src="/images/reports/{{r.image}}" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">{{r.publisher}}, {{r.date | date: "%Y"}}</p>
+                    <h2 class="title">
+                        <a href="{{r.url}}">{{r.title}}</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author">{{r.subtitle}}</p>
+                            <p class="post-date">
+                            </p>
+                        </div>
+                    </div>
+                </article>
             </div>
+            {% endfor %}
         </div>
     </div>
-    {% endfor %}
-</div>
+</section>

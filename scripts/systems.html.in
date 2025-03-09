@@ -15,6 +15,9 @@ release_date: $release_date
 wci_metadata: $wci_metadata
 ---
 
+<section class="bg-light">
+    <div class="container" id="featured">
+
 <div class="row justify-content-center mb-2 pb-2">
     <div class="col-md-7 text-center heading-section ftco-animate mb-5">
         <span class="subheading"><a href="$website" target="_blank">$website</a></span><br />
@@ -48,7 +51,7 @@ wci_metadata: $wci_metadata
             <div class="media-body p-2 mt-3">
                 <h3 class="heading">$language</h3>
             </div>
-        </div>      
+        </div>
     </div>
 </div>
 
@@ -59,11 +62,14 @@ $execution_environment
     <div class="col-md-7 text-center heading-section ftco-animate">
         <h3 class="mb-4">Contributors</h3>
         <p>
-            <a href="https://github.com/$organization/$repository/network/members" target="_blank"><i class="fas fa-code-branch"></i> $forks</a>
+            <a href="https://github.com/$organization/$repository/network/members" target="_blank"><i
+                    class="fas fa-code-branch"></i> $forks</a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="https://github.com/$organization/$repository/stargazers" target="_blank"><i class="far fa-star"></i> $stargazers</a>
+            <a href="https://github.com/$organization/$repository/stargazers" target="_blank"><i
+                    class="far fa-star"></i> $stargazers</a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="https://github.com/$organization/$repository/issues" target="_blank"><i class="far fa-dot-circle"></i> $issues</a>
+            <a href="https://github.com/$organization/$repository/issues" target="_blank"><i
+                    class="far fa-dot-circle"></i> $issues</a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
             <i class="fab fa-osi"></i> $license
         </p>
@@ -72,3 +78,5 @@ $execution_environment
         $contributors_list
     </div>
 </div>
+</div>
+</section>

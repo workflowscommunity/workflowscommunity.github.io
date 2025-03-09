@@ -1,50 +1,41 @@
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-    <div class="container">
-        <a class="navbar-brand" href="/"><img src="/images/wci-white-logo.png" style="width: 8em" alt="" id="logo" /></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars"></i> Menu
-        </button>
-
-        <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav ml-auto">
+<header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-white-logo.png" alt="logo">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
                 <!-- RESOURCES -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Resources</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="/systems">Workflow Systems</a>
-                        <a class="dropdown-item" href="/registries">Workflow Registries</a>
-                        <a class="dropdown-item" href="/education">Education and Training</a>
-                        <a class="dropdown-item" href="/reports">Reports</a>
-                    </div>
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
                 </li>
                 <!-- RESEARCH -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Research</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown02">
-                        <a class="dropdown-item" href="/groups">Working Groups</a>
-                        <a class="dropdown-item" href="/frameworks">Research Frameworks</a>
-                    </div>
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
                 </li>
                 <!-- EVENTS -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Events</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown03">
-                        <a class="dropdown-item" href="/summits">Workflows Community Summits</a>
-                        <a class="dropdown-item" href="/bof">Birds of a Feather (BoF)</a>
-                        <a class="dropdown-item" href="/talks">Workflows Community Talks</a>
-                        <a class="dropdown-item" href="/events">Workflows-Related Events</a>
-
-                    </div>
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <!-- <li><a href="/events">Workflows-Related Events</a></li> -->
+                    </ul>
                 </li>
-                <li class="nav-item"><a href="/members" class="nav-link">Members</a></li>
-                <li class="nav-item"><a href="/jobs" class="nav-link">Jobs</a></li>
-                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
-                <li class="nav-item cta"><a href="/contact" class="nav-link"><span>Get involved!</span></a></li>
+                <li><a href="/members">Members</a></li>
+                <!-- <li><a href="/jobs">Jobs</a></li> -->
+                <li><a href="/about">About</a></li>
             </ul>
-        </div>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <!-- <button id="darkmode-button"><i class="bi bi-moon-fill"></i></button> -->
     </div>
-</nav>
+</header>

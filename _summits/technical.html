@@ -3,6 +3,7 @@ layout: page
 title: Workflows Community Summit 2021.4
 subtitle: Advancing the State-of-the-art of Scientific Workflows Management Systems Research and Development
 event_date: Wednesday – April 7, 2021
+image: /images/summits/wcs-technical-participants.png
 times: 10am-1pm PDT / 1pm-4pm EDT / 19:00-22:00 CEST
 report_badge: https://zenodo.org/badge/DOI/10.5281/zenodo.4915801.svg
 report_doi: 10.5281/zenodo.4915801
@@ -12,266 +13,278 @@ photo: wcs-technical-participants.png
 order: 2
 ---
 
-<div class="row justify-content-center mb-5 pb-5">
-    <div class="col-md-7 text-center heading-section ftco-animate">
-        <span class="subheading">{{page.subtitle}}</span>
-        <h2 class="mb-4">{{page.title}}</h2>
-    </div>
-    <p class="text-center">
-        {{page.event_date | date: "%a - %b %d, %Y" }}<br />
-        {{page.times}}
-    </p>
-    <p>
-        The <a href="https://workflowsri.org" target="_blank">workflowsRI</a> and <a href="http://exaworks.org"
-            target="_blank">ExaWorks</a> projects held a very productive <a href="/events/summits/community">Workflows
-            Community
-            Summit</a> in January. The focus was to identify broad challenges for the workflows community and to propose
-        a
-        vision for community activities to address these challenges.
-    </p>
-    <p>
-        While the first summit focused on Establishing a high level vision, this second summit will explore
-        <strong>technical approaches</strong> for realizing (part of) that vision. Consequently, we hope to engage
-        participants who are actively involved in workflow system development.
-    </p>
+<div class="container" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-8 wg">
+            <p class="subheading text-center">{{page.subtitle}}</p>
+            <h2 class="mb-4">{{page.title}}</h2>
+            <p class="text-center">
+                {{page.event_date | date: "%a - %b %d, %Y" }}<br />
+                {{page.times}}
+            </p>
+            <p>
+                The <a href="https://workflowsri.org" target="_blank">workflowsRI</a> and <a href="http://exaworks.org"
+                    target="_blank">ExaWorks</a> projects held a very productive <a
+                    href="/events/summits/community">Workflows
+                    Community
+                    Summit</a> in January. The focus was to identify broad challenges for the workflows community and to
+                propose
+                a
+                vision for community activities to address these challenges.
+            </p>
+            <p>
+                While the first summit focused on Establishing a high level vision, this second summit will explore
+                <strong>technical approaches</strong> for realizing (part of) that vision. Consequently, we hope to
+                engage
+                participants who are actively involved in workflow system development.
+            </p>
 
-    <p style="margin-bottom: 0.5em">
-        Based on the outcomes of the first summit, we have identified four technical topics for discussion (some align
-        with a single theme of the first summit, while others are cross-cutting):
-    </p>
-    <ol style="padding-left: 2em;">
-        <li>Definition of common workflow patterns and benchmarks (both for determining workflow system functionality
-            and for providing users with tutorial examples);
-        </li>
-        <li>Identifying paths toward interoperability of workflow systems; and</li>
-        <li>Improving workflow systems' interface with legacy and emerging HPC software and hardware stacks</li>
-    </ol>
+            <p style="margin-bottom: 0.5em">
+                Based on the outcomes of the first summit, we have identified four technical topics for discussion (some
+                align
+                with a single theme of the first summit, while others are cross-cutting):
+            </p>
+            <ol style="padding-left: 2em;">
+                <li>Definition of common workflow patterns and benchmarks (both for determining workflow system
+                    functionality
+                    and for providing users with tutorial examples);
+                </li>
+                <li>Identifying paths toward interoperability of workflow systems; and</li>
+                <li>Improving workflow systems' interface with legacy and emerging HPC software and hardware stacks</li>
+            </ol>
 
-    <p class="bg-light p-3">
-        We thank all participants for their valuable contributions. The event
-        report is available here: <a href="{{page.report_link}}" style="border: 0" target="_blank">
-            <img src="{{page.report_badge}}" alt="DOI"
-                style="transform: none; -webkit-transform: none; position: inherit; margin: 0; vertical-align: middle;"></a>
-    </p>
+            <p class="bg-light p-3">
+                We thank all participants for their valuable contributions. The event
+                report is available here: <a href="{{page.report_link}}" style="border: 0" target="_blank">
+                    <img src="{{page.report_badge}}" alt="DOI"
+                        style="transform: none; -webkit-transform: none; position: inherit; margin: 0; vertical-align: middle;"></a>
+            </p>
 
-    <p><img src="/images/summits/{{page.photo}}" style="width: 100%;" /></p>
-</div>
+            <p><img src="/images/summits/{{page.photo}}" style="width: 100%;" /></p>
 
-<div class="row justify-content-center mb-5 pb-5">
-    <div class="col-md-7 text-center heading-section ftco-animate">
-        <h2 class="mb-4">Agenda</h2>
-    </div>
-    <div class="col-md-12 ftco-animate">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Time</th>
-                    <th>Topic</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="min-width: 11em">
-                        10-10:05am PDT<br />
-                        1:00-1:05pm EDT<br />
-                        19:00-19:05 CEST
-                    </td>
-                    <td>
-                        <strong>Welcome and Introductions</strong>
-                        &nbsp;
-                        <a href="https://youtu.be/lbGCz2EgfZU" target="_blank" style="border-bottom: 0">
-                            <i class="fab fa-youtube" style="color: #a71d2a !important"></i>
-                        </a>
-                        <br />
-                        <i>Rafael Ferreira da Silva (University of Southern California)</i>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        10:05-10:15am PDT<br />
-                        1:05-1:15pm EDT<br />
-                        19:05-19:15 CEST
-                    </td>
-                    <td>
-                        <strong>Workflows Community Summit Report and Key Findings</strong>
-                        &nbsp;
-                        <a href="https://youtu.be/lbGCz2EgfZU" target="_blank" style="border-bottom: 0">
-                            <i class="fab fa-youtube" style="color: #a71d2a !important"></i>
-                        </a>
-                        <br />
-                        <i>Henri Casanova (University of Hawaii at Manoa)</i><br />
-                        <a href="https://doi.org/10.5281/zenodo.4606958" style="border: 0" target="_blank">
-                            <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4606958.svg" alt="DOI"
-                                style="transform: none; -webkit-transform: none; position: inherit; margin: 0">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        10:15-10:30am PDT<br />
-                        1:15-1:30pm EDT<br />
-                        19:15-19:30 CEST
-                    </td>
-                    <td>
-                        <strong>Lightning talks</strong>
-                        <table width="100%" style="margin: 0">
-                            <tr>
-                                <td style="width: 100%">
-                                    <strong>Theme 1: Definition of common workflow patterns and benchmarks</strong>
-                                    &nbsp;
-                                    <a href="https://youtu.be/acK_td2Hhdc" target="_blank" style="border-bottom: 0">
-                                        <i class="fab fa-youtube" style="color: #a71d2a !important"></i>
-                                    </a>
-                                    <br />
-                                    <i>Dan Laney (Lawrence Livermore National Laboratory)</i><br />
-                                    <i>Dorran Howell (Tweag I/O)</i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Theme 2: Identifying paths toward interoperability of workflow
-                                        systems</strong>
-                                    &nbsp;
-                                    <a href="https://youtu.be/KTKGD1iz-hs" target="_blank" style="border-bottom: 0">
-                                        <i class="fab fa-youtube" style="color: #a71d2a !important"></i>
-                                    </a>
-                                    <br />
-                                    <i>Ilkay Altintas (UC San Diego)</i><br />
-                                    <i>Stian Soiland-Reyes (The University of Manchester)</i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Theme 3: Improving workflow systems' interface with legacy and emerging HPC
-                                        software and hardware stacks</strong>
-                                    &nbsp;
-                                    <a href="https://youtu.be/jz6FZC48G1s" target="_blank" style="border-bottom: 0">
-                                        <i class="fab fa-youtube" style="color: #a71d2a !important"></i>
-                                    </a>
-                                    <br />
-                                    <i>Douglas Thain (University of Notre Dame)</i><br />
-                                    <i>Rosa Filgueira (Heriot-Watt University)</i>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        10:30-10:35am PDT<br />
-                        1:30-1:35pm EDT<br />
-                        19:30-19:35 CEST
-                    </td>
-                    <td><strong>5min Break</strong><br /><i>(preparation for breakout sessions)</i></td>
-                </tr>
-                <tr>
-                    <td>
-                        10:35-11:15am PDT<br />
-                        1:35-2:15pm EDT<br />
-                        19:35-20:15 CEST
-                    </td>
-                    <td>
-                        <strong>Project Development Sessions</strong>
-                        <table width="100%" style="margin: 0">
-                            <tr>
-                                <td style="width: 100%">
-                                    Theme 1: Definition of common workflow patterns and benchmarks
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Theme 2: Identifying paths toward interoperability of workflow systems
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Theme 3: Improving workflow systems' interface with legacy and emerging HPC software
-                                    and
-                                    hardware stacks
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        11:15-11:30am PDT<br />
-                        2:15-2:30pm EDT<br />
-                        20:15-20:30 CEST
-                    </td>
-                    <td><strong>15min Break</strong></td>
-                </tr>
-                <tr>
-                    <td>
-                        11:30-12:10pm PDT<br />
-                        2:30-3:10pm EDT<br />
-                        20:30-21:10 CEST
-                    </td>
-                    <td>
-                        <strong>Project Roadmap Write Up Sessions</strong>
-                        <table width="100%" style="margin: 0">
-                            <tr>
-                                <td style="width: 100%">
-                                    Theme 1: Definition of common workflow patterns and benchmarks
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Theme 2: Identifying paths toward interoperability of workflow systems
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Theme 3: Improving workflow systems' interface with legacy and emerging HPC software
-                                    and
-                                    hardware stacks
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        12:10-12:25am PDT<br />
-                        3:10-3:25pm EDT<br />
-                        21:10-21:25 CEST
-                    </td>
-                    <td><strong>15min Break</strong></td>
-                </tr>
-                <tr>
-                    <td>
-                        12:25-12:40pm PDT<br />
-                        3:25-3:40pm EDT<br />
-                        21:25-21:40 CEST
-                    </td>
-                    <td>
-                        <strong>Reports: Project Roadmap Sessions</strong>
-                        <br />
-                        <i>Dan Laney (Lawrence Livermore National Laboratory)</i><br />
-                        <i>Dorran Howell (Tweag I/O)</i><br />
-                        <i>Ilkay Altintas (UC San Diego)</i><br />
-                        <i>Stian Soiland-Reyes (The University of Manchester)</i><br />
-                        <i>Douglas Thain (University of Notre Dame)</i><br />
-                        <i>Rosa Filgueira (Heriot-Watt University)</i>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        12:40-12:50pm PDT<br />
-                        3:40-3:50pm EDT<br />
-                        21:40-21:50 CEST
-                    </td>
-                    <td>
-                        <strong>Final Remarks and Moving Forward</strong>
-                        &nbsp;
-                        <a href="https://youtu.be/UOnIYs_PFzE" target="_blank" style="border-bottom: 0">
-                            <i class="fab fa-youtube" style="color: #a71d2a !important"></i>
-                        </a>
-                        <br />
-                        <i>Kyle Chard (University of Chicago)</i>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <h2 class="mb-4">Agenda</h2>
+            </div>
+            <div class="col-md-12 ftco-animate">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Topic</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="min-width: 11em">
+                                10-10:05am PDT<br />
+                                1:00-1:05pm EDT<br />
+                                19:00-19:05 CEST
+                            </td>
+                            <td>
+                                <strong>Welcome and Introductions</strong>
+                                &nbsp;
+                                <a href="https://youtu.be/lbGCz2EgfZU" target="_blank" style="border-bottom: 0">
+                                    <i class="fab fa-youtube" style="color: #a71d2a !important"></i>
+                                </a>
+                                <br />
+                                <i>Rafael Ferreira da Silva (University of Southern California)</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                10:05-10:15am PDT<br />
+                                1:05-1:15pm EDT<br />
+                                19:05-19:15 CEST
+                            </td>
+                            <td>
+                                <strong>Workflows Community Summit Report and Key Findings</strong>
+                                &nbsp;
+                                <a href="https://youtu.be/lbGCz2EgfZU" target="_blank" style="border-bottom: 0">
+                                    <i class="fab fa-youtube" style="color: #a71d2a !important"></i>
+                                </a>
+                                <br />
+                                <i>Henri Casanova (University of Hawaii at Manoa)</i><br />
+                                <a href="https://doi.org/10.5281/zenodo.4606958" style="border: 0" target="_blank">
+                                    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4606958.svg" alt="DOI"
+                                        style="transform: none; -webkit-transform: none; position: inherit; margin: 0">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                10:15-10:30am PDT<br />
+                                1:15-1:30pm EDT<br />
+                                19:15-19:30 CEST
+                            </td>
+                            <td>
+                                <strong>Lightning talks</strong>
+                                <table width="100%" style="margin: 0">
+                                    <tr>
+                                        <td style="width: 100%">
+                                            <strong>Theme 1: Definition of common workflow patterns and
+                                                benchmarks</strong>
+                                            &nbsp;
+                                            <a href="https://youtu.be/acK_td2Hhdc" target="_blank"
+                                                style="border-bottom: 0">
+                                                <i class="fab fa-youtube" style="color: #a71d2a !important"></i>
+                                            </a>
+                                            <br />
+                                            <i>Dan Laney (Lawrence Livermore National Laboratory)</i><br />
+                                            <i>Dorran Howell (Tweag I/O)</i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Theme 2: Identifying paths toward interoperability of workflow
+                                                systems</strong>
+                                            &nbsp;
+                                            <a href="https://youtu.be/KTKGD1iz-hs" target="_blank"
+                                                style="border-bottom: 0">
+                                                <i class="fab fa-youtube" style="color: #a71d2a !important"></i>
+                                            </a>
+                                            <br />
+                                            <i>Ilkay Altintas (UC San Diego)</i><br />
+                                            <i>Stian Soiland-Reyes (The University of Manchester)</i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Theme 3: Improving workflow systems' interface with legacy and
+                                                emerging HPC
+                                                software and hardware stacks</strong>
+                                            &nbsp;
+                                            <a href="https://youtu.be/jz6FZC48G1s" target="_blank"
+                                                style="border-bottom: 0">
+                                                <i class="fab fa-youtube" style="color: #a71d2a !important"></i>
+                                            </a>
+                                            <br />
+                                            <i>Douglas Thain (University of Notre Dame)</i><br />
+                                            <i>Rosa Filgueira (Heriot-Watt University)</i>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                10:30-10:35am PDT<br />
+                                1:30-1:35pm EDT<br />
+                                19:30-19:35 CEST
+                            </td>
+                            <td><strong>5min Break</strong><br /><i>(preparation for breakout sessions)</i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                10:35-11:15am PDT<br />
+                                1:35-2:15pm EDT<br />
+                                19:35-20:15 CEST
+                            </td>
+                            <td>
+                                <strong>Project Development Sessions</strong>
+                                <table width="100%" style="margin: 0">
+                                    <tr>
+                                        <td style="width: 100%">
+                                            Theme 1: Definition of common workflow patterns and benchmarks
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Theme 2: Identifying paths toward interoperability of workflow systems
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Theme 3: Improving workflow systems' interface with legacy and emerging HPC
+                                            software
+                                            and
+                                            hardware stacks
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                11:15-11:30am PDT<br />
+                                2:15-2:30pm EDT<br />
+                                20:15-20:30 CEST
+                            </td>
+                            <td><strong>15min Break</strong></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                11:30-12:10pm PDT<br />
+                                2:30-3:10pm EDT<br />
+                                20:30-21:10 CEST
+                            </td>
+                            <td>
+                                <strong>Project Roadmap Write Up Sessions</strong>
+                                <table width="100%" style="margin: 0">
+                                    <tr>
+                                        <td style="width: 100%">
+                                            Theme 1: Definition of common workflow patterns and benchmarks
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Theme 2: Identifying paths toward interoperability of workflow systems
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Theme 3: Improving workflow systems' interface with legacy and emerging HPC
+                                            software
+                                            and
+                                            hardware stacks
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                12:10-12:25am PDT<br />
+                                3:10-3:25pm EDT<br />
+                                21:10-21:25 CEST
+                            </td>
+                            <td><strong>15min Break</strong></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                12:25-12:40pm PDT<br />
+                                3:25-3:40pm EDT<br />
+                                21:25-21:40 CEST
+                            </td>
+                            <td>
+                                <strong>Reports: Project Roadmap Sessions</strong>
+                                <br />
+                                <i>Dan Laney (Lawrence Livermore National Laboratory)</i><br />
+                                <i>Dorran Howell (Tweag I/O)</i><br />
+                                <i>Ilkay Altintas (UC San Diego)</i><br />
+                                <i>Stian Soiland-Reyes (The University of Manchester)</i><br />
+                                <i>Douglas Thain (University of Notre Dame)</i><br />
+                                <i>Rosa Filgueira (Heriot-Watt University)</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                12:40-12:50pm PDT<br />
+                                3:40-3:50pm EDT<br />
+                                21:40-21:50 CEST
+                            </td>
+                            <td>
+                                <strong>Final Remarks and Moving Forward</strong>
+                                &nbsp;
+                                <a href="https://youtu.be/UOnIYs_PFzE" target="_blank" style="border-bottom: 0">
+                                    <i class="fab fa-youtube" style="color: #a71d2a !important"></i>
+                                </a>
+                                <br />
+                                <i>Kyle Chard (University of Chicago)</i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>

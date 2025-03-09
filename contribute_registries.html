@@ -4,47 +4,56 @@ title: "Contribute: Registries"
 permalink: /registries/contribute
 ---
 
-<div class="row justify-content-center mb-5 pb-5">
-    <div class="col-md-7 text-center heading-section ftco-animate mb-5">
-        <span class="subheading">Register an actively-developed open source workflow-related research frameworks</span>
-        <h2 class="mb-4">How to Contribute with a Workflow Registry</h2>
-        <a href="/registries" class="btn btn-primary mt-3 py-3 px-5">All Workflow Registries</a>
-    </div>
+<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
+    <h4>How to Contribute with a Workflow Registry</h4>
+    <p>Register an actively-developed open source workflow-related research frameworks</p>
+    <a href="/registries" class="btn btn-primary mt-3 py-3 px-5">All Workflow Registries</a>
+</div>
 
-    <div class="col-md-12">
-        <p>
-            The Workflows Community Initiative (WCI) provides a curated collection of workflow applications or
-            repositories that host workflows. We invite all workflow researchers to share their tools and
-            frameworks through this collection.
-        </p>
+<section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
+    <div class="container" data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-delay="100">
 
-        <h3 class="mt-5">Adding a Workflow Registry</h3>
-        <p>
-            To add a workflow registry, you only need to add the registry information into an YAML file
-            hosted as part of the <a href="https://github.com/workflowscommunity/workflowscommunity.github.io"
-                target="_blank">WCI GitHub repository</a>. The preferred way to submit your changes is via creating a
-            pull request with the changes. To this end, these are the recommended steps for adding a workflow research
-            framework:
-        </p>
-        <ol>
-            <li><strong>Fork</strong> the WCI GitHub repository</li>
-            <li><strong>Clone</strong> your forked repository:
-                <pre
-                    class="bg-light p-3">git clone https://github.com/&#60;your_username>/workflowscommunity.github.io</pre>
-            </li>
-            <li><strong>Edit</strong> the <code>_data/registries.yml</code> file, and add the information
-                regarding the workflow registry:
-                <pre class="bg-light p-3">
+            <div class="col-md-12">
+                <p>
+                    The Workflows Community Initiative (WCI) provides a curated collection of workflow applications or
+                    repositories that host workflows. We invite all workflow researchers to share their tools and
+                    frameworks through this collection.
+                </p>
+
+                <h3 class="mt-5">Adding a Workflow Registry</h3>
+                <p>
+                    To add a workflow registry, you only need to add the registry information into an YAML file
+                    hosted as part of the <a href="https://github.com/workflowscommunity/workflowscommunity.github.io"
+                        target="_blank">WCI GitHub repository</a>. The preferred way to submit your changes is via
+                    creating a
+                    pull request with the changes. To this end, these are the recommended steps for adding a workflow
+                    research
+                    framework:
+                </p>
+                <ol>
+                    <li><strong>Fork</strong> the WCI GitHub repository</li>
+                    <li><strong>Clone</strong> your forked repository:
+                        <pre
+                            class="p-3">git clone https://github.com/&#60;your_username>/workflowscommunity.github.io</pre>
+                    </li>
+                    <li><strong>Edit</strong> the <code>_data/registries.yml</code> file, and add the information
+                        regarding the workflow registry:
+                        <pre class="p-3">
 - name: "Workflow Registry Name"
   url: &#60;registry_url>
   description: "Short registry description" 
   icon: &#60;url_to_registry_logo> <span style="color: #999"># square images are preferred (1:1 aspect ratio)</span>
 </pre>
-            </li>
-            <li><strong>Commit</strong> the changes, and create a <strong>pull request</strong> for the WCI GitHub
-                repository.</li>
-            <li>The WCI team will then evaluate your pull request, and merge the changes if the workflow registry
-                is properly functioning.</li>
-        </ol>
+                    </li>
+                    <li><strong>Commit</strong> the changes, and create a <strong>pull request</strong> for the WCI
+                        GitHub
+                        repository.</li>
+                    <li>The WCI team will then evaluate your pull request, and merge the changes if the workflow
+                        registry
+                        is properly functioning.</li>
+                </ol>
+            </div>
+        </div>
     </div>
-</div>
+</section>

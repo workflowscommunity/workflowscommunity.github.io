@@ -4,41 +4,46 @@ title: Workflows Community Talks
 permalink: /talks
 ---
 
-<div class="row justify-content-center mb-4 pb-5">
-    <div class="col-md-7 text-center heading-section ftco-animate">
-        <p class="heading-section">
-            The <strong class="px-3">Workflow Community Talks</strong> are a monthly virtual series
-            of 30-minute talks bringing together members of the Workflows community and anyone
-            interested in the field.
-        </p>
-        <div class="organizers mt-4">
-            <h3 class="font-weight-bold">Organizers</h3>
-            <p>Stephen Hudson &bull; Daniela Cassol</p>
-        </div>
-        <div class="mt-4">
-            <p>Interested in giving a talk? <a href="https://docs.google.com/forms/d/1P9u12xVgh77FC6cGb5v7iE1rF0VpWAzSw0cmJ-BRD0Q"
-                target="_blank" class="btn btn-primary py-2 px-4">Sign Up Here</a></p>
-        </div>
-    </div>
-</div>
+<div class="container" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-8 wg">
+            <p>The <strong style="color: #db8e1b">Workflow Community Talks</strong> are a monthly virtual series of
+                30-minute talks bringing together members of the Workflows community and anyone interested in the field.
+            </p>
 
-
-<div class="row">
-    {% assign talks = site.talks | sort: 'talk_number' | reverse %}
-    {% for talk in talks %}
-    <div class="col-md-4 ftco-animate">
-        <div class="blog-entry" style="min-height: 15.5em;">
-            <div class="text p-4 d-block">
-                <div class="meta mb-3">
-                    {{talk.event_date | date: "%b %d, %Y" }}
+            <section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
+                {% assign talks = site.talks | sort: 'talk_number' | reverse %}
+                {% for talk in talks %}
+                <div class="swiper-slide">
+                    <div class="testimonial-wrap">
+                        <div class="testimonial-item">
+                            <div class="d-flex align-items-center info-box">
+                                <div>
+                                    <span style="font-size: 0.8em;">{{talk.event_date | date: "%b %d, %Y" }}</span>
+                                    <h3 class="heading"><a href="{{talk.url}}">{{talk.title}}</a></h3>
+                                    <span class="position">{{talk.authors}}</span>
+                                    {% if talk.report_link %}
+                                    <img src="{{talk.report_badge}}" alt="DOI" style="padding-top: 0.5em" />
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="heading"><a href="{{talk.url}}">{{talk.title}}</a></h3>
-                <span class="position">{{talk.authors}}</span>
-                {% if talk.report_link %}
-                <img src="{{talk.report_badge}}" alt="DOI" style="padding-top: 0.5em" />
-                {% endif %}
+                {% endfor %}
+            </section>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="blog-sidbar">
+                <h4 class="font-weight-bold">Organizers</h4>
+                <p>Stephen Hudson &bull; Daniela Cassol</p>
+                <hr />
+                <p>Interested in giving a talk?
+                    <a href="https://docs.google.com/forms/d/1P9u12xVgh77FC6cGb5v7iE1rF0VpWAzSw0cmJ-BRD0Q"
+                        target="_blank" class="btn btn-primary mt-3 py-3 px-5">Sign Up Here</a>
+                </p>
             </div>
         </div>
     </div>
-    {% endfor %}
 </div>

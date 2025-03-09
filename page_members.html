@@ -5,87 +5,78 @@ permalink: /members
 ---
 
 {% assign total_members = site.data.members | size %}
-{% assign members = site.data.members | sort: "last_name" %}
+{% assign total_members = 1 %}
+{% for m in site.data.members %}
+{% assign e = m.entries | size %}
+{% assign total_members = total_members | plus: e %}
+{% endfor %}
 {% assign total_countries = site.data.members | map: "country" | join: "," | split: "," | uniq | size %}
-{% assign countries = site.data.members | map: "country" | join: "," | split: "," | uniq %}
+{% assign countries = site.data.members | map: "country" %}
 
-<div class="row justify-content-center mb-4 pb-5">
-    <div class="col-md-7 text-center heading-section ftco-animate">
-        <span class="subheading">The Workflows Community Initiative Currently has <strong>{{total_members}}</strong>
-            Members from <strong>{{total_countries}} countries</strong></span>
-        <h2 class="mb-4">Members</h2>
-        <p>
-            <a href="https://forms.gle/ihiyRoZJMYeWXJid6" target="_blank" class="btn btn-primary mt-3 py-3 px-5">
-                Become a Member <span style="font-size: 0.8em"><i>(free)</i></span>
-            </a>
-        </p>
-    </div>
+
+<div class="container text-center" data-aos="fade-up" style="padding: 4em 0">
+    <h1>{{ total_members }}</h1>
+    <h4>Members from <strong style="color: #db8e1b">{{total_countries}}</strong> countries worldwide</h4>
+    <a href="https://forms.gle/ihiyRoZJMYeWXJid6" target="_blank" class="btn btn-primary mt-3 py-3 px-5">
+        Become a Member&nbsp;&nbsp;<span style="font-size: 0.8em"><i style="background-color: cornflowerblue; padding: 0.5em 1em; border-radius: 0.5em;">free</i></span>
+    </a>
 </div>
 
-<div id='map' style='width: 100%; height: 400px; border-radius: 0.5em; margin: 0'></div>
-<script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
-<script>
-    // mapboxgl.accessToken = 'pk.eyJ1Ijoic2lsdmFyZiIsImEiOiJjbDA2MG5wOGwwZXNsM2lvNXh4YmdwZm1oIn0.n0wDQhuZvZY_8obY5p8LlA';
-    mapboxgl.accessToken = 'pk.eyJ1Ijoid29ya2Zsb3dzY2kiLCJhIjoiY2xlbGxlMHo5MGNodjQzbWpyeGt0dHF3ZCJ9.PPzOg0Nmk3nWg38gxf8cow';
-    const mapboxClient = mapboxSdk({ accessToken: mapboxgl.accessToken });
 
-    var countries = [];
-    {% for country in countries %}
-    mapboxClient.geocoding
-        .forwardGeocode({
-            query: '{{country}}',
-            autocomplete: false,
-            countries: ['{{country}}'],
-            limit: 1
-        })
-        .send()
-        .then((response) => {
-            const feature = response.body.features[0];
-            countries.push(feature.matching_text.toString());
-        });
-    {% endfor %}
+<div id='regions_div' style='width: 100%; height: 450px; border-radius: 0.5em; margin: 0'></div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', {
+        'packages': ['geochart'],
+    });
+    google.charts.setOnLoadCallback(drawRegionsMap);
 
-    const map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/light-v11',
-        center: [0, 20],
-        zoom: 0.5
-    });
-    map.addControl(new mapboxgl.FullscreenControl());
-    map.addControl(new mapboxgl.NavigationControl());
-    map.on('load', function () {
-        map.addLayer(
-            {
-                id: 'country-boundaries',
-                source: {
-                    type: 'vector',
-                    url: 'mapbox://mapbox.country-boundaries-v1',
-                },
-                'source-layer': 'country_boundaries',
-                type: 'fill',
-                paint: {
-                    'fill-color': '#614385',
-                    'fill-opacity': 0.4,
-                },
-            },
-            'country-label'
-        );
-        const header = ["in", "iso_3166_1"];
-        const filter = [...header, ...countries];
-        map.setFilter('country-boundaries', filter);
-    });
+    function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+            ['Country', '# Members'],
+            {% for country in countries %} {% for c in site.data.members %} {% if c.country == country %} ['{{country}}', {{ c.entries | size }}],
+                {% endif %}{% endfor %} {% endfor %}
+        ]);
+
+        const yellowToOrangeGradient = [
+            "#FFFACD", // Lemon Chiffon (light yellow)
+            "#FFE77A", // Mellow Yellow
+            "#FFDD55", // Golden Yellow
+            "#FFD429", // Bright Yellow
+            "#FFC107", // Amber
+            "#FF9800", // Standard Orange
+            "#FF8C00", // Dark Orange
+            "#FF7F50", // Coral Orange
+            "#FF6347"  // Tomato (reddish orange)
+        ];
+        var options = {
+            colorAxis: { colors: yellowToOrangeGradient },
+            backgroundColor: '#eaeaea',
+            geochartVersion: 11,
+            enableRegionInteractivity: true,
+            regioncoderVersion: 1
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+        chart.draw(data, options);
+      }
 </script>
-<br />
 
-<div class="row">
-    {% for member in members %}
-    <div class="col-sm-6 col-md-4 col-lg-4 mb-5">
-        <a href="{{member.link}}" target="_blank" class="member">
-            <div class="member-contents">
-                {{member.first_name}} {{member.last_name}}<br />
-                <span style="color: #aaa; font-size: 0.8em">{{member.institution}}</span><br />
-            </div>
-        </a>
-    </div>
-    {% endfor %}
+<div class="container text-center" data-aos="fade-up" style="padding: 4em 0">
+    <div class="row gy-4 align-items-center">
+        {% for m in site.data.members %}
+        <div class="col-lg-12 text-left">
+            <div class="d-flex flex-column">
+            <p style="text-align: left;">
+                <strong>{{ m.country }}</strong><br />
+                {% assign entries = m.entries | sort: "last_name" %}
+                {% for e in entries %}
+                {% if e.link %}<a href="{{e.link}}" target="_blank">{{e.first_name}} {{e.last_name}}</a>{% else %}{{e.first_name}} {{e.last_name}}{% endif %}
+                <span style="color: #aaa">&mdash; {{e.institution}}</span><br />
+                {% endfor %}
+            </p>
+        </div>
+        </div>
+        {% endfor %}
+    </div>   
 </div>
