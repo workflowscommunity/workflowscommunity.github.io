@@ -1,0 +1,132 @@
+---
+layout: page
+title: ISC 2025 Data Streaming BoF
+subtitle: "Real-Time Scientific Data Streaming to HPC Nodes: Challenges and Innovations"
+event_date: June 10, 2025
+time: "TBD CET"
+order: 6
+---
+
+<div class="container" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-8 wg">
+            <p class="text-center">
+                <img src="https://isc-hpc.com/wp-content/uploads/2024/02/isc-logo.svg" style="width: 15em;" />
+            </p>
+            <p class="subheading text-center">{{page.subtitle}}</p>
+            <h2 class="mb-4 text-center">{{page.title}}</h2>
+
+            <p class="text-center mb-5">
+                {{page.event_date | date: "%A - %b %d, %Y" }}<br />
+                {{page.time}}<br />
+                <!-- Room B213 -->
+            </p>
+            <p>
+                The most common way scientific data arrives at HPC facilities today is through a set of border gateway
+                nodes connected to some form of shared file systems. Dataflow orchestration tools like Globus have made
+                this approach popular by being programmable, easy to use, and efficient. This approach works well when
+                the subsequent compute job for data analysis can afford to wait in the scheduler’s queue, with the
+                overall completion time being mostly dominated by that wait time.
+            </p>
+            <p>
+                However, as HPC centers and experimental and observational facilities become more integrated, workflows
+                will demand immediate, real-time feedback where the latency and performance variability that comes with
+                a shared file system is no longer acceptable. While a few streaming workflows have emerged recently,
+                many HPC, data, or network user facilities are not set out to support these workflows out-of-gate, for
+                policy, scheduler, or hardware reasons. However, these workflows are the cornerstone of modern
+                scientific applications, as their stringent timing requirements benchmark the ultimate integration of
+                HPC, data, and networks into seamless compute-in-the-loop workflows for experimental or observational
+                user facilities.
+            </p>
+            <p>
+                This BoF discusses this alternative way of using HPC by opening with a science use case that exemplifies
+                this new class of emerging workflows. It addresses a groundbreaking field in supercomputing that has not
+                been previously featured at ISC. Through a set of lightning talks from user facilities, the BoF will
+                survey how HPC centers address this need today and what they have planned for the near future. These
+                presentations aim to seed the ensuing discussion where the audience can ask questions to key staff of
+                HPC facilities, or can bring their specific streaming workflow to the attention of the workflow
+                community, or participate in a workflow challenge where the audience will be divided to represent the
+                various stakeholders of example streaming workflows and have to work together to identify requirements,
+                hurdles and possible solutions.
+            </p>
+            <!-- <img src="/images/bof/data_streaming_bof.jpg" style="width: 100%; border-radius: 1em;" /> -->
+
+            <h2 class="mb-4">Agenda</h2>
+
+            <div class="col-md-12 ftco-animate">
+                <ul>
+                    <li style="color: rgb(5, 135, 215)">
+                        5min &mdash; Welcome and Interactive Setup
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            Bjoern Enders &mdash; <span style="font-style: italic; color: #999">National Energy Research
+                                Scientific Computing Center (NERSC)</span><br />
+                            Rafael Ferreira da Silva &mdash; <span style="font-style: italic; color: #999">Oak Ridge
+                                Leadership Computing Facility (OLCF)</span><br />
+                        </p>
+                    </li>
+                    <li style="color: rgb(5, 135, 215)">
+                        15min &mdash; Lightning Talks
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            Sam Welborn &mdash; <span style="font-style: italic; color: #999">Lawrence Berkeley National
+                                Laboratory (LBNL)</span><br />
+                        </p>
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                                <!-- Network Streaming vs File Transfer<br /> -->
+                                Eli Dart &mdash; <span style="font-style: italic; color: #999">Energy Sciences Network
+                                (ESnet)</span>
+                        </p>
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                                <!-- AIsB &mdash; High Performance Access to ECMWF Weather & Climate Data<br /> -->
+                                Alex Upton &mdash; <span style="font-style: italic; color: #999">Swiss National Supercomputing Centre (CSCS)</span>
+                        </p>
+                    </li>
+                    <li style="color: rgb(5, 135, 215)">
+                        35min &mdash; Interactive Workflow Challenge<br />
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <span style="font-style: italic; color: #999">5 min: Group formation and scenario distribution</span>
+                            <span style="font-style: italic; color: #999">15 min: Small group discussions and solution development</span>
+                            <span style="font-style: italic; color: #999">10 min: Cross-group solution sharing and feedback</span>
+                            <span style="font-style: italic; color: #999">5 min: Real-time polling on proposed solutions and implementation challenges</span>
+                        </p>
+                        
+                    </li>
+                    <li style="color: rgb(5, 135, 215)">
+                        5min &mdash; Synthesis and Next Steps<br />
+                        <!-- <span style="font-style: italic; color: #999">Planning of a Full Day Workshop on Streaming at an
+                            ASCR User Facility in the Near Future</span> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="blog-sidbar">
+                <h2 class="mb-5">Supporters</h2>
+                <div class="col-md-12 ftco-animate">
+                    <a href="https://www.nersc.gov/" target="_blank">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzKv5LXRUBcMbGsXmwhEVArUKYup-AJjDs8g&s"
+                            height="30px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://lbl.gov/" target="_blank">
+                        <img src="https://www.lbl.gov/wp-content/uploads/2022/09/berkeley-logo.svg" height="30px"
+                            class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://ornl.gov/" target="_blank">
+                        <img src="https://www.hpcwire.com/wp-content/uploads/2019/07/ORNL-OLCF-logo-700x.jpg"
+                            height="50px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://www.es.net/" target="_blank">
+                        <img src="https://portal-east.es.net/static/media/esnet-logo.1ae3ec10.png" height="30px"
+                            class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://www.cscs.ch/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Logo_of_the_Swiss_National_Supercomputing_Centre_CSCS.jpg"
+                            height="50px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://science.osti.gov/" target="_blank">
+                        <img src="https://science.osti.gov/assets/img/doe-logos/logo.png" height="30px" class="mb-3 mr-3" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
