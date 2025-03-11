@@ -129,13 +129,12 @@ permalink: /
                 <p>Last updated open-source workflow systems</p>
             </div>
             <div class="row gy-4">
-
                 {% assign systems_wci = site.systems | where: "wci_metadata", "true" | sort: "date_sort" | reverse %}
                 {% assign systems_wci_size = systems_wci | size %}
                 {% assign systems = site.systems | where: "wci_metadata", "false" | sort: "date_sort" | reverse %}
                 {% assign systems_limit = 10 | minus: systems_wci_size %}
-                {% for system in systems_wci limit: 5 %}
-                <div class="col-xl-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                {% for system in systems_wci limit: 8 %}
+                <div class="col-xl-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="icon-box">
                         <div class="icon"><img src="{{system.avatar}}" alt="icon"></div>
                         <h4 class="title"><a href="{{system.url}}" class="stretched-link">{{system.title}}</a></h4>
@@ -149,15 +148,10 @@ permalink: /
                     </div>
                 </div>
                 {% endfor %}
-
-                <div class="col-xl-4 col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon-box">
-                        <div class="icon"><i class="fas fa-cogs" style="font-size: 1.5em"></i></div>
-                        <h4 class="title"><a href="/systems" class="stretched-link">See all Systems</a></h4>
-                    </div>
+                <div class="col-lg-12 text-center" class="text-center">
+                    <a href="/systems" class="btn-get-started hide-on-mobile">See all Systems</a>
                 </div>
-
-            </div>
+                </div>
         </div>
     </div>
 </div>
@@ -199,7 +193,7 @@ permalink: /
             {% endfor %}
         </div>
 
-        <div style="margin-top: 2em;" class="text-center">
+        <div class="col-lg-12 text-center" style="margin-top: 2em;" class="text-center">
             <a href="/stories" class="btn-get-started hide-on-mobile">See all Stories</a>
         </div>
     </div>
