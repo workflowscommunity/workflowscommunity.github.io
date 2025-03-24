@@ -442,6 +442,11 @@
     first_name: Abubakari 
     institution: University of Milano Bicocca 
 
+  - last_name: Fiore
+    first_name: Sandro
+    institution: University of Trento
+    link: https://www.linkedin.com/in/sandro-fiore-ph-d-080ba38/
+
 
 - country: Japan
   entries:
@@ -1217,6 +1222,11 @@
     first_name: Gregor
     institution: University of Virginia
     link: https://laszewski.github.io/
+
+  - last_name: Rosendo
+    first_name: Daniel
+    institution: Oak Ridge National Laboratory
+    link: https://danielrosendo.github.io
 
 # - last_name:
 #   first_name:
