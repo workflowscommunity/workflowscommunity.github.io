@@ -56,12 +56,12 @@ permalink: /about
         <span class="subheading">Our Technical Experts</span>
         <h2 class="mb-4">Technical Leads</h2>
         <div class="row gy-4">
-            {% assign tl = site.data.organization | where: "category","technical" %}
+            {% assign tl = site.data.organization | where: "category","technical" | sort: "last_name" %}
             {% for member in tl %}
             <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                 <div class="member">
                     <img src="/images/about/{{ member.photo }}" class="img-fluid" alt="">
-                    <h4><a href="{{member.link}}" target="_blank">{{ member.name }}</a></h4>
+                    <h4><a href="{{member.link}}" target="_blank">{{ member.first_name }} {{ member.last_name }}</a></h4>
                     <p>{{ member.role }}</p>
                     <a href="{{ member.institution.link }}" target="_blank">
                         <img src="/images/institutions/{{ member.institution.image }}"

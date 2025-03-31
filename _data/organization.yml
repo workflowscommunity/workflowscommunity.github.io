@@ -284,7 +284,8 @@
     image: anl.png
     link: https://www.anl.gov/
 
-- name: Stian Soiland-Reyes
+- first_name: Stian 
+  last_name: Soiland-Reyes
   role: Technical and Community Advisor
   photo: soiland-reys.jpg
   link: https://www.research.manchester.ac.uk/portal/soiland-reyes.html
@@ -294,7 +295,8 @@
     image: umanchester.png
     link: https://www.manchester.ac.uk/
 
-- name: Sean R. Wilkinson
+- first_name: Sean R. 
+  last_name: Wilkinson
   role: FAIR Computational Workflows
   photo: wilkinson.jpg
   link: https://www.ornl.gov/staff-profile/sean-r-wilkinson
@@ -303,3 +305,25 @@
     name: Oak Ridge National Laboratory
     image: ornl.png
     link: https://www.ornl.gov/
+
+- first_name: Stephen 
+  last_name: Hudson
+  role: Workflows Talks Coordinator
+  photo: hudson.jpg
+  link: https://www.anl.gov/profile/stephen-hudson
+  category: technical
+  institution:
+    name: Argonne National Laboratory
+    image: anl.png
+    link: https://www.anl.gov/
+
+- first_name: Daniela
+  last_name: Casol
+  role: Workflows Talks Coordinator
+  photo: casol.jpeg
+  link: https://profiles.lbl.gov/67936-daniela-cassol
+  category: technical
+  institution:
+    name: Lawrence Berkeley National Laboratory
+    image: lbnl.png
+    link: https://www.lbl.gov/
