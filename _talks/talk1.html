@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Placeholder talk
-authors: Stephen Hudson (Argonne National Lab)
-event_date: March 12, 2025 (Tentative)
+title: Steering Workflows with Artificial Intelligence
+authors: Logan Ward (Argonne National Lab)
+event_date: April 16, 2025 (Tentative)
 times: 11am-11.30 PST / 2pm-2.30 EST / 20:00-20:30 CEST
 talk_number: 1
 <!-- video_playlist: https://www.youtube.com/watch?v=STy5HwEVj8k&list=PLAtmuqHExRvOzPOvJfSH8PwjbVJFyulCy -->
@@ -19,17 +19,19 @@ talk_number: 1
             <p class="event-date">{{page.event_date}} {{page.times}} </p>
 
             <p class="mb-3" style="text-align: left;">
-                TBC. The first talk will soon be announced.
+                Computational workflows routinely execute tasks faster than a
+                human scientist can understand and act on their outcomes, which
+                means decisions about what tasks to run become outdated quickly.
+                Artificial Intelligence (AI) algorithms have emerged as a route to
+                adjust a workflow during operation, potentially increasing its
+                effectiveness by learning which tasks may prove most informative.
+                In this talk, we will discuss application patterns that integrate
+                AI into scientific workflows and introduce software which simplify
+                building such “AI steered applications.” The topics will include
+                dissecting a materials design application built around a Generative
+                AI model and middleware necessary to scale data-intensive AI workflows
+                past thousands of GPU nodes.
             </p>
-            <p class="mb-3" style="text-align: left !important;">
-                Topics (EXAMPLE):
-            </p>
-            <ul>
-                <li>Dynamic steering of HPC Workflows</li>
-                <li>Heterogeneous Workflows</li>
-                <li>Modelling of laser plasma accelerators with libEnsemble and WarpX</li>
-                <li>Using ProxyStore when transferring large data</li>
-            </ul>
         </div>
 
         <div class="col-lg-4">
@@ -39,7 +41,8 @@ talk_number: 1
                 {% for member in speaker %}
                 <a href="{{ member.link }}" target="_blank">
                     <img src="/images/talks/{{ member.photo }}" alt="{{ member.name }}" class="img-fluid mb-3"
-                        style="width: 150px; height: 150px; object-fit: cover; border-radius: 0.5em;">
+                        style="width: 150px; height: 200px; object-fit: cover; border-radius: 0.5em;">
+<!--                         style="width: 150px; height: 150px; object-fit: cover; border-radius: 0.5em;"> -->
                 </a>
                 <p class="font-weight-bold">{{ member.name }}<br />
                     <span class="text-muted">{{ member.role }}</span>

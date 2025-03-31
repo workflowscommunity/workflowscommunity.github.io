@@ -6,6 +6,18 @@
     image: argonne.png
   country: us
   link: https://www.anl.gov/profile/stephen-hudson
-  talk_num: 1
+  talk_num: 0
   photo: hudson.jpg
   bio: "Stephen Hudson is a Principal Software Engineer at Argonne National Laboratory, working on workflow systems for high-performance computing."
+
+- name: Logan Ward
+  role: Computational Scientist
+  institution:
+    name: Argonne National Laboratory
+    link: https://www.anl.gov
+    image: argonne.png
+  country: us
+  link: https://www.anl.gov/profile/logan-ward
+  talk_num: 1
+  photo: ward.jpg
+  bio: "Logan Ward is a Computational Scientist at in the Data Science and Learning Division of Argonne National Labatory, which he joined in 2019 after a post-doc at the University of Chicago. Logan’s PhD dissertation was in Materials Science and Engineering and focused on the development of AI algorithms for materials, so most of his research focuses on the intersection between AI, HPC, and physical sciences."
