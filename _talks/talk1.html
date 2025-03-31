@@ -2,7 +2,7 @@
 layout: page
 title: Steering Workflows with Artificial Intelligence
 authors: Logan Ward (Argonne National Lab)
-event_date: April 16, 2025 (Tentative)
+event_date: April 16, 2025
 times: 11am-11.30 PST / 2pm-2.30 EST / 20:00-20:30 CEST
 talk_number: 1
 <!-- video_playlist: https://www.youtube.com/watch?v=STy5HwEVj8k&list=PLAtmuqHExRvOzPOvJfSH8PwjbVJFyulCy -->
@@ -15,8 +15,13 @@ talk_number: 1
     <div class="row">
         <div class="col-lg-8 wg">
             <h2 class="mb-4">{{page.title}}</h2>
-            <span class="subheading">{{page.authors}}</span>
-            <p class="event-date">{{page.event_date}} {{page.times}} </p>
+<p class="text-center" style="font-size: 1.1em; font-weight: 500;">
+  {{ page.authors }}
+</p>
+
+<p class="text-center text-muted" style="font-size: 1em;">
+  {{ page.event_date }}<br />{{ page.times }}
+</p>
 
             <p class="mb-3" style="text-align: left;">
                 Computational workflows routinely execute tasks faster than a
