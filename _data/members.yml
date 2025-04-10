@@ -582,6 +582,11 @@
     first_name: Manuel
     institution: Barcelona Supercomputing Center 
 
+  - last_name: Liu
+    first_name: Peini
+    institution: Barcelona Supercomputing Center
+    link: https://scholar.google.com/citations?user=MIziCVsAAAAJ&hl
+
 
 - country: Sweden
   entries:
