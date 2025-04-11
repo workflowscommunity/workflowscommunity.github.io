@@ -11,10 +11,14 @@
 - name: Snakemake workflow catalog
   url: https://snakemake.github.io/snakemake-workflow-catalog/
   description: A comprehensive catalog of standards compliant, public, Snakemake workflows
-  icon: https://snakemake.github.io/snakemake-workflow-catalog/logo-snake.svg
+  icon: https://snakemake.github.io/snakemake-workflow-catalog/_static/logo-snake.svg
 
 - name: Dockstore
   url: https://dockstore.org/
   description: Sharing Docker Tools and Workflows for the Sciences
   icon: https://avatars.githubusercontent.com/u/25392449?s=200&v=4
 
+- name: WfInstances
+  url: https://github.com/wfcommons/wfinstances
+  description: Collection and curation of open access production workflow executions from various scientific applications. These workflow instances are described using the WfFormat format.
+  icon: https://wfcommons.org/favicon.ico
