@@ -47,30 +47,6 @@ permalink: /
             </div>
 
             <div class="col-lg-3">
-                <!-- BOF -->
-                <article>
-                    {% assign bofs = site.bofs | sort: 'order' | reverse %}
-                    {% for b in bofs limit: 1 %}
-                    <div class="post-img">
-                        <img src="https://isc-hpc.com/wp-content/uploads/2024/02/isc-logo.svg" alt="" class="img-fluid">
-                    </div>
-                    <p class="post-category">BOF SESSION</p>
-                    <h2 class="title">
-                        <a href="{{ b.url }}">{{ b.title }}</a>
-                    </h2>
-                    <div class="d-flex align-items-center">
-                        <div class="post-meta">
-                            <p class="post-author">{{ b.subtitle }}</p>
-                            <p class="post-date">
-                                <time datetime="2022-01-01">{{ b.event_date }}</time>
-                            </p>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </article>
-            </div>
-
-            <div class="col-lg-3">
                 <!-- COMMUNITY TALKS -->
                 <article>
                     {% assign talks = site.talks | sort: 'order' | reverse %}
@@ -93,6 +69,54 @@ permalink: /
                     {% endfor %}
                 </article>
             </div>
+
+            <div class="col-lg-3">
+                <!-- WORKSHOP -->
+                <article>
+                    {% assign workshops = site.workshops | sort: 'order' | reverse %}
+                    {% for w in workshops limit: 1 %}
+                    <div class="post-img">
+                        <img src="{{w.image}}" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">WORKSHOP</p>
+                    <h2 class="title">
+                        <a href="{{ w.url }}">{{ w.title }}</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author">{{ w.subtitle }}</p>
+                            <p class="post-date">
+                                <time datetime="2022-01-01">{{ w.event_date }}</time>
+                            </p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </article>
+            </div>
+            
+            <!-- <div class="col-lg-3">
+                <!- BOF ->
+                <article>
+                    {% assign bofs = site.bofs | sort: 'order' | reverse %}
+                    {% for b in bofs limit: 1 %}
+                    <div class="post-img">
+                        <img src="https://isc-hpc.com/wp-content/uploads/2024/02/isc-logo.svg" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">BOF SESSION</p>
+                    <h2 class="title">
+                        <a href="{{ b.url }}">{{ b.title }}</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author">{{ b.subtitle }}</p>
+                            <p class="post-date">
+                                <time datetime="2022-01-01">{{ b.event_date }}</time>
+                            </p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </article>
+            </div> -->
 
             <div class="col-lg-3">
                 <!-- YOUTUBE -->
