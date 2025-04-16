@@ -34,6 +34,9 @@ collections:
   working_groups:
     output: true
     permalink: /groups/:path/
+  workshops:
+    output: true
+    permalink: /workshops/:path/
 
 # SEO
 author:
