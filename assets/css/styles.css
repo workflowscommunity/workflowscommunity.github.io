@@ -1597,6 +1597,18 @@ section {background: var(--light-color);}
   color: var(--text-white-color);
 }
 
+.btn-outer {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 14px 20px;
+  transition: 0.3s;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
 .hero .btn-watch-video {
   font-size: 16px;
   transition: 0.5s;
