@@ -127,3 +127,8 @@
   founding: true
   image: ge-research.jpeg
   link: https://www.ge.com/research/
+
+- name: Energy Sciences Network 
+  founding: false
+  image: esnet.png
+  link: https://www.es.net/
