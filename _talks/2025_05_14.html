@@ -1,0 +1,56 @@
+---
+layout: page
+title: "Science Networks: Foundations for Multi-Site Workflows"
+authors: Eli Dart (Lawrence Berkeley National Laboratory)
+event_date: May 14, 2025
+times: 11am-11.30 PST / 2pm-2.30 EST / 20:00-20:30 CEST
+talk_number: 2
+---
+
+<div class="container" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-8 wg text-center">
+            <h2 class="mb-4">{{page.title}}</h2>
+            <p class="text-center" style="font-size: 1.1em; font-weight: 500;">
+                {{ page.authors }}
+            </p>
+
+            <p class="text-center text-muted" style="font-size: 1em;">
+                {{ page.event_date }}<br />{{ page.times }}
+            </p>
+
+            <p class="mb-3" style="text-align: left;">
+                Multi-site workflows rely on science networks for connectivity,
+                high-performance data transfer, high-performance streaming,
+                visualization, and related capabilities. This talk will describe
+                the role of science networks in enabling workflows which span
+                multiple sites, including interaction with data transfer and
+                security systems in site networks.
+            </p>
+            <a href="https://docs.google.com/forms/d/1XTJFRJ5Ivu2-Z-i9dnq2umv-OuE2UlVreea_dLawd2c"
+                target="_blank" class="btn btn-primary mt-3 py-3 px-5">Register</a>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="blog-sidbar">
+                <h4 class="mb-4">About the Authors</h4>
+                {% assign speaker = site.data.speakers | where: "talk_num", page.talk_number %}
+                {% for member in speaker %}
+                <a href="{{ member.link }}" target="_blank">
+                    <img src="/images/talks/{{ member.photo }}" alt="{{ member.name }}" class="img-fluid mb-3"
+                        style="width: 150px; height: 200px; object-fit: cover; border-radius: 0.5em;">
+                </a>
+                <p class="font-weight-bold">{{ member.name }}<br />
+                    <span class="text-muted">{{ member.role }}</span>
+                </p>
+                <p class="bio" style="font-size: 0.8em;">{{ member.bio }}</p>
+                <a href="{{ member.institution.link }}" target="_blank">
+                    <img src="/images/institutions/{{ member.institution.image }}" alt="{{ member.institution.name }}"
+                        style="max-height: 2em;" />
+                </a>
+                <hr />
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
