@@ -1,9 +1,9 @@
 - name: Stephen Hudson
   role: Principal Software Engineer
   institution:
-    name: Argonne National Laboratory
-    link: https://www.anl.gov
-    image: argonne.png
+    - name: Argonne National Laboratory
+      link: https://www.anl.gov
+      image: argonne.png
   country: us
   link: https://www.anl.gov/profile/stephen-hudson
   talk_num: 0
@@ -13,9 +13,9 @@
 - name: Logan Ward
   role: Computational Scientist
   institution:
-    name: Argonne National Laboratory
-    link: https://www.anl.gov
-    image: argonne.png
+    - name: Argonne National Laboratory
+      link: https://www.anl.gov
+      image: argonne.png
   country: us
   link: https://www.anl.gov/profile/logan-ward
   talk_num: 1
@@ -25,9 +25,12 @@
 - name: Eli Dart
   role: Computer Systems Engineer
   institution:
-    name: Lawrence Berkeley National Laboratory
-    link: https://www.lbl.gov/
-    image: lbnl.png
+    - name: Energy Sciences Network
+      link: https://www.es.net/
+      image: esnet.png
+    - name: Lawrence Berkeley National Laboratory
+      link: https://www.lbl.gov/
+      image: lbnl.png    
   country: us
   link: https://www.es.net/about/esnet-staff/science-engagement/dart
   talk_num: 2

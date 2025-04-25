@@ -44,10 +44,16 @@ talk_number: 2
                     <span class="text-muted">{{ member.role }}</span>
                 </p>
                 <p class="bio" style="font-size: 0.8em;">{{ member.bio }}</p>
-                <a href="{{ member.institution.link }}" target="_blank">
-                    <img src="/images/institutions/{{ member.institution.image }}" alt="{{ member.institution.name }}"
-                        style="max-height: 2em;" />
-                </a>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    {% for inst in member.institution %}
+                      <!-- <a href="{{ inst.link }}" target="_blank" style="{% if forloop.last %}margin-left: auto;{% endif %}"> -->
+                      <!-- Lift second logo - one-off as they dont align -->
+                      <a href="{{ inst.link }}" target="_blank" style="{% if forloop.last %}margin-left: auto; position: relative; top: -3px;{% endif %}">
+                        <img src="/images/institutions/{{ inst.image }}" alt="{{ inst.name }}"
+                          style="max-height: 2em; object-fit: contain; margin-right: 0.5em;" />
+                      </a>
+                    {% endfor %}
+                  </div>
                 <hr />
                 {% endfor %}
             </div>
