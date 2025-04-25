@@ -21,3 +21,15 @@
   talk_num: 1
   photo: ward.jpg
   bio: "Logan Ward is a Computational Scientist in the Data Science and Learning Division of Argonne National Laboratory, which he joined in 2019 after a post-doc at the University of Chicago. Logan’s PhD dissertation was in Materials Science and Engineering and focused on the development of AI algorithms for materials, so most of his research focuses on the intersection between AI, HPC, and physical sciences."
+
+- name: Eli Dart
+  role: Computer Systems Engineer
+  institution:
+    name: Lawrence Berkeley National Laboratory
+    link: https://www.lbl.gov/
+    image: lbnl.png
+  country: us
+  link: https://www.es.net/about/esnet-staff/science-engagement/dart
+  talk_num: 2
+  photo: dart.jpg
+  bio: "Eli Dart is a network engineer in ESnet’s Science Engagement Group, focused on advancing data-intensive science through high-performance networking. A lead advocate of the Science DMZ model, he collaborates with DOE labs, facilities, and universities to build science-optimized infrastructure. With over 20 years of experience in network architecture and operations, Eli contributed to the design of ESnet4 and ESnet5, and previously was a lead network engineer at NERSC. He also played a key role in SCinet from 1997 to 2010. Eli holds a B.S. in Computer Science from Oregon State University College of Engineering."
