@@ -1,148 +1,156 @@
-# - organization: workflowscommunity
+# - type: github
+#   organization: workflowscommunity
 #   repository: workflow-system-test-repo
-#   type: github
 
-- organization: Parsl
+- type: github
+  organization: Parsl
   repository: parsl
-  type: github
 
-- organization: nextflow-io
+- type: github
+  organization: nextflow-io
   repository: nextflow
-  type: github
   metadata: docs
 
-- organization: pegasus-isi
+- type: github
+  organization: pegasus-isi
   repository: pegasus
-  type: github
 
-- organization: cooperative-computing-lab
+- type: github
+  organization: cooperative-computing-lab
   repository: cctools
-  type: github
   metadata: makeflow/.wci.yml
   name: makeflow
 
-- organization: cooperative-computing-lab
+- type: github
+  organization: cooperative-computing-lab
   repository: cctools
-  type: github
   metadata: taskvine/.wci.yml
   name: taskvine
 
-- organization: bsc-wdc
+- type: github
+  organization: bsc-wdc
   repository: compss
-  type: github
 
-- organization: swift-lang
+- type: github
+  organization: swift-lang
   repository: swift-t
-  type: github
 
-- organization: radical-cybertools
+- type: github
+  organization: radical-cybertools
   repository: radical.entk
-  type: github
 
-- organization: LLNL
+- type: github
+  organization: LLNL
   repository: merlin
-  type: github
 
-- organization: LLNL
+- type: github
+  organization: LLNL
   repository: maestrowf
-  type: github
 
-- organization: galaxyproject
+- type: github
+  organization: galaxyproject
   repository: galaxy
-  type: github
 
-- organization: snakemake
+- type: github
+  organization: snakemake
   repository: snakemake
-  type: github
 
-- organization: materialsproject
+- type: github
+  organization: materialsproject
   repository: fireworks
-  type: github
 
-- organization: materialsproject
+- type: github
+  organization: materialsproject
   repository: jobflow
-  type: github
 
-- organization: broadinstitute
+- type: github
+  organization: broadinstitute
   repository: cromwell
-  type: github
 
-- organization: dask
+- type: github
+  organization: dask
   repository: dask
-  type: github
 
-- organization: mlflow
+- type: github
+  organization: mlflow
   repository: mlflow
-  type: github
 
-- organization: common-workflow-language
+- type: github
+  organization: common-workflow-language
   repository: common-workflow-language
-  type: github
 
-- organization: esipfed
+- type: github
+  organization: esipfed
   repository: geoweaver
-  type: github
 
-- organization: Apollo-Core
+- type: github
+  organization: Apollo-Core
   repository: EE-Demo
-  type: github
 
-- organization: aiidateam
+- type: github
+  organization: aiidateam
   repository: aiida-core
-  type: github
   metadata: docs
 
-- organization: alpha-unito
+- type: github
+  organization: alpha-unito
   repository: streamflow
-  type: github
   metadata: docs
 
-- organization: scipipe
+- type: github
+  organization: scipipe
   repository: scipipe
-  type: github
   metadata: docs
 
-- organization: Libensemble
+- type: github
+  organization: Libensemble
   repository: libensemble
-  type: github
 
-- organization: AgnostiqHQ
+- type: github
+  organization: AgnostiqHQ
   repository: covalent
-  type: github
 
-- organization: watts-dev
+- type: github
+  organization: watts-dev
   repository: watts
-  type: github
 
-- organization: CrayLabs
+- type: github
+  organization: CrayLabs
   repository: SmartSim
-  type: github
 
-- organization: pyiron
+- type: github
+  organization: pyiron
   repository: pyiron_base
-  type: github
 
-- organization: glotzerlab
+- type: github
+  organization: glotzerlab
   repository: signac-flow
-  type: github
 
-- organization: nipy
+- type: github
+  organization: nipy
   repository: nipype
-  type: github
- 
-# - organization: icui
+
+# - type: github
+#   organization: icui
 #   repository: nnodes
-#   type: github
 
-# - organization: PrefectHQ
+# - type: github
+#   organization: PrefectHQ
 #   repository: prefect
-#   type: github
 
-- organization: DagOnStar
+- type: github
+  organization: DagOnStar
   repository: dagonstar
-  type: github
   metadata: docs
 
-- organization: cylc
+- type: github
+  organization: cylc
   repository: cylc-flow 
-  type: github
+
+#- type: gitlab
+#  namespace: workflow/ewoks
+#  project: ewoks
+#  gitlab_url: https://gitlab.esrf.fr
+
+- type: pypi
+  distribution: ewoks
