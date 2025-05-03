@@ -18,6 +18,7 @@ jobs:
           JEKYLL_TOKEN: ${{ secrets.JEKYLL_PAT }}
         run: |
           rm -rf _systems/*
+          python3 -m pip install -r scripts/requirements.txt
           python3 scripts/process_systems.py
 
       - uses: actions/cache@v4
