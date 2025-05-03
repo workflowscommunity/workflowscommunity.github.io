@@ -6,6 +6,7 @@
 import datetime
 import os
 from pathlib import Path
+from pprint import pprint
 from string import Template
 from typing import Literal
 
@@ -364,12 +365,16 @@ def _process_pypi_system(definition: PyPIDefinition) -> SystemMetadata:
         language="Python",
         twitter="",
         youtube="",
-        doc_general=info["project_urls"]["Documentation"],
+        doc_general="",
         doc_installation="",
         doc_tutorial="",
         execution_environment="",
         wci_metadata="false",
     )
+
+    # Documentation
+    doc = {"general": info["project_urls"]["Documentation"]}
+    _render_doc_elements(model, doc)
 
     return model
 
@@ -415,23 +420,7 @@ def _apply_wci_metadata(data, model):
 
     # Documentation
     doc = data.get("documentation", {})
-    doc_elements = {
-        "doc_general": ("general", "fas fa-book color-2", "Docs"),
-        "doc_installation": ("installation", "fas fa-download color-3", "Install"),
-        "doc_tutorial": ("tutorial", "fas fa-user-cog color-1", "Tutorial"),
-    }
-
-    for key, (doc_key, icon_class, heading) in doc_elements.items():
-        if doc_key in doc:
-            value = (
-                f'<a href="{doc[doc_key]}" class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate" target="_blank">'
-                f'<div class="media block-6 services d-block text-center">'
-                f'<div class="d-flex justify-content-center">'
-                f'<div class="icon d-flex justify-content-center mb-3">'
-                f'<span class="{icon_class}"></span></div></div>'
-                f'<div class="media-body p-2 mt-3"><h3 class="heading">{heading}</h3></div></div></a>'
-            )
-            setattr(model, key, value)
+    _render_doc_elements(model, doc)
 
     # Execution Environment
     ee = data.get("execution_environment", {})
@@ -520,10 +509,30 @@ def _parse_tags(keywords):
     return tags
 
 
+def _render_doc_elements(model: SystemMetadata, data: dict):
+    doc_elements = {
+        "doc_general": ("general", "fas fa-book color-2", "Docs"),
+        "doc_installation": ("installation", "fas fa-download color-3", "Install"),
+        "doc_tutorial": ("tutorial", "fas fa-user-cog color-1", "Tutorial"),
+    }
+    for key, (doc_key, icon_class, heading) in doc_elements.items():
+        if doc_key in data:
+            value = (
+                f'<a href="{data[doc_key]}" class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate" target="_blank">'
+                f'<div class="media block-6 services d-block text-center">'
+                f'<div class="d-flex justify-content-center">'
+                f'<div class="icon d-flex justify-content-center mb-3">'
+                f'<span class="{icon_class}"></span></div></div>'
+                f'<div class="media-body p-2 mt-3"><h3 class="heading">{heading}</h3></div></div></a>'
+            )
+            setattr(model, key, value)
+
+
 def _save_system_html(model: SystemMetadata, template_path, output_path):
     with open(template_path) as f:
         template = Template(f.read())
         data = model.model_dump(mode="json")
+        pprint(data)
         contents = template.substitute(data)
 
     with open(output_path, "w") as f:
