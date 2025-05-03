@@ -323,7 +323,9 @@ def _process_pypi_system(definition: PyPIDefinition) -> SystemMetadata:
     repo_data = r.json()
     info = repo_data["info"]
 
-    now = datetime.datetime.now(datetime.timezone.utc)
+    release_data = repo_data["releases"][info["version"]][-1]
+    upload_time = datetime.datetime.fromisoformat(release_data["upload_time_iso_8601"])
+    release_date = upload_time.strftime("%d %b %Y")
 
     topics = _parse_topics(repo_data.get("keywords", []))
     tags = _parse_tags(repo_data.get("keywords", []))
@@ -343,12 +345,12 @@ def _process_pypi_system(definition: PyPIDefinition) -> SystemMetadata:
         contributors_list="",
         release="",
         release_name=info["version"],
-        release_date="",
+        release_date=release_date,
         release_url=info["release_url"],
-        year=now.strftime("%Y"),
-        month=now.strftime("%b"),
-        monthn=now.strftime("%m"),
-        day=now.strftime("%d"),
+        year=upload_time.strftime("%Y"),
+        month=upload_time.strftime("%b"),
+        monthn=upload_time.strftime("%m"),
+        day=upload_time.strftime("%d"),
         tags=tags,
         topics=topics,
         avatar="https://pypi.org/static/images/logo-small.95de8436.svg",
