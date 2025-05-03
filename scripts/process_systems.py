@@ -333,7 +333,7 @@ def _process_pypi_system(definition: PyPIDefinition) -> SystemMetadata:
     description = info["description"]
     description_content_type = info.get("description_content_type", "")
     if "markdown" in description_content_type:
-        description = markdown.markdown(description)
+        description = markdown.markdown(description, extensions=["fenced_code"])
     elif "html" not in description_content_type:
         description = f"<p>{description}</p>"
 
