@@ -32,7 +32,7 @@ wci_metadata: $wci_metadata
     </div>
 
     <div class="col-md-12 ftco-animate mb-5">
-        <p>$description</p>
+        $description
     </div>
 </div>
 

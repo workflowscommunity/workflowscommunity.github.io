@@ -9,6 +9,7 @@ from pathlib import Path
 from string import Template
 from typing import Literal
 
+import markdown
 import requests
 import yaml
 from pydantic import BaseModel
@@ -328,11 +329,18 @@ def _process_pypi_system(definition: PyPIDefinition) -> SystemMetadata:
     topics = _parse_topics(repo_data.get("keywords", []))
     tags = _parse_tags(repo_data.get("keywords", []))
 
+    description = info["description"]
+    description_content_type = info.get("description_content_type", "")
+    if "markdown" in description_content_type:
+        description = markdown.markdown(description)
+    elif "html" not in description_content_type:
+        description = f"<p>{description}</p>"
+
     model = SystemMetadata(
         name=definition.distribution,
         title=info["name"],
         subtitle=info["summary"],
-        description=info["description"],
+        description=description,
         repository_url=info["project_urls"]["Repository"],
         default_branch="main",
         license=info["license"] or "No license available",
