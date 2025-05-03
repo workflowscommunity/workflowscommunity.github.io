@@ -154,3 +154,5 @@
 
 - type: pypi
   distribution: ewoks
+  avatar: https://ewoks.esrf.fr/en/latest/_static/ewoks.png
+  website: https://ewoks.esrf.fr/
