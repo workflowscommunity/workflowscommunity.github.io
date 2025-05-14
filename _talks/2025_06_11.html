@@ -1,12 +1,13 @@
 ---
 layout: page
-title: "Science Networks: Foundations for Multi-Site Workflows"
-authors: Eli Dart (Energy Sciences Network)
-event_date: May 14, 2025
+title: "Automating Scientific Insights at the Advanced Photon Source"
+subtitle: "High-Performance Workflows for Analyzing Experimental Data"
+authors: Hannah Parraga (Argonne National Laboratory)
+event_date: June 11, 2025
 times: 11am-11.30 PST / 2pm-2.30 EST / 20:00-20:30 CEST
-talk_number: 2
-given: true
-image: /images/talks/dart-banner.jpg
+talk_number: 3
+given: false
+image: /images/talks/parraga-banner.jpg
 ---
 
 <div class="container" data-aos="fade-up" style="padding: 3em 0;">
@@ -22,12 +23,15 @@ image: /images/talks/dart-banner.jpg
             </p>
 
             <p class="mb-3" style="text-align: left;">
-                Multi-site workflows rely on science networks for connectivity,
-                high-performance data transfer, high-performance streaming,
-                visualization, and related capabilities. This talk will describe
-                the role of science networks in enabling workflows which span
-                multiple sites, including interaction with data transfer and
-                security systems in site networks.
+                This talk will explore how reusable workflows developed at the
+                Advanced Photon Source simplify the analysis of experimental data
+                by harnessing the computational power of HPC systems at ALCF and
+                NERSC. By automating data processing and integrating these
+                resources, the workflows provide an accessible and efficient
+                platform for researchers. These tools enhance productivity
+                and facilitate collaboration across various beamlines, enabling
+                researchers to focus on scientific discovery while overcoming
+                the challenges of complex data analysis.
             </p>
             <a href="https://docs.google.com/forms/d/1XTJFRJ5Ivu2-Z-i9dnq2umv-OuE2UlVreea_dLawd2c"
                 target="_blank" class="btn btn-primary mt-3 py-3 px-5">Register</a>
@@ -48,9 +52,7 @@ image: /images/talks/dart-banner.jpg
                 <p class="bio" style="font-size: 0.8em;">{{ member.bio }}</p>
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     {% for inst in member.institution %}
-                      <!-- <a href="{{ inst.link }}" target="_blank" style="{% if forloop.last %}margin-left: auto;{% endif %}"> -->
-                      <!-- Lift second logo - one-off as they dont align -->
-                      <a href="{{ inst.link }}" target="_blank" style="{% if forloop.last %}margin-left: auto; position: relative; top: -4px;{% endif %}">
+                      <a href="{{ inst.link }}" target="_blank" style="{% if forloop.last %}margin-left: auto;{% endif %}">
                         <img src="/images/institutions/{{ inst.image }}" alt="{{ inst.name }}"
                           style="max-height: 2em; object-fit: contain; margin-right: 0.5em;" />
                       </a>

@@ -36,3 +36,16 @@
   talk_num: 2
   photo: dart.jpg
   bio: "Eli has over 20 years of experience in network architecture, design, engineering, performance, and security in scientific and research environments. His primary professional interests are high-performance architectures and effective operational models for networks that support scientific missions, and building collaborations to bring about the effective use of high-performance networks by science projects."
+
+- name: Hannah Parraga
+  role: Software Engineering Specialist
+  institution:
+    - name: Argonne National Laboratory
+      link: https://www.anl.gov
+      image: anl_aps.png
+  country: us
+  link: https://www.anl.gov/profile/hannah-parraga
+  talk_num: 3
+  photo: parraga.jpg
+  bio: "Hannah Parraga is a Software Engineering Specialist at Argonne National Laboratory. As a part of the Scientific Software and Data Management Group at the Advanced Photon Source since 2021, her interests include developing robust and reliable software solutions for scientific research such as automated data processing, secure data access, and intuitive user interfaces."
+  
