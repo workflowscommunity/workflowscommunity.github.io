@@ -1262,6 +1262,11 @@
     first_name: Stefan
     institution: Parallel Works Inc.
 
+  - last_name: Shin
+    first_name: Woong
+    institution: Oak Ridge National Laboratory
+    link: https://woongshin.com
+
 # - last_name:
 #   first_name:
 #   institution: 
