@@ -1,6 +1,6 @@
 ---
 layout: working_groups
-title: "Scientific Workflow Systems Terminology "
+title: "Scientific Workflow Systems Terminology"
 description: Develop and maintain a standardized terminology that enables researchers to systematically characterize, compare, and select workflow management systems based on their specific computational needs and infrastructure requirements.
 status: Active
 members:

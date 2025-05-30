@@ -1,0 +1,31 @@
+---
+layout: page
+title: Terminology
+permalink: /terminology
+---
+
+<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
+    <h4>A <strong style="color: #db8e1b">Terminology </strong> for Scientific Workflow Systems</h4>
+    <p>A Community-Driven Framework for Systematically Characterizing and Comparing Workflow Management Systems.</p>
+</div>
+
+<section id="recent-posts" class="recent-posts sections-bg">
+    <div class="container" data-aos="fade-up mb-5">
+        <div class="row gy-4 mb-5">
+            <p>This terminology represents a collaborative effort by the <a href="/groups/terminology">Scientific Workflow Systems Terminology Working Group</a> to create a standardized framework for understanding and comparing the diverse landscape of workflow management systems (WMSs). Developed through extensive community engagement involving workflow system developers, domain scientists, and practitioners from the Workflows Community Initiative. Rather than attempting to rank or recommend specific systems, this terminology provides researchers with objective criteria to systematically evaluate and select workflow management systems that best match their computational requirements, infrastructure constraints, and scientific objectives. By establishing a common vocabulary, we aim to move beyond subjective system selection based solely on familiarity or reputation, enabling more informed, technically-grounded decisions in the scientific computing community.</p>
+            <p>This framework organizes workflow systems along five key axes:</p>
+            <ul style="list-style: disc; padding-left: 3em; margin: 0;">
+                <li><strong>Workflow Characteristics:</strong> This axis examines fundamental organizational aspects that impact how workflows operate and adapt. Specifically, it examines how execution is driven (by tasks or data), the level of complexity of individual components, the nature of dependencies between these components, and the ability to modify execution paths at runtime. These structural elements significantly influence how WMSs optimize resource use and performance.</li>
+                <li><strong>Composition:</strong> This axis addresses how workflows are defined, organized, and configured by WMSs. It explores the methods used to describe workflows, the level of detail required in these descriptions, and how complex workflows can be shaped from simpler components. This axis helps to understand how accessible and flexible different WMSs are for users with varying technical backgrounds.</li>
+                <li><strong>Orchestration:</strong> This axis covers the implementation and execution management approaches for workflow components. It analyzes different methods for launching and coordinating tasks, from direct execution to more sophisticated approaches that leverage distributed resources, event-based triggers, or cloud services. These orchestration strategies determine how efficiently workflows use available computing infrastructure.</li>
+                <li><strong>Data Management:</strong> This axis focuses on how data is handled throughout the workflow lifecycle. It characterizes methods for moving data between workflow components, approaches to storing data at different stages, and techniques for optimizing data access patterns. These data management strategies significantly affect workflow performance, especially for data-intensive applications.</li>
+                <li><strong>Metadata Capture:</strong> This axis explores additional contextual information collected during workflow execution. It covers methods for tracking workflow execution state, documenting provenance, monitoring performance, and detecting anomalies. These capabilities ensure that workflows can be reliably executed, optimized, debugged, and reproduced.</li>
+            </ul>
+        </div>
+
+        <div class="row gy-4 mb-5">
+            <h4>Workflow Characteristics</h4>
+            <img src="/images/terminology/workflow_characteristics.svg"/>
+        </div>
+    </div>
+</section>
