@@ -27,6 +27,7 @@ image: /images/terminology/terminology.png
         </div>
 
         <div class="row gy-4 mb-5">
+            <a name="workflow-characteristics"></a>
             <h4>Workflow Characteristics</h4>
             <p>This axis examines fundamental organizational aspects that impact how workflows operate and adapt.
                 Specifically, it examines how execution is driven (by tasks or data), the level of complexity of
@@ -100,6 +101,7 @@ image: /images/terminology/terminology.png
         </div>
 
         <div class="row gy-4 mb-5">
+            <a name="composition"></a>
             <h4>Composition</h4>
             <p>This axis addresses how workflows are defined, organized, and configured by WMSs. It explores the methods
                 used to describe workflows, the level of detail required in these descriptions, and how complex
@@ -161,6 +163,7 @@ image: /images/terminology/terminology.png
         </div>
 
         <div class="row gy-4 mb-5">
+            <a name="orchestration"></a>
             <h4>Orchestration</h4>
             <p>This axis covers the implementation and execution management approaches for workflow components. It
                 analyzes different methods for launching and coordinating tasks, from direct execution to more
@@ -209,12 +212,13 @@ image: /images/terminology/terminology.png
         </div>
 
         <div class="row gy-4 mb-5">
+            <a name="data-management"></a>
             <h4>Data Management</h4>
             <p>This axis focuses on how data is handled throughout the workflow lifecycle. It characterizes methods for
                 moving data between workflow components, approaches to storing data at different stages, and techniques
                 for optimizing data access patterns. These data management strategies significantly affect workflow
                 performance, especially for data-intensive applications.</p>
-            <!-- <img src="/images/terminology/workflow_characteristics.svg"/> -->
+            <img src="/images/terminology/data_management.svg" style="max-width: 700px;" />
             <ul style="list-style: disc; padding-left: 2em;">
                 <li><strong>Granularity</strong>
                     <ul style="list-style: disc; padding-left: 2em;">
@@ -239,24 +243,6 @@ image: /images/terminology/terminology.png
                             a workflow component that produces intermediate data will write them into a file(s) on a
                             storage system. In contrast, a workflow component that consumes intermediate data will read
                             it from file(s).
-                            <ul style="list-style: disc; padding-left: 2em;">
-                                <li><strong>Local:</strong> When workflow components are co-located on the same compute
-                                    node, the workflow system can leverage the existence of a local file system.</li>
-                                <li><strong>Shared:</strong> When components are allocated to different nodes of the
-                                    same compute cluster or to different clusters of the same computing facility, it
-                                    will have to rely on a shared file system. Commonly used in collaborative or
-                                    high-performance computing environments, shared file systems correspond to a
-                                    centralized model where data is accessible by multiple systems or nodes
-                                    simultaneously.</li>
-                                <li><strong>Distributed:</strong> In the extreme case where the execution of a workflow
-                                    is distributed over multiple computing facilities, this approach can leverage a
-                                    distributed storage space. This involves managing and storing data across multiple
-                                    local and/or remote systems, enabling scalability, load balancing, resilience, and
-                                    flexibility.</li>
-                                <li><strong>Replicated:</strong> Another common practice in distributed and shared
-                                    systems targeted by WMSs is the use of replicated storage, which focuses on creating
-                                    redundant copies of data to improve reliability, availability, and resilience.</li>
-                            </ul>
                         </li>
                         <li><strong>Streaming:</strong> An alternate approach is to directly stream intermediate data
                             between components.
@@ -269,11 +255,35 @@ image: /images/terminology/terminology.png
                             </ul>
                         </li>
                     </ul>
+                <li><strong>Storage</strong></li>
+                <ul style="list-style: disc; padding-left: 2em;">
+                    <li><strong>File System</strong></li>
+                    <ul style="list-style: disc; padding-left: 2em;">
+                        <li><strong>Local:</strong> When workflow components are co-located on the same compute
+                            node, the workflow system can leverage the existence of a local file system.</li>
+                        <li><strong>Shared:</strong> When components are allocated to different nodes of the
+                            same compute cluster or to different clusters of the same computing facility, it
+                            will have to rely on a shared file system. Commonly used in collaborative or
+                            high-performance computing environments, shared file systems correspond to a
+                            centralized model where data is accessible by multiple systems or nodes
+                            simultaneously.</li>
+                    </ul>
+                    <li><strong>Distributed:</strong> In the extreme case where the execution of a workflow
+                        is distributed over multiple computing facilities, this approach can leverage a
+                        distributed storage space. This involves managing and storing data across multiple
+                        local and/or remote systems, enabling scalability, load balancing, resilience, and
+                        flexibility.</li>
+                    <li><strong>Replicated:</strong> Another common practice in distributed and shared
+                        systems targeted by WMSs is the use of replicated storage, which focuses on creating
+                        redundant copies of data to improve reliability, availability, and resilience.</li>
+                </ul>
+
                 </li>
             </ul>
         </div>
 
         <div class="row gy-4 mb-5">
+            <a name="metadata-capture"></a>
             <h4>Metadata Capture</h4>
             <p>This axis explores additional contextual information collected during workflow execution. It covers
                 methods for tracking workflow execution state, documenting provenance, monitoring performance, and
