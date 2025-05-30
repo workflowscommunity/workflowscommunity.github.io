@@ -26,14 +26,14 @@ layout: page
                 <hr />
                 <h4>Members</h4>
                 {% for member in page.members %}
+                {% if member.role %}
+                <span style="color: #aa6821; border: 1px solid #aa6821; font-size: 0.6em; border-radius: 0.5em; padding: 0.25em 0.5em;">{{member.role}}</span>
+                {% endif %}
                 {% if member.link %}
                 <a href="{{member.link}}" target="_blank">{{member.name}}</a>
                 {% else %}
                 {{member.name}}
                 {% endif %}
-                {% if member.role %}&nbsp;&nbsp;<span
-                    style="background-color: #aa6821; color: #fff; font-size: 0.6em; border-radius: 0.5em; padding: 0.5em 1em;">{{member.role}}</span>{%
-                endif %}
                 <br />
                 {% endfor %}
             </div>

@@ -14,7 +14,7 @@ permalink: /groups
     <div class="container" data-aos="fade-up">
         <div data-aos="fade-up" data-aos-delay="100">
             <!-- WCI Groups -->
-            {% assign groups = site.working_groups | where:"layout","working_groups" | sort: "name" %}
+            {% assign groups = site.working_groups | where:"layout","working_groups" | sort: "title" %}
             {% for group in groups %}
             {% assign status_color = "color-2" %}
             {% if group.status == "Establishing" %}
