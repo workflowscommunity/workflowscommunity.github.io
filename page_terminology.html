@@ -13,38 +13,301 @@ image: /images/terminology/terminology.png
 <section id="recent-posts" class="recent-posts sections-bg">
     <div class="container" data-aos="fade-up mb-5">
         <div class="row gy-4 mb-5">
-            <p>This terminology represents a collaborative effort by the <a href="/groups/terminology">Scientific Workflow Systems Terminology Working Group</a> to create a standardized framework for understanding and comparing the diverse landscape of workflow management systems (WMSs). Developed through extensive community engagement involving workflow system developers, domain scientists, and practitioners from the Workflows Community Initiative. Rather than attempting to rank or recommend specific systems, this terminology provides researchers with objective criteria to systematically evaluate and select workflow management systems that best match their computational requirements, infrastructure constraints, and scientific objectives. By establishing a common vocabulary, we aim to move beyond subjective system selection based solely on familiarity or reputation, enabling more informed, technically-grounded decisions in the scientific computing community.</p>
+            <p>This terminology represents a collaborative effort by the <a href="/groups/terminology">Scientific
+                    Workflow Systems Terminology Working Group</a> to create a standardized framework for understanding
+                and comparing the diverse landscape of workflow management systems (WMSs). Developed through extensive
+                community engagement involving workflow system developers, domain scientists, and practitioners from the
+                Workflows Community Initiative. Rather than attempting to rank or recommend specific systems, this
+                terminology provides researchers with objective criteria to systematically evaluate and select workflow
+                management systems that best match their computational requirements, infrastructure constraints, and
+                scientific objectives. By establishing a common vocabulary, we aim to move beyond subjective system
+                selection based solely on familiarity or reputation, enabling more informed, technically-grounded
+                decisions in the scientific computing community.</p>
             <p>This framework organizes workflow systems along five key axes discussed below.</p>
         </div>
 
         <div class="row gy-4 mb-5">
             <h4>Workflow Characteristics</h4>
-            <p>This axis examines fundamental organizational aspects that impact how workflows operate and adapt. Specifically, it examines how execution is driven (by tasks or data), the level of complexity of individual components, the nature of dependencies between these components, and the ability to modify execution paths at runtime. These structural elements significantly influence how WMSs optimize resource use and performance.</p>
-            <img src="/images/terminology/workflow_characteristics.svg"/>
+            <p>This axis examines fundamental organizational aspects that impact how workflows operate and adapt.
+                Specifically, it examines how execution is driven (by tasks or data), the level of complexity of
+                individual components, the nature of dependencies between these components, and the ability to modify
+                execution paths at runtime. These structural elements significantly influence how WMSs optimize resource
+                use and performance.</p>
+            <img src="/images/terminology/workflow_characteristics.svg" />
+            <ul style="list-style: disc; padding-left: 2em;">
+                <li><strong>Flow</strong>
+                    <ul style="list-style: disc; padding-left: 2em;">
+                        <li><strong>Task:</strong> When workflow components receive inputs, process them, generate
+                            outputs, and then terminate, the workflow structure is defined by the composition of these
+                            tasks. WMSs are responsible for orchestrating their execution, respecting their flow and
+                            control dependencies.</li>
+                        <li><strong>Iterative:</strong> The different tasks that make up a workflow can also be executed
+                            multiple times in an iterative way. At each iteration, tasks are executed, terminated, and
+                            then wait to be invoked again.</li>
+                        <li><strong>Data:</strong> The structure and execution of the workflow can also be driven by the
+                            data flowing through the workflow components. These components are data operators that
+                            remain alive while there is data to process.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Granularity</strong>
+                    <ul style="list-style: disc; padding-left: 2em;">
+                        <li><strong>Functions:</strong> Some workflows can compose function calls to perform complex
+                            processing tasks. To some extent, a script or a program can be seen as a workflow and a
+                            runtime system as a workflow system.</li>
+                        <li><strong>Standalone executables:</strong> The most common definition of a workflow is a
+                            composition of standalone executables, which aggregate multiple function calls to perform
+                            complex computations on a set of inputs and produce a set of outputs.</li>
+                        <li><strong>Sub-workflows:</strong> With the increase in scale and complexity of computational
+                            problems, it is now common to express workflows as a hierarchical and modular composition of
+                            sub-workflows.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Coupling</strong>
+                    <ul style="list-style: disc; padding-left: 2em;">
+                        <li><strong>Tight:</strong> The tight coupling of some tasks indicates that these tasks must be
+                            executed concurrently, being co-located on the same computing resources or running on
+                            different sets of processors. This is often caused by periodic data exchanges between tasks
+                            while they run.</li>
+                        <li><strong>Loose:</strong> Conversely, a loose coupling of tasks does not impose any constraint
+                            on the concurrent execution of tasks, giving more flexibility to the WMS when scheduling the
+                            workflow.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Dynamicity</strong>
+                    <ul style="list-style: disc; padding-left: 2em;">
+                        <li><strong>Branches:</strong> Dynamic workflows can comprise several conditional branches that
+                            are activated or not depending on the realization of a predefined condition or triggered by
+                            an external event. Such conditions can be related to changes observed in the processed
+                            datasets, changes in resource status or availability, or time-related events.</li>
+                        <li><strong>Runtime interventions:</strong> A second type of dynamic behavior found in workflows
+                            is when a runtime intervention is needed. In that case, the workflow system gives the
+                            control back to the user who started the workflow or to an automated external decision
+                            process. Such interventions can modify the initial execution plan in different ways.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Domain</strong>
+                    <ul style="list-style: disc; padding-left: 2em;">
+                        <li><strong>Specific:</strong> Some systems are deeply rooted in a scientific community and thus
+                            mainly target domain-specific workflows.</li>
+                        <li><strong>Agnostic:</strong> Others are more application-agnostic.</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
         <div class="row gy-4 mb-5">
             <h4>Composition</h4>
-            <p>This axis addresses how workflows are defined, organized, and configured by WMSs. It explores the methods used to describe workflows, the level of detail required in these descriptions, and how complex workflows can be shaped from simpler components. This axis helps to understand how accessible and flexible different WMSs are for users with varying technical backgrounds.</p>
-            <!-- <img src="/images/terminology/workflow_characteristics.svg"/> -->
+            <p>This axis addresses how workflows are defined, organized, and configured by WMSs. It explores the methods
+                used to describe workflows, the level of detail required in these descriptions, and how complex
+                workflows can be shaped from simpler components. This axis helps to understand how accessible and
+                flexible different WMSs are for users with varying technical backgrounds.</p>
+            <img src="/images/terminology/composition.svg" style="max-width: 700px;" />
+            <ul style="list-style: disc; padding-left: 2em;">
+                <li><strong>Description Method</strong>
+                    <ul style="list-style: disc; padding-left: 2em;">
+                        <li><strong>Schema:</strong> Refers to the case where the workflow is described in a text file,
+                            using a specific format (e.g., XML, JSON, YAML, or a domain-specific language) and syntax.
+                            <ul style="list-style: disc; padding-left: 2em;">
+                                <li><strong>Ad-hoc:</strong> The syntax used by a WMS is ad-hoc, meaning that it can
+                                    only be understood by this particular WMS.</li>
+                                <li><strong>Standard:</strong> Part of a common standard shared by multiple WMSs, such
+                                    as the Common Workflow Language (CWL), the Interoperable Workflow Intermediate
+                                    Representation (IWIR), or WfFormat.</li>
+                            </ul>
+                        </li>
+                        <li><strong>API:</strong> Includes WMSs that expose an API to describe workflows. This API
+                            builds on or extends one or more popular programming languages (e.g., Python, C++) or a text
+                            templating engine (e.g., jinja) to leverage loops and conditional statements and allow users
+                            to describe their workflows in a more compact and flexible way.</li>
+                        <li><strong>GUI:</strong> Corresponds to WMSs that rely on a graphical user interface.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Level of Abstraction</strong>
+                    <ul style="list-style: disc; padding-left: 2em;">
+                        <li><strong>Abstract:</strong> A high-level abstract composition will only focus on describing
+                            the logical structure of the task graph, a generic description of the data flowing through
+                            the workflow, and the amount of resources required by each component. This abstract
+                            description is generally independent of a specific instance of the workflow and of a
+                            specific target computing and storage infrastructure.</li>
+                        <li><strong>Intermediate:</strong> Some systems have an intermediate-level abstract composition.
+                            They allow for a high-level workflow description while requiring some execution details from
+                            the users. Systems with intermediate-level abstraction provide users with a balance between
+                            automation and manual fine-tuning.</li>
+                        <li><strong>Concrete:</strong> A concrete composition is more closely related to an instance and
+                            an infrastructure. All parameters are specified in the description, and the workflow can be
+                            deployed and run directly from it.</li>
+                        <li><strong>Implicit:</strong> When an API is used to describe a workflow, the composition is
+                            implicit as the workflow's structure is derived from the composition of the different
+                            function calls made by the user, or from metadata attached to a dataset to process.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Modularity</strong>
+                    <ul style="list-style: disc; padding-left: 2em;">
+                        <li><strong>Flat:</strong> A flat description of a set of components to a more hierarchical
+                            description that enables modular and scalable design.</li>
+                        <li><strong>Hierarchical:</strong> A more hierarchical description that enables modular and
+                            scalable design. This shift allows for better management of large-scale applications, where
+                            individual sub-workflows can be developed, tested, and optimized independently before
+                            integration.</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
         <div class="row gy-4 mb-5">
             <h4>Orchestration</h4>
-            <p>This axis covers the implementation and execution management approaches for workflow components. It analyzes different methods for launching and coordinating tasks, from direct execution to more sophisticated approaches that leverage distributed resources, event-based triggers, or cloud services. These orchestration strategies determine how efficiently workflows use available computing infrastructure.</p>
-            <!-- <img src="/images/terminology/workflow_characteristics.svg"/> -->
+            <p>This axis covers the implementation and execution management approaches for workflow components. It
+                analyzes different methods for launching and coordinating tasks, from direct execution to more
+                sophisticated approaches that leverage distributed resources, event-based triggers, or cloud services.
+                These orchestration strategies determine how efficiently workflows use available computing
+                infrastructure.</p>
+            <img src="/images/terminology/orchestration.svg" style="max-width: 500px;" />
+            <ul style="list-style: disc; padding-left: 2em;">
+                <li><strong>Planning</strong>
+                    <ul style="list-style: disc; padding-left: 2em;">
+                        <li><strong>Static:</strong> Some systems impose a static planning of the workflow execution,
+                            i.e., all the decisions about when and where each task composing the workflow is executed
+                            must be taken before the execution starts.</li>
+                        <li><strong>Dynamic:</strong> Conversely, some systems can make or adapt scheduling and resource
+                            allocation decisions during the execution of the workflow, hence implementing a dynamic
+                            planning strategy.</li>
+                        <li><strong>Event-driven:</strong> The third category encompasses WMSs that do not plan the
+                            workflow execution in advance but rather let the execution react to specific events and/or
+                            conditions that occur at runtime. In such event-driven execution, when a trigger condition
+                            or event is met, the workflow system automatically initiates subsequent, usually predefined,
+                            actions such as starting new tasks, notifying users, and adjusting the resource allocation.
+                        </li>
+                    </ul>
+                </li>
+
+                <li><strong>Execution</strong>
+                    <ul style="list-style: disc; padding-left: 2em;">
+                        <li><strong>Runner:</strong> The runner orchestration method refers to WMSs that are fully
+                            responsible for the acquisition of computing and storage resources and the management of the
+                            individual tasks that compose a workflow. It connects the high-level workflow definition to
+                            the available resources. A runner system ensures that tasks execute in the correct order,
+                            respecting their pre-defined control and flow dependencies.</li>
+                        <li><strong>Resource Manager:</strong> Other WMSs delegate resource allocation and part of the
+                            management of the execution of individual tasks to a resource manager. This orchestration
+                            method is typically used in HPC systems where the allocation of compute nodes is handled by
+                            a batch scheduler, or cloud systems, where container orchestration systems are used.</li>
+                        <li><strong>Serverless:</strong> The last orchestration method relies on a serverless execution
+                            of tasks. This refers to a cloud-based model in which the responsibility for infrastructure
+                            management, allocation scaling, and job execution is entirely delegated to a cloud service
+                            provider. A key distinction of this model is that the user or WMS must first define one or
+                            more functions along with all of their software dependencies, and then the WMS may execute
+                            those functions to carry out the workflow.</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
         <div class="row gy-4 mb-5">
             <h4>Data Management</h4>
-            <p>This axis focuses on how data is handled throughout the workflow lifecycle. It characterizes methods for moving data between workflow components, approaches to storing data at different stages, and techniques for optimizing data access patterns. These data management strategies significantly affect workflow performance, especially for data-intensive applications.</p>
+            <p>This axis focuses on how data is handled throughout the workflow lifecycle. It characterizes methods for
+                moving data between workflow components, approaches to storing data at different stages, and techniques
+                for optimizing data access patterns. These data management strategies significantly affect workflow
+                performance, especially for data-intensive applications.</p>
             <!-- <img src="/images/terminology/workflow_characteristics.svg"/> -->
+            <ul style="list-style: disc; padding-left: 2em;">
+                <li><strong>Granularity</strong>
+                    <ul style="list-style: disc; padding-left: 2em;">
+                        <li><strong>Batch:</strong> A common approach followed by many WMSs is to consider the data
+                            operations of a workflow component at the granularity of a batch: all the needed input data
+                            are consumed before performing computations and all the output data is produced, and made
+                            available to subsequent components in the workflow, at the end of these computations.</li>
+                        <li><strong>Pipelined:</strong> Another approach is to consider a pipelined granularity in which
+                            workflow components periodically produce and/or consume individual records during their
+                            entire lifecycle. This is typically used to manage in situ processing workflows, where
+                            analysis and visualization components are loosely coupled to a main data producer.</li>
+                        <li><strong>Partitioned:</strong> A third intermediate granularity is to consider data as
+                            partitioned, i.e., divided in groups of individual records, and to transfer these partitions
+                            across the workflow. This approach is particularly useful when individual records are small.
+                        </li>
+                    </ul>
+                </li>
+
+                <li><strong>Transport</strong>
+                    <ul style="list-style: disc; padding-left: 2em;">
+                        <li><strong>File-based:</strong> A common approach is to rely on file-based transport, in which
+                            a workflow component that produces intermediate data will write them into a file(s) on a
+                            storage system. In contrast, a workflow component that consumes intermediate data will read
+                            it from file(s).
+                            <ul style="list-style: disc; padding-left: 2em;">
+                                <li><strong>Local:</strong> When workflow components are co-located on the same compute
+                                    node, the workflow system can leverage the existence of a local file system.</li>
+                                <li><strong>Shared:</strong> When components are allocated to different nodes of the
+                                    same compute cluster or to different clusters of the same computing facility, it
+                                    will have to rely on a shared file system. Commonly used in collaborative or
+                                    high-performance computing environments, shared file systems correspond to a
+                                    centralized model where data is accessible by multiple systems or nodes
+                                    simultaneously.</li>
+                                <li><strong>Distributed:</strong> In the extreme case where the execution of a workflow
+                                    is distributed over multiple computing facilities, this approach can leverage a
+                                    distributed storage space. This involves managing and storing data across multiple
+                                    local and/or remote systems, enabling scalability, load balancing, resilience, and
+                                    flexibility.</li>
+                                <li><strong>Replicated:</strong> Another common practice in distributed and shared
+                                    systems targeted by WMSs is the use of replicated storage, which focuses on creating
+                                    redundant copies of data to improve reliability, availability, and resilience.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Streaming:</strong> An alternate approach is to directly stream intermediate data
+                            between components.
+                            <ul style="list-style: disc; padding-left: 2em;">
+                                <li><strong>In-memory:</strong> When the producer and consumer are co-located on the
+                                    same node, data transport can be carried out in-memory through a shared address
+                                    space.</li>
+                                <li><strong>Network:</strong> Otherwise, it implies a network communication between the
+                                    nodes that respectively hosts the data producer and consumer.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
         <div class="row gy-4 mb-5">
             <h4>Metadata Capture</h4>
-            <p>This axis explores additional contextual information collected during workflow execution. It covers methods for tracking workflow execution state, documenting provenance, monitoring performance, and detecting anomalies. These capabilities ensure that workflows can be reliably executed, optimized, debugged, and reproduced.</p>
-            <!-- <img src="/images/terminology/workflow_characteristics.svg"/> -->
+            <p>This axis explores additional contextual information collected during workflow execution. It covers
+                methods for tracking workflow execution state, documenting provenance, monitoring performance, and
+                detecting anomalies. These capabilities ensure that workflows can be reliably executed, optimized,
+                debugged, and reproduced.</p>
+            <img src="/images/terminology/metadata_capture.svg" style="max-width: 700px;" />
+            <ul style="list-style: disc; padding-left: 2em;">
+                <li><strong>Provenance:</strong> A specific type of metadata that can be further decomposed into
+                    prospective and retrospective provenance data. Prospective provenance corresponds to maintaining
+                    detailed information about the workflow design and structure, the configuration of the workflow
+                    system and the underlying computing and storage infrastructure, and the specific algorithms to be
+                    used and their parametrization. Retrospective provenance data corresponds to what actually happened
+                    to the data processed by a workflow and captures everything related to a specific execution. It is
+                    usually extracted from execution logs to keep track of the data lineage (i.e., generation,
+                    transformation, and usage) and timestamps and runtime details. Prospective provenance is essential
+                    to facilitate reproducibility, while retrospective provenance is particularly useful for detecting
+                    any deviation from the expected execution plan and is often used for debugging purposes.</li>
+
+                <li><strong>Monitoring:</strong> Another type of metadata captured during workflow executions is
+                    monitoring of data, which comes from processes that oversee the workflow execution in real time. The
+                    data generated by monitoring provides critical insight into performance, resource utilization, and
+                    potential bottlenecks. WMSs can leverage it to dynamically reconsider an initial execution plan by
+                    modifying resource allocations or scheduling decisions. The monitoring data can also be analyzed by
+                    researchers after a workflow execution to optimize the description of the workflow itself to improve
+                    its efficiency.</li>
+
+                <li><strong>Anomaly Detection:</strong> We consider that a workflow management system supports anomaly
+                    detection if it captures metadata that can be used to implement fault tolerance mechanisms. These
+                    mechanisms vary in sophistication: Some systems terminate execution and display an error message,
+                    while others complete the execution but log warnings about potentially incorrect data resulting from
+                    unexpected behavior. There are even systems that can distinguish between anomalies that can be
+                    handled automatically (e.g., task retries or by an optional branch from a task-failed trigger) and
+                    anomalies that the workflow is not designed to handle and thus require user intervention.</li>
+            </ul>
         </div>
     </div>
 </section>
