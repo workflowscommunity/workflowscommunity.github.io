@@ -22,29 +22,6 @@ permalink: /
         </div>
 
         <div class="row gy-4">
-            <div class="col-lg-3">
-                <!-- RECENT SUMMIT -->
-                <article>
-                    {% assign summits = site.summits | sort: 'order' | reverse %}
-                    {% for summit in summits limit: 1 %}
-                    <div class="post-img">
-                        <img src="{{ summit.image }}" alt="" class="img-fluid">
-                    </div>
-                    <p class="post-category">COMMUNITY SUMMIT</p>
-                    <h2 class="title">
-                        <a href="{{ summit.url }}">{{ summit.title }}</a>
-                    </h2>
-                    <div class="d-flex align-items-center">
-                        <div class="post-meta">
-                            <p class="post-author">{{ summit.subtitle }}</p>
-                            <p class="post-date">
-                                <time datetime="2022-01-01">{{ summit.event_date }}</time>
-                            </p>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </article>
-            </div>
 
             <div class="col-lg-3">
                 <!-- COMMUNITY TALKS -->
@@ -93,7 +70,31 @@ permalink: /
                     {% endfor %}
                 </article>
             </div>
-            
+
+            <div class="col-lg-3">
+                <!-- RECENT SUMMIT -->
+                <article>
+                    {% assign summits = site.summits | sort: 'order' | reverse %}
+                    {% for summit in summits limit: 1 %}
+                    <div class="post-img">
+                        <img src="{{ summit.image }}" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">COMMUNITY SUMMIT</p>
+                    <h2 class="title">
+                        <a href="{{ summit.url }}">{{ summit.title }}</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author">{{ summit.subtitle }}</p>
+                            <p class="post-date">
+                                <time datetime="2022-01-01">{{ summit.event_date }}</time>
+                            </p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </article>
+            </div>
+
             <!-- <div class="col-lg-3">
                 <!- BOF ->
                 <article>
