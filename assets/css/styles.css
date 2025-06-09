@@ -3561,3 +3561,20 @@ pre {
 .img-fluid {
   min-width: 14.4em;
 }
+
+.wg-contents h4, .wg-contents h3, .wg-contents h2 {
+  margin-top: 1em;
+}
+
+.wg-contents ul {
+  list-style: disc;
+  padding-left: 1em;
+}
+
+.breadcrumb {
+  font-size: 0.8em; 
+  margin-bottom: 3em; 
+  background-color: #fff; 
+  padding: 0.5em 1em; 
+  border-radius: 0.5em;
+}

@@ -11,7 +11,10 @@ layout: page
 
 <div class="container" data-aos="fade-up" style="padding: 3em 0;">
     <div class="row">
-        <div class="col-lg-8 wg">
+        <div class="col-lg-8 wg wg-contents">
+            <p class="breadcrumb">
+                <a href="/groups">WORKING GROUPS</a> > {{ page.title | upcase }}
+            </p>
             {{content | markdownify}}
         </div>
         <div class="col-lg-4">
