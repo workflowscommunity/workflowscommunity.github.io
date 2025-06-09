@@ -45,10 +45,10 @@ image: "https://workflows.community/images/wci-default-card.png"
                     <div class="row" style="border: 3px solid #fff; border-radius: .5em">
                         {% assign talks = site.talks | sort: 'order' | reverse %}
                         {% for talk in talks limit: 1 %}
-                        <div class="col-lg-5" style="padding: 0; background-color: #7057AF">
-                            <a href="/talks"><img src="/images/talks/banner.png" width="100%" /></a>
+                        <div class="col-lg-5" style="padding: 0; background-color: rgba(109, 84, 170, 0.5);">
+                            <a href="/talks"><img src="/images/talks/banner.png" width="100%" style="border-radius: 0.5em;" /></a>
                         </div>
-                        <div class="col-lg-7" style="background-color: #7057AF; padding: 1em;">
+                        <div class="col-lg-7" style="background-color: rgba(109, 84, 170, 0.5); padding: 1em;">
                             <strong><a href="{{ talk.url }}" style="color: #fff">{{ talk.title }}</a></strong><br />
                             <i style="color: #999">{{ talk.authors }}</i><br />
                             {{ talk.event_date }}
