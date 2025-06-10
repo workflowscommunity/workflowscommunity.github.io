@@ -1,0 +1,103 @@
+---
+layout: page
+---
+
+<div class="container" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-8 wg wg-contents text-center">
+            <p class="breadcrumb">
+                <a href="/systems">WORKFLOW SYSTEMS&nbsp;</a> > {{ page.title | upcase }}
+            </p>
+
+            <h2 style="margin-bottom: 0;">{{ page.title }}</h2>
+            <p style="color: #666">{{ page.headline }}</p>
+
+            <div class="mb-4" style="background-color: #fff; padding: 1em; border-radius: 0.5em;">
+                <i class="far fa-clock"></i> Last updated: <strong>{{page.last_update}}</strong>
+                &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-box-open"></i> Release: <strong>{{page.release_name}}</strong>
+            </div>
+
+            <p style="text-align: left;">{{ page. description }}</p>
+
+            <div style="background-color: #fff; padding: 1em; border-radius: 0.5em;">
+                <div class="row mb-5">
+                    {% if page.install %}
+                    <div class="col-md-3">
+                        <a href="{{page.install}}" target="_blank">
+                            <i class="fas fa-download" style="font-size: 1.5em;"></i><br />
+                            Install
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if page.tutorial %}
+                    <div class="col-md-3">
+                        <a href="{{page.install}}" target="_blank">
+                            <i class="fas fa-user-cog" style="font-size: 1.5em;"></i><br />
+                            Tutorial
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if page.documentation %}
+                    <div class="col-md-3">
+                        <a href="{{page.documentation}}" target="_blank">
+                            <i class="fas fa-user-cog" style="font-size: 1.5em;"></i><br />
+                            Documentation
+                        </a>
+                    </div>
+                    {% endif %}
+                    <div class="col-md-3">
+                        <i class="fas fa-code" style="font-size: 1.5em;"></i><br />
+                        {{page.language}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="{{page.repository_url}}/network/members" style="font-size: 1.5em;" target="_blank">{{page.forks}}</a><br />
+                        <i class="fas fa-code-branch"></i> Forks
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{{page.repository_url}}/stargazers" style="font-size: 1.5em;" target="_blank">{{page.stargazers}}</a><br />
+                        <i class="far fa-star"></i> Stargazers
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{{page.repository_url}}/network/members" style="font-size: 1.5em;" target="_blank">{{page.forks}}</a><br />
+                        <i class="fas fa-code-branch"></i> Forks
+                    </div>
+                    <div class="col-md-3">
+                        <span style="font-size: 1.5em;">{{page.license}}</span><br />
+                        <i class="fab fa-osi"></i> License
+                    </div>
+                </div>
+            </div>
+
+            {{ content }}
+
+        </div>
+
+        <div class="col-lg-4">
+            <div class="blog-sidbar">
+                <div class="mb-4">
+                    <a href="{{ page.website }}" target="_blank">
+                        <img src="{{ page.avatar }}" style="max-height: 8em; max-width: 100%;" alt="{{ page.title }}" />
+                    </a>
+                </div>
+                <i class="fa fa-link"></i> <a href="{{ page. website }}" target="_blank">{{ page.website }}</a><br />
+                <i class="fab fa-github"></i> <a href="{{ page.repository_url }}" target="_blank">{{ page.repository_url
+                    }}</a><br />
+                {% if page.x_twitter %}
+                <i class="fa-brands fa-x-twitter"></i> <a href="https://x.com/{{ page.x_twitter }}"
+                    target="_blank">https://x.com/{{ page.x_twitter }}</a><br />
+                {% endif %}
+                {% if page.youtube %}
+                <a href="https://youtube.com/{{ page.youtube }}" target="_blank"><i class="fab fa-youtube"></i> {{
+                    page.youtube }}</a><br />
+                {% endif %}
+                <br />
+                <hr />
+                <h4 class="mb-4">Contributors</h4>
+                {{page.contributors}}
+            </div>
+        </div>
+    </div>
+</div>
