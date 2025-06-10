@@ -13,8 +13,8 @@
       Abstraction: ["Abstract"]
       Modularity: ["Hierarchical"]
     orchestration:
-      Planning: ["Runner"]
-      Execution: ["Static"]
+      Planning: ["Static"]
+      Execution: ["Runner"]
     data_management:
       Transport: ["Streaming", "File-based"]
       Storage: ["Shared", "Distributed"]
@@ -25,30 +25,142 @@
   organization: nextflow-io
   repository: nextflow
   metadata: docs
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Sub-workflows"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["Streaming", "File-based"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Replicated Storage", "Container/Cloud Support", "HPC Execution"]
 
 - type: github
   organization: pegasus-isi
   repository: pegasus
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Sub-workflows", "Executables"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema", "API"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Static"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Replicated Storage", "Multi-level Scheduling"]
 
 - type: github
   organization: cooperative-computing-lab
   repository: cctools
   metadata: makeflow/.wci.yml
   name: makeflow
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Sub-workflows"]
+      Coupling: ["Loose"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Standard (Make)"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Static"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared", "Replicated"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Distributed Storage", "HPC Execution"]
 
 - type: github
   organization: cooperative-computing-lab
   repository: cctools
   metadata: taskvine/.wci.yml
   name: taskvine
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Functions", "Executables"]
+      Coupling: ["Loose"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Intermediate"]
+      Modularity: ["Flat"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Resource Manager"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared", "Distributed", "Replicated"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Serverless", "Autoscaling", "HPC Execution", "Recoverable Storage"]
 
 - type: github
   organization: bsc-wdc
   repository: compss
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Functions", "Sub-workflows", "Executables"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Intermediate"]
+      Modularity: ["Flat", "Hierarchical"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Resource Manager", "Serverless"]
+    data_management:
+      Transport: ["Streaming", "File-based"]
+      Storage: ["Local", "Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Adaptive Resource Allocation", "HPC Scalable", "Replicated Storage"]
 
 - type: github
   organization: swift-lang
   repository: swift-t
+  terminology:
+    characteristics:
+      Flow: ["Task", "Data"]
+      Granularity: ["Functions"]
+      Coupling: ["Tight"]
+      Dynamicity: ["Branches", "Recursion"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema"]
+      Abstraction: ["High-level"]
+      Modularity: ["Flat"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Resource Manager"]
+    data_management:
+      Transport: ["Streaming", "File-based"]
+      Storage: ["Shared"]
+    metadata: ["Anomaly Detection", "Monitoring"]
+    extensions: ["Local Storage", "AI/ML Control", "Parallel Tasks"]
 
 - type: github
   organization: radical-cybertools
