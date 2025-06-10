@@ -82,7 +82,14 @@ layout: page
             {% for system in site.data.workflow_systems %}
             {% if system.repository == page.repository %}
             {% if system.terminology %}
-            <h4 style="text-align: left;" class="mb-4">Terminology</h4>
+            <h4 style="text-align: left;" class="mb-4">Terminology 
+                <div class="tt">
+                    <sup><i class="fa fa-circle-info"></i></sup>
+                    <span class="tooltiptext" style="font-size: 0.6em">
+                        Terminology below follows the definitions established by the <a href="/terminology" style="color:gold">Workflows Community Terminology</a>.
+                    </span>
+                </div>
+            </h4>
             <div id="tree">
                 <div class="branch">
                     <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753"><strong>Characteristics</strong></span>

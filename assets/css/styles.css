@@ -3719,3 +3719,31 @@ pre {
 #tree .entry span:hover + .branch .branch::before {
   border-color: #a6a6a6;
 }
+
+.tt {
+  position: relative;
+  cursor: pointer;
+  display: inline-block; /* Or display: block; depending on your layout */
+}
+
+.tt .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  position: absolute;
+  z-index: 1;
+  bottom: 0%;
+  left: 150%;
+  margin-left: -10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tt:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
