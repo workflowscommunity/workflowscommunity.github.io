@@ -22,6 +22,7 @@ class SystemMetadata(BaseModel, extra="ignore"):
     subtitle: str
     description: str
     repository_url: str
+    repository: str
     default_branch: str
     license: str
     issues: int
@@ -175,6 +176,7 @@ def _process_github_system(definition: GitHubDefinition) -> SystemMetadata:
         repository_url=(
             f"https://github.com/{definition.organization}/{definition.repository}"
         ),
+        repository=definition.repository,
         default_branch=repo_data["default_branch"],
         license=(
             repo_data["license"]["spdx_id"]

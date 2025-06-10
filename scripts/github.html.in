@@ -1,6 +1,7 @@
 ---
 layout: system
 title: $title
+repository: $repository
 repository_url: $repository_url
 headline: "$subtitle"
 last_update: $day $month $year

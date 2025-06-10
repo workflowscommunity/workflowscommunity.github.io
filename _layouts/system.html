@@ -74,10 +74,91 @@ layout: page
             </div>
 
             {% unless page.execution_environment == '' %}
-            <h4>Execution Environment</h4>
+            <h4 style="text-align: left;" class="mb-4">Execution Environment</h4>
 
             {{page.execution_environment}}
             {% endunless %}
+
+            {% for system in site.data.workflow_systems %}
+            {% if system.repository == page.repository %}
+            {% if system.terminology %}
+            <h4 style="text-align: left;" class="mb-4">Terminology</h4>
+            <div id="tree">
+                <div class="branch">
+                    <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753"><strong>Characteristics</strong></span>
+                        <div class="branch">
+                            {% for ch in system.terminology.characteristics %}
+                            <div class="entry">
+                                <span style="border: 1px solid #D46753"><strong>{{ch[0]}}</strong></span>
+                                <div class="branch">
+                                    {% for v in ch[1] %}
+                                    <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">{{v}}</span></div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B"><strong>Composition</strong></span>
+                        <div class="branch">
+                            {% for ch in system.terminology.composition %}
+                            <div class="entry">
+                                <span style="border: 1px solid #D8833B"><strong>{{ch[0]}}</strong></span>
+                                <div class="branch">
+                                    {% for v in ch[1] %}
+                                    <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B">{{v}}</span></div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68"><strong>Orchestration</strong></span>
+                        <div class="branch">
+                            {% for ch in system.terminology.orchestration %}
+                            <div class="entry">
+                                <span style="border: 1px solid #55AB68"><strong>{{ch[0]}}</strong></span>
+                                <div class="branch">
+                                    {% for v in ch[1] %}
+                                    <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68">{{v}}</span></div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA"><strong>Data Management</strong></span>
+                        <div class="branch">
+                            {% for ch in system.terminology.data_management %}
+                            <div class="entry">
+                                <span style="border: 1px solid #4EADEA"><strong>{{ch[0]}}</strong></span>
+                                <div class="branch">
+                                    {% for v in ch[1] %}
+                                    <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA">{{v}}</span></div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="entry"><span style="background-color: #F5EAF3; border: 1px solid #8448A8"><strong>Metadata Capture</strong></span>
+                        <div class="branch">
+                            {% for ch in system.terminology.metadata %}
+                            <div class="entry">
+                                <span style="border: 1px solid #8448A8"><strong>{{ch}}</strong></span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
 
             <p>&nbsp;</p>
 

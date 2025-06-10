@@ -1,10 +1,24 @@
-# - type: github
-#   organization: workflowscommunity
-#   repository: workflow-system-test-repo
-
 - type: github
   organization: Parsl
   repository: parsl
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Sub-workflows"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Runner"]
+      Execution: ["Static"]
+    data_management:
+      Transport: ["Streaming", "File-based"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring"]
 
 - type: github
   organization: nextflow-io
