@@ -347,6 +347,7 @@ def _process_pypi_system(definition: PyPIDefinition) -> SystemMetadata:
         subtitle=info["summary"],
         description=description,
         repository_url=info["project_urls"]["Repository"],
+        repository=definition.distribution,
         default_branch="main",
         license=info["license"] or "No license available",
         issues=0,
