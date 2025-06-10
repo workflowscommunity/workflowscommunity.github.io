@@ -67,4 +67,4 @@ To bridge this gap, our working group develops and maintains a standardized term
 
 #### Products
 
-- Suter, F., Coleman, T., Altintas, Í., Badia, R. M., Balis, B., Chard, K., Colonnelli, I., Deelman, E., Tommaso, P. D., Fahringer, T., Goble, C., Jha, S., Katz, D. S., Köster, J., Leser, U., Mehta, K., Oliver, H., Peterson, J.-L., Pizzi, G., Pottier, L., Sirvent, R., Suchyta, E., Thain, D., Wilkinson, S. R., Wozniak, J. M., Ferreira da Silva, R. (2025). [A Terminology for Scientific Workflow Systems](). Future Generation Computer Systems.
+- Suter, F., Coleman, T., Altintas, Í., Badia, R. M., Balis, B., Chard, K., Colonnelli, I., Deelman, E., Tommaso, P. D., Fahringer, T., Goble, C., Jha, S., Katz, D. S., Köster, J., Leser, U., Mehta, K., Oliver, H., Peterson, J.-L., Pizzi, G., Pottier, L., Sirvent, R., Suchyta, E., Thain, D., Wilkinson, S. R., Wozniak, J. M., Ferreira da Silva, R. (2025). <a href="https://arxiv.org/pdf/2506.07838" target="_blank">A Terminology for Scientific Workflow Systems</a>. Future Generation Computer Systems.
