@@ -142,6 +142,7 @@
 - type: github
   organization: swift-lang
   repository: swift-t
+  metadata: .wci.yml
   terminology:
     characteristics:
       Flow: ["Task", "Data"]
