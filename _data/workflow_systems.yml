@@ -19,6 +19,7 @@
       Transport: ["Streaming", "File-based"]
       Storage: ["Shared", "Distributed"]
     metadata: ["Anomaly Detection", "Monitoring"]
+    extensions: ["Replicated Storage", "Dynamic Parallelization", "Cloud/Grid Support"]
 
 - type: github
   organization: nextflow-io

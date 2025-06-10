@@ -154,6 +154,16 @@ layout: page
                             {% endfor %}
                         </div>
                     </div>
+
+                    <div class="entry"><span><strong>Extensions</strong></span>
+                        <div class="branch">
+                            {% for ch in system.terminology.extensions %}
+                            <div class="entry">
+                                <span>{{ch}}</span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
             </div>
             {% endif %}
