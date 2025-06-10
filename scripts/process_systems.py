@@ -388,6 +388,8 @@ def _apply_wci_metadata(data, model):
     model.title = _get_string_value("name", data, model.title)
     model.subtitle = _get_string_value("headline", data, model.subtitle)
     model.description = _get_string_value("description", data, model.description)
+    if "\"" in model.description:
+        model.description = model.description.replace("\"", "'")
     model.website = _get_string_value("website", data, model.website)
     model.avatar = _get_string_value("icon", data, model.avatar)
     model.language = _get_string_value("language", data, model.language)
@@ -423,16 +425,13 @@ def _apply_wci_metadata(data, model):
     ee = data.get("execution_environment", {})
     if ee:
         model.execution_environment = (
-            '<div class="row justify-content-center mt-5">'
-            '<div class="col-md-7 text-center heading-section ftco-animate">'
-            '<h3 class="mb-4">Execution Environment</h3></div></div><div class="row">'
+            '<div class="row" style="text-align: left;">'
         )
 
         def make_column(title, items):
             return (
-                '<div class="col-md-4 ftco-animate">'
+                f'<div class="col-lg-12"><strong>{title}</strong>'
                 '<ul class="list-services">'
-                f"<li><h4>{title}</h4></li>"
                 + "".join(f"<li>{item}</li>" for item in items)
                 + "</ul></div>"
             )

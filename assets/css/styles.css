@@ -3578,3 +3578,20 @@ pre {
   padding: 0.5em 1em; 
   border-radius: 0.5em;
 }
+
+.list-services {
+  list-style: none !important;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 0 !important;
+}
+
+.list-services li {
+  display: inline;
+  padding: 0.25em 1em;
+  border: 1px solid #ccc;
+  margin-right: 1em;
+  margin-top: 0.25em;
+}

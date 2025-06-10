@@ -6,7 +6,7 @@ headline: "$subtitle"
 last_update: $day $month $year
 website: $website
 date_sort: $year$monthn$day
-description: '$description'
+description: "$description"
 language: "$language"
 install: $doc_installation
 tutorial: $doc_tutorial
@@ -23,6 +23,5 @@ forks: $forks
 stargazers: $stargazers
 issues: $issues
 license: $license
+execution_environment: '$execution_environment'
 ---
-
-$execution_environment

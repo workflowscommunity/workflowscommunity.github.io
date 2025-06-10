@@ -20,7 +20,7 @@ layout: page
 
             <p style="text-align: left;">{{ page. description }}</p>
 
-            <div style="background-color: #fff; padding: 1em; border-radius: 0.5em;">
+            <div style="background-color: #fff; padding: 1em; border-radius: 0.5em;" class="mb-5">
                 <div class="row mb-5">
                     {% if page.install %}
                     <div class="col-md-3">
@@ -64,14 +64,22 @@ layout: page
                         <a href="{{page.repository_url}}/network/members" style="font-size: 1.5em;" target="_blank">{{page.forks}}</a><br />
                         <i class="fas fa-code-branch"></i> Forks
                     </div>
+                    {% unless page.license == "NOASSERTION" %}
                     <div class="col-md-3">
                         <span style="font-size: 1.5em;">{{page.license}}</span><br />
                         <i class="fab fa-osi"></i> License
                     </div>
+                    {% endunless %}
                 </div>
             </div>
 
-            {{ content }}
+            {% unless page.execution_environment == '' %}
+            <h4>Execution Environment</h4>
+
+            {{page.execution_environment}}
+            {% endunless %}
+
+            <p>&nbsp;</p>
 
         </div>
 
@@ -90,8 +98,8 @@ layout: page
                     target="_blank">https://x.com/{{ page.x_twitter }}</a><br />
                 {% endif %}
                 {% if page.youtube %}
-                <a href="https://youtube.com/{{ page.youtube }}" target="_blank"><i class="fab fa-youtube"></i> {{
-                    page.youtube }}</a><br />
+                <i class="fab fa-youtube"></i> <a href="https://youtube.com/{{ page.youtube }}" 
+                    target="_blank"> {{ page.youtube }}</a><br />
                 {% endif %}
                 <br />
                 <hr />
