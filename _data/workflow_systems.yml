@@ -165,10 +165,46 @@
 - type: github
   organization: radical-cybertools
   repository: radical.entk
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Functions"]
+      Coupling: ["Tight"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Static"]
+      Execution: ["Resource Manager"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance", "Metadata"]
+    extensions: ["Replicated Storage", "Scalable"]
 
 - type: github
   organization: LLNL
   repository: merlin
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Sub-workflows"]
+      Coupling: ["Loose"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema"]
+      Abstraction: ["Intermediate"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Static"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared", "Distributed", "Replicated"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Cloud-native Support"]
 
 - type: github
   organization: LLNL
