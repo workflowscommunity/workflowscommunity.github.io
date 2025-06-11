@@ -331,8 +331,49 @@
     metadata: ["Monitoring"]
 
 - type: github
-  organization: common-workflow-language
-  repository: common-workflow-language
+  organization: DataBiosphere
+  repository: toil
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Sub-workflows"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Standard (CWL/WDL)"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Static"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["Streaming", "File-based"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Replicated storage", "Multi-Cloud Support"]
+
+- type: github
+  organization: globus
+  repository: globus-compute
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Functions", "Executables"]
+      Coupling: ["Loose"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Resource Manager", "Serverless"]
+    data_management:
+      Transport: ["Streaming", "File-based"]
+      Storage: ["Shared"]
+    metadata: ["Anomaly Detection", "Monitoring"]
+    extensions: ["Distributed Storage"]
 
 - type: github
   organization: esipfed
