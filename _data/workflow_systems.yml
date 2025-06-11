@@ -382,11 +382,49 @@
 - type: github
   organization: Apollo-Core
   repository: EE-Demo
+  terminology:
+    characteristics:
+      Flow: ["Task", "Data", "Iterative"]
+      Granularity: ["Functions", "Sub-workflows"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Resource Manager", "Serverless"]
+    data_management:
+      Transport: ["Streaming"]
+      Storage: ["Distributed"]
+    metadata: ["Monitoring"]
+    extensions: ["Container/Serverless", "Multi-cloud", "Edge/Cloud", "Multi-objective Scheduling"]
 
 - type: github
   organization: aiidateam
   repository: aiida-core
   metadata: docs
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Functions", "Sub-workflows", "Executables"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches", "Runtime Intervention"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Intermediate"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared"]
+    metadata: ["Anomaly Detection", "Provenance"]
+    extensions: ["Plugins", "Caching", "Fault Tolerance", "HPC Execution"]
 
 - type: github
   organization: alpha-unito

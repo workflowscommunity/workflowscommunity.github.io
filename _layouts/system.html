@@ -182,13 +182,15 @@ layout: page
         </div>
 
         <div class="col-lg-4">
-            <div class="blog-sidbar">
+            <div class="blog-sidbar" style="overflow-wrap: break-word;">
                 <div class="mb-4">
                     <a href="{{ page.website }}" target="_blank">
                         <img src="{{ page.avatar }}" style="max-height: 8em; max-width: 100%;" alt="{{ page.title }}" />
                     </a>
                 </div>
+                {% if page.website %}
                 <i class="fa fa-link"></i> <a href="{{ page. website }}" target="_blank">{{ page.website }}</a><br />
+                {% endif %}
                 <i class="fab fa-github"></i> <a href="{{ page.repository_url }}" target="_blank">{{ page.repository_url
                     }}</a><br />
                 {% if page.x_twitter %}
