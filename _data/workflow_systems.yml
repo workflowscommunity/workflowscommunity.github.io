@@ -213,14 +213,70 @@
 - type: github
   organization: galaxyproject
   repository: galaxy
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Executables"]
+      Coupling: ["Loose"]
+      Domain: ["Specific"]
+    composition:
+      Description: ["GUI", "Ad-hoc Schema"]
+      Abstraction: ["Concrete"]
+      Modularity: ["Flat"]
+    orchestration:
+      Planning: ["Event-Driven"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["Streaming"]
+      Storage: ["Shared"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["External Tools", "Execution API"]
 
 - type: github
   organization: snakemake
   repository: snakemake
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Sub-workflows", "Executables", "Functions"]
+      Coupling: ["Loose", "Tight"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Flat", "Hierarchical"]
+    orchestration:
+      Planning: ["Static", "Dynamic", "Event-driven"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Plugins", "Scripting integration", "Software deployment integration", "Interactive reporting"]
 
 - type: github
   organization: materialsproject
   repository: fireworks
+  terminology:
+    characteristics:
+      Flow: ["Task"]
+      Granularity: ["Sub-workflows"]
+      Coupling: ["Tight"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API", "Ad-hoc Schema"]
+      Abstraction: ["Intermediate"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Resource Manager"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared", "Replicated"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Multi-platform execution"]
 
 - type: github
   organization: materialsproject
