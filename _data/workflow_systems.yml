@@ -290,6 +290,24 @@
 - type: github
   organization: dask
   repository: dask
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Executables"]
+      Coupling: ["Tight"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Concrete"]
+      Modularity: ["Flat"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["Streaming"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring", "Metadata"]
+    extensions: ["Python Libraries", "Cluster Management", "GPU Accel."]
 
 - type: github
   organization: mlflow
