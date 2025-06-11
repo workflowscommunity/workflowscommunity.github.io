@@ -312,6 +312,23 @@
 - type: github
   organization: mlflow
   repository: mlflow
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Executables"]
+      Coupling: ["Loose"]
+      Domain: ["Specific"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Intermediate"]
+      Modularity: ["Flat"]
+    orchestration:
+      Planning: ["Static"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["Streaming", "File-based"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Monitoring"]
 
 - type: github
   organization: common-workflow-language
