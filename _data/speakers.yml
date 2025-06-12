@@ -48,4 +48,30 @@
   talk_num: 3
   photo: parraga.jpg
   bio: "Hannah Parraga is a Software Engineering Specialist at Argonne National Laboratory. As a part of the Scientific Software and Data Management Group at the Advanced Photon Source since 2021, her interests include developing robust and reliable software solutions for scientific research such as automated data processing, secure data access, and intuitive user interfaces."
-  
+
+- name: Carole Goble
+  role: Professor of Computer Science
+  institution:
+    - name: University of Manchester
+      link: https://www.manchester.ac.uk/
+      image: umanchester.png
+  photo: goble.jpg
+  link: https://www.research.manchester.ac.uk/portal/carole.goble.html
+  talk_num: 4
+  photo: goble.jpg
+  bio: "Carole Goble is a Professor of Computer Science at the University of Manchester, where she leads the eScience group. She is the joint head of ELIXIR-UK, the national node of the European Research Infrastructure for life science data, and the co-director of Federated Analytics for Health Data Research UK. She is also co-lead of the FAIR Computational Workflows working group in the Workflows Community Initiative."
+
+- name: Johan Gustafsson
+  role: Research Community Engagement Lead
+  institution:
+    - name: Australian BioCommons
+      link: https://www.biocommons.org.au/
+      image: aust-bio.png
+    - name: University of Melbourne
+      link: https://www.unimelb.edu.au/
+      image: umelbourne.png
+  photo: gustafsson.png
+  link: https://www.biocommons.org.au/lb-johan
+  talk_num: 4
+  photo: gustafsson.png
+  bio: "Johan Gustafsson is the Research Community Engagement Lead (Proteins / Metabolites / Workflows) at the Australian BioCommons, University of Melbourne. The BioCommons is a national digital infrastructure initiative supporting Australian life sciences research."
