@@ -430,6 +430,25 @@
   organization: alpha-unito
   repository: streamflow
   metadata: docs
+  terminology:
+    characteristics:
+      Flow: ["Task", "Data", "Iterative"]
+      Granularity: ["Sub-workflows", "Executables"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Standard (CWL)"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Runner", "Resource Manager"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Distributed"]
+    metadata: ["Anomaly Detection", "Provenance"]
+    extensions: ["Replicated Storage", "Cloud Integration"]
 
 - type: github
   organization: scipipe
