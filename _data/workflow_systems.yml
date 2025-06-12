@@ -528,3 +528,25 @@
   distribution: ewoks
   avatar: https://ewoks.esrf.fr/en/latest/_static/ewoks.png
   website: https://ewoks.esrf.fr/
+
+- type: github
+  organization: hyperflow-wms
+  repository: hyperflow
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Functions", "Executables"]
+      Coupling: ["Loose"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema"]
+      Abstraction: ["Intermediate"]
+      Modularity: ["Flat"]
+    orchestration:
+      Planning: ["Static", "Dynamic"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["Streaming"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Provenance"]
+    extensions: ["Replicated Storage", "Cloud Integration", "Scalability"]
