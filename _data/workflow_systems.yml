@@ -499,6 +499,25 @@
 - type: github
   organization: cylc
   repository: cylc-flow 
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Sub-workflows", "Executables"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches", "Runtime Intervention"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema", "API/Templating"]
+      Abstraction: ["Concrete"]
+      Modularity: ["Flat", "Hierarchical"]
+    orchestration:
+      Planning: ["Static", "Event-driven"]
+      Execution: ["Runner", "Resource Manager"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared"]
+    metadata: ["Anomaly Detection", "Provenance", "Monitoring"]
+    extensions: ["HPC Execution", "Plugins", "Config Templating"]
 
 #- type: gitlab
 #  namespace: workflow/ewoks
