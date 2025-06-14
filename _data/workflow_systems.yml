@@ -217,9 +217,10 @@
   terminology:
     characteristics:
       Flow: ["Data"]
-      Granularity: ["Executables"]
+      Granularity: ["Sub-workflows", "Executables"]
       Coupling: ["Loose"]
-      Domain: ["Specific"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
     composition:
       Description: ["GUI", "Ad-hoc Schema"]
       Abstraction: ["Concrete"]
