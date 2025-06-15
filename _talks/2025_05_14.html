@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: talk
 title: "Science Networks: Foundations for Multi-Site Workflows"
 authors: Eli Dart (Energy Sciences Network)
 event_date: May 14, 2025
@@ -8,63 +8,12 @@ talk_number: 2
 given: true
 image: /images/talks/dart-banner.jpg
 presentation: /files/talks/20250514-dart-Workflows-Community-Science-Networks.pdf
+video: https://www.youtube.com/embed/RkUmQFCK7vc?si=KUJgciUHtQlMdcZl
 ---
 
-<div class="container" data-aos="fade-up" style="padding: 3em 0;">
-    <div class="row">
-        <div class="col-lg-8 wg text-center">
-            <h2 class="mb-4">{{page.title}}</h2>
-            <p class="text-center" style="font-size: 1.1em; font-weight: 500;">
-                {{ page.authors }}
-            </p>
-
-            <p class="text-center text-muted" style="font-size: 1em;">
-                {{ page.event_date }}<br />{{ page.times }}
-            </p>
-
-            <p class="mb-3" style="text-align: left;">
-                Multi-site workflows rely on science networks for connectivity,
-                high-performance data transfer, high-performance streaming,
-                visualization, and related capabilities. This talk will describe
-                the role of science networks in enabling workflows which span
-                multiple sites, including interaction with data transfer and
-                security systems in site networks.
-            </p>
-            <!-- <a href="https://docs.google.com/forms/d/1XTJFRJ5Ivu2-Z-i9dnq2umv-OuE2UlVreea_dLawd2c"
-                target="_blank" class="btn btn-primary mt-3 py-3 px-5">Register</a> -->
-            <a href="{{ page.presentation }}" target="_blank" class="btn btn-outer mt-3 py-3 px-5"><i
-                    class="fa fa-file"></i> Presentation</a>
-            <p>&nbsp;</p>
-            <iframe width="100%" height="400" src="https://www.youtube.com/embed/RkUmQFCK7vc?si=KUJgciUHtQlMdcZl" title="YouTube video player" frameborder="0" style="border-radius: 1em" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <p>&nbsp;</p>
-        </div>
-
-        <div class="col-lg-4">
-            <div class="blog-sidbar">
-                <h4 class="mb-4">About the Authors</h4>
-                {% assign speaker = site.data.speakers | where: "talk_num", page.talk_number %}
-                {% for member in speaker %}
-                <a href="{{ member.link }}" target="_blank">
-                    <img src="/images/talks/{{ member.photo }}" alt="{{ member.name }}" class="img-fluid mb-3"
-                        style="width: 150px; height: 200px; object-fit: cover; border-radius: 0.5em;">
-                </a>
-                <p class="font-weight-bold">{{ member.name }}<br />
-                    <span class="text-muted">{{ member.role }}</span>
-                </p>
-                <p class="bio" style="font-size: 0.8em;">{{ member.bio }}</p>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    {% for inst in member.institution %}
-                      <!-- <a href="{{ inst.link }}" target="_blank" style="{% if forloop.last %}margin-left: auto;{% endif %}"> -->
-                      <!-- Lift second logo - one-off as they dont align -->
-                      <a href="{{ inst.link }}" target="_blank" style="{% if forloop.last %}margin-left: auto; position: relative; top: -4px;{% endif %}">
-                        <img src="/images/institutions/{{ inst.image }}" alt="{{ inst.name }}"
-                          style="max-height: 2em; object-fit: contain; margin-right: 0.5em;" />
-                      </a>
-                    {% endfor %}
-                  </div>
-                <hr />
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
+Multi-site workflows rely on science networks for connectivity,
+high-performance data transfer, high-performance streaming,
+visualization, and related capabilities. This talk will describe
+the role of science networks in enabling workflows which span
+multiple sites, including interaction with data transfer and
+security systems in site networks.

@@ -42,14 +42,20 @@ image: "https://workflows.community/images/wci-default-card.png"
                     </div>
                 </div>
                 <div class="col-lg-5 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
-                    <div style="border: 3px solid #fff; border-radius: .5em; padding: 1em;">
-                        <a href="/summits/2025-amsterdam/"><img src="/images/summits/wcs-2025-amsterdam-banner.png" width="108%" style="margin: -1em;" /></a>
-                        <div style="margin-top: 2em;">
-                            <strong>WORKFLOWS COMMUNITY SUMMIT 2025<br />Amsterdam Edition</strong><br />
-                            <i style="color: #999">Converging Paradigms for Shaping the Future of Scientific Workflows Across the Computing Continuum</i><br />
-                            June 6, 2025 &mdash; Amsterdam Science Park
-                            <br /><a href="/summits/2025-amsterdam/" class="btn-get-started" style="margin-top: 0.5em;">Learn more ></a>
+                    <div class="row" style="border: 3px solid #fff; border-radius: .5em">
+                        {% assign talks = site.talks | sort: 'order' | reverse %}
+                        {% for talk in talks limit: 1 %}
+                        <div class="col-lg-5" style="padding: 0; background-color: rgba(109, 84, 170, 0.5);">
+                            <a href="/talks"><img src="/images/talks/banner.png" width="100%" style="border-radius: 0.5em;" /></a>
                         </div>
+                        <div class="col-lg-7" style="background-color: rgba(109, 84, 170, 0.5); padding: 1em;">
+                            <strong><a href="{{ talk.url }}" style="color: #fff">{{ talk.title }}</a></strong><br />
+                            <i style="color: #999">{{ talk.authors }}</i><br />
+                            {{ talk.event_date }}
+                            <br /><br />
+                            <a href="{{ talk.url }}" style="color: #7057AF; background-color: #fff; padding: 0.5em 1em; border-radius: 0.5em;">Learn more ></a>
+                        </div>
+                        {% endfor %}
                     </div>
                 </div>
 
@@ -62,7 +68,7 @@ image: "https://workflows.community/images/wci-default-card.png"
     </main>
 
     {% include footer.html %}
-    
+
 </body>
 
 </html>

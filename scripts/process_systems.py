@@ -22,6 +22,7 @@ class SystemMetadata(BaseModel, extra="ignore"):
     subtitle: str
     description: str
     repository_url: str
+    repository: str
     default_branch: str
     license: str
     issues: int
@@ -175,6 +176,7 @@ def _process_github_system(definition: GitHubDefinition) -> SystemMetadata:
         repository_url=(
             f"https://github.com/{definition.organization}/{definition.repository}"
         ),
+        repository=definition.repository,
         default_branch=repo_data["default_branch"],
         license=(
             repo_data["license"]["spdx_id"]
@@ -345,6 +347,7 @@ def _process_pypi_system(definition: PyPIDefinition) -> SystemMetadata:
         subtitle=info["summary"],
         description=description,
         repository_url=info["project_urls"]["Repository"],
+        repository=definition.distribution,
         default_branch="main",
         license=info["license"] or "No license available",
         issues=0,
@@ -388,6 +391,8 @@ def _apply_wci_metadata(data, model):
     model.title = _get_string_value("name", data, model.title)
     model.subtitle = _get_string_value("headline", data, model.subtitle)
     model.description = _get_string_value("description", data, model.description)
+    if "\"" in model.description:
+        model.description = model.description.replace("\"", "'")
     model.website = _get_string_value("website", data, model.website)
     model.avatar = _get_string_value("icon", data, model.avatar)
     model.language = _get_string_value("language", data, model.language)
@@ -395,15 +400,10 @@ def _apply_wci_metadata(data, model):
     # Social
     if "social" in data:
         if "twitter" in data["social"]:
-            model.twitter = (
-                f"<a href=\"https://twitter.com/{data['social']['twitter']}\" target=\"_blank\">"
-                f"<i class=\"fab fa-twitter\"></i> https://twitter.com/{data['social']['twitter']}</a></li>"
+            model.twitter = (f"{data['social']['twitter']}"
             )
         if "youtube" in data["social"]:
-            model.youtube = (
-                f"<a href=\"{data['social']['youtube']}\" target=\"_blank\">"
-                f"<i class=\"fab fa-youtube\"></i> {data['social']['youtube']}</a></li>"
-            )
+            model.youtube = (f"{data['social']['youtube']}")
 
     # Release
     if "release" in data:
@@ -428,16 +428,13 @@ def _apply_wci_metadata(data, model):
     ee = data.get("execution_environment", {})
     if ee:
         model.execution_environment = (
-            '<div class="row justify-content-center mt-5">'
-            '<div class="col-md-7 text-center heading-section ftco-animate">'
-            '<h3 class="mb-4">Execution Environment</h3></div></div><div class="row">'
+            '<div class="row" style="text-align: left;">'
         )
 
         def make_column(title, items):
             return (
-                '<div class="col-md-4 ftco-animate">'
+                f'<div class="col-lg-12"><strong>{title}</strong>'
                 '<ul class="list-services">'
-                f"<li><h4>{title}</h4></li>"
                 + "".join(f"<li>{item}</li>" for item in items)
                 + "</ul></div>"
             )
@@ -512,22 +509,25 @@ def _parse_tags(keywords):
 
 
 def _render_doc_elements(model: SystemMetadata, data: dict):
-    doc_elements = {
-        "doc_general": ("general", "fas fa-book color-2", "Docs"),
-        "doc_installation": ("installation", "fas fa-download color-3", "Install"),
-        "doc_tutorial": ("tutorial", "fas fa-user-cog color-1", "Tutorial"),
-    }
-    for key, (doc_key, icon_class, heading) in doc_elements.items():
-        if doc_key in data:
-            value = (
-                f'<a href="{data[doc_key]}" class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate" target="_blank">'
-                f'<div class="media block-6 services d-block text-center">'
-                f'<div class="d-flex justify-content-center">'
-                f'<div class="icon d-flex justify-content-center mb-3">'
-                f'<span class="{icon_class}"></span></div></div>'
-                f'<div class="media-body p-2 mt-3"><h3 class="heading">{heading}</h3></div></div></a>'
-            )
-            setattr(model, key, value)
+    model.doc_installation = _get_string_value("installation", data, model.doc_installation)
+    model.doc_tutorial = _get_string_value("tutorial", data, model.doc_tutorial)
+    model.doc_general = _get_string_value("general", data, model.doc_general)
+    # doc_elements = {
+    #     "doc_general": ("general", "fas fa-book color-2", "Docs"),
+    #     "doc_installation": ("installation", "fas fa-download color-3", "Install"),
+    #     "doc_tutorial": ("tutorial", "fas fa-user-cog color-1", "Tutorial"),
+    # }
+    # for key, (doc_key, icon_class, heading) in doc_elements.items():
+    #     if doc_key in data:
+    #         value = (
+    #             f'<a href="{data[doc_key]}" class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate" target="_blank">'
+    #             f'<div class="media block-6 services d-block text-center">'
+    #             f'<div class="d-flex justify-content-center">'
+    #             f'<div class="icon d-flex justify-content-center mb-3">'
+    #             f'<span class="{icon_class}"></span></div></div>'
+    #             f'<div class="media-body p-2 mt-3"><h3 class="heading">{heading}</h3></div></div></a>'
+    #         )
+    #         setattr(model, key, value)
 
 
 def _save_system_html(model: SystemMetadata, template_path, output_path):

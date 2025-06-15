@@ -1,0 +1,78 @@
+---
+layout: page
+---
+
+<div class="container" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-8 wg wg-contents text-center">
+            <p class="breadcrumb">
+                <a href="/talks">WORKFLOWS COMMUNITY TALKS&nbsp;</a> > {{ page.title | upcase }}
+            </p>
+
+            <h2 class="mb-4">{{page.title}}</h2>
+            {% if page.subtitle %}
+            <h4 class="text-center" style="font-style: italic; font-weight: 500;">
+                {{ page.subtitle }}
+            </h4>
+            {% endif %}
+            <p class="text-center" style="font-size: 1.1em; font-weight: 500;">
+                {{ page.authors }}
+            </p>
+
+            <p class="text-center text-muted" style="font-size: 1em;">
+                {{ page.event_date }}<br />{{ page.times }}
+            </p>
+
+            <p class="mb-3" style="text-align: left;">
+            {{content}}
+            </p>
+
+            {% unless page.given %}
+            <a href="https://docs.google.com/forms/d/1XTJFRJ5Ivu2-Z-i9dnq2umv-OuE2UlVreea_dLawd2c" target="_blank"
+                class="btn btn-primary mt-3 py-3 px-5">Register</a>
+            {% endunless %}
+
+            {% if page.presentation %}
+            <a href="{{ page.presentation }}" target="_blank" class="btn btn-outer mt-3 py-3 px-5"><i
+                    class="fa fa-file"></i> Presentation</a>
+            <p>&nbsp;</p>
+            {% endif %}
+
+            {% if page.video %}
+            <iframe width="100%" height="400" src="{{ page.video }}" title="YouTube video player" frameborder="0"
+                style="border-radius: 1em"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>&nbsp;</p>
+            {% endif %}
+
+        </div>
+
+        <div class="col-lg-4">
+            <div class="blog-sidbar">
+                <h4 class="mb-4">About the Authors</h4>
+                {% assign speaker = site.data.speakers | where: "talk_num", page.talk_number %}
+                {% for member in speaker %}
+                <a href="{{ member.link }}" target="_blank">
+                    <img src="/images/talks/{{ member.photo }}" alt="{{ member.name }}" class="img-fluid mb-3"
+                        style="width: 150px; height: 200px; object-fit: cover; border-radius: 0.5em;">
+                </a>
+                <p class="font-weight-bold">{{ member.name }}<br />
+                    <span class="text-muted">{{ member.role }}</span>
+                </p>
+                <p class="bio" style="font-size: 0.8em;">{{ member.bio }}</p>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    {% for inst in member.institution %}
+                    <a href="{{ inst.link }}" target="_blank"
+                        style="{% if forloop.last %}margin-left: auto;{% endif %}">
+                        <img src="/images/institutions/{{ inst.image }}" alt="{{ inst.name }}"
+                            style="max-height: 2em; object-fit: contain; margin-right: 0.5em;" />
+                    </a>
+                    {% endfor %}
+                </div>
+                <hr />
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

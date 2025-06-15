@@ -509,6 +509,14 @@
   - last_name: Mei
     first_name: Leon
     institution: Leiden University Medical Center
+  
+  - last_name: Lutz
+    first_name: Kristen
+    institution: SURF
+
+  - last_name: Loffredo
+    first_name: Layla
+    institution: SURF
 
 
 - country: Pakistan
@@ -760,6 +768,11 @@
     first_name: Leandro
     institution: Science and Technology Facilities Council 
     link: https://leandro-liborio.github.io/
+
+  - last_name: Alvarez-Jarreta
+    first_name: Jorge
+    institution: EMBL-EBI
+    link: https://www.ebi.ac.uk/people/person/jorge-alvarez-jarreta/
 
 
 - country: United States
@@ -1266,6 +1279,11 @@
     first_name: Woong
     institution: Oak Ridge National Laboratory
     link: https://woongshin.com
+
+  - last_name: Papadimitriou
+    first_name: George
+    institution: Apple
+    link: http://georgpap.com/
 
 # - last_name:
 #   first_name:

@@ -1,71 +1,25 @@
 ---
-layout: page
+layout: talk
 title: "Automating Scientific Insights at the Advanced Photon Source"
 subtitle: "High-Performance Workflows for Analyzing Experimental Data"
 authors: Hannah Parraga (Argonne National Laboratory)
 event_date: June 11, 2025
 times: 11am-11.30 PST / 2pm-2.30 EST / 20:00-20:30 CEST
 talk_number: 3
-given: false
+given: true
 image: /images/talks/parraga-banner.jpg
+presentation: /files/talks/Parraga_workflowsTalk.pdf
+video: https://www.youtube.com/embed/hbmlTT9lUtY?si=UnEC_oG9CZD4nRG8
 ---
 
-<div class="container" data-aos="fade-up" style="padding: 3em 0;">
-    <div class="row">
-        <div class="col-lg-8 wg text-center">
-            <h2 class="mb-4">{{page.title}}</h2>
-            {% if page.subtitle %}
-                <h4 class="text-center" style="font-style: italic; font-weight: 500;">
-                {{ page.subtitle }}
-                </h4>
-            {% endif %}
-            <p class="text-center" style="font-size: 1.1em; font-weight: 500;">
-                {{ page.authors }}
-            </p>
-
-            <p class="text-center text-muted" style="font-size: 1em;">
-                {{ page.event_date }}<br />{{ page.times }}
-            </p>
-
-            <p class="mb-3" style="text-align: left;">
-                This talk will explore how reusable workflows developed at the
-                Advanced Photon Source simplify the analysis of experimental data
-                by harnessing the computational power of HPC systems at ALCF and
-                NERSC. By automating data processing and integrating these
-                resources, the workflows provide an accessible and efficient
-                platform for researchers. These tools enhance productivity
-                and facilitate collaboration across various beamlines, enabling
-                researchers to focus on scientific discovery while overcoming
-                the challenges of complex data analysis.
-            </p>
-            <a href="https://docs.google.com/forms/d/1XTJFRJ5Ivu2-Z-i9dnq2umv-OuE2UlVreea_dLawd2c"
-                target="_blank" class="btn btn-primary mt-3 py-3 px-5">Register</a>
-        </div>
-
-        <div class="col-lg-4">
-            <div class="blog-sidbar">
-                <h4 class="mb-4">About the Authors</h4>
-                {% assign speaker = site.data.speakers | where: "talk_num", page.talk_number %}
-                {% for member in speaker %}
-                <a href="{{ member.link }}" target="_blank">
-                    <img src="/images/talks/{{ member.photo }}" alt="{{ member.name }}" class="img-fluid mb-3"
-                        style="width: 150px; height: 200px; object-fit: cover; border-radius: 0.5em;">
-                </a>
-                <p class="font-weight-bold">{{ member.name }}<br />
-                    <span class="text-muted">{{ member.role }}</span>
-                </p>
-                <p class="bio" style="font-size: 0.8em;">{{ member.bio }}</p>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    {% for inst in member.institution %}
-                      <a href="{{ inst.link }}" target="_blank" style="{% if forloop.last %}margin-left: auto;{% endif %}">
-                        <img src="/images/institutions/{{ inst.image }}" alt="{{ inst.name }}"
-                          style="max-height: 2em; object-fit: contain; margin-right: 0.5em;" />
-                      </a>
-                    {% endfor %}
-                  </div>
-                <hr />
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
+<p class="mb-3" style="text-align: left;">
+    This talk will explore how reusable workflows developed at the
+    Advanced Photon Source simplify the analysis of experimental data
+    by harnessing the computational power of HPC systems at ALCF and
+    NERSC. By automating data processing and integrating these
+    resources, the workflows provide an accessible and efficient
+    platform for researchers. These tools enhance productivity
+    and facilitate collaboration across various beamlines, enabling
+    researchers to focus on scientific discovery while overcoming
+    the challenges of complex data analysis.
+</p>

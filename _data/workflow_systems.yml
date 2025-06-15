@@ -1,47 +1,211 @@
-# - type: github
-#   organization: workflowscommunity
-#   repository: workflow-system-test-repo
-
 - type: github
   organization: Parsl
   repository: parsl
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Sub-workflows"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Static"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["Streaming", "File-based"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring"]
+    extensions: ["Replicated Storage", "Dynamic Parallelization", "Cloud/Grid Support"]
 
 - type: github
   organization: nextflow-io
   repository: nextflow
   metadata: docs
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Sub-workflows"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["Streaming", "File-based"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Replicated Storage", "Container/Cloud Support", "HPC Execution"]
 
 - type: github
   organization: pegasus-isi
   repository: pegasus
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Sub-workflows", "Executables"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema", "API"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Static"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Replicated Storage", "Multi-level Scheduling"]
 
 - type: github
   organization: cooperative-computing-lab
   repository: cctools
   metadata: makeflow/.wci.yml
   name: makeflow
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Sub-workflows"]
+      Coupling: ["Loose"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Standard (Make)"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Static"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared", "Replicated"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Distributed Storage", "HPC Execution"]
 
 - type: github
   organization: cooperative-computing-lab
   repository: cctools
   metadata: taskvine/.wci.yml
   name: taskvine
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Functions", "Executables"]
+      Coupling: ["Loose"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Intermediate"]
+      Modularity: ["Flat"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Resource Manager"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared", "Distributed", "Replicated"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Serverless", "Autoscaling", "HPC Execution", "Recoverable Storage"]
 
 - type: github
   organization: bsc-wdc
   repository: compss
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Functions", "Sub-workflows", "Executables"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Intermediate"]
+      Modularity: ["Flat", "Hierarchical"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Resource Manager", "Serverless"]
+    data_management:
+      Transport: ["Streaming", "File-based"]
+      Storage: ["Local", "Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Adaptive Resource Allocation", "HPC Scalable", "Replicated Storage"]
 
 - type: github
   organization: swift-lang
   repository: swift-t
+  metadata: .wci.yml
+  terminology:
+    characteristics:
+      Flow: ["Task", "Data"]
+      Granularity: ["Functions"]
+      Coupling: ["Tight"]
+      Dynamicity: ["Branches", "Recursion"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema"]
+      Abstraction: ["High-level"]
+      Modularity: ["Flat"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Resource Manager"]
+    data_management:
+      Transport: ["Streaming", "File-based"]
+      Storage: ["Shared"]
+    metadata: ["Anomaly Detection", "Monitoring"]
+    extensions: ["Local Storage", "AI/ML Control", "Parallel Tasks"]
 
 - type: github
   organization: radical-cybertools
   repository: radical.entk
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Functions"]
+      Coupling: ["Tight"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Static"]
+      Execution: ["Resource Manager"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance", "Metadata"]
+    extensions: ["Replicated Storage", "Scalable"]
 
 - type: github
   organization: LLNL
   repository: merlin
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Sub-workflows"]
+      Coupling: ["Loose"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema"]
+      Abstraction: ["Intermediate"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Static"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared", "Distributed", "Replicated"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Cloud-native Support"]
 
 - type: github
   organization: LLNL
@@ -50,14 +214,71 @@
 - type: github
   organization: galaxyproject
   repository: galaxy
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Sub-workflows", "Executables"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["GUI", "Ad-hoc Schema"]
+      Abstraction: ["Concrete"]
+      Modularity: ["Flat"]
+    orchestration:
+      Planning: ["Event-Driven"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["Streaming"]
+      Storage: ["Shared"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["External Tools", "Execution API"]
 
 - type: github
   organization: snakemake
   repository: snakemake
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Sub-workflows", "Executables", "Functions"]
+      Coupling: ["Loose", "Tight"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Flat", "Hierarchical"]
+    orchestration:
+      Planning: ["Static", "Dynamic", "Event-driven"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Plugins", "Scripting integration", "Software deployment integration", "Interactive reporting"]
 
 - type: github
   organization: materialsproject
   repository: fireworks
+  terminology:
+    characteristics:
+      Flow: ["Task"]
+      Granularity: ["Sub-workflows"]
+      Coupling: ["Tight"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API", "Ad-hoc Schema"]
+      Abstraction: ["Intermediate"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Resource Manager"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared", "Replicated"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Multi-platform execution"]
 
 - type: github
   organization: materialsproject
@@ -70,14 +291,90 @@
 - type: github
   organization: dask
   repository: dask
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Executables"]
+      Coupling: ["Tight"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Concrete"]
+      Modularity: ["Flat"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["Streaming"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring", "Metadata"]
+    extensions: ["Python Libraries", "Cluster Management", "GPU Accel."]
 
 - type: github
   organization: mlflow
   repository: mlflow
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Executables"]
+      Coupling: ["Loose"]
+      Domain: ["Specific"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Intermediate"]
+      Modularity: ["Flat"]
+    orchestration:
+      Planning: ["Static"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["Streaming", "File-based"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Monitoring"]
 
 - type: github
-  organization: common-workflow-language
-  repository: common-workflow-language
+  organization: DataBiosphere
+  repository: toil
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Sub-workflows"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Standard (CWL/WDL)"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Static"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["Streaming", "File-based"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring", "Provenance"]
+    extensions: ["Replicated storage", "Multi-Cloud Support"]
+
+- type: github
+  organization: globus
+  repository: globus-compute
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Functions", "Executables"]
+      Coupling: ["Loose"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Resource Manager", "Serverless"]
+    data_management:
+      Transport: ["Streaming", "File-based"]
+      Storage: ["Shared"]
+    metadata: ["Anomaly Detection", "Monitoring"]
+    extensions: ["Distributed Storage"]
 
 - type: github
   organization: esipfed
@@ -86,16 +383,73 @@
 - type: github
   organization: Apollo-Core
   repository: EE-Demo
+  terminology:
+    characteristics:
+      Flow: ["Task", "Data", "Iterative"]
+      Granularity: ["Functions", "Sub-workflows"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Resource Manager", "Serverless"]
+    data_management:
+      Transport: ["Streaming"]
+      Storage: ["Distributed"]
+    metadata: ["Monitoring"]
+    extensions: ["Container/Serverless", "Multi-cloud", "Edge/Cloud", "Multi-objective Scheduling"]
 
 - type: github
   organization: aiidateam
   repository: aiida-core
   metadata: docs
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Functions", "Sub-workflows", "Executables"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches", "Runtime Intervention"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Intermediate"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared"]
+    metadata: ["Anomaly Detection", "Provenance"]
+    extensions: ["Plugins", "Caching", "Fault Tolerance", "HPC Execution"]
 
 - type: github
   organization: alpha-unito
   repository: streamflow
   metadata: docs
+  terminology:
+    characteristics:
+      Flow: ["Task", "Data", "Iterative"]
+      Granularity: ["Sub-workflows", "Executables"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Standard (CWL)"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Runner", "Resource Manager"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Distributed"]
+    metadata: ["Anomaly Detection", "Provenance"]
+    extensions: ["Replicated Storage", "Cloud Integration"]
 
 - type: github
   organization: scipipe
@@ -146,6 +500,25 @@
 - type: github
   organization: cylc
   repository: cylc-flow 
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Sub-workflows", "Executables"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches", "Runtime Intervention"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema", "API/Templating"]
+      Abstraction: ["Concrete"]
+      Modularity: ["Flat", "Hierarchical"]
+    orchestration:
+      Planning: ["Static", "Event-driven"]
+      Execution: ["Runner", "Resource Manager"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared"]
+    metadata: ["Anomaly Detection", "Provenance", "Monitoring"]
+    extensions: ["HPC Execution", "Plugins", "Config Templating"]
 
 #- type: gitlab
 #  namespace: workflow/ewoks
@@ -156,3 +529,25 @@
   distribution: ewoks
   avatar: https://ewoks.esrf.fr/en/latest/_static/ewoks.png
   website: https://ewoks.esrf.fr/
+
+- type: github
+  organization: hyperflow-wms
+  repository: hyperflow
+  terminology:
+    characteristics:
+      Flow: ["Data"]
+      Granularity: ["Functions", "Executables"]
+      Coupling: ["Loose"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema"]
+      Abstraction: ["Intermediate"]
+      Modularity: ["Flat"]
+    orchestration:
+      Planning: ["Static", "Dynamic"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["Streaming"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Provenance"]
+    extensions: ["Replicated Storage", "Cloud Integration", "Scalability"]
