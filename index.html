@@ -50,7 +50,7 @@ permalink: /
             <div class="col-lg-3">
                 <!-- WORKSHOP -->
                 <article>
-                    {% assign workshops = site.workshops | sort: 'order' | reverse %}
+                    {% assign workshops = site.workshops | sort: 'order' %}
                     {% for w in workshops limit: 1 %}
                     <div class="post-img">
                         <img src="{{w.image}}" alt="" class="img-fluid">
