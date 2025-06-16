@@ -13,7 +13,7 @@
       Abstraction: ["Abstract"]
       Modularity: ["Hierarchical"]
     orchestration:
-      Planning: ["Static"]
+      Planning: ["Dynamic"]
       Execution: ["Runner"]
     data_management:
       Transport: ["Streaming", "File-based"]
