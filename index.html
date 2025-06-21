@@ -50,7 +50,7 @@ permalink: /
             <div class="col-lg-3">
                 <!-- WORKSHOP -->
                 <article>
-                    {% assign workshops = site.workshops | sort: 'order' %}
+                    {% assign workshops = site.workshops | sort: 'event_date' %}
                     {% for w in workshops limit: 1 %}
                     <div class="post-img">
                         <img src="{{w.image}}" alt="" class="img-fluid">
@@ -63,7 +63,7 @@ permalink: /
                         <div class="post-meta">
                             <p class="post-author">{{ w.subtitle }}</p>
                             <p class="post-date">
-                                <time datetime="2022-01-01">{{ w.event_date }}</time>
+                                <time datetime="2022-01-01">{{ w.event_date | date: "%B %d, %Y" }}</time>
                             </p>
                         </div>
                     </div>

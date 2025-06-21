@@ -13,7 +13,7 @@ permalink: /workshops
 <section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
     <div class="container" data-aos="fade-up">
         <div data-aos="fade-up" data-aos-delay="100">
-            {% assign workshops = site.workshops | sort: 'order' | reverse %}
+            {% assign workshops = site.workshops | sort: 'event_date' | reverse %}
             {% for w in workshops %}
             <div class="swiper-slide">
                 <div class="testimonial-wrap">
