@@ -1,136 +1,104 @@
 ---
-layout: page
+layout: workshop
 title: Workshop on Harmonizing Python Workflows
 subtitle:
 event_date: 2025-09-15
 location: Chicago, IL, USA
 times: TBA
-image: /images/workshops/wisdom-2025.png
+image: 
+in_conjunction_with: /images/workshops/escience-2025.png
+organizers:
+    - name: Douglas Thain (U Notre Dame)
+      image: https://engineering.nd.edu/wp-content/uploads/2020/06/Thain-Douglas-HS-800x800.jpg
+      desc: TaskVine Project
+      desc_link: https://ccl.cse.nd.edu/software/taskvine/
+    - name: Kyle Chard (U Chicago)
+      image: https://cs.uchicago.edu/wp-content/uploads/2020/02/chard-head.jpeg
+      desc: Parsl Project
+      desc_link: https://parsl-project.org/
+    - name: Shantenu Jha (Rutgers/PPPL)
+      image: https://www.pppl.gov/sites/g/files/toruqf286/files/styles/1x1_750w_750h/public/2024-05/20240514shantenu_jha5k6a9660_2.jpg?h=d55ea86e&itok=9VgfaYhG
+      desc: RADICAL CyberTools
+      desc_link: https://radical-cybertools.github.io/
+    - name: Rafael Ferreira da Silva (ORNL)
+      image: https://rafaelsilva.com/assets/images/2022-rafael-ferreira-da-silva-high-resolution.jpg
+      desc: Workflows Community Initiative
+      desc_link: https://workflows.community
+nsf: "This work is supported by National Science Foundation grant TIP-2346119: POSE Phase I: HARMONY: Harmonizing the High Performance Python Workflow Ecosystem."
 ---
 
-<div class="container" data-aos="fade-up" style="padding: 3em 0;">
-    <div class="row mb-5">
-        <div class="col-lg-8 wg">
-            <h2 class="text-center">{{page.subtitle}}<br /><span
-                    style="font-size: 0.8em; font-weight: bold;">{{page.title}}</span></h2>
-            <p class="text-center mb-5" style="font-weight: bold;">
-                {{page.event_date | date: "%A - %B %d, %Y" }}<br />
-                {{page.location}}<br />
-                {{page.time}}<br />
-                <!-- Hall F - 2nd floor -->
-            </p>
-            <p>An increasing number of large scale scientific workflow applications are expressed or managed using the
-                Python language. Such workflows consist of large graphs of complex tasks combining data gathering, data
-                processing, simulation, training, inference, validation, and visualization. While there have been many
-                successes, large scale deployments still encounter many barriers due to the need to integrate many
-                different technologies: applications, workflow systems, software environments, cluster technologies,
-                interactive notebooks, visualization systems, and more. The <strong>POSE-HARMONY Project</strong> seeks
-                to "harmonize" common practices surrounding Python-based workflows, considering issues such as workflow
-                management, technology integration, software deployment, building and testing, documentation, and other
-                matters of common concern. This workshop will be organized in an interactive manner to enable
-                participants to collectively define the common space of challenges in Python workflow deployment,
-                propose resources and solutions of common interest, and point the way towards a common open source
-                ecosystem.</p>
-            <p>&nbsp;</p>
-            <h3 class="mb-4">Attendees</h3>
-            <p>Workshop registration and attendance is by invitation as part of the POSE-Harmony project, please contact
-                the organizers to request an invitation.</p>
-            <p>&nbsp;</p>
-            <h3 class="mb-4">Agenda <span style="font-weight: normal; font-size: 0.6em;">(tentative)</span></h3>
-            <div class="col-md-12 ftco-animate">
-                <table class="table">
-                    <thead>
-                        <th>Time</th>
-                        <th>Event</th>
-                    </thead>
-                    <tr>
-                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">9:00-9:30am CDT</td>
-                        <td><strong>Welcome and Overview</strong></td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">9:30-9:45am CDT</td>
-                        <td><strong>Meet Your Neighbors</strong></td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">9:45-10:30am CDT</td>
-                        <td><strong>Discussion of Challenges and Report Back</strong></td>
-                    </tr>
-                    <tr style="background-color: #eaeaea;">
-                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">10:30-10:45am CDT</td>
-                        <td>Coffee Break</td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">10:45-12:00pm CDT</td>
-                        <td><strong>Complex Integration Successes and Challenges</strong></td>
-                    </tr>
-                    <tr style="background-color: #eaeaea;">
-                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">12:00-1:00pm CDT</td>
-                        <td>Lunch</td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">1:00-2:00pm CDT</td>
-                        <td><strong>Elements of an Open Source Ecosystem</strong></td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">2:00-3:00pm CDT</td>
-                        <td><strong>Detail Work on New Opportunities</strong></td>
-                    </tr>
-                    <tr style="background-color: #eaeaea;">
-                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">3:00-3:15pm CDT</td>
-                        <td>Coffee Break</td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">3:15-4:00pm CDT</td>
-                        <td><strong>Building an Open Source Ecosystem</strong></td>
-                    </tr>
-                    <tr>
-                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">4:00-4:30pm CDT</td>
-                        <td><strong>Next Steps and Final Report</strong></td>
-                    </tr>
-                </table>
-            </div>
-            <p>&nbsp;</p>
-            <p>Attendees are encouraged to stay and participate in the full <a
-                    href="https://www.escience-conference.org/2025/" target="_blank">IEEE Conference on eScience</a>
-                following this workshop.</p>
-            <p>&nbsp;</p>
-        </div>
-
-        <div class="col-lg-4">
-            <div class="blog-sidbar">
-                <p class="text-center">
-                    In conjunction with:<br />
-                    <img src="https://www.escience-conference.org/2025/images/escience-dark-logo.png"
-                        style="max-width: 20em; margin-top: 1em; margin-bottom: 1em;" />
-                </p>
-
-                <hr />
-                <br />
-                <h4 class="mb-3">Organizers</h4>
-                <img src="https://engineering.nd.edu/wp-content/uploads/2020/06/Thain-Douglas-HS-800x800.jpg"
-                    style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em; float: left;" />
-                Douglas Thain (U Notre Dame)<br /><a href="https://ccl.cse.nd.edu/software/taskvine/"
-                    target="_blank">TaskVine Project</a><br /><br />
-                <img src="https://cs.uchicago.edu/wp-content/uploads/2020/02/chard-head.jpeg"
-                    style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em; float: left;" />
-                Kyle Chard (U Chicago)<br /><a href="https://parsl-project.org/" target="_blank">Parsl
-                    Project</a><br /><br />
-                <img src="https://www.pppl.gov/sites/g/files/toruqf286/files/styles/1x1_750w_750h/public/2024-05/20240514shantenu_jha5k6a9660_2.jpg?h=d55ea86e&itok=9VgfaYhG"
-                    style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em; float: left;" />
-                Shantenu Jha (Rutgers/PPPL)<br /><a href="https://radical-cybertools.github.io/" target="_blank">RADICAL
-                    CyberTools</a><br /><br />
-                <img src="https://rafaelsilva.com/assets/images/2022-rafael-ferreira-da-silva-high-resolution.jpg"
-                    style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em; float: left;" />
-                Rafael Ferreira da Silva (ORNL)<br />
-                <a href="https://workflows.community">Workflows Community Initiative</a><br /><br />
-                <hr />
-                <br />
-                <div style="font-size: 0.8em;">
-                    <img src="/images/workshops/nsf-logo.png" style="max-width: 5em; float: left; margin-right: 1em;" />
-                    This work is supported by National Science Foundation grant TIP-2346119: POSE Phase I: HARMONY:
-                    Harmonizing the High Performance Python Workflow Ecosystem<br /><br />
-                </div>
-            </div>
-        </div>
-    </div>
+<p>An increasing number of large scale scientific workflow applications are expressed or managed using the
+    Python language. Such workflows consist of large graphs of complex tasks combining data gathering, data
+    processing, simulation, training, inference, validation, and visualization. While there have been many
+    successes, large scale deployments still encounter many barriers due to the need to integrate many
+    different technologies: applications, workflow systems, software environments, cluster technologies,
+    interactive notebooks, visualization systems, and more. The <strong>POSE-HARMONY Project</strong> seeks
+    to "harmonize" common practices surrounding Python-based workflows, considering issues such as workflow
+    management, technology integration, software deployment, building and testing, documentation, and other
+    matters of common concern. This workshop will be organized in an interactive manner to enable
+    participants to collectively define the common space of challenges in Python workflow deployment,
+    propose resources and solutions of common interest, and point the way towards a common open source
+    ecosystem.</p>
+<p>&nbsp;</p>
+<h3 class="mb-4">Attendees</h3>
+<p>Workshop registration and attendance is by invitation as part of the POSE-Harmony project, please contact
+    the organizers to request an invitation.</p>
+<p>&nbsp;</p>
+<h3 class="mb-4">Agenda <span style="font-weight: normal; font-size: 0.6em;">(tentative)</span></h3>
+<div class="col-md-12 ftco-animate">
+    <table class="table">
+        <thead>
+            <th>Time</th>
+            <th>Event</th>
+        </thead>
+        <tr>
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">9:00-9:30am CDT</td>
+            <td><strong>Welcome and Overview</strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">9:30-9:45am CDT</td>
+            <td><strong>Meet Your Neighbors</strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">9:45-10:30am CDT</td>
+            <td><strong>Discussion of Challenges and Report Back</strong></td>
+        </tr>
+        <tr style="background-color: #eaeaea;">
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">10:30-10:45am CDT</td>
+            <td>Coffee Break</td>
+        </tr>
+        <tr>
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">10:45-12:00pm CDT</td>
+            <td><strong>Complex Integration Successes and Challenges</strong></td>
+        </tr>
+        <tr style="background-color: #eaeaea;">
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">12:00-1:00pm CDT</td>
+            <td>Lunch</td>
+        </tr>
+        <tr>
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">1:00-2:00pm CDT</td>
+            <td><strong>Elements of an Open Source Ecosystem</strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">2:00-3:00pm CDT</td>
+            <td><strong>Detail Work on New Opportunities</strong></td>
+        </tr>
+        <tr style="background-color: #eaeaea;">
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">3:00-3:15pm CDT</td>
+            <td>Coffee Break</td>
+        </tr>
+        <tr>
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">3:15-4:00pm CDT</td>
+            <td><strong>Building an Open Source Ecosystem</strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">4:00-4:30pm CDT</td>
+            <td><strong>Next Steps and Final Report</strong></td>
+        </tr>
+    </table>
 </div>
+<p>&nbsp;</p>
+<p>Attendees are encouraged to stay and participate in the full <a
+        href="https://www.escience-conference.org/2025/" target="_blank">IEEE Conference on eScience</a>
+    following this workshop.</p>
+<p>&nbsp;</p>
