@@ -48,6 +48,10 @@
     first_name: Kevin
     institution: Queensland University of Technology
 
+  - last_name: Russel
+    first_name: ABM
+    institution: Monash University
+
 
 - country: Austria
   entries:
