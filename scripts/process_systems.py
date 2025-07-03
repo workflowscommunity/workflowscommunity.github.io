@@ -217,8 +217,11 @@ def _process_github_system(definition: GitHubDefinition) -> SystemMetadata:
     raw_url = f"https://raw.githubusercontent.com/{definition.organization}/{definition.repository}/{model.default_branch}/{metadata_path}"
     r = requests.get(raw_url, headers=headers)
     if r.ok:
-        metadata = yaml.safe_load(r.text)
-        _apply_wci_metadata(metadata, model)
+        try:
+            metadata = yaml.safe_load(r.text)
+            _apply_wci_metadata(metadata, model)
+        except yaml.scanner.ScannerError as e:
+            print(f"Error parsing yaml file: {e}")
 
     return model
 
