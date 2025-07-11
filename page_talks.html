@@ -12,7 +12,7 @@ permalink: /talks
             </p>
 
             <section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
-                <h3 class="mb-4">Upcoming Talk</h3>
+                <h3 class="mb-4">Upcoming Talks</h3>
                 {% assign upcoming = site.talks | where: "given", false | sort: 'talk_number' | reverse %}
                 {% for talk in upcoming %}
                   {% include talk_card.html talk=talk %}
