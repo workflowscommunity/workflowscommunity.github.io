@@ -26,7 +26,8 @@ permalink: /
             <div class="col-lg-3">
                 <!-- COMMUNITY TALKS -->
                 <article>
-                    {% assign talks = site.talks | sort: 'order' | reverse %}
+                    <!-- {% assign talks = site.talks | sort: 'order' | reverse %} -->
+                    {% assign talks = site.talks | where: "talk_number", "4" %}
                     {% for talk in talks limit: 1 %}
                     <div class="post-img">
                         <img src="/images/talks/banner.png" alt="" class="img-fluid">
