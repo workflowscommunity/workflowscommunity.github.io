@@ -75,3 +75,18 @@
   talk_num: 4
   photo: gustafsson.png
   bio: "Johan Gustafsson is the Research Community Engagement Lead (Proteins / Metabolites / Workflows) at the Australian BioCommons, University of Melbourne. The BioCommons is a national digital infrastructure initiative supporting Australian life sciences research."
+
+- name: Debbie Bard
+  role: NERSC Science Engagement and Workflows Department Head
+  institution:
+    - name: National Energy Research Scientific Computing Center
+      link: https://www.nersc.gov/
+      image: nersc.png
+    - name: Lawrence Berkeley National Laboratory
+      link: https://www.lbl.gov/
+      image: lbnl.png  
+  country: us
+  link: https://www.nersc.gov/about/nersc-staff/debbie-bard
+  talk_num: 5
+  photo: bard.jpg
+  bio: "Debbie Bard is a physicist and data scientist with 20 years experience in scientific computing, working in particle physics, cosmology and HPC. She leads the Science Engagement and Workflows department at the National Energy Research Scientific Computing center (NERSC), responsible for supporting and engaging NERSC’s 11,000 users. She leads the Superfacility initiative at Lawrence Berkeley National Lab, and also leads the DOE’s Integrated Research infrastructure program, developing an ecosystem to integrate experimental facilities and HPC."
