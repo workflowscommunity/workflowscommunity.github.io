@@ -43,8 +43,7 @@ image: "https://workflows.community/images/wci-default-card.png"
                 </div>
                 <div class="col-lg-5 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
                     <div class="row" style="border: 3px solid #fff; border-radius: .5em">
-                        <!-- {% assign talks = site.talks | sort: 'order' | reverse %} -->
-                        {% assign talks = site.talks | where: "talk_number", "4" %}
+                        {% assign talks = site.talks | sort: 'order' | reverse %}
                         {% for talk in talks limit: 1 %}
                         <div class="col-lg-5" style="padding: 0; background-color: rgba(109, 84, 170, 0.5);">
                             <a href="/talks"><img src="/images/talks/banner.png" width="100%" style="border-radius: 0.5em;" /></a>
