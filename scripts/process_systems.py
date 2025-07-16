@@ -4,16 +4,16 @@
 # Copyright (c) 2023-2025 Workflows Community Initiative.
 
 import datetime
+import markdown
+import re
+import requests
 import os
+import yaml
 from pathlib import Path
 from pprint import pprint
+from pydantic import BaseModel
 from string import Template
 from typing import Literal
-
-import markdown
-import requests
-import yaml
-from pydantic import BaseModel
 
 
 class SystemMetadata(BaseModel, extra="ignore"):
@@ -54,7 +54,6 @@ class SystemMetadata(BaseModel, extra="ignore"):
 
 class SystemDefinition(BaseModel, extra="allow"):
     """Extra keys are passed to `SystemMetadata`."""
-
     type: str
     metadata: str = ""
 
@@ -85,6 +84,10 @@ def main():
     output_dir = Path(__file__).parent.parent / "_systems"
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    # Parse GitHub
+    github_systems = [GitHubDefinition(**s) for s in systems if s["type"] == "github"]
+    github_metadata_map = _fetch_github_metadata_batch(github_systems)
+
     for system in systems:
         print()
         print(system)
@@ -92,7 +95,8 @@ def main():
         # Get workflow system data from the sources
         if system["type"] == "github":
             definition = GitHubDefinition(**system)
-            model = _process_github_system(definition)
+            gh_data = github_metadata_map[f"{re.sub(r'[-.]', '_', system['repository'])}"]
+            model = _convert_github_graphql_to_model(definition, gh_data)
         elif system["type"] == "gitlab":
             definition = GitLabDefinition(**system)
             model = _process_gitlab_system(definition)
@@ -114,7 +118,46 @@ def main():
         _save_system_html(model, template_path, output_path)
 
 
-def _process_github_system(definition: GitHubDefinition) -> SystemMetadata:
+def _fetch_github_metadata_batch(repos: list[GitHubDefinition]) -> dict[str, dict]:
+    token = os.environ.get("JEKYLL_TOKEN")
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json"
+    }
+    endpoint = "https://api.github.com/graphql"
+
+    query_parts = []
+    for i, repo in enumerate(repos):
+        query_parts.append(f'''
+        {re.sub(r"[-.]", "_", repo.repository)}: repository(owner: "{repo.organization}", name: "{repo.repository}") {{
+            name
+            description
+            url
+            homepageUrl
+            defaultBranchRef {{ name }}
+            forkCount
+            stargazerCount
+            issues(states: OPEN) {{ totalCount }}
+            licenseInfo {{ spdxId }}
+            updatedAt
+            primaryLanguage {{ name }}
+            owner {{ avatarUrl }}
+            repositoryTopics(first: 10) {{
+                nodes {{ topic {{ name }} }}
+            }}
+        }}
+        ''')
+
+    query = "query {\n" + "\n".join(query_parts) + "\n}"
+    response = requests.post(endpoint, headers=headers, json={"query": query})
+    response.raise_for_status()
+    return response.json()["data"]
+
+
+def _convert_github_graphql_to_model(defn: GitHubDefinition, data: dict) -> SystemMetadata:
+    updated_at = datetime.datetime.fromisoformat(data["updatedAt"].replace("Z", "+00:00"))
+    topics = [t["topic"]["name"] for t in data["repositoryTopics"]["nodes"]]
+
     access_token = os.environ.get("JEKYLL_TOKEN")
     if access_token:
         headers = {
@@ -128,20 +171,8 @@ def _process_github_system(definition: GitHubDefinition) -> SystemMetadata:
             "Accept": "application/vnd.github.mercy-preview+json",
         }
 
-    url = f"https://api.github.com/repos/{definition.organization}/{definition.repository}"
-    r = requests.get(url)
-    r.raise_for_status()
-    repo_data = r.json()
-
-    updated_at = datetime.datetime.strptime(
-        repo_data["updated_at"], "%Y-%m-%dT%H:%M:%SZ"
-    )
-
-    topics = _parse_topics(repo_data.get("topics", []))
-    tags = _parse_tags(repo_data.get("topics", []))
-
     # Releases
-    r = requests.get(repo_data["releases_url"].replace("{/id}", ""), headers=headers)
+    r = requests.get(f"https://api.github.com/repos/{defn.organization}/{defn.repository}/releases", headers=headers)
     r.raise_for_status()
     release_data = r.json()
     if release_data:
@@ -157,7 +188,7 @@ def _process_github_system(definition: GitHubDefinition) -> SystemMetadata:
         release_url = ""
 
     # Contributors
-    r = requests.get(repo_data["contributors_url"], headers=headers)
+    r = requests.get(f"https://api.github.com/repos/{defn.organization}/{defn.repository}/contributors", headers=headers)
     r.raise_for_status()
     contributors_data = r.json()
     contributors = len(contributors_data)
@@ -169,23 +200,17 @@ def _process_github_system(definition: GitHubDefinition) -> SystemMetadata:
     )
 
     model = SystemMetadata(
-        name=definition.repository,
-        title=repo_data["name"],
-        subtitle=repo_data["description"],
-        description=repo_data["description"],
-        repository_url=(
-            f"https://github.com/{definition.organization}/{definition.repository}"
-        ),
-        repository=definition.repository,
-        default_branch=repo_data["default_branch"],
-        license=(
-            repo_data["license"]["spdx_id"]
-            if repo_data["license"]
-            else "No license available"
-        ),
-        issues=repo_data["open_issues"],
-        forks=repo_data["forks"],
-        stargazers=repo_data["stargazers_count"],
+        name=defn.repository,
+        title=data["name"],
+        subtitle=data["description"],
+        description=data["description"],
+        repository_url=data["url"],
+        repository=defn.repository,
+        default_branch=data["defaultBranchRef"]["name"] if data["defaultBranchRef"] else "main",
+        license=data["licenseInfo"]["spdxId"] if data["licenseInfo"] else "No license available",
+        issues=data["issues"]["totalCount"],
+        forks=data["forkCount"],
+        stargazers=data["stargazerCount"],
         contributors=contributors,
         contributors_list=contributors_list,
         release="",
@@ -196,25 +221,21 @@ def _process_github_system(definition: GitHubDefinition) -> SystemMetadata:
         month=updated_at.strftime("%b"),
         monthn=updated_at.strftime("%m"),
         day=updated_at.strftime("%d"),
-        tags=tags,
-        topics=topics,
-        avatar=repo_data["owner"]["avatar_url"],
-        website=repo_data["homepage"] or "",
-        language=repo_data["language"] or "",
-        twitter="",
-        youtube="",
-        doc_general="",
-        doc_installation="",
-        doc_tutorial="",
-        execution_environment="",
-        wci_metadata="false",
+        tags=_parse_tags(topics),
+        topics=_parse_topics(topics),
+        avatar=data["owner"]["avatarUrl"],
+        website=data["homepageUrl"] or "",
+        language=data["primaryLanguage"]["name"] if data["primaryLanguage"] else "",
+        twitter="", youtube="",
+        doc_general="", doc_installation="", doc_tutorial="",
+        execution_environment="", wci_metadata="false"
     )
 
     # Try loading WCI metadata from .wci.yml
-    metadata_path = definition.metadata or ".wci.yml"
+    metadata_path = defn.metadata or ".wci.yml"
     if ".wci.yml" not in metadata_path:
         metadata_path = f"{metadata_path}/.wci.yml"
-    raw_url = f"https://raw.githubusercontent.com/{definition.organization}/{definition.repository}/{model.default_branch}/{metadata_path}"
+    raw_url = f"https://raw.githubusercontent.com/{defn.organization}/{defn.repository}/{model.default_branch}/{metadata_path}"
     r = requests.get(raw_url, headers=headers)
     if r.ok:
         try:
