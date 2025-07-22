@@ -95,14 +95,25 @@ This group is gathering community resources and literature on FAIR Computational
 
 ## Cite FAIR Computational Workflows
 
-Sean R. Wilkinson, Meznah Aloqalaa, Khalid Belhajjame, Michael R. Crusoe, Bruno de Paula Kinoshita, Luiz Gadelha, Daniel Garijo, Ove Johan Ragnar Gustafsson, Nick Juty, Sehrish Kanwal, Farah Zaib Khan, Johannes Köster, Karsten Peters-von Gehlen, Line Pouchard, Randy K. Rannow, Stian Soiland-Reyes, Nicola Soranzo, Shoaib Sufi, Ziheng Sun, Baiba Vilne, Merridee A. Wouters, Denis Yuen, Carole Goble (2025):  
-[**Applying the FAIR Principles to computational workflows**](https://doi.org/10.1038/s41597-025-04451-9).   
-_Sci Data_ **12**, 328.  
+Sean Wilkinson, Meznah Aloqalaa, Khalid Belhajjame, Michael R. Crusoe, Bruno de Paula Kinoshita, Luiz Gadelha, Daniel Garijo, Ove Johan Ragnar Gustafsson, Nick Juty, Sehrish Kanwal, Farah Zaib Khan, Johannes Köster, Karsten Peters-von Gehlen, Line Pouchard, Randy K. Rannow, Stian Soiland-Reyes, Nicola Soranzo, Shoaib Sufi, Ziheng Sun, Baiba Vilne, Merridee A. Wouters, Denis Yuen, Carole Goble (2025):  
+[**Applying the FAIR Principles to Computational Workflows**](https://doi.org/10.1038/s41597-025-04451-9).  
+_Scientific Data_ **12**:328
 <https://doi.org/10.1038/s41597-025-04451-9>
+
+Ove Johan Ragnar Gustafsson, Sean R. Wilkinson, Finn Bacall, Stian Soiland-Reyes, Simone Leo, Luca Pireddu, Stuart Owen, Nick Juty, José Mª Fernández, Tom Brown, Hervé Ménager, Björn Grüning, Salvador Capella-Gutierrez, Frederik Coppens, Carole Goble (2025):  
+[**WorkflowHub**: a registry for computational workflows](https://doi.org/10.1038/s41597-025-04786-3).  
+_Scientific Data_ **12**:837  
+<https://doi.org/10.1038/s41597-025-04786-3>
+
+Sean R. Wilkinson, Johan Gustafsson, Finn Bacall, Khalid Belhajjame, Salvador Capella, Jose Maria Fernandez Gonzalez, Jacob Fosso Tande, Luiz Gadelha, Daniel Garijo, Patricia Grubel, Bjorn Grüning, Farah Zaib Khan, Sehrish Kanwal, Simone Leo, Stuart Owen, Luca Pireddu, Line Pouchard, Laura Rodríguez-Navas, Beatriz Serrano-Solano, Stian Soiland-Reyes, Baiba Vilne, Alan Williams, Merridee Ann Wouters, Frederik Coppens, Carole Goble (2025):  
+**An Ecosystem of Services for FAIR Computational Workflows**.  
+Book chapter, draft  
+_arXiv_ 2505.15988 [cs.DC]
+<https://doi.org/10.48550/arXiv.2505.15988>
 
 Carole Goble, Sarah Cohen-Boulakia, Stian Soiland-Reyes, Daniel Garijo, Yolanda Gil, Michael R. Crusoe, Kristian Peters, Daniel Schober (2020):  
 [**FAIR Computational Workflows**](https://doi.org/10.1162/dint_a_00033).  
 _Data Intelligence_  **2**(1):108–121  
 <https://doi.org/10.1162/dint_a_00033>
 
-
+_See the [bibliography](bibliography/) for further FAIR Computational Workflow literature_
