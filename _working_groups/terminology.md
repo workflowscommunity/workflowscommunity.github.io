@@ -65,6 +65,10 @@ The Scientific Workflow Systems Terminology Working Group addresses a critical c
 
 To bridge this gap, our working group develops and maintains a standardized terminology framework that enables scientists to systematically characterize, compare, and select workflow management systems based on objective technical criteria aligned with their specific computational needs. Through community-driven collaboration involving workflow system developers, domain scientists, and computing practitioners, we aim to provide a common vocabulary that facilitates informed decision-making, promotes better understanding of system capabilities, and ultimately helps researchers identify the most suitable tools for their scientific endeavors.
 
-#### Products
+#### Outputs
 
-- Suter, F., Coleman, T., Altintas, Í., Badia, R. M., Balis, B., Chard, K., Colonnelli, I., Deelman, E., Tommaso, P. D., Fahringer, T., Goble, C., Jha, S., Katz, D. S., Köster, J., Leser, U., Mehta, K., Oliver, H., Peterson, J.-L., Pizzi, G., Pottier, L., Sirvent, R., Suchyta, E., Thain, D., Wilkinson, S. R., Wozniak, J. M., Ferreira da Silva, R. (2025). <a href="https://arxiv.org/pdf/2506.07838" target="_blank">A Terminology for Scientific Workflow Systems</a>. Future Generation Computer Systems.
+Frédéric Suter, Tainã Coleman, İlkay Altintaş, Rosa M. Badia, Bartosz Balis, Kyle Chard, Iacopo Colonnelli, Ewa Deelman, Paolo Di Tommaso, Thomas Fahringer, Carole Goble, Shantenu Jha, Daniel S. Katz, Johannes Köster, Ulf Leser, Kshitij Mehta, Hilary Oliver, J.-Luc Peterson, Giovanni Pizzi, Loïc Pottier, Raül Sirvent, Eric Suchyta, Douglas Thain, Sean R. Wilkinson, Justin M. Wozniak, Rafael Ferreira da Silva (2025):  
+**A Terminology for Scientific Workflow Systems**.  
+_Future Generation Computer Systems_ **174**:107974 
+<https://doi.org/10.1016/j.future.2025.107974>
+
