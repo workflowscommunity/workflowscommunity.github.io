@@ -384,6 +384,10 @@
     first_name: Sam
     institution: Max-Planck-Institute for sustainable materials
 
+  - last_name: Thomas
+    first_name: Laurent
+    institution: EMBL Heidelberg
+
 
 - country: India
   entries:
