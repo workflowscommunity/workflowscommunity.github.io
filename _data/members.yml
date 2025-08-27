@@ -135,6 +135,11 @@
   - last_name: Souza
     first_name: Fabio
     institution: Petrobras
+  
+  - last_name: Irber
+    first_name: Luiz
+    institution: sourmash.bio
+    link: https://luizirber.org
 
 
 - country: Canada
