@@ -50,8 +50,11 @@ permalink: /
             <div class="col-lg-3">
                 <!-- WORKSHOP -->
                 <article>
+                    {% assign count_events = 0 %}
                     {% assign workshops = site.workshops | sort: 'event_date' %}
-                    {% for w in workshops limit: 1 %}
+                    {% for w in workshops %}
+                    {% capture eventtime %}{{ w.event_date | date: '%s'}}{% endcapture %}
+                    {% if eventtime >= nowunix and count_events < 1 %}
                     <div class="post-img">
                         <img src="{{w.image}}" alt="" class="img-fluid">
                     </div>
@@ -67,6 +70,8 @@ permalink: /
                             </p>
                         </div>
                     </div>
+                    {% assign count_events = count_events | plus: 1 %}
+                    {% endif %}
                     {% endfor %}
                 </article>
             </div>
