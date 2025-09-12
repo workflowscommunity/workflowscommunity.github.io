@@ -169,7 +169,7 @@
   terminology:
     characteristics:
       Flow: ["Task", "Iterative"]
-      Granularity: ["Functions"]
+      Granularity: ["Executables", "Functions"]
       Coupling: ["Tight"]
       Domain: ["Agnostic"]
     composition:
@@ -184,6 +184,29 @@
       Storage: ["Shared", "Distributed"]
     metadata: ["Anomaly Detection", "Monitoring", "Provenance", "Metadata"]
     extensions: ["Replicated Storage", "Scalable"]
+
+- type: github
+  organization: radical-cybertools
+  repository: radical.asyncflow
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Executables", "Functions", "Sub-workflows"]
+      Coupling: ["Loose", "Tight"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["API"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Dynamic"]
+      Execution: ["Resource Manager"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Shared", "Distributed"]
+    metadata: ["Anomaly Detection", "Monitoring", "Metadata"]
+    extensions: ["Replicated Storage", "Scalable", "Plugins", "AsyncIO"]
 
 - type: github
   organization: LLNL
