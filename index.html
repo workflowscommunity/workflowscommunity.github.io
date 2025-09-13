@@ -1,0 +1,1130 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Workflows Community Initiative" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="twitter:title" content="Workflows Community Initiative" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Workflows Community Initiative"},"headline":"Workflows Community Initiative","image":"https://workflows.community/images/wci-default-card.png","name":"Workflows Community Initiative","sameAs":["https://twitter.com/WorkflowsCI"],"url":"/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- <link rel="stylesheet" href="/assets/css/open-iconic-bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/animate.css" />
+<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+<link rel="stylesheet" href="/assets/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="/assets/css/jquery.timepicker.css"> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-white-logo.png" alt="logo">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <!-- <li><a href="/jobs">Jobs</a></li> -->
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <!-- <button id="darkmode-button"><i class="bi bi-moon-fill"></i></button> -->
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row gy-5 aos-init aos-animate">
+                <div class="col-lg-7 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h2 data-aos="fade-up">Elevating community-centered scientific workflow solutions <span>through
+                            collective expertise</span><span class="circle" data-aos="fade-right"
+                            data-aos-delay="800">.</span></h2>
+                    <p data-aos="fade-up" data-aos-delay="400">Our goal is to bring the workflows community together
+                        (users, developers, researchers, and facilities) to provide <strong>community resources and
+                            capabilities</strong> to enable scientists and workflow systems developers to discover
+                        software products, related efforts, events, technical reports, etc. and engage in community-wide
+                        efforts to tackle workflows grand challenges.</p>
+                    <div class="social" data-aos="fade-up" data-aos-delay="600">
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank">
+                            <i class="fab fa-youtube" style="font-size: 1.5em; color: #fff !important"></i>
+                        </a>
+                        <a href="mailto:contact@workflows.community">
+                            <i class="fa fa-envelope" style="font-size: 1.5em; color: #fff !important"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank">
+                            <i class="fab fa-linkedin" style="font-size: 1.5em; color: #fff !important"></i>
+                        </a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank">
+                            <i class="fab fa-slack" style="font-size: 1.5em; color: #fff !important"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <div class="row" style="border: 3px solid #fff; border-radius: .5em">
+                        
+                        
+                        <div class="col-lg-5" style="padding: 0; background-color: rgba(109, 84, 170, 0.5);">
+                            <a href="/talks"><img src="/images/talks/banner.png" width="100%" style="border-radius: 0.5em;" /></a>
+                        </div>
+                        <div class="col-lg-7" style="background-color: rgba(109, 84, 170, 0.5); padding: 1em;">
+                            <strong><a href="/talks/2025_09_24/" style="color: #fff">Teaching workflow systems to new users: why is it so hard?</a></strong><br />
+                            <i style="color: #999">C. Titus Brown (UC Davis)</i><br />
+                            September 24, 2025
+                            <br /><br />
+                            <a href="/talks/2025_09_24/" style="color: #7057AF; background-color: #fff; padding: 0.5em 1em; border-radius: 0.5em;">Learn more ></a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        
+
+
+
+
+
+
+
+<section id="recent-posts" class="recent-posts sections-bg">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+            <h2>What's Happening in the Community</h2>
+            <p>Recent innovations, events, and contributions from workflow practitioners worldwide</p>
+        </div>
+
+        <div class="row gy-4">
+
+            <div class="col-lg-3">
+                <!-- COMMUNITY TALKS -->
+                <article>
+                    
+                    
+                    <div class="post-img">
+                        <img src="/images/talks/banner.png" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">COMMUNITY TALK</p>
+                    <h2 class="title">
+                        <a href="/talks/2025_09_24/">Teaching workflow systems to new users: why is it so hard?</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author">C. Titus Brown (UC Davis)</p>
+                            <p class="post-date">
+                                <time datetime="2022-01-01">September 24, 2025</time>
+                            </p>
+                        </div>
+                    </div>
+                    
+                </article>
+            </div>
+
+            <div class="col-lg-3">
+                <!-- WORKSHOP -->
+                <article>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="post-img">
+                        <img src="/images/workshops/harmony.png" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">WORKSHOP</p>
+                    <h2 class="title">
+                        <a href="/workshops/harmony-2025/">Workshop on Harmonizing Python Workflows</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author"></p>
+                            <p class="post-date">
+                                <time datetime="2022-01-01">September 15, 2025</time>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                </article>
+            </div>
+
+            <!-- <div class="col-lg-3">
+                <!- RECENT SUMMIT ->
+                <article>
+                    
+                    
+                    <div class="post-img">
+                        <img src="/images/summits/wcs-2025-amsterdam.png" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">COMMUNITY SUMMIT</p>
+                    <h2 class="title">
+                        <a href="/summits/2025-amsterdam/">Workflows Community Summit 2025 - Amsterdam</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author">Converging Paradigms for Shaping the Future of Scientific Workflows Across the Computing Continuum</p>
+                            <p class="post-date">
+                                <time datetime="2022-01-01">June 6, 2025</time>
+                            </p>
+                        </div>
+                    </div>
+                    
+                </article>
+            </div> -->
+
+            <div class="col-lg-3">
+                <!-- BOF -->
+                <article>
+                    
+                    
+                    <div class="post-img">
+                        <img src="https://sc25.supercomputing.org/wp-content/uploads/2024/11/Artboard-2.png" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">BOF SESSION</p>
+                    <h2 class="title">
+                        <a href="/bof/sc25/">SC25 BoF</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author">Bridging Intelligent Workflows with Quantum and HPC for Scientific Discovery</p>
+                            <p class="post-date">
+                                <time datetime="2022-01-01">November 18, 2025</time>
+                            </p>
+                        </div>
+                    </div>
+                    
+                </article>
+            </div>
+
+            <div class="col-lg-3">
+                <!-- YOUTUBE -->
+                <article>
+                    <div class="post-img">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?si=ElrjhblSaUsMzOed&amp;list=PLAtmuqHExRvNnGtrqHl1ZXR6ZH37HLfo1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="post-category">MEDIA</p>
+                    <h2 class="title">
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw/" target="_blank">Workflow Innovation in Action</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author">Subscribe to our YouTube channel</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NUMBERS -->
+<div id="stats-counter" class="call-to-action stats-counter section">
+    <div class="container" data-aos="fade-up">
+        <div class="row gy-4 align-items-center">
+            <div class="col-lg-4">
+                <div class="stats-item d-flex flex-column align-items-center">
+                    <span data-purecounter-start="0" data-purecounter-end="278" data-purecounter-duration="5"
+                        class="purecounter" style="font-size: 4em;"></span><br />
+                    <p><span>Members</span> worldwide</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="stats-item d-flex flex-column align-items-center">
+                    <span data-purecounter-start="0" data-purecounter-end="36" data-purecounter-duration="5"
+                        class="purecounter" style="font-size: 4em;"></span><br />
+                    <p><span>Workflow Systems</span> open-source workflow systems</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="stats-item d-flex flex-column align-items-center">
+                    <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="5"
+                        class="purecounter" style="font-size: 4em;"></span><br />
+                    <p><span>Events</span> Workflow Community Summits and BoF sessions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- WORKFLOW SYSTEMS -->
+<div id="services" class="section sections-bg">
+    <div class="top-icon-box position-relative">
+        <div class="container position-relative">
+            <div class="section-header">
+                <h2>Workflow Systems</h2>
+                <p>Last updated open-source workflow systems</p>
+            </div>
+            <div class="row gy-4">
+                
+                
+                
+                
+                
+                <div class="col-xl-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img src="https://raw.githubusercontent.com/alpha-unito/streamflow/master/docs/logo.png" alt="icon"></div>
+                        <h4 class="title"><a href="/systems/streamflow/" class="stretched-link">StreamFlow</a></h4>
+                        <p>Towards Cloud-HPC Continuum</p>
+                        <p style="font-size: 0.8em;">
+                            <i class="fas fa-code"></i> Python</span><br />
+                            <i
+                                class="fas fa-box-open"></i>0.2.0.dev13<br />
+                            <i class="far fa-clock"></i> 13 Sep 2025
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img src="https://avatars.githubusercontent.com/u/6698688?v=4" alt="icon"></div>
+                        <h4 class="title"><a href="/systems/nextflow/" class="stretched-link">Nextflow</a></h4>
+                        <p>A DSL for data-driven computational pipelines</p>
+                        <p style="font-size: 0.8em;">
+                            <i class="fas fa-code"></i> Groovy</span><br />
+                            <i
+                                class="fas fa-box-open"></i>Version 25.04.7<br />
+                            <i class="far fa-clock"></i> 13 Sep 2025
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img src="https://avatars.githubusercontent.com/u/33450111?v=4" alt="icon"></div>
+                        <h4 class="title"><a href="/systems/snakemake/" class="stretched-link">Snakemake</a></h4>
+                        <p>This is the development home of the workflow management system Snakemake. For general information, see</p>
+                        <p style="font-size: 0.8em;">
+                            <i class="fas fa-code"></i> Python</span><br />
+                            <i
+                                class="fas fa-box-open"></i>v9.11.2<br />
+                            <i class="far fa-clock"></i> 12 Sep 2025
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img src="https://avatars.githubusercontent.com/u/25691954?v=4" alt="icon"></div>
+                        <h4 class="title"><a href="/systems/pyiron_base/" class="stretched-link">pyiron</a></h4>
+                        <p>A workflow manager for scientific computing on high performance computing infrastructures</p>
+                        <p style="font-size: 0.8em;">
+                            <i class="fas fa-code"></i> python</span><br />
+                            <i
+                                class="fas fa-box-open"></i>pyiron_base-0.14.3<br />
+                            <i class="far fa-clock"></i> 12 Sep 2025
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img src="https://raw.githubusercontent.com/AgnostiqHQ/covalent/master/doc/source/_static/covalent-logo-blue-favicon.png" alt="icon"></div>
+                        <h4 class="title"><a href="/systems/covalent/" class="stretched-link">Covalent</a></h4>
+                        <p>Distributed workflows for quantum and HPC</p>
+                        <p style="font-size: 0.8em;">
+                            <i class="fas fa-code"></i> Python</span><br />
+                            <i
+                                class="fas fa-box-open"></i>v0.240.0<br />
+                            <i class="far fa-clock"></i> 12 Sep 2025
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img src="https://raw.githubusercontent.com/ESIPFed/Geoweaver/main/docs/img/header.png" alt="icon"></div>
+                        <h4 class="title"><a href="/systems/geoweaver/" class="stretched-link">Geoweaver</a></h4>
+                        <p>a lightweight workflow software to easily orchestrate pipelines from Python and shell scripts and preserve history of every execution</p>
+                        <p style="font-size: 0.8em;">
+                            <i class="fas fa-code"></i> JavaScript</span><br />
+                            <i
+                                class="fas fa-box-open"></i>v2.0.9<br />
+                            <i class="far fa-clock"></i> 12 Sep 2025
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img src="https://parsl-project.org/images/logos/parsl-logo.png" alt="icon"></div>
+                        <h4 class="title"><a href="/systems/parsl/" class="stretched-link">Parsl</a></h4>
+                        <p>Productive parallel programming in Python</p>
+                        <p style="font-size: 0.8em;">
+                            <i class="fas fa-code"></i> Python</span><br />
+                            <i
+                                class="fas fa-box-open"></i>1.2.0<br />
+                            <i class="far fa-clock"></i> 12 Sep 2025
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><img src="https://avatars.githubusercontent.com/u/97905312?v=4" alt="icon"></div>
+                        <h4 class="title"><a href="/systems/watts/" class="stretched-link">WATTS</a></h4>
+                        <p>Workflow and Template Toolkit for Simulation</p>
+                        <p style="font-size: 0.8em;">
+                            <i class="fas fa-code"></i> Python</span><br />
+                            <i
+                                class="fas fa-box-open"></i>0.5.2<br />
+                            <i class="far fa-clock"></i> 11 Sep 2025
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-12 text-center" class="text-center">
+                    <a href="/systems" class="btn-get-started hide-on-mobile">See all Systems</a>
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- STORIES -->
+
+<section id="recent-posts" class="recent-posts sections-bg bg-light">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+            <h2>Stories</h2>
+            <p>Perspectives on workflows-related topics from the community</p>
+        </div>
+
+        <div class="row gy-4">
+            
+            <div class="col-lg-4">
+                <article>
+                    <div class="post-img">
+                        <img src="/images/stories/smartsim.png" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category"></p>
+                    <h2 class="title">
+                        <a href="/stories/2023/04/02/smartsim/">SmartSim: Combining Machine Learning and HPC Workflows</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author"></p>
+                            <p class="post-date">
+                                
+                                Matthew Ellis – HPE<br />
+                                
+                                Bill Scherer – HPE<br />
+                                
+                                Andrew Shao – HPE<br />
+                                
+                                <time datetime="2022-01-01">Apr 02, 2023</time>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="col-lg-4">
+                <article>
+                    <div class="post-img">
+                        <img src="/images/stories/anton-maksimov-5642-su-qM37iptlCNY-unsplash.jpg" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category"></p>
+                    <h2 class="title">
+                        <a href="/stories/2023/01/13/elephant-in-the-data-center/">The Elephant in the Data Center – Energy Consumption of Workflow Executions</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author"></p>
+                            <p class="post-date">
+                                
+                                Ulf Leser – Humboldt-Universität zu Berlin<br />
+                                
+                                Lauritz Thamsen – University of Glasgow<br />
+                                
+                                <time datetime="2022-01-01">Jan 13, 2023</time>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="col-lg-4">
+                <article>
+                    <div class="post-img">
+                        <img src="/images/stories/covalent-02.png" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category"></p>
+                    <h2 class="title">
+                        <a href="/stories/2022/10/24/covalent/">Covalent: Workflow Orchestration on Highly Heterogeneous Infrastructure</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author"></p>
+                            <p class="post-date">
+                                
+                                Will Cunningham – Agnostiq<br />
+                                
+                                <time datetime="2022-01-01">Oct 24, 2022</time>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="col-lg-4">
+                <article>
+                    <div class="post-img">
+                        <img src="/images/stories/eflows4hpc-stack.png" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category"></p>
+                    <h2 class="title">
+                        <a href="/stories/2022/09/29/eflows4hpc/">Widening Workflows usage: the eFlows4HPC project</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author"></p>
+                            <p class="post-date">
+                                
+                                Rosa M. Badia – Barcelona Supercomputing Center<br />
+                                
+                                <time datetime="2022-01-01">Sep 29, 2022</time>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="col-lg-4">
+                <article>
+                    <div class="post-img">
+                        <img src="/images/stories/nextflow-story.png" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category"></p>
+                    <h2 class="title">
+                        <a href="/stories/2022/09/28/nextflow/">A quick overview of Nextflow workflow system</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author"></p>
+                            <p class="post-date">
+                                
+                                Paolo Di Tommaso – Nextflow creator and CTO of Seqera Labs<br />
+                                
+                                <time datetime="2022-01-01">Sep 28, 2022</time>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="col-lg-4">
+                <article>
+                    <div class="post-img">
+                        <img src="/images/stories/eduwrench.png" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category"></p>
+                    <h2 class="title">
+                        <a href="/stories/2022/05/16/workflow-education/">Workflows Education:  Underlying  Computer Science Concepts</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                        <div class="post-meta">
+                            <p class="post-author"></p>
+                            <p class="post-date">
+                                
+                                Henri Casanova – University of Hawaii<br />
+                                
+                                <time datetime="2022-01-01">May 16, 2022</time>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+        </div>
+
+        <div class="col-lg-12 text-center" style="margin-top: 2em;" class="text-center">
+            <a href="/stories" class="btn-get-started hide-on-mobile">See all Stories</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Twitter and Events -->
+<!-- <section class="ftco-section" style="background-color: #fff;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-8 text-center heading-section ftco-animate">
+                <span class="subheading">Upcoming Community Events</span>
+                <h2 class="mb-4">Events</h2>
+
+                <div class="row">
+                    
+                    
+                    
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                <div class="col-md-12 col-lg-12 mt-5 text-center heading-section ftco-animate">
+                    <p><a href="/events" class="btn btn-primary mt-3 py-3 px-5">See all events...</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section> -->
+
+<!-- Founders
+<section class="ftco-section" style="background-color: #fff;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center heading-section ftco-animate">
+                <span class="subheading">Since 2021</span>
+                <h2 class="mb-4">Founding Members</h2>
+
+                <div class="row">
+                    
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.ornl.gov/" target="_blank">
+                            <img src="/images/institutions/ornl.png" alt="Oak Ridge National Laboratory"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.uchicago.edu/" target="_blank">
+                            <img src="/images/institutions/uchicago.png" alt="University of Chicago"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.anl.gov/" target="_blank">
+                            <img src="/images/institutions/anl.png" alt="Argonne National Laboratory"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://manoa.hawaii.edu/" target="_blank">
+                            <img src="/images/institutions/uhm.png" alt="University of Hawaii"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.manchester.ac.uk/" target="_blank">
+                            <img src="/images/institutions/umanchester.png" alt="University of Manchester"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://nd.edu" target="_blank">
+                            <img src="/images/institutions/nd.png" alt="University of Notre Dame"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.bsc.es/" target="_blank">
+                            <img src="/images/institutions/bsc.png" alt="Barcelona Supercomputing Center"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.nersc.gov" target="_blank">
+                            <img src="/images/institutions/nersc.png" alt="National Energy Research Scientific Computing Center"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.lbl.gov/" target="_blank">
+                            <img src="/images/institutions/lbnl.png" alt="Lawrence Berkeley National Laboratory"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://illinois.edu/" target="_blank">
+                            <img src="/images/institutions/uiuc.png" alt="University of Illinois at Urbana-Champaign"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://ufrj.br/en/" target="_blank">
+                            <img src="/images/institutions/ufrj.png" alt="Federal University of Rio de Janeiro"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://ucsd.edu/" target="_blank">
+                            <img src="/images/institutions/ucsd.png" alt="University of California San Diego"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.uibk.ac.at/" target="_blank">
+                            <img src="/images/institutions/uinnsbruck.png" alt="University of Innsbruck"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.bnl.gov/" target="_blank">
+                            <img src="/images/institutions/bnl.png" alt="Brookhaven National Laboratory"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.rutgers.edu/" target="_blank">
+                            <img src="/images/institutions/rutgers.png" alt="Rutgers University"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.st-andrews.ac.uk/" target="_blank">
+                            <img src="/images/institutions/ustandrews.png" alt="University of St Andrews"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.hu-berlin.de" target="_blank">
+                            <img src="/images/institutions/huberlin.png" alt="Humboldt University of Berlin"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.nvidia.com/en-us/" target="_blank">
+                            <img src="/images/institutions/nvidia.png" alt="Nvidia"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.llnl.gov/" target="_blank">
+                            <img src="/images/institutions/llnl.png" alt="Lawrence Livermore National Laboratory"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://seqera.io" target="_blank">
+                            <img src="/images/institutions/seqeralabs.png" alt="Seqera Labs"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.uq.edu.au/" target="_blank">
+                            <img src="/images/institutions/uq.png" alt="University of Queensland, Australia"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://uni-freiburg.de" target="_blank">
+                            <img src="/images/institutions/ufreiburg.png" alt="University of Freiburg"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.agu.org/" target="_blank">
+                            <img src="/images/institutions/agu.png" alt="American Geophysical Union"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.uni-due.de/en/" target="_blank">
+                            <img src="/images/institutions/ude.png" alt="University of Duisburg-Essen"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-3">
+                        <a href="https://www.ge.com/research/" target="_blank">
+                            <img src="/images/institutions/ge-research.jpeg" alt="GE Research"
+                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section> -->
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html" class="logo d-flex align-items-center">
+                                <img src="/images/wci-white-logo.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite the workflows community—users, developers, researchers, and facilities—to
+                                provide essential resources and capabilities that empower scientists and developers to
+                                discover tools, connect with related initiatives, and collaborate on solving the grand
+                                challenges in workflow systems.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                    <!-- <div class="service-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Services</h3>
+                        </div>
+                        <ul class="list">
+                            <li><a href="services.html">Web Design</a></li>
+                            <li><a href="services.html">App Development</a></li>
+                            <li><a href="services.html">Cloud Services</a></li>
+                            <li><a href="services.html">Domain and Hosting</a></li>
+                            <li><a href="services.html">Seo Optimization</a></li>
+                            <li><a href="services.html">Social Media</a></li>
+                        </ul>
+                    </div> -->
+                </div>
+                <!-- <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+                    <div class="service-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Information</h3>
+                        </div>
+                        <ul class="list">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="packages.html">Pricing</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="porfolio.html">Portfolio</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="blogs.html">Blogs</a></li>
+                            <li><a href="blogs-details.html">Blog Details</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                            <li><a href="privacy-policy.html">Terms & Conditions</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Contacts</h3>
+                        </div>
+                        <div class="footer-text">
+                            <p><i class="bi bi-envelope-fill mr-15"></i> contact@workflows.community</p>
+                        </div>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            style="font-size: 1.2em"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" style="font-size: 1.2em"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank"
+                            style="font-size: 1.2em"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" style="font-size: 1.2em"><i class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&mdash;2025 Workflows.Community Initiative</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
