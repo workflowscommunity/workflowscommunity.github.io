@@ -397,6 +397,11 @@
     first_name: Prabhath
     institution: Max Planck Institute for Sustainable Materials
 
+  - last_name: Janssen
+    first_name: Jan
+    institution: Max-Planck-Institute for Sustainable Materials
+    link: https://jan-janssen.com
+
 
 - country: India
   entries:
