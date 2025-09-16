@@ -102,3 +102,15 @@
   talk_num: 6
   photo: titus.jpg
   bio: "C. Titus Brown is a Professor in the School of Veterinary Medicine at UC Davis, where he works on methods in data intensive research across the biosciences, computer science, and software engineering. He is surprisingly passionate about open science and sociotechnical systems for community development of research infrastructure, and blogs regularly on these topics at ivory.idyll.org/blog/."
+
+- name: Alok Kamatar
+  role: Graduate Student, University of Chicago
+  institution:
+    - name: University of Chicago
+      link: https://www.uchicago.edu/
+      image: uchicago.png
+  country: us
+  link: https://www.computerscience.uchicago.edu/people/alok-kamatar
+  talk_num: 7
+  # photo: kamatar.jpg
+  bio: "Alok Kamatar is a 4th year Ph.D. student at the University of Chicago advised by Ian Foster and Kyle Chard. Broadly, he is interested in building systems to enable faster and more efficient science. He is currently working on building Academy: a framework for integrating \"Agents\" with federated research infrastructure and exploring the associated systems challenges."
