@@ -114,3 +114,15 @@
   talk_num: 7
   # photo: kamatar.jpg
   bio: "Alok Kamatar is a 4th year Ph.D. student at the University of Chicago advised by Ian Foster and Kyle Chard. Broadly, he is interested in building systems to enable faster and more efficient science. He is currently working on building Academy: a framework for integrating \"Agents\" with federated research infrastructure and exploring the associated systems challenges."
+
+- name: Raffaele Montella
+  role: Associate Professor with tenure in Computer Science
+  institution:
+    - name: University of Naples “Parthenope”
+      link: https://international.uniparthenope.it/
+      image: ParthEng.svg
+  country: Italy
+  link: https://www.raffaelemontella.it/
+  talk_num: 8
+  photo: montella.png
+  bio: "Raffaele Montella is an Associate Professor with tenure in Computer Science at the Department of Science and Technologies (DiST), University of Naples “Parthenope’” (UNP), Italy. He got his degree (MSc equivalent) cum laude and an award mention to his study career in (Marine) Environmental Science at the University of Naples “Parthenope” in 1998, defending a thesis about the “Development of a GIS system for marine applications”. He defended his Ph.D. thesis on “Environmental modeling and Grid Computing techniques” earning a Ph.D. in Marine Science and Engineering at the University of Naples “Federico II”. His main research topics and scientific production are focused on: tools for high-performance computing, cloud computing, and GPUs with applications in the field of computational environmental science (multi-dimensional geo-referenced big data, distributed computing for modeling, and scientific workflows and science gateways) leveraging on his previous (and still ongoing) experiences in embedded, mobile, wearable, pervasive computing, and Internet of Things. Since 2021 he has been head of the UNP node CINI Lab/Working Group “HPC: Key Technologies and Tools”. Since 2022 he has been the head of the AWS Academy at the University of Naples “Parthenope”. In February 2023, he gained the Italian National Academic Qualifications as Full Professor in Computer Science (01/B1)."
