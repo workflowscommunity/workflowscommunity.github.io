@@ -12,17 +12,48 @@ permalink: /talks
             </p>
 
             <section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
-                <h3 class="mb-4">Upcoming Talks</h3>
-                {% assign upcoming = site.talks | where: "given", false | sort: 'talk_number' | reverse %}
-                {% for talk in upcoming %}
-                  {% include talk_card.html talk=talk %}
+                
+                <!-- Next Talk Section -->
+                {% assign upcoming = site.talks | where: "given", false | sort: 'talk_number' %}
+                {% assign next_talk = upcoming.first %}
+                {% if next_talk %}
+                <div class="next-talk-section mb-5">
+                    <h3 class="mb-4" style="color: #db8e1b;">Next Talk</h3>
+                    <div style="border: 2px solid #db8e1b; border-radius: 10px; padding: 20px; background: linear-gradient(135deg, #fff8f0 0%, #ffffff 100%);">
+                        {% include talk_card.html talk=next_talk %}
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Future Talks Section -->
+                {% assign future_talks = site.talks | where: "given", false | sort: 'talk_number' %}
+                {% assign has_future_talks = false %}
+                {% for talk in future_talks %}
+                  {% unless talk.talk_number == next_talk.talk_number %}
+                    {% assign has_future_talks = true %}
+                    {% break %}
+                  {% endunless %}
                 {% endfor %}
+                
+                {% if has_future_talks %}
+                <div class="future-talks-section mb-5">
+                    <h3 class="mb-4">Future Talks</h3>
+                    {% for talk in future_talks %}
+                      {% unless talk.talk_number == next_talk.talk_number %}
+                        {% include talk_card.html talk=talk %}
+                      {% endunless %}
+                    {% endfor %}
+                </div>
+                {% endif %}
               
-                <h3 class="mb-4 mt-5">Previous Talks</h3>
-                {% assign previous = site.talks | where: "given", true | sort: 'talk_number' | reverse %}
-                {% for talk in previous %}
-                  {% include talk_card.html talk=talk %}
-                {% endfor %}
+                <!-- Previous Talks Section -->
+                <div class="previous-talks-section">
+                    <h3 class="mb-4 mt-5">Previous Talks</h3>
+                    {% assign previous = site.talks | where: "given", true | sort: 'talk_number' | reverse %}
+                    {% for talk in previous %}
+                      {% include talk_card.html talk=talk %}
+                    {% endfor %}
+                </div>
               </section>
               
         </div>
