@@ -14,7 +14,7 @@
         <div style="text-align: right;">
           {% assign speakers = site.data.speakers | where: "talk_num", talk.talk_number %}
           {% for member in speakers %}
-          {% assign photo_src = member.photo | default: 'headshot_template1.jpg' %}
+          {% assign photo_src = member.photo | default: 'headshot_placeholder.jpg' %}
           <img src="/images/talks/{{ photo_src }}" alt="{{ member.name }}"
                style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%; margin-left: 0.5em;" />
           {% endfor %}
