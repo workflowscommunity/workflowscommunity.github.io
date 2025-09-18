@@ -1,0 +1,52 @@
+---
+layout: talk
+title: "One workflow to rule them all: introducing DAGonStar, yet another workflow engine for Python developers, designed for HPC and AI."
+authors: Raffaele Montella  (University of Naples “Parthenope”)
+event_date: November 11, 2025
+times: 11:00-12:00 PST / 14:00-15:00 EST / 20:00-21:00 CEST
+talk_number: 8
+given: false
+<!-- image: /images/talks/montella-banner.png -->
+<!-- presentation: -->
+<!-- video:  -->
+---
+
+Scientific workflows designed to handle massive datasets through distributed 
+high-performance computing (HPC) infrastructures or elastic on-demand 
+computational services have established themselves as a robust and mature 
+paradigm within data science. Within this context, one of the most 
+consolidated production applications is the orchestration of environmental 
+models for simulation and forecasting tasks.
+
+<br /><br />
+
+This presentation illustrates our perspective on workflows as essential 
+building blocks for environmental systems, where numerical modeling is combined 
+with artificial intelligence to strengthen forecasting and predictive 
+capabilities. At the HPSC SmartLab of the University of Naples "Parthenope," 
+we developed DAGonStar, a workflow engine designed to orchestrate environmental 
+models used by the Center for Monitoring and Modeling Marine and Atmosphere 
+(CMMMA) to produce weather and marine predictions.
+
+<br /><br />
+
+Among the laboratory's operational applications is MytilEx, a project funded by 
+the Campania Regional Government, which aims to forecast E. coli contamination 
+in cultivated mussels. The system improves pollutant transport and dispersion 
+simulations (carried out with the WaComM++ model) by integrating an artificial 
+intelligence module (AIQUAM++), trained on microbiological observations. 
+Initial system evaluations reveal prediction accuracies above 90% for E. coli 
+presence, a substantial step forward in applying computational intelligence to 
+environmental and food safety domains.
+
+<br /><br />
+
+The same workflow building blocks that supported MytilEx have also enabled the 
+development of two further projects. The first, MytilX—currently underway and 
+funded by the Istituto Zooprofilattico Sperimentale dell'Umbria e delle Marche 
+"Togo Rosati"—has shown through preliminary experiments that the MytilEx 
+success case can be replicated at other sites. The second, SmokeTracer, funded 
+by the Campania Regional Government, is an on-demand HPC workflow aimed at 
+estimating the potential soil contamination footprint caused by wildfires or 
+arson. SmokeTracer has been implemented partly by reusing modules already 
+available in the DAGonStar framework.
