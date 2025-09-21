@@ -1,10 +1,12 @@
 ---
-layout: page
+layout: bof
 title: SC25 Data Streaming BoF
 subtitle: "Real-Time Scientific Data Streaming to HPC Nodes: Challenges and Innovations"
-event_date: November 18, 2025
+event_date: November 19, 2025
 time: "5:15pm&mdash;6:45pm CT"
+room: Room 130
 order: 6
+conference_logo: /images/bof/sc25_logo.png
 speakers:
     - name: Sam Welborn (LBNL)
       image: https://profiles.lbl.gov/365112-sam-welborn/thumbnail
@@ -24,168 +26,108 @@ organizers:
       image: https://media.licdn.com/dms/image/v2/C5603AQGZpi3oE-OhkQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1550613510195?e=2147483647&v=beta&t=vF9Eh4E-GWIzl3k3Lsn74kDcE2pGigJZwO39s4kUh0s
     - name: Rafael Ferreira da Silva (ORNL)
       image: https://rafaelsilva.com/assets/images/2022-rafael-ferreira-da-silva-high-resolution.jpg
+
+supporters:
+    - link: https://www.lbl.gov/
+      image: https://www.lbl.gov/wp-content/uploads/2022/09/berkeley-logo.svg
+    - link: https://www.nersc.gov/
+      image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzKv5LXRUBcMbGsXmwhEVArUKYup-AJjDs8g&s
+    - link: https://ornl.gov/
+      image: https://map.ornl.org/art/logo.png
+    - link: https://www.nvidia.com/en-us/
+      image: /images/institutions/nvidia.png
+    - link: https://www.anl.gov/
+      image: https://upload.wikimedia.org/wikipedia/commons/5/5b/Argonnelablogo.PNG
+    - link: https://www.cscs.ch/
+      image: https://upload.wikimedia.org/wikipedia/commons/d/df/Simple_CSCS_Logo.jpg
 ---
 
-<div class="container" data-aos="fade-up" style="padding: 3em 0;">
-    <div class="row">
-        <div class="col-lg-8 wg">
-            <p class="text-center">
-                <img src="/images/bof/sc25_logo.png" style="width: 15em; margin: auto;" />
-            </p>
-            <p class="subheading text-center">{{page.subtitle}}</p>
-            <h2 class="mb-4 text-center">{{page.title}}</h2>
+<p>
+    Today, scientific data typically arrives at HPC facilities via gateway nodes into shared file systems, a
+    model supported by tools like Globus and suited for workflows that tolerate queue delays. However, as
+    HPC, experimental, and observational facilities become more integrated, time-sensitive workflows
+    increasingly require real-time feedback, where latency and variability from shared storage are
+    unacceptable. Despite early examples of streaming workflows, most facilities remain unprepared to
+    support them due to policy, scheduling, or hardware limitations. Addressing these gaps is critical to
+    enabling seamless, compute-in-the-loop workflows that define the next era of scientific discovery. This
+    BoF addresses this groundbreaking and growing field in supercomputing.
+</p>
+<p>
+    In addition to lightining talks, the BoF will have a very interactive part that we call a "Workflow 
+    Challenge Workshop". In this workshop, participants will be divided into small groups representing 
+    different stakeholders (facility operators, users, software developers). Each group will receive 
+    a real streaming workflow scenario and work together to identify technical, policy, and infrastructure 
+    requirements for implementation. Groups will document their solutions using a shared digital 
+    whiteboard, allowing cross-group visibility and iteration.
+</p>
+</p>
+<!-- <img src="/images/bof/wci-bof-sc24.jpeg" style="width: 100%; border-radius: 1em;" /> -->
 
-            <p class="text-center mb-5">
-                {{page.event_date | date: "%A - %b %d, %Y" }}<br />
-                {{page.time}}<br />
-                <!-- Room B212 -->
+<p>&nbsp;</p>
+<!-- <h2 class="mb-4">Agenda</h2>
+<div class="col-md-12 ftco-animate">
+    <ul>
+        <li style="color: rgb(5, 135, 215)">
+            5:15pm-5:20pm &mdash; Opening Remarks
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                Rafael Ferreira da Silva &mdash; <span style="font-style: italic; color: #999">Oak Ridge
+                    Leadership Computing Facility (OLCF)</span><br />
+                Debbie Bard &mdash; <span style="font-style: italic; color: #999">National Energy Research
+                    Scientific Computing Center (NERSC)</span><br />
+                Fred Suter &mdash; <span style="font-style: italic; color: #999">Oak Ridge National
+                    Laboratory (ORNL)</span><br />
+                Kyle Chard &mdash; <span style="font-style: italic; color: #999">University of
+                    Chicago</span><br />
             </p>
-            <p>
-                Today, scientific data typically arrives at HPC facilities via gateway nodes into shared file systems, a
-                model supported by tools like Globus and suited for workflows that tolerate queue delays. However, as
-                HPC, experimental, and observational facilities become more integrated, time-sensitive workflows
-                increasingly require real-time feedback, where latency and variability from shared storage are
-                unacceptable. Despite early examples of streaming workflows, most facilities remain unprepared to
-                support them due to policy, scheduling, or hardware limitations. Addressing these gaps is critical to
-                enabling seamless, compute-in-the-loop workflows that define the next era of scientific discovery. This
-                BoF addresses this groundbreaking and growing field in supercomputing.
+        </li>
+        <li style="color: rgb(5, 135, 215)">
+            5:20pm-6:20pm &mdash; Lightning talks: Collaborative Pathways for Designing an Integrated
+            Infrastructure for Research Excellence<br />
+
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                <a href="/files/bof/">
+                    Advancing DOE's Integrated Research Infrastructure</a><br />
+                <span style="font-style: italic; color: #999"><strong>Ben Brown</strong>, U.S. Department of
+                    Energy (DOE)</span>
             </p>
-            <p>
-                In addition to lightining talks, the BoF will have a very interactive part that we call a "Workflow 
-                Challenge Workshop". In this workshop, participants will be divided into small groups representing 
-                different stakeholders (facility operators, users, software developers). Each group will receive 
-                a real streaming workflow scenario and work together to identify technical, policy, and infrastructure 
-                requirements for implementation. Groups will document their solutions using a shared digital 
-                whiteboard, allowing cross-group visibility and iteration.
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                <a href="/files/bof/">
+                    Evolving HP+AI workflows for the needs of Digital Twins in Science and
+                    Industry</a><br />
+                <span style="font-style: italic; color: #999"><strong>Rosa M. Badia</strong>, Barcelona
+                    Supercomputing Center (BSC)</span>
             </p>
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                <a href="/files/bof/">
+                    TBA</a><br />
+                <span style="font-style: italic; color: #999"><strong>Manish Parashar</strong>, University
+                    of
+                    Utah</span>
             </p>
-            <!-- <img src="/images/bof/wci-bof-sc24.jpeg" style="width: 100%; border-radius: 1em;" /> -->
-
-            <p>&nbsp;</p>
-            <!-- <h2 class="mb-4">Agenda</h2>
-            <div class="col-md-12 ftco-animate">
-                <ul>
-                    <li style="color: rgb(5, 135, 215)">
-                        5:15pm-5:20pm &mdash; Opening Remarks
-                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                            Rafael Ferreira da Silva &mdash; <span style="font-style: italic; color: #999">Oak Ridge
-                                Leadership Computing Facility (OLCF)</span><br />
-                            Debbie Bard &mdash; <span style="font-style: italic; color: #999">National Energy Research
-                                Scientific Computing Center (NERSC)</span><br />
-                            Fred Suter &mdash; <span style="font-style: italic; color: #999">Oak Ridge National
-                                Laboratory (ORNL)</span><br />
-                            Kyle Chard &mdash; <span style="font-style: italic; color: #999">University of
-                                Chicago</span><br />
-                        </p>
-                    </li>
-                    <li style="color: rgb(5, 135, 215)">
-                        5:20pm-6:20pm &mdash; Lightning talks: Collaborative Pathways for Designing an Integrated
-                        Infrastructure for Research Excellence<br />
-
-                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                            <a href="/files/bof/">
-                                Advancing DOE's Integrated Research Infrastructure</a><br />
-                            <span style="font-style: italic; color: #999"><strong>Ben Brown</strong>, U.S. Department of
-                                Energy (DOE)</span>
-                        </p>
-                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                            <a href="/files/bof/">
-                                Evolving HP+AI workflows for the needs of Digital Twins in Science and
-                                Industry</a><br />
-                            <span style="font-style: italic; color: #999"><strong>Rosa M. Badia</strong>, Barcelona
-                                Supercomputing Center (BSC)</span>
-                        </p>
-                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                            <a href="/files/bof/">
-                                TBA</a><br />
-                            <span style="font-style: italic; color: #999"><strong>Manish Parashar</strong>, University
-                                of
-                                Utah</span>
-                        </p>
-                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                            <a href="/files/bof/">
-                                Achieving Seamless Integration for Next-Generations Scientific Workflows</a><br />
-                            <span style="font-style: italic; color: #999"><strong>Lavanya Ramakrishnan</strong>,
-                                Lawrence
-                                Berkeley National Laboratory (LBNL)</span>
-                        </p>
-                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                            <a href="/files/bof/">
-                                TBA</a><br />
-                            <span style="font-style: italic; color: #999"><strong>Ian T. Foster</strong>, Argonne
-                                National
-                                Laboratory (ANL)</span>
-                        </p>
-                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                            <a href="/files/bof/">
-                                A Use-Inspired Approach to Bridge the Data Gaps for AI-Integrated Research and Education
-                                Workflows</a><br />
-                            <span style="font-style: italic; color: #999"><strong>İlkay Altıntaş</strong>, San Diego
-                                Supercomputing Center (SDSC)</span>
-                        </p>
-                    </li>
-                    <li style="color: rgb(5, 135, 215)">
-                        6:20pm-6:45pm &mdash; Interactive Activity<br />
-                    </li>
-                </ul>
-            </div> -->
-        </div>
-        <div class="col-lg-4">
-            <div class="blog-sidbar">
-                <h4 class="mb-3">Featured Speakers</h4>
-                {% for o in page.speakers %}
-                <img src="{{ o.image }}"
-                    style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em; float: left" />
-                {{ o.name }}
-                {% if o.desc %}
-                <br /><a href="{{ o.desc_link }}" target="_blank">{{ o.desc }}</a>
-                {% else %}
-                <br />
-                {% endif %}
-                <br /><br />
-                {% endfor %}
-
-                <hr />
-                <h4 class="mb-3">Organizers</h4>
-                {% for o in page.organizers %}
-                <img src="{{ o.image }}"
-                    style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em; float: left" />
-                {{ o.name }}
-                {% if o.desc %}
-                <br /><a href="{{ o.desc_link }}" target="_blank">{{ o.desc }}</a>
-                {% else %}
-                <br />
-                {% endif %}
-                <br /><br />
-                {% endfor %}
-
-                <hr />
-                <h4 class="mb-3">Supporters</h4>
-                <div class="col-md-12 ftco-animate">
-                    <a href="https://www.lbl.gov/" target="_blank">
-                        <img src="https://www.lbl.gov/wp-content/uploads/2022/09/berkeley-logo.svg" height="40px"
-                            class="mb-3 mr-3" />
-                    </a><br />
-                    <a href="https://www.nersc.gov/" target="_blank">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzKv5LXRUBcMbGsXmwhEVArUKYup-AJjDs8g&s"
-                            height="40px" class="mb-3 mr-3" />
-                    </a><br />
-                    <a href="https://ornl.gov/" target="_blank">
-                        <img src="https://map.ornl.org/art/logo.png" height="40px" class="mb-3 mr-3" />
-                    </a><br />
-                    <a href="https://www.nvidia.com/en-us/" target="_blank">
-                        <img src="/images/institutions/nvidia.png" height="30px" class="mb-3 mr-3" />
-                    </a><br />
-                    <a href="https://www.anl.gov/" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Argonnelablogo.PNG" height="45px"
-                            class="mb-3 mr-3" />
-                    </a><br />
-                    <a href="https://www.cscs.ch/" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Simple_CSCS_Logo.jpg"
-                            height="45px" class="mb-3 mr-3" />
-                    </a><br />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                <a href="/files/bof/">
+                    Achieving Seamless Integration for Next-Generations Scientific Workflows</a><br />
+                <span style="font-style: italic; color: #999"><strong>Lavanya Ramakrishnan</strong>,
+                    Lawrence
+                    Berkeley National Laboratory (LBNL)</span>
+            </p>
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                <a href="/files/bof/">
+                    TBA</a><br />
+                <span style="font-style: italic; color: #999"><strong>Ian T. Foster</strong>, Argonne
+                    National
+                    Laboratory (ANL)</span>
+            </p>
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                <a href="/files/bof/">
+                    A Use-Inspired Approach to Bridge the Data Gaps for AI-Integrated Research and Education
+                    Workflows</a><br />
+                <span style="font-style: italic; color: #999"><strong>İlkay Altıntaş</strong>, San Diego
+                    Supercomputing Center (SDSC)</span>
+            </p>
+        </li>
+        <li style="color: rgb(5, 135, 215)">
+            6:20pm-6:45pm &mdash; Interactive Activity<br />
+        </li>
+    </ul>
+</div> -->
