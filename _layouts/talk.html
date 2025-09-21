@@ -54,7 +54,8 @@ layout: page
                 {% assign speaker = site.data.speakers | where: "talk_num", page.talk_number %}
                 {% for member in speaker %}
                 <a href="{{ member.link }}" target="_blank">
-                    <img src="/images/talks/{{ member.photo }}" alt="{{ member.name }}" class="img-fluid mb-3"
+                    {% assign photo_src = member.photo | default: 'headshot_placeholder.jpg' %}
+                    <img src="/images/talks/{{ photo_src }}" alt="{{ member.name }}" class="img-fluid mb-3"
                         style="width: 150px; height: 200px; object-fit: cover; border-radius: 0.5em;">
                 </a>
                 <p class="font-weight-bold">{{ member.name }}<br />
