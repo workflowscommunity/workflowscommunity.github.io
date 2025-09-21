@@ -1,0 +1,69 @@
+---
+layout: page
+---
+
+<div class="container" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-8 wg wg-contents">
+            <p class="breadcrumb">
+                <a href="/bof">BIRDS OF A FEATHERS&nbsp;</a> > {{ page.title | upcase }}
+            </p>
+
+            <p class="text-center">
+                <img src="{{page.conference_logo}}" style="width: 15em; margin: auto;" />
+            </p>
+            <p class="subheading text-center">{{page.subtitle}}</p>
+            <h2 class="mb-4 text-center">{{page.title}}</h2>
+
+            <p class="text-center mb-5">
+                {{page.event_date | date: "%A - %b %d, %Y" }}<br />
+                {{page.time}}<br />
+                {{page.room}}
+            </p>
+
+            {{ content }}
+        </div>
+
+
+        <div class="col-lg-4">
+            <div class="blog-sidbar" style="overflow-wrap: break-word;">
+                {% if page.speakers %}
+                <h4 class="mb-3">Featured Speakers</h4>
+                {% for o in page.speakers %}
+                <img src="{{ o.image }}" style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em; float: left" />
+                {{ o.name }}
+                {% if o.desc %}
+                <br /><a href="{{ o.desc_link }}" target="_blank">{{ o.desc }}</a>
+                {% else %}
+                <br />
+                {% endif %}
+                <br /><br />
+                {% endfor %}
+                {% endif %}
+
+                {% if page.organizers %}
+                <hr />
+                <h4 class="mb-3">Organizers</h4>
+                {% for o in page.organizers %}
+                <img src="{{ o.image }}" style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em; float: left" />
+                {{ o.name }}
+                {% if o.desc %}
+                <br /><a href="{{ o.desc_link }}" target="_blank">{{ o.desc }}</a>
+                {% else %}
+                <br />
+                {% endif %}
+                <br /><br />
+                {% endfor %}
+                {% endif %}
+
+                {% if page.supporters %}
+                <hr />
+                <h4 class="mb-3">Supporters</h4>
+                {% for s in page.supporters %}
+                <a href="{{s.link}}" target="_blank"><img src="{{s.image}}" height="40px" class="mb-3 mr-3" /></a><br />
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,10 +1,12 @@
 ---
-layout: page
+layout: bof
 title: SC25 BoF
 subtitle: Bridging Intelligent Workflows with Quantum and HPC for Scientific Discovery
 event_date: November 18, 2025
-time: "12:15pm&mdash;1:15pm CT"
+time: "5:15pm&mdash;6:45pm CT"
+room: Room 274
 order: 6
+conference_logo: /images/bof/sc25_logo.png
 speakers:
     - name: Ian T. Foster (ANL)
       image: https://computerscience.uchicago.edu/wp-content/uploads/2020/02/Foster-head.jpeg
@@ -26,188 +28,125 @@ organizers:
       image: https://fred-suter.com/assets/images/Fred.jpg
     - name: Kyle Chard (U Chicago)
       image: https://cs.uchicago.edu/wp-content/uploads/2020/02/chard-head.jpeg
+
+supporters:
+    - link: https://ornl.gov/
+      image: https://map.ornl.org/art/logo.png
+    - link: https://www.lbl.gov/
+      image: https://www.lbl.gov/wp-content/uploads/2022/09/berkeley-logo.svg
+    - link: https://www.uchicago.edu/en
+      image: https://data.org/wp-content/uploads/2021/09/uc_logo.jpeg
+    - link: https://www.anl.gov/
+      image: https://upload.wikimedia.org/wikipedia/commons/5/5b/Argonnelablogo.PNG
+    - link: https://www.nersc.gov/
+      image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzKv5LXRUBcMbGsXmwhEVArUKYup-AJjDs8g&s
+    - link: https://www.unibas.ch/en.html
+      image: https://www.unibas.ch/dam/jcr:6358a0ea-352a-4fdf-b4d7-ba144817526b/uni-basel-logo.svg
+    - link: https://www.pppl.gov/
+      image: https://upload.wikimedia.org/wikipedia/en/thumb/b/be/PPPL.svg/1200px-PPPL.svg.png
+    - link: https://www.surf.nl/en
+      image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/SURF_logo_svg.svg/1280px-SURF_logo_svg.svg.png
 ---
 
-<div class="container" data-aos="fade-up" style="padding: 3em 0;">
-    <div class="row">
-        <div class="col-lg-8 wg">
-            <p class="text-center">
-                <img src="/images/bof/sc25_logo.png" style="width: 15em; margin: auto;" />
-            </p>
-            <p class="subheading text-center">{{page.subtitle}}</p>
-            <h2 class="mb-4 text-center">{{page.title}}</h2>
+<p>
+    Scientific workflows are undergoing a fundamental transformation driven by the integration of artificial
+    intelligence (AI), the rise of agentic systems, the convergence of HPC and quantum computing (QC), and
+    the increasing need for near real-time coordination across computing and experimental facilities. This
+    BoF builds on three prior successful sessions at <a href="/bof/sc22">SC22</a>, 
+    <a href="/bof/sc23">SC23</a>, and <a href="/bof/sc24">SC24</a>.
+</p>
+<p>
+    This year, we broaden the conversation by focusing on four emerging and interrelated challenges. First,
+    we will explore the rise of agentic workflows, where intelligent systems autonomously make decisions
+    during execution. Second, we will examine how workflows must evolve to integrate heterogeneous computing
+    resources, particularly as quantum computing becomes more prominent alongside traditional HPC systems.
+    Third, we will discuss the increasing need to co-schedule computing and instrument resources to enable
+    seamless execution of workflows that span experiments and simulations, especially under tight
+    operational constraints. Finally, we will address the infrastructure and policy reforms required to
+    support these capabilities, including rethinking scheduling, access policies, and system design.
+<p>
+    These challenges mirror many of the issues raised in related discussions on near real-time streaming and
+    compute-in-the-loop architectures. The need to move beyond batch scheduling and support workflows that
+    are event-driven, adaptive, and latency-sensitive is becoming increasingly urgent. Moreover, existing
+    facility policies and infrastructure were not designed for workflows that must react to experimental
+    data in near real-time or that need to coordinate across multiple sites and technologies.
+</p>
+<p>
+    This BoF will bring together researchers, facility operators, and workflow developers to assess the
+    current landscape and envision the next phase of workflow-enabled science. Participants will hear from
+    experts who are leading national and international initiatives in agentic workflows, HPC/QC integration,
+    and cross-facility execution. The session will feature lightning talks to set the stage, followed by a
+    highly interactive format where attendees will engage in small-group discussions focused on identifying
+    key challenges and actionable next steps in each thematic area.
+</p>
 
-            <p class="text-center mb-5">
-                {{page.event_date | date: "%A - %b %d, %Y" }}<br />
-                {{page.time}}<br />
-                <!-- Room B212 -->
-            </p>
-            <p>
-                Scientific workflows are undergoing a fundamental transformation driven by the integration of artificial
-                intelligence (AI), the rise of agentic systems, the convergence of HPC and quantum computing (QC), and
-                the increasing need for near real-time coordination across computing and experimental facilities. This
-                BoF builds on three prior successful sessions at <a href="/bof/sc22">SC22</a>, 
-                <a href="/bof/sc23">SC23</a>, and <a href="/bof/sc24">SC24</a>.
-            </p>
-            <p>
-                This year, we broaden the conversation by focusing on four emerging and interrelated challenges. First,
-                we will explore the rise of agentic workflows, where intelligent systems autonomously make decisions
-                during execution. Second, we will examine how workflows must evolve to integrate heterogeneous computing
-                resources, particularly as quantum computing becomes more prominent alongside traditional HPC systems.
-                Third, we will discuss the increasing need to co-schedule computing and instrument resources to enable
-                seamless execution of workflows that span experiments and simulations, especially under tight
-                operational constraints. Finally, we will address the infrastructure and policy reforms required to
-                support these capabilities, including rethinking scheduling, access policies, and system design.
-            <p>
-                These challenges mirror many of the issues raised in related discussions on near real-time streaming and
-                compute-in-the-loop architectures. The need to move beyond batch scheduling and support workflows that
-                are event-driven, adaptive, and latency-sensitive is becoming increasingly urgent. Moreover, existing
-                facility policies and infrastructure were not designed for workflows that must react to experimental
-                data in near real-time or that need to coordinate across multiple sites and technologies.
-            </p>
-            <p>
-                This BoF will bring together researchers, facility operators, and workflow developers to assess the
-                current landscape and envision the next phase of workflow-enabled science. Participants will hear from
-                experts who are leading national and international initiatives in agentic workflows, HPC/QC integration,
-                and cross-facility execution. The session will feature lightning talks to set the stage, followed by a
-                highly interactive format where attendees will engage in small-group discussions focused on identifying
-                key challenges and actionable next steps in each thematic area.
-            </p>
-            <!-- <img src="/images/bof/wci-bof-sc24.jpeg" style="width: 100%; border-radius: 1em;" /> -->
+<!-- <img src="/images/bof/wci-bof-sc24.jpeg" style="width: 100%; border-radius: 1em;" /> -->
 
-            <p>&nbsp;</p>
-            <!-- <h2 class="mb-4">Agenda</h2>
-            <div class="col-md-12 ftco-animate">
-                <ul>
-                    <li style="color: rgb(5, 135, 215)">
-                        5:15pm-5:20pm &mdash; Opening Remarks
-                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                            Rafael Ferreira da Silva &mdash; <span style="font-style: italic; color: #999">Oak Ridge
-                                Leadership Computing Facility (OLCF)</span><br />
-                            Debbie Bard &mdash; <span style="font-style: italic; color: #999">National Energy Research
-                                Scientific Computing Center (NERSC)</span><br />
-                            Fred Suter &mdash; <span style="font-style: italic; color: #999">Oak Ridge National
-                                Laboratory (ORNL)</span><br />
-                            Kyle Chard &mdash; <span style="font-style: italic; color: #999">University of
-                                Chicago</span><br />
-                        </p>
-                    </li>
-                    <li style="color: rgb(5, 135, 215)">
-                        5:20pm-6:20pm &mdash; Lightning talks: Collaborative Pathways for Designing an Integrated
-                        Infrastructure for Research Excellence<br />
+<p>&nbsp;</p>
+<!-- <h2 class="mb-4">Agenda</h2>
+<div class="col-md-12 ftco-animate">
+    <ul>
+        <li style="color: rgb(5, 135, 215)">
+            5:15pm-5:20pm &mdash; Opening Remarks
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                Rafael Ferreira da Silva &mdash; <span style="font-style: italic; color: #999">Oak Ridge
+                    Leadership Computing Facility (OLCF)</span><br />
+                Debbie Bard &mdash; <span style="font-style: italic; color: #999">National Energy Research
+                    Scientific Computing Center (NERSC)</span><br />
+                Fred Suter &mdash; <span style="font-style: italic; color: #999">Oak Ridge National
+                    Laboratory (ORNL)</span><br />
+                Kyle Chard &mdash; <span style="font-style: italic; color: #999">University of
+                    Chicago</span><br />
+            </p>
+        </li>
+        <li style="color: rgb(5, 135, 215)">
+            5:20pm-6:20pm &mdash; Lightning talks: Collaborative Pathways for Designing an Integrated
+            Infrastructure for Research Excellence<br />
 
-                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                            <a href="/files/bof/">
-                                Advancing DOE's Integrated Research Infrastructure</a><br />
-                            <span style="font-style: italic; color: #999"><strong>Ben Brown</strong>, U.S. Department of
-                                Energy (DOE)</span>
-                        </p>
-                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                            <a href="/files/bof/">
-                                Evolving HP+AI workflows for the needs of Digital Twins in Science and
-                                Industry</a><br />
-                            <span style="font-style: italic; color: #999"><strong>Rosa M. Badia</strong>, Barcelona
-                                Supercomputing Center (BSC)</span>
-                        </p>
-                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                            <a href="/files/bof/">
-                                TBA</a><br />
-                            <span style="font-style: italic; color: #999"><strong>Manish Parashar</strong>, University
-                                of
-                                Utah</span>
-                        </p>
-                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                            <a href="/files/bof/">
-                                Achieving Seamless Integration for Next-Generations Scientific Workflows</a><br />
-                            <span style="font-style: italic; color: #999"><strong>Lavanya Ramakrishnan</strong>,
-                                Lawrence
-                                Berkeley National Laboratory (LBNL)</span>
-                        </p>
-                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                            <a href="/files/bof/">
-                                TBA</a><br />
-                            <span style="font-style: italic; color: #999"><strong>Ian T. Foster</strong>, Argonne
-                                National
-                                Laboratory (ANL)</span>
-                        </p>
-                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
-                            <a href="/files/bof/">
-                                A Use-Inspired Approach to Bridge the Data Gaps for AI-Integrated Research and Education
-                                Workflows</a><br />
-                            <span style="font-style: italic; color: #999"><strong>İlkay Altıntaş</strong>, San Diego
-                                Supercomputing Center (SDSC)</span>
-                        </p>
-                    </li>
-                    <li style="color: rgb(5, 135, 215)">
-                        6:20pm-6:45pm &mdash; Interactive Activity<br />
-                    </li>
-                </ul>
-            </div> -->
-        </div>
-        <div class="col-lg-4">
-            <div class="blog-sidbar">
-                <h4 class="mb-3">Featured Speakers</h4>
-                {% for o in page.speakers %}
-                <img src="{{ o.image }}" style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em; float: left" />
-                {{ o.name }}
-                {% if o.desc %}
-                <br /><a href="{{ o.desc_link }}" target="_blank">{{ o.desc }}</a>
-                {% else %}
-                <br />
-                {% endif %}
-                <br /><br />
-                {% endfor %}
-
-                <hr />
-                <h4 class="mb-3">Organizers</h4>
-                {% for o in page.organizers %}
-                <img src="{{ o.image }}" style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em; float: left" />
-                {{ o.name }}
-                {% if o.desc %}
-                <br /><a href="{{ o.desc_link }}" target="_blank">{{ o.desc }}</a>
-                {% else %}
-                <br />
-                {% endif %}
-                <br /><br />
-                {% endfor %}
-
-                <hr />
-                <h4 class="mb-3">Supporters</h4>
-                <div class="col-md-12 ftco-animate">
-                    <a href="https://ornl.gov/" target="_blank">
-                        <img src="https://map.ornl.org/art/logo.png"
-                            height="40px" class="mb-3 mr-3" />
-                    </a><br />
-                    <a href="https://www.lbl.gov/" target="_blank">
-                        <img src="https://www.lbl.gov/wp-content/uploads/2022/09/berkeley-logo.svg"
-                            height="40px" class="mb-3 mr-3" />
-                    </a><br />
-                    <a href="https://www.uchicago.edu/en" target="_blank">
-                        <img src="https://data.org/wp-content/uploads/2021/09/uc_logo.jpeg" height="30px"
-                            class="mb-3 mr-3" />
-                    </a><br />
-                    <a href="https://www.anl.gov/" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Argonnelablogo.PNG" height="40px"
-                            class="mb-3 mr-3" />
-                    </a><br />
-                    <a href="https://www.nersc.gov/" target="_blank">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzKv5LXRUBcMbGsXmwhEVArUKYup-AJjDs8g&s"
-                            height="40px" class="mb-3 mr-3" />
-                    </a><br />
-                    <a href="https://www.unibas.ch/en.html" target="_blank">
-                        <img src="https://www.unibas.ch/dam/jcr:6358a0ea-352a-4fdf-b4d7-ba144817526b/uni-basel-logo.svg"
-                            height="40px" class="mb-3 mr-3" />
-                    </a><br />
-                    <a href="https://www.pppl.gov/" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/be/PPPL.svg/1200px-PPPL.svg.png" height="30px"
-                            class="mb-3 mr-3" />
-                    </a><br />
-                    <a href="https://www.surf.nl/en" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/SURF_logo_svg.svg/1280px-SURF_logo_svg.svg.png" height="40px"
-                            class="mb-3 mr-3" />
-                    </a><br />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                <a href="/files/bof/">
+                    Advancing DOE's Integrated Research Infrastructure</a><br />
+                <span style="font-style: italic; color: #999"><strong>Ben Brown</strong>, U.S. Department of
+                    Energy (DOE)</span>
+            </p>
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                <a href="/files/bof/">
+                    Evolving HP+AI workflows for the needs of Digital Twins in Science and
+                    Industry</a><br />
+                <span style="font-style: italic; color: #999"><strong>Rosa M. Badia</strong>, Barcelona
+                    Supercomputing Center (BSC)</span>
+            </p>
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                <a href="/files/bof/">
+                    TBA</a><br />
+                <span style="font-style: italic; color: #999"><strong>Manish Parashar</strong>, University
+                    of
+                    Utah</span>
+            </p>
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                <a href="/files/bof/">
+                    Achieving Seamless Integration for Next-Generations Scientific Workflows</a><br />
+                <span style="font-style: italic; color: #999"><strong>Lavanya Ramakrishnan</strong>,
+                    Lawrence
+                    Berkeley National Laboratory (LBNL)</span>
+            </p>
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                <a href="/files/bof/">
+                    TBA</a><br />
+                <span style="font-style: italic; color: #999"><strong>Ian T. Foster</strong>, Argonne
+                    National
+                    Laboratory (ANL)</span>
+            </p>
+            <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                <a href="/files/bof/">
+                    A Use-Inspired Approach to Bridge the Data Gaps for AI-Integrated Research and Education
+                    Workflows</a><br />
+                <span style="font-style: italic; color: #999"><strong>İlkay Altıntaş</strong>, San Diego
+                    Supercomputing Center (SDSC)</span>
+            </p>
+        </li>
+        <li style="color: rgb(5, 135, 215)">
+            6:20pm-6:45pm &mdash; Interactive Activity<br />
+        </li>
+    </ul>
+</div> -->
