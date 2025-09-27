@@ -1,0 +1,1111 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> Workflows Systems - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Workflows Systems" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="twitter:title" content="Workflows Systems" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Workflows Community Initiative"},"headline":"Workflows Systems","image":"https://workflows.community/images/wci-default-card.png","url":"/systems"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- <link rel="stylesheet" href="/assets/css/open-iconic-bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/animate.css" />
+<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+<link rel="stylesheet" href="/assets/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="/assets/css/jquery.timepicker.css"> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-white-logo.png" alt="logo">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <!-- <li><a href="/jobs">Jobs</a></li> -->
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <!-- <button id="darkmode-button"><i class="bi bi-moon-fill"></i></button> -->
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">Workflows Systems</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            
+
+
+
+
+<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
+    <h1>36</h1>
+    <h4>open-source workflow systems</h4>
+    <p><strong style="color: #db8e1b">24</strong> workflow systems provide WCI metadata</p>
+    <a href="/systems/contribute" class="btn btn-primary mt-3 py-3 px-5">Contribute</a>
+</div>
+
+<section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
+    <div class="container" data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-delay="100">
+            <!-- WCI Metadata -->
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/22181836?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/aiida-core/">AiiDA</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">A workflow manager for computational science with a strong focus on provenance, performance and extensibility.</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> AiiDA v2.7.1
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 27 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/6698688?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/nextflow/">Nextflow</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">A DSL for data-driven computational pipelines</h4>
+                                <h4>Groovy
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> Version 25.08.0-edge
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 27 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/5695311?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/swift-t/">Swift/T</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">An MPI-based workflow system</h4>
+                                <h4>Built with C; programmed with the Swift/T language
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> 1.6.6
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 26 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://raw.githubusercontent.com/alpha-unito/streamflow/master/docs/logo.png" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/streamflow/">StreamFlow</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Towards Cloud-HPC Continuum</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> 0.2.0.dev13
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 26 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://parsl-project.org/images/logos/parsl-logo.png" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/parsl/">Parsl</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Productive parallel programming in Python</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> 1.2.0
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 26 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://raw.githubusercontent.com/ESIPFed/Geoweaver/main/docs/img/header.png" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/geoweaver/">Geoweaver</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">a lightweight workflow software to easily orchestrate pipelines from Python and shell scripts and preserve history of every execution</h4>
+                                <h4>JavaScript
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> v2.2.0-pre1
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 26 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://radical-cybertools.github.io/assets/radical-logo-transparent.png" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/radical.asyncflow/">RADICAL-AsyncFlow</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">High Performance Asynchronous Workflow Scripting Library</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> 0.2.0
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 25 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://ccl.cse.nd.edu/software/taskvine/taskvine-icon.png" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/taskvine/">TaskVine</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">An execution system for large scale data intensive dynamic workflows.</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> devel
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 25 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/33450111?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/snakemake/">Snakemake</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">This is the development home of the workflow management system Snakemake. For general information, see</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> v9.11.6
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 25 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/2520573?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/makeflow/">Makeflow</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Makeflow is a workflow system for parallel and distributed computing that uses a language very similar to Make.</h4>
+                                <h4>Make
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> devel
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 25 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/97905312?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/watts/">WATTS</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Workflow and Template Toolkit for Simulation</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> 0.5.2
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 24 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/25691954?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/pyiron_base/">pyiron</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">A workflow manager for scientific computing on high performance computing infrastructures</h4>
+                                <h4>python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> pyiron_base-0.15.1
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 24 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/79117852?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/SmartSim/">SmartSim</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Machine learning workflows with HPC applications (Python, C++, C, and Fortran)</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> 0.8.0
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 24 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/16351522?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/scipipe/">SciPipe</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Robust, flexible and resource-efficient pipelines using Go and the commandline.</h4>
+                                <h4>Go
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> v0.12.0: Important bugfix. Minor API change.
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 24 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/824878?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/cylc-flow/">Cylc</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">A general purpose workflow engine with a particular gift for cycling.</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> cylc-flow-8.5.4
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 24 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://raw.githubusercontent.com/DagOnStar/dagonstar/refs/heads/master/figures/DAGonStar_Logo01.png" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/dagonstar/">DagOnStar</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">DAGonStar is a simple Python-based workflow engine that runs jobs on everything from the local machine to distributed virtual HPC clusters hosted in private and public clouds.</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> v1.0.2
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 18 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://raw.githubusercontent.com/LLNL/merlin/main/docs/assets/images/merlin_icon.png" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/merlin/">Merlin</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Enabling Machine Learning HPC Workflows</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> Version 2.0.0b1
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 17 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://radical-cybertools.github.io/assets/radical-logo-transparent.png" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/radical.entk/">RADICAL-EnTK</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Ensemble Toolkit</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> 1.102.0
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 14 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://raw.githubusercontent.com/AgnostiqHQ/covalent/master/doc/source/_static/covalent-logo-blue-favicon.png" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/covalent/">Covalent</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Distributed workflows for quantum and HPC</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> v0.240.0
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 12 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://raw.githubusercontent.com/LLNL/maestrowf/develop/assets/logo_icon.png" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/maestrowf/">Maestro Workflow Conductor</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Orchestrate your HPC workflows with ease</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> v1.1.11
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 08 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/37080113?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/compss/">PyCOMPSs/COMPSs</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Easy task-based parallelization and efficient execution in distributed infrastructures.</h4>
+                                <h4>Python, Java, C/C++
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> 3.3.3 Orchid Update
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 02 Sep 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/233707?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/nipype/">nipype</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Neuroimaging in Python: Pipelines and Interfaces</h4>
+                                <h4>Python3
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> 1.10.0
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 16 Aug 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://raw.githubusercontent.com/Libensemble/libensemble/main/docs/images/libE_logo.png" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/libensemble/">libEnsemble</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Tool for running dynamic ensembles.</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> 1.5.0
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 02 Jul 2025
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/76112493?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/EE-Demo/">Apollo Runtime System</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">A runtime system for the orchestration of workflows across the cloud-edge-Iot continuum.</h4>
+                                <h4>Polyglot for Functions, AFCL for workflows
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> v1.1.0
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 13 Dec 2021
+                                    
+                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
+                                    WCI metadata</span>
+                                    
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- No WCI Metadata -->
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/3019875?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/pegasus/">pegasus</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Pegasus Workflow Management System - Automate, recover, and debug scientific computations.</h4>
+                                <h4>Java
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> 5.1.1
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 27 Sep 2025
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/39938107?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/mlflow/">mlflow</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">The open source developer platform to build AI/LLM applications and models with confidence. Enhance your AI applications with end-to-end tracking, observability, and evaluations, all in one integrated platform.</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> v3.4.0
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 27 Sep 2025
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/7937847?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/galaxy/">galaxy</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Data intensive science for everyone.</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> v25.0.3
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 27 Sep 2025
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/17131925?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/dask/">dask</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Parallel computing with task scheduling</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> 2025.9.1
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 27 Sep 2025
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/867057?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/fireworks/">fireworks</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">The Fireworks Workflow Management Repo.</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> v2.0.5
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 27 Sep 2025
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/6120321?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/globus-compute/">globus-compute</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Globus Compute: High Performance Function Serving for Science</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> 3.15.0
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 26 Sep 2025
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/32805087?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/toil/">toil</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">A scalable, efficient, cross-platform (Linux/macOS) and easy-to-use workflow engine in pure Python.</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> 9.1.0
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 26 Sep 2025
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/867057?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/jobflow/">jobflow</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">jobflow is a library for writing computational workflows.</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> v0.2.0
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 25 Sep 2025
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/393552?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/cromwell/">cromwell</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Scientific workflow engine designed for simplicity & scalability. Trivially transition between one off use cases to massive scale production environments</h4>
+                                <h4>Scala
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> 90
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 25 Sep 2025
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://ewoks.esrf.fr/en/latest/_static/ewoks.png" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/ewoks/">ewoks</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Extensible Workflow System</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> 2.0.1
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 15 Aug 2025
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/31685161?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/hyperflow/">hyperflow</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">HyperFlow: a scientific workflow engine </h4>
+                                <h4>JavaScript
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> v1.7.2
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 08 Aug 2025
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                        <div class="d-flex align-items-center info-box">
+                            <img src="https://avatars.githubusercontent.com/u/25832198?v=4" class="testimonial-img flex-shrink-0">
+                            <div>
+                                <h3><a href="/systems/signac-flow/">signac-flow</a></h3>
+                                <h4 style="margin-bottom: 0.5em;">Workflow management for signac-managed data spaces.</h4>
+                                <h4>Python
+                                    
+                                    &mdash; <i class="fas fa-box-open"></i> v0.29.0
+                                    
+                                    &mdash; <i class="far fa-clock"></i> 31 Jul 2025
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<div class="container text-center" data-aos="fade-up" style="padding: 4em 0">
+    <p>For a comprehensive lists of all known computational workflow systems, see <a
+            href="https://s.apache.org/existing-workflow-systems" target="_blank">Computational Data Analysis Workflow
+            Systems</a> maintained by the CWL community.</p>
+</div>
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html" class="logo d-flex align-items-center">
+                                <img src="/images/wci-white-logo.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite the workflows community—users, developers, researchers, and facilities—to
+                                provide essential resources and capabilities that empower scientists and developers to
+                                discover tools, connect with related initiatives, and collaborate on solving the grand
+                                challenges in workflow systems.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                    <!-- <div class="service-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Services</h3>
+                        </div>
+                        <ul class="list">
+                            <li><a href="services.html">Web Design</a></li>
+                            <li><a href="services.html">App Development</a></li>
+                            <li><a href="services.html">Cloud Services</a></li>
+                            <li><a href="services.html">Domain and Hosting</a></li>
+                            <li><a href="services.html">Seo Optimization</a></li>
+                            <li><a href="services.html">Social Media</a></li>
+                        </ul>
+                    </div> -->
+                </div>
+                <!-- <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+                    <div class="service-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Information</h3>
+                        </div>
+                        <ul class="list">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="packages.html">Pricing</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="porfolio.html">Portfolio</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="blogs.html">Blogs</a></li>
+                            <li><a href="blogs-details.html">Blog Details</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                            <li><a href="privacy-policy.html">Terms & Conditions</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Contacts</h3>
+                        </div>
+                        <div class="footer-text">
+                            <p><i class="bi bi-envelope-fill mr-15"></i> contact@workflows.community</p>
+                        </div>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            style="font-size: 1.2em"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" style="font-size: 1.2em"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank"
+                            style="font-size: 1.2em"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" style="font-size: 1.2em"><i class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&mdash;2025 Workflows.Community Initiative</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
