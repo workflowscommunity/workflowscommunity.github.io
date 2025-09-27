@@ -1350,6 +1350,13 @@
     institution: Pacific Northwest National Laboratory 
     link: https://www.pnnl.gov/people/luanzheng-guo
 
+- country: Vietnam
+  entries:
+  - last_name: Hoang Le Hai
+    first_name: Thanh
+    institution: High Performance Computing Lab, Ho Chi Minh City University of Technology (HCMUT, VNU-HCM)
+    link: https://ist.hcmut.edu.vn/~thanhhoang
+
 # - last_name:
 #   first_name:
 #   institution: 
