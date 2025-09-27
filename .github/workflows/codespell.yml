@@ -21,4 +21,4 @@ jobs:
       - name: Codespell
         uses: codespell-project/actions-codespell@v2
         with:
-          skip: ./assets/css/*,./assets/js/*,./data/members.yml
+          skip: ./assets/css/*,./assets/js/*,./_data/members.yml
