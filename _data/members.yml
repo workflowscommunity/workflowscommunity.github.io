@@ -1350,6 +1350,12 @@
     institution: Pacific Northwest National Laboratory 
     link: https://www.pnnl.gov/people/luanzheng-guo
 
+  - last_name: Mirchandani
+    first_name: Cade
+    institution: UC Santa Cruz
+    link: https://github.com/cademirch
+
+
 - country: Vietnam
   entries:
   - last_name: Hoang Le Hai
