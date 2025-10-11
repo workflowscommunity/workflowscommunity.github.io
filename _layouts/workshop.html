@@ -43,6 +43,15 @@ layout: page
                 {% endfor %}
                 {% endif %}
 
+                {% if page.speakers %}
+                <hr />
+                <h4 class="mb-3">Speakers</h4>
+                {% for sp in page.speakers %}
+                <img src="{{ sp.image }}" style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em;" />
+                {{ sp.name }}<br /><br />
+                {% endfor %}
+                {% endif %}
+
                 {% if page.steering_committee %}
                 <hr />
                 <h4 class="mb-3">Steering Committee</h4>
