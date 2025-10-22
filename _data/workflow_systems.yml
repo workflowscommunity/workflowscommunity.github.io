@@ -507,6 +507,10 @@
   organization: nipy
   repository: nipype
 
+- type: github
+  organization: DragonHPC
+  repository: dragon
+
 # - type: github
 #   organization: icui
 #   repository: nnodes
