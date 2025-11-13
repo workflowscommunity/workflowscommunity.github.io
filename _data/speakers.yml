@@ -126,3 +126,16 @@
   talk_num: 8
   photo: montella.png
   bio: "Raffaele Montella is an Associate Professor with tenure in Computer Science at the Department of Science and Technologies (DiST), University of Naples “Parthenope’” (UNP), Italy. He got his degree (MSc equivalent) cum laude and an award mention to his study career in (Marine) Environmental Science at the University of Naples “Parthenope” in 1998, defending a thesis about the “Development of a GIS system for marine applications”. He defended his Ph.D. thesis on “Environmental modeling and Grid Computing techniques” earning a Ph.D. in Marine Science and Engineering at the University of Naples “Federico II”. His main research topics and scientific production are focused on: tools for high-performance computing, cloud computing, and GPUs with applications in the field of computational environmental science (multi-dimensional geo-referenced big data, distributed computing for modeling, and scientific workflows and science gateways) leveraging on his previous (and still ongoing) experiences in embedded, mobile, wearable, pervasive computing, and Internet of Things. Since 2021 he has been head of the UNP node CINI Lab/Working Group “HPC: Key Technologies and Tools”. Since 2022 he has been the head of the AWS Academy at the University of Naples “Parthenope”. In February 2023, he gained the Italian National Academic Qualifications as Full Professor in Computer Science (01/B1)."
+
+- name: Renan Souza
+  role: Research Staff
+  institution:
+    - name: Oak Ridge National Laboratory
+      link: https://www.ornl.gov/staff-profile/renan-souza
+      image: ornl.png
+  country: us
+  link: https://www.ornl.gov/staff-profile/renan-santos-souza
+  talk_num: 9
+  photo: souza.jpg
+  bio: "Renan Souza earned his Ph.D., M.Sc., and B.Sc. in Computer Science (2009-2019) from the Federal University of Rio de Janeiro (UFRJ). Since 2022, he has been a researcher and software engineer at Oak Ridge National Laboratory, after spending seven years at IBM. He was a visiting scientist at INRIA, France, during his Ph.D. and, during his B.Sc., studied abroad at Missouri State University and interned at SLAC National Laboratory. Active in engineering, research, and technical leadership since 2010, he has authored 50+ peer-reviewed papers in leading venues and holds 10+ USPTO patents. His current focus is on designing and building scalable systems to support responsible and trustworthy AI workflows."
+  
