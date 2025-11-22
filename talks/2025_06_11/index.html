@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> Automating Scientific Insights at the Advanced Photon Source - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Automating Scientific Insights at the Advanced Photon Source" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This talk will explore how reusable workflows developed at the Advanced Photon Source simplify the analysis of experimental data by harnessing the computational power of HPC systems at ALCF and NERSC. By automating data processing and integrating these resources, the workflows provide an accessible and efficient platform for researchers. These tools enhance productivity and facilitate collaboration across various beamlines, enabling researchers to focus on scientific discovery while overcoming the challenges of complex data analysis." />
+<meta property="og:description" content="This talk will explore how reusable workflows developed at the Advanced Photon Source simplify the analysis of experimental data by harnessing the computational power of HPC systems at ALCF and NERSC. By automating data processing and integrating these resources, the workflows provide an accessible and efficient platform for researchers. These tools enhance productivity and facilitate collaboration across various beamlines, enabling researchers to focus on scientific discovery while overcoming the challenges of complex data analysis." />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="/images/talks/parraga-banner.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-22T16:20:44+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="/images/talks/parraga-banner.jpg" />
+<meta property="twitter:title" content="Automating Scientific Insights at the Advanced Photon Source" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2025-11-22T16:20:44+00:00","datePublished":"2025-11-22T16:20:44+00:00","description":"This talk will explore how reusable workflows developed at the Advanced Photon Source simplify the analysis of experimental data by harnessing the computational power of HPC systems at ALCF and NERSC. By automating data processing and integrating these resources, the workflows provide an accessible and efficient platform for researchers. These tools enhance productivity and facilitate collaboration across various beamlines, enabling researchers to focus on scientific discovery while overcoming the challenges of complex data analysis.","headline":"Automating Scientific Insights at the Advanced Photon Source","image":"/images/talks/parraga-banner.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"/talks/2025_06_11/"},"url":"/talks/2025_06_11/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- <link rel="stylesheet" href="/assets/css/open-iconic-bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/animate.css" />
+<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+<link rel="stylesheet" href="/assets/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="/assets/css/jquery.timepicker.css"> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-white-logo.png" alt="logo">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <!-- <li><a href="/jobs">Jobs</a></li> -->
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <!-- <button id="darkmode-button"><i class="bi bi-moon-fill"></i></button> -->
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">Automating Scientific Insights at the Advanced Photon Source</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            <div class="container" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-8 wg wg-contents text-center">
+            <p class="breadcrumb">
+                <a href="/talks">WORKFLOWS COMMUNITY TALKS&nbsp;</a> > AUTOMATING SCIENTIFIC INSIGHTS AT THE ADVANCED PHOTON SOURCE
+            </p>
+
+            <h2 class="mb-4">Automating Scientific Insights at the Advanced Photon Source</h2>
+            
+            <h4 class="text-center" style="font-style: italic; font-weight: 500;">
+                High-Performance Workflows for Analyzing Experimental Data
+            </h4>
+            
+            <p class="text-center" style="font-size: 1.1em; font-weight: 500;">
+                Hannah Parraga (Argonne National Laboratory)
+            </p>
+
+            <p class="text-center text-muted" style="font-size: 1em;">
+                June 11, 2025<br />11am-11.30 PST / 2pm-2.30 EST / 20:00-20:30 CEST
+            </p>
+
+            <p class="mb-3" style="text-align: left;">
+            <p class="mb-3" style="text-align: left;">
+    This talk will explore how reusable workflows developed at the
+    Advanced Photon Source simplify the analysis of experimental data
+    by harnessing the computational power of HPC systems at ALCF and
+    NERSC. By automating data processing and integrating these
+    resources, the workflows provide an accessible and efficient
+    platform for researchers. These tools enhance productivity
+    and facilitate collaboration across various beamlines, enabling
+    researchers to focus on scientific discovery while overcoming
+    the challenges of complex data analysis.
+</p>
+
+            </p>
+
+            
+
+            
+            <a href="/files/talks/Parraga_workflowsTalk.pdf" target="_blank" class="btn btn-outer mt-3 py-3 px-5"><i
+                    class="fa fa-file"></i> Presentation</a>
+            <p>&nbsp;</p>
+            
+
+            
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/hbmlTT9lUtY?si=UnEC_oG9CZD4nRG8" title="YouTube video player" frameborder="0"
+                style="border-radius: 1em"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>&nbsp;</p>
+            
+
+        </div>
+
+        <div class="col-lg-4">
+            <div class="blog-sidbar">
+                <h4 class="mb-4">About the Authors</h4>
+                
+                
+                <a href="https://www.anl.gov/profile/hannah-parraga" target="_blank">
+                    
+                    <img src="/images/talks/parraga.jpg" alt="Hannah Parraga" class="img-fluid mb-3"
+                        style="width: 150px; height: 200px; object-fit: cover; border-radius: 0.5em;">
+                </a>
+                <p class="font-weight-bold">Hannah Parraga<br />
+                    <span class="text-muted">Software Engineering Specialist</span>
+                </p>
+                <p class="bio" style="font-size: 0.8em;">Hannah Parraga is a Software Engineering Specialist at Argonne National Laboratory. As a part of the Scientific Software and Data Management Group at the Advanced Photon Source since 2021, her interests include developing robust and reliable software solutions for scientific research such as automated data processing, secure data access, and intuitive user interfaces.</p>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    
+                    <a href="https://www.anl.gov" target="_blank"
+                        style="margin-left: auto;">
+                        <img src="/images/institutions/anl_aps.png" alt="Argonne National Laboratory"
+                            style="max-height: 2em; object-fit: contain; margin-right: 0.5em;" />
+                    </a>
+                    
+                </div>
+                <hr />
+                
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html" class="logo d-flex align-items-center">
+                                <img src="/images/wci-white-logo.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite the workflows community—users, developers, researchers, and facilities—to
+                                provide essential resources and capabilities that empower scientists and developers to
+                                discover tools, connect with related initiatives, and collaborate on solving the grand
+                                challenges in workflow systems.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                    <!-- <div class="service-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Services</h3>
+                        </div>
+                        <ul class="list">
+                            <li><a href="services.html">Web Design</a></li>
+                            <li><a href="services.html">App Development</a></li>
+                            <li><a href="services.html">Cloud Services</a></li>
+                            <li><a href="services.html">Domain and Hosting</a></li>
+                            <li><a href="services.html">Seo Optimization</a></li>
+                            <li><a href="services.html">Social Media</a></li>
+                        </ul>
+                    </div> -->
+                </div>
+                <!-- <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+                    <div class="service-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Information</h3>
+                        </div>
+                        <ul class="list">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="packages.html">Pricing</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="porfolio.html">Portfolio</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="blogs.html">Blogs</a></li>
+                            <li><a href="blogs-details.html">Blog Details</a></li>
+                            <li><a href="coming-soon.html">Coming Soon</a></li>
+                            <li><a href="privacy-policy.html">Terms & Conditions</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Contacts</h3>
+                        </div>
+                        <div class="footer-text">
+                            <p><i class="bi bi-envelope-fill mr-15"></i> contact@workflows.community</p>
+                        </div>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            style="font-size: 1.2em"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" style="font-size: 1.2em"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank"
+                            style="font-size: 1.2em"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" style="font-size: 1.2em"><i class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&mdash;2025 Workflows.Community Initiative</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
