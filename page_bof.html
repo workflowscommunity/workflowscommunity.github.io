@@ -19,10 +19,13 @@ permalink: /bof
                 <div class="testimonial-wrap">
                     <div class="testimonial-item">
                         <div class="d-flex align-items-center info-box">
+                            <img src="{{bof.conference_logo}}" class="testimonial-img flex-shrink-0">
+                            <div>
                             {{bof.event_date | date: "%b %d, %Y" }}
-                        </div>
                         <h3 class="heading"><a href="{{bof.url}}">{{bof.title}}</a></h3>
                         <span class="position">{{bof.subtitle}}</span>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
