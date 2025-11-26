@@ -16,8 +16,8 @@ image: "https://workflows.community/images/wci-default-card.png"
         <div id="repulse-circle-div"></div>
         <div class="container position-relative">
             <div class="row gy-5 aos-init aos-animate">
-                <div class="col-lg-7 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
-                    <h2 data-aos="fade-up">Elevating community-centered scientific workflow solutions <span>through
+                <div class="col-lg-8 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h2 data-aos="fade-up">Elevating community-centered scientific workflow solutions <span style="color: #FFB020">through
                             collective expertise</span><span class="circle" data-aos="fade-right"
                             data-aos-delay="800">.</span></h2>
                     <p data-aos="fade-up" data-aos-delay="400">Our goal is to bring the workflows community together
@@ -41,20 +41,22 @@ image: "https://workflows.community/images/wci-default-card.png"
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-5 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                <div class="col-lg-4 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
                     <div class="row" style="border: 3px solid #fff; border-radius: .5em">
                         {% assign talks = site.talks| where: "given", false | sort: 'order'%}
                         {% for talk in talks limit: 1 %}
-                        <div class="col-lg-5" style="padding: 0; background-color: rgba(109, 84, 170, 0.5);">
-                            <a href="/talks"><img src="/images/talks/banner.png" width="100%" style="border-radius: 0.5em;" /></a>
+                        <div class="col-lg-12" style="padding: 0; background-color: rgba(109, 84, 170, 0.5);">
+                            <a href="/talks"><img src="/images/talks/talks-banner.png" width="100%" style="border-radius: 0.5em;" /></a>
                         </div>
-                        <div class="col-lg-7" style="background-color: rgba(109, 84, 170, 0.5); padding: 1em;">
+                        <div class="col-lg-12" style="background-color: rgba(109, 84, 170, 0.5); padding: 1em;">
                             <strong><a href="{{ talk.url }}" style="color: #fff">{{ talk.title }}</a></strong><br />
                             <i style="color: #999">{{ talk.authors }}</i><br />
                             {{ talk.event_date }}
-                            <br /><br />
-                            <a href="{{ talk.url }}" style="color: #7057AF; background-color: #fff; padding: 0.5em 1em; border-radius: 0.5em;">Learn more ></a>
+                            <br />
                         </div>
+                        <a href="{{ talk.url }}" class="col-lg-12" style="background-color: #fff; padding: 0.5em; text-align: center; font-size: 0.9em;">
+                            LEARN MORE >
+                        </a>
                         {% endfor %}
                     </div>
                 </div>

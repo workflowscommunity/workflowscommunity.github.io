@@ -23,7 +23,7 @@ permalink: /
 
         <div class="row gy-4">
 
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <!-- COMMUNITY TALKS -->
                 <article>
                     {% assign talks = site.talks| where: "given", false | sort: 'order'%}
@@ -47,8 +47,8 @@ permalink: /
                 </article>
             </div>
 
-            <div class="col-lg-3">
-                <!-- WORKSHOP -->
+            <!-- WORKSHOP -->
+            <!-- <div class="col-lg-3">
                 <article>
                     {% assign count_events = 0 %}
                     {% assign workshops = site.workshops | sort: 'event_date' %}
@@ -74,7 +74,7 @@ permalink: /
                     {% endif %}
                     {% endfor %}
                 </article>
-            </div>
+            </div> -->
 
             <!-- <div class="col-lg-3">
                 <!- RECENT SUMMIT ->
@@ -100,7 +100,7 @@ permalink: /
                 </article>
             </div> -->
 
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <!-- BOF -->
                 <article>
                     {% assign bofs = site.bofs | sort: 'order' | reverse %}
@@ -125,7 +125,7 @@ permalink: /
                 </article>
             </div>
 
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <!-- YOUTUBE -->
                 <article>
                     <div class="post-img">
@@ -137,7 +137,8 @@ permalink: /
                     </h2>
                     <div class="d-flex align-items-center">
                         <div class="post-meta">
-                            <p class="post-author">Subscribe to our YouTube channel</p>
+                            <p class="post-author">Connecting researchers, developers, and practitioners shaping the future of workflows</p>
+                            <p class="post-date">Subscribe to our YouTube channel</p>
                         </div>
                     </div>
                 </article>

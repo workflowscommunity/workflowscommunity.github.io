@@ -17,21 +17,21 @@
   --font-secondary:
   'Poppins', sans-serif;
   scroll-behavior: smooth;
-  --color-bg: #025add;
+  --color-bg: #FFB020;
   --hero-overlay-color: transparent;
   --menu-color: #ffffff;
-  --theme-color: #025add;
+  --theme-color: #0E1117;
   --border-color: #e2e2e2;
   --theme-color-dark: #f8f8f8;
   --text-color: #3a3a3a;
   --hero-text-color: #ffffff;
   --text-white-color: #ffffff;
   --text-grey-color: #3a3a3a;
-  --text-theme-color: #025add;
+  --text-theme-color: #2D5BFF;
   --light-color: #ffffff;
   --color-default: #3a3a3a;
-  --color-primary: #025add;
-  --color-secondary: #0c6de0;
+  --color-primary: #8B949E;
+  --color-secondary: #2AB4B8;
   --color-start: #3a3a3a;
   --color-end: #3a3a3a;
   --hero-card-bg: rgb(228 227 223 / 17%);
@@ -1589,7 +1589,7 @@ section {background: var(--light-color);}
   border-radius: 50px;
   transition: 0.3s;
   color: var(--text-white-color);
-  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(45deg, #FFB020, #2FB7B5);
 }
 
 .btn-get-started:hover {
