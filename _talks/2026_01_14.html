@@ -1,0 +1,54 @@
+---
+layout: talk
+title: "Up-scaling Python functions for HPC with executorlib"
+authors: Jan Janssen (Max Planck Institute for Sustainable Materials)
+event_date: January 14, 2026
+times: 11:00-11:30 PST / 14:00-14:30 EST / 20:00-20:30 CEST
+talk_number: 10
+given: false
+<!-- image: /images/talks/janssen-banner.png -->
+<!-- presentation: -->
+<!-- video:  -->
+---
+
+The up-scaling of Python workflows from the execution on a local workstation to 
+the parallel execution on an HPC typically faces three challenges: (1) the 
+management of inter-process communication, (2) the data storage and (3) the 
+management of task dependencies during the execution. These challenges commonly 
+lead to a rewrite of major parts of the reference serial Python workflow to 
+improve computational efficiency.  Executorlib addresses these challenges by 
+extending Python's ProcessPoolExecutor interface to distribute Python functions 
+on HPC systems. It interfaces with the job scheduler directly without the need 
+for a database or daemon process, leading to seamless up-scaling.
+
+<br /><br />
+
+The presentation introduces the challenge of up-scaling Python workflows. It 
+highlights how executorlib extends the ProcessPoolExecutor interface of the 
+Python standard library to provide the user with a familiar interface, while 
+the executorlib backend directly connects to the HPC job scheduler to distribute 
+Python functions either from the login node to individual compute nodes or 
+within an HPC allocation of a number of compute nodes, which is enabled by 
+supporting both file-based and socket-based communication.
+
+<br /><br />
+
+The setup of executorlib on different HPC systems is introduced, based on the 
+current support for the SLURM job scheduler as well as the Flux framework to 
+enable hierarchical scheduling within large HPC job allocations as commonly 
+used on Exascale computers. Application examples are then given to demonstrate 
+how executorlib supports the assignment of computational resources like CPU 
+cores, number of threads and GPU resources on a per-function basis, including 
+support for MPI, which drastically simplifies the process of up-scaling Python 
+workflows.
+
+<br /><br />
+
+In this context, the focus of this presentation is the user journey during the 
+up-scaling of a Python workflow and how features like caching or the integrated 
+debugging capabilities for the distributed execution of Python functions 
+accelerate the development cycle. The presentation concludes by returning to 
+challenges identified as part of DOE Exascale Computing Project's EXAALT effort 
+to demonstrate how the development process was drastically simplified by using 
+executorlib, with a specific focus on dynamic dependencies which are only 
+resolved during run time of the Python workflow.

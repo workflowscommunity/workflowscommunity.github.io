@@ -139,3 +139,14 @@
   photo: souza.jpg
   bio: "Renan Souza earned his Ph.D., M.Sc., and B.Sc. in Computer Science (2009-2019) from the Federal University of Rio de Janeiro (UFRJ). Since 2022, he has been a researcher and software engineer at Oak Ridge National Laboratory, after spending seven years at IBM. He was a visiting scientist at INRIA, France, during his Ph.D. and, during his B.Sc., studied abroad at Missouri State University and interned at SLAC National Laboratory. Active in engineering, research, and technical leadership since 2010, he has authored 50+ peer-reviewed papers in leading venues and holds 10+ USPTO patents. His current focus is on designing and building scalable systems to support responsible and trustworthy AI workflows."
   
+- name: Jan Janssen
+  role: Group Leader for Materials Informatics
+  institution:
+    - name: Max Planck Institute for Sustainable Materials
+      link: https://www.mpie.de/en
+      image: max_plank.png
+  country: de
+  link: https://www.mpie.de/4910750/Janssen
+  talk_num: 10
+  photo: janssen.jpg
+  bio: "Jan Janssen is the group leader for Materials Informatics at the Max Planck Institute for Sustainable Materials. His group focuses on applying methods from computer science including machine learning to discover novel sustainable materials with applications ranging from machine-learned interatomic potentials to large language model agents for atomistic simulation. Previously, Jan was a director’s postdoctoral fellow in the T-division at Los Alamos National Laboratory as part of the Exascale Computing Project as well as an invited postdoctoral fellow at the University of Chicago and the University of California Los Angeles. Besides his research work, Jan is the lead developer of the pyiron atomistic simulation suite, maintains over 1000 open-source materials informatics software packages for the conda-forge community and is a regular contributor to open-source software on Github."
