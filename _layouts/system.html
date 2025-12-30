@@ -2,210 +2,283 @@
 layout: page
 ---
 
-<div class="container" data-aos="fade-up" style="padding: 3em 0;">
-    <div class="row">
-        <div class="col-lg-8 wg wg-contents text-center">
-            <p class="breadcrumb">
-                <a href="/systems">WORKFLOW SYSTEMS&nbsp;</a> > {{ page.title | upcase }}
+<section class="system-detail">
+    <div class="container system-container" data-aos="fade-up">
+        <div class="system-hero">
+            <p class="system-breadcrumb">
+                <a href="/systems">Workflow Systems</a>
+                <span>/</span>
+                {{ page.title }}
             </p>
-
-            <h2 style="margin-bottom: 0;">{{ page.title }}</h2>
-            <p style="color: #666">{{ page.headline }}</p>
-
-            <div class="mb-4" style="background-color: #fff; padding: 1em; border-radius: 0.5em;">
-                <i class="far fa-clock"></i> Last updated: <strong>{{page.last_update}}</strong>
-                &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-                <i class="fas fa-box-open"></i> Release: <strong>{{page.release_name}}</strong>
-            </div>
-
-            <p style="text-align: left;">{{ page. description }}</p>
-
-            <div style="background-color: #fff; padding: 1em; border-radius: 0.5em;" class="mb-5">
-                <div class="row mb-5">
-                    {% if page.install %}
-                    <div class="col-md-3">
-                        <a href="{{page.install}}" target="_blank">
-                            <i class="fas fa-download" style="font-size: 1.5em;"></i><br />
-                            Install
-                        </a>
+            <div class="system-hero-content">
+                <div>
+                    <div class="system-title-row">
+                        <h1>{{ page.title }}</h1>
+                        {% if page.wci_metadata %}
+                        <span class="system-wci-badge">
+                            <img src="/favicon.ico" alt="WCI" />
+                            WCI metadata
+                        </span>
+                        {% endif %}
                     </div>
-                    {% endif %}
-                    {% if page.tutorial %}
-                    <div class="col-md-3">
-                        <a href="{{page.install}}" target="_blank">
-                            <i class="fas fa-user-cog" style="font-size: 1.5em;"></i><br />
-                            Tutorial
+                    <p class="system-hero-headline">{{ page.headline }}</p>
+                    <div class="system-hero-actions">
+                        {% if page.website %}
+                        <a href="{{ page.website }}" target="_blank" class="btn btn-primary system-cta-btn">
+                            Visit website
                         </a>
-                    </div>
-                    {% endif %}
-                    {% if page.documentation %}
-                    <div class="col-md-3">
-                        <a href="{{page.documentation}}" target="_blank">
-                            <i class="fas fa-user-cog" style="font-size: 1.5em;"></i><br />
-                            Documentation
+                        {% endif %}
+                        {% if page.repository_url %}
+                        <a href="{{ page.repository_url }}" target="_blank" class="btn btn-outer">
+                            View repository
                         </a>
-                    </div>
-                    {% endif %}
-                    <div class="col-md-3">
-                        <i class="fas fa-code" style="font-size: 1.5em;"></i><br />
-                        {{page.language}}
+                        {% endif %}
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <a href="{{page.repository_url}}/network/members" style="font-size: 1.5em;" target="_blank">{{page.forks}}</a><br />
-                        <i class="fas fa-code-branch"></i> Forks
-                    </div>
-                    <div class="col-md-3">
-                        <a href="{{page.repository_url}}/stargazers" style="font-size: 1.5em;" target="_blank">{{page.stargazers}}</a><br />
-                        <i class="far fa-star"></i> Stargazers
-                    </div>
-                    <!-- <div class="col-md-3">
-                        <a href="{{page.repository_url}}/network/members" style="font-size: 1.5em;" target="_blank">{{page.forks}}</a><br />
-                        <i class="fas fa-code-branch"></i> Forks
-                    </div> -->
-                    {% unless page.license == "NOASSERTION" %}
-                    <div class="col-md-3">
-                        <span style="font-size: 1.5em;">{{page.license}}</span><br />
-                        <i class="fab fa-osi"></i> License
-                    </div>
-                    {% endunless %}
-                </div>
-            </div>
-
-            {% unless page.execution_environment == '' %}
-            <h4 style="text-align: left;" class="mb-4">Execution Environment</h4>
-
-            {{page.execution_environment}}
-            {% endunless %}
-
-            {% for system in site.data.workflow_systems %}
-            {% if system.repository == page.repository %}
-            {% if system.terminology %}
-            <h4 style="text-align: left;" class="mb-4">Terminology 
-                <div class="tt">
-                    <sup><i class="fa fa-circle-info"></i></sup>
-                    <span class="tooltiptext" style="font-size: 0.6em">
-                        Terminology below follows the definitions established by the <a href="/terminology" style="color:gold">Workflows Community Terminology</a>.
-                    </span>
-                </div>
-            </h4>
-            <div id="tree">
-                <div class="branch">
-                    <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753"><strong>Characteristics</strong></span>
-                        <div class="branch">
-                            {% for ch in system.terminology.characteristics %}
-                            <div class="entry">
-                                <span style="border: 1px solid #D46753"><strong>{{ch[0]}}</strong></span>
-                                <div class="branch">
-                                    {% for v in ch[1] %}
-                                    <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">{{v}}</span></div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                            {% endfor %}
+                <div class="system-hero-card">
+                    <div class="system-meta-grid">
+                        <div class="system-meta">
+                            <span>Last updated</span>
+                            <strong>{{ page.last_update }}</strong>
                         </div>
-                    </div>
-
-                    <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B"><strong>Composition</strong></span>
-                        <div class="branch">
-                            {% for ch in system.terminology.composition %}
-                            <div class="entry">
-                                <span style="border: 1px solid #D8833B"><strong>{{ch[0]}}</strong></span>
-                                <div class="branch">
-                                    {% for v in ch[1] %}
-                                    <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B">{{v}}</span></div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                            {% endfor %}
+                        {% if page.release_name != "" %}
+                        <div class="system-meta">
+                            <span>Release</span>
+                            <strong>{{ page.release_name }}</strong>
                         </div>
-                    </div>
-
-                    <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68"><strong>Orchestration</strong></span>
-                        <div class="branch">
-                            {% for ch in system.terminology.orchestration %}
-                            <div class="entry">
-                                <span style="border: 1px solid #55AB68"><strong>{{ch[0]}}</strong></span>
-                                <div class="branch">
-                                    {% for v in ch[1] %}
-                                    <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68">{{v}}</span></div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                            {% endfor %}
+                        {% endif %}
+                        <div class="system-meta">
+                            <span>Language</span>
+                            <strong>{{ page.language }}</strong>
                         </div>
-                    </div>
-
-                    <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA"><strong>Data Management</strong></span>
-                        <div class="branch">
-                            {% for ch in system.terminology.data_management %}
-                            <div class="entry">
-                                <span style="border: 1px solid #4EADEA"><strong>{{ch[0]}}</strong></span>
-                                <div class="branch">
-                                    {% for v in ch[1] %}
-                                    <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA">{{v}}</span></div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                            {% endfor %}
+                        {% unless page.license == "NOASSERTION" %}
+                        <div class="system-meta">
+                            <span>License</span>
+                            <strong>{{ page.license }}</strong>
                         </div>
-                    </div>
-
-                    <div class="entry"><span style="background-color: #F5EAF3; border: 1px solid #8448A8"><strong>Metadata Capture</strong></span>
-                        <div class="branch">
-                            {% for ch in system.terminology.metadata %}
-                            <div class="entry">
-                                <span style="border: 1px solid #8448A8"><strong>{{ch}}</strong></span>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-
-                    <div class="entry"><span><strong>Extensions</strong></span>
-                        <div class="branch">
-                            {% for ch in system.terminology.extensions %}
-                            <div class="entry">
-                                <span>{{ch}}</span>
-                            </div>
-                            {% endfor %}
-                        </div>
+                        {% endunless %}
                     </div>
                 </div>
             </div>
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-
-            <p>&nbsp;</p>
-
         </div>
 
-        <div class="col-lg-4">
-            <div class="blog-sidbar" style="overflow-wrap: break-word;">
-                <div class="mb-4">
-                    <a href="{{ page.website }}" target="_blank">
-                        <img src="{{ page.avatar }}" style="max-height: 8em; max-width: 100%;" alt="{{ page.title }}" />
-                    </a>
-                </div>
-                {% if page.website %}
-                <i class="fa fa-link"></i> <a href="{{ page. website }}" target="_blank">{{ page.website }}</a><br />
+        <div class="row system-main g-4">
+            <div class="col-lg-8 wg wg-contents">
+                <section class="system-section">
+                    <h2>Overview</h2>
+                    <p>{{ page.description }}</p>
+                </section>
+
+                <section class="system-section">
+                    <div class="system-actions-grid">
+                        {% if page.install %}
+                        <a class="system-action" href="{{page.install}}" target="_blank">
+                            <i class="fas fa-download"></i>
+                            <div>
+                                <strong>Install</strong>
+                                <span>Get started quickly</span>
+                            </div>
+                        </a>
+                        {% endif %}
+                        {% if page.tutorial %}
+                        <a class="system-action" href="{{page.tutorial}}" target="_blank">
+                            <i class="fas fa-user-cog"></i>
+                            <div>
+                                <strong>Tutorial</strong>
+                                <span>Learn the basics</span>
+                            </div>
+                        </a>
+                        {% endif %}
+                        {% if page.documentation %}
+                        <a class="system-action" href="{{page.documentation}}" target="_blank">
+                            <i class="fas fa-book"></i>
+                            <div>
+                                <strong>Documentation</strong>
+                                <span>Explore the docs</span>
+                            </div>
+                        </a>
+                        {% endif %}
+                    </div>
+                </section>
+
+                <section class="system-section">
+                    <h3>Repository activity</h3>
+                    <div class="system-stats-grid">
+                        <a class="system-stat" href="{{page.repository_url}}/stargazers" target="_blank">
+                            <strong>{{page.stargazers}}</strong>
+                            <span>Stargazers</span>
+                        </a>
+                        <a class="system-stat" href="{{page.repository_url}}/network/members" target="_blank">
+                            <strong>{{page.forks}}</strong>
+                            <span>Forks</span>
+                        </a>
+                    </div>
+                </section>
+
+                {% unless page.execution_environment == '' %}
+                <section class="system-section">
+                    <h3>Execution environment</h3>
+                    {{page.execution_environment}}
+                </section>
+                {% endunless %}
+
+                {% for system in site.data.workflow_systems %}
+                {% if system.repository == page.repository %}
+                {% if system.terminology %}
+                <section class="system-section">
+                    <h3 class="system-terminology-title">Terminology
+                        <span class="tt">
+                            <span class="tt-trigger" aria-hidden="true"><i class="fa fa-circle-info"></i></span>
+                            <span class="tooltiptext">
+                                Terminology below follows the definitions established by the
+                                <a href="/terminology">Workflows Community Terminology</a>.
+                            </span>
+                        </span>
+                    </h3>
+                    <div id="tree">
+                        <div class="branch">
+                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753"><strong>Characteristics</strong></span>
+                                <div class="branch">
+                                    {% for ch in system.terminology.characteristics %}
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>{{ch[0]}}</strong></span>
+                                        <div class="branch">
+                                            {% for v in ch[1] %}
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">{{v}}</span></div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B"><strong>Composition</strong></span>
+                                <div class="branch">
+                                    {% for ch in system.terminology.composition %}
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D8833B"><strong>{{ch[0]}}</strong></span>
+                                        <div class="branch">
+                                            {% for v in ch[1] %}
+                                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B">{{v}}</span></div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68"><strong>Orchestration</strong></span>
+                                <div class="branch">
+                                    {% for ch in system.terminology.orchestration %}
+                                    <div class="entry">
+                                        <span style="border: 1px solid #55AB68"><strong>{{ch[0]}}</strong></span>
+                                        <div class="branch">
+                                            {% for v in ch[1] %}
+                                            <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68">{{v}}</span></div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA"><strong>Data Management</strong></span>
+                                <div class="branch">
+                                    {% for ch in system.terminology.data_management %}
+                                    <div class="entry">
+                                        <span style="border: 1px solid #4EADEA"><strong>{{ch[0]}}</strong></span>
+                                        <div class="branch">
+                                            {% for v in ch[1] %}
+                                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA">{{v}}</span></div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #F5EAF3; border: 1px solid #8448A8"><strong>Metadata Capture</strong></span>
+                                <div class="branch">
+                                    {% for ch in system.terminology.metadata %}
+                                    <div class="entry">
+                                        <span style="border: 1px solid #8448A8"><strong>{{ch}}</strong></span>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="entry"><span><strong>Extensions</strong></span>
+                                <div class="branch">
+                                    {% for ch in system.terminology.extensions %}
+                                    <div class="entry">
+                                        <span>{{ch}}</span>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 {% endif %}
-                <i class="fab fa-github"></i> <a href="{{ page.repository_url }}" target="_blank">{{ page.repository_url
-                    }}</a><br />
-                {% if page.x_twitter %}
-                <i class="fa-brands fa-x-twitter"></i> <a href="https://x.com/{{ page.x_twitter }}"
-                    target="_blank">https://x.com/{{ page.x_twitter }}</a><br />
                 {% endif %}
-                {% if page.youtube %}
-                <i class="fab fa-youtube"></i> <a href="https://youtube.com/{{ page.youtube }}" 
-                    target="_blank"> {{ page.youtube }}</a><br />
-                {% endif %}
-                <br />
-                <hr />
-                <h4 class="mb-4">Contributors</h4>
-                {{page.contributors}}
+                {% endfor %}
+            </div>
+
+            <div class="col-lg-4">
+                <aside class="system-sidebar">
+                    <div class="system-sidebar-card">
+                        <div class="system-logo-block">
+                            <img src="{{ page.avatar }}" alt="{{ page.title }}" />
+                        </div>
+                        <h4>Links</h4>
+                        <div class="system-links">
+                            {% if page.website %}
+                            <a href="{{ page.website }}" target="_blank" class="system-link">
+                                <span class="system-link-icon"><i class="fa fa-link"></i></span>
+                                <span class="system-link-text">
+                                    <span class="system-link-label">Website</span>
+                                    <span class="system-link-value">{{ page.website }}</span>
+                                </span>
+                            </a>
+                            {% endif %}
+                            {% if page.repository_url %}
+                            <a href="{{ page.repository_url }}" target="_blank" class="system-link">
+                                <span class="system-link-icon"><i class="fab fa-github"></i></span>
+                                <span class="system-link-text">
+                                    <span class="system-link-label">Repository</span>
+                                    <span class="system-link-value">{{ page.repository_url }}</span>
+                                </span>
+                            </a>
+                            {% endif %}
+                            {% if page.x_twitter %}
+                            <a href="https://x.com/{{ page.x_twitter }}" target="_blank" class="system-link">
+                                <span class="system-link-icon"><i class="fa-brands fa-x-twitter"></i></span>
+                                <span class="system-link-text">
+                                    <span class="system-link-label">X</span>
+                                    <span class="system-link-value">https://x.com/{{ page.x_twitter }}</span>
+                                </span>
+                            </a>
+                            {% endif %}
+                            {% if page.youtube %}
+                            <a href="https://youtube.com/{{ page.youtube }}" target="_blank" class="system-link">
+                                <span class="system-link-icon"><i class="fab fa-youtube"></i></span>
+                                <span class="system-link-text">
+                                    <span class="system-link-label">YouTube</span>
+                                    <span class="system-link-value">{{ page.youtube }}</span>
+                                </span>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="system-sidebar-card">
+                        <h4>Contributors</h4>
+                        <div class="system-contributors">
+                            {{page.contributors}}
+                        </div>
+                    </div>
+                </aside>
             </div>
         </div>
     </div>
-</div>
+</section>

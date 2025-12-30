@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Workflows Systems
+title: Workflow Systems
 permalink: /systems
 ---
 
@@ -9,72 +9,110 @@ permalink: /systems
 {% assign systems_wci = site.systems | where: "wci_metadata", "true" | sort: "date_sort" | reverse %}
 {% assign systems = site.systems | where: "wci_metadata", "false" | sort: "date_sort" | reverse %}
 
-<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
-    <h1>{{ n_systems }}</h1>
-    <h4>open-source workflow systems</h4>
-    <p><strong style="color: #db8e1b">{{wci_systems}}</strong> workflow systems provide WCI metadata</p>
-    <a href="/systems/contribute" class="btn btn-primary mt-3 py-3 px-5">Contribute</a>
-</div>
-
-<section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
+<section class="systems-hero">
     <div class="container" data-aos="fade-up">
-        <div data-aos="fade-up" data-aos-delay="100">
-            <!-- WCI Metadata -->
-            {% for system in systems_wci %}
-            <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                    <div class="testimonial-item">
-                        <div class="d-flex align-items-center info-box">
-                            <img src="{{system.avatar}}" class="testimonial-img flex-shrink-0">
-                            <div>
-                                <h3><a href="{{system.url}}">{{system.title}}</a></h3>
-                                <h4 style="margin-bottom: 0.5em;">{{system.headline}}</h4>
-                                <h4>{{system.language}}
-                                    {% if system.release_name != "" %}
-                                    &mdash; <i class="fas fa-box-open"></i> {{system.release_name}}
-                                    {% endif %}
-                                    &mdash; <i class="far fa-clock"></i> {{system.last_update}}
-                                    {% if system.wci_metadata %}
-                                    &mdash; <img src="/favicon.ico" style="max-height: 2em; vertical-align: middle" />
-                                    WCI metadata</span>
-                                    {% endif %}
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
+        <div class="systems-hero-content">
+            <div>
+                <!-- <p class="systems-eyebrow">Workflow Systems</p> -->
+                <h1>Find the right system for your workflows</h1>
+                <p class="systems-lead">
+                    Explore the open source landscape and discover systems with rich community metadata.
+                </p>
+                <div class="systems-hero-actions">
+                    <a href="/systems/contribute" class="btn btn-primary systems-cta-btn" style="vertical-align: auto;">Contribute a system</a>
+                    <a href="/contact" class="btn btn-outer">Talk with us</a>
                 </div>
             </div>
-            {% endfor %}
+            <div class="systems-hero-stats">
+                <div class="systems-stat">
+                    <div class="systems-stat-value">{{ n_systems }}</div>
+                    <div class="systems-stat-label">Open source systems</div>
+                </div>
+                <div class="systems-stat">
+                    <div class="systems-stat-value">{{ wci_systems }}</div>
+                    <div class="systems-stat-label">Provide WCI metadata</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-            <!-- No WCI Metadata -->
-            {% for system in systems %}
-            <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                    <div class="testimonial-item">
-                        <div class="d-flex align-items-center info-box">
-                            <img src="{{system.avatar}}" class="testimonial-img flex-shrink-0">
-                            <div>
-                                <h3><a href="{{system.url}}">{{system.title}}</a></h3>
-                                <h4 style="margin-bottom: 0.5em;">{{system.headline}}</h4>
-                                <h4>{{system.language}}
-                                    {% if system.release_name != "" %}
-                                    &mdash; <i class="fas fa-box-open"></i> {{system.release_name}}
-                                    {% endif %}
-                                    &mdash; <i class="far fa-clock"></i> {{system.last_update}}
-                                </h4>
-                            </div>
+<section class="systems-section">
+    <div class="container" data-aos="fade-up">
+        <div class="systems-section-header">
+            <div>
+                <h2>Systems with WCI metadata</h2>
+                <p>These projects provide structured metadata for richer discovery.</p>
+            </div>
+        </div>
+        <div class="systems-grid">
+            {% for system in systems_wci %}
+            <article class="systems-card">
+                <a class="systems-card-link" href="{{system.url}}" aria-label="{{system.title}}"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="{{system.avatar}}" class="systems-card-logo" alt="{{system.title}} logo">
+                        <div class="systems-card-title">
+                            <h3>{{system.title}}</h3>
+                            <p class="systems-card-headline">{{system.headline}}</p>
                         </div>
                     </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
                 </div>
-            </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> {{system.language}}</span>
+                    {% if system.release_name != "" %}
+                    <span><i class="fas fa-box-open"></i> {{system.release_name}}</span>
+                    {% endif %}
+                    <span><i class="far fa-clock"></i> {{system.last_update}}</span>
+                </div>
+            </article>
             {% endfor %}
         </div>
     </div>
 </section>
 
+<section class="systems-section">
+    <div class="container" data-aos="fade-up">
+        <div class="systems-section-header">
+            <div>
+                <h2>More workflow systems</h2>
+                <p>A growing list of open source systems shared by the community.</p>
+            </div>
+        </div>
+        <div class="systems-grid">
+            {% for system in systems %}
+            <article class="systems-card">
+                <a class="systems-card-link" href="{{system.url}}" aria-label="{{system.title}}"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="{{system.avatar}}" class="systems-card-logo" alt="{{system.title}} logo">
+                        <div class="systems-card-title">
+                            <h3>{{system.title}}</h3>
+                            <p class="systems-card-headline">{{system.headline}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> {{system.language}}</span>
+                    {% if system.release_name != "" %}
+                    <span><i class="fas fa-box-open"></i> {{system.release_name}}</span>
+                    {% endif %}
+                    <span><i class="far fa-clock"></i> {{system.last_update}}</span>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 
-<div class="container text-center" data-aos="fade-up" style="padding: 4em 0">
-    <p>For a comprehensive lists of all known computational workflow systems, see <a
-            href="https://s.apache.org/existing-workflow-systems" target="_blank">Computational Data Analysis Workflow
-            Systems</a> maintained by the CWL community.</p>
-</div>
+<section class="systems-footnote">
+    <div class="container" data-aos="fade-up">
+        <p>For a comprehensive list of workflow systems, see <a
+                href="https://s.apache.org/existing-workflow-systems" target="_blank">Computational Data Analysis Workflow
+                Systems</a> maintained by the CWL community.</p>
+    </div>
+</section>
