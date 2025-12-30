@@ -4,82 +4,107 @@ title: Workflows Community Talks
 permalink: /talks
 ---
 
-<div class="container" data-aos="fade-up" style="padding: 3em 0;">
-    <div class="row">
-        <div class="col-lg-8 wg">
-            <p>The <strong style="color: #db8e1b">Workflow Community Talks</strong> are a monthly virtual series of
-                30-minute talks bringing together members of the Workflows community and anyone interested in the field.
-            </p>
-
-            <section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
-                
-                <!-- Next Talk Section -->
-                {% assign upcoming = site.talks | where: "given", false | sort: 'talk_number' %}
-                {% assign next_talk = upcoming.first %}
-                {% if next_talk %}
-                <div class="next-talk-section mb-5">
-                    <h3 class="mb-4" style="color: #db8e1b;">Next Talk</h3>
-                    <div style="border: 2px solid #db8e1b; border-radius: 10px; padding: 20px; background: linear-gradient(135deg, #fff8f0 0%, #ffffff 100%);">
-                        {% include talk_card.html talk=next_talk %}
+<section class="talks-hero">
+    <div class="container talks-container" data-aos="fade-up">
+        <div class="talks-hero-content">
+            <div>
+                <h1>Monthly talks for the workflows community</h1>
+                <p class="talks-lead">
+                    A 30 minute virtual series highlighting workflow systems, research frameworks, and community
+                    practices. Open to anyone interested in workflows.
+                </p>
+                <div class="talks-organizers">
+                    <span>Organizers</span>
+                    <div class="talks-organizer-list">
+                        <div class="talks-organizer">
+                            <img src="/images/about/hudson.jpg" alt="Stephen Hudson">
+                            <div>
+                                <strong>Stephen Hudson</strong>
+                                <span>ANL</span>
+                            </div>
+                        </div>
+                        <div class="talks-organizer">
+                            <img src="/images/about/casol.jpeg" alt="Daniela Cassol">
+                            <div>
+                                <strong>Daniela Cassol</strong>
+                                <span>LBNL</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                {% endif %}
-
-                <!-- Future Talks Section -->
-                {% assign future_talks = site.talks | where: "given", false | sort: 'talk_number' %}
-                {% assign has_future_talks = false %}
-                {% for talk in future_talks %}
-                  {% unless talk.talk_number == next_talk.talk_number %}
-                    {% assign has_future_talks = true %}
-                    {% break %}
-                  {% endunless %}
-                {% endfor %}
-                
-                {% if has_future_talks %}
-                <div class="future-talks-section mb-5">
-                    <h3 class="mb-4">Future Talks</h3>
-                    {% for talk in future_talks %}
-                      {% unless talk.talk_number == next_talk.talk_number %}
-                        {% include talk_card.html talk=talk %}
-                      {% endunless %}
-                    {% endfor %}
-                </div>
-                {% endif %}
-              
-                <!-- Previous Talks Section -->
-                <div class="previous-talks-section">
-                    <h3 class="mb-4 mt-5">Previous Talks</h3>
-                    {% assign previous = site.talks | where: "given", true | sort: 'talk_number' | reverse %}
-                    {% for talk in previous %}
-                      {% include talk_card.html talk=talk %}
-                    {% endfor %}
-                </div>
-              </section>
-              
-        </div>
-
-        <div class="col-lg-4">
-            <div class="blog-sidbar">
-                <h4 class="mb-3">Organizers</h4>
-                <img src="/images/about/hudson.jpg"
-                    style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em;" />
-                Stephen Hudson (ANL)<br /><br />
-                <img src="/images/about/casol.jpeg"
-                    style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em;" />
-                    Daniela Cassol (LBNL)<br /><br />
-                <hr />
-                <p>Register to attend the series?
+                <div class="talks-hero-actions">
                     <a href="https://docs.google.com/forms/d/1XTJFRJ5Ivu2-Z-i9dnq2umv-OuE2UlVreea_dLawd2c"
-                        target="_blank" class="btn btn-primary mt-1 py-3 px-5">Register</a>
-                </p>
-                <p>Interested in giving a talk?
+                        target="_blank" class="btn btn-primary talks-cta-btn">Register</a>
                     <a href="https://docs.google.com/forms/d/1P9u12xVgh77FC6cGb5v7iE1rF0VpWAzSw0cmJ-BRD0Q"
-                        target="_blank" class="btn btn-primary mt-1 py-3 px-5">Sign Up Here</a>
-                </p><br />
-                <hr />
-                <h4 class="mb-3">Latest Talks</h4>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?si=ElrjhblSaUsMzOed&amp;list=PLAtmuqHExRvNnGtrqHl1ZXR6ZH37HLfo1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 1em;"></iframe>
+                        target="_blank" class="btn btn-outer">Give a talk</a>
+                </div>
+            </div>
+            <div class="talks-hero-card">
+                <h3>Watch the series</h3>
+                <p>Catch the latest talk recordings on our YouTube channel.</p>
+                <iframe src="https://www.youtube.com/embed/videoseries?si=ElrjhblSaUsMzOed&amp;list=PLAtmuqHExRvNnGtrqHl1ZXR6ZH37HLfo1"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<section class="talks-section">
+    <div class="container talks-container" data-aos="fade-up">
+        {% assign upcoming = site.talks | where: "given", false | sort: 'talk_number' %}
+        {% assign next_talk = upcoming.first %}
+        {% if next_talk %}
+        <div class="talks-block talks-next">
+            <div class="talks-block-header">
+                <h2>Next talk</h2>
+                <span class="talks-pill">Upcoming</span>
+            </div>
+            <div class="talks-next-card">
+                {% include talk_card.html talk=next_talk %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% assign future_talks = site.talks | where: "given", false | sort: 'talk_number' %}
+        {% assign has_future_talks = false %}
+        {% for talk in future_talks %}
+        {% unless talk.talk_number == next_talk.talk_number %}
+        {% assign has_future_talks = true %}
+        {% break %}
+        {% endunless %}
+        {% endfor %}
+
+        {% if has_future_talks %}
+        <div class="talks-block">
+            <div class="talks-block-header">
+                <h2>Future talks</h2>
+                <span class="talks-count">{{ future_talks | size | minus: 1 }} scheduled</span>
+            </div>
+            <div class="talks-list">
+                {% for talk in future_talks %}
+                {% unless talk.talk_number == next_talk.talk_number %}
+                {% include talk_card.html talk=talk %}
+                {% endunless %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="talks-block">
+            <div class="talks-block-header">
+                <h2>Previous talks</h2>
+                {% assign previous = site.talks | where: "given", true | sort: 'talk_number' | reverse %}
+                <span class="talks-count">{{ previous | size }} talks</span>
+            </div>
+            <details class="talks-archive" open>
+                <summary>Browse the archive</summary>
+                <div class="talks-list talks-grid">
+                    {% for talk in previous %}
+                    {% include talk_card.html talk=talk %}
+                    {% endfor %}
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
