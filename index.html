@@ -25,7 +25,7 @@ permalink: /
 
             <div class="col-lg-4">
                 <!-- COMMUNITY TALKS -->
-                <article>
+                <article class="community-card">
                     {% assign talks = site.talks| where: "given", false | sort: 'order'%}
                     {% for talk in talks limit: 1 %}
                     <div class="post-img">
@@ -35,7 +35,7 @@ permalink: /
                     <h2 class="title">
                         <a href="{{ talk.url }}">{{ talk.title }}</a>
                     </h2>
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center post-footer">
                         <div class="post-meta">
                             <p class="post-author">{{ talk.authors }}</p>
                             <p class="post-date">
@@ -49,7 +49,7 @@ permalink: /
 
             <!-- WORKSHOP -->
             <!-- <div class="col-lg-3">
-                <article>
+                <article class="community-card">
                     {% assign count_events = 0 %}
                     {% assign workshops = site.workshops | sort: 'event_date' %}
                     {% for w in workshops %}
@@ -62,7 +62,7 @@ permalink: /
                     <h2 class="title">
                         <a href="{{ w.url }}">{{ w.title }}</a>
                     </h2>
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center post-footer">
                         <div class="post-meta">
                             <p class="post-author">{{ w.subtitle }}</p>
                             <p class="post-date">
@@ -78,7 +78,7 @@ permalink: /
 
             <!-- <div class="col-lg-3">
                 <!- RECENT SUMMIT ->
-                <article>
+                <article class="community-card">
                     {% assign summits = site.summits | sort: 'order' | reverse %}
                     {% for summit in summits limit: 1 %}
                     <div class="post-img">
@@ -141,16 +141,15 @@ permalink: /
                         <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw/" target="_blank">Workflow
                             Innovation in Action</a>
                     </h2>
-                    <div class="d-flex align-items-center" style="flex: 1 1 auto;">
+                    <div class="d-flex align-items-center post-footer">
                         <div class="post-meta col-lg-12">
                             <p class="post-author">Connecting researchers, developers, and practitioners shaping the
                                 future of workflows</p>
                         </div>
                     </div>
-                    <div style="margin-top: 1em;">
-                        <a style="background-color: darkred; padding: 0.5em 1em; border-radius: 0.5em; color: #fff"
-                        href="https://youtube.com/@WorkflowsCommunity" target="_blank">
-                            Subscribe to our YouTube channel >
+                    <div class="community-cta">
+                        <a class="community-cta-link" href="https://youtube.com/@WorkflowsCommunity" target="_blank">
+                            See our YouTube channel >
                         </a>
                     </div>
                 </article>
@@ -160,28 +159,41 @@ permalink: /
 </section>
 
 <!-- NUMBERS -->
-<div id="stats-counter" class="call-to-action stats-counter section">
+<div id="stats-counter" class="stats-counter section">
     <div class="container" data-aos="fade-up">
-        <div class="row gy-4 align-items-center">
+        <div class="section-header">
+            <h2>Community at a glance</h2>
+            <p>Fast-growing people, platforms, and shared moments</p>
+        </div>
+        <div class="row gy-4 align-items-stretch stats-grid">
             <div class="col-lg-4">
-                <div class="stats-item d-flex flex-column align-items-center">
-                    <span data-purecounter-start="0" data-purecounter-end="{{total_members}}"
-                        data-purecounter-duration="5" class="purecounter" style="font-size: 4em;"></span><br />
-                    <p><span>Members</span> worldwide</p>
+                <div class="stats-card">
+                    <div class="stats-value">
+                        <i class="bi bi-people stats-icon"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="{{total_members}}"
+                            data-purecounter-duration="5" class="purecounter"></span>
+                    </div>
+                    <p class="stats-label"><span>Members</span> worldwide</p>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="stats-item d-flex flex-column align-items-center">
-                    <span data-purecounter-start="0" data-purecounter-end="{{total_systems}}"
-                        data-purecounter-duration="5" class="purecounter" style="font-size: 4em;"></span><br />
-                    <p><span>Workflow Systems</span> open-source workflow systems</p>
+                <div class="stats-card">
+                    <div class="stats-value">
+                        <i class="bi bi-diagram-3 stats-icon"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="{{total_systems}}"
+                            data-purecounter-duration="5" class="purecounter"></span>
+                    </div>
+                    <p class="stats-label"><span>Workflow systems</span> open-source platforms</p>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="stats-item d-flex flex-column align-items-center">
-                    <span data-purecounter-start="0" data-purecounter-end="{{total_events}}"
-                        data-purecounter-duration="5" class="purecounter" style="font-size: 4em;"></span><br />
-                    <p><span>Events</span> Workflow Community Summits and BoF sessions</p>
+                <div class="stats-card">
+                    <div class="stats-value">
+                        <i class="bi bi-calendar3 stats-icon"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="{{total_events}}"
+                            data-purecounter-duration="5" class="purecounter"></span>
+                    </div>
+                    <p class="stats-label"><span>Events</span> summits and BoF sessions</p>
                 </div>
             </div>
         </div>

@@ -15,52 +15,53 @@ image: "https://workflows.community/images/wci-default-card.png"
         <div id="particles-js"></div>
         <div id="repulse-circle-div"></div>
         <div class="container position-relative">
-            <div class="row gy-5 aos-init aos-animate">
-                <div class="col-lg-8 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
-                    <h2 data-aos="fade-up">Elevating community-centered scientific workflow solutions <span style="color: #FFB020">through
+            <div class="row gy-5 aos-init aos-animate hero-grid">
+                <div class="col-lg-7 d-flex flex-column justify-content-start text-left hero-copy">
+                    <h2 data-aos="fade-up" data-aos-delay="100">Elevating community-centered scientific workflow solutions <span>through
                             collective expertise</span><span class="circle" data-aos="fade-right"
                             data-aos-delay="800">.</span></h2>
-                    <p data-aos="fade-up" data-aos-delay="400">Our goal is to bring the workflows community together
-                        (users, developers, researchers, and facilities) to provide <strong>community resources and
-                            capabilities</strong> to enable scientists and workflow systems developers to discover
-                        software products, related efforts, events, technical reports, etc. and engage in community-wide
-                        efforts to tackle workflows grand challenges.</p>
-                    <div class="social" data-aos="fade-up" data-aos-delay="600">
+                    <p class="hero-lead" data-aos="fade-up" data-aos-delay="200">We bring together users, developers, researchers, and facilities to
+                        share resources, showcase systems, and align on the grand challenges shaping workflow science.</p>
+                    <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                        <a href="/talks" class="btn-outer">Explore talks</a>
+                        <a href="/terminology" class="btn-outer">See our terminology</a>
+                        <a href="/systems" class="btn-outer">Explore systems</a>
+                    </div>
+                    <div class="social hero-social" data-aos="fade-up" data-aos-delay="400">
                         <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank">
-                            <i class="fab fa-youtube" style="font-size: 1.5em; color: #fff !important"></i>
+                            <i class="fab fa-youtube"></i>
                         </a>
                         <a href="mailto:contact@workflows.community">
-                            <i class="fa fa-envelope" style="font-size: 1.5em; color: #fff !important"></i>
+                            <i class="fa fa-envelope"></i>
                         </a>
                         <a href="https://linkedin.com/company/workflows-community" target="_blank">
-                            <i class="fab fa-linkedin" style="font-size: 1.5em; color: #fff !important"></i>
+                            <i class="fab fa-linkedin"></i>
                         </a>
                         <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
                             target="_blank">
-                            <i class="fab fa-slack" style="font-size: 1.5em; color: #fff !important"></i>
+                            <i class="fab fa-slack"></i>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
-                    <div class="row" style="border: 3px solid #fff; border-radius: .5em">
-                        {% assign talks = site.talks| where: "given", false | sort: 'order'%}
-                        {% for talk in talks limit: 1 %}
-                        <div class="col-lg-12" style="padding: 0; background-color: rgba(109, 84, 170, 0.5);">
-                            <a href="/talks"><img src="/images/talks/talks-banner.png" width="100%" style="border-radius: 0.5em;" /></a>
-                        </div>
-                        <div class="col-lg-12" style="background-color: rgba(109, 84, 170, 0.5); padding: 1em;">
-                            <strong><a href="{{ talk.url }}" style="color: #fff">{{ talk.title }}</a></strong><br />
-                            <span style="color: #aaa">{{ talk.authors }}</span><br />
-                            {{ talk.event_date }}
-                            <br />
-                        </div>
-                        <a href="{{ talk.url }}" class="col-lg-12" style="background-color: #fff; padding: 0.5em; text-align: center; font-size: 0.9em;">
-                            LEARN MORE >
+                <div class="col-lg-5 d-flex flex-column justify-content-start hero-spotlight">
+                    {% assign talks = site.talks| where: "given", false | sort: 'order'%}
+                    {% for talk in talks limit: 1 %}
+                    <div class="hero-card" data-aos="fade-left" data-aos-delay="200">
+                        <a href="/talks" class="hero-card-media">
+                            <img src="/images/talks/talks-banner.png" alt="Community talk banner" />
                         </a>
-                        {% endfor %}
+                        <div class="hero-card-body">
+                            <span class="hero-tag">Community talk</span>
+                            <h3 class="hero-card-title"><a href="{{ talk.url }}">{{ talk.title }}</a></h3>
+                            <p class="hero-card-meta">{{ talk.authors }}</p>
+                            <p class="hero-card-date">{{ talk.event_date }}</p>
+                        </div>
+                        <div class="hero-card-footer">
+                            <a href="{{ talk.url }}" class="hero-card-link">Learn more</a>
+                        </div>
                     </div>
+                    {% endfor %}
                 </div>
-
             </div>
         </div>
     </section>
