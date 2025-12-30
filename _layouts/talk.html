@@ -2,78 +2,105 @@
 layout: page
 ---
 
-<div class="container" data-aos="fade-up" style="padding: 3em 0;">
-    <div class="row">
-        <div class="col-lg-8 wg wg-contents text-center">
-            <p class="breadcrumb">
-                <a href="/talks">WORKFLOWS COMMUNITY TALKS&nbsp;</a> > {{ page.title | upcase }}
+<section class="talk-detail">
+    <div class="container talk-container" data-aos="fade-up">
+        <div class="talk-hero">
+            <p class="talk-breadcrumb">
+                <a href="/talks">Workflows Community Talks</a>
+                <span>/</span>
+                {{ page.title }}
             </p>
-
-            <h2 class="mb-4">{{page.title}}</h2>
-            {% if page.subtitle %}
-            <h4 class="text-center" style="font-style: italic; font-weight: 500;">
-                {{ page.subtitle }}
-            </h4>
-            {% endif %}
-            <p class="text-center" style="font-size: 1.1em; font-weight: 500;">
-                {{ page.authors }}
-            </p>
-
-            <p class="text-center text-muted" style="font-size: 1em;">
-                {{ page.event_date }}<br />{{ page.times }}
-            </p>
-
-            <p class="mb-3" style="text-align: left;">
-            {{content}}
-            </p>
-
-            {% unless page.given %}
-            <a href="https://docs.google.com/forms/d/1XTJFRJ5Ivu2-Z-i9dnq2umv-OuE2UlVreea_dLawd2c" target="_blank"
-                class="btn btn-primary mt-3 py-3 px-5">Register</a>
-            {% endunless %}
-
-            {% if page.presentation %}
-            <a href="{{ page.presentation }}" target="_blank" class="btn btn-outer mt-3 py-3 px-5"><i
-                    class="fa fa-file"></i> Presentation</a>
-            <p>&nbsp;</p>
-            {% endif %}
-
-            {% if page.video %}
-            <iframe width="100%" height="400" src="{{ page.video }}" title="YouTube video player" frameborder="0"
-                style="border-radius: 1em"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <p>&nbsp;</p>
-            {% endif %}
-
+            <div class="talk-hero-content">
+                <div>
+                    <h1>{{ page.title }}</h1>
+                    {% if page.subtitle %}
+                    <p class="talk-subtitle">{{ page.subtitle }}</p>
+                    {% endif %}
+                    <p class="talk-authors">{{ page.authors }}</p>
+                    <!-- <div class="talk-meta">
+                        <span><i class="far fa-calendar"></i> {{ page.event_date }}</span>
+                        <span><i class="far fa-clock"></i> {{ page.times }}</span>
+                    </div> -->
+                    <div class="talk-hero-actions">
+                        {% unless page.given %}
+                        <a href="https://docs.google.com/forms/d/1XTJFRJ5Ivu2-Z-i9dnq2umv-OuE2UlVreea_dLawd2c"
+                            target="_blank" class="btn btn-primary talk-cta-btn">Register</a>
+                        {% endunless %}
+                        {% if page.presentation %}
+                        <a href="{{ page.presentation }}" target="_blank" class="btn btn-outer">
+                            <i class="fa fa-file"></i> Presentation
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="talk-hero-card">
+                    <h3>Talk details</h3>
+                    <!-- <p>Save the date and share the session with your community.</p> -->
+                    <div class="talk-detail-list">
+                        <div>
+                            <span>Date</span>
+                            <strong>{{ page.event_date }}</strong>
+                        </div>
+                        <div>
+                            <span>Time</span>
+                            <strong>{{ page.times }}</strong>
+                        </div>
+                        <!-- <div>
+                            <span>Speakers</span>
+                            <strong>{{ page.authors }}</strong>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="col-lg-4">
-            <div class="blog-sidbar">
-                <h4 class="mb-4">About the Authors</h4>
-                {% assign speaker = site.data.speakers | where: "talk_num", page.talk_number %}
-                {% for member in speaker %}
-                <a href="{{ member.link }}" target="_blank">
-                    {% assign photo_src = member.photo | default: 'headshot_placeholder.jpg' %}
-                    <img src="/images/talks/{{ photo_src }}" alt="{{ member.name }}" class="img-fluid mb-3"
-                        style="width: 150px; height: 200px; object-fit: cover; border-radius: 0.5em;">
-                </a>
-                <p class="font-weight-bold">{{ member.name }}<br />
-                    <span class="text-muted">{{ member.role }}</span>
-                </p>
-                <p class="bio" style="font-size: 0.8em;">{{ member.bio }}</p>
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    {% for inst in member.institution %}
-                    <a href="{{ inst.link }}" target="_blank"
-                        style="{% if forloop.last %}margin-left: auto;{% endif %}">
-                        <img src="/images/institutions/{{ inst.image }}" alt="{{ inst.name }}"
-                            style="max-height: 2em; object-fit: contain; margin-right: 0.5em;" />
-                    </a>
-                    {% endfor %}
-                </div>
-                <hr />
-                {% endfor %}
+        <div class="row talk-main g-4">
+            <div class="col-lg-8">
+                <section class="talk-section">
+                    <h2>Overview</h2>
+                    <div class="talk-content">{{ content }}</div>
+                </section>
+
+                {% if page.video %}
+                <section class="talk-section">
+                    <h3>Watch the recording</h3>
+                    <div class="talk-video">
+                        <iframe src="{{ page.video }}" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+                {% endif %}
+            </div>
+
+            <div class="col-lg-4">
+                <aside class="talk-sidebar">
+                    <div class="talk-card">
+                        <h3>About the speakers</h3>
+                        {% assign speaker = site.data.speakers | where: "talk_num", page.talk_number %}
+                        {% for member in speaker %}
+                        <div class="talk-speaker">
+                            <a href="{{ member.link }}" target="_blank" class="talk-speaker-photo">
+                                {% assign photo_src = member.photo | default: 'headshot_placeholder.jpg' %}
+                                <img src="/images/talks/{{ photo_src }}" alt="{{ member.name }}">
+                            </a>
+                            <div class="talk-speaker-info">
+                                <strong>{{ member.name }}</strong>
+                                <span>{{ member.role }}</span>
+                                <p>{{ member.bio }}</p>
+                                <div class="talk-speaker-orgs">
+                                    {% for inst in member.institution %}
+                                    <a href="{{ inst.link }}" target="_blank">
+                                        <img src="/images/institutions/{{ inst.image }}" alt="{{ inst.name }}">
+                                    </a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </aside>
             </div>
         </div>
     </div>
-</div>
+</section>
