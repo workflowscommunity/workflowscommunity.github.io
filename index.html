@@ -5,7 +5,7 @@ permalink: /
 
 {% capture nowunix %}{{'now' | date: '%Y-%m-%d' | date: '%s'}}{% endcapture %}
 {% assign total_systems = site.systems | size %}
-{% assign total_members = 1 %}
+{% assign total_members = 0 %}
 {% for m in site.data.members %}
 {% assign e = m.entries | size %}
 {% assign total_members = total_members | plus: e %}

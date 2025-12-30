@@ -4,26 +4,71 @@ title: Members
 permalink: /members
 ---
 
-{% assign total_members = site.data.members | size %}
-{% assign total_members = 1 %}
+{% assign total_members = 0 %}
 {% for m in site.data.members %}
 {% assign e = m.entries | size %}
 {% assign total_members = total_members | plus: e %}
 {% endfor %}
 {% assign total_countries = site.data.members | map: "country" | join: "," | split: "," | uniq | size %}
 {% assign countries = site.data.members | map: "country" %}
+{% assign countries_sorted = site.data.members | sort: "country" %}
 
 
-<div class="container text-center" data-aos="fade-up" style="padding: 4em 0">
-    <h1>{{ total_members }}</h1>
-    <h4>Members from <strong style="color: #db8e1b">{{total_countries}}</strong> countries worldwide</h4>
-    <a href="https://forms.gle/ihiyRoZJMYeWXJid6" target="_blank" class="btn btn-primary mt-3 py-3 px-5">
-        Become a Member&nbsp;&nbsp;<span style="font-size: 0.8em"><i style="background-color: cornflowerblue; padding: 0.5em 1em; border-radius: 0.5em;">free</i></span>
-    </a>
-</div>
+<section class="members-hero">
+    <div class="container" data-aos="fade-up">
+        <div class="members-hero-content">
+            <div class="members-hero-text">
+                <p class="members-eyebrow">Workflows Community Initiative</p>
+                <h1>Members around the world</h1>
+                <p class="members-lead">
+                    Connect with researchers, developers, and practitioners building the next generation of workflow
+                    systems.
+                </p>
+                <div class="members-hero-actions">
+                    <a href="https://forms.gle/ihiyRoZJMYeWXJid6" target="_blank" class="btn btn-primary members-cta-btn">
+                        Become a Member
+                        <span class="members-pill">Free to join</span>
+                    </a>
+                    <a href="/contact" class="btn btn-outer">Partner with us</a>
+                </div>
+            </div>
+            <div class="members-hero-stats">
+                <div class="members-stat">
+                    <div class="members-stat-value">{{ total_members }}</div>
+                    <div class="members-stat-label">Active members</div>
+                </div>
+                <div class="members-stat">
+                    <div class="members-stat-value">{{ total_countries }}</div>
+                    <div class="members-stat-label">Countries represented</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-<div id='regions_div' style='width: 100%; height: 450px; border-radius: 0.5em; margin: 0'></div>
+<section class="members-map">
+    <div class="container" data-aos="fade-up">
+        <div class="members-map-card">
+            <div class="members-map-header">
+                <div>
+                    <h2>Global footprint</h2>
+                    <p>Explore the countries where members are active today.</p>
+                </div>
+                <div class="members-map-legend">
+                    <span>Member density</span>
+                    <div class="members-map-bar"></div>
+                    <div class="members-map-labels">
+                        <span>Low</span>
+                        <span>High</span>
+                    </div>
+                </div>
+            </div>
+            <div id="regions_div" class="members-map-chart"></div>
+            <p class="members-map-note">Counts update as new members join the community.</p>
+        </div>
+    </div>
+</section>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
     google.charts.load('current', {
@@ -38,20 +83,17 @@ permalink: /members
                 {% endif %}{% endfor %} {% endfor %}
         ]);
 
-        const yellowToOrangeGradient = [
-            "#FFFACD", // Lemon Chiffon (light yellow)
-            "#FFE77A", // Mellow Yellow
-            "#FFDD55", // Golden Yellow
-            "#FFD429", // Bright Yellow
-            "#FFC107", // Amber
-            "#FF9800", // Standard Orange
-            "#FF8C00", // Dark Orange
-            "#FF7F50", // Coral Orange
-            "#FF6347"  // Tomato (reddish orange)
+        const tealToCoralGradient = [
+            "#0b7d9a",
+            "#1fb2b8",
+            "#6bd4b6",
+            "#ffb36d",
+            "#f97360"
         ];
         var options = {
-            colorAxis: { colors: yellowToOrangeGradient },
-            backgroundColor: '#eaeaea',
+            colorAxis: { colors: tealToCoralGradient },
+            backgroundColor: 'transparent',
+            datalessRegionColor: '#e2e8f0',
             geochartVersion: 11,
             enableRegionInteractivity: true,
             regioncoderVersion: 1
@@ -62,21 +104,32 @@ permalink: /members
       }
 </script>
 
-<div class="container text-center" data-aos="fade-up" style="padding: 4em 0">
-    <div class="row gy-4 align-items-center">
-        {% for m in site.data.members %}
-        <div class="col-lg-12 text-left">
-            <div class="d-flex flex-column">
-            <p style="text-align: left;">
-                <strong>{{ m.country }}</strong><br />
-                {% assign entries = m.entries | sort: "last_name" %}
-                {% for e in entries %}
-                {% if e.link %}<a href="{{e.link}}" target="_blank">{{e.first_name}} {{e.last_name}}</a>{% else %}{{e.first_name}} {{e.last_name}}{% endif %}
-                <span style="color: #aaa">&mdash; {{e.institution}}</span><br />
-                {% endfor %}
-            </p>
+<section class="members-directory">
+    <div class="container" data-aos="fade-up">
+        <div class="members-directory-header">
+            <h2>Member directory</h2>
+            <p>Browse by country and explore the organizations shaping the community.</p>
         </div>
+        <div class="members-country-grid">
+            {% for m in countries_sorted %}
+            <details class="members-country">
+                <summary>
+                    <span class="members-country-name">{{ m.country }}</span>
+                    <span class="members-country-count">{{ m.entries | size }} members</span>
+                </summary>
+                <div class="members-country-list">
+                    {% assign entries = m.entries | sort: "last_name" %}
+                    {% for e in entries %}
+                    <div class="members-person">
+                        <div class="members-person-name">
+                            {% if e.link %}<a href="{{e.link}}" target="_blank">{{e.first_name}} {{e.last_name}}</a>{% else %}{{e.first_name}} {{e.last_name}}{% endif %}
+                        </div>
+                        <div class="members-person-meta">{{ e.institution }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </details>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>   
-</div>
+    </div>
+</section>
