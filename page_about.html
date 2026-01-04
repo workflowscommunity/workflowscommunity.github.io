@@ -4,73 +4,129 @@ title: About
 permalink: /about
 ---
 
-<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
-    <h4>Uniting the <strong style="color: #db8e1b">Workflows Ecosystem</strong></h4>
-    <p>A collaborative hub championing both established and emerging community-driven innovations in workflow
-        technologies and methodologies.</p>
-</div>
+{% assign leadership_names = "Rafael Ferreira da Silva|Kyle Chard" | split: "|" %}
 
-<section id="team" class="team sections-bg">
-    <div class="container aos-init aos-animate" data-aos="fade-up">
+<section class="about-hero">
+    <div class="container" data-aos="fade-up">
+        <div class="about-hero-card">
+            <div class="about-eyebrow">About</div>
+            <h1>Uniting the workflows ecosystem</h1>
+            <p>A collaborative hub championing community-driven innovations in workflow technologies, methods, and shared infrastructure.</p>
+        </div>
+    </div>
+</section>
 
-        <span class="subheading">Our Board of Directors</span>
-        <h2 class="mb-4">Leadership</h2>
-        <div class="row gy-4">
-            {% assign leadership = site.data.organization | where: "category","leadership" %}
+<section class="about-section">
+    <div class="container" data-aos="fade-up">
+        <div class="about-section-header">
+            <span>Leadership</span>
+            <h2>Executive leadership</h2>
+            <p>Setting strategy and direction for the Workflows Community Initiative.</p>
+        </div>
+        <div class="about-grid about-grid-leadership">
+            {% assign leadership = site.data.organization | where_exp: "member", "leadership_names contains member.name" %}
             {% for member in leadership %}
-            <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                <div class="member">
-                    <img src="/images/about/{{ member.photo }}" class="img-fluid" alt="">
-                    <h4><a href="{{member.link}}" target="_blank">{{ member.name }}</a></h4>
-                    <p>{{ member.role }}</p>
-                    <a href="{{ member.institution.link }}" target="_blank">
-                        <img src="/images/institutions/{{ member.institution.image }}"
-                            alt="{{ member.institution.name }}" style="max-height: 2em" />
-                    </a>
+            <div class="about-card about-card-feature">
+                <div class="about-card-top">
+                    <img src="/images/about/{{ member.photo }}" alt="{{ member.name }}">
+                    <div>
+                        <h3><a href="{{ member.link }}" target="_blank" rel="noopener">{{ member.name }}</a></h3>
+                        <p class="about-role">{{ member.role | replace: "Director of ", "" }}</p>
+                    </div>
                 </div>
+                {% if member.institution %}
+                <a class="about-institution" href="{{ member.institution.link }}" target="_blank" rel="noopener">
+                    <img src="/images/institutions/{{ member.institution.image }}" alt="{{ member.institution.name }}" />
+                </a>
+                {% endif %}
             </div>
             {% endfor %}
         </div>
+    </div>
+</section>
 
-        <br /><br /><br />
-        <span class="subheading">Our Board of Advisors</span>
-        <h2 class="mb-4">Steering Committee</h2>
-        <div class="row gy-4">
-            {% assign sc = site.data.organization | where: "category","sc" %}
-            {% for member in sc %}
-            <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                <div class="member">
-                    <img src="/images/about/{{ member.photo }}" class="img-fluid" alt="">
-                    <h4><a href="{{member.link}}" target="_blank">{{ member.name }}</a></h4>
-                    <p>{{ member.role }}</p>
-                    <a href="{{ member.institution.link }}" target="_blank">
-                        <img src="/images/institutions/{{ member.institution.image }}"
-                            alt="{{ member.institution.name }}" style="max-height: 2em" />
-                    </a>
-                </div>
-            </div>
-            {% endfor %}
+<section class="about-section about-section-accent">
+    <div class="container" data-aos="fade-up">
+        <div class="about-section-header">
+            <span>Technical Leadership Council</span>
+            <h2>Technical leadership</h2>
+            <p>Driving standards, infrastructure, and community platforms.</p>
         </div>
-
-        <br /><br /><br />
-        <span class="subheading">Our Technical Experts</span>
-        <h2 class="mb-4">Technical Leads</h2>
-        <div class="row gy-4">
+        <div class="about-grid">
             {% assign tl = site.data.organization | where: "category","technical" | sort: "last_name" %}
             {% for member in tl %}
-            <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                <div class="member">
-                    <img src="/images/about/{{ member.photo }}" class="img-fluid" alt="">
-                    <h4><a href="{{member.link}}" target="_blank">{{ member.first_name }} {{ member.last_name }}</a></h4>
-                    <p>{{ member.role }}</p>
-                    <a href="{{ member.institution.link }}" target="_blank">
-                        <img src="/images/institutions/{{ member.institution.image }}"
-                            alt="{{ member.institution.name }}" style="max-height: 2em" />
-                    </a>
+            <div class="about-card">
+                <div class="about-card-top">
+                    <img src="/images/about/{{ member.photo }}" alt="{{ member.first_name }} {{ member.last_name }}">
+                    <div>
+                        <h3><a href="{{ member.link }}" target="_blank" rel="noopener">{{ member.first_name }} {{ member.last_name }}</a></h3>
+                        <p class="about-role">{{ member.role }}</p>
+                    </div>
                 </div>
+                {% if member.institution %}
+                <a class="about-institution" href="{{ member.institution.link }}" target="_blank" rel="noopener">
+                    <img src="/images/institutions/{{ member.institution.image }}" alt="{{ member.institution.name }}" />
+                </a>
+                {% endif %}
             </div>
             {% endfor %}
         </div>
+    </div>
+</section>
 
+<section class="about-section">
+    <div class="container" data-aos="fade-up">
+        <div class="about-section-header">
+            <span>Advisory Directors</span>
+            <h2>Program advisors</h2>
+            <p>Providing guidance and domain expertise across community priorities.</p>
+        </div>
+        <div class="about-grid">
+            {% assign advisors = site.data.organization | where: "category","leadership" %}
+            {% for member in advisors %}
+            {% unless leadership_names contains member.name %}
+            <div class="about-card">
+                <div class="about-card-top">
+                    <img src="/images/about/{{ member.photo }}" alt="{{ member.name }}">
+                    <div>
+                        <h3><a href="{{ member.link }}" target="_blank" rel="noopener">{{ member.name }}</a></h3>
+                        <p class="about-role">{{ member.role | replace: "Chair", "" | replace: "Member", "" }}</p>
+                    </div>
+                </div>
+                {% if member.institution %}
+                <a class="about-institution" href="{{ member.institution.link }}" target="_blank" rel="noopener">
+                    <img src="/images/institutions/{{ member.institution.image }}" alt="{{ member.institution.name }}" />
+                </a>
+                {% endif %}
+            </div>
+            {% endunless %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="about-section about-section-end about-section-supporters">
+    <div class="container" data-aos="fade-up">
+        <div class="about-section-header">
+            <span>Community Research Leads</span>
+            <h2>Community supporters</h2>
+            <p>Researchers who champion the workflows community and its mission.</p>
+        </div>
+        <div class="about-supporters-card">
+            <div class="about-supporters-list">
+                {% assign sc = site.data.organization | where: "category","sc" %}
+                {% for member in sc %}
+                <div class="about-supporter">
+                    <img src="/images/about/{{ member.photo }}" alt="{{ member.name }}">
+                    <div>
+                        <h3><a href="{{ member.link }}" target="_blank" rel="noopener">{{ member.name }}</a></h3>
+                        {% if member.institution %}
+                        <p class="about-supporter-institution">{{ member.institution.name }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </section>

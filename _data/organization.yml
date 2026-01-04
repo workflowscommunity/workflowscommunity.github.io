@@ -19,7 +19,7 @@
     link: https://www.uchicago.edu/
 
 - name: Rosa M. Badia
-  role: Director of Systems and Applications Performance
+  role: Systems and Applications Performance
   photo: badia.jpg
   link: https://www.bsc.es/badia-rosa-m
   category: leadership
@@ -29,7 +29,7 @@
     link: https://www.bsc.es/
 
 - name: Henri Casanova
-  role: Director of Education 
+  role: Education 
   photo: casanova.jpg
   link: https://henricasanova.github.io/
   category: leadership
@@ -39,13 +39,13 @@
     link: https://manoa.hawaii.edu/
 
 - name: Michael R. Crusoe
-  role: Director of APIs and Standards
+  role: APIs and Standards
   photo: crusoe.jpg
   link: https://orcid.org/0000-0002-2961-9670
   category: leadership
 
 - name: Björn Enders
-  role: Director of Facilities Operations
+  role: Facilities Operations
   photo: enders.jpg
   link: https://www.nersc.gov/about/nersc-staff/data-science-engagement-group/bjoern-enders/
   category: leadership
@@ -55,7 +55,7 @@
     link: https://www.nersc.gov
 
 - name: Carole Goble
-  role: Director of FAIR Computational Workflows
+  role: FAIR Computational Workflows
   photo: goble.jpg
   link: https://www.research.manchester.ac.uk/portal/carole.goble.html
   category: leadership
@@ -65,7 +65,7 @@
     link: https://www.manchester.ac.uk/
 
 - name: Lavanya Ramakrishnan
-  role: Director of Training and User Engagement
+  role: Training and User Engagement
   photo: ramakrishnan.jpg
   link: https://crd.lbl.gov/divisions/scidata/about-scidata/scidata-staff/office-of-the-director/lavanya-ramakrishnan/
   category: leadership
@@ -75,7 +75,7 @@
     link: https://www.lbl.gov/
 
 - name: Douglas Thain
-  role: Director of Distributed Computing Systems
+  role: Distributed Computing Systems
   photo: thain.jpg
   link: https://www3.nd.edu/~dthain/
   category: leadership
