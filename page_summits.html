@@ -4,36 +4,43 @@ title: Workflows Community Summits
 permalink: /summits
 ---
 
-<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
-    <h4>Pioneering <strong style="color: #db8e1b">Workflow Summit</strong> Series</h4>
-    <p>Bringing together diverse experts across workflow ecosystems to collaborate, innovate, and address the most
-        pressing challenges facing our community.</p>
-</div>
-
-<section id="recent-posts" class="recent-posts sections-bg">
+<section class="summit-index-hero">
     <div class="container" data-aos="fade-up">
-        <div class="row gy-4">
+        <div class="summit-index-hero-card">
+            <div class="summit-index-eyebrow">Workflows Community Summits</div>
+            <h1>Pioneering the Workflow Summit series</h1>
+            <p>Bringing together diverse experts across workflow ecosystems to collaborate, innovate, and address the most pressing challenges facing our community.</p>
+        </div>
+    </div>
+</section>
+
+<section class="summit-index-section">
+    <div class="container" data-aos="fade-up">
+        <div class="summit-index-header">
+            <h2>Summit editions</h2>
+            <p>Explore recent and past summits.</p>
+        </div>
+        <div class="summit-index-grid">
             {% assign summits = site.summits | sort: 'order' | reverse %}
             {% for summit in summits %}
-            <div class="col-lg-4">
-                <article>
-                    <div class="post-img">
-                        <img src="{{summit.image}}" alt="" class="img-fluid">
+            <a class="summit-index-card" href="{{ summit.url }}">
+                <div class="summit-index-media">
+                    <img src="{{ summit.image }}" alt="{{ summit.title }}" />
+                </div>
+                <div class="summit-index-body">
+                    <span class="summit-index-date">{{ summit.event_date | date: "%b %d, %Y" }}</span>
+                    <h3>{{ summit.title }}</h3>
+                    <p>{{ summit.subtitle }}</p>
+                    <div class="summit-index-meta">
+                        {% if summit.report_link %}
+                        <span class="summit-index-badge">
+                            <img src="{{ summit.report_badge }}" alt="DOI" />
+                        </span>
+                        {% endif %}
+                        <span class="summit-index-link">View details</span>
                     </div>
-                    <p class="post-category">{{summit.event_date | date: "%b %d, %Y" }}</p>
-                    <h2 class="title">
-                        <a href="{{summit.url}}">{{summit.title}}</a>
-                    </h2>
-                    <div class="d-flex align-items-center">
-                        <div class="post-meta">
-                            <p class="post-author">{{summit.subtitle}}</p>
-                            {% if summit.report_link %}
-                            <img src="{{summit.report_badge}}" alt="DOI" style="padding-top: 0.5em" />
-                            {% endif %}
-                        </div>
-                    </div>
-                </article>
-            </div>
+                </div>
+            </a>
             {% endfor %}
         </div>
     </div>
