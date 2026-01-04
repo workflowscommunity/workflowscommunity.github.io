@@ -4,29 +4,42 @@ title: Workshops
 permalink: /workshops
 ---
 
-<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
-    <h4>Workshop events are associated with a major conference/meeting in which researchers, developers, and users from
-        distinct workflow systems and applications have the opportunity to publish/present current state-of-the-art
-        research in the workflow community.</h4>
-</div>
-
-<section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
+<section class="workshop-index-hero">
     <div class="container" data-aos="fade-up">
-        <div data-aos="fade-up" data-aos-delay="100">
+        <div class="workshop-index-hero-card">
+            <div class="workshop-index-eyebrow">Workshops</div>
+            <h1>Gatherings that move workflows forward</h1>
+            <p>Workshop events are associated with a major conference or meeting where researchers, developers, and users from distinct workflow systems share state-of-the-art research and practice.</p>
+        </div>
+    </div>
+</section>
+
+<section class="workshop-index-section">
+    <div class="container" data-aos="fade-up">
+        <div class="workshop-index-header">
+            <h2>Upcoming and past workshops</h2>
+            <p>Explore the latest gatherings across the workflows community.</p>
+        </div>
+        <div class="workshop-index-grid">
             {% assign workshops = site.workshops | sort: 'event_date' | reverse %}
             {% for w in workshops %}
-            <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                    <div class="testimonial-item text-align">
-                        <div class="d-flex align-items-center info-box">
-                            {{w.event_date | date: "%b %d, %Y" }}
-                        </div>
-                        <h3 class="heading"><a href="{{w.url}}">{{w.title}}</a></h3>
-                        <span class="position">{{w.subtitle}}</span>
-                        <span class="position">{{w.location}}</span>
+            <a class="workshop-index-card" href="{{ w.url }}">
+                <div class="workshop-index-date">
+                    <span>{{ w.event_date | date: "%b" }}</span>
+                    <strong>{{ w.event_date | date: "%d" }}</strong>
+                    <em>{{ w.event_date | date: "%Y" }}</em>
+                </div>
+                <div class="workshop-index-body">
+                    <h3>{{ w.title }}</h3>
+                    {% if w.subtitle %}
+                    <p class="workshop-index-subtitle">{{ w.subtitle }}</p>
+                    {% endif %}
+                    <div class="workshop-index-meta">
+                        <span class="workshop-index-location"><i class="fas fa-map-marker-alt"></i> {{ w.location }}</span>
+                        <span class="workshop-index-link">View details</span>
                     </div>
                 </div>
-            </div>
+            </a>
             {% endfor %}
         </div>
     </div>

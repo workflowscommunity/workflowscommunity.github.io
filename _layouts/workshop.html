@@ -2,74 +2,118 @@
 layout: page
 ---
 
-<div class="container" data-aos="fade-up" style="padding: 3em 0;">
-    <div class="row">
-        <div class="col-lg-8 wg wg-contents">
-            <p class="breadcrumb">
-                <a href="/workshops">WORKSHOPS&nbsp;</a> > {{ page.title | upcase }}
+<section class="workshop-hero">
+    <div class="container" data-aos="fade-up">
+        <div class="workshop-hero-card">
+            <p class="workshop-breadcrumb">
+                <a href="/workshops">Workshops</a>
+                <span>/</span>
+                {{ page.title }}
             </p>
-
-            <h2 class="text-center">{{page.subtitle}}<br /><span
-                    style="font-size: 0.8em; font-weight: bold;">{{page.title}}</span></h2>
-            <p class="text-center mb-5" style="font-weight: bold;">
-                {{page.event_date | date: "%A - %b %d, %Y" }}<br />
-                {{page.location}}<br />
-                {{page.time}}<br />
-            </p>
-
-            {{ content }}
-        </div>
-
-
-        <div class="col-lg-4">
-            <div class="blog-sidbar" style="overflow-wrap: break-word;">
-                <p class="text-center">
-                    In conjunction with:<br />
-                    <img src="{{ page.in_conjunction_with }}" style="width: 15em;" />
-                </p>
-
-                {% if page.organizers %}
-                <hr />
-                <h4 class="mb-3">Organizers</h4>
-                {% for o in page.organizers %}
-                <img src="{{ o.image }}" style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em; float: left" />
-                {{ o.name }}
-                {% if o.desc %}
-                <br /><a href="{{ o.desc_link }}" target="_blank">{{ o.desc }}</a>
-                {% else %}
-                <br />
-                {% endif %}
-                <br /><br />
-                {% endfor %}
-                {% endif %}
-
-                {% if page.speakers %}
-                <hr />
-                <h4 class="mb-3">Speakers</h4>
-                {% for sp in page.speakers %}
-                <img src="{{ sp.image }}" style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em;" />
-                {{ sp.name }}<br /><br />
-                {% endfor %}
-                {% endif %}
-
-                {% if page.steering_committee %}
-                <hr />
-                <h4 class="mb-3">Steering Committee</h4>
-                {% for sc in page.steering_committee %}
-                <img src="{{ sc.image }}" style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em;" />
-                {{ sc.name }}<br /><br />
-                {% endfor %}
-                {% endif %}
-
-                {% if page.nsf %}
-                <hr />
-                <br />
-                <div style="font-size: 0.8em;">
-                    <img src="/images/workshops/nsf-logo.png" style="max-width: 5em; float: left; margin-right: 1em;" />
-                    {{ page.nsf }}<br /><br />
+            <div class="workshop-hero-grid">
+                <div>
+                    {% if page.subtitle %}
+                    <p class="workshop-eyebrow">{{ page.subtitle }}</p>
+                    {% endif %}
+                    <h1>{{ page.title }}</h1>
+                    <div class="workshop-meta">
+                        <div>
+                            <span>Date</span>
+                            <strong>{{ page.event_date | date: "%A - %b %d, %Y" }}</strong>
+                        </div>
+                        <div>
+                            <span>Location</span>
+                            <strong>{{ page.location }}</strong>
+                        </div>
+                        <div>
+                            <span>Time</span>
+                            <strong>{{ page.time }}</strong>
+                        </div>
+                    </div>
+                </div>
+                {% if page.in_conjunction_with %}
+                <div class="workshop-partner">
+                    <span>In conjunction with</span>
+                    <img src="{{ page.in_conjunction_with }}" alt="In conjunction with" />
                 </div>
                 {% endif %}
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<section class="workshop-body">
+    <div class="container" data-aos="fade-up">
+        <div class="row g-4">
+            <div class="col-lg-8 wg wg-contents">
+                <div class="workshop-content-card">
+                    {{ content }}
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="workshop-panel">
+                    {% if page.organizers %}
+                    <div class="workshop-panel-block">
+                        <h3>Organizers</h3>
+                        <div class="workshop-people-grid">
+                            {% for o in page.organizers %}
+                            <div class="workshop-person">
+                                <img src="{{ o.image }}" alt="{{ o.name }}" />
+                                <div>
+                                    <strong>{{ o.name }}</strong>
+                                    {% if o.desc %}
+                                    <a href="{{ o.desc_link }}" target="_blank" rel="noopener">{{ o.desc }}</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if page.speakers %}
+                    <div class="workshop-panel-block">
+                        <h3>Speakers</h3>
+                        <div class="workshop-people-grid">
+                            {% for sp in page.speakers %}
+                            <div class="workshop-person">
+                                <img src="{{ sp.image }}" alt="{{ sp.name }}" />
+                                <div>
+                                    <strong>{{ sp.name }}</strong>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if page.steering_committee %}
+                    <div class="workshop-panel-block">
+                        <h3>Steering Committee</h3>
+                        <div class="workshop-people-grid">
+                            {% for sc in page.steering_committee %}
+                            <div class="workshop-person">
+                                <img src="{{ sc.image }}" alt="{{ sc.name }}" />
+                                <div>
+                                    <strong>{{ sc.name }}</strong>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if page.nsf %}
+                    <div class="workshop-panel-block">
+                        <h3>Support</h3>
+                        <div class="workshop-support">
+                            <img src="/images/workshops/nsf-logo.png" alt="NSF" />
+                            <p>{{ page.nsf }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
