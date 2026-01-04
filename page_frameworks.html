@@ -4,53 +4,56 @@ title: Research Frameworks
 permalink: /frameworks
 ---
 
-<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
-    <h4><strong style="color: #db8e1b">Free & Open Source</strong> Workflow Tools and Frameworks</h4>
-    <p>Explore our curated collection of freely accessible software tools, libraries, and frameworks designed to
-        accelerate your workflow research and development projects.</p>
-    <a href="/frameworks/contribute" class="btn btn-primary mt-3 py-3 px-5">Contribute</a>
-</div>
-
-<section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
+<section class="frameworks-index-hero">
     <div class="container" data-aos="fade-up">
-        <div data-aos="fade-up" data-aos-delay="100">
+        <div class="frameworks-index-hero-card">
+            <div class="frameworks-index-eyebrow">Research Frameworks</div>
+            <h1>Free and open source workflow tools and frameworks</h1>
+            <p>Explore a curated collection of software tools, libraries, and frameworks designed to accelerate workflow research and development projects.</p>
+            <a href="/frameworks/contribute" class="btn btn-primary mt-3 py-3 px-5">Contribute</a>
+        </div>
+    </div>
+</section>
+
+<section class="frameworks-index-section">
+    <div class="container" data-aos="fade-up">
+        <div class="frameworks-index-header">
+            <h2>Frameworks and tools</h2>
+            <p>Browse workflow research frameworks and supporting libraries.</p>
+        </div>
+        <div class="frameworks-index-grid">
             {% assign frameworks = site.data.research_frameworks | sort: "name" %}
             {% for f in frameworks %}
-            <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                    <div class="testimonial-item">
-                        <div class="d-flex align-items-center info-box">
-                            <img src="{{f.icon}}" class="testimonial-img flex-shrink-0">
-                            <div>
-                                <h3><a href="{{f.url}}" target="_blank">{{f.name}}</a></h3>
-                                <h4>{{f.description}}</h4>
-                                <p style="color: #3a3a3a !important; margin-left: 0;">
-                                    {% if f.github %}
-                                    <a href="{{f.github}}" target="_blank" class="badge"><i class="fab fa-github"></i>
-                                        GitHub</a>
-                                    {% endif %}
-                                    {% if f.gitlab %}
-                                    <a href="{{f.gitlab}}" target="_blank" class="badge"><i class="fab fa-gitlab"></i>
-                                        GitLab</a>
-                                    {% endif %}
-                                    {% if f.documentation %}
-                                    <a href="{{f.documentation}}" target="_blank" class="badge"><i
-                                            class="fas fa-book"></i> Documentation</a>
-                                    {% endif %}
-                                </p>
-                                {% if f.tags %}
-                                <p style="font-size: 0.8em; color: #e83e8c">
-                                    {% assign tags = f.tags | sort %}
-                                    {% for tag in tags %}
-                                    <span class="tag">/ {{tag}} </span>
-                                    {% endfor %}
-                                </p>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
+            <a class="frameworks-index-card" href="{{ f.url }}" target="_blank" rel="noopener">
+                {% if f.icon %}
+                <div class="frameworks-index-logo">
+                    <img src="{{ f.icon }}" alt="{{ f.name }}" />
                 </div>
-            </div>
+                {% endif %}
+                <div class="frameworks-index-body">
+                    <h3>{{ f.name }}</h3>
+                    <p>{{ f.description }}</p>
+                    <div class="frameworks-index-links">
+                        {% if f.github %}
+                        <span class="frameworks-index-pill"><i class="fab fa-github"></i> GitHub</span>
+                        {% endif %}
+                        {% if f.gitlab %}
+                        <span class="frameworks-index-pill"><i class="fab fa-gitlab"></i> GitLab</span>
+                        {% endif %}
+                        {% if f.documentation %}
+                        <span class="frameworks-index-pill"><i class="fas fa-book"></i> Docs</span>
+                        {% endif %}
+                    </div>
+                    {% if f.tags %}
+                    <div class="frameworks-index-tags">
+                        {% assign tags = f.tags | sort %}
+                        {% for tag in tags %}
+                        <span class="frameworks-index-tag">#{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </a>
             {% endfor %}
         </div>
     </div>

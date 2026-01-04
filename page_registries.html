@@ -4,32 +4,36 @@ title: Workflows Registries
 permalink: /registries
 ---
 
-<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
-    <h4>Collection of workflow repositories that host workflow applications</h4>
-    <a href="/registries/contribute" class="btn btn-primary mt-3 py-3 px-5">Contribute</a>
-</div>
-
-
-<section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
+<section class="registry-index-hero">
     <div class="container" data-aos="fade-up">
-        <div data-aos="fade-up" data-aos-delay="100">
+        <div class="registry-index-hero-card">
+            <div class="registry-index-eyebrow">Workflow Registries</div>
+            <h1>Find curated workflow repositories and catalogs</h1>
+            <p>Explore community-maintained registries that host workflow applications, descriptions, and reusable assets.</p>
+            <a href="/registries/contribute" class="btn btn-primary mt-3 py-3 px-5">Contribute</a>
+        </div>
+    </div>
+</section>
+
+<section class="registry-index-section">
+    <div class="container" data-aos="fade-up">
+        <div class="registry-index-header">
+            <h2>Registries</h2>
+            <p>Browse workflow catalogs and discover reusable pipelines.</p>
+        </div>
+        <div class="registry-index-grid">
             {% assign registries = site.data.registries | sort: "name" %}
             {% for registry in registries %}
-            <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                    <div class="testimonial-item">
-                        <div class="d-flex align-items-center info-box">
-                            <img src="{{registry.icon}}" class="testimonial-img flex-shrink-0">
-                            <div>
-                                <h3><a href="{{registry.url}}" target="_blank">{{registry.name}}</a></h3>
-                                <h4 style="margin-bottom: 0.5em;">{{system.headline}}</h4>
-                                <h4>{{registry.description}}
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
+            <a class="registry-index-card" href="{{ registry.url }}" target="_blank" rel="noopener">
+                <div class="registry-index-logo">
+                    <img src="{{ registry.icon }}" alt="{{ registry.name }}" />
                 </div>
-            </div>
+                <div class="registry-index-body">
+                    <h3>{{ registry.name }}</h3>
+                    <p>{{ registry.description }}</p>
+                    <span class="registry-index-link">Visit registry</span>
+                </div>
+            </a>
             {% endfor %}
         </div>
     </div>

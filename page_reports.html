@@ -4,35 +4,36 @@ title: Reports
 permalink: /reports
 ---
 
-<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
-    <h4><strong style="color: #db8e1b">Workflow Research</strong> Community Reports</h4>
-    <p>Explore peer-contributed insights, findings, and advancements from our global community of workflow researchers
-        and practitioners.</p>
-</div>
-
-<section id="recent-posts" class="recent-posts sections-bg">
+<section class="reports-index-hero">
     <div class="container" data-aos="fade-up">
-        <div class="row gy-4">
+        <div class="reports-index-hero-card">
+            <div class="reports-index-eyebrow">Reports</div>
+            <h1>Workflow research community reports</h1>
+            <p>Explore peer-contributed insights, findings, and advancements from a global community of workflow researchers and practitioners.</p>
+        </div>
+    </div>
+</section>
+
+<section class="reports-index-section">
+    <div class="container" data-aos="fade-up">
+        <div class="reports-index-header">
+            <h2>Featured reports</h2>
+            <p>Curated publications and community analyses worth reading.</p>
+        </div>
+        <div class="reports-index-grid">
             {% assign reports = site.data.reports | sort: "date" | reverse %}
             {% for r in reports %}
-            <div class="col-lg-4">
-                <article>
-                    <div class="post-img">
-                        <img src="/images/reports/{{r.image}}" alt="" class="img-fluid">
-                    </div>
-                    <p class="post-category">{{r.publisher}}, {{r.date | date: "%Y"}}</p>
-                    <h2 class="title">
-                        <a href="{{r.url}}">{{r.title}}</a>
-                    </h2>
-                    <div class="d-flex align-items-center">
-                        <div class="post-meta">
-                            <p class="post-author">{{r.subtitle}}</p>
-                            <p class="post-date">
-                            </p>
-                        </div>
-                    </div>
-                </article>
-            </div>
+            <a class="reports-index-card" href="{{ r.url }}" target="_blank" rel="noopener">
+                <div class="reports-index-media">
+                    <img src="/images/reports/{{ r.image }}" alt="{{ r.title }}" />
+                </div>
+                <div class="reports-index-body">
+                    <span class="reports-index-meta">{{ r.publisher }} · {{ r.date | date: "%Y" }}</span>
+                    <h3>{{ r.title }}</h3>
+                    <p>{{ r.subtitle }}</p>
+                    <span class="reports-index-link">Read report</span>
+                </div>
+            </a>
             {% endfor %}
         </div>
     </div>

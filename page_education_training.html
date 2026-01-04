@@ -4,29 +4,37 @@ title: Education and Training
 permalink: /education
 ---
 
-<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
-    <h4>Comprehensive Learning Resources for <strong style="color: #db8e1b">All Workflow Systems</strong></h4>
-</div>
-
-<section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
+<section class="education-index-hero">
     <div class="container" data-aos="fade-up">
-        <div data-aos="fade-up" data-aos-delay="100">
+        <div class="education-index-hero-card">
+            <div class="education-index-eyebrow">Education and Training</div>
+            <h1>Comprehensive learning resources for all workflow systems</h1>
+            <p>Explore workshops, tutorials, and materials curated by the workflows community to help you learn and teach workflow practices.</p>
+        </div>
+    </div>
+</section>
+
+<section class="education-index-section">
+    <div class="container" data-aos="fade-up">
+        <div class="education-index-header">
+            <h2>Learning resources</h2>
+            <p>Hands-on training, curated content, and educational programs.</p>
+        </div>
+        <div class="education-index-grid">
             {% assign education = site.data.education_training | sort: "name" %}
             {% for e in education %}
-            <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                    <div class="testimonial-item">
-                        <div class="d-flex align-items-center info-box">
-                            <img src="{{e.icon}}" class="testimonial-img flex-shrink-0">
-                            <div>
-                                <h3><a href="{{e.url}}" target="_blank">{{e.name}}</a></h3>
-                                <h4>{{e.description}}
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
+            <a class="education-index-card" href="{{ e.url }}" target="_blank" rel="noopener">
+                {% if e.icon %}
+                <div class="education-index-logo">
+                    <img src="{{ e.icon }}" alt="{{ e.name }}" />
                 </div>
-            </div>
+                {% endif %}
+                <div class="education-index-body">
+                    <h3>{{ e.name }}</h3>
+                    <p>{{ e.description }}</p>
+                    <span class="education-index-link">Explore resource</span>
+                </div>
+            </a>
             {% endfor %}
         </div>
     </div>
