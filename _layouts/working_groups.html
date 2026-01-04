@@ -2,43 +2,76 @@
 layout: page
 ---
 
-{% assign status_color = "color-2" %}
+{% assign status_color = "#8B949E" %}
 {% if page.status == "Establishing" %}
-{% assign status_color = "#D4D62D" %}
+{% assign status_color = "#8A8F1A" %}
 {% elsif page.status == "Active" %}
 {% assign status_color = "#78c315" %}
 {% endif %}
+{% assign members_count = page.members | size %}
 
-<div class="container" data-aos="fade-up" style="padding: 3em 0;">
+<div class="container wg-page" data-aos="fade-up" style="padding: 3em 0;">
     <div class="row">
-        <div class="col-lg-8 wg wg-contents">
-            <p class="breadcrumb">
-                <a href="/groups">WORKING GROUPS&nbsp;</a> > {{ page.title | upcase }}
-            </p>
-            {{content | markdownify}}
-        </div>
-        <div class="col-lg-4">
-            <div class="blog-sidbar">
-                {% if page.join %}
-                <a href="{{ page.join }}" target="_blank" class="btn btn-primary mt-3 py-3 px-5"><i
-                        class="fas fa-user-plus"></i> Join</a><br /><br />
-                {% endif %}
-                <i class="fas fa-users"></i>&nbsp;&nbsp;{{page.members | size}} members<br />
-                <i class="fas fa-circle-notch" style="color: {{status_color}}"></i>&nbsp;{{ page.status }}
-                <br /><br />
-                <hr />
-                <h4>Members</h4>
-                {% for member in page.members %}
-                {% if member.role %}
-                <span style="color: #aa6821; border: 1px solid #aa6821; font-size: 0.6em; border-radius: 0.5em; padding: 0.25em 0.5em;">{{member.role}}</span>
-                {% endif %}
-                {% if member.link %}
-                <a href="{{member.link}}" target="_blank">{{member.name}}</a>
-                {% else %}
-                {{member.name}}
-                {% endif %}
-                <br />
-                {% endfor %}
+        <div class="col-lg-12 wg wg-contents">
+            <div class="wg-hero" style="--status-color: {{ status_color }};">
+                <div class="wg-hero-card">
+                    <p class="wg-breadcrumb">
+                        <a href="/groups">Working Groups</a>
+                        <span>/</span>
+                        {{ page.title }}
+                    </p>
+                    <div class="wg-hero-eyebrow">Working Group</div>
+                    <h1>{{ page.title }}</h1>
+                    {% if page.description %}
+                    <p class="wg-hero-desc">{{ page.description }}</p>
+                    {% endif %}
+                    <div class="wg-meta">
+                        {% if page.status %}
+                        <span class="wg-pill wg-pill-status">
+                            <span class="wg-pill-dot"></span>
+                            {{ page.status }}
+                        </span>
+                        {% endif %}
+                        <span class="wg-pill wg-pill-count">
+                            <i class="fas fa-users"></i>
+                            {{ members_count }} members
+                        </span>
+                    </div>
+                    <div class="wg-actions">
+                        {% if page.join %}
+                        <a href="{{ page.join }}" target="_blank" rel="noopener" class="btn btn-primary py-3 px-5">
+                            <i class="fas fa-user-plus"></i> Join
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="wg-members-panel" id="wg-members">
+                <div class="wg-members-header">
+                    <h3>Members</h3>
+                    <span class="wg-members-count">{{ members_count }} people</span>
+                </div>
+                <div class="wg-members-grid">
+                    {% for member in page.members %}
+                    <div class="wg-member-card">
+                        {% if member.role %}
+                        <div class="wg-member-role">{{ member.role }}</div>
+                        {% endif %}
+                        <div class="wg-member-name">
+                            {% if member.link %}
+                            <a href="{{ member.link }}" target="_blank" rel="noopener">{{ member.name }}</a>
+                            {% else %}
+                            {{ member.name }}
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="wg-content-card">
+                {{ content | markdownify }}
             </div>
         </div>
     </div>
