@@ -4,71 +4,85 @@ title: Working Groups
 permalink: /groups
 ---
 
-<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
-    <h4>Collaborative Initiatives in <strong style="color: #db8e1b">Workflow Research</strong></h4>
-    <p>Discover the ongoing projects and achievements of specialized working groups and task forces advancing workflow
-        research, development, and real-world applications.</p>
-</div>
-
-<section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
+<section class="wg-index-hero">
     <div class="container" data-aos="fade-up">
-        <div data-aos="fade-up" data-aos-delay="100">
-            <!-- WCI Groups -->
+        <div class="wg-index-hero-card">
+            <div class="wg-index-eyebrow">Working Groups</div>
+            <h1>Collaborative initiatives in workflow research</h1>
+            <p>Discover the ongoing projects and achievements of specialized working groups and task forces advancing workflow research, development, and real-world applications.</p>
+        </div>
+    </div>
+</section>
+
+<section class="wg-index-section">
+    <div class="container" data-aos="fade-up">
+        <div class="wg-index-header">
+            <h2>Workflow Community Working Groups</h2>
+            <p>Groups hosted by the Workflows Community Initiative.</p>
+        </div>
+        <div class="wg-index-grid">
             {% assign groups = site.working_groups | where:"layout","working_groups" | sort: "title" %}
             {% for group in groups %}
-            {% assign status_color = "color-2" %}
+            {% assign status_color = "#8B949E" %}
             {% if group.status == "Establishing" %}
-            {% assign status_color = "#D4D62D" %}
+            {% assign status_color = "#8A8F1A" %}
             {% elsif group.status == "Active" %}
             {% assign status_color = "#78c315" %}
             {% endif %}
-            <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                    <div class="testimonial-item">
-                        <div class="d-flex align-items-center info-box">
-                            <div>
-                                <h3><a href="{{group.url}}"><img src="/favicon.ico"
-                                            style="width: 30px; vertical-align: middle;" /> {{group.title}}</a></h3>
-                                <h4>{{group.description}}</h4>
-                                <h4 style="color: #3a3a3a; padding-top: 1em;">
-                                    <i class="fas fa-users"></i>&nbsp;&nbsp;{{group.members | size}} Members &mdash;
-                                    <i class="fas fa-circle-notch" style="color: {{status_color}}"></i>
-                                    &nbsp;{{group.status}}
-                                </h4>
-                            </div>
-                        </div>
+            <a class="wg-index-card" href="{{ group.url }}" style="--status-color: {{ status_color }};">
+                <div class="wg-index-card-top">
+                    <div class="wg-index-title">
+                        <img src="/favicon.ico" alt="WCI" />
+                        <span>{{ group.title }}</span>
                     </div>
+                    <span class="wg-index-pill">
+                        <span class="wg-index-pill-dot"></span>
+                        {{ group.status }}
+                    </span>
                 </div>
-            </div>
+                <p>{{ group.description }}</p>
+                <div class="wg-index-meta">
+                    <span><i class="fas fa-users"></i> {{ group.members | size }} members</span>
+                    <span class="wg-index-link">Explore</span>
+                </div>
+            </a>
             {% endfor %}
+        </div>
+    </div>
+</section>
 
-            <!-- External WGs-->
+<section class="wg-index-section wg-index-section-alt">
+    <div class="container" data-aos="fade-up">
+        <div class="wg-index-header">
+            <h2>External Working Groups</h2>
+            <p>Related efforts from other communities.</p>
+        </div>
+        <div class="wg-index-grid">
             {% assign groups = site.data.working_groups | sort: "name" %}
             {% for group in groups %}
-            {% assign status_color = "#8CCA60" %}
+            {% assign status_color = "#8B949E" %}
             {% if group.status == "Establishing" %}
-            {% assign status_color = "#D4D62D" %}
-            {% elsif group.status == "Establishing" %}
+            {% assign status_color = "#8A8F1A" %}
+            {% elsif group.status == "Active" %}
             {% assign status_color = "#78c315" %}
             {% endif %}
-            <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                    <div class="testimonial-item">
-                        <div class="d-flex align-items-center info-box">
-                            <div>
-                                <h3><a href="{{group.link}}" target="_blank">{{group.name}}</a></h3>
-                                <h4>{{group.description}}</h4>
-                                <h4 style="color: #3a3a3a; padding-top: 1em;">
-                                    <i class="fas fa-circle-notch" style="color: {{status_color}}"></i>
-                                    &nbsp;{{group.status}}
-                                </h4>
-                            </div>
-                        </div>
+            <a class="wg-index-card" href="{{ group.link }}" target="_blank" rel="noopener" style="--status-color: {{ status_color }};">
+                <div class="wg-index-card-top">
+                    <div class="wg-index-title">
+                        <span>{{ group.name }}</span>
                     </div>
+                    <span class="wg-index-pill">
+                        <span class="wg-index-pill-dot"></span>
+                        {{ group.status }}
+                    </span>
                 </div>
-            </div>
+                <p>{{ group.description }}</p>
+                <div class="wg-index-meta">
+                    <span>External group</span>
+                    <span class="wg-index-link">Visit</span>
+                </div>
+            </a>
             {% endfor %}
-
         </div>
     </div>
 </section>

@@ -5804,6 +5804,143 @@ canvas{
   text-decoration: underline;
 }
 
+.wg-index-hero {
+  padding: 4em 0 2.5em;
+  background: linear-gradient(120deg, #f4f1ea 0%, #f7f7f2 50%, #e6eef2 100%);
+}
+
+.wg-index-hero-card {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 2.5em;
+  box-shadow: var(--shadow-md);
+}
+
+.wg-index-hero-card h1 {
+  font-size: 2.4em;
+  margin-bottom: 0.6em;
+}
+
+.wg-index-hero-card p {
+  color: #4a4a4a;
+  max-width: 44em;
+}
+
+.wg-index-eyebrow {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+  color: #6c6c6c;
+  margin-bottom: 0.6em;
+  font-weight: 600;
+}
+
+.wg-index-section {
+  padding: 2.5em 0 4em;
+  background: #f7f7f4;
+}
+
+.wg-index-section-alt {
+  background: #ffffff;
+}
+
+.wg-index-header {
+  margin-bottom: 2em;
+}
+
+.wg-index-header h2 {
+  margin-bottom: 0.4em;
+}
+
+.wg-index-header p {
+  color: #5b5b5b;
+  margin: 0;
+}
+
+.wg-index-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2em;
+}
+
+.wg-index-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.4em;
+  background: #ffffff;
+  border-radius: 1.2em;
+  border: 1px solid #ededed;
+  box-shadow: 0 12px 24px rgb(82 90 101 / 10%);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wg-index-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgb(82 90 101 / 16%);
+}
+
+.wg-index-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.8em;
+}
+
+.wg-index-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: 600;
+  font-size: 1.05em;
+}
+
+.wg-index-title img {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+}
+
+.wg-index-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.25em 0.7em;
+  border-radius: 999px;
+  border: 1px solid var(--status-color);
+  color: var(--status-color);
+  font-size: 0.75em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.wg-index-pill-dot {
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 999px;
+  background: var(--status-color);
+}
+
+.wg-index-card p {
+  margin: 0;
+  color: #4a4a4a;
+}
+
+.wg-index-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9em;
+  color: #5b5b5b;
+}
+
+.wg-index-link {
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
 .wg-role-pill {
   color: #aa6821;
   border: 1px solid #aa6821;
@@ -5858,6 +5995,26 @@ pre {
 
   .wg-members-panel {
     padding: 0.9em;
+  }
+
+  .wg-index-hero-card {
+    padding: 1.7em;
+  }
+
+  .wg-index-hero-card h1 {
+    font-size: 1.9em;
+  }
+}
+
+@media (max-width: 1200px) {
+  .wg-index-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .wg-index-grid {
+    grid-template-columns: 1fr;
   }
 }
 
