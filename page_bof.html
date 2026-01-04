@@ -4,31 +4,38 @@ title: Birds of a Feather
 permalink: /bof
 ---
 
-<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
-    <h4>Bird of a Feather (BoF) events are typically associated with a major conference/meeting in which
-        researchers, developers, and users from distinct workflow systems and applications meet to discuss the
-        current state-of-the-art and crucial challenges in the workflow community.</h4>
-</div>
-
-<section id="testimonials" class="testimonials bg-light" style="padding-top: 0;">
+<section class="bof-index-hero">
     <div class="container" data-aos="fade-up">
-        <div data-aos="fade-up" data-aos-delay="100">
+        <div class="bof-index-hero-card">
+            <div class="bof-index-eyebrow">Birds of a Feather</div>
+            <h1>Focused conversations that connect communities</h1>
+            <p>BoF events are typically associated with major conferences and meetings where researchers, developers, and users from distinct workflow systems discuss current challenges and opportunities.</p>
+        </div>
+    </div>
+</section>
+
+<section class="bof-index-section">
+    <div class="container" data-aos="fade-up">
+        <div class="bof-index-header">
+            <h2>BoF sessions</h2>
+            <p>Explore recent and upcoming birds of a feather gatherings.</p>
+        </div>
+        <div class="bof-index-grid">
             {% assign bofs = site.bofs | sort: 'order' | reverse %}
             {% for bof in bofs %}
-            <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                    <div class="testimonial-item">
-                        <div class="d-flex align-items-center info-box">
-                            <img src="{{bof.conference_logo}}" class="testimonial-img flex-shrink-0">
-                            <div>
-                            {{bof.event_date | date: "%b %d, %Y" }}
-                        <h3 class="heading"><a href="{{bof.url}}">{{bof.title}}</a></h3>
-                        <span class="position">{{bof.subtitle}}</span>
-                        </div>
-                        </div>
-                    </div>
+            <a class="bof-index-card" href="{{ bof.url }}">
+                <div class="bof-index-logo">
+                    <img src="{{ bof.conference_logo }}" alt="Conference logo" />
                 </div>
-            </div>
+                <div class="bof-index-body">
+                    <span class="bof-index-date">{{ bof.event_date | date: "%b %d, %Y" }}</span>
+                    <h3>{{ bof.title }}</h3>
+                    {% if bof.subtitle %}
+                    <p>{{ bof.subtitle }}</p>
+                    {% endif %}
+                    <span class="bof-index-link">View details</span>
+                </div>
+            </a>
             {% endfor %}
         </div>
     </div>

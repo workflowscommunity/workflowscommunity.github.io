@@ -2,68 +2,108 @@
 layout: page
 ---
 
-<div class="container" data-aos="fade-up" style="padding: 3em 0;">
-    <div class="row">
-        <div class="col-lg-8 wg wg-contents">
-            <p class="breadcrumb">
-                <a href="/bof">BIRDS OF A FEATHERS&nbsp;</a> > {{ page.title | upcase }}
+<section class="bof-hero">
+    <div class="container" data-aos="fade-up">
+        <div class="bof-hero-card">
+            <p class="bof-breadcrumb">
+                <a href="/bof">Birds of a Feather</a>
+                <span>/</span>
+                {{ page.title }}
             </p>
-
-            <p class="text-center">
-                <img src="{{page.conference_logo}}" style="width: 15em; margin: auto;" />
-            </p>
-            <p class="subheading text-center">{{page.subtitle}}</p>
-            <h2 class="mb-4 text-center">{{page.title}}</h2>
-
-            <p class="text-center mb-5">
-                {{page.event_date | date: "%A - %b %d, %Y" }}<br />
-                {{page.time}}<br />
-                {{page.room}}
-            </p>
-
-            {{ content }}
-        </div>
-
-
-        <div class="col-lg-4">
-            <div class="blog-sidbar" style="overflow-wrap: break-word;">
-                {% if page.speakers %}
-                <h4 class="mb-3">Featured Speakers</h4>
-                {% for o in page.speakers %}
-                <img src="{{ o.image }}" style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em; float: left" />
-                {{ o.name }}
-                {% if o.desc %}
-                <br /><a href="{{ o.desc_link }}" target="_blank">{{ o.desc }}</a>
-                {% else %}
-                <br />
-                {% endif %}
-                <br /><br />
-                {% endfor %}
-                {% endif %}
-
-                {% if page.organizers %}
-                <hr />
-                <h4 class="mb-3">Organizers</h4>
-                {% for o in page.organizers %}
-                <img src="{{ o.image }}" style="width: 3em; height: 3em; border-radius: 0.5em; margin-right: 1em; float: left" />
-                {{ o.name }}
-                {% if o.desc %}
-                <br /><a href="{{ o.desc_link }}" target="_blank">{{ o.desc }}</a>
-                {% else %}
-                <br />
-                {% endif %}
-                <br /><br />
-                {% endfor %}
-                {% endif %}
-
-                {% if page.supporters %}
-                <hr />
-                <h4 class="mb-3">Supporters</h4>
-                {% for s in page.supporters %}
-                <a href="{{s.link}}" target="_blank"><img src="{{s.image}}" height="40px" class="mb-3 mr-3" /></a><br />
-                {% endfor %}
+            <div class="bof-hero-grid">
+                <div>
+                    {% if page.subtitle %}
+                    <p class="bof-eyebrow">{{ page.subtitle }}</p>
+                    {% endif %}
+                    <h1>{{ page.title }}</h1>
+                    <div class="bof-meta">
+                        <div>
+                            <span>Date</span>
+                            <strong>{{ page.event_date | date: "%A - %b %d, %Y" }}</strong>
+                        </div>
+                        <div>
+                            <span>Time</span>
+                            <strong>{{ page.time }}</strong>
+                        </div>
+                        <div>
+                            <span>Room</span>
+                            <strong>{{ page.room }}</strong>
+                        </div>
+                    </div>
+                </div>
+                {% if page.conference_logo %}
+                <div class="bof-partner">
+                    <span>Conference</span>
+                    <img src="{{ page.conference_logo }}" alt="Conference logo" />
+                </div>
                 {% endif %}
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<section class="bof-body">
+    <div class="container" data-aos="fade-up">
+        <div class="row g-4">
+            <div class="col-lg-8 wg wg-contents">
+                <div class="bof-content-card">
+                    {{ content }}
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bof-panel">
+                    {% if page.speakers %}
+                    <div class="bof-panel-block">
+                        <h3>Featured Speakers</h3>
+                        <div class="bof-people-grid">
+                            {% for o in page.speakers %}
+                            <div class="bof-person bof-person-row">
+                                <img src="{{ o.image }}" alt="{{ o.name }}" />
+                                <div>
+                                    <strong class="bof-person-name">{{ o.name }}</strong>
+                                    {% if o.desc %}
+                                    <a class="bof-person-desc" href="{{ o.desc_link }}" target="_blank" rel="noopener">{{ o.desc }}</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if page.organizers %}
+                    <div class="bof-panel-block">
+                        <h3>Organizers</h3>
+                        <div class="bof-people-grid">
+                            {% for o in page.organizers %}
+                            <div class="bof-person bof-person-row">
+                                <img src="{{ o.image }}" alt="{{ o.name }}" />
+                                <div>
+                                    <strong class="bof-person-name">{{ o.name }}</strong>
+                                    {% if o.desc %}
+                                    <a class="bof-person-desc" href="{{ o.desc_link }}" target="_blank" rel="noopener">{{ o.desc }}</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if page.supporters %}
+                    <div class="bof-panel-block">
+                        <h3>Supporters</h3>
+                        <div class="bof-supporters">
+                            {% for s in page.supporters %}
+                            <a href="{{ s.link }}" target="_blank" rel="noopener">
+                                <img src="{{ s.image }}" alt="Supporter logo" />
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
