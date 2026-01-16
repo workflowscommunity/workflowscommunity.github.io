@@ -27,11 +27,12 @@ permalink: /
                 <!-- COMMUNITY TALKS -->
                 <article class="community-card">
                     {% assign talks = site.talks| where: "given", false | sort: 'order'%}
-                    {% for talk in talks limit: 1 %}
+                    {% assign talk = talks.first %}
                     <div class="post-img">
                         <img src="/images/talks/banner.png" alt="" class="img-fluid">
                     </div>
                     <p class="post-category">COMMUNITY TALK</p>
+                    {% if talk %}
                     <h2 class="title">
                         <a href="{{ talk.url }}">{{ talk.title }}</a>
                     </h2>
@@ -43,7 +44,19 @@ permalink: /
                             </p>
                         </div>
                     </div>
-                    {% endfor %}
+                    {% else %}
+                    <h2 class="title">
+                        <a href="/talks">Workflow Community Talks</a>
+                    </h2>
+                    <div class="d-flex align-items-center post-footer">
+                        <div class="post-meta">
+                            <p class="post-author">Highlighting workflow systems, research frameworks, and community practices</p>
+                            <p class="post-date">
+                                <a href="/talks">View all talks</a>
+                            </p>
+                        </div>
+                    </div>
+                    {% endif %}
                 </article>
             </div>
 

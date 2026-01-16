@@ -45,22 +45,31 @@ image: "https://workflows.community/images/wci-default-card.png"
                 </div>
                 <div class="col-lg-5 d-flex flex-column justify-content-start hero-spotlight">
                     {% assign talks = site.talks| where: "given", false | sort: 'order'%}
-                    {% for talk in talks limit: 1 %}
+                    {% assign talk = talks.first %}
                     <div class="hero-card" data-aos="fade-left" data-aos-delay="200">
                         <a href="/talks" class="hero-card-media">
                             <img src="/images/talks/banner.png" alt="Community talk banner" />
                         </a>
                         <div class="hero-card-body">
                             <span class="hero-tag">Community talk</span>
+                            {% if talk %}
                             <h3 class="hero-card-title"><a href="{{ talk.url }}">{{ talk.title }}</a></h3>
                             <p class="hero-card-meta">{{ talk.authors }}</p>
                             <p class="hero-card-date">{{ talk.event_date }}</p>
+                            {% else %}
+                            <h3 class="hero-card-title"><a href="/talks">Workflow Community Talks</a></h3>
+                            <p class="hero-card-meta">A 30 minute virtual series highlighting workflow systems, research frameworks, and community practices</p>
+                            <p class="hero-card-date">Monthly talks open to all</p>
+                            {% endif %}
                         </div>
                         <div class="hero-card-footer">
+                            {% if talk %}
                             <a href="{{ talk.url }}" class="hero-card-link">Learn more</a>
+                            {% else %}
+                            <a href="/talks" class="hero-card-link">View all talks</a>
+                            {% endif %}
                         </div>
                     </div>
-                    {% endfor %}
                 </div>
             </div>
         </div>
