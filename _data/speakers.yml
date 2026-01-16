@@ -150,3 +150,15 @@
   talk_num: 10
   photo: janssen.jpg
   bio: "Jan Janssen is the group leader for Materials Informatics at the Max Planck Institute for Sustainable Materials. His group focuses on applying methods from computer science including machine learning to discover novel sustainable materials with applications ranging from machine-learned interatomic potentials to large language model agents for atomistic simulation. Previously, Jan was a director’s postdoctoral fellow in the T-division at Los Alamos National Laboratory as part of the Exascale Computing Project as well as an invited postdoctoral fellow at the University of Chicago and the University of California Los Angeles. Besides his research work, Jan is the lead developer of the pyiron atomistic simulation suite, maintains over 1000 open-source materials informatics software packages for the conda-forge community and is a regular contributor to open-source software on Github."
+
+- name: Patrick Wells
+  role: Postdoctoral Appointee at ANL
+  institution:
+    - name: Argonne National Laboratory
+      link: https://www.anl.gov
+      image: argonne.png
+  country: us
+  link: https://www.anl.gov/profile/patrick-wells
+  talk_num: 11
+  photo: wells.jpg
+  bio: "Patrick Wells is a postdoctoral appointee at Argonne National Laboratory who designs and builds tools to simplify access to large-scale cosmological datasets. He joined Argonne in 2024 after completing his PhD in Astrophysics from the University of California, Davis, where he worked on measuring the expansion rate of the universe by extracting information from galaxy surveys. His primary computational interests include data management and workflow orchestration, and he has scientific interests in large-scale structure cosmology and gravitational lensing."
