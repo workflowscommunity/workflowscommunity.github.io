@@ -1,0 +1,844 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> Terminology - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Terminology" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="/images/terminology/terminology.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="/images/terminology/terminology.png" />
+<meta property="twitter:title" content="Terminology" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Workflows Community Initiative"},"headline":"Terminology","image":"/images/terminology/terminology.png","url":"/terminology"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">Terminology</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            <style>
+    .terminology-page {
+        --term-primary: #db8e1b;
+        --term-ink: #1b1b1b;
+        --term-muted: #5b5b5b;
+        --term-surface: #ffffff;
+        --term-surface-alt: #ffffff;
+        --term-line: #eadfce;
+        --term-accent: #0c5a6a;
+        color: var(--term-ink);
+    }
+
+    .terminology-hero {
+        background: #ffffff;
+        border-bottom: 1px solid var(--term-line);
+        padding: 3.5rem 0 3rem;
+    }
+
+    .terminology-hero .eyebrow {
+        color: var(--term-accent);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-size: 0.8rem;
+    }
+
+    .terminology-hero h2 {
+        font-size: clamp(2rem, 3.2vw, 3rem);
+        line-height: 1.1;
+        margin: 0.6rem 0 1rem;
+    }
+
+    .terminology-hero .lead {
+        font-size: 1.1rem;
+        max-width: 780px;
+        color: var(--term-muted);
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+    }
+
+    .hero-actions a {
+        padding: 0.6rem 1.1rem;
+        border-radius: 999px;
+        border: 1px solid var(--term-line);
+        background: var(--term-surface);
+        color: var(--term-ink);
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .hero-actions a.primary {
+        background: var(--term-primary);
+        color: #1a1508;
+        border-color: transparent;
+    }
+
+    .hero-panels {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .hero-panel {
+        background: var(--term-surface);
+        border: 1px solid var(--term-line);
+        border-radius: 1rem;
+        padding: 1rem 1.2rem;
+    }
+
+    .hero-panel h4 {
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+        color: var(--term-accent);
+    }
+
+    .terminology-section {
+        padding: 2.5rem 0;
+        background: transparent;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .section-lead {
+        color: var(--term-muted);
+        max-width: 800px;
+    }
+
+    .toc-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .toc-card {
+        background: var(--term-surface);
+        border: 1px solid var(--term-line);
+        border-radius: 1rem;
+        padding: 1rem 1.2rem;
+        text-decoration: none;
+        color: inherit;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .toc-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    .axis {
+        background: var(--term-surface);
+        border: 1px solid var(--term-line);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.05);
+    }
+
+    .axis-header {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .axis-header img {
+        max-width: 100%;
+        background: #fff;
+        transform: scale(1.08);
+        transform-origin: center;
+    }
+
+    .term-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.2rem;
+    }
+
+    .term-card {
+        background: var(--term-surface-alt);
+        border: 1px solid var(--term-line);
+        border-radius: 1rem;
+        padding: 1rem 1.1rem;
+    }
+
+    .term-card h4 {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+        color: var(--term-accent);
+    }
+
+    .term-card ul {
+        padding-left: 1.1rem;
+        margin: 0;
+    }
+
+    .term-card li {
+        margin-bottom: 0.6rem;
+    }
+
+    .term-card span {
+        font-weight: 600;
+    }
+
+    .publication {
+        background: #ffffff;
+        border-radius: 1rem;
+        border: 1px solid var(--term-line);
+        padding: 1.2rem 1.4rem;
+        margin-top: 2rem;
+        font-size: 0.95rem;
+    }
+
+    .publication strong {
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.75rem;
+        color: var(--term-accent);
+    }
+
+    .usage-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .usage-step {
+        padding: 1rem 1.2rem;
+        border-radius: 1rem;
+        border: 1px solid var(--term-line);
+        background: var(--term-surface);
+    }
+
+    .usage-step h4 {
+        margin-bottom: 0.4rem;
+        color: var(--term-primary);
+    }
+
+    @media (max-width: 768px) {
+        .axis {
+            padding: 1.5rem;
+        }
+
+        .axis-header img {
+            transform: scale(1);
+        }
+
+        .terminology-hero {
+            padding: 2.5rem 0;
+        }
+    }
+</style>
+
+<div class="terminology-page">
+    <section class="terminology-hero">
+        <div class="container" data-aos="fade-up">
+            <div class="eyebrow">Scientific Workflow Systems</div>
+            <h2>A Shared Terminology for Comparing Workflow Systems</h2>
+            <p class="lead">A community-built framework that helps researchers describe workflow management systems in
+                consistent terms. Use it to compare tools based on structure, composition, execution, data handling, and
+                metadata practices instead of reputation or familiarity.</p>
+            <div class="hero-actions">
+                <a class="primary" href="https://arxiv.org/pdf/2506.07838" target="_blank">Read the research paper</a>
+                <a href="/groups/terminology">Terminology working group</a>
+            </div>
+            <div class="hero-panels">
+                <div class="hero-panel">
+                    <h4>Purpose</h4>
+                    <p>Provide a common vocabulary to describe and compare workflow management systems without ranking
+                        them.</p>
+                </div>
+                <div class="hero-panel">
+                    <h4>Audience</h4>
+                    <p>Workflow system developers, domain scientists, and infrastructure teams evaluating WMS fit.</p>
+                </div>
+                <div class="hero-panel">
+                    <h4>Outcome</h4>
+                    <p>Clearer system selection, better design discussions, and more transparent reporting.</p>
+                </div>
+            </div>
+            <div class="publication">
+                <strong>Research Publication</strong><br />
+                Suter, F., Coleman, T., Altintas, Í., Badia, R. M., Balis, B., Chard, K., Colonnelli, I., Deelman, E.,
+                Tommaso, P. D., Fahringer, T., Goble, C., Jha, S., Katz, D. S., Köster, J., Leser, U., Mehta, K.,
+                Oliver, H., Peterson, J.-L., Pizzi, G., Pottier, L., Sirvent, R., Suchyta, E., Thain, D., Wilkinson, S.
+                R., Wozniak, J. M., Ferreira da Silva, R. (2025). <a href="https://arxiv.org/pdf/2506.07838"
+                    target="_blank">A Terminology for Scientific Workflow Systems</a>. Future Generation Computer
+                Systems.
+            </div>
+        </div>
+    </section>
+
+    <section class="terminology-section">
+        <div class="container" data-aos="fade-up">
+            <h3 class="section-title">How to use the terminology</h3>
+            <p class="section-lead">Use the axes below as a checklist when documenting a system or comparing candidates
+                for a new project.</p>
+            <div class="usage-steps">
+                <div class="usage-step">
+                    <h4>1. Describe the workflow shape</h4>
+                    <p>Clarify how tasks, data, and dependencies are organized and whether the workflow can adapt at
+                        runtime.</p>
+                </div>
+                <div class="usage-step">
+                    <h4>2. Capture how it is expressed</h4>
+                    <p>Note whether users define workflows via schema files, APIs, or GUIs and how much detail is
+                        required.</p>
+                </div>
+                <div class="usage-step">
+                    <h4>3. Document execution + data behavior</h4>
+                    <p>Summarize planning, orchestration, data movement, storage, and metadata capabilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="terminology-section">
+        <div class="container" data-aos="fade-up">
+            <h3 class="section-title">Five axes of comparison</h3>
+            <p class="section-lead">Each axis captures a core aspect of how a workflow system is designed and operates.
+                Select the section you need and jump directly to the details.</p>
+            <div class="toc-grid">
+                <a class="toc-card" href="#workflow-characteristics">
+                    <h4>Workflow Characteristics</h4>
+                    <p>Structure, coupling, and adaptability.</p>
+                </a>
+                <a class="toc-card" href="#composition">
+                    <h4>Composition</h4>
+                    <p>How workflows are described and modularized.</p>
+                </a>
+                <a class="toc-card" href="#orchestration">
+                    <h4>Orchestration</h4>
+                    <p>Planning, execution models, and coordination.</p>
+                </a>
+                <a class="toc-card" href="#data-management">
+                    <h4>Data Management</h4>
+                    <p>Movement, storage, and data handling granularity.</p>
+                </a>
+                <a class="toc-card" href="#metadata-capture">
+                    <h4>Metadata Capture</h4>
+                    <p>Provenance, monitoring, and anomaly insight.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="terminology-section" id="workflow-characteristics">
+        <div class="container" data-aos="fade-up">
+            <div class="axis">
+                <div class="axis-header">
+                    <div>
+                        <h3>Workflow Characteristics</h3>
+                        <p class="section-lead">Fundamental structural aspects that shape how workflows run and adapt.
+                            These characteristics influence scheduling, optimization, and resource efficiency.</p>
+                    </div>
+                    <img src="/images/terminology/workflow_characteristics.svg" alt="Workflow characteristics axis" />
+                </div>
+                <div class="term-grid">
+                    <div class="term-card">
+                        <h4>Flow</h4>
+                        <ul>
+                            <li><span>Task:</span> Components receive inputs, produce outputs, and terminate; WMSs manage
+                                execution order and dependencies.</li>
+                            <li><span>Iterative:</span> Tasks run multiple times, ending after each iteration and waiting
+                                to be invoked again.</li>
+                            <li><span>Data:</span> Execution is driven by data movement; operators remain active while
+                                data is available.</li>
+                        </ul>
+                    </div>
+                    <div class="term-card">
+                        <h4>Granularity</h4>
+                        <ul>
+                            <li><span>Functions:</span> Workflows compose function calls; scripts and runtimes can be
+                                viewed as workflows.</li>
+                            <li><span>Standalone executables:</span> A common model where executables aggregate function
+                                calls and process inputs to produce outputs.</li>
+                            <li><span>Sub-workflows:</span> Hierarchical compositions break large workflows into reusable
+                                modules.</li>
+                        </ul>
+                    </div>
+                    <div class="term-card">
+                        <h4>Coupling</h4>
+                        <ul>
+                            <li><span>Tight:</span> Tasks must run concurrently, often co-located or synchronized via
+                                periodic data exchange.</li>
+                            <li><span>Loose:</span> No concurrency constraints, enabling flexible scheduling.</li>
+                        </ul>
+                    </div>
+                    <div class="term-card">
+                        <h4>Dynamicity</h4>
+                        <ul>
+                            <li><span>Branches:</span> Conditional paths activate based on data, resource state, or
+                                events.</li>
+                            <li><span>Runtime interventions:</span> Users or external processes can modify execution
+                                plans during runtime.</li>
+                        </ul>
+                    </div>
+                    <div class="term-card">
+                        <h4>Domain</h4>
+                        <ul>
+                            <li><span>Specific:</span> Systems tuned for a single scientific community or discipline.</li>
+                            <li><span>Agnostic:</span> Systems designed to serve multiple domains.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="terminology-section" id="composition">
+        <div class="container" data-aos="fade-up">
+            <div class="axis">
+                <div class="axis-header">
+                    <div>
+                        <h3>Composition</h3>
+                        <p class="section-lead">How workflows are defined, organized, and configured. This axis highlights
+                            the tradeoff between expressiveness, abstraction, and accessibility.</p>
+                    </div>
+                    <img src="/images/terminology/composition.svg" alt="Composition axis" />
+                </div>
+                <div class="term-grid">
+                    <div class="term-card">
+                        <h4>Description Method</h4>
+                        <ul>
+                            <li><span>Schema:</span> Workflows described in files using specific formats (XML, JSON,
+                                YAML, or a domain-specific language).
+                                <ul>
+                                    <li><span>Ad-hoc:</span> Syntax understood only by a single WMS.</li>
+                                    <li><span>Standard:</span> Syntax aligned with shared standards such as CWL, IWIR, or
+                                        WfFormat.</li>
+                                </ul>
+                            </li>
+                            <li><span>API:</span> Workflow descriptions built in code using languages or templating
+                                engines, enabling loops and conditionals.</li>
+                            <li><span>GUI:</span> Workflow authoring through a graphical interface.</li>
+                        </ul>
+                    </div>
+                    <div class="term-card">
+                        <h4>Level of Abstraction</h4>
+                        <ul>
+                            <li><span>Abstract:</span> Logical structure and resource needs only; no infrastructure
+                                bindings.</li>
+                            <li><span>Intermediate:</span> Mix of high-level structure with required execution details.</li>
+                            <li><span>Concrete:</span> Fully specified workflow ready to run as described.</li>
+                            <li><span>Implicit:</span> Structure inferred from API calls or dataset metadata.</li>
+                        </ul>
+                    </div>
+                    <div class="term-card">
+                        <h4>Modularity</h4>
+                        <ul>
+                            <li><span>Flat:</span> Single-layer description of components.</li>
+                            <li><span>Hierarchical:</span> Nested sub-workflows support scalable design and reuse.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="terminology-section" id="orchestration">
+        <div class="container" data-aos="fade-up">
+            <div class="axis">
+                <div class="axis-header">
+                    <div>
+                        <h3>Orchestration</h3>
+                        <p class="section-lead">Execution management approaches, from planning to the way tasks are
+                            launched and coordinated across resources.</p>
+                    </div>
+                    <img src="/images/terminology/orchestration.svg" alt="Orchestration axis" />
+                </div>
+                <div class="term-grid">
+                    <div class="term-card">
+                        <h4>Planning</h4>
+                        <ul>
+                            <li><span>Static:</span> All scheduling decisions are made before execution starts.</li>
+                            <li><span>Dynamic:</span> Scheduling adapts during execution based on runtime information.</li>
+                            <li><span>Event-driven:</span> Execution reacts to triggers and conditions at runtime without
+                                pre-planning the entire workflow.</li>
+                        </ul>
+                    </div>
+                    <div class="term-card">
+                        <h4>Execution</h4>
+                        <ul>
+                            <li><span>Runner:</span> WMS acquires resources and manages task execution directly.</li>
+                            <li><span>Resource Manager:</span> Resource allocation is delegated to schedulers or container
+                                orchestration systems.</li>
+                            <li><span>Serverless:</span> Execution is delegated to cloud services that manage scaling and
+                                infrastructure.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="terminology-section" id="data-management">
+        <div class="container" data-aos="fade-up">
+            <div class="axis">
+                <div class="axis-header">
+                    <div>
+                        <h3>Data Management</h3>
+                        <p class="section-lead">How data moves through a workflow, how it is stored, and the granularity
+                            of data exchange between components.</p>
+                    </div>
+                    <img src="/images/terminology/data_management.svg" alt="Data management axis" />
+                </div>
+                <div class="term-grid">
+                    <div class="term-card">
+                        <h4>Granularity</h4>
+                        <ul>
+                            <li><span>Batch:</span> Inputs are consumed and outputs produced in full at task boundaries.</li>
+                            <li><span>Pipelined:</span> Components stream records as they run, common in in situ analysis.</li>
+                            <li><span>Partitioned:</span> Data is divided into partitions for transfer and processing.</li>
+                        </ul>
+                    </div>
+                    <div class="term-card">
+                        <h4>Transport</h4>
+                        <ul>
+                            <li><span>File-based:</span> Intermediate data is written to and read from files.</li>
+                            <li><span>Streaming:</span> Data is pushed directly between components.
+                                <ul>
+                                    <li><span>In-memory:</span> Shared memory transfer for co-located components.</li>
+                                    <li><span>Network:</span> Data streams across networked nodes.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="term-card">
+                        <h4>Storage</h4>
+                        <ul>
+                            <li><span>File System:</span>
+                                <ul>
+                                    <li><span>Local:</span> Data stored on node-local storage.</li>
+                                    <li><span>Shared:</span> Centralized storage accessible across a cluster.</li>
+                                </ul>
+                            </li>
+                            <li><span>Distributed:</span> Storage spread across multiple facilities for scalability and
+                                resilience.</li>
+                            <li><span>Replicated:</span> Redundant copies improve reliability and availability.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="terminology-section" id="metadata-capture">
+        <div class="container" data-aos="fade-up">
+            <div class="axis">
+                <div class="axis-header">
+                    <div>
+                        <h3>Metadata Capture</h3>
+                        <p class="section-lead">Context captured during execution that supports reproducibility,
+                            optimization, monitoring, and error handling.</p>
+                    </div>
+                    <img src="/images/terminology/metadata_capture.svg" alt="Metadata capture axis" />
+                </div>
+                <div class="term-grid">
+                    <div class="term-card">
+                        <h4>Provenance</h4>
+                        <ul>
+                            <li><span>Prospective:</span> Captures workflow design, configuration, and intended behavior.</li>
+                            <li><span>Retrospective:</span> Captures what happened during execution, including lineage and
+                                runtime data.</li>
+                        </ul>
+                    </div>
+                    <div class="term-card">
+                        <h4>Monitoring</h4>
+                        <ul>
+                            <li><span>Performance insights:</span> Tracks resource use and bottlenecks during execution.</li>
+                            <li><span>Optimization input:</span> Data supports rescheduling and future workflow tuning.</li>
+                        </ul>
+                    </div>
+                    <div class="term-card">
+                        <h4>Anomaly Detection</h4>
+                        <ul>
+                            <li><span>Fault handling:</span> From logging warnings to retrying tasks or triggering
+                                fallback branches.</li>
+                            <li><span>User intervention:</span> Supports escalation when automation cannot resolve the
+                                issue.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>
