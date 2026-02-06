@@ -113,11 +113,6 @@
     institution: Universidade Federal Fluminense
     link: http://www.ic.uff.br/~danielcmo/
 
-  - last_name: Gadelha
-    first_name: Luiz
-    institution: National Laboratory for Scientific Computing
-    link: https://www.lncc.br/~lgadelha
-
   - last_name: Ribeiro-Dantas
     first_name: Marcel
     institution: Seqera Labs
@@ -418,6 +413,11 @@
     first_name: Karsten
     institution: German Climate Computing Center (DKRZ)
     link: https://www.dkrz.de/en/about-en/staff/dr-karsten-peters?set_language=en
+
+  - last_name: Gadelha
+    first_name: Luiz
+    institution: Heidelberg University
+    link: https://orcid.org/0000-0002-8122-9522?
 
 
 - country: India
