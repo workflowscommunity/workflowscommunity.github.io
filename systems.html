@@ -1,0 +1,1193 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> Workflow Systems - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Workflow Systems" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="twitter:title" content="Workflow Systems" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Workflows Community Initiative"},"headline":"Workflow Systems","image":"https://workflows.community/images/wci-default-card.png","url":"/systems"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">Workflow Systems</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            
+
+
+
+
+<section class="systems-hero">
+    <div class="container" data-aos="fade-up">
+        <div class="systems-hero-content">
+            <div>
+                <!-- <p class="systems-eyebrow">Workflow Systems</p> -->
+                <h1>Find the right system for your workflows</h1>
+                <p class="systems-lead">
+                    Explore the open source landscape and discover systems with rich community metadata.
+                </p>
+                <div class="systems-hero-actions">
+                    <a href="/systems/contribute" class="btn btn-primary systems-cta-btn" style="vertical-align: auto;">Contribute a system</a>
+                    <a href="/contact" class="btn btn-outer">Talk with us</a>
+                </div>
+            </div>
+            <div class="systems-hero-stats">
+                <div class="systems-stat">
+                    <div class="systems-stat-value">37</div>
+                    <div class="systems-stat-label">Open source systems</div>
+                </div>
+                <div class="systems-stat">
+                    <div class="systems-stat-value">25</div>
+                    <div class="systems-stat-label">Provide WCI metadata</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="systems-section">
+    <div class="container" data-aos="fade-up">
+        <div class="systems-section-header">
+            <div>
+                <h2>Systems with WCI metadata</h2>
+                <p>These projects provide structured metadata for richer discovery.</p>
+            </div>
+        </div>
+        <div class="systems-grid">
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/nipype/" aria-label="nipype"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/233707?v=4" class="systems-card-logo" alt="nipype logo">
+                        <div class="systems-card-title">
+                            <h3>nipype</h3>
+                            <p class="systems-card-headline">Neuroimaging in Python: Pipelines and Interfaces</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python3</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 1.10.0</span>
+                    
+                    <span><i class="far fa-clock"></i> 02 Mar 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/streamflow/" aria-label="StreamFlow"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://raw.githubusercontent.com/alpha-unito/streamflow/master/docs/logo.png" class="systems-card-logo" alt="StreamFlow logo">
+                        <div class="systems-card-title">
+                            <h3>StreamFlow</h3>
+                            <p class="systems-card-headline">Towards Cloud-HPC Continuum</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 0.2.0.dev14</span>
+                    
+                    <span><i class="far fa-clock"></i> 01 Mar 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/aiida-core/" aria-label="AiiDA"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/22181836?v=4" class="systems-card-logo" alt="AiiDA logo">
+                        <div class="systems-card-title">
+                            <h3>AiiDA</h3>
+                            <p class="systems-card-headline">A workflow manager for computational science with a strong focus on provenance, performance and extensibility.</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> AiiDA v2.7.3</span>
+                    
+                    <span><i class="far fa-clock"></i> 01 Mar 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/cylc-flow/" aria-label="Cylc"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/824878?v=4" class="systems-card-logo" alt="Cylc logo">
+                        <div class="systems-card-title">
+                            <h3>Cylc</h3>
+                            <p class="systems-card-headline">A general purpose workflow engine with a particular gift for cycling.</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> cylc-flow-8.6.3</span>
+                    
+                    <span><i class="far fa-clock"></i> 01 Mar 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/nextflow/" aria-label="Nextflow"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/6698688?v=4" class="systems-card-logo" alt="Nextflow logo">
+                        <div class="systems-card-title">
+                            <h3>Nextflow</h3>
+                            <p class="systems-card-headline">A DSL for data-driven computational pipelines</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Groovy</span>
+                    
+                    <span><i class="fas fa-box-open"></i> Version 26.02.0-edge</span>
+                    
+                    <span><i class="far fa-clock"></i> 01 Mar 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/parsl/" aria-label="Parsl"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://parsl-project.org/images/logos/parsl-logo.png" class="systems-card-logo" alt="Parsl logo">
+                        <div class="systems-card-title">
+                            <h3>Parsl</h3>
+                            <p class="systems-card-headline">Productive parallel programming in Python</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 1.2.0</span>
+                    
+                    <span><i class="far fa-clock"></i> 28 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/snakemake/" aria-label="Snakemake"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/33450111?v=4" class="systems-card-logo" alt="Snakemake logo">
+                        <div class="systems-card-title">
+                            <h3>Snakemake</h3>
+                            <p class="systems-card-headline">This is the development home of the workflow management system Snakemake. For general information, see</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> v9.16.3</span>
+                    
+                    <span><i class="far fa-clock"></i> 27 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/taskvine/" aria-label="TaskVine"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://ccl.cse.nd.edu/software/taskvine/taskvine-icon.png" class="systems-card-logo" alt="TaskVine logo">
+                        <div class="systems-card-title">
+                            <h3>TaskVine</h3>
+                            <p class="systems-card-headline">An execution system for large scale data intensive dynamic workflows.</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> release/7.16.4</span>
+                    
+                    <span><i class="far fa-clock"></i> 27 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/makeflow/" aria-label="Makeflow"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/2520573?v=4" class="systems-card-logo" alt="Makeflow logo">
+                        <div class="systems-card-title">
+                            <h3>Makeflow</h3>
+                            <p class="systems-card-headline">Makeflow is a workflow system for parallel and distributed computing that uses a language very similar to Make.</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Make</span>
+                    
+                    <span><i class="fas fa-box-open"></i> release/7.16.4</span>
+                    
+                    <span><i class="far fa-clock"></i> 27 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/pyiron_base/" aria-label="pyiron"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/25691954?v=4" class="systems-card-logo" alt="pyiron logo">
+                        <div class="systems-card-title">
+                            <h3>pyiron</h3>
+                            <p class="systems-card-headline">A workflow manager for scientific computing on high performance computing infrastructures</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> pyiron_base-0.15.12</span>
+                    
+                    <span><i class="far fa-clock"></i> 25 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/SmartSim/" aria-label="SmartSim"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/79117852?v=4" class="systems-card-logo" alt="SmartSim logo">
+                        <div class="systems-card-title">
+                            <h3>SmartSim</h3>
+                            <p class="systems-card-headline">Machine learning workflows with HPC applications (Python, C++, C, and Fortran)</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 0.8.0</span>
+                    
+                    <span><i class="far fa-clock"></i> 25 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/scipipe/" aria-label="SciPipe"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/16351522?v=4" class="systems-card-logo" alt="SciPipe logo">
+                        <div class="systems-card-title">
+                            <h3>SciPipe</h3>
+                            <p class="systems-card-headline">Robust, flexible and resource-efficient pipelines using Go and the commandline.</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Go</span>
+                    
+                    <span><i class="fas fa-box-open"></i> v0.12.0: Important bugfix. Minor API change.</span>
+                    
+                    <span><i class="far fa-clock"></i> 25 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/radical.asyncflow/" aria-label="RADICAL-AsyncFlow"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://radical-cybertools.github.io/assets/radical-logo-transparent.png" class="systems-card-logo" alt="RADICAL-AsyncFlow logo">
+                        <div class="systems-card-title">
+                            <h3>RADICAL-AsyncFlow</h3>
+                            <p class="systems-card-headline">High Performance Asynchronous Workflow Scripting Library</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 0.2.0</span>
+                    
+                    <span><i class="far fa-clock"></i> 24 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/covalent/" aria-label="Covalent"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://raw.githubusercontent.com/AgnostiqHQ/covalent/master/doc/source/_static/covalent-logo-blue-favicon.png" class="systems-card-logo" alt="Covalent logo">
+                        <div class="systems-card-title">
+                            <h3>Covalent</h3>
+                            <p class="systems-card-headline">Distributed workflows for quantum and HPC</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> v0.240.0</span>
+                    
+                    <span><i class="far fa-clock"></i> 24 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/compss/" aria-label="PyCOMPSs/COMPSs"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/37080113?v=4" class="systems-card-logo" alt="PyCOMPSs/COMPSs logo">
+                        <div class="systems-card-title">
+                            <h3>PyCOMPSs/COMPSs</h3>
+                            <p class="systems-card-headline">Easy task-based parallelization and efficient execution in distributed infrastructures.</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python, Java, C/C++, R</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 3.3.3 Orchid Update</span>
+                    
+                    <span><i class="far fa-clock"></i> 21 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/dragon/" aria-label="DragonHPC"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/138824827?s=200&v=4" class="systems-card-logo" alt="DragonHPC logo">
+                        <div class="systems-card-title">
+                            <h3>DragonHPC</h3>
+                            <p class="systems-card-headline">Accelerate distributed Python workflows</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 0.13.1</span>
+                    
+                    <span><i class="far fa-clock"></i> 19 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/merlin/" aria-label="Merlin"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://raw.githubusercontent.com/LLNL/merlin/main/docs/assets/images/merlin_icon.png" class="systems-card-logo" alt="Merlin logo">
+                        <div class="systems-card-title">
+                            <h3>Merlin</h3>
+                            <p class="systems-card-headline">Enabling Machine Learning HPC Workflows</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> Version 2.0.0b4</span>
+                    
+                    <span><i class="far fa-clock"></i> 18 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/geoweaver/" aria-label="Geoweaver"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://raw.githubusercontent.com/ESIPFed/Geoweaver/main/docs/img/header.png" class="systems-card-logo" alt="Geoweaver logo">
+                        <div class="systems-card-title">
+                            <h3>Geoweaver</h3>
+                            <p class="systems-card-headline">a lightweight workflow software to easily orchestrate pipelines from Python and shell scripts and preserve history of every execution</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> JavaScript</span>
+                    
+                    <span><i class="fas fa-box-open"></i> v2.1.7-pre</span>
+                    
+                    <span><i class="far fa-clock"></i> 18 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/maestrowf/" aria-label="Maestro Workflow Conductor"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://raw.githubusercontent.com/LLNL/maestrowf/develop/assets/logo_icon.png" class="systems-card-logo" alt="Maestro Workflow Conductor logo">
+                        <div class="systems-card-title">
+                            <h3>Maestro Workflow Conductor</h3>
+                            <p class="systems-card-headline">Orchestrate your HPC workflows with ease</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> v1.1.11</span>
+                    
+                    <span><i class="far fa-clock"></i> 04 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/swift-t/" aria-label="Swift/T"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/5695311?v=4" class="systems-card-logo" alt="Swift/T logo">
+                        <div class="systems-card-title">
+                            <h3>Swift/T</h3>
+                            <p class="systems-card-headline">An MPI-based workflow system</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Built with C; programmed with the Swift/T language</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 1.6.6</span>
+                    
+                    <span><i class="far fa-clock"></i> 25 Jan 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/libensemble/" aria-label="libEnsemble"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://raw.githubusercontent.com/Libensemble/libensemble/main/docs/images/libE_logo.png" class="systems-card-logo" alt="libEnsemble logo">
+                        <div class="systems-card-title">
+                            <h3>libEnsemble</h3>
+                            <p class="systems-card-headline">Tool for running dynamic ensembles.</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 1.5.0</span>
+                    
+                    <span><i class="far fa-clock"></i> 13 Jan 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/dagonstar/" aria-label="DagOnStar"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://raw.githubusercontent.com/DagOnStar/dagonstar/refs/heads/master/figures/DAGonStar_Logo01.png" class="systems-card-logo" alt="DagOnStar logo">
+                        <div class="systems-card-title">
+                            <h3>DagOnStar</h3>
+                            <p class="systems-card-headline">DAGonStar is a simple Python-based workflow engine that runs jobs on everything from the local machine to distributed virtual HPC clusters hosted in private and public clouds.</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> v1.0.2</span>
+                    
+                    <span><i class="far fa-clock"></i> 26 Nov 2025</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/radical.entk/" aria-label="RADICAL-EnTK"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://radical-cybertools.github.io/assets/radical-logo-transparent.png" class="systems-card-logo" alt="RADICAL-EnTK logo">
+                        <div class="systems-card-title">
+                            <h3>RADICAL-EnTK</h3>
+                            <p class="systems-card-headline">Ensemble Toolkit</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 1.102.0</span>
+                    
+                    <span><i class="far fa-clock"></i> 06 Nov 2025</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/watts/" aria-label="WATTS"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/97905312?v=4" class="systems-card-logo" alt="WATTS logo">
+                        <div class="systems-card-title">
+                            <h3>WATTS</h3>
+                            <p class="systems-card-headline">Workflow and Template Toolkit for Simulation</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 0.5.2</span>
+                    
+                    <span><i class="far fa-clock"></i> 24 Sep 2025</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/EE-Demo/" aria-label="Apollo Runtime System"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/76112493?v=4" class="systems-card-logo" alt="Apollo Runtime System logo">
+                        <div class="systems-card-title">
+                            <h3>Apollo Runtime System</h3>
+                            <p class="systems-card-headline">A runtime system for the orchestration of workflows across the cloud-edge-Iot continuum.</p>
+                        </div>
+                    </div>
+                    <span class="systems-badge">
+                        <img src="/favicon.ico" alt="WCI" />
+                        WCI metadata
+                    </span>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Polyglot for Functions, AFCL for workflows</span>
+                    
+                    <span><i class="fas fa-box-open"></i> v1.1.0</span>
+                    
+                    <span><i class="far fa-clock"></i> 13 Dec 2021</span>
+                </div>
+            </article>
+            
+        </div>
+    </div>
+</section>
+
+<section class="systems-section">
+    <div class="container" data-aos="fade-up">
+        <div class="systems-section-header">
+            <div>
+                <h2>More workflow systems</h2>
+                <p>A growing list of open source systems shared by the community.</p>
+            </div>
+        </div>
+        <div class="systems-grid">
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/mlflow/" aria-label="mlflow"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/39938107?v=4" class="systems-card-logo" alt="mlflow logo">
+                        <div class="systems-card-title">
+                            <h3>mlflow</h3>
+                            <p class="systems-card-headline">The open source developer platform to build AI agents and models with confidence. Enhance your AI applications with end-to-end tracking, observability, and evaluations, all in one integrated platform.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> v3.10.0</span>
+                    
+                    <span><i class="far fa-clock"></i> 02 Mar 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/galaxy/" aria-label="galaxy"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/7937847?v=4" class="systems-card-logo" alt="galaxy logo">
+                        <div class="systems-card-title">
+                            <h3>galaxy</h3>
+                            <p class="systems-card-headline">Data intensive science for everyone.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> v25.1.1</span>
+                    
+                    <span><i class="far fa-clock"></i> 01 Mar 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/dask/" aria-label="dask"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/17131925?v=4" class="systems-card-logo" alt="dask logo">
+                        <div class="systems-card-title">
+                            <h3>dask</h3>
+                            <p class="systems-card-headline">Parallel computing with task scheduling</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 2026.1.2</span>
+                    
+                    <span><i class="far fa-clock"></i> 01 Mar 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/pegasus/" aria-label="pegasus"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/3019875?v=4" class="systems-card-logo" alt="pegasus logo">
+                        <div class="systems-card-title">
+                            <h3>pegasus</h3>
+                            <p class="systems-card-headline">Pegasus Workflow Management System - Automate, recover, and debug scientific computations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Java</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 5.1.2</span>
+                    
+                    <span><i class="far fa-clock"></i> 27 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/globus-compute/" aria-label="globus-compute"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/6120321?v=4" class="systems-card-logo" alt="globus-compute logo">
+                        <div class="systems-card-title">
+                            <h3>globus-compute</h3>
+                            <p class="systems-card-headline">Globus Compute: High Performance Function Serving for Science</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 4.7.0</span>
+                    
+                    <span><i class="far fa-clock"></i> 27 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/cromwell/" aria-label="cromwell"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/393552?v=4" class="systems-card-logo" alt="cromwell logo">
+                        <div class="systems-card-title">
+                            <h3>cromwell</h3>
+                            <p class="systems-card-headline">Scientific workflow engine designed for simplicity & scalability. Trivially transition between one off use cases to massive scale production environments</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Scala</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 92</span>
+                    
+                    <span><i class="far fa-clock"></i> 25 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/jobflow/" aria-label="jobflow"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/867057?v=4" class="systems-card-logo" alt="jobflow logo">
+                        <div class="systems-card-title">
+                            <h3>jobflow</h3>
+                            <p class="systems-card-headline">jobflow is a library for writing computational workflows.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> v0.3.1</span>
+                    
+                    <span><i class="far fa-clock"></i> 24 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/toil/" aria-label="toil"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/32805087?v=4" class="systems-card-logo" alt="toil logo">
+                        <div class="systems-card-title">
+                            <h3>toil</h3>
+                            <p class="systems-card-headline">A WDL, CWL and Python API supporting easy-to-use workflow engine. It is scalable, efficient and cross-platform (Linux/macOS).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 9.2.0</span>
+                    
+                    <span><i class="far fa-clock"></i> 23 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/fireworks/" aria-label="fireworks"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/867057?v=4" class="systems-card-logo" alt="fireworks logo">
+                        <div class="systems-card-title">
+                            <h3>fireworks</h3>
+                            <p class="systems-card-headline">The Fireworks Workflow Management Repo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> v2.0.7</span>
+                    
+                    <span><i class="far fa-clock"></i> 14 Feb 2026</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/ewoks/" aria-label="ewoks"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://ewoks.esrf.fr/en/latest/_static/ewoks.png" class="systems-card-logo" alt="ewoks logo">
+                        <div class="systems-card-title">
+                            <h3>ewoks</h3>
+                            <p class="systems-card-headline">Extensible Workflow System</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> 4.0.0</span>
+                    
+                    <span><i class="far fa-clock"></i> 30 Dec 2025</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/hyperflow/" aria-label="hyperflow"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/31685161?v=4" class="systems-card-logo" alt="hyperflow logo">
+                        <div class="systems-card-title">
+                            <h3>hyperflow</h3>
+                            <p class="systems-card-headline">HyperFlow: a scientific workflow engine </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> JavaScript</span>
+                    
+                    <span><i class="fas fa-box-open"></i> v1.8.0</span>
+                    
+                    <span><i class="far fa-clock"></i> 22 Nov 2025</span>
+                </div>
+            </article>
+            
+            <article class="systems-card">
+                <a class="systems-card-link" href="/systems/signac-flow/" aria-label="signac-flow"></a>
+                <div class="systems-card-header">
+                    <div class="systems-card-top">
+                        <img src="https://avatars.githubusercontent.com/u/25832198?v=4" class="systems-card-logo" alt="signac-flow logo">
+                        <div class="systems-card-title">
+                            <h3>signac-flow</h3>
+                            <p class="systems-card-headline">Workflow management for signac-managed data spaces.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="systems-card-meta">
+                    <span><i class="fas fa-code"></i> Python</span>
+                    
+                    <span><i class="fas fa-box-open"></i> v0.29.0</span>
+                    
+                    <span><i class="far fa-clock"></i> 31 Jul 2025</span>
+                </div>
+            </article>
+            
+        </div>
+    </div>
+</section>
+
+<section class="systems-footnote">
+    <div class="container" data-aos="fade-up">
+        <p>For a comprehensive list of workflow systems, see <a
+                href="https://s.apache.org/existing-workflow-systems" target="_blank">Computational Data Analysis Workflow
+                Systems</a> maintained by the CWL community.</p>
+    </div>
+</section>
+
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

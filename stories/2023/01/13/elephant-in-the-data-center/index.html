@@ -1,0 +1,337 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> The Elephant in the Data Center – Energy Consumption of Workflow Executions - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="The Elephant in the Data Center – Energy Consumption of Workflow Executions" />
+<meta name="author" content="Ulf Leser" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The execution of scientific workflows consumes electric energy – and often quite a lot as workflow systems usually are employed especially for large data sets, complex analysis tasks, and distributed execution over sizeable compute clusters. While techniques to reduce this consumption have been researched for decades, they currently reach a new level of urgency, as energy costs skyrocket (at least in Europe) and the world more and more acknowledges that the era of low-cost energy production from carbon-heavy fuels will have to come to an end. Thus, it is high time for any workflow researcher and workflow user to ask herself – what can we do to save energy? The answer to this question has multiple facets." />
+<meta property="og:description" content="The execution of scientific workflows consumes electric energy – and often quite a lot as workflow systems usually are employed especially for large data sets, complex analysis tasks, and distributed execution over sizeable compute clusters. While techniques to reduce this consumption have been researched for decades, they currently reach a new level of urgency, as energy costs skyrocket (at least in Europe) and the world more and more acknowledges that the era of low-cost energy production from carbon-heavy fuels will have to come to an end. Thus, it is high time for any workflow researcher and workflow user to ask herself – what can we do to save energy? The answer to this question has multiple facets." />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="/images/stories/anton-maksimov-5642-su-qM37iptlCNY-unsplash.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-01-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="/images/stories/anton-maksimov-5642-su-qM37iptlCNY-unsplash.jpg" />
+<meta property="twitter:title" content="The Elephant in the Data Center – Energy Consumption of Workflow Executions" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@Ulf Leser" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ulf Leser"},"dateModified":"2023-01-13T00:00:00+00:00","datePublished":"2023-01-13T00:00:00+00:00","description":"The execution of scientific workflows consumes electric energy – and often quite a lot as workflow systems usually are employed especially for large data sets, complex analysis tasks, and distributed execution over sizeable compute clusters. While techniques to reduce this consumption have been researched for decades, they currently reach a new level of urgency, as energy costs skyrocket (at least in Europe) and the world more and more acknowledges that the era of low-cost energy production from carbon-heavy fuels will have to come to an end. Thus, it is high time for any workflow researcher and workflow user to ask herself – what can we do to save energy? The answer to this question has multiple facets.","headline":"The Elephant in the Data Center – Energy Consumption of Workflow Executions","image":"/images/stories/anton-maksimov-5642-su-qM37iptlCNY-unsplash.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"/stories/2023/01/13/elephant-in-the-data-center/"},"url":"/stories/2023/01/13/elephant-in-the-data-center/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">The Elephant in the Data Center – Energy Consumption of Workflow Executions</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            <div class="container" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-8 wg">
+            <p>The execution of scientific workflows consumes electric energy – and often quite a lot as workflow systems usually are employed especially for large data sets, complex analysis tasks, and distributed execution over sizeable compute clusters. While techniques to reduce this consumption have been researched for decades, they currently reach a new level of urgency, as energy costs skyrocket (at least in Europe) and the world more and more acknowledges that the era of low-cost energy production from carbon-heavy fuels will have to come to an end. Thus, it is high time for any workflow researcher and workflow user to ask herself – what can we do to save energy? The answer to this question has multiple facets.</p>
+
+<p>The classical response is “increasing efficiency of software and hardware”, and research in the past has almost exclusively focused on this idea. Efficiency in terms of energy can intuitively be understood as processing output per watt; increasing efficiency thus means producing more output for the same amount of energy or producing the same output at less energy (or, in an ideal world, both). Techniques typically focus on the latter, for instance by developing more energy-efficient algorithms (e.g. joule sort) or using more energy-efficient hardware (e.g. GPUs or FPGAs) for specific problems. More recently, the same idea is followed by works in machine learning, trying to achieve the same accuracy of predictions with much smaller models, which require less energy for training and application.</p>
+
+<p>However, from the perspective of a large data center, these approaches all too often fail to actually save energy, simply because a data center typically always runs at full load – no matter how many efficiency-enhancing tricks are applied. When codes get more efficient, a given analysis is finished in less time (thus requiring less energy), yet the freed time is typically not used to power down the cluster, but rather to run some other analysis that otherwise might not have been prioritized; in commercial clouds, such idle times are sold over the spot market. From a purely economic point of view, this historically made a lot of sense, as acquiring a cluster was much more expensive than running it (ignoring the cost of human administration which must be paid at a constant rate anyway), and thus all clusters should be used to their maximum degree to achieve a good return on investment. At this point we must notice the important difference between “increasing energy efficiency” and really “saving energy”: More efficient algorithms achieve the former but not the latter when the point of view is widened from a single workflow execution to a data center perspective.</p>
+
+<p>A similar effect can be observed with more energy-efficient hardware. Clearly, a data center built with modern low-energy chips can perform the same computation as one built with older high-energy chips at less energy, yet this effect is typically out-weighted by the trend that data centers simply become bigger and bigger and thus consume more energy again – an instance of Jevons Paradox. A similar effect exists with cars, where the average fuel consumption has been reduced only marginally over the last 20 years, despite the fact that more and more efficient engines were developed, simply because these are built into ever larger and heavier cars.</p>
+
+<h3 id="the-local-perspective--developing-individual-workflows">The local perspective – developing individual workflows</h3>
+
+<p>Now – what can workflow research do to save energy and cost? From a single-workflow perspective, there are a few obvious measures along the line we just discussed. We can save energy by using more efficient codes and by running the workflow on more efficient hardware. We can save cost by energy-aware scheduling, i.e., running the workflow in times when energy is cheaper, thus exploiting price differences offered by the local energy provider; in the future (and partly already in the presence), it is quite conceivable that energy prices will become cheaper whenever it is produced in abundance, for instance by solar collectors on sunny or wind power plants on windy days, or when consumption is low, for instance at night and in summer. Even if such scheduling may not save lots of money, it would certainly help to reduce carbon emissions by trading “bad” energy for “better” energy.</p>
+
+<p>However, there are also less obvious measures for saving energy (and money), which revolve around the concept of “output” of a workflow. So far, we implicitly assumed that a workflow is a fixed set of computations turning some input data into a computational result. However, that is a very computer-science focused point of view – most users are much more interested in the scientific result than in the specific computation that was performed to produce it. This leads to the question whether we cannot have the same, or almost the same, scientific result with less computation? The answer very often is: Yes. One example was already mentioned before, i.e., the usage of smaller and thus lower-energy models in machine learning. However, in many types of analysis, many more ideas can be followed. For instance, classification or regression tasks often are evaluated in a k-fold cross-validation. The larger the k, the more energy is required, as k-fold cross-validation performs k rounds of training and testing. Thus, choosing smaller k’s typically saves energy; the price might be a less robust result. In NLP, training and fine-tuning in many tasks already have become so expensive that typical evaluations dropped the idea of cross-validation and use a single test partition instead; apparently, the “price” has been accepted by the community. Bootstrapping or Monte-Carlo-style analysis methods perform the same type of computations tens of thousands of times to achieve robust results; reducing the number of repetitions leads to a linear decrease in energy consumption, again at the cost of less robust results. Hyperparameter optimization also performs model training and evaluation repetitively with slightly different inputs (e.g. using grid search or Bayesian methods); again, reducing the number of runs leads to a linear decrease in energy consumption, at the peril of not finding a better parameterization and thus not having the best possible result. Iterative model improvements are pushed to their extremes in projects around AutoML, which often boil down to a hilarious number of trial and error computations with varying algorithms, input sets, hyperparameters, etc. Finally, sampling is a ubiquitous technique to reduce the computational cost of studying very large data sets; of course, smaller sample sizes also reduce energy costs. Note that none of these ideas leads to a provable “non-optimal” solution, but solutions typically improve (slightly) with more iterations or more samples; a workflow developer thus always has to decide at which point to stop. Probably, energy consumption should and will soon be a strong argument for stopping earlier; and the community should start accepting this argument when reviewing papers or project grants. An important start could be that we all start to report energy consumption figures with our analysis.</p>
+
+<h3 id="the-global-perspective--data-centers-running-multiple-workflows">The global perspective – data centers running multiple workflows</h3>
+
+<p>What can a data center do to save energy or reduce energy costs? The most obvious measure is to reduce services, for instance by switching off a cluster partly or entirely. This clearly is an extreme action that probably no data center manager will favor (unless forced to after comparing the electricity bills with the available funding); however, it will undoubtedly immediately save energy and energy costs at the same time. A less drastic and popular measure is to use DVFS techniques, which possibly leads to losing some performance, or to switch to more energy-efficient hardware. Especially the latter, however, again carries the danger that pressure is growing to invest the savings in energy in extensions of the cluster (see above), as long as the bill still can be paid, which will deprive the energy savings. Furthermore, one must not forget the resources necessary to build the hardware of the cluster; using existing hardware (and not replacing it) as long as feasible can actually be a proper means to save energy, even if a new generation of hardware might be more energy-efficient than the present one. Finding the sweet spot within this trade-off is the daily business of data center managers and currently shaken due to the changing proportions of costs for acquisition, maintenance, and operation.</p>
+
+<p>Another option is to put more effort into avoiding redundant computation across multiple workflows. In many fields of science, certain reference data sets exist that are used by many groups; examples in the life sciences are large genome data sets, e.g. The Cancer Genome Atlas, examples in remote sensing are series of images from satellites like LandSat; examples in astronomy are the images from large sky observations like the Sloan Digital Sky Survey. These data sets are typically published in a raw format, yet many downstream analyses require some form of pre-processing that is often very similar or even completely identical across multiple workflows. Performing such processing only once can save substantial energy, it requires either careful consultation of users or automatic means to identify identical computations across workflows; in a long-term vision, such pre-processing could even be shared across multiple data centers, not just multiple workflows. However, it must not be forgotten that keeping results for further access also costs energy (as long as it is not written to tape archives) to keep memory powered, SSDs responding, or disks spinning. Intelligent research data management and advanced workflow optimization thus can play an important role in saving energy.</p>
+
+<h3 id="putting-it-all-together--turning-every-screw">Putting it all together – turning every screw</h3>
+
+<p>The necessity for saving energy and energy cost is no longer a topic of the future or important only in small niches – it has become an urgent need for all of us now. This also affects workflow research and research performed with workflows, as executing workflows is particularly energy hungry. We discussed several approaches to these problems that differ in their focus (saving energy versus saving money) and their scope (individual workflows versus data centers). There are surely many more ideas than presented in this short commentary; we would be eager to learn about them, for instance by personal mail (<a href="mailto:leser@informatik.hu-berlin.de">leser@informatik.hu-berlin.de</a>).</p>
+
+<p>From a 10,000-feet perspective, the approaches can all be considered variations of a common theme, extending the classical trade-off in high-performance computing (i.e., compute time versus compute costs) with a crucial third factor: energy consumption. We believe that this more complex landscape requires new lines of research in diverse areas such as scheduling, research data management, heterogeneous architecture, monitoring, and workflow optimization – now.</p>
+
+        </div>
+
+        <div class="col-lg-4">
+            <div class="blog-sidbar">
+                Jan 13, 2023
+                <hr />
+                <div>
+                    
+                    <img src="/images/about/leser.jpg" alt="Ulf Leser"
+                        style="width: 3.5em; height: 3.5em; border-radius: 0.5em; margin-right: 1em;" />
+                    Ulf Leser (Humboldt-Universität zu Berlin)<br /><br />
+                    
+                    <img src="/images/stories/thamsen.jpeg" alt="Lauritz Thamsen"
+                        style="width: 3.5em; height: 3.5em; border-radius: 0.5em; margin-right: 1em;" />
+                    Lauritz Thamsen (University of Glasgow)<br /><br />
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

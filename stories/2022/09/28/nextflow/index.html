@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> A quick overview of Nextflow workflow system - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="A quick overview of Nextflow workflow system" />
+<meta name="author" content="Paolo Di Tommaso" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Workflow management systems are as diverse as the business and scientific processes they support – from engineering to research to process automation. This article describes Nextflow – an open-source workflow manager widely used in life sciences. It covers the motivations behind Nextflow, explains what it is, and describes what the future holds for the platform." />
+<meta property="og:description" content="Workflow management systems are as diverse as the business and scientific processes they support – from engineering to research to process automation. This article describes Nextflow – an open-source workflow manager widely used in life sciences. It covers the motivations behind Nextflow, explains what it is, and describes what the future holds for the platform." />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="/images/stories/nextflow-story.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="/images/stories/nextflow-story.png" />
+<meta property="twitter:title" content="A quick overview of Nextflow workflow system" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@Paolo Di Tommaso" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Paolo Di Tommaso"},"dateModified":"2022-09-28T00:00:00+00:00","datePublished":"2022-09-28T00:00:00+00:00","description":"Workflow management systems are as diverse as the business and scientific processes they support – from engineering to research to process automation. This article describes Nextflow – an open-source workflow manager widely used in life sciences. It covers the motivations behind Nextflow, explains what it is, and describes what the future holds for the platform.","headline":"A quick overview of Nextflow workflow system","image":"/images/stories/nextflow-story.png","mainEntityOfPage":{"@type":"WebPage","@id":"/stories/2022/09/28/nextflow/"},"url":"/stories/2022/09/28/nextflow/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">A quick overview of Nextflow workflow system</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            <div class="container" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-8 wg">
+            <p>Workflow management systems are as diverse as the business and scientific processes they support – from engineering to research to process automation. This article describes Nextflow – an open-source workflow manager widely used in life sciences. It covers the motivations behind Nextflow, explains what it is, and describes what the future holds for the platform.</p>
+
+<h2 id="background-and-motivations">Background and Motivations</h2>
+
+<p>Like similar open source efforts, Nextflow was born out of a need to solve specific problems while I was working as a research engineer in the Comparative Bioinformatics labs at the Centre for Genomics Regulation (CRG). Researchers were struggling with several issues that are all likely too familiar to workflows community members – complex, buggy scripts, long-running workflows that would suddenly fail, and challenges monitoring, managing, and maintaining workflows.</p>
+
+<p>While there were several available workflow managers at the time, none of them specifically addressed our requirement. A fundamental challenge in the lab at that time was data handling. Comparative bioinformatics involves studying genome and protein sequences across species, and population-level studies can involve massive amounts of data. We needed a simple yet powerful framework to deploy the executions of thousands of tasks, comparing different alignment methods and protein sequences each other.</p>
+
+<h2 id="some-key-ideas-behind-nextflow">Some Key Ideas Behind Nextflow</h2>
+
+<p>Nextflow was designed from scratch having clear in mind key ideas and best practices:</p>
+
+<ol>
+  <li>Allow developers to reuse any existing piece of software without the need of intermediate interface or wrapper; the tool command line is the interface and Linux is the integration layer.</li>
+  <li>Manage tasks as a functional and self-contained unit of work. This was a key requirement to enable the deployment across heterogeneous computing platforms and allow auto-retry execution policy on failure.</li>
+  <li>Provides a high-level abstraction for tasks parallelisation that allows developers to write simple yet high-scalable application, without the need to struggle with low level problem such as race conditions  and locks to access shared resources.</li>
+  <li>Strongly decouple the scientific application logic from the configuration &amp; deployment setting, in order to streamline the deployment across different platforms and enable the migration to cloud environments.</li>
+  <li>Remove unnecessary dependencies with external services and databases. We wanted a zero configuration experience both for the Nextflow runtime and the resulting pipelines.</li>
+  <li>Enable debugging and recovering of failed executions. Bioinformatics pipeline can spin the execution of tens of thousands tasks. If something breaks we need a strategy that would allow the debugging of the failed task independently of the rest of the pipeline, and make it possible to recover the computation once the problem was solved from the last successfully computed tasks, to avoid throwing away days of computing resources.</li>
+</ol>
+
+<p>Between these, very likely, the most important design choice that distinguishes Nextflow compared to other workflow management systems is the adoption of the data flow programming paradigm.</p>
+
+<p>We often imagine workflows as a sequence of steps designed from the top down and including various dependencies, decision points, and sub-flows. There is another way to envision workflows, however, and that is from the perspective of the individual process steps. Individual steps have no notion of the overall flow. They have an input, perform some processing, and write data to an output, typically another step in the workflow.</p>
+
+<p>Using this programming model you can think a workflow behaving like spreadsheet. In a spreadsheet, users enter expressions in cells that depend on calculations in other cells. The dependencies between cells can be complex, but users don’t think about how the spreadsheet will sequence calculations. Instead, they concentrate on the logic in each cell. When a cell changes, the spreadsheet worries about how to propagate changes to dependent cells. Nextflow is described as reactive because task execution is triggered when inputs change or become valid. It turns out that this model works surprisingly well at scale, and opportunities for parallelism occur naturally without the workflow designer needing to think about them.</p>
+
+<p>From a technical point of view, Nextflow processes (aka tasks) can be thought of as reactive agents which run  in parallel waiting for the input data that trigger their execution. It’s important to highlight that each of these processes are isolated from each other, and they can only communicate via asynchronous messages represented by dataflow variables.</p>
+
+<p>Along with these, another pillar component of Nextflow was the adoption of containers as a core feature of the framework. Nextflow abstracts away the containerisation of the pipeline execution in a declarative manner. This means the user is only required to specify the container that needs to be used to run specific workflow tasks. Nextflow takes care to use this information to run the task within the container depending on the target execution platform that can be, for example, AWS Batch, an HPC batch scheduler e.g. Slurm or a local computer. This choice was proven to be critical to enable the portability and <a href="https://www.nature.com/articles/nbt.3820">reproducibility of the resulting data analysis workflow</a>. Nextflow nowadays supports multiple container runtime technologies, including Docker, Podman, Singularity, Charliecloud among others.</p>
+
+<h2 id="nextflow-today">Nextflow Today</h2>
+
+<p>When Nextflow was launched as an open-source project in 2013, we couldn’t have imagined what it has become today. Today, Nextflow is downloaded over 55,000 times monthly and used by over 1,000 organizations, including some of the world’s largest pharmaceutical firms. Ideas like containers and support for source code managers (SCMs) are so thoroughly baked into Nextflow’s design that they seem commonplace.</p>
+
+<p>In Nextflow, we were careful to decouple workflow logic from the details of underlying computing environments. To achieve this, Nextflow supports an abstraction called an Executor. Executors are pluggable components that enable pipelines to run without modification across virtually any compute environment, from a local host to an on-prem HPC cluster to various cloud services. Shifting to a new compute environment is as simple as changing a few lines of code in a configuration file.</p>
+
+<p><img src="/images/stories/nextflow-story.png" alt="Nextflow" width="80%" /><br /></p>
+
+<p>Pipelines can be stored locally or pulled from a preferred SCM at runtime. While applications can still be installed locally, pulling containers encapsulating bioinformatics tools has become the norm. Nextflow handles all the details, including compute resources, data movement, and making datasets visible to containers at runtime. Intermediate results and data are also cached, making flows resilient and recoverable after a failed step.</p>
+
+<h2 id="the-nf-core-community">The nf-core Community</h2>
+
+<p>The nf-core community launched in 2018 marked a key milestone for the Nextflow community. nf-core is an independent effort to collect a curated set of analysis pipelines built using Nextflow. Significant effort has gone into developing tools, templates, and guidelines that enable domain experts to contribute to the community. The result is a set of high-quality pipelines that are portable, reproducible, fully documented, and cloud-ready. A recent <a href="https://seqera.io/blog/state-of-the-workflow-2022-results/">State of the Workflow 2022</a> community survey showed that 62% of Nextflow users take advantage of these pipelines in their day-to-day research – a testament to their utility and the importance of this effort.</p>
+
+<h2 id="towards-the-future">Towards the Future</h2>
+
+<p>We are fortunate to have vibrant user and developer communities actively engaged in Nextflow and helping to guide its evolution. We continue to support new computing environments, introduce new functionality, and improve throughput and scalability. I recently shared some plans for Nextflow in the article <a href="https://nextflow.io/blog/2022/evolution-of-nextflow-runtime.html">Evolution of the Nextflow runtime</a>.</p>
+
+<p>We are also planning to further enhance the support for containers providing a better automation on the overall container management lifecycle and ease the provisioning of multi-containers required by modern data analysis pipelines.</p>
+
+<p>We are also improving our commercial Tower offering enabling improved collaboration, new data-related features, and features aimed at helping further optimize resource usage to reduce cloud spending.</p>
+
+<p>You can learn more about Nextflow or download it for free by visiting <a href="https://nextflow.io/">nextflow.io</a>. Existing Nextflow users can test-drive Nextflow Tower in the cloud at <a href="https://tower.nf/">tower.nf</a>.</p>
+
+        </div>
+
+        <div class="col-lg-4">
+            <div class="blog-sidbar">
+                Sep 28, 2022
+                <hr />
+                <div>
+                    
+                    <img src="https://workflows.community/images/about/ditommaso.jpg" alt="Paolo Di Tommaso"
+                        style="width: 3.5em; height: 3.5em; border-radius: 0.5em; margin-right: 1em;" />
+                    Paolo Di Tommaso (Nextflow creator and CTO of Seqera Labs)<br /><br />
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

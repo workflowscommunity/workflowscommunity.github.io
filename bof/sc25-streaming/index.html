@@ -1,0 +1,543 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> SC25 Data Streaming BoF - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="SC25 Data Streaming BoF" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Today, scientific data typically arrives at HPC facilities via gateway nodes into shared file systems, a model supported by tools like Globus and suited for workflows that tolerate queue delays. However, as HPC, experimental, and observational facilities become more integrated, time-sensitive workflows increasingly require real-time feedback, where latency and variability from shared storage are unacceptable. Despite early examples of streaming workflows, most facilities remain unprepared to support them due to policy, scheduling, or hardware limitations. Addressing these gaps is critical to enabling seamless, compute-in-the-loop workflows that define the next era of scientific discovery. This BoF addresses this groundbreaking and growing field in supercomputing. In addition to lightining talks, the BoF will have a very interactive part that we call a &quot;Workflow Challenge Workshop&quot;. In this workshop, participants will be divided into small groups representing different stakeholders (facility operators, users, software developers). Each group will receive a real streaming workflow scenario and work together to identify technical, policy, and infrastructure requirements for implementation. Groups will document their solutions using a shared digital whiteboard, allowing cross-group visibility and iteration. &lt;/p&gt;" />
+<meta property="og:description" content="Today, scientific data typically arrives at HPC facilities via gateway nodes into shared file systems, a model supported by tools like Globus and suited for workflows that tolerate queue delays. However, as HPC, experimental, and observational facilities become more integrated, time-sensitive workflows increasingly require real-time feedback, where latency and variability from shared storage are unacceptable. Despite early examples of streaming workflows, most facilities remain unprepared to support them due to policy, scheduling, or hardware limitations. Addressing these gaps is critical to enabling seamless, compute-in-the-loop workflows that define the next era of scientific discovery. This BoF addresses this groundbreaking and growing field in supercomputing. In addition to lightining talks, the BoF will have a very interactive part that we call a &quot;Workflow Challenge Workshop&quot;. In this workshop, participants will be divided into small groups representing different stakeholders (facility operators, users, software developers). Each group will receive a real streaming workflow scenario and work together to identify technical, policy, and infrastructure requirements for implementation. Groups will document their solutions using a shared digital whiteboard, allowing cross-group visibility and iteration. &lt;/p&gt;" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="/images/bof/sc25-bof-streaming.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-02T01:59:16+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="/images/bof/sc25-bof-streaming.jpg" />
+<meta property="twitter:title" content="SC25 Data Streaming BoF" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2026-03-02T01:59:16+00:00","datePublished":"2026-03-02T01:59:16+00:00","description":"Today, scientific data typically arrives at HPC facilities via gateway nodes into shared file systems, a model supported by tools like Globus and suited for workflows that tolerate queue delays. However, as HPC, experimental, and observational facilities become more integrated, time-sensitive workflows increasingly require real-time feedback, where latency and variability from shared storage are unacceptable. Despite early examples of streaming workflows, most facilities remain unprepared to support them due to policy, scheduling, or hardware limitations. Addressing these gaps is critical to enabling seamless, compute-in-the-loop workflows that define the next era of scientific discovery. This BoF addresses this groundbreaking and growing field in supercomputing. In addition to lightining talks, the BoF will have a very interactive part that we call a &quot;Workflow Challenge Workshop&quot;. In this workshop, participants will be divided into small groups representing different stakeholders (facility operators, users, software developers). Each group will receive a real streaming workflow scenario and work together to identify technical, policy, and infrastructure requirements for implementation. Groups will document their solutions using a shared digital whiteboard, allowing cross-group visibility and iteration. &lt;/p&gt;","headline":"SC25 Data Streaming BoF","image":"/images/bof/sc25-bof-streaming.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"/bof/sc25-streaming/"},"url":"/bof/sc25-streaming/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">SC25 Data Streaming BoF</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            <section class="bof-hero">
+    <div class="container" data-aos="fade-up">
+        <div class="bof-hero-card">
+            <p class="bof-breadcrumb">
+                <a href="/bof">Birds of a Feather</a>
+                <span>/</span>
+                SC25 Data Streaming BoF
+            </p>
+            <div class="bof-hero-grid">
+                <div>
+                    
+                    <p class="bof-eyebrow">Real-Time Scientific Data Streaming to HPC Nodes: Challenges and Innovations</p>
+                    
+                    <h1>SC25 Data Streaming BoF</h1>
+                    <div class="bof-meta">
+                        <div>
+                            <span>Date</span>
+                            <strong>Wednesday - Nov 19, 2025</strong>
+                        </div>
+                        <div>
+                            <span>Time</span>
+                            <strong>5:15pm&mdash;6:45pm CT</strong>
+                        </div>
+                        <div>
+                            <span>Room</span>
+                            <strong>Room 130</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bof-partner">
+                    <span>Conference</span>
+                    <img src="/images/bof/sc25_logo.png" alt="Conference logo" />
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bof-body">
+    <div class="container" data-aos="fade-up">
+        <div class="row g-4">
+            <div class="col-lg-8 wg wg-contents">
+                <div class="bof-content-card">
+                    <p>
+    Today, scientific data typically arrives at HPC facilities via gateway nodes into shared file systems, a
+    model supported by tools like Globus and suited for workflows that tolerate queue delays. However, as
+    HPC, experimental, and observational facilities become more integrated, time-sensitive workflows
+    increasingly require real-time feedback, where latency and variability from shared storage are
+    unacceptable. Despite early examples of streaming workflows, most facilities remain unprepared to
+    support them due to policy, scheduling, or hardware limitations. Addressing these gaps is critical to
+    enabling seamless, compute-in-the-loop workflows that define the next era of scientific discovery. This
+    BoF addresses this groundbreaking and growing field in supercomputing.
+</p>
+<p>
+    In addition to lightining talks, the BoF will have a very interactive part that we call a "Workflow 
+    Challenge Workshop". In this workshop, participants will be divided into small groups representing 
+    different stakeholders (facility operators, users, software developers). Each group will receive 
+    a real streaming workflow scenario and work together to identify technical, policy, and infrastructure 
+    requirements for implementation. Groups will document their solutions using a shared digital 
+    whiteboard, allowing cross-group visibility and iteration.
+</p>
+</p>
+<img src="/images/bof/sc25-bof-streaming.jpg" style="width: 100%; border-radius: 1em;" />
+
+<p>&nbsp;</p>
+<h2 class="mb-4">Agenda</h2>
+<div class="col-md-12 ftco-animate">
+  <table class="table">
+    <thead>
+      <th style="min-width: 4em">Time</th>
+      <th>Event</th>
+    </thead>
+    <tr>
+      <td>5:15pm</td>
+      <td>
+        Welcome and Agenda Presentation
+        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+          Bjoern Enders &mdash; <span style="font-style: italic; color: #999">
+            National Energy Research Scientific Computing Center (NERSC)
+          </span><br />
+          Rafael Ferreira da Silva &mdash; <span style="font-style: italic; color: #999">Oak Ridge
+            Leadership Computing Facility (OLCF)</span><br />
+        </p>
+      </td>
+    </tr>
+    <tr style="background-color: #f5f5f5;">
+      <td>5:20pm</td>
+      <td>
+        Lightning talks:
+        <ul>
+          <li>
+            <a href="/files/bof/">
+              Connecting experiments and HPC with interactive streaming workflows</a><br />
+            <span style="color: #999"><strong>Samuel Welborn</strong>,
+              National Energy Research Scientific Computing Center (NERSC)</span>
+          </li>
+          <li>
+            <a href="/files/bof/">
+              AlpsB &mdash; A Geographically Distributed Infrastructure to Facilitate Large-Scale Training of Weather and Climate AI Models</a><br />
+            <span style="color: #999"><strong>Alex Upton</strong>,
+              Swiss National Computing Center (CSCS)</span>
+          </li>
+          <li>
+            <a href="/files/bof/">
+              The Instrumental Edge: Real Time and AI-Ready Discovery</a><br />
+            <span style="color: #999"><strong>Adam Thompson</strong>,
+              NVIDIA</span>
+          </li>
+          <li>
+            <a href="/files/bof/">
+              What and where to stream … and now?! How can we answer such questions</a><br />
+            <span style="color: #999"><strong>Fred Suter</strong>,
+              Oak Ridge National Laboratory (ORNL)</span>
+          </li>
+          <li>
+            <a href="/files/bof/">
+              Build It and They Will Come: Designing a Streaming Framework for HPC</a><br />
+            <span style="color: #999"><strong>Matthieu Dorier</strong>,
+              Argonne National Laboratory (ANL)</span>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>6:00pm</td>
+      <td>Panel Discussions and Open Q&A</td>
+    </tr>
+    <tr>
+      <td>6:15pm</td>
+      <td>Workflow Challenge Workshop</td>
+    </tr>
+    <tr>
+      <td>6:40pm</td>
+      <td>Closing Remarks</td>
+    </tr>
+  </table>
+</div>
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bof-panel">
+                    
+                    <div class="bof-panel-block">
+                        <h3>Featured Speakers</h3>
+                        <div class="bof-people-grid">
+                            
+                            <div class="bof-person bof-person-row">
+                                <img src="https://profiles.lbl.gov/365112-sam-welborn/thumbnail" alt="Sam Welborn (LBNL)" />
+                                <div>
+                                    <strong class="bof-person-name">Sam Welborn (LBNL)</strong>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="bof-person bof-person-row">
+                                <img src="https://www.cscs.ch/fileadmin/user_upload/mycscs_staff/user_29_small.jpg" alt="Alex Upton (CSCS)" />
+                                <div>
+                                    <strong class="bof-person-name">Alex Upton (CSCS)</strong>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="bof-person bof-person-row">
+                                <img src="https://developer-blogs.nvidia.com/wp-content/uploads/2022/06/Adam-Thompson-540x540.jpg" alt="Adam Thompson (NVIDIA)" />
+                                <div>
+                                    <strong class="bof-person-name">Adam Thompson (NVIDIA)</strong>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="bof-person bof-person-row">
+                                <img src="https://fred-suter.com/assets/images/Fred.jpg" alt="Fred Suter (ORNL)" />
+                                <div>
+                                    <strong class="bof-person-name">Fred Suter (ORNL)</strong>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="bof-person bof-person-row">
+                                <img src="https://mdorier.github.io/assets/img/avatar.png" alt="Matthieu Dorier (ANL)" />
+                                <div>
+                                    <strong class="bof-person-name">Matthieu Dorier (ANL)</strong>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    
+                    <div class="bof-panel-block">
+                        <h3>Organizers</h3>
+                        <div class="bof-people-grid">
+                            
+                            <div class="bof-person bof-person-row">
+                                <img src="https://media.licdn.com/dms/image/v2/C5603AQGZpi3oE-OhkQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1550613510195?e=2147483647&v=beta&t=vF9Eh4E-GWIzl3k3Lsn74kDcE2pGigJZwO39s4kUh0s" alt="Bjoern Enders (LBNL)" />
+                                <div>
+                                    <strong class="bof-person-name">Bjoern Enders (LBNL)</strong>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="bof-person bof-person-row">
+                                <img src="https://rafaelsilva.com/assets/images/2022-rafael-ferreira-da-silva-high-resolution.jpg" alt="Rafael Ferreira da Silva (ORNL)" />
+                                <div>
+                                    <strong class="bof-person-name">Rafael Ferreira da Silva (ORNL)</strong>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    
+                    <div class="bof-panel-block">
+                        <h3>Supporters</h3>
+                        <div class="bof-supporters">
+                            
+                            <a href="https://www.lbl.gov/" target="_blank" rel="noopener">
+                                <img src="https://www.lbl.gov/wp-content/uploads/2022/09/berkeley-logo.svg" alt="Supporter logo" />
+                            </a>
+                            
+                            <a href="https://www.nersc.gov/" target="_blank" rel="noopener">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzKv5LXRUBcMbGsXmwhEVArUKYup-AJjDs8g&s" alt="Supporter logo" />
+                            </a>
+                            
+                            <a href="https://ornl.gov/" target="_blank" rel="noopener">
+                                <img src="https://map.ornl.org/art/logo.png" alt="Supporter logo" />
+                            </a>
+                            
+                            <a href="https://www.nvidia.com/en-us/" target="_blank" rel="noopener">
+                                <img src="/images/institutions/nvidia.png" alt="Supporter logo" />
+                            </a>
+                            
+                            <a href="https://www.anl.gov/" target="_blank" rel="noopener">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Argonnelablogo.PNG" alt="Supporter logo" />
+                            </a>
+                            
+                            <a href="https://www.cscs.ch/" target="_blank" rel="noopener">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Simple_CSCS_Logo.jpg" alt="Supporter logo" />
+                            </a>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

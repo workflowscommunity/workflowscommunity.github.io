@@ -1,0 +1,731 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> AiiDA - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="AiiDA" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AiiDA is an open-source Python infrastructure to help researchers with automating, managing, persisting, sharing and reproducing the complex workflows associated with modern computational science and all associated data." />
+<meta property="og:description" content="AiiDA is an open-source Python infrastructure to help researchers with automating, managing, persisting, sharing and reproducing the complex workflows associated with modern computational science and all associated data." />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/22181836?v=4" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-02T01:59:16+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://avatars.githubusercontent.com/u/22181836?v=4" />
+<meta property="twitter:title" content="AiiDA" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2026-03-02T01:59:16+00:00","datePublished":"2026-03-02T01:59:16+00:00","description":"AiiDA is an open-source Python infrastructure to help researchers with automating, managing, persisting, sharing and reproducing the complex workflows associated with modern computational science and all associated data.","headline":"AiiDA","image":"https://avatars.githubusercontent.com/u/22181836?v=4","mainEntityOfPage":{"@type":"WebPage","@id":"/systems/aiida-core/"},"url":"/systems/aiida-core/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">AiiDA</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            <section class="system-detail">
+    <div class="container system-container" data-aos="fade-up">
+        <div class="system-hero">
+            <p class="system-breadcrumb">
+                <a href="/systems">Workflow Systems</a>
+                <span>/</span>
+                AiiDA
+            </p>
+            <div class="system-hero-content">
+                <div>
+                    <div class="system-title-row">
+                        <h1>AiiDA</h1>
+                        
+                        <span class="system-wci-badge">
+                            <img src="/favicon.ico" alt="WCI" />
+                            WCI metadata
+                        </span>
+                        
+                    </div>
+                    <p class="system-hero-headline">A workflow manager for computational science with a strong focus on provenance, performance and extensibility.</p>
+                    <div class="system-hero-actions">
+                        
+                        <a href="https://aiida-core.readthedocs.io" target="_blank" class="btn btn-primary system-cta-btn">
+                            Visit website
+                        </a>
+                        
+                        
+                        <a href="https://github.com/aiidateam/aiida-core" target="_blank" class="btn btn-outer">
+                            View repository
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="system-hero-card">
+                    <div class="system-meta-grid">
+                        <div class="system-meta">
+                            <span>Last updated</span>
+                            <strong>01 Mar 2026</strong>
+                        </div>
+                        
+                        <div class="system-meta">
+                            <span>Release</span>
+                            <strong>AiiDA v2.7.3</strong>
+                        </div>
+                        
+                        <div class="system-meta">
+                            <span>Language</span>
+                            <strong>Python</strong>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row system-main g-4">
+            <div class="col-lg-8 wg wg-contents">
+                <section class="system-section">
+                    <h2>Overview</h2>
+                    <p>AiiDA is an open-source Python infrastructure to help researchers with automating, managing, persisting, sharing and reproducing the complex workflows associated with modern computational science and all associated data. </p>
+                </section>
+
+                <section class="system-section">
+                    <div class="system-actions-grid">
+                        
+                        <a class="system-action" href="https://aiida.readthedocs.io/projects/aiida-core/en/latest/intro/get_started.html" target="_blank">
+                            <i class="fas fa-download"></i>
+                            <div>
+                                <strong>Install</strong>
+                                <span>Get started quickly</span>
+                            </div>
+                        </a>
+                        
+                        
+                        <a class="system-action" href="https://aiida.readthedocs.io/projects/aiida-core/en/latest/intro/tutorial.html" target="_blank">
+                            <i class="fas fa-user-cog"></i>
+                            <div>
+                                <strong>Tutorial</strong>
+                                <span>Learn the basics</span>
+                            </div>
+                        </a>
+                        
+                        
+                        <a class="system-action" href="http://aiida-core.readthedocs.io" target="_blank">
+                            <i class="fas fa-book"></i>
+                            <div>
+                                <strong>Documentation</strong>
+                                <span>Explore the docs</span>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </section>
+
+                <section class="system-section">
+                    <h3>Repository activity</h3>
+                    <div class="system-stats-grid">
+                        <a class="system-stat" href="https://github.com/aiidateam/aiida-core/stargazers" target="_blank">
+                            <strong>545</strong>
+                            <span>Stargazers</span>
+                        </a>
+                        <a class="system-stat" href="https://github.com/aiidateam/aiida-core/network/members" target="_blank">
+                            <strong>250</strong>
+                            <span>Forks</span>
+                        </a>
+                    </div>
+                </section>
+
+                
+                <section class="system-section">
+                    <h3>Execution environment</h3>
+                    <div class="row" style="text-align: left;"><div class="col-lg-12"><strong>User Interfaces</strong><ul class="list-services"><li>Python</li><li>Command Line</li><li>REST</li></ul></div><div class="col-lg-12"><strong>Resource Managers</strong><ul class="list-services"><li>Slurm</li><li>LSF</li><li>PBS</li><li>SGE</li></ul></div><div class="col-lg-12"><strong>Transfer Protocols</strong><ul class="list-services"><li>SCP</li></ul></div></div>
+                </section>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <section class="system-section">
+                    <h3 class="system-terminology-title">Terminology
+                        <span class="tt">
+                            <span class="tt-trigger" aria-hidden="true"><i class="fa fa-circle-info"></i></span>
+                            <span class="tooltiptext">
+                                Terminology below follows the definitions established by the
+                                <a href="/terminology">Workflows Community Terminology</a>.
+                            </span>
+                        </span>
+                    </h3>
+                    <div id="tree">
+                        <div class="branch">
+                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753"><strong>Characteristics</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Flow</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Task</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Iterative</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Granularity</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Functions</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Sub-workflows</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Executables</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Coupling</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Loose</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Dynamicity</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Branches</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Runtime Intervention</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Domain</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Agnostic</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B"><strong>Composition</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D8833B"><strong>Description</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B">API</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D8833B"><strong>Abstraction</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B">Intermediate</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D8833B"><strong>Modularity</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B">Hierarchical</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68"><strong>Orchestration</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #55AB68"><strong>Planning</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68">Dynamic</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #55AB68"><strong>Execution</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68">Runner</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA"><strong>Data Management</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #4EADEA"><strong>Transport</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA">File-based</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #4EADEA"><strong>Storage</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA">Shared</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #F5EAF3; border: 1px solid #8448A8"><strong>Metadata Capture</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #8448A8"><strong>Anomaly Detection</strong></span>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #8448A8"><strong>Provenance</strong></span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span><strong>Extensions</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span>Plugins</span>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span>Caching</span>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span>Fault Tolerance</span>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span>HPC Execution</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+
+            <div class="col-lg-4">
+                <aside class="system-sidebar">
+                    <div class="system-sidebar-card">
+                        <div class="system-logo-block">
+                            <img src="https://avatars.githubusercontent.com/u/22181836?v=4" alt="AiiDA" />
+                        </div>
+                        <h4>Links</h4>
+                        <div class="system-links">
+                            
+                            <a href="https://aiida-core.readthedocs.io" target="_blank" class="system-link">
+                                <span class="system-link-icon"><i class="fa fa-link"></i></span>
+                                <span class="system-link-text">
+                                    <span class="system-link-label">Website</span>
+                                    <span class="system-link-value">https://aiida-core.readthedocs.io</span>
+                                </span>
+                            </a>
+                            
+                            
+                            <a href="https://github.com/aiidateam/aiida-core" target="_blank" class="system-link">
+                                <span class="system-link-icon"><i class="fab fa-github"></i></span>
+                                <span class="system-link-text">
+                                    <span class="system-link-label">Repository</span>
+                                    <span class="system-link-value">https://github.com/aiidateam/aiida-core</span>
+                                </span>
+                            </a>
+                            
+                            
+                            <a href="https://x.com/aiidateam" target="_blank" class="system-link">
+                                <span class="system-link-icon"><i class="fa-brands fa-x-twitter"></i></span>
+                                <span class="system-link-text">
+                                    <span class="system-link-label">X</span>
+                                    <span class="system-link-value">https://x.com/aiidateam</span>
+                                </span>
+                            </a>
+                            
+                            
+                            <a href="https://youtube.com/https://www.youtube.com/c/MaterialsCloud" target="_blank" class="system-link">
+                                <span class="system-link-icon"><i class="fab fa-youtube"></i></span>
+                                <span class="system-link-text">
+                                    <span class="system-link-label">YouTube</span>
+                                    <span class="system-link-value">https://www.youtube.com/c/MaterialsCloud</span>
+                                </span>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="system-sidebar-card">
+                        <h4>Contributors</h4>
+                        <div class="system-contributors">
+                            <a href="https://github.com/sphuber" target="_blank"><img src="https://avatars.githubusercontent.com/u/6992332?v=4" width="48" height="48" alt="sphuber" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/giovannipizzi" target="_blank"><img src="https://avatars.githubusercontent.com/u/16132028?v=4" width="48" height="48" alt="giovannipizzi" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/cepellotti" target="_blank"><img src="https://avatars.githubusercontent.com/u/24702581?v=4" width="48" height="48" alt="cepellotti" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/szoupanos" target="_blank"><img src="https://avatars.githubusercontent.com/u/24694976?v=4" width="48" height="48" alt="szoupanos" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/lekah" target="_blank"><img src="https://avatars.githubusercontent.com/u/15344896?v=4" width="48" height="48" alt="lekah" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/ltalirz" target="_blank"><img src="https://avatars.githubusercontent.com/u/1053245?v=4" width="48" height="48" alt="ltalirz" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/greschd" target="_blank"><img src="https://avatars.githubusercontent.com/u/5692808?v=4" width="48" height="48" alt="greschd" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/muhrin" target="_blank"><img src="https://avatars.githubusercontent.com/u/1628907?v=4" width="48" height="48" alt="muhrin" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/DropD" target="_blank"><img src="https://avatars.githubusercontent.com/u/1255940?v=4" width="48" height="48" alt="DropD" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/chrisjsewell" target="_blank"><img src="https://avatars.githubusercontent.com/u/2997570?v=4" width="48" height="48" alt="chrisjsewell" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/fernandogargiulo1986" target="_blank"><img src="https://avatars.githubusercontent.com/u/11215858?v=4" width="48" height="48" alt="fernandogargiulo1986" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/dev-zero" target="_blank"><img src="https://avatars.githubusercontent.com/u/11307?v=4" width="48" height="48" alt="dev-zero" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/danielhollas" target="_blank"><img src="https://avatars.githubusercontent.com/u/9539441?v=4" width="48" height="48" alt="danielhollas" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/unkcpz" target="_blank"><img src="https://avatars.githubusercontent.com/u/8831685?v=4" width="48" height="48" alt="unkcpz" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/CasperWA" target="_blank"><img src="https://avatars.githubusercontent.com/u/43357585?v=4" width="48" height="48" alt="CasperWA" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/riccardosabatini" target="_blank"><img src="https://avatars.githubusercontent.com/u/617096?v=4" width="48" height="48" alt="riccardosabatini" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/khsrali" target="_blank"><img src="https://avatars.githubusercontent.com/u/26275340?v=4" width="48" height="48" alt="khsrali" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/mbercx" target="_blank"><img src="https://avatars.githubusercontent.com/u/25607960?v=4" width="48" height="48" alt="mbercx" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/phisch124" target="_blank"><img src="https://avatars.githubusercontent.com/u/3951108?v=4" width="48" height="48" alt="phisch124" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/csadorf" target="_blank"><img src="https://avatars.githubusercontent.com/u/1441208?v=4" width="48" height="48" alt="csadorf" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/merkys" target="_blank"><img src="https://avatars.githubusercontent.com/u/10404021?v=4" width="48" height="48" alt="merkys" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/GeigerJ2" target="_blank"><img src="https://avatars.githubusercontent.com/u/41700727?v=4" width="48" height="48" alt="GeigerJ2" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/yakutovicha" target="_blank"><img src="https://avatars.githubusercontent.com/u/13118485?v=4" width="48" height="48" alt="yakutovicha" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/ramirezfranciscof" target="_blank"><img src="https://avatars.githubusercontent.com/u/6209267?v=4" width="48" height="48" alt="ramirezfranciscof" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/agoscinski" target="_blank"><img src="https://avatars.githubusercontent.com/u/2772557?v=4" width="48" height="48" alt="agoscinski" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/apps/dependabot" target="_blank"><img src="https://avatars.githubusercontent.com/in/29110?v=4" width="48" height="48" alt="dependabot[bot]" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/zhubonan" target="_blank"><img src="https://avatars.githubusercontent.com/u/33688599?v=4" width="48" height="48" alt="zhubonan" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/ConradJohnston" target="_blank"><img src="https://avatars.githubusercontent.com/u/40352432?v=4" width="48" height="48" alt="ConradJohnston" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/borellim" target="_blank"><img src="https://avatars.githubusercontent.com/u/6683587?v=4" width="48" height="48" alt="borellim" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/elsapassaro" target="_blank"><img src="https://avatars.githubusercontent.com/u/10634826?v=4" width="48" height="48" alt="elsapassaro" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

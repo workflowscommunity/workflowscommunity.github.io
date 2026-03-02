@@ -1,0 +1,589 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> Workflows Community Summit 2022 - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Workflows Community Summit 2022" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="WORKFLOWS COMMUNITY SUMMITS&nbsp; &gt; WORKFLOWS COMMUNITY SUMMIT 2022 A Roadmap Revolution Workflows Community Summit 2022 November 29 and 30, 2022 8am-11am PST / 11am-2pm EST / 17:00-20:00 CET In the 2022 edition of the Workflows Community Summit, we will revisit the 2021 community roadmap, discuss how things have evolved and propose an updated roadmap. This unique virtual event invites researchers and users of workflow management systems, and will seek to identify crucial challenges in the workflow community. We thank all participants for their valuable contributions. The event report is available here:" />
+<meta property="og:description" content="WORKFLOWS COMMUNITY SUMMITS&nbsp; &gt; WORKFLOWS COMMUNITY SUMMIT 2022 A Roadmap Revolution Workflows Community Summit 2022 November 29 and 30, 2022 8am-11am PST / 11am-2pm EST / 17:00-20:00 CET In the 2022 edition of the Workflows Community Summit, we will revisit the 2021 community roadmap, discuss how things have evolved and propose an updated roadmap. This unique virtual event invites researchers and users of workflow management systems, and will seek to identify crucial challenges in the workflow community. We thank all participants for their valuable contributions. The event report is available here:" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="/images/summits/wcs-2022-day1.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-02T01:59:16+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="/images/summits/wcs-2022-day1.png" />
+<meta property="twitter:title" content="Workflows Community Summit 2022" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2026-03-02T01:59:16+00:00","datePublished":"2026-03-02T01:59:16+00:00","description":"WORKFLOWS COMMUNITY SUMMITS&nbsp; &gt; WORKFLOWS COMMUNITY SUMMIT 2022 A Roadmap Revolution Workflows Community Summit 2022 November 29 and 30, 2022 8am-11am PST / 11am-2pm EST / 17:00-20:00 CET In the 2022 edition of the Workflows Community Summit, we will revisit the 2021 community roadmap, discuss how things have evolved and propose an updated roadmap. This unique virtual event invites researchers and users of workflow management systems, and will seek to identify crucial challenges in the workflow community. We thank all participants for their valuable contributions. The event report is available here:","headline":"Workflows Community Summit 2022","image":"/images/summits/wcs-2022-day1.png","mainEntityOfPage":{"@type":"WebPage","@id":"/summits/2022/"},"url":"/summits/2022/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">Workflows Community Summit 2022</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            <div class="container" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-8 wg">
+            <p class="breadcrumb">
+                <a href="/summits">WORKFLOWS COMMUNITY SUMMITS&nbsp;</a> > WORKFLOWS COMMUNITY SUMMIT 2022
+            </p>
+            
+            <p class="subheading text-center">A Roadmap Revolution</p>
+            <h2 class="mb-4 text-center">Workflows Community Summit 2022</h2>
+            <p class="text-center">
+                November 29 and 30, 2022<br />
+                8am-11am PST / 11am-2pm EST / 17:00-20:00 CET
+            </p>
+            <!-- <p><button onclick="window.open('https://forms.gle/6rYAjrTWU6S9eLam6')" style="background-color: rgb(13, 179, 127); color: #fff !important; border-radius: 1em;">REGISTER ></button></p> -->
+            <p>
+                <img src="/images/summits/wcs-2022.png" style="border-radius: 0.5em; width: 100%" />
+            </p>
+            <p class="mb-3">
+                In the 2022 edition of the Workflows Community Summit, we will revisit the
+                <strong><a href="http://dx.doi.org/10.1109/WORKS54523.2021.00016" target="_blank">2021 community
+                        roadmap</a></strong>,
+                discuss how things have evolved and propose an updated roadmap. This unique <strong>virtual
+                    event</strong>
+                invites
+                researchers and users of workflow management systems, and will seek to identify crucial challenges in
+                the
+                workflow
+                community.
+            </p>
+            <p class="bg-light p-3 mb-3">
+                We thank all participants for their valuable contributions. The event
+                report is available here: <a href="https://doi.org/10.5281/zenodo.7750669" style="border: 0" target="_blank">
+                    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.7750669.svg" alt="DOI"
+                        style="transform: none; -webkit-transform: none; position: inherit; margin: 0; vertical-align: middle;"></a>
+            </p>
+            <p><img src="/images/summits/wcs-2022-day1.png" style="width: 100%; margin-bottom: 1em" /></p>
+            <p><img src="/images/summits/wcs-2022-day2.png" style="width: 100%" /></p>
+            <br /><br />
+
+
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <h2 class="mb-4">Agenda</h2>
+            </div>
+            <div class="col-md-12 ftco-animate">
+                <h4>Day 1 - Nov 29, 2022</h4>
+
+                <table class="table">
+                    <thead>
+                        <th>Time</th>
+                        <th>Event</th>
+                    </thead>
+                    <tr>
+                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">8:00-8:05am PST<br />11:00-11:05am
+                            EST<br />17:00-17:05 CET</td>
+                        <td><strong>Welcome and Introductions</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">8:05-8:10am PST<br />11:05-11:10am
+                            EST<br />17:05-17:10 CET</td>
+                        <td style="line-height: 1.3em">
+                            <strong>The Workflows Community Initiative overview</strong>
+                            <a href="https://youtu.be/esTQ8BhzDQg" target="_blank"
+                                style="border-bottom: 0; color: #FF0000"><i class="fa-brands fa-youtube"></i></a><br />
+                            <span style="font-size: 0.9em"><i>Rafael Ferreira da Silva (ORNL)</i></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">8:10-8:20am PST<br />11:10-11:20am
+                            EST<br />17:10-17:20 CET</td>
+                        <td style="line-height: 1.3em">
+                            <strong><a href="https://rafaelsilva.com/files/publications/ferreiradasilva2021works.pdf"
+                                    target="_blank">Remembering the 2021 Roadmap</a></strong>
+                            <a href="https://youtu.be/esTQ8BhzDQg" target="_blank"
+                                style="border-bottom: 0; color: #FF0000"><i class="fa-brands fa-youtube"></i></a><br />
+                            <span style="font-size: 0.9em"><i>Rafael Ferreira da Silva (ORNL)</i></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">8:20-8:50am PST<br />11:20-11:50am
+                            EST<br />17:20-17:50 CET</td>
+                        <td style="line-height: 1.3em">
+                            <strong>Lightning talks</strong><br />
+                            <ul style="margin: 0">
+                                <li>Topic 1: Specifications, standards, and APIs
+                                    <a href="https://youtu.be/BvwZDPngZ1c" target="_blank"
+                                        style="border-bottom: 0; color: #FF0000"><i
+                                            class="fa-brands fa-youtube"></i></a><br />
+                                    <span style="font-size: 0.9em"><i>Daniel Laney (LLNL), Kyle Chard
+                                            (UChicago)</i></span>
+                                </li>
+                                <li>Topic 2: AI workflows
+                                    <a href="https://youtu.be/lTDjtSNCVPY" target="_blank"
+                                        style="border-bottom: 0; color: #FF0000"><i
+                                            class="fa-brands fa-youtube"></i></a><br />
+                                    <span style="font-size: 0.9em"><i>Shantenu Jha (BNL), Timo Bremer (LLNL)</i></span>
+                                </li>
+                                <li>Topic 3: High performance data management and in situ workflows
+                                    <a href="https://youtu.be/pWLZIL5iQw0" target="_blank"
+                                        style="border-bottom: 0; color: #FF0000"><i
+                                            class="fa-brands fa-youtube"></i></a><br />
+                                    <span style="font-size: 0.9em"><i>Silvina Caino-Lores (UTK), Frédéric Suter
+                                            (ORNL)</i></span>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">8:50-9:00am PST<br />11:50am-noon
+                            EST<br />17:50-18:00 CET</td>
+                        <td style="line-height: 1.3em">
+                            <strong>Break</strong><br />
+                            <span style="font-size: 0.9em"><i>(preparation for breakouts)</i></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">9:00-10:30am PST<br />noon-1:30pm
+                            EST<br />18:00-19:30 CET</td>
+                        <td style="line-height: 1.3em">
+                            <strong>Breakout sessions</strong><br />
+                            <ul style="margin: 0">
+                                <li>Topic 1: Specifications, standards, and APIs</li>
+                                <li>Topic 2: AI workflows</li>
+                                <li>Topic 3: High performance data management and in situ workflows</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">10:30-10:45am PST<br />1:30-1:45pm
+                            EST<br />19:30-19:45 CET</td>
+                        <td style="line-height: 1.3em">
+                            <strong>Break</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">10:45-11:00am PST<br />1:45-2:00pm
+                            EST<br />19:45-20:00 CET</td>
+                        <td style="line-height: 1.3em">
+                            <strong>Reports from breakout sessions</strong>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-md-12 ftco-animate mt-5">
+                <h4>Day 2 - Nov 30, 2022</h4>
+
+                <table class="table">
+                    <thead>
+                        <th>Time</th>
+                        <th>Event</th>
+                    </thead>
+                    <tr>
+                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">8:00-8:10am PST<br />11:00-11:10am
+                            EST<br />17:00-17:10 CET</td>
+                        <td><strong>Welcome and Introductions</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">8:10-8:45am PST<br />11:10-11:45am
+                            EST<br />17:10-17:45 CET</td>
+                        <td style="line-height: 1.3em">
+                            <strong>Lightning talks</strong><br />
+                            <ul style="margin: 0">
+                                <li>Topic 4: HPC and Quantum workflows
+                                    <a href="https://youtu.be/2XUncYFJgpc" target="_blank"
+                                        style="border-bottom: 0; color: #FF0000"><i
+                                            class="fa-brands fa-youtube"></i></a><br />
+                                    <span style="font-size: 0.9em"><i>Rosa Badia (BSC), Ian Buckley (Agnostiq), Venkat
+                                            Bala
+                                            (Agnostiq)</i>
+                                </li>
+                                <ul style="margin: 0 0 0.5em 0">
+                                    <li><span style="font-size: 0.9em">Tensor Networks for Quantum Simulation
+                                            <a href="https://youtu.be/WvWiIsDqVAM" target="_blank"
+                                                style="border-bottom: 0; color: #FF0000"><i
+                                                    class="fa-brands fa-youtube"></i></a><br />
+                                            <i>Artur Garcia Saez (BSC)</i></span>
+                                    </li>
+                                    <li><span style="font-size: 0.9em">Advances in Hybrid Quantum-Classical
+                                            High-Performance
+                                            Computing
+                                            <a href="https://youtu.be/5tK6jib3I68" target="_blank"
+                                                style="border-bottom: 0; color: #FF0000"><i
+                                                    class="fa-brands fa-youtube"></i></a><br />
+                                            <i>Stefan Andersson (ParTec AG), Mathias Pütz (ParTec AG)</i></span>
+                                    </li>
+                                    <li><span style="font-size: 0.9em">Workflow Scheduling Using Quantum Devices
+                                            <a href="https://youtu.be/8l0eNKEk8DM" target="_blank"
+                                                style="border-bottom: 0; color: #FF0000"><i
+                                                    class="fa-brands fa-youtube"></i></a><br />
+                                            <i>Justyna Zawalska (Academic Computer Centre CYFRONET AGH)</i></span>
+                                    </li>
+                                    <li><span style="font-size: 0.9em">Mechanisms for Enhancing Reliability/Recovery and
+                                            Performance of Future Workloads
+                                            <a href="https://youtu.be/dpBOI1ry77E" target="_blank"
+                                                style="border-bottom: 0; color: #FF0000"><i
+                                                    class="fa-brands fa-youtube"></i></a><br />
+                                            <i>Ryan E. Grant (Queen's University)</i></span>
+                                    </li>
+                                    <li><span style="font-size: 0.9em">HPCQC System Workflows
+                                            <a href="https://youtu.be/Aj9qOxK1dYA" target="_blank"
+                                                style="border-bottom: 0; color: #FF0000"><i
+                                                    class="fa-brands fa-youtube"></i></a><br />
+                                            <i>Martin Ruefenacht (Leibniz Supercomputing Centre)</i></span>
+                                    </li>
+                                    <li><span style="font-size: 0.9em">Multi-Core Quantum Computing
+                                            <a href="https://youtu.be/_knvCMZaTqA" target="_blank"
+                                                style="border-bottom: 0; color: #FF0000"><i
+                                                    class="fa-brands fa-youtube"></i></a><br />
+                                            <i>Aharon Brodutch (Entangled Networks)</i></span>
+                                    </li>
+                                </ul>
+                                <li>Topic 5: FAIR workflows
+                                    <a href="https://youtu.be/MBMUqV--XnE" target="_blank"
+                                        style="border-bottom: 0; color: #FF0000"><i
+                                            class="fa-brands fa-youtube"></i></a><br />
+                                    <span style="font-size: 0.9em"><i>Carole Goble (UManchester), Daniel S. Katz
+                                            (UIUC)</i></span>
+                                </li>
+                                <li>Topic 6: Workflows for continuum and cross-facility computing
+                                    <a href="https://youtu.be/_p1XqYohUu8" target="_blank"
+                                        style="border-bottom: 0; color: #FF0000"><i
+                                            class="fa-brands fa-youtube"></i></a><br />
+                                    <span style="font-size: 0.9em"><i>Debbie Bard (NERSC), Tom Uram (ANL), Nick Tyler
+                                            (NERSC)</i></span>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">8:45-9:00am PST<br />11:45am-noon
+                            EST<br />17:45-18:00 CET</td>
+                        <td style="line-height: 1.3em">
+                            <strong>Break</strong><br />
+                            <span style="font-size: 0.9em"><i>(preparation for breakouts)</i></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">9:00-9:15am PST<br />noon-12:15pm
+                            EST<br />18:00-18:15 CET</td>
+                        <td style="line-height: 1.3em">
+                            <strong>Invited talk:</strong> A Translational Perspective on End-to-End Workflows
+                            <a href="https://youtu.be/SCvjK9RA6Lw" target="_blank"
+                                style="border-bottom: 0; color: #FF0000"><i class="fa-brands fa-youtube"></i></a><br />
+                            <span style="font-size: 0.9em"><i>Manish Parashar (Utah)</i></li>
+                                <i></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">9:15-10:35am PST<br />12:15-1:35pm
+                            EST<br />18:15-19:35 CET</td>
+                        <td style="line-height: 1.3em">
+                            <strong>Breakout sessions</strong><br />
+                            <ul style="margin: 0">
+                                <li>Topic 4: HPC and Quantum workflows</li>
+                                <li>Topic 5: FAIR workflows</li>
+                                <li>Topic 6: Workflows for continuum and cross-facility computing</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">10:35-10:45am PST<br />1:35-1:45pm
+                            EST<br />19:35-19:45 CET</td>
+                        <td style="line-height: 1.3em">
+                            <strong>Break</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">10:45-11:00am PST<br />1:45-2:00pm
+                            EST<br />19:45-20:00 CET</td>
+                        <td style="line-height: 1.3em">
+                            <strong>Reports breakout sessions</strong>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="blog-sidbar">
+                <h3 class="mb-5">Supporters</h3>
+                <a href="https://exaworks.org" target="_blank">
+                    <img src="https://exaworks.org/images/exaworks-name.png" height="25px" class="mb-3 mr-3" />
+                </a><br />
+                <a href="https://workflowhub.eu" target="_blank">
+                    <img src="/images/summits/workflowhub.png" height="27px" class="mb-3 mr-3" />
+                </a><br />
+                <a href="https://eflows4hpc.eu/" target="_blank">
+                    <img src="/images/bof/eflows4hpc.png" height="30px" class="mb-3 mr-3" />
+                </a><br />
+                <a href="https://www.covalent.xyz/" target="_blank">
+                    <img src="/images/summits/covalent.png" height="35px" class="mb-3 mr-3" />
+                </a><br />
+                <a href="https://www.exascaleproject.org/" target="_blank">
+                    <img src="/images/bof/ecp.png" height="35px" class="mb-3 mr-3" />
+                </a><br />
+                <a href="https://science.osti.gov/" target="_blank">
+                    <img src="https://science.osti.gov/assets/img/doe-logos/logo.png" height="30px" class="mb-3 mr-3" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> WfBG: Workflow Benchmarking Group - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="WfBG: Workflow Benchmarking Group" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Define methodology to collect meaningful performance metrics; share exemplar workflows written in multiple workflow languages" />
+<meta property="og:description" content="Define methodology to collect meaningful performance metrics; share exemplar workflows written in multiple workflow languages" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-02T01:59:16+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="twitter:title" content="WfBG: Workflow Benchmarking Group" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2026-03-02T01:59:16+00:00","datePublished":"2026-03-02T01:59:16+00:00","description":"Define methodology to collect meaningful performance metrics; share exemplar workflows written in multiple workflow languages","headline":"WfBG: Workflow Benchmarking Group","image":"https://workflows.community/images/wci-default-card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/groups/benchmarking/"},"url":"/groups/benchmarking/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">WfBG: Workflow Benchmarking Group</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            
+
+
+
+<div class="container wg-page" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-12 wg wg-contents">
+            <div class="wg-hero" style="--status-color: #8A8F1A;">
+                <div class="wg-hero-card">
+                    <p class="wg-breadcrumb">
+                        <a href="/groups">Working Groups</a>
+                        <span>/</span>
+                        WfBG: Workflow Benchmarking Group
+                    </p>
+                    <div class="wg-hero-eyebrow">Working Group</div>
+                    <h1>WfBG: Workflow Benchmarking Group</h1>
+                    
+                    <p class="wg-hero-desc">Define methodology to collect meaningful performance metrics; share exemplar workflows written in multiple workflow languages</p>
+                    
+                    <div class="wg-meta">
+                        
+                        <span class="wg-pill wg-pill-status">
+                            <span class="wg-pill-dot"></span>
+                            Establishing
+                        </span>
+                        
+                        <span class="wg-pill wg-pill-count">
+                            <i class="fas fa-users"></i>
+                            4 members
+                        </span>
+                    </div>
+                    <div class="wg-actions">
+                        
+                        <a href="https://workflowscommunity.slack.com/archives/C039VUMHMHP" target="_blank" rel="noopener" class="btn btn-primary py-3 px-5">
+                            <i class="fas fa-user-plus"></i> Join
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="wg-members-panel" id="wg-members">
+                <div class="wg-members-header">
+                    <h3>Members</h3>
+                    <span class="wg-members-count">4 people</span>
+                </div>
+                <div class="wg-members-grid">
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-role">Chair</div>
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://orcid.org/0000-0001-9290-2017" target="_blank" rel="noopener">Iacopo Colonnelli</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-role">Chair</div>
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://orcid.org/0000-0002-2961-9670" target="_blank" rel="noopener">Michael R. Crusoe</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://orcid.org/0000-0002-1720-0928" target="_blank" rel="noopener">Rafael Ferreira da Silva</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://orcid.org/0000-0001-6401-6229" target="_blank" rel="noopener">Javier Conejero</a>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="wg-content-card">
+                <h2 id="goals">Goals</h2>
+
+<p>In this working group, we seek to:</p>
+<ul>
+  <li>Define a <strong>shared vocabulary of performance metrics</strong> of interest for diverse workflow domains</li>
+  <li>Design, maintain and share <strong>benchmarking suites of real-world workflows</strong> to help evaluate those metrics</li>
+  <li>Develop <strong>community agreement on features</strong> that such benchmarks should possess</li>
+  <li>Collaboratively maintain a <strong>catalogue of state-of-art implementations</strong> of these real-world workflows for various workflow languages/frameworks.</li>
+  <li>Define a <strong>reproducible and agnostic methodology</strong> to collect and report benchmark results</li>
+</ul>
+
+<h2 id="anti-goals">Anti-Goals</h2>
+
+<p>We do NOT aim to do any of the following:</p>
+<ul>
+  <li>Test workflows using <strong>minimized data sets</strong> that are not representative of actual workflow uses</li>
+  <li>Define <strong>which performance metrics are essential</strong> for the workflow research domain. Instead, we want to define several benchmarking suites to evaluate
+different metrics</li>
+  <li>Determine the <strong>universally best tool</strong> for running workflows. Instead, we want to help users compare the performances of the different Workflow
+Management Systems for their specific needs</li>
+</ul>
+
+<h2 id="why-is-benchmarking-important">Why is benchmarking important?</h2>
+
+<p>The intrinsic generality of the workflow paradigm makes it a powerful abstraction for designing complex applications and executing them on large-scale
+distributed infrastructures, such as HPC centres, Grid environments, and Cloud providers. However, such generality becomes an obstacle when evaluating
+workflow implementations or Workflow Management Systems (WMSs), as no consistent and commonly agreed key performance metrics exist in the state-of-art
+computer science literature.</p>
+
+<p>Instead, different application domains tend to privilege different aspects of the workflow execution process when designing their ideal workflow system.
+For example, minimising the control-plane overhead is fundamental when running compute-intensive workflows with billions of fine-grained tasks, while
+for data-intensive workflows with few giant steps overlapping computation and communication is far more prominent.</p>
+
+<p>Consequently, different workflow systems excel in handling different kinds of workflows. Still, the lack of community consensus on workflow benchmarking
+suites represents a massive obstacle for domain experts trying to compare WMSs based on their needs. Indeed, a direct and fair comparison is possible only
+by running multiple state-of-art implementations of the same application on the same execution environment.</p>
+
+<p>Defining several benchmarking suites to evaluate different metrics of interest would represent a crucial improvement for the workflow research
+community. Still, benchmarks have no value without building community consensus around them. Conversely, history tells us that highly recognised
+benchmarks can tremendously impact research communities, fostering a positive continuous improvement process for years. For example, think about
+the role of HPLinpack in the High-Performance Computing community or the ongoing efforts around mastering the training of Deep Neural Networks
+(DNNs) on the ImageNet dataset.</p>
+
+<h2 id="events-and-talks">Events and talks</h2>
+
+<h2 id="related-projects-and-initiatives">Related Projects and initiatives</h2>
+
+<p><a href="https://github.com/inutano/cwl-metrics">https://github.com/inutano/cwl-metrics</a></p>
+
+<p><a href="https://elixir-europe.org/internal-projects/commissioned-services/performance-benchmarking">https://elixir-europe.org/internal-projects/commissioned-services/performance-benchmarking</a> / <a href="https://openebench.bsc.es/dashboard">https://openebench.bsc.es/dashboard</a></p>
+
+<p><a href="https://github.com/SooLee/Benchmark">https://github.com/SooLee/Benchmark</a></p>
+
+<p><a href="https://wfcommons.org/">https://wfcommons.org/</a></p>
+
+<p>Potential performance reporting formats:</p>
+
+<ol>
+  <li><a href="https://wta.atlarge-research.com/">Workflow Trace Archive</a></li>
+  <li><a href="https://www.researchobject.org/workflow-run-crate/">Workflow Run RO-Crate</a></li>
+  <li><a href="https://github.com/wfcommons/wfformat">WfFormat</a></li>
+</ol>
+
+<!-- Related projects and initiatives related to the  Workflow Benchmarking Group aims: -->
+
+<h2 id="references">References</h2>
+
+<p><em>Articles below are published as <a href="https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/">Open Access</a>,
+or with <a href="https://www.library.manchester.ac.uk/using-the-library/staff/research/open-research/access/understanding/">green open access preprints</a>
+where gold open access is not possible. Please <a href="https://github.com/workflowscommunity/workflowscommunity.github.io/issues">let us know</a> if you are
+unable to access any of these publications. To add to this list, please
+<a href="https://github.com/workflowscommunity/workflowscommunity.github.io/blob/main/_working_groups/benchmarking.md">suggest a change</a>.</em></p>
+
+<h3 id="benchmark-suites">Benchmark suites</h3>
+
+<p>Tainã Coleman, Henri Casanova, Ketan Maheshwari, Loïc Pottier, Sean R. Wilkinson, Justin Wozniak, Frédéric Suter, Mallikarjun Shankar, Rafael Ferreira da Silva (2022):
+<a href="https://doi.org/10.1109/PMBS56514.2022.00014"><strong>WfBench: Automated Generation of Scientific Workflow Benchmarks</strong></a>
+<em>2022 IEEE/ACM International Workshop on Performance Modeling, Benchmarking and Simulation of High Performance Computer Systems (PMBS)</em>, pp. 100-111
+<a href="https://doi.org/10.1109/PMBS56514.2022.00014">https://doi.org/10.1109/PMBS56514.2022.00014</a> (<a href="https://doi.org/10.48550/arXiv.2210.03170">arXiv:2210.03170</a>)</p>
+
+<p>Elliott Slaughter, Wei Wu, Yuankun Fu, Legend Brandenburg, Nicolai Garcia, Wilhem Kautz, Emily Marx, Kaleb S. Morris, Qinglei Cao, George Bosilca,
+Seema Mirchandaney, Wonchan Lee, Sean Treichler, Patrick S. McCormick, Alex Aiken (2020):
+<a href="https://doi.org/10.1109/SC41405.2020.00066"><strong>Task bench: a parameterized benchmark for evaluating parallel runtime performance</strong></a>
+<em>International Conference for High Performance Computing, Networking, Storage and Analysis (SC)</em>, <strong>62</strong>, pp. 1-15
+<a href="https://doi.org/10.1109/SC41405.2020.00066">https://doi.org/10.1109/SC41405.2020.00066</a> (<a href="https://doi.org/10.48550/arXiv.1908.05790">arXiv:1908.05790</a>)</p>
+
+<p>E. Larsonneur, J. Mercier, N. Wiart, E. L. Floch, O. Delhomme and V. Meyer (2018):
+<a href="https://doi.org/10.1109/BIBM.2018.8621141"><strong>Evaluating Workflow Management Systems: A Bioinformatics Use Case</strong></a>
+<em>2018 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)</em>, pp. 2773-2775
+<a href="https://doi.org/10.1109/BIBM.2018.8621141">https://doi.org/10.1109/BIBM.2018.8621141</a></p>
+
+<h3 id="patterns-for-scientific-workflows">Patterns for scientific workflows</h3>
+
+<p>Tainã Coleman, Henri Casanova, Rafael Ferreira da Silva (2021):
+<a href="https://doi.org/10.1109/eScience51609.2021.00026"><strong>WfChef: Automated Generation of Accurate Scientific Workflow Generators</strong></a>
+<em>17th IEEE EScience Conference</em>, pp. 159–168
+<a href="https://doi.org/10.1109/eScience51609.2021.00026">https://doi.org/10.1109/eScience51609.2021.00026</a> (<a href="https://doi.org/10.48550/arXiv.2105.00129">arXiv:2105.00129</a>)</p>
+
+<p>Daniel S. Katz, Andre Merzky, Zhao Zhang, Shantenu Jha (2016):
+<a href="https://doi.org/10.1016/j.future.2015.10.001"><strong>Application skeletons: Construction and use in eScience</strong></a>
+<em>Future Generation Computer Systems</em>, <strong>59</strong>, pp. 114-124
+<a href="https://doi.org/10.1016/j.future.2015.10.001">https://doi.org/10.1016/j.future.2015.10.001</a></p>
+
+<p>Daniel Garijo, Pinar Alper, Khalid Belhajjame, Óscar Corcho, Yolanda Gil, Carole A. Goble (2014):
+<a href="https://doi.org/10.1016/j.future.2013.09.018"><strong>Common motifs in scientific workflows: An empirical analysis</strong></a>
+<em>Future Generation Computer Systems</em>, <strong>36</strong>, pp. 338-351
+<a href="https://doi.org/10.1016/j.future.2013.09.018">https://doi.org/10.1016/j.future.2013.09.018</a></p>
+
+<p>Sara Migliorini, Mauro Gambini, Marcello La Rosa, Arthur H.M. ter Hofstede (2011):
+<a href="https://eprints.qut.edu.au/216123/"><strong>Pattern-Based Evaluation of Scientific Workflow Management Systems</strong></a>
+<em>Unpublished</em>
+<a href="https://eprints.qut.edu.au/216123/">https://eprints.qut.edu.au/216123/</a></p>
+
+<p>Ustun Yildiz, Adnene Guabtni, Anne H. H. Ngu (2009):
+<a href="https://doi.org/10.1145/1645164.1645177"><strong>Towards scientific workflow patterns</strong></a>
+<em>4th Workshop on Workflows in Support of Large-Scale Science (WORKS)</em>
+<a href="https://doi.org/10.1145/1645164.1645177">https://doi.org/10.1145/1645164.1645177</a></p>
+
+<p>Robert Stevens, Carole A. Goble, Patricia G. Baker, Andy Brass (2001):
+<a href="https://doi.org/10.1093/bioinformatics/17.2.180"><strong>A classification of tasks in bioinformatics</strong></a>
+<em>Bioinformatics</em>, <strong>17</strong>:1, pp. 180-188
+<a href="https://doi.org/10.1093/bioinformatics/17.2.180">https://doi.org/10.1093/bioinformatics/17.2.180</a></p>
+
+<h3 id="performance-metrics-formats">Performance metrics formats</h3>
+
+<p>Rafael Ferreira da Silva (2021):
+<a href="https://doi.org/10.5281/zenodo.4587921"><strong>wfcommons/wfformat</strong></a>
+<em>Zenodo</em>
+<a href="https://doi.org/10.5281/zenodo.4587921">https://doi.org/10.5281/zenodo.4587921</a></p>
+
+<p>L. Versluis, Roland Mathá, Sacheendra Talluri, Tim Hegeman, Radu Prodan, Ewa Deelman, Alexandru Iosup (2020):
+<a href="https://doi.org/10.1109/TPDS.2020.2984821"><strong>The Workflow Trace Archive: Open-Access Data From Public and Private Computing Infrastructures</strong></a>
+<em>IEEE Transactions on Parallel and Distributed Systems</em>, <strong>31</strong>:9, pp. 2170-2184
+<a href="https://doi.org/10.1109/TPDS.2020.2984821">https://doi.org/10.1109/TPDS.2020.2984821</a> (<a href="https://doi.org/10.48550/arXiv.1906.07471">arXiv:1906.07471</a>)</p>
+
+<p>Tazro Ohta, Tomoya Tanjo, Osamu Ogasawara (2019):
+<a href="https://doi.org/10.1093/gigascience/giz052"><strong>Accumulating computational resource usage of genomic data analysis workflow
+to optimize cloud computing instance selection</strong></a>.
+<em>GigaScience</em>, <strong>8</strong>:4, giz052
+<a href="https://doi.org/10.1093/gigascience/giz052">https://doi.org/10.1093/gigascience/giz052</a> (<a href="https://doi.org/10.1101/456756">bioRxiv:456756</a>)</p>
+
+<h3 id="workflow-benchmarking-tools">Workflow benchmarking tools</h3>
+
+<p>Tainã Coleman, Henri Casanova, Loïc Pottier, Manav Kaushik, Ewa Deelman, Rafael Ferreira da Silva (2022):
+<a href="https://doi.org/10.1016/j.future.2021.09.043"><strong>WfCommons: A framework for enabling scientific workflow research and development</strong></a>
+<em>Future Generation Computer Systems</em>, <strong>128</strong>, pp. 16-27
+<a href="https://doi.org/10.1016/j.future.2021.09.043">https://doi.org/10.1016/j.future.2021.09.043</a> (<a href="https://doi.org/10.48550/arXiv.2105.14352">arXiv:2105.14352</a>)</p>
+
+<p>Salvador Capella-Gutierrez, Diana de la Iglesia, Juergen Haas, Analia Lourenco, José María Fernández, Dmitry Repchevsky, Christophe Dessimoz,
+Torsten Schwede, Cedric Notredame, Josep Ll Gelpi, Alfonso Valencia (2017):
+<a href="https://doi.org/10.1101/181677"><strong>Lessons Learned: Recommendations for Establishing Critical Periodic Scientific Benchmarking</strong></a>
+<em>bioRxiv:181677</em>
+<a href="https://doi.org/10.1101/181677">https://doi.org/10.1101/181677</a></p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

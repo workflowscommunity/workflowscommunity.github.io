@@ -1,0 +1,426 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> Up-scaling Python functions for HPC with executorlib - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Up-scaling Python functions for HPC with executorlib" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The up-scaling of Python workflows from the execution on a local workstation to the parallel execution on an HPC typically faces three challenges: (1) the management of inter-process communication, (2) the data storage and (3) the management of task dependencies during the execution. These challenges commonly lead to a rewrite of major parts of the reference serial Python workflow to improve computational efficiency. Executorlib addresses these challenges by extending Python’s ProcessPoolExecutor interface to distribute Python functions on HPC systems. It interfaces with the job scheduler directly without the need for a database or daemon process, leading to seamless up-scaling." />
+<meta property="og:description" content="The up-scaling of Python workflows from the execution on a local workstation to the parallel execution on an HPC typically faces three challenges: (1) the management of inter-process communication, (2) the data storage and (3) the management of task dependencies during the execution. These challenges commonly lead to a rewrite of major parts of the reference serial Python workflow to improve computational efficiency. Executorlib addresses these challenges by extending Python’s ProcessPoolExecutor interface to distribute Python functions on HPC systems. It interfaces with the job scheduler directly without the need for a database or daemon process, leading to seamless up-scaling." />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="/images/talks/janssen-banner.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-02T01:59:16+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="/images/talks/janssen-banner.jpg" />
+<meta property="twitter:title" content="Up-scaling Python functions for HPC with executorlib" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2026-03-02T01:59:16+00:00","datePublished":"2026-03-02T01:59:16+00:00","description":"The up-scaling of Python workflows from the execution on a local workstation to the parallel execution on an HPC typically faces three challenges: (1) the management of inter-process communication, (2) the data storage and (3) the management of task dependencies during the execution. These challenges commonly lead to a rewrite of major parts of the reference serial Python workflow to improve computational efficiency. Executorlib addresses these challenges by extending Python’s ProcessPoolExecutor interface to distribute Python functions on HPC systems. It interfaces with the job scheduler directly without the need for a database or daemon process, leading to seamless up-scaling.","headline":"Up-scaling Python functions for HPC with executorlib","image":"/images/talks/janssen-banner.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"/talks/2026_01_14/"},"url":"/talks/2026_01_14/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">Up-scaling Python functions for HPC with executorlib</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            <section class="talk-detail">
+    <div class="container talk-container" data-aos="fade-up">
+        <div class="talk-hero">
+            <p class="talk-breadcrumb">
+                <a href="/talks">Workflows Community Talks</a>
+                <span>/</span>
+                Up-scaling Python functions for HPC with executorlib
+            </p>
+            <div class="talk-hero-content">
+                <div>
+                    <h1>Up-scaling Python functions for HPC with executorlib</h1>
+                    
+                    <p class="talk-authors">Jan Janssen (Max Planck Institute for Sustainable Materials)</p>
+                    <!-- <div class="talk-meta">
+                        <span><i class="far fa-calendar"></i> January 14, 2026</span>
+                        <span><i class="far fa-clock"></i> 11:00am PST / 2:00pm EST / 20:00 CEST</span>
+                    </div> -->
+                    <div class="talk-hero-actions">
+                        
+                        
+                        <a href="/files/talks/0260114-Janssen-executorlib.pdf" target="_blank" class="btn btn-outer">
+                            <i class="fa fa-file"></i> Presentation
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="talk-hero-card">
+                    <h3>Talk details</h3>
+                    <!-- <p>Save the date and share the session with your community.</p> -->
+                    <div class="talk-detail-list">
+                        <div>
+                            <span>Date</span>
+                            <strong>January 14, 2026</strong>
+                        </div>
+                        <div>
+                            <span>Time</span>
+                            <strong>11:00am PST / 2:00pm EST / 20:00 CEST</strong>
+                        </div>
+                        <!-- <div>
+                            <span>Speakers</span>
+                            <strong>Jan Janssen (Max Planck Institute for Sustainable Materials)</strong>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row talk-main g-4">
+            <div class="col-lg-8">
+                <section class="talk-section">
+                    <h2>Overview</h2>
+                    <div class="talk-content">The up-scaling of Python workflows from the execution on a local workstation to 
+the parallel execution on an HPC typically faces three challenges: (1) the 
+management of inter-process communication, (2) the data storage and (3) the 
+management of task dependencies during the execution. These challenges commonly 
+lead to a rewrite of major parts of the reference serial Python workflow to 
+improve computational efficiency.  Executorlib addresses these challenges by 
+extending Python's ProcessPoolExecutor interface to distribute Python functions 
+on HPC systems. It interfaces with the job scheduler directly without the need 
+for a database or daemon process, leading to seamless up-scaling.
+
+<br /><br />
+
+The presentation introduces the challenge of up-scaling Python workflows. It 
+highlights how executorlib extends the ProcessPoolExecutor interface of the 
+Python standard library to provide the user with a familiar interface, while 
+the executorlib backend directly connects to the HPC job scheduler to distribute 
+Python functions either from the login node to individual compute nodes or 
+within an HPC allocation of a number of compute nodes, which is enabled by 
+supporting both file-based and socket-based communication.
+
+<br /><br />
+
+The setup of executorlib on different HPC systems is introduced, based on the 
+current support for the SLURM job scheduler as well as the Flux framework to 
+enable hierarchical scheduling within large HPC job allocations as commonly 
+used on Exascale computers. Application examples are then given to demonstrate 
+how executorlib supports the assignment of computational resources like CPU 
+cores, number of threads and GPU resources on a per-function basis, including 
+support for MPI, which drastically simplifies the process of up-scaling Python 
+workflows.
+
+<br /><br />
+
+In this context, the focus of this presentation is the user journey during the 
+up-scaling of a Python workflow and how features like caching or the integrated 
+debugging capabilities for the distributed execution of Python functions 
+accelerate the development cycle. The presentation concludes by returning to 
+challenges identified as part of DOE Exascale Computing Project's EXAALT effort 
+to demonstrate how the development process was drastically simplified by using 
+executorlib, with a specific focus on dynamic dependencies which are only 
+resolved during run time of the Python workflow.
+</div>
+                </section>
+
+                
+                <section class="talk-section">
+                    <h3>Watch the recording</h3>
+                    <div class="talk-video">
+                        <iframe src="https://www.youtube.com/embed/WSn93DFilaE?si=Or5j5VDONKYo2pyU" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+                
+            </div>
+
+            <div class="col-lg-4">
+                <aside class="talk-sidebar">
+                    <div class="talk-card">
+                        <h3>About the speakers</h3>
+                        
+                        
+                        <div class="talk-speaker">
+                            <a href="https://www.mpie.de/4910750/Janssen" target="_blank" class="talk-speaker-photo">
+                                
+                                <img src="/images/talks/janssen.jpg" alt="Jan Janssen">
+                            </a>
+                            <div class="talk-speaker-info">
+                                <strong>Jan Janssen</strong>
+                                <span>Group Leader for Materials Informatics</span>
+                                <p>Jan Janssen is the group leader for Materials Informatics at the Max Planck Institute for Sustainable Materials. His group focuses on applying methods from computer science including machine learning to discover novel sustainable materials with applications ranging from machine-learned interatomic potentials to large language model agents for atomistic simulation. Previously, Jan was a director’s postdoctoral fellow in the T-division at Los Alamos National Laboratory as part of the Exascale Computing Project as well as an invited postdoctoral fellow at the University of Chicago and the University of California Los Angeles. Besides his research work, Jan is the lead developer of the pyiron atomistic simulation suite, maintains over 1000 open-source materials informatics software packages for the conda-forge community and is a regular contributor to open-source software on Github.</p>
+                                <div class="talk-speaker-orgs">
+                                    
+                                    <a href="https://www.mpie.de/en" target="_blank">
+                                        <img src="/images/institutions/max_plank.png" alt="Max Planck Institute for Sustainable Materials">
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

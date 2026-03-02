@@ -1,0 +1,514 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> Workshop on Harmonizing Python Workflows - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Workshop on Harmonizing Python Workflows" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="/images/workshops/harmony.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-02T01:59:16+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="/images/workshops/harmony.png" />
+<meta property="twitter:title" content="Workshop on Harmonizing Python Workflows" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2026-03-02T01:59:16+00:00","datePublished":"2026-03-02T01:59:16+00:00","headline":"Workshop on Harmonizing Python Workflows","image":"/images/workshops/harmony.png","mainEntityOfPage":{"@type":"WebPage","@id":"/workshops/harmony-2025/"},"url":"/workshops/harmony-2025/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">Workshop on Harmonizing Python Workflows</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            <section class="workshop-hero">
+    <div class="container" data-aos="fade-up">
+        <div class="workshop-hero-card">
+            <p class="workshop-breadcrumb">
+                <a href="/workshops">Workshops</a>
+                <span>/</span>
+                Workshop on Harmonizing Python Workflows
+            </p>
+            <div class="workshop-hero-grid">
+                <div>
+                    
+                    <h1>Workshop on Harmonizing Python Workflows</h1>
+                    <div class="workshop-meta">
+                        <div>
+                            <span>Date</span>
+                            <strong>Monday - Sep 15, 2025</strong>
+                        </div>
+                        <div>
+                            <span>Location</span>
+                            <strong>Chicago, IL, USA</strong>
+                        </div>
+                        <div>
+                            <span>Time</span>
+                            <strong></strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="workshop-partner">
+                    <span>In conjunction with</span>
+                    <img src="/images/workshops/escience-2025.png" alt="In conjunction with" />
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="workshop-body">
+    <div class="container" data-aos="fade-up">
+        <div class="row g-4">
+            <div class="col-lg-8 wg wg-contents">
+                <div class="workshop-content-card">
+                    <div class="text-center mb-4" style="margin-top: -2em;">
+    <img src="/images/workshops/harmony-logo.png" style="max-width: 300px;" />
+</div>
+
+<p>An increasing number of large scale scientific workflow applications are expressed or managed using the
+    Python language. Such workflows consist of large graphs of complex tasks combining data gathering, data
+    processing, simulation, training, inference, validation, and visualization. While there have been many
+    successes, large scale deployments still encounter many barriers due to the need to integrate many
+    different technologies: applications, workflow systems, software environments, cluster technologies,
+    interactive notebooks, visualization systems, and more. The <strong>POSE-HARMONY Project</strong> seeks
+    to "harmonize" common practices surrounding Python-based workflows, considering issues such as workflow
+    management, technology integration, software deployment, building and testing, documentation, and other
+    matters of common concern. This workshop will be organized in an interactive manner to enable
+    participants to collectively define the common space of challenges in Python workflow deployment,
+    propose resources and solutions of common interest, and point the way towards a common open source
+    ecosystem.</p>
+<p>&nbsp;</p>
+<h3 class="mb-4">Attendees</h3>
+<img src="/images/workshops/harmony-photo.jpg" style="width: 100%; border-radius: 0.5em;" />
+<p>&nbsp;</p>
+<p>Workshop registration and attendance is by invitation as part of the POSE-Harmony project, please contact
+    the organizers to request an invitation.</p>
+<p>&nbsp;</p>
+<h3 class="mb-4">Agenda <span style="font-weight: normal; font-size: 0.6em;"></span></h3>
+<div class="col-md-12 ftco-animate">
+    <table class="table">
+        <thead>
+            <th>Time</th>
+            <th>Event</th>
+        </thead>
+        <tr>
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">9:00-9:15am CDT</td>
+            <td>
+                <a href="https://urldefense.us/v2/url?u=https-3A__docs.google.com_presentation_d_1AbskJ7c9T5MfWL727j4o3AQzuy06yMRwndse7UhbwJA_edit-3Fslide-3Did.g37da15c69f5-5F0-5F1174-23slide-3Did.g37da15c69f5-5F0-5F1174&d=DwMFaQ&c=v4IIwRuZAmwupIjowmMWUmLasxPEgYsgNI-O7C4ViYc&r=Mraq4PNCr9bFrhhtgzco4ufuhzxYOQC95_YgiNBUXeA&m=5BAnI5SzDjcPMis-jM8doySpAM7wP_tjb7KHFdPk3Z_TrL1TQOcVQ-pc3wu_3Pd5&s=ZncArKRiE4UYuI29N67SeRldTj-ibd_k2TXg9ILNJyE&e=" target="_blank">
+                    <strong>Introduction and Objectives</strong></a>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">9:15-9:30am CDT</td>
+            <td><strong>Introductions at Your Table</strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">9:30-10:30am CDT</td>
+            <td>
+                <strong>Lightning Talks</strong><br />
+                <ul>
+                    <li>
+                        <a href="https://docs.google.com/presentation/d/1VVwRkeeMiRIjt5zdMyt4UGHM62KEgdHLCuzeo9IObnY/edit?slide=id.g30774404d27_0_0#slide=id.g30774404d27_0_0" target="_blank">CMS Physics Workflow</a>
+                        <br /><span style="color: #999;">Kevin Lannon &mdash; U Notre Dame</span></li>
+                    <li>
+                        <a href="https://docs.google.com/presentation/d/1I9rI-Ga1XyTpTU_JevPvUDBqelFCCgNv/edit?slide=id.p1#slide=id.p1" target="_blank">Notebook/Workflow Integration</a>
+                        <br /><span style="color: #999;">Tanu Malik &mdash; U Missouri</span></li>
+                    <li>
+                        <a href="/files/workshops/harmony-wci.pdf" target="_blank">Workflows Community Initiative</a>
+                        <br /><span style="color: #999;">Rafael Ferreira da Silva &mdash; ORNL</span></li>
+                </ul>
+            </td>
+        </tr>
+        <tr style="background-color: #eaeaea;">
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">10:30-11:00am CDT</td>
+            <td>Coffee Break</td>
+        </tr>
+        <tr>
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">11:00-12:30pm CDT</td>
+            <td>
+                <strong>Small Groups: Discuss Inherent Challenges</strong><br />
+                Report Back 12:00pm CDT
+            </td>
+        </tr>
+        <tr style="background-color: #eaeaea;">
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">12:30-1:30pm CDT</td>
+            <td>Lunch</td>
+        </tr>
+        <tr>
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">1:30-2:00pm CDT</td>
+            <td>
+                <strong>Lightning Talk</strong><br />
+                <ul>
+                    <li>
+                        <a href="https://arizona.app.box.com/s/nv5ds5k6aizy0xgp8amid4cx1rajnh9c" target="_blank">CyVerse Community</a>
+                        <br /><span style="color: #999;">Nirav Merchant &mdash; U Arizona</span></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">2:00-3:30pm CDT</td>
+            <td>
+                <strong>Small Groups: Discuss OSE Activitiess</strong><br />
+                Report Back 3:00pm CDT
+            </td>
+        </tr>
+        <tr style="background-color: #eaeaea;">
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">3:30-4:00pm CDT</td>
+            <td>Coffee Break</td>
+        </tr>
+        <tr>
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">4:00-4:45pm CDT</td>
+            <td>
+                <strong>Small Groups: Brainstorm Ideas for OSE Structure</strong><br />
+                Report Back 4:30pm CDT
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size: 0.9em; line-height: 1.2em; margin: 0;">4:45-5:00pm CDT</td>
+            <td><strong>Open Floor, Conclusion, and Next Steps</strong></td>
+        </tr>
+    </table>
+</div>
+<p>&nbsp;</p>
+<p>Attendees are encouraged to stay and participate in the full <a
+        href="https://www.escience-conference.org/2025/" target="_blank">IEEE Conference on eScience</a>
+    following this workshop.</p>
+<p>&nbsp;</p>
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="workshop-panel">
+                    
+                    <div class="workshop-panel-block">
+                        <h3>Organizers</h3>
+                        <div class="workshop-people-grid">
+                            
+                            <div class="workshop-person">
+                                <img src="https://engineering.nd.edu/wp-content/uploads/2020/06/Thain-Douglas-HS-800x800.jpg" alt="Douglas Thain (U Notre Dame)" />
+                                <div>
+                                    <strong>Douglas Thain (U Notre Dame)</strong>
+                                    
+                                    <a href="https://ccl.cse.nd.edu/software/taskvine/" target="_blank" rel="noopener">TaskVine Project</a>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="workshop-person">
+                                <img src="https://cs.uchicago.edu/wp-content/uploads/2020/02/chard-head.jpeg" alt="Kyle Chard (U Chicago)" />
+                                <div>
+                                    <strong>Kyle Chard (U Chicago)</strong>
+                                    
+                                    <a href="https://parsl-project.org/" target="_blank" rel="noopener">Parsl Project</a>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="workshop-person">
+                                <img src="https://www.pppl.gov/sites/g/files/toruqf286/files/styles/1x1_750w_750h/public/2024-05/20240514shantenu_jha5k6a9660_2.jpg?h=d55ea86e&itok=9VgfaYhG" alt="Shantenu Jha (Rutgers/PPPL)" />
+                                <div>
+                                    <strong>Shantenu Jha (Rutgers/PPPL)</strong>
+                                    
+                                    <a href="https://radical-cybertools.github.io/" target="_blank" rel="noopener">RADICAL CyberTools</a>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="workshop-person">
+                                <img src="https://rafaelsilva.com/assets/images/2022-rafael-ferreira-da-silva-high-resolution.jpg" alt="Rafael Ferreira da Silva (ORNL)" />
+                                <div>
+                                    <strong>Rafael Ferreira da Silva (ORNL)</strong>
+                                    
+                                    <a href="https://workflows.community" target="_blank" rel="noopener">Workflows Community Initiative</a>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    
+
+                    
+
+                    
+                    <div class="workshop-panel-block">
+                        <h3>Support</h3>
+                        <div class="workshop-support">
+                            <img src="/images/workshops/nsf-logo.png" alt="NSF" />
+                            <p>This work is supported by National Science Foundation grant TIP-2346119: POSE Phase I: HARMONY: Harmonizing the High Performance Python Workflow Ecosystem.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

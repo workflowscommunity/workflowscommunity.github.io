@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> SC22 BoF - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="SC22 BoF" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An Update on the Community Roadmap for HPC and AI Scientific Workflows Research and Development SC22 BoF Tuesday - Nov 15, 2022 12:15pm-1:15pm CT Room D221 The interplay of workflow technologies and HPC has been challenged by the fast rise of AI and ML technologies. Workflows empowered with ML techniques largely differ from traditional workflows running on HPC machines. In this BoF, we bring together researchers from the workflows, HPC, and AI/ML communities that work on scientific research questions that require large-scale, distributed, and AI-heavy computing. The session presented an update on challenges, opportunities, new research directions, and future pathways, and sought input for updating a community roadmap on HPC and AI workflows research and development. In this first edition of this BoF session (Tuesday Nov 15, 2022, 12:15pm-1:15pm CT), we brought together members of the Workflows Community Initiative to provide an update on challenges, opportunities, new research directions, and future pathways on HPC and AI workflows. This BoF will produce tangible outputs both in terms of a package of materials (lightning talks, live-poll questions and responses) and a draft of an updated community roadmap (based on https://doi.org/10.1109/WORKS54523.2021.00016)." />
+<meta property="og:description" content="An Update on the Community Roadmap for HPC and AI Scientific Workflows Research and Development SC22 BoF Tuesday - Nov 15, 2022 12:15pm-1:15pm CT Room D221 The interplay of workflow technologies and HPC has been challenged by the fast rise of AI and ML technologies. Workflows empowered with ML techniques largely differ from traditional workflows running on HPC machines. In this BoF, we bring together researchers from the workflows, HPC, and AI/ML communities that work on scientific research questions that require large-scale, distributed, and AI-heavy computing. The session presented an update on challenges, opportunities, new research directions, and future pathways, and sought input for updating a community roadmap on HPC and AI workflows research and development. In this first edition of this BoF session (Tuesday Nov 15, 2022, 12:15pm-1:15pm CT), we brought together members of the Workflows Community Initiative to provide an update on challenges, opportunities, new research directions, and future pathways on HPC and AI workflows. This BoF will produce tangible outputs both in terms of a package of materials (lightning talks, live-poll questions and responses) and a draft of an updated community roadmap (based on https://doi.org/10.1109/WORKS54523.2021.00016)." />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-02T01:59:16+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="twitter:title" content="SC22 BoF" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2026-03-02T01:59:16+00:00","datePublished":"2026-03-02T01:59:16+00:00","description":"An Update on the Community Roadmap for HPC and AI Scientific Workflows Research and Development SC22 BoF Tuesday - Nov 15, 2022 12:15pm-1:15pm CT Room D221 The interplay of workflow technologies and HPC has been challenged by the fast rise of AI and ML technologies. Workflows empowered with ML techniques largely differ from traditional workflows running on HPC machines. In this BoF, we bring together researchers from the workflows, HPC, and AI/ML communities that work on scientific research questions that require large-scale, distributed, and AI-heavy computing. The session presented an update on challenges, opportunities, new research directions, and future pathways, and sought input for updating a community roadmap on HPC and AI workflows research and development. In this first edition of this BoF session (Tuesday Nov 15, 2022, 12:15pm-1:15pm CT), we brought together members of the Workflows Community Initiative to provide an update on challenges, opportunities, new research directions, and future pathways on HPC and AI workflows. This BoF will produce tangible outputs both in terms of a package of materials (lightning talks, live-poll questions and responses) and a draft of an updated community roadmap (based on https://doi.org/10.1109/WORKS54523.2021.00016).","headline":"SC22 BoF","image":"https://workflows.community/images/wci-default-card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/bof/sc22/"},"url":"/bof/sc22/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">SC22 BoF</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            <div class="container" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-8 wg">
+            <p class="subheading text-center">An Update on the Community Roadmap for HPC and AI Scientific Workflows Research and Development</p>
+            <h2 class="mb-4 text-center">SC22 BoF</h2>
+            <p class="text-center mb-5">
+                Tuesday - Nov 15, 2022<br />
+                12:15pm-1:15pm CT<br />
+                Room D221
+            </p>
+            <p>
+                The interplay of workflow technologies and HPC has been challenged by the fast rise of AI and ML
+                technologies.
+                Workflows empowered with ML techniques largely differ from traditional workflows running on HPC
+                machines. In
+                this BoF, we bring together researchers from the <strong>workflows, HPC, and AI/ML</strong>
+                communities that work on scientific research questions that require large-scale, distributed, and
+                AI-heavy
+                computing. The session presented an update on challenges, opportunities, new research directions, and
+                future
+                pathways, and sought input for updating a community roadmap on HPC and AI workflows research and
+                development.
+            </p>
+            <p>
+                In this first edition of this BoF session (<i>Tuesday Nov 15, 2022,
+                    12:15pm-1:15pm CT</i>), we
+                brought together members of the Workflows Community Initiative to provide an update on challenges,
+                opportunities, new research directions, and future pathways on HPC and AI workflows.
+            </p>
+            <p>
+                This BoF will produce tangible outputs both in terms of a package of materials (lightning talks,
+                live-poll
+                questions and responses) and a draft of an updated <i>community roadmap</i> (based on
+                <a href="https://doi.org/10.1109/WORKS54523.2021.00016" target="_blank" style="color: darkred">
+                    <i class="fas fa-file-pdf" style="color: darkred"></i>
+                    https://doi.org/10.1109/WORKS54523.2021.00016</a>).
+            </p>
+
+            <h2 class="mb-4">Agenda</h2>
+            <div class="col-md-12 ftco-animate">
+                <ul>
+                    <li style="color: rgb(5, 135, 215)">
+                        12:15pm-12:20pm &mdash; <a href="/files/bof/bof_sc22_opening_remarks.pdf">Opening
+                            remarks</a><br />
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            Rafael Ferreira da Silva – <span style="font-style: italic; color: #999">Oak Ridge National
+                                Laboratory</span><br />
+                            Rosa M. Badia – <span style="font-style: italic; color: #999">Barcelona Supercomputing
+                                Center</span><br />
+                            Kyle Chard – <span style="font-style: italic; color: #999">University of
+                                Chicago</span><br />
+                            Olivier Terzo – <span style="font-style: italic; color: #999">LINKS Foundation</span>
+                        </p>
+                    </li>
+                    <li style="color: rgb(5, 135, 215)">
+                        12:20pm-12:50pm &mdash; Lightning talks: Challenges, opportunities, new research directions, and
+                        future
+                        pathways<br />
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <a href="/files/bof/bof_sc22_european_initiatives.pdf">
+                                Overview of European initiatives focusing on the orchestration of HPC, AI, and Big
+                                data</a><br />
+                            <span style="font-style: italic; color: #999">Alberto Scionti, ACROSS/LINKS - Jorge Ejarque,
+                                eFlows4HPC/BSC</span>
+                        </p>
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <a href="/files/bof/bof_sc22_ai_workflows.pdf">
+                                AI-enabled workflows for pandemic response</a><br />
+                            <span style="font-style: italic; color: #999">Arvind Ramanathan, ANL</span>
+                        </p>
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <a href="/files/bof/bof_sc22_ams.pdf">
+                                Machine Learning Driven Dynamic workflows on Leadership Class Systems to Resolve
+                                Multiscale
+                                Phenomena</a><br />
+                            <span style="font-style: italic; color: #999">Timo Bremer, LLNL</span>
+                        </p>
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <a href="/files/bof/bof_sc22_iri.pdf">
+                                Integrating Research Infrastructure to Accelerate Science</a><br />
+                            <span style="font-style: italic; color: #999">Ben Brown, DOE - Bill Miller, NSF</span>
+                        </p>
+                    </li>
+                    <li style="color: rgb(5, 135, 215)">
+                        12:50pm-1:15pm &mdash; Community roadmap discussions<br />
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="blog-sidbar">
+                <h2 class="mb-5">Supporters</h2>
+                <div class="col-md-12 ftco-animate">
+                    <a href="https://exaworks.org" target="_blank">
+                        <img src="https://exaworks.org/images/exaworks-name.png" height="25px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://eflows4hpc.eu/" target="_blank">
+                        <img src="/images/bof/eflows4hpc.png" height="30px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://www.acrossproject.eu/" target="_blank">
+                        <img src="/images/bof/ACROSS.jpeg" height="30px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://www.exascaleproject.org/" target="_blank">
+                        <img src="/images/bof/ecp.png" height="35px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://science.osti.gov/" target="_blank">
+                        <img src="https://science.osti.gov/assets/img/doe-logos/logo.png" height="30px"
+                            class="mb-3 mr-3" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

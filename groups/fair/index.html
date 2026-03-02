@@ -1,0 +1,572 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> FAIR Computational Workflows - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="FAIR Computational Workflows" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Define FAIR principles for computational workflows that consider the complex lifecycle from specification to execution and data products" />
+<meta property="og:description" content="Define FAIR principles for computational workflows that consider the complex lifecycle from specification to execution and data products" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-02T01:59:16+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="twitter:title" content="FAIR Computational Workflows" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2026-03-02T01:59:16+00:00","datePublished":"2026-03-02T01:59:16+00:00","description":"Define FAIR principles for computational workflows that consider the complex lifecycle from specification to execution and data products","headline":"FAIR Computational Workflows","image":"https://workflows.community/images/wci-default-card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/groups/fair/"},"url":"/groups/fair/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">FAIR Computational Workflows</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            
+
+
+
+<div class="container wg-page" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-12 wg wg-contents">
+            <div class="wg-hero" style="--status-color: #78c315;">
+                <div class="wg-hero-card">
+                    <p class="wg-breadcrumb">
+                        <a href="/groups">Working Groups</a>
+                        <span>/</span>
+                        FAIR Computational Workflows
+                    </p>
+                    <div class="wg-hero-eyebrow">Working Group</div>
+                    <h1>FAIR Computational Workflows</h1>
+                    
+                    <p class="wg-hero-desc">Define FAIR principles for computational workflows that consider the complex lifecycle from specification to execution and data products</p>
+                    
+                    <div class="wg-meta">
+                        
+                        <span class="wg-pill wg-pill-status">
+                            <span class="wg-pill-dot"></span>
+                            Active
+                        </span>
+                        
+                        <span class="wg-pill wg-pill-count">
+                            <i class="fas fa-users"></i>
+                            15 members
+                        </span>
+                    </div>
+                    <div class="wg-actions">
+                        
+                        <a href="https://forms.gle/5ZNJ8Vxdu5X3SCaw7" target="_blank" rel="noopener" class="btn btn-primary py-3 px-5">
+                            <i class="fas fa-user-plus"></i> Join
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="wg-members-panel" id="wg-members">
+                <div class="wg-members-header">
+                    <h3>Members</h3>
+                    <span class="wg-members-count">15 people</span>
+                </div>
+                <div class="wg-members-grid">
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-role">Chair</div>
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://www.research.manchester.ac.uk/portal/carole.goble.html" target="_blank" rel="noopener">Carole Goble</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-role">Chair</div>
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://s11.no/" target="_blank" rel="noopener">Stian Soiland-Reyes</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-role">Chair</div>
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://www.ornl.gov/staff-profile/sean-r-wilkinson" target="_blank" rel="noopener">Sean R. Wilkinson</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://orcid.org/0000-0002-2961-9670" target="_blank" rel="noopener">Michael R. Crusoe</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://www.rosafilgueira.com/" target="_blank" rel="noopener">Rosa Figueira</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://www.ghga.de/about-us/team-members/gadelha-luiz" target="_blank" rel="noopener">Luiz Gadelha</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://w3id.org/people/dgarijo" target="_blank" rel="noopener">Daniel Garijo</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="http://sandra-gesing.com/" target="_blank" rel="noopener">Sandra Gesing</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://www.linkedin.com/in/johan-gustafsson-96374399/" target="_blank" rel="noopener">Johan Gustafsson</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://kinoshita.eti.br/" target="_blank" rel="noopener">Bruno de Paula Kinoshita</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://www.linkedin.com/in/farahzk/" target="_blank" rel="noopener">Farah Zaib Khan</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://www.dkrz.de/en/about-en/staff/dr-karsten-peters?set_language=en" target="_blank" rel="noopener">Karsten Peters-von Gehlen</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://www.silverdraft.com" target="_blank" rel="noopener">Randy K Rannow</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://www.earlham.ac.uk/profile/nicola-soranzo" target="_blank" rel="noopener">Nicola Soranzo</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="wg-member-card">
+                        
+                        <div class="wg-member-name">
+                            
+                            <a href="https://zihengsun.github.io" target="_blank" rel="noopener">Ziheng Sun</a>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="wg-content-card">
+                <p>The FAIR principles have laid a foundation for sharing and publishing digital assets and, in particular, data. The
+FAIR principles emphasize machine accessibility and that all digital assets should be Findable, Accessible, Interoperable,
+and Reusable. Workflows encode the methods by which the scientific process is conducted and via which data are created.
+It is thus important that workflows both support the creation of FAIR data and themselves adhere to the FAIR principles.</p>
+
+<p>Subsections:</p>
+
+<ul>
+  <li><a href="best-practices">Best practices for FAIR workflows</a></li>
+  <li><a href="training">Training material for FAIR workflows</a></li>
+  <li><a href="resources">Repositories, standards, projects for FAIR workflows</a></li>
+  <li><a href="events">Events related to FAIR workflows</a></li>
+  <li><a href="bibliography">Bibliography and references about FAIR workflows</a></li>
+</ul>
+
+<hr />
+
+<h2 id="goals">Goals</h2>
+
+<p>The working group is seeking workflow developers and users to directly inform the standards, processes and recommendations 
+that make computational workflows FAIR.</p>
+
+<p>In this working group, we aim to:</p>
+<ul>
+  <li>Define FAIR principles for computational workflows that consider the complex lifecycle from specification to execution and data products</li>
+  <li>Define metrics to measure the FAIRness of a workflow</li>
+  <li>Define recommendations for FAIR workflow developers and systems</li>
+  <li>Define processes to automate FAIRness in workflows by recording necessary provenance data</li>
+</ul>
+
+<h2 id="working-group-meetings">Working Group meetings</h2>
+
+<p>This working Group is open for anyone interested, please feel free to <a href="https://workflows.community/contact">join the Workflows Community Initiative</a> or attend one of our calls. To ensure more people can get involved in this international effort, the Australian BioCommons is collaborating with the WCI to run a second working group meeting at a time convenient for the Asia Pacific region. Everyone is welcome, regardless of your timezone.</p>
+
+<ul>
+  <li><strong>Meeting schedule</strong>:
+    <ul>
+      <li>Monthly 2nd Thursday 14:00 UTC</li>
+      <li>Monthly 2nd Thursday 13:30 AEDT (note: daylight savings follows Australia)</li>
+      <li>Monthly 4th Thursday 14:00 UTC</li>
+    </ul>
+  </li>
+  <li><strong>Meeting agendas/telcon</strong>: <a href="https://docs.google.com/document/d/1sULkJwVACjSxQnM5bvjgYSkawZhUEkC3s-A5CvgmNT4/edit">Meeting notes</a></li>
+  <li><strong>Slack chat</strong>: <a href="https://workflowscommunity.slack.com/archives/C034U2NEUTS">#fair-computational-workflows</a> on workflowscommunity.slack.com (<a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ">invite link</a>)</li>
+</ul>
+
+<h2 id="what-are-fair-computational-workflows">What are FAIR Computational Workflows?</h2>
+
+<p>Adapted from the article <strong>FAIR Computational Workflows</strong> <a href="https://doi.org/10.1162/dint_a_00033">https://doi.org/10.1162/dint_a_00033</a>:</p>
+
+<blockquote>
+  <p><strong>Computational workflows</strong> describe the complex multi-step methods that are used for data collection, data preparation, analytics, predictive modelling, and simulation that lead to new data products.</p>
+
+  <p>Workflows can inherently contribute to the <a href="https://www.go-fair.org/fair-principles/">FAIR data principles</a>: by <em>processing data</em> according to established metadata; by <em>creating metadata</em> themselves during the processing of data; and by tracking and recording <em>data provenance</em>.</p>
+
+  <p>These properties aid <em>data quality assessment</em> and contribute to secondary <em>data usage</em>. Moreover, workflows are <strong>digital objects in their own right</strong>.</p>
+
+  <p>We argue that <strong>FAIR principles for workflows</strong> need to address their specific nature in terms of their composition of executable software steps, their provenance, and their development.</p>
+</blockquote>
+
+<p>This group is gathering community resources and literature on FAIR Computational Workflows. Feel free to <a href="https://github.com/workflowscommunity/workflowscommunity.github.io/blob/main/_working_groups/fair.md">suggest a change</a> to help improve this page!</p>
+
+<h2 id="cite-fair-computational-workflows">Cite FAIR Computational Workflows</h2>
+
+<p>Sean Wilkinson, Meznah Aloqalaa, Khalid Belhajjame, Michael R. Crusoe, Bruno de Paula Kinoshita, Luiz Gadelha, Daniel Garijo, Ove Johan Ragnar Gustafsson, Nick Juty, Sehrish Kanwal, Farah Zaib Khan, Johannes Köster, Karsten Peters-von Gehlen, Line Pouchard, Randy K. Rannow, Stian Soiland-Reyes, Nicola Soranzo, Shoaib Sufi, Ziheng Sun, Baiba Vilne, Merridee A. Wouters, Denis Yuen, Carole Goble (2025):<br />
+<a href="https://doi.org/10.1038/s41597-025-04451-9"><strong>Applying the FAIR Principles to Computational Workflows</strong></a>.<br />
+<em>Scientific Data</em> <strong>12</strong>:328
+<a href="https://doi.org/10.1038/s41597-025-04451-9">https://doi.org/10.1038/s41597-025-04451-9</a></p>
+
+<p>Ove Johan Ragnar Gustafsson, Sean R. Wilkinson, Finn Bacall, Stian Soiland-Reyes, Simone Leo, Luca Pireddu, Stuart Owen, Nick Juty, José Mª Fernández, Tom Brown, Hervé Ménager, Björn Grüning, Salvador Capella-Gutierrez, Frederik Coppens, Carole Goble (2025):<br />
+<a href="https://doi.org/10.1038/s41597-025-04786-3"><strong>WorkflowHub</strong>: a registry for computational workflows</a>.<br />
+<em>Scientific Data</em> <strong>12</strong>:837<br />
+<a href="https://doi.org/10.1038/s41597-025-04786-3">https://doi.org/10.1038/s41597-025-04786-3</a></p>
+
+<p>Sean R. Wilkinson, Johan Gustafsson, Finn Bacall, Khalid Belhajjame, Salvador Capella, Jose Maria Fernandez Gonzalez, Jacob Fosso Tande, Luiz Gadelha, Daniel Garijo, Patricia Grubel, Bjorn Grüning, Farah Zaib Khan, Sehrish Kanwal, Simone Leo, Stuart Owen, Luca Pireddu, Line Pouchard, Laura Rodríguez-Navas, Beatriz Serrano-Solano, Stian Soiland-Reyes, Baiba Vilne, Alan Williams, Merridee Ann Wouters, Frederik Coppens, Carole Goble (2025):<br />
+<strong>An Ecosystem of Services for FAIR Computational Workflows</strong>.<br />
+Book chapter, draft<br />
+<em>arXiv</em> 2505.15988 [cs.DC]<br />
+<a href="https://doi.org/10.48550/arXiv.2505.15988">https://doi.org/10.48550/arXiv.2505.15988</a></p>
+
+<p>Carole Goble, Sarah Cohen-Boulakia, Stian Soiland-Reyes, Daniel Garijo, Yolanda Gil, Michael R. Crusoe, Kristian Peters, Daniel Schober (2020):<br />
+<a href="https://doi.org/10.1162/dint_a_00033"><strong>FAIR Computational Workflows</strong></a>.<br />
+<em>Data Intelligence</em>  <strong>2</strong>(1):108–121<br />
+<a href="https://doi.org/10.1162/dint_a_00033">https://doi.org/10.1162/dint_a_00033</a></p>
+
+<p><em>See the <a href="bibliography/">bibliography</a> for further FAIR Computational Workflow literature</em></p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

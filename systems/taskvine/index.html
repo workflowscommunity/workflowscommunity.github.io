@@ -1,0 +1,879 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> TaskVine - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="TaskVine" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="TaskVine is a system building large scale data intensive dynamic workflows that run on HPC clusters, GPU clusters, and commercial clouds. As tasks access external data sources and produce their own outputs, more and more data is pulled into local storage on workers. This data is used to accelerate future tasks and avoid re-computing exisiting results. Data gradually grows ‘like a vine’ through the cluster. TaskVine can serve as an execution for other workflow systems such as Parsl and Dask." />
+<meta property="og:description" content="TaskVine is a system building large scale data intensive dynamic workflows that run on HPC clusters, GPU clusters, and commercial clouds. As tasks access external data sources and produce their own outputs, more and more data is pulled into local storage on workers. This data is used to accelerate future tasks and avoid re-computing exisiting results. Data gradually grows ‘like a vine’ through the cluster. TaskVine can serve as an execution for other workflow systems such as Parsl and Dask." />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://ccl.cse.nd.edu/software/taskvine/taskvine-icon.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-02T01:59:16+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://ccl.cse.nd.edu/software/taskvine/taskvine-icon.png" />
+<meta property="twitter:title" content="TaskVine" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2026-03-02T01:59:16+00:00","datePublished":"2026-03-02T01:59:16+00:00","description":"TaskVine is a system building large scale data intensive dynamic workflows that run on HPC clusters, GPU clusters, and commercial clouds. As tasks access external data sources and produce their own outputs, more and more data is pulled into local storage on workers. This data is used to accelerate future tasks and avoid re-computing exisiting results. Data gradually grows ‘like a vine’ through the cluster. TaskVine can serve as an execution for other workflow systems such as Parsl and Dask.","headline":"TaskVine","image":"https://ccl.cse.nd.edu/software/taskvine/taskvine-icon.png","mainEntityOfPage":{"@type":"WebPage","@id":"/systems/taskvine/"},"url":"/systems/taskvine/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">TaskVine</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            <section class="system-detail">
+    <div class="container system-container" data-aos="fade-up">
+        <div class="system-hero">
+            <p class="system-breadcrumb">
+                <a href="/systems">Workflow Systems</a>
+                <span>/</span>
+                TaskVine
+            </p>
+            <div class="system-hero-content">
+                <div>
+                    <div class="system-title-row">
+                        <h1>TaskVine</h1>
+                        
+                        <span class="system-wci-badge">
+                            <img src="/favicon.ico" alt="WCI" />
+                            WCI metadata
+                        </span>
+                        
+                    </div>
+                    <p class="system-hero-headline">An execution system for large scale data intensive dynamic workflows.</p>
+                    <div class="system-hero-actions">
+                        
+                        <a href="http://ccl.cse.nd.edu" target="_blank" class="btn btn-primary system-cta-btn">
+                            Visit website
+                        </a>
+                        
+                        
+                        <a href="https://github.com/cooperative-computing-lab/cctools" target="_blank" class="btn btn-outer">
+                            View repository
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="system-hero-card">
+                    <div class="system-meta-grid">
+                        <div class="system-meta">
+                            <span>Last updated</span>
+                            <strong>27 Feb 2026</strong>
+                        </div>
+                        
+                        <div class="system-meta">
+                            <span>Release</span>
+                            <strong>release/7.16.4</strong>
+                        </div>
+                        
+                        <div class="system-meta">
+                            <span>Language</span>
+                            <strong>Python</strong>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row system-main g-4">
+            <div class="col-lg-8 wg wg-contents">
+                <section class="system-section">
+                    <h2>Overview</h2>
+                    <p>TaskVine is a system building large scale data intensive dynamic workflows that run on HPC clusters, GPU clusters, and commercial clouds. As tasks access external data sources and produce their own outputs, more and more data is pulled into local storage on workers. This data is used to accelerate future tasks and avoid re-computing exisiting results. Data gradually grows 'like a vine' through the cluster.  TaskVine can serve as an execution for other workflow systems such as Parsl and Dask.</p>
+                </section>
+
+                <section class="system-section">
+                    <div class="system-actions-grid">
+                        
+                        <a class="system-action" href="https://cctools.readthedocs.io/en/stable/install" target="_blank">
+                            <i class="fas fa-download"></i>
+                            <div>
+                                <strong>Install</strong>
+                                <span>Get started quickly</span>
+                            </div>
+                        </a>
+                        
+                        
+                        <a class="system-action" href="https://cctools.readthedocs.io/en/stable/taskvine/#quick-start" target="_blank">
+                            <i class="fas fa-user-cog"></i>
+                            <div>
+                                <strong>Tutorial</strong>
+                                <span>Learn the basics</span>
+                            </div>
+                        </a>
+                        
+                        
+                        <a class="system-action" href="https://cctools.readthedocs.io/en/stable/taskvine" target="_blank">
+                            <i class="fas fa-book"></i>
+                            <div>
+                                <strong>Documentation</strong>
+                                <span>Explore the docs</span>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </section>
+
+                <section class="system-section">
+                    <h3>Repository activity</h3>
+                    <div class="system-stats-grid">
+                        <a class="system-stat" href="https://github.com/cooperative-computing-lab/cctools/stargazers" target="_blank">
+                            <strong>143</strong>
+                            <span>Stargazers</span>
+                        </a>
+                        <a class="system-stat" href="https://github.com/cooperative-computing-lab/cctools/network/members" target="_blank">
+                            <strong>125</strong>
+                            <span>Forks</span>
+                        </a>
+                    </div>
+                </section>
+
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <section class="system-section">
+                    <h3 class="system-terminology-title">Terminology
+                        <span class="tt">
+                            <span class="tt-trigger" aria-hidden="true"><i class="fa fa-circle-info"></i></span>
+                            <span class="tooltiptext">
+                                Terminology below follows the definitions established by the
+                                <a href="/terminology">Workflows Community Terminology</a>.
+                            </span>
+                        </span>
+                    </h3>
+                    <div id="tree">
+                        <div class="branch">
+                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753"><strong>Characteristics</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Flow</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Data</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Granularity</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Sub-workflows</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Coupling</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Loose</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Domain</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Agnostic</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B"><strong>Composition</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D8833B"><strong>Description</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B">Standard (Make)</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D8833B"><strong>Abstraction</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B">Abstract</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D8833B"><strong>Modularity</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B">Hierarchical</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68"><strong>Orchestration</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #55AB68"><strong>Planning</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68">Static</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #55AB68"><strong>Execution</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68">Runner</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA"><strong>Data Management</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #4EADEA"><strong>Transport</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA">File-based</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #4EADEA"><strong>Storage</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA">Shared</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA">Replicated</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #F5EAF3; border: 1px solid #8448A8"><strong>Metadata Capture</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #8448A8"><strong>Anomaly Detection</strong></span>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #8448A8"><strong>Monitoring</strong></span>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #8448A8"><strong>Provenance</strong></span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span><strong>Extensions</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span>Distributed Storage</span>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span>HPC Execution</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                
+                
+                
+                
+                <section class="system-section">
+                    <h3 class="system-terminology-title">Terminology
+                        <span class="tt">
+                            <span class="tt-trigger" aria-hidden="true"><i class="fa fa-circle-info"></i></span>
+                            <span class="tooltiptext">
+                                Terminology below follows the definitions established by the
+                                <a href="/terminology">Workflows Community Terminology</a>.
+                            </span>
+                        </span>
+                    </h3>
+                    <div id="tree">
+                        <div class="branch">
+                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753"><strong>Characteristics</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Flow</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Task</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Iterative</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Granularity</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Functions</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Executables</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Coupling</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Loose</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Domain</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Agnostic</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B"><strong>Composition</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D8833B"><strong>Description</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B">API</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D8833B"><strong>Abstraction</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B">Intermediate</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D8833B"><strong>Modularity</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B">Flat</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68"><strong>Orchestration</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #55AB68"><strong>Planning</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68">Dynamic</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #55AB68"><strong>Execution</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68">Resource Manager</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA"><strong>Data Management</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #4EADEA"><strong>Transport</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA">File-based</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #4EADEA"><strong>Storage</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA">Shared</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA">Distributed</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA">Replicated</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #F5EAF3; border: 1px solid #8448A8"><strong>Metadata Capture</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #8448A8"><strong>Anomaly Detection</strong></span>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #8448A8"><strong>Monitoring</strong></span>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #8448A8"><strong>Provenance</strong></span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span><strong>Extensions</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span>Serverless</span>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span>Autoscaling</span>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span>HPC Execution</span>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span>Recoverable Storage</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+
+            <div class="col-lg-4">
+                <aside class="system-sidebar">
+                    <div class="system-sidebar-card">
+                        <div class="system-logo-block">
+                            <img src="https://ccl.cse.nd.edu/software/taskvine/taskvine-icon.png" alt="TaskVine" />
+                        </div>
+                        <h4>Links</h4>
+                        <div class="system-links">
+                            
+                            <a href="http://ccl.cse.nd.edu" target="_blank" class="system-link">
+                                <span class="system-link-icon"><i class="fa fa-link"></i></span>
+                                <span class="system-link-text">
+                                    <span class="system-link-label">Website</span>
+                                    <span class="system-link-value">http://ccl.cse.nd.edu</span>
+                                </span>
+                            </a>
+                            
+                            
+                            <a href="https://github.com/cooperative-computing-lab/cctools" target="_blank" class="system-link">
+                                <span class="system-link-icon"><i class="fab fa-github"></i></span>
+                                <span class="system-link-text">
+                                    <span class="system-link-label">Repository</span>
+                                    <span class="system-link-value">https://github.com/cooperative-computing-lab/cctools</span>
+                                </span>
+                            </a>
+                            
+                            
+                            
+                        </div>
+                    </div>
+
+                    <div class="system-sidebar-card">
+                        <h4>Contributors</h4>
+                        <div class="system-contributors">
+                            <a href="https://github.com/btovar" target="_blank"><img src="https://avatars.githubusercontent.com/u/3081826?v=4" width="48" height="48" alt="btovar" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/dthain" target="_blank"><img src="https://avatars.githubusercontent.com/u/2752914?v=4" width="48" height="48" alt="dthain" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/tshaffe1" target="_blank"><img src="https://avatars.githubusercontent.com/u/6613013?v=4" width="48" height="48" alt="tshaffe1" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/nhazekam" target="_blank"><img src="https://avatars.githubusercontent.com/u/5231159?v=4" width="48" height="48" alt="nhazekam" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/dpandiar" target="_blank"><img src="https://avatars.githubusercontent.com/u/3902762?v=4" width="48" height="48" alt="dpandiar" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/pbui" target="_blank"><img src="https://avatars.githubusercontent.com/u/3976244?v=4" width="48" height="48" alt="pbui" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/haiyanmeng" target="_blank"><img src="https://avatars.githubusercontent.com/u/5217421?v=4" width="48" height="48" alt="haiyanmeng" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/rampantmonkey" target="_blank"><img src="https://avatars.githubusercontent.com/u/558491?v=4" width="48" height="48" alt="rampantmonkey" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/lyu2" target="_blank"><img src="https://avatars.githubusercontent.com/u/3998431?v=4" width="48" height="48" alt="lyu2" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/nkremerh" target="_blank"><img src="https://avatars.githubusercontent.com/u/12732986?v=4" width="48" height="48" alt="nkremerh" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/storelord" target="_blank"><img src="https://avatars.githubusercontent.com/u/149016?v=4" width="48" height="48" alt="storelord" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/colinthomas-z80" target="_blank"><img src="https://avatars.githubusercontent.com/u/33940547?v=4" width="48" height="48" alt="colinthomas-z80" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/JinZhou5042" target="_blank"><img src="https://avatars.githubusercontent.com/u/142265839?v=4" width="48" height="48" alt="JinZhou5042" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/tphung3" target="_blank"><img src="https://avatars.githubusercontent.com/u/72035512?v=4" width="48" height="48" alt="tphung3" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/BarrySlyDelgado" target="_blank"><img src="https://avatars.githubusercontent.com/u/25990259?v=4" width="48" height="48" alt="BarrySlyDelgado" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/cshinaver" target="_blank"><img src="https://avatars.githubusercontent.com/u/7769334?v=4" width="48" height="48" alt="cshinaver" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/charleszheng44" target="_blank"><img src="https://avatars.githubusercontent.com/u/4213464?v=4" width="48" height="48" alt="charleszheng44" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/David-Simonetti-ND" target="_blank"><img src="https://avatars.githubusercontent.com/u/31227025?v=4" width="48" height="48" alt="David-Simonetti-ND" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/batrick" target="_blank"><img src="https://avatars.githubusercontent.com/u/548304?v=4" width="48" height="48" alt="batrick" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/sghng" target="_blank"><img src="https://avatars.githubusercontent.com/u/58419736?v=4" width="48" height="48" alt="sghng" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/epyifany" target="_blank"><img src="https://avatars.githubusercontent.com/u/34172480?v=4" width="48" height="48" alt="epyifany" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/reneme" target="_blank"><img src="https://avatars.githubusercontent.com/u/1562139?v=4" width="48" height="48" alt="reneme" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/JosephDuggan7" target="_blank"><img src="https://avatars.githubusercontent.com/u/89431217?v=4" width="48" height="48" alt="JosephDuggan7" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/jmrundle" target="_blank"><img src="https://avatars.githubusercontent.com/u/30134363?v=4" width="48" height="48" alt="jmrundle" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/jblomer" target="_blank"><img src="https://avatars.githubusercontent.com/u/1557360?v=4" width="48" height="48" alt="jblomer" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/arctangerines" target="_blank"><img src="https://avatars.githubusercontent.com/u/149563981?v=4" width="48" height="48" alt="arctangerines" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/bwiseman77" target="_blank"><img src="https://avatars.githubusercontent.com/u/72280180?v=4" width="48" height="48" alt="bwiseman77" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/andreyto" target="_blank"><img src="https://avatars.githubusercontent.com/u/136912?v=4" width="48" height="48" alt="andreyto" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/benjaminlyons" target="_blank"><img src="https://avatars.githubusercontent.com/u/20188359?v=4" width="48" height="48" alt="benjaminlyons" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/nicklocascio45" target="_blank"><img src="https://avatars.githubusercontent.com/u/131113907?v=4" width="48" height="48" alt="nicklocascio45" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

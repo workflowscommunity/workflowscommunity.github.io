@@ -1,0 +1,636 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> Workflows Community Talks - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Workflows Community Talks" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="twitter:title" content="Workflows Community Talks" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Workflows Community Initiative"},"headline":"Workflows Community Talks","image":"https://workflows.community/images/wci-default-card.png","url":"/talks"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">Workflows Community Talks</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            <section class="talks-hero">
+    <div class="container talks-container" data-aos="fade-up">
+        <div class="talks-hero-content">
+            <div>
+                <h1>Monthly talks for the workflows community</h1>
+                <p class="talks-lead">
+                    A 30 minute virtual series highlighting workflow systems, research frameworks, and community
+                    practices. Open to anyone interested in workflows.
+                </p>
+                <div class="talks-organizers">
+                    <span>Organizers</span>
+                    <div class="talks-organizer-list">
+                        <div class="talks-organizer">
+                            <img src="/images/about/hudson.jpg" alt="Stephen Hudson">
+                            <div>
+                                <strong>Stephen Hudson</strong>
+                                <span>ANL</span>
+                            </div>
+                        </div>
+                        <div class="talks-organizer">
+                            <img src="/images/about/casol.jpeg" alt="Daniela Cassol">
+                            <div>
+                                <strong>Daniela Cassol</strong>
+                                <span>LBNL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="talks-hero-actions">
+                    <a href="https://docs.google.com/forms/d/1XTJFRJ5Ivu2-Z-i9dnq2umv-OuE2UlVreea_dLawd2c"
+                        target="_blank" class="btn btn-primary talks-cta-btn">Register</a>
+                    <a href="https://docs.google.com/forms/d/1P9u12xVgh77FC6cGb5v7iE1rF0VpWAzSw0cmJ-BRD0Q"
+                        target="_blank" class="btn btn-outer">Give a talk</a>
+                </div>
+            </div>
+            <div class="talks-hero-card">
+                <h3>Watch the series</h3>
+                <p>Catch the latest talk recordings on our YouTube channel.</p>
+                <iframe src="https://www.youtube.com/embed/videoseries?si=ElrjhblSaUsMzOed&amp;list=PLAtmuqHExRvNnGtrqHl1ZXR6ZH37HLfo1"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="talks-section">
+    <div class="container talks-container" data-aos="fade-up">
+        
+        
+        
+
+        
+        
+        
+
+        
+
+        <div class="talks-block">
+            <div class="talks-block-header">
+                <h2>Previous talks</h2>
+                
+                <span class="talks-count">11 talks</span>
+            </div>
+            <details class="talks-archive" open>
+                <summary>Browse the archive</summary>
+                <div class="talks-list talks-grid">
+                    
+                    
+<div class="swiper-slide">
+  <div class="testimonial-wrap">
+    <div class="testimonial-item talk-card-item">
+      <a class="talk-card-link" href="/talks/2026_02_18/" aria-label="Collaborative Cosmology at Scale with the OpenCosmo Platform"></a>
+      <div class="d-flex justify-content-between align-items-center info-box talk-card-layout">
+        <div class="talk-card-info">
+          <span class="talk-card-date">Feb 18, 2026</span>
+          <h3 class="heading">Collaborative Cosmology at Scale with the OpenCosmo Platform</h3>
+          <span class="position talk-card-speakers">Patrick Wells (Argonne National Laboratory)</span>
+          
+        </div>
+        <div class="talk-card-avatars">
+          
+          
+          
+          <img src="/images/talks/wells.jpg" alt="Patrick Wells" class="talk-card-avatar" />
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+                    
+                    
+<div class="swiper-slide">
+  <div class="testimonial-wrap">
+    <div class="testimonial-item talk-card-item">
+      <a class="talk-card-link" href="/talks/2026_01_14/" aria-label="Up-scaling Python functions for HPC with executorlib"></a>
+      <div class="d-flex justify-content-between align-items-center info-box talk-card-layout">
+        <div class="talk-card-info">
+          <span class="talk-card-date">Jan 14, 2026</span>
+          <h3 class="heading">Up-scaling Python functions for HPC with executorlib</h3>
+          <span class="position talk-card-speakers">Jan Janssen (Max Planck Institute for Sustainable Materials)</span>
+          
+        </div>
+        <div class="talk-card-avatars">
+          
+          
+          
+          <img src="/images/talks/janssen.jpg" alt="Jan Janssen" class="talk-card-avatar" />
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+                    
+                    
+<div class="swiper-slide">
+  <div class="testimonial-wrap">
+    <div class="testimonial-item talk-card-item">
+      <a class="talk-card-link" href="/talks/2025_12_10/" aria-label="For Provenance and with Provenance: The Role of Provenance Data in Agentic Workflows."></a>
+      <div class="d-flex justify-content-between align-items-center info-box talk-card-layout">
+        <div class="talk-card-info">
+          <span class="talk-card-date">Dec 10, 2025</span>
+          <h3 class="heading">For Provenance and with Provenance: The Role of Provenance Data in Agentic Workflows.</h3>
+          <span class="position talk-card-speakers">Renan Souza  (Oak Ridge National Laboratory)</span>
+          
+        </div>
+        <div class="talk-card-avatars">
+          
+          
+          
+          <img src="/images/talks/souza.jpg" alt="Renan Souza" class="talk-card-avatar" />
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+                    
+                    
+<div class="swiper-slide">
+  <div class="testimonial-wrap">
+    <div class="testimonial-item talk-card-item">
+      <a class="talk-card-link" href="/talks/2025_11_12/" aria-label="One workflow to rule them all: introducing DAGonStar, yet another workflow engine for Python developers, designed for HPC and AI."></a>
+      <div class="d-flex justify-content-between align-items-center info-box talk-card-layout">
+        <div class="talk-card-info">
+          <span class="talk-card-date">Nov 12, 2025</span>
+          <h3 class="heading">One workflow to rule them all: introducing DAGonStar, yet another workflow engine for Python developers, designed for HPC and AI.</h3>
+          <span class="position talk-card-speakers">Raffaele Montella  (University of Naples “Parthenope”)</span>
+          
+        </div>
+        <div class="talk-card-avatars">
+          
+          
+          
+          <img src="/images/talks/montella.png" alt="Raffaele Montella" class="talk-card-avatar" />
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+                    
+                    
+<div class="swiper-slide">
+  <div class="testimonial-wrap">
+    <div class="testimonial-item talk-card-item">
+      <a class="talk-card-link" href="/talks/2025_10_15/" aria-label="Building Scalable Agentic Systems for Science with Academy"></a>
+      <div class="d-flex justify-content-between align-items-center info-box talk-card-layout">
+        <div class="talk-card-info">
+          <span class="talk-card-date">Oct 15, 2025</span>
+          <h3 class="heading">Building Scalable Agentic Systems for Science with Academy</h3>
+          <span class="position talk-card-speakers">Alok Kamatar (University of Chicago)</span>
+          
+        </div>
+        <div class="talk-card-avatars">
+          
+          
+          
+          <img src="/images/talks/headshot_placeholder.jpg" alt="Alok Kamatar" class="talk-card-avatar" />
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+                    
+                    
+<div class="swiper-slide">
+  <div class="testimonial-wrap">
+    <div class="testimonial-item talk-card-item">
+      <a class="talk-card-link" href="/talks/2025_09_24/" aria-label="Teaching workflow systems to new users: why is it so hard?"></a>
+      <div class="d-flex justify-content-between align-items-center info-box talk-card-layout">
+        <div class="talk-card-info">
+          <span class="talk-card-date">Sep 24, 2025</span>
+          <h3 class="heading">Teaching workflow systems to new users: why is it so hard?</h3>
+          <span class="position talk-card-speakers">C. Titus Brown (UC Davis)</span>
+          
+        </div>
+        <div class="talk-card-avatars">
+          
+          
+          
+          <img src="/images/talks/titus.jpg" alt="C. Titus Brown" class="talk-card-avatar" />
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+                    
+                    
+<div class="swiper-slide">
+  <div class="testimonial-wrap">
+    <div class="testimonial-item talk-card-item">
+      <a class="talk-card-link" href="/talks/2025_08_13/" aria-label="Architecting the NERSC "Doudna" system for complex workflows"></a>
+      <div class="d-flex justify-content-between align-items-center info-box talk-card-layout">
+        <div class="talk-card-info">
+          <span class="talk-card-date">Aug 13, 2025</span>
+          <h3 class="heading">Architecting the NERSC "Doudna" system for complex workflows</h3>
+          <span class="position talk-card-speakers">Debbie Bard (NERSC)</span>
+          
+        </div>
+        <div class="talk-card-avatars">
+          
+          
+          
+          <img src="/images/talks/bard.jpg" alt="Debbie Bard" class="talk-card-avatar" />
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+                    
+                    
+<div class="swiper-slide">
+  <div class="testimonial-wrap">
+    <div class="testimonial-item talk-card-item">
+      <a class="talk-card-link" href="/talks/2025_07_16/" aria-label="WorkflowHub: A registry for computational workflows"></a>
+      <div class="d-flex justify-content-between align-items-center info-box talk-card-layout">
+        <div class="talk-card-info">
+          <span class="talk-card-date">Jul 16, 2025</span>
+          <h3 class="heading">WorkflowHub: A registry for computational workflows</h3>
+          <span class="position talk-card-speakers">Carole Goble (University of Manchester), Johan Gustafsson (Australian BioCommons, University of Melbourne)</span>
+          
+        </div>
+        <div class="talk-card-avatars">
+          
+          
+          
+          <img src="/images/talks/goble.jpg" alt="Carole Goble" class="talk-card-avatar" />
+          
+          
+          <img src="/images/talks/gustafsson.png" alt="Johan Gustafsson" class="talk-card-avatar" />
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+                    
+                    
+<div class="swiper-slide">
+  <div class="testimonial-wrap">
+    <div class="testimonial-item talk-card-item">
+      <a class="talk-card-link" href="/talks/2025_06_11/" aria-label="Automating Scientific Insights at the Advanced Photon Source"></a>
+      <div class="d-flex justify-content-between align-items-center info-box talk-card-layout">
+        <div class="talk-card-info">
+          <span class="talk-card-date">Jun 11, 2025</span>
+          <h3 class="heading">Automating Scientific Insights at the Advanced Photon Source</h3>
+          <span class="position talk-card-speakers">Hannah Parraga (Argonne National Laboratory)</span>
+          
+        </div>
+        <div class="talk-card-avatars">
+          
+          
+          
+          <img src="/images/talks/parraga.jpg" alt="Hannah Parraga" class="talk-card-avatar" />
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+                    
+                    
+<div class="swiper-slide">
+  <div class="testimonial-wrap">
+    <div class="testimonial-item talk-card-item">
+      <a class="talk-card-link" href="/talks/2025_05_14/" aria-label="Science Networks: Foundations for Multi-Site Workflows"></a>
+      <div class="d-flex justify-content-between align-items-center info-box talk-card-layout">
+        <div class="talk-card-info">
+          <span class="talk-card-date">May 14, 2025</span>
+          <h3 class="heading">Science Networks: Foundations for Multi-Site Workflows</h3>
+          <span class="position talk-card-speakers">Eli Dart (Energy Sciences Network)</span>
+          
+        </div>
+        <div class="talk-card-avatars">
+          
+          
+          
+          <img src="/images/talks/dart.jpg" alt="Eli Dart" class="talk-card-avatar" />
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+                    
+                    
+<div class="swiper-slide">
+  <div class="testimonial-wrap">
+    <div class="testimonial-item talk-card-item">
+      <a class="talk-card-link" href="/talks/2025_04_16/" aria-label="Steering Workflows with Artificial Intelligence"></a>
+      <div class="d-flex justify-content-between align-items-center info-box talk-card-layout">
+        <div class="talk-card-info">
+          <span class="talk-card-date">Apr 16, 2025</span>
+          <h3 class="heading">Steering Workflows with Artificial Intelligence</h3>
+          <span class="position talk-card-speakers">Logan Ward (Argonne National Lab)</span>
+          
+        </div>
+        <div class="talk-card-avatars">
+          
+          
+          
+          <img src="/images/talks/ward.jpg" alt="Logan Ward" class="talk-card-avatar" />
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+                    
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

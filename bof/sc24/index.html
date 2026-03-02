@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> SC24 BoF - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="SC24 BoF" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Collaborative Pathways for Designing an Integrated Infrastructure for Research Excellence SC24 BoF" />
+<meta property="og:description" content="Collaborative Pathways for Designing an Integrated Infrastructure for Research Excellence SC24 BoF" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-02T01:59:16+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="twitter:title" content="SC24 BoF" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2026-03-02T01:59:16+00:00","datePublished":"2026-03-02T01:59:16+00:00","description":"Collaborative Pathways for Designing an Integrated Infrastructure for Research Excellence SC24 BoF","headline":"SC24 BoF","image":"https://workflows.community/images/wci-default-card.png","mainEntityOfPage":{"@type":"WebPage","@id":"/bof/sc24/"},"url":"/bof/sc24/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">SC24 BoF</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            <div class="container" data-aos="fade-up" style="padding: 3em 0;">
+    <div class="row">
+        <div class="col-lg-8 wg">
+            <p class="text-center">
+                <img src="/images/bof/sc24_H_black_shaded.png"
+                    style="width: 15em; margin: auto;" />
+            </p>
+            <p class="subheading text-center">Collaborative Pathways for Designing an Integrated Infrastructure for Research Excellence</p>
+            <h2 class="mb-4 text-center">SC24 BoF</h2>
+
+            <p class="text-center mb-5">
+                Tuesday - Nov 19, 2024<br />
+                5:15pm-6:45pm ET<br />
+                Room B212
+            </p>
+            <p>
+                In modern science, integrating scientific workflows, especially those involving AI and spanning multiple
+                facilities, is paramount. AI workflows, leveraging machine learning and data analytics, are crucial for
+                processing and interpreting vast amounts of data, driving unprecedented breakthroughs. Multi-facility
+                workflows have expanded the horizons of scientific research by enabling the seamless integration of
+                computational resources, data, and experiments across different locations, fostering collaboration and
+                resource sharing.
+            </p>
+            <p>
+                The inaugural BoF session at <a href="/bof/sc22">SC22</a> focused on integrating HPC and AI workflows.
+                Building on this, the second BoF at <a href="/bof/sc22">SC23</a> gathered the Workflows Community to
+                explore
+                challenges, opportunities, and future pathways for continuum and multi-facility workflows. Scientists
+                provided insights into domain-specific challenges, discussing coordination among computing and
+                experimental
+                facilities, metadata tracking, co-design of experiment facilities, task standardization, edge-to-cloud
+                data
+                exchange, adaptive compression, and defining common workflow concepts. These sessions highlighted the
+                importance of seamless integration across cloud-based data pipelines, multi-facility instruments, and
+                HPC
+                infrastructures. The enthusiasm and feedback underscored the need for deeper exploration of continuum
+                and
+                multi-facility workflows, critical for the resilience and real-time demands of modern scientific
+                workflows.
+            </p>
+            <p>
+                In this BoF session, we will deepen the discourse initiated during the previous BoF sessions and elevate
+                these discussions by incorporating a wider array of perspectives, including those of scientists who
+                develop
+                and utilize these workflow systems within their specific domains. By examining the challenges and
+                opportunities within multi-facility workflows, the session will explore themes such as near real-time
+                processing and integration of data from multiple sources and further discuss the topics of coordination
+                among different computing and experimental facilities, and co-design of experiment facilities. This
+                initiative is motivated by the need to address the continuum of workflows that demand uninterrupted
+                computing access and multi-facility workflows that enhance resilience and efficiency across distributed
+                environments.
+            </p>
+            <img src="/images/bof/wci-bof-sc24.jpeg" style="width: 100%; border-radius: 1em;" />
+
+            <p>&nbsp;</p>
+            <h2 class="mb-4">Agenda</h2>
+            <div class="col-md-12 ftco-animate">
+                <ul>
+                    <li style="color: rgb(5, 135, 215)">
+                        5:15pm-5:20pm &mdash; Opening Remarks
+                        <!-- <a href="/files/bof/bof_sc22_opening_remarks.pdf">Opening Remarks</a><br /> -->
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            Rafael Ferreira da Silva &mdash; <span style="font-style: italic; color: #999">Oak Ridge
+                                Leadership Computing Facility (OLCF)</span><br />
+                            Debbie Bard &mdash; <span style="font-style: italic; color: #999">National Energy Research
+                                Scientific Computing Center (NERSC)</span><br />
+                            Fred Suter &mdash; <span style="font-style: italic; color: #999">Oak Ridge National
+                                Laboratory (ORNL)</span><br />
+                            Kyle Chard &mdash; <span style="font-style: italic; color: #999">University of
+                                Chicago</span><br />
+                        </p>
+                    </li>
+                    <li style="color: rgb(5, 135, 215)">
+                        5:20pm-6:20pm &mdash; Lightning talks: Collaborative Pathways for Designing an Integrated
+                        Infrastructure for Research Excellence<br />
+
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <a href="/files/bof/">
+                                Advancing DOE's Integrated Research Infrastructure</a><br />
+                            <span style="font-style: italic; color: #999"><strong>Ben Brown</strong>, U.S. Department of
+                                Energy (DOE)</span>
+                        </p>
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <a href="/files/bof/">
+                                Evolving HP+AI workflows for the needs of Digital Twins in Science and
+                                Industry</a><br />
+                            <span style="font-style: italic; color: #999"><strong>Rosa M. Badia</strong>, Barcelona
+                                Supercomputing Center (BSC)</span>
+                        </p>
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <a href="/files/bof/">
+                                TBA</a><br />
+                            <span style="font-style: italic; color: #999"><strong>Manish Parashar</strong>, University
+                                of
+                                Utah</span>
+                        </p>
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <a href="/files/bof/">
+                                Achieving Seamless Integration for Next-Generations Scientific Workflows</a><br />
+                            <span style="font-style: italic; color: #999"><strong>Lavanya Ramakrishnan</strong>,
+                                Lawrence
+                                Berkeley National Laboratory (LBNL)</span>
+                        </p>
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <a href="/files/bof/">
+                                TBA</a><br />
+                            <span style="font-style: italic; color: #999"><strong>Ian T. Foster</strong>, Argonne
+                                National
+                                Laboratory (ANL)</span>
+                        </p>
+                        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+                            <a href="/files/bof/">
+                                A Use-Inspired Approach to Bridge the Data Gaps for AI-Integrated Research and Education
+                                Workflows</a><br />
+                            <span style="font-style: italic; color: #999"><strong>İlkay Altıntaş</strong>, San Diego
+                                Supercomputing Center (SDSC)</span>
+                        </p>
+                    </li>
+                    <li style="color: rgb(5, 135, 215)">
+                        6:20pm-6:45pm &mdash; Interactive Activity<br />
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="blog-sidbar">
+                <h2 class="mb-5">Supporters</h2>
+                <div class="col-md-12 ftco-animate">
+                    <a href="https://ornl.gov/" target="_blank">
+                        <img src="https://www.hpcwire.com/wp-content/uploads/2019/07/ORNL-OLCF-logo-700x.jpg"
+                            height="50px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://www.nersc.gov/" target="_blank">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzKv5LXRUBcMbGsXmwhEVArUKYup-AJjDs8g&s"
+                            height="30px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://www.uchicago.edu/en" target="_blank">
+                        <img src="https://data.org/wp-content/uploads/2021/09/uc_logo.jpeg" height="30px"
+                            class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://www.anl.gov/" target="_blank">
+                        <img src="https://www.cerebras.net/wp-content/uploads/2021/09/ANL_logo.png" height="30px"
+                            class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://www.bsc.es/" target="_blank">
+                        <img src="https://www.hpcwire.com/wp-content/uploads/2020/10/Barcelona-Supercomputing-Center-logo.png"
+                            height="40px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://lbl.gov/" target="_blank">
+                        <img src="https://www.lbl.gov/wp-content/uploads/2022/09/berkeley-logo.svg" height="30px"
+                            class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://www.sdsc.edu/" target="_blank">
+                        <img src="https://www.hpcwire.com/wp-content/uploads/2013/07/SDSC-logo-hires.gif"
+                            height="30px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://www.sci.utah.edu/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/University_of_Utah_horizontal_logo.svg/1280px-University_of_Utah_horizontal_logo.svg.png"
+                            height="30px" class="mb-3 mr-3" />
+                    </a><br />
+                    <a href="https://science.osti.gov/" target="_blank">
+                        <img src="/images/bof/DOE-SC-COLOR.png" height="30px" class="mb-3 mr-3" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>
