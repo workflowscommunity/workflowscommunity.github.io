@@ -162,3 +162,15 @@
   talk_num: 11
   photo: wells.jpg
   bio: "Patrick Wells is a postdoctoral appointee at Argonne National Laboratory who designs and builds tools to simplify access to large-scale cosmological datasets. He joined Argonne in 2024 after completing his PhD in Astrophysics from the University of California, Davis, where he worked on measuring the expansion rate of the universe by extracting information from galaxy surveys. His primary computational interests include data management and workflow orchestration, and he has scientific interests in large-scale structure cosmology and gravitational lensing."
+
+- name: Laurent Thomas
+  role: Research Software Engineer at EMBL Heidelberg
+  institution:
+    - name: European Molecular Biology Laboratory
+      link: https://www.embl.de
+      image: embl.png
+  country: de
+  link: https://www.embl.org/people/person/laurent-sylvain-vincent-thomas/
+  talk_num: 12
+  photo: thomas.jpg
+  bio: "Laurent Thomas is a research software engineer, and currently a postdoctoral researcher at EMBL Heidelberg in the MODIS data science team. The team is developing LabID, the data-management solution of the EMBL. Prior to joining the EMBL, he did his PhD in Heidelberg working on image-analysis for microscopy. Then he worked a couple of years as a software engineer for a local microscopy company, before joining the EMBL in March last year."
