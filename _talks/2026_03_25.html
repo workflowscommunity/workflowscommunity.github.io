@@ -1,0 +1,40 @@
+---
+layout: talk
+title: "Recording data-provenance from sample to workflow results with LabID"
+authors: Laurent Thomas (European Molecular Biology Laboratory)
+event_date: March 25, 2026
+times: 11:00am PST / 2:00pm EST / 20:00 CEST
+talk_number: 12
+given: false
+image: /images/talks/thomas-banner.jpg
+<!-- presentation: /files/talks/20260325-Thomas-LabID.pdf -->
+<!-- video:  -->
+---
+
+Lab Integrated Data (LabID) is an open-source web-based platform for research
+data management in life science institutes, featuring sample and dataset
+management, an inventory management system and an electronic lab notebook.
+LabID allows recording extensive experimental information about the provenance
+of data (samples, reagents, instrument, protocols, assay parameters) and is
+designed to help individual scientists, research groups and core facilities
+better manage, annotate and share their research according to FAIR principles.
+
+<br /><br />
+
+We recently developed the LabID workflow integration, as a solution to document
+the provenance of processed-data, typically originating from computational
+workflows. While workflows are commonly used to process data, we found that
+there was no central solution accessible to researcher to keep track of
+workflows execution together with the data. The workflow integration extends
+the data-provenance functionality of LabID to document processed data, by
+recording extensive informations about a workflow and its execution.
+
+<br /><br />
+
+Besides enriching metadata about data-provenance, this new development
+facilitates workflow versioning, collaborative workflow development and
+tracking of workflow invocations with associated data and metadata. In this
+talk, I will present the general data-management concept of LabID, then
+introduce the workflow integration, and how it interacts with workflow
+management platforms (Galaxy, Nextflow...) and workflow repositories
+(WorkflowHub, Git...).
