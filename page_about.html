@@ -4,7 +4,7 @@ title: About
 permalink: /about
 ---
 
-{% assign leadership_names = "Rafael Ferreira da Silva|Kyle Chard" | split: "|" %}
+{% assign leadership_names = "Rafael Ferreira da Silva|Kyle Chard|Stephen Hudson|Daniela Casol" | split: "|" %}
 
 <section class="about-hero">
     <div class="container" data-aos="fade-up">
@@ -31,7 +31,7 @@ permalink: /about
                     <img src="/images/about/{{ member.photo }}" alt="{{ member.name }}">
                     <div>
                         <h3><a href="{{ member.link }}" target="_blank" rel="noopener">{{ member.name }}</a></h3>
-                        <p class="about-role">{{ member.role | replace: "Director of ", "" }}</p>
+                        <p class="about-role">{{ member.role }}</p>
                     </div>
                 </div>
                 {% if member.institution %}
