@@ -308,10 +308,11 @@
 
 - first_name: Stephen 
   last_name: Hudson
-  role: Workflows Talks Coordinator
+  name: Stephen Hudson
+  role: Director of Agentic Systems
   photo: hudson.jpg
   link: https://www.anl.gov/profile/stephen-hudson
-  category: technical
+  category: leadership
   institution:
     name: Argonne National Laboratory
     image: anl.png
@@ -319,10 +320,11 @@
 
 - first_name: Daniela
   last_name: Casol
-  role: Workflows Talks Coordinator
+  name: Daniela Casol
+  role: Director of Technical Engagement
   photo: casol.jpeg
   link: https://profiles.lbl.gov/67936-daniela-cassol
-  category: technical
+  category: leadership
   institution:
     name: Lawrence Berkeley National Laboratory
     image: lbnl.png
