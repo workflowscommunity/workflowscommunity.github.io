@@ -25,7 +25,7 @@
   location: Madrid, Spain
   start_date: 2024-08-26
   end_date: 2024-08-26
-  url: https://www.hipes-workshop.org/
+  url: https://www.hipes-workshop.org/home-2024/
   type: Workshop
   deadlines:
     - name: Paper Submissions
@@ -513,3 +513,25 @@
       date: 2024-05-06
     - name: Posters Submission
       date: 2024-07-22
+
+- name: 2nd Workshop about High-Performance e-Science
+  short_name: HiPES 2025
+  location: Dresden, Germany
+  start_date: 2025-08-25
+  end_date: 2025-08-25
+  url: https://www.hipes-workshop.org/home-2025/
+  type: Workshop
+  deadlines:
+    - name: Paper Submissions
+      date: 2025-05-25
+
+- name: 3rd Workshop about High-Performance e-Science
+  short_name: HiPES 2026
+  location: Pisa, Italy
+  start_date: 2026-08-24
+  end_date: 2026-08-24
+  url: https://www.hipes-workshop.org/
+  type: Workshop
+  deadlines:
+    - name: Paper Submissions
+      date: 2026-05-10
