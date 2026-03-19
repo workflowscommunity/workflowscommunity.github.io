@@ -547,15 +547,29 @@
     metadata: ["Anomaly Detection", "Provenance", "Monitoring"]
     extensions: ["HPC Execution", "Plugins", "Config Templating"]
 
-#- type: gitlab
-#  namespace: workflow/ewoks
-#  project: ewoks
-#  gitlab_url: https://gitlab.esrf.fr
-
-- type: pypi
-  distribution: ewoks
-  avatar: https://ewoks.esrf.fr/en/latest/_static/ewoks.png
-  website: https://ewoks.esrf.fr/
+- type: github
+  organization: ewoks-kit
+  repository: ewoks
+  metadata: doc/_external
+  website: https://ewoks.esrf.fr
+  terminology:
+    characteristics:
+      Flow: ["Task", "Iterative"]
+      Granularity: ["Functions", "Executables", "Sub-workflows"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Schema", "API", "GUI"]
+      Abstraction: ["Abstract"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Static", "Dynamic"]
+      Execution: ["Runner", "Resource Manager"]
+    data_management:
+      Transport: ["Streaming"]
+    metadata: ["Provenance", "Monitoring", "Anomaly Detection"]
+    extensions: ["External WMS", "External Job Queue"]
 
 - type: github
   organization: hyperflow-wms

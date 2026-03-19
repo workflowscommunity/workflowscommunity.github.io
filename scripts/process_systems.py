@@ -120,6 +120,9 @@ def main():
 
 def _fetch_github_metadata_batch(repos: list[GitHubDefinition]) -> dict[str, dict]:
     token = os.environ.get("JEKYLL_TOKEN")
+    if not token:
+        raise RuntimeError("Missing JEKYLL_TOKEN environment variable")
+
     headers = {
         "Authorization": f"Bearer {token}",
         "Content-Type": "application/json"
