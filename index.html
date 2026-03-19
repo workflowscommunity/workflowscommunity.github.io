@@ -61,7 +61,7 @@ permalink: /
             </div>
 
             <!-- WORKSHOP -->
-            <!-- <div class="col-lg-3">
+            <div class="col-lg-4">
                 <article class="community-card">
                     {% assign count_events = 0 %}
                     {% assign workshops = site.workshops | sort: 'event_date' %}
@@ -87,7 +87,7 @@ permalink: /
                     {% endif %}
                     {% endfor %}
                 </article>
-            </div> -->
+            </div>
 
             <!-- <div class="col-lg-3">
                 <!- RECENT SUMMIT ->
@@ -119,8 +119,7 @@ permalink: /
                     {% assign bofs = site.bofs | sort: 'order' | reverse %}
                     {% for b in bofs limit: 1 %}
                     <div class="post-img">
-                        <img src="https://sc25.supercomputing.org/wp-content/uploads/2024/11/Artboard-2.png" alt=""
-                            class="img-fluid">
+                        <img src="{{ b.image }}" alt="" class="img-fluid">
                     </div>
                     <p class="post-category">BOF SESSION</p>
                     <h2 class="title">
