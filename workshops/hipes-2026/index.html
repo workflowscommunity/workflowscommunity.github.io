@@ -1,0 +1,392 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> HiPES 2026 - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="HiPES 2026" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In recent years, the convergence of high-performance computing and eScience has opened new scientific discovery and innovation avenues. Researchers across various domains leverage advanced computational techniques to analyze vast data, simulate complex systems, and accelerate scientific workflows.The 3rd Workshop on High-Performance eScience (HiPES) aims to bring together experts from academia, industry, and government organizations to discuss the latest developments in this rapidly evolving field and explore emerging trends, challenges, and opportunities within the framework of tools and applications. The workshop focuses on managing distributed workflows in eScience, encompassing a broad spectrum of topics essential for interoperability and efficiency. This includes exploring design patterns, languages, and orchestration tools tailored to the specific needs of eScience high-performance applications. Additionally, researchers delve into scheduling algorithms, fault tolerance mechanisms, performance monitoring, and benchmarking procedures to ensure the smooth functioning of distributed workflows across diverse scientific domains.Emphasizing the concept of FAIRness (Findable, Accessible, Interoperable, and Reusable), the workshop encourages contributors to explore this crucial aspect of eScience. Methodologies and tools are discussed to ensure data and computational resources are discoverable, accessible, and usable across various platforms and research communities. Privacy and security considerations, particularly concerning sensitive scientific data, are integral components open for discussion during the workshop. The workshop will feature invited talks, contributed presentations, and panel discussions. We invite submissions of original research contributions, case studies, and innovative applications in the following areas (but not limited to):• High-performance computing (HPC) techniques and architectures for eScience• Languages, paradigms, and tools for scientific workflows• Scalable and efficient scientific workflows orchestration for eScience• Optimization techniques for parallel and distributed computing• Integration of machine learning and AI with eScience applications• Big data analytics and visualization in scientific domains• Cloud computing and edge computing for eScience• Reproducibility and sustainability in computational research• Performance evaluation and benchmarking of eScience tools and platforms• Paradigms and techniques for FAIRness in eScience• Ad-hoc file systems for I/O intensive eScience applications• Prospective and retrospective provenance models for large-scale applications• Security, privacy, and trust models and tools for eScience platforms• Case studies and success stories of real-world eScience applications We encourage submissions of full papers describing original research, work-in-progress, or experience reports related to the workshop topics. Important dates: Paper submission: May 10Notification of acceptance: June 22Camera-ready: July 3" />
+<meta property="og:description" content="In recent years, the convergence of high-performance computing and eScience has opened new scientific discovery and innovation avenues. Researchers across various domains leverage advanced computational techniques to analyze vast data, simulate complex systems, and accelerate scientific workflows.The 3rd Workshop on High-Performance eScience (HiPES) aims to bring together experts from academia, industry, and government organizations to discuss the latest developments in this rapidly evolving field and explore emerging trends, challenges, and opportunities within the framework of tools and applications. The workshop focuses on managing distributed workflows in eScience, encompassing a broad spectrum of topics essential for interoperability and efficiency. This includes exploring design patterns, languages, and orchestration tools tailored to the specific needs of eScience high-performance applications. Additionally, researchers delve into scheduling algorithms, fault tolerance mechanisms, performance monitoring, and benchmarking procedures to ensure the smooth functioning of distributed workflows across diverse scientific domains.Emphasizing the concept of FAIRness (Findable, Accessible, Interoperable, and Reusable), the workshop encourages contributors to explore this crucial aspect of eScience. Methodologies and tools are discussed to ensure data and computational resources are discoverable, accessible, and usable across various platforms and research communities. Privacy and security considerations, particularly concerning sensitive scientific data, are integral components open for discussion during the workshop. The workshop will feature invited talks, contributed presentations, and panel discussions. We invite submissions of original research contributions, case studies, and innovative applications in the following areas (but not limited to):• High-performance computing (HPC) techniques and architectures for eScience• Languages, paradigms, and tools for scientific workflows• Scalable and efficient scientific workflows orchestration for eScience• Optimization techniques for parallel and distributed computing• Integration of machine learning and AI with eScience applications• Big data analytics and visualization in scientific domains• Cloud computing and edge computing for eScience• Reproducibility and sustainability in computational research• Performance evaluation and benchmarking of eScience tools and platforms• Paradigms and techniques for FAIRness in eScience• Ad-hoc file systems for I/O intensive eScience applications• Prospective and retrospective provenance models for large-scale applications• Security, privacy, and trust models and tools for eScience platforms• Case studies and success stories of real-world eScience applications We encourage submissions of full papers describing original research, work-in-progress, or experience reports related to the workshop topics. Important dates: Paper submission: May 10Notification of acceptance: June 22Camera-ready: July 3" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="/images/workshops/hipes-2026.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-30T02:24:09+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="/images/workshops/hipes-2026.png" />
+<meta property="twitter:title" content="HiPES 2026" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2026-03-30T02:24:09+00:00","datePublished":"2026-03-30T02:24:09+00:00","description":"In recent years, the convergence of high-performance computing and eScience has opened new scientific discovery and innovation avenues. Researchers across various domains leverage advanced computational techniques to analyze vast data, simulate complex systems, and accelerate scientific workflows.The 3rd Workshop on High-Performance eScience (HiPES) aims to bring together experts from academia, industry, and government organizations to discuss the latest developments in this rapidly evolving field and explore emerging trends, challenges, and opportunities within the framework of tools and applications. The workshop focuses on managing distributed workflows in eScience, encompassing a broad spectrum of topics essential for interoperability and efficiency. This includes exploring design patterns, languages, and orchestration tools tailored to the specific needs of eScience high-performance applications. Additionally, researchers delve into scheduling algorithms, fault tolerance mechanisms, performance monitoring, and benchmarking procedures to ensure the smooth functioning of distributed workflows across diverse scientific domains.Emphasizing the concept of FAIRness (Findable, Accessible, Interoperable, and Reusable), the workshop encourages contributors to explore this crucial aspect of eScience. Methodologies and tools are discussed to ensure data and computational resources are discoverable, accessible, and usable across various platforms and research communities. Privacy and security considerations, particularly concerning sensitive scientific data, are integral components open for discussion during the workshop. The workshop will feature invited talks, contributed presentations, and panel discussions. We invite submissions of original research contributions, case studies, and innovative applications in the following areas (but not limited to):• High-performance computing (HPC) techniques and architectures for eScience• Languages, paradigms, and tools for scientific workflows• Scalable and efficient scientific workflows orchestration for eScience• Optimization techniques for parallel and distributed computing• Integration of machine learning and AI with eScience applications• Big data analytics and visualization in scientific domains• Cloud computing and edge computing for eScience• Reproducibility and sustainability in computational research• Performance evaluation and benchmarking of eScience tools and platforms• Paradigms and techniques for FAIRness in eScience• Ad-hoc file systems for I/O intensive eScience applications• Prospective and retrospective provenance models for large-scale applications• Security, privacy, and trust models and tools for eScience platforms• Case studies and success stories of real-world eScience applications We encourage submissions of full papers describing original research, work-in-progress, or experience reports related to the workshop topics. Important dates: Paper submission: May 10Notification of acceptance: June 22Camera-ready: July 3","headline":"HiPES 2026","image":"/images/workshops/hipes-2026.png","mainEntityOfPage":{"@type":"WebPage","@id":"/workshops/hipes-2026/"},"url":"/workshops/hipes-2026/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset" style="max-height: 250px; min-height: 250px;">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row aos-init aos-animate">
+                <div class="col-lg-12 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h1 data-aos="fade-up">HiPES 2026</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            <section class="workshop-hero">
+    <div class="container" data-aos="fade-up">
+        <div class="workshop-hero-card">
+            <p class="workshop-breadcrumb">
+                <a href="/workshops">Workshops</a>
+                <span>/</span>
+                HiPES 2026
+            </p>
+            <div class="workshop-hero-grid">
+                <div>
+                    
+                    <p class="workshop-eyebrow">Third Workshop about High-Performance e-Science</p>
+                    
+                    <h1>HiPES 2026</h1>
+                    <div class="workshop-meta">
+                        <div>
+                            <span>Date</span>
+                            <strong>Monday - Aug 24, 2026</strong>
+                        </div>
+                        <div>
+                            <span>Location</span>
+                            <strong>Pisa, Italy</strong>
+                        </div>
+                        <div>
+                            <span>Time</span>
+                            <strong>9:00am - 5:00pm</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="workshop-partner">
+                    <span>In conjunction with</span>
+                    <img src="https://2026.euro-par.org/fileadmin/2026/logos/Euro-Par-2026-logo_sp.svg" alt="In conjunction with" />
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="workshop-body">
+    <div class="container" data-aos="fade-up">
+        <div class="row g-4">
+            <div class="col-lg-8 wg wg-contents">
+                <div class="workshop-content-card">
+                    <p>In recent years, the convergence of high-performance computing and eScience has opened new scientific discovery and innovation avenues. Researchers across various domains leverage advanced computational techniques to analyze vast data, simulate complex systems, and accelerate scientific workflows.<br>The 3rd Workshop on High-Performance eScience (HiPES) aims to bring together experts from academia, industry, and government organizations to discuss the latest developments in this rapidly evolving field and explore emerging trends, challenges, and opportunities within the framework of tools and applications.</p>
+<p>The workshop focuses on managing distributed workflows in eScience, encompassing a broad spectrum of topics essential for interoperability and efficiency. This includes exploring design patterns, languages, and orchestration tools tailored to the specific needs of eScience high-performance applications. Additionally, researchers delve into scheduling algorithms, fault tolerance mechanisms, performance monitoring, and benchmarking procedures to ensure the smooth functioning of distributed workflows across diverse scientific domains.<br>Emphasizing the concept of FAIRness (Findable, Accessible, Interoperable, and Reusable), the workshop encourages contributors to explore this crucial aspect of eScience. Methodologies and tools are discussed to ensure data and computational resources are discoverable, accessible, and usable across various platforms and research communities. Privacy and security considerations, particularly concerning sensitive scientific data, are integral components open for discussion during the workshop.</p>
+<p>The workshop will feature invited talks, contributed presentations, and panel discussions.</p>
+<p>We invite submissions of original research contributions, case studies, and innovative applications in the following areas (but not limited to):<br>• High-performance computing (HPC) techniques and architectures for eScience<br>• Languages, paradigms, and tools for scientific workflows<br>• Scalable and efficient scientific workflows orchestration for eScience<br>• Optimization techniques for parallel and distributed computing<br>• Integration of machine learning and AI with eScience applications<br>• Big data analytics and visualization in scientific domains<br>• Cloud computing and edge computing for eScience<br>• Reproducibility and sustainability in computational research<br>• Performance evaluation and benchmarking of eScience tools and platforms<br>• Paradigms and techniques for FAIRness in eScience<br>• Ad-hoc file systems for I/O intensive eScience applications<br>• Prospective and retrospective provenance models for large-scale applications<br>• Security, privacy, and trust models and tools for eScience platforms<br>• Case studies and success stories of real-world eScience applications</p>
+<p>We encourage submissions of full papers describing original research, work-in-progress, or experience reports related to the workshop topics.</p>
+<p><strong>Important dates:</strong></p>
+<p>Paper submission: May 10<br>Notification of acceptance: June 22<br>Camera-ready: July 3</p>
+
+<a href="https://www.hipes-workshop.org/" target="_blank" class="btn-get-started">Learn More</a>
+&nbsp;&nbsp;
+<a href="https://easychair.org/conferences2/submissions?a=36300999" target="_blank" class="btn-get-started hide-on-mobile">Submit Your Paper</a>
+<br /><br />
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="workshop-panel">
+                    
+                    <div class="workshop-panel-block">
+                        <h3>Organizers</h3>
+                        <div class="workshop-people-grid">
+                            
+                            <div class="workshop-person">
+                                <img src="https://www.raffaelemontella.it/wp-content/uploads/2022/09/RMontella-SarimaV.jpg" alt="Raffaele Montella (University of Naples "Parthenope")" />
+                                <div>
+                                    <strong>Raffaele Montella (University of Naples "Parthenope")</strong>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="workshop-person">
+                                <img src="https://alpha.di.unito.it/wp-content/uploads/2024/03/Colonnelli.png" alt="Iacopo Colonnelli (University of Turin)" />
+                                <div>
+                                    <strong>Iacopo Colonnelli (University of Turin)</strong>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="workshop-person">
+                                <img src="https://avatars.githubusercontent.com/u/12722576?v=4" alt="Daniela Cassol (LBNL)" />
+                                <div>
+                                    <strong>Daniela Cassol (LBNL)</strong>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>
