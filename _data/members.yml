@@ -1475,6 +1475,11 @@
     first_name: Katelyn
     institution: NSF NCAR
 
+  - last_name: Fils
+    first_name: Doug
+    institution: UCSD / SDSC
+    link: https://fils.network
+
 
 - country: Vietnam
   entries:
