@@ -1480,6 +1480,14 @@
     institution: UCSD / SDSC
     link: https://fils.network
 
+  - last_name: Suman
+    first_name: Raj
+    institution: University of Chicago
+
+  - last_name: Augustus
+    first_name: Ellerm
+    institution: University of Chicago
+
 
 - country: Vietnam
   entries:
