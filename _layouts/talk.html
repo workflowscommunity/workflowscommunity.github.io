@@ -26,7 +26,13 @@ layout: page
                         <a href="https://docs.google.com/forms/d/1XTJFRJ5Ivu2-Z-i9dnq2umv-OuE2UlVreea_dLawd2c"
                             target="_blank" class="btn btn-primary talk-cta-btn">Register</a>
                         {% endunless %}
-                        {% if page.presentation %}
+                        {% if page.presentations %}
+                        {% for p in page.presentations %}
+                        <a href="{{ p.file }}" target="_blank" class="btn btn-outer">
+                            <i class="fa fa-file"></i> Presentation{% if p.speaker %} &mdash; {{ p.speaker }}{% endif %}
+                        </a>
+                        {% endfor %}
+                        {% elsif page.presentation %}
                         <a href="{{ page.presentation }}" target="_blank" class="btn btn-outer">
                             <i class="fa fa-file"></i> Presentation
                         </a>
@@ -61,7 +67,19 @@ layout: page
                     <div class="talk-content">{{ content }}</div>
                 </section>
 
-                {% if page.video %}
+                {% if page.videos %}
+                <section class="talk-section">
+                    <h3>Watch the recordings</h3>
+                    {% for v in page.videos %}
+                    {% if v.speaker %}<h4>{{ v.speaker }}</h4>{% endif %}
+                    <div class="talk-video">
+                        <iframe src="{{ v.url }}" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    {% endfor %}
+                </section>
+                {% elsif page.video %}
                 <section class="talk-section">
                     <h3>Watch the recording</h3>
                     <div class="talk-video">
