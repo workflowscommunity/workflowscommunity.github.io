@@ -71,7 +71,7 @@ layout: page
                 <section class="talk-section">
                     <h3>Watch the recordings</h3>
                     {% for v in page.videos %}
-                    {% if v.speaker %}<h4>{{ v.speaker }}</h4>{% endif %}
+                    {% if v.speaker %}<br /><h4>{{ v.speaker }}</h4>{% endif %}
                     <div class="talk-video">
                         <iframe src="{{ v.url }}" title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
