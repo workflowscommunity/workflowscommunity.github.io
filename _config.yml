@@ -1,6 +1,7 @@
 # Site settings
 title: Workflows Community Initiative
 subtitle: Bringing the Scientific Workflows Community Together
+url: https://workflows.community
 
 markdown: kramdown
 enable-mathjax: yes
