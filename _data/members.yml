@@ -887,6 +887,11 @@
     first_name: Rachael
     institution: UK Human Functional Genomics Initiative (University of Exeter)
 
+  - last_name: Owen
+    first_name: Nicholas
+    institution: UCL
+    link: https://nicholas-owen.github.io/
+
 
 - country: United States
   entries:
@@ -1487,6 +1492,14 @@
   - last_name: Augustus
     first_name: Ellerm
     institution: University of Chicago
+
+  - last_name: Ghanta
+    first_name: Mounika
+    institution: Tennessee Tech University
+
+  - last_name: Jain
+    first_name: Eshaan
+    institution: Mphasis
 
 
 - country: Vietnam
