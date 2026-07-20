@@ -444,6 +444,10 @@
     first_name: Setareh
     institution: Bundesanstalt Für Material Prüfung (BAM)
 
+  - last_name: Badwaik
+    first_name: Jayesh
+    institution: Forschungszentrum Juelich
+
 - country: India
   entries:
   - last_name: Swain
