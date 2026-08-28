@@ -4,39 +4,214 @@ title: Birds of a Feather
 permalink: /bof
 ---
 
-<section class="bof-index-hero">
-    <div class="container" data-aos="fade-up">
-        <div class="bof-index-hero-card">
-            <div class="bof-index-eyebrow">Birds of a Feather</div>
-            <h1>Focused conversations that connect communities</h1>
-            <p>BoF events are typically associated with major conferences and meetings where researchers, developers, and users from distinct workflow systems discuss current challenges and opportunities.</p>
+{% assign all_bofs = site.bofs | sort: 'start_date' %}
+{% assign bofs = all_bofs | reverse %}
+{% assign today = site.time | date: "%Y-%m-%d" %}
+{% assign upcoming = all_bofs | where_exp: "b", "b.start_date >= today" %}
+{% assign past = bofs | where_exp: "b", "b.start_date < today" %}
+{% assign first_year = all_bofs.first.start_date | slice: 0, 4 %}
+{% assign this_year = today | slice: 0, 4 %}
+{% assign span_years = this_year | minus: first_year | plus: 1 %}
+{% assign people = 0 %}
+{% for b in site.bofs %}
+{% if b.speakers %}{% assign people = people | plus: b.speakers.size %}{% endif %}
+{% if b.organizers %}{% assign people = people | plus: b.organizers.size %}{% endif %}
+{% endfor %}
+
+<section class="bofx-hero">
+    <div class="container">
+        <div class="bofx-hero-card" data-aos="fade-up">
+            <div class="bofx-hero-glow"></div>
+            <div class="bofx-hero-inner">
+                <div class="bofx-eyebrow"><span class="bofx-dot"></span>Birds of a Feather</div>
+                <h1>Focused conversations that<br class="d-none d-lg-block" /> connect communities</h1>
+                <p class="bofx-lead">BoF sessions gather researchers, developers, and users from across workflow systems at major
+                    conferences to debate the challenges and opportunities shaping the field &mdash; in the open, and in person.</p>
+                <div class="bofx-stats">
+                    <div class="bofx-stat">
+                        <strong>{{ site.bofs | size }}</strong>
+                        <span>Sessions held</span>
+                    </div>
+                    <div class="bofx-stat">
+                        <strong>{{ span_years }}</strong>
+                        <span>Years running</span>
+                    </div>
+                    <div class="bofx-stat">
+                        <strong>{{ people }}+</strong>
+                        <span>Speakers &amp; organizers</span>
+                    </div>
+                    <div class="bofx-stat">
+                        <strong>3</strong>
+                        <span>Conference series</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="bof-index-section">
-    <div class="container" data-aos="fade-up">
-        <div class="bof-index-header">
-            <h2>BoF sessions</h2>
-            <p>Explore recent and upcoming birds of a feather gatherings.</p>
+{% if upcoming.size > 0 %}
+<section class="bofx-next">
+    <div class="container">
+        <div class="bofx-section-head" data-aos="fade-up">
+            <h2><span class="bofx-live"></span>Coming up next</h2>
+            <p>Join us at the next gathering &mdash; everyone is welcome, no registration required beyond the conference itself.</p>
         </div>
-        <div class="bof-index-grid">
-            {% assign bofs = site.bofs | sort: 'order' | reverse %}
-            {% for bof in bofs %}
-            <a class="bof-index-card" href="{{ bof.url }}">
-                <div class="bof-index-logo">
-                    <img src="{{ bof.conference_logo }}" alt="Conference logo" />
+        {% for bof in upcoming %}
+        {% if bof.title contains "ISC" %}{% assign series = "ISC" %}{% elsif bof.title contains "ECP" %}{% assign series = "ECP" %}{% elsif bof.title contains "SC" %}{% assign series = "SC" %}{% else %}{% assign series = "BoF" %}{% endif %}
+        {% assign year = bof.start_date | slice: 0, 4 %}
+        <a class="bofx-feature" href="{{ bof.url }}" data-aos="fade-up">
+            <div class="bofx-feature-visual">
+                <div class="bofx-feature-badge">Upcoming</div>
+                {% if bof.conference_logo %}
+                <div class="bofx-feature-logo"><img src="{{ bof.conference_logo }}" alt="{{ series }} {{ year }} logo" loading="lazy" /></div>
+                {% else %}
+                <div class="bofx-feature-logo bofx-logo-text">{{ series }} {{ year }}</div>
+                {% endif %}
+                <div class="bofx-countdown" data-bof-date="{{ bof.start_date }}"></div>
+            </div>
+            <div class="bofx-feature-body">
+                <div class="bofx-tags">
+                    <span class="bofx-tag bofx-tag-{{ series | downcase }}">{{ series }} {{ year }}</span>
+                    {% if bof.title contains "Streaming" %}<span class="bofx-tag bofx-tag-track">Data Streaming</span>{% endif %}
                 </div>
-                <div class="bof-index-body">
-                    <span class="bof-index-date">{{ bof.event_date | date: "%b %d, %Y" }}</span>
-                    <h3>{{ bof.title }}</h3>
-                    {% if bof.subtitle %}
-                    <p>{{ bof.subtitle }}</p>
-                    {% endif %}
-                    <span class="bof-index-link">View details</span>
+                <h3>{{ bof.subtitle | default: bof.title }}</h3>
+                <div class="bofx-meta">
+                    <div class="bofx-meta-item">
+                        <i class="bi bi-calendar-event"></i>
+                        <div><span>Date</span><strong>{{ bof.event_date | split: " - " | last }}</strong></div>
+                    </div>
+                    <div class="bofx-meta-item">
+                        <i class="bi bi-clock"></i>
+                        <div><span>Time</span><strong>{{ bof.time | default: "TBA" }}</strong></div>
+                    </div>
+                    <div class="bofx-meta-item">
+                        <i class="bi bi-geo-alt"></i>
+                        <div><span>Room</span><strong>{{ bof.room | default: "TBA" }}</strong></div>
+                    </div>
                 </div>
-            </a>
-            {% endfor %}
-        </div>
+                {% if bof.speakers %}
+                <div class="bofx-people">
+                    <div class="bofx-avatars">
+                        {% for s in bof.speakers limit: 5 %}
+                        <img src="{{ s.image }}" alt="{{ s.name }}" title="{{ s.name }}" loading="lazy" />
+                        {% endfor %}
+                        {% if bof.speakers.size > 5 %}<span class="bofx-avatar-more">+{{ bof.speakers.size | minus: 5 }}</span>{% endif %}
+                    </div>
+                    <span class="bofx-people-label">{{ bof.speakers.size }} featured speakers</span>
+                </div>
+                {% endif %}
+                <span class="bofx-cta">View session details <i class="bi bi-arrow-right"></i></span>
+            </div>
+        </a>
+        {% endfor %}
     </div>
 </section>
+{% endif %}
+
+<section class="bofx-archive">
+    <div class="container">
+        <div class="bofx-section-head bofx-section-head-row" data-aos="fade-up">
+            <div>
+                <h2>Past sessions</h2>
+                <p>Slides, notes, and recordings from previous gatherings.</p>
+            </div>
+            <div class="bofx-filters" role="group" aria-label="Filter sessions by conference series">
+                <button type="button" class="bofx-filter is-active" data-filter="all">All</button>
+                <button type="button" class="bofx-filter" data-filter="SC">SC</button>
+                <button type="button" class="bofx-filter" data-filter="ISC">ISC</button>
+                <button type="button" class="bofx-filter" data-filter="ECP">ECP</button>
+            </div>
+        </div>
+
+        <div class="bofx-timeline">
+            {% assign last_year = "" %}
+            {% for bof in past %}
+            {% assign year = bof.start_date | slice: 0, 4 %}
+            {% if bof.title contains "ISC" %}{% assign series = "ISC" %}{% elsif bof.title contains "ECP" %}{% assign series = "ECP" %}{% elsif bof.title contains "SC" %}{% assign series = "SC" %}{% else %}{% assign series = "BoF" %}{% endif %}
+            {% if year != last_year %}
+            {% unless forloop.first %}
+        </div>
+    </div>
+            {% endunless %}
+    <div class="bofx-year-group" data-year="{{ year }}">
+        <div class="bofx-year-rail">
+            <span class="bofx-year-label">{{ year }}</span>
+        </div>
+        <div class="bofx-grid">
+            {% assign last_year = year %}
+            {% endif %}
+
+            <a class="bofx-card" href="{{ bof.url }}" data-series="{{ series }}" data-aos="fade-up">
+                <div class="bofx-card-cover">
+                    <span class="bofx-card-year">{{ year }}</span>
+                    {% if bof.conference_logo %}
+                    <div class="bofx-card-logo"><img src="{{ bof.conference_logo }}" alt="{{ series }} {{ year }} logo" loading="lazy" /></div>
+                    {% else %}
+                    <div class="bofx-card-logo bofx-logo-text">{{ series }} {{ year }}</div>
+                    {% endif %}
+                </div>
+                <div class="bofx-card-body">
+                    <div class="bofx-tags">
+                        <span class="bofx-tag bofx-tag-{{ series | downcase }}">{{ bof.title | remove: " BoF" | remove: " Data Streaming" }}</span>
+                        {% if bof.title contains "Streaming" %}<span class="bofx-tag bofx-tag-track">Data Streaming</span>{% endif %}
+                    </div>
+                    <h3>{{ bof.subtitle | default: bof.title }}</h3>
+                    <div class="bofx-card-foot">
+                        <span class="bofx-card-time"><i class="bi bi-calendar-event"></i>{{ bof.event_date | split: " - " | last }}</span>
+                        <span class="bofx-card-link">View details <i class="bi bi-arrow-right"></i></span>
+                    </div>
+                </div>
+            </a>
+
+            {% if forloop.last %}
+        </div>
+    </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <p class="bofx-empty" hidden>No sessions match that filter yet.</p>
+    </div>
+</section>
+
+<script>
+    (function () {
+        var countdowns = document.querySelectorAll('.bofx-countdown');
+        countdowns.forEach(function (el) {
+            var target = new Date(el.getAttribute('data-bof-date') + 'T00:00:00');
+            if (isNaN(target)) { return; }
+            var days = Math.ceil((target - new Date()) / 86400000);
+            if (days > 1) {
+                el.innerHTML = '<strong>' + days + '</strong><span>days to go</span>';
+            } else if (days === 1) {
+                el.innerHTML = '<strong>1</strong><span>day to go</span>';
+            } else if (days === 0) {
+                el.innerHTML = '<strong>Today</strong><span>see you there</span>';
+            }
+        });
+
+        var buttons = document.querySelectorAll('.bofx-filter');
+        var cards = document.querySelectorAll('.bofx-card');
+        var groups = document.querySelectorAll('.bofx-year-group');
+        var empty = document.querySelector('.bofx-empty');
+
+        buttons.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var filter = btn.getAttribute('data-filter');
+                buttons.forEach(function (b) { b.classList.toggle('is-active', b === btn); });
+                cards.forEach(function (card) {
+                    var match = filter === 'all' || card.getAttribute('data-series') === filter;
+                    card.hidden = !match;
+                });
+                var visible = 0;
+                groups.forEach(function (group) {
+                    var shown = group.querySelectorAll('.bofx-card:not([hidden])').length;
+                    group.hidden = shown === 0;
+                    visible += shown;
+                });
+                if (empty) { empty.hidden = visible !== 0; }
+            });
+        });
+    })();
+</script>
