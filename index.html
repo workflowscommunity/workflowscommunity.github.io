@@ -4,14 +4,24 @@ permalink: /
 ---
 
 {% capture nowunix %}{{'now' | date: '%Y-%m-%d' | date: '%s'}}{% endcapture %}
+
+{% comment %} The _systems collection is generated in CI from workflow_systems.yml,
+so fall back to the data file when the collection has not been built. {% endcomment %}
 {% assign total_systems = site.systems | size %}
+{% if total_systems == 0 %}{% assign total_systems = site.data.workflow_systems | size %}{% endif %}
 {% assign total_members = 0 %}
 {% for m in site.data.members %}
 {% assign e = m.entries | size %}
 {% assign total_members = total_members | plus: e %}
 {% endfor %}
+{% assign total_countries = site.data.members | size %}
+{% assign total_registries = site.data.registries | size %}
+{% assign total_frameworks = site.data.research_frameworks | size %}
+{% assign total_education = site.data.education_training | size %}
+{% assign total_reports = site.data.reports | size %}
 {% assign total_wcs = site.summits | size %}
 {% assign total_bofs = site.bofs | size %}
+{% assign total_talks = site.talks | size %}
 {% assign total_events = total_wcs | plus: total_bofs %}
 
 {% comment %} ---- Pick what to feature: the next upcoming item of each kind, else the most recent ---- {% endcomment %}
@@ -144,197 +154,175 @@ permalink: /
     </div>
 </section>
 
-<!-- NUMBERS -->
-<div id="stats-counter" class="stats-counter section">
+<!-- EXPLORE THE ECOSYSTEM -->
+<section id="ecosystem" class="wh-section explore-section">
     <div class="container" data-aos="fade-up">
-        <div class="section-header">
-            <h2>Community at a glance</h2>
-            <p>Fast-growing people, platforms, and shared moments</p>
-        </div>
-        <div class="row gy-4 align-items-stretch stats-grid">
-            <div class="col-lg-4">
-                <div class="stats-card">
-                    <div class="stats-value">
-                        <i class="bi bi-people stats-icon"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="{{total_members}}"
-                            data-purecounter-duration="5" class="purecounter"></span>
-                    </div>
-                    <p class="stats-label"><span>Members</span> worldwide</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="stats-card">
-                    <div class="stats-value">
-                        <i class="bi bi-diagram-3 stats-icon"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="{{total_systems}}"
-                            data-purecounter-duration="5" class="purecounter"></span>
-                    </div>
-                    <p class="stats-label"><span>Workflow systems</span> open-source platforms</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="stats-card">
-                    <div class="stats-value">
-                        <i class="bi bi-calendar3 stats-icon"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="{{total_events}}"
-                            data-purecounter-duration="5" class="purecounter"></span>
-                    </div>
-                    <p class="stats-label"><span>Events</span> summits and BoF sessions</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- WORKFLOW SYSTEMS -->
-<div id="services" class="section sections-bg">
-    <div class="top-icon-box position-relative">
-        <div class="container position-relative">
-            <div class="section-header">
-                <h2>Workflow Systems</h2>
-                <p>Last updated open-source workflow systems</p>
-            </div>
-            <div class="row gy-4">
-                {% assign systems_wci = site.systems | where: "wci_metadata", "true" | sort: "date_sort" | reverse %}
-                {% assign systems_wci_size = systems_wci | size %}
-                {% assign systems = site.systems | where: "wci_metadata", "false" | sort: "date_sort" | reverse %}
-                {% assign systems_limit = 10 | minus: systems_wci_size %}
-                {% for system in systems_wci limit: 8 %}
-                <div class="col-xl-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon"><img src="{{system.avatar}}" alt="icon"></div>
-                        <h4 class="title"><a href="{{system.url}}" class="stretched-link">{{system.title}}</a></h4>
-                        <p>{{ system.headline | excerpt | strip_html | strip_newlines | truncate: 150}}</p>
-                        <p style="font-size: 0.8em;">
-                            <i class="fas fa-code"></i> {{system.language}}</span><br />
-                            {% if system.release_name != "" %}<i
-                                class="fas fa-box-open"></i>{{system.release_name}}<br />{% endif %}
-                            <i class="far fa-clock"></i> {{system.last_update}}
-                        </p>
-                    </div>
-                </div>
-                {% endfor %}
-                <div class="col-lg-12 text-center" class="text-center">
-                    <a href="/systems" class="btn-get-started hide-on-mobile">See all Systems</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- STORIES -->
-{% assign story = site.stories | sort: "date" | reverse %}
-<section id="recent-posts" class="recent-posts sections-bg bg-light">
-    <div class="container" data-aos="fade-up">
-        <div class="section-header">
-            <h2>Stories</h2>
-            <p>Perspectives on workflows-related topics from the community</p>
+        <div class="wh-header">
+            <div class="wh-eyebrow"><span class="wh-pulse"></span>Community resources</div>
+            <h2>Explore the workflows ecosystem</h2>
+            <p>Curated, community-maintained references for finding a system, reusing a pipeline, and speaking a shared language.</p>
         </div>
 
-        <div class="row gy-4">
-            {% for s in story limit: 6 %}
-            <div class="col-lg-4">
-                <article>
-                    <div class="post-img">
-                        <img src="{{ s.image }}" alt="" class="img-fluid">
-                    </div>
-                    <p class="post-category"></p>
-                    <h2 class="title">
-                        <a href="{{ s.url }}">{{ s.title }}</a>
-                    </h2>
-                    <div class="d-flex align-items-center">
-                        <div class="post-meta">
-                            <p class="post-author">{{ summit.subtitle }}</p>
-                            <p class="post-date">
-                                {% for author in s.authors %}
-                                {{author.name}} – {{author.institution}}<br />
-                                {% endfor %}
-                                <time datetime="2022-01-01">{{ s.date | date: "%b %d, %Y" }}</time>
-                            </p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            {% endfor %}
-        </div>
+        <div class="explore-grid">
+            <a class="explore-card" href="/systems">
+                <span class="explore-icon"><i class="bi bi-diagram-3"></i></span>
+                <span class="explore-count">{{ total_systems }}</span>
+                <h3>Workflow systems</h3>
+                <p>Open-source engines profiled with language, release, and activity, plus standardized terminology characteristics.</p>
+                <span class="explore-link">Browse systems <i class="bi bi-arrow-right"></i></span>
+            </a>
 
-        <div class="col-lg-12 text-center" style="margin-top: 2em;" class="text-center">
-            <a href="/stories" class="btn-get-started hide-on-mobile">See all Stories</a>
+            <a class="explore-card" href="/registries">
+                <span class="explore-icon"><i class="bi bi-collection"></i></span>
+                <span class="explore-count">{{ total_registries }}</span>
+                <h3>Workflow registries</h3>
+                <p>Where the community publishes and discovers ready-to-run pipelines you can adapt instead of rebuilding.</p>
+                <span class="explore-link">Find a registry <i class="bi bi-arrow-right"></i></span>
+            </a>
+
+            <a class="explore-card" href="/terminology">
+                <span class="explore-icon"><i class="bi bi-translate"></i></span>
+                <span class="explore-count">&mdash;</span>
+                <h3>Terminology</h3>
+                <p>A shared vocabulary for describing and comparing workflow systems, maintained by the terminology working group.</p>
+                <span class="explore-link">Read the terminology <i class="bi bi-arrow-right"></i></span>
+            </a>
+
+            <a class="explore-card" href="/frameworks">
+                <span class="explore-icon"><i class="bi bi-boxes"></i></span>
+                <span class="explore-count">{{ total_frameworks }}</span>
+                <h3>Research frameworks</h3>
+                <p>Larger research efforts and infrastructures building on and around scientific workflow technology.</p>
+                <span class="explore-link">See frameworks <i class="bi bi-arrow-right"></i></span>
+            </a>
+
+            <a class="explore-card" href="/education">
+                <span class="explore-icon"><i class="bi bi-mortarboard"></i></span>
+                <span class="explore-count">{{ total_education }}</span>
+                <h3>Education &amp; training</h3>
+                <p>Courseware and guides for teaching and learning workflow concepts, from first principles to practice.</p>
+                <span class="explore-link">Start learning <i class="bi bi-arrow-right"></i></span>
+            </a>
+
+            <a class="explore-card" href="/members">
+                <span class="explore-icon"><i class="bi bi-globe2"></i></span>
+                <span class="explore-count">{{ total_countries }}</span>
+                <h3>Countries represented</h3>
+                <p>{{ total_members }} members across {{ total_countries }} countries &mdash; researchers, developers, and facility staff.</p>
+                <span class="explore-link">Meet the community <i class="bi bi-arrow-right"></i></span>
+            </a>
         </div>
     </div>
 </section>
 
-
-<!-- Twitter and Events -->
-<!-- <section class="ftco-section" style="background-color: #fff;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg-8 text-center heading-section ftco-animate">
-                <span class="subheading">Upcoming Community Events</span>
-                <h2 class="mb-4">Events</h2>
-
-                <div class="row">
-                    {% assign events = site.data.events | sort: 'start_date'%}
-                    {% assign count_events = 0 %}
-                    {% for event in events %}
-                    {% capture eventtime %}{{event.end_date | date: '%s'}}{% endcapture %}
-                    {% if eventtime >= nowunix and count_events < 10 %} <div class="col-md-6 col-lg-6 ftco-animate"
-                        style="margin: auto">
-                        <div class="media block-6 services d-block text-center">
-                            <div class="d-flex justify-content-center" style="font-size: 0.9em">
-                                {% if event.start_date != event.end_date %}{{event.start_date | date: "%b %d"
-                                }}&mdash;{% endif %}{{event.end_date | date: "%b %d, %Y" }}
-                            </div>
-                            <div class="media-body">
-                                <h3 class="heading" style="line-height: 1.1em">
-                                    <a href="{{event.url}}" target="_blank"
-                                        style="color: #000">{{event.short_name}}</a><br />
-                                    <span style="font-size: 0.7em; color: #e83e8c">{{event.location}}</span>
-                                </h3>
-                                {% if event.deadlines %}
-                                <p style="font-size: 0.9em; line-height: 1.3em;">
-                                    {% for d in event.deadlines %}
-                                    {{d.name}}: <strong>{{d.date | date: "%b %d, %Y"}}</strong><br />
-                                    {% endfor %}
-                                </p>
-                                {% endif %}
-                            </div>
-                        </div>
+<!-- WORKFLOW SYSTEMS -->
+{% assign systems_wci = site.systems | where: "wci_metadata", "true" | sort: "date_sort" | reverse %}
+{% if systems_wci.size > 0 %}
+<div id="services" class="section sys-section">
+    <div class="container" data-aos="fade-up">
+        <div class="wh-header">
+            <div class="wh-eyebrow"><span class="wh-pulse"></span>Recently updated</div>
+            <h2>Workflow systems</h2>
+            <p>Open-source systems described by their own teams, refreshed automatically from their repositories.</p>
+        </div>
+        <div class="sys-grid">
+            {% for system in systems_wci limit: 8 %}
+            <a class="sys-card" href="{{ system.url }}">
+                <div class="sys-head">
+                    <span class="sys-avatar"><img src="{{ system.avatar }}" alt="{{ system.title }} logo" loading="lazy" /></span>
+                    <h3>{{ system.title }}</h3>
                 </div>
-                {% assign count_events = count_events | plus: 1 %}
-                {% endif %}
-                {% endfor %}
-                <div class="col-md-12 col-lg-12 mt-5 text-center heading-section ftco-animate">
-                    <p><a href="/events" class="btn btn-primary mt-3 py-3 px-5">See all events...</a></p>
-                </div>
-            </div>
+                <p class="sys-desc">{{ system.headline | excerpt | strip_html | strip_newlines | truncate: 120 }}</p>
+                <ul class="sys-meta">
+                    {% if system.language and system.language != "" %}<li><i class="bi bi-code-slash"></i>{{ system.language }}</li>{% endif %}
+                    {% if system.release_name and system.release_name != "" %}<li><i class="bi bi-box-seam"></i>{{ system.release_name }}</li>{% endif %}
+                    {% if system.last_update and system.last_update != "" %}<li><i class="bi bi-clock-history"></i>{{ system.last_update }}</li>{% endif %}
+                </ul>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="wh-more">
+            <a class="wh-button" href="/systems">See all {{ total_systems }} systems <i class="bi bi-arrow-right"></i></a>
         </div>
     </div>
-    </div>
-</section> -->
+</div>
+{% endif %}
 
-<!-- Founders
-<section class="ftco-section" style="background-color: #fff;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center heading-section ftco-animate">
-                <span class="subheading">Since 2021</span>
-                <h2 class="mb-4">Founding Members</h2>
-
-                <div class="row">
-                    {% assign institutions = site.data.institutions | where: "founding",true %}
-                    {% for institution in institutions %}
-                    <div class="col-sm-6 col-md-3">
-                        <a href="{{institution.link}}" target="_blank">
-                            <img src="/images/institutions/{{institution.image}}" alt="{{institution.name}}"
-                                style="max-width: 10em; max-height: 4em; margin-bottom: 2em" />
-                        </a>
-                    </div>
-                    {% endfor %}
+<!-- WORKING GROUPS -->
+{% assign groups = site.working_groups | where: "layout", "working_groups" | sort: "title" %}
+{% if groups.size > 0 %}
+<section id="working-groups" class="wh-section wg-home-section">
+    <div class="container" data-aos="fade-up">
+        <div class="wh-header">
+            <div class="wh-eyebrow"><span class="wh-pulse"></span>Where the work happens</div>
+            <h2>Working groups</h2>
+            <p>Open groups tackling a specific problem together. Anyone can join &mdash; most of the work happens in the open.</p>
+        </div>
+        <div class="wg-home-grid">
+            {% for g in groups %}
+            <a class="wg-home-card" href="{{ g.url }}" data-status="{{ g.status | downcase }}">
+                <div class="wg-home-top">
+                    <span class="wg-home-status">{{ g.status }}</span>
+                    {% if g.members %}<span class="wg-home-count">{{ g.members | size }} members</span>{% endif %}
                 </div>
-            </div>
+                <h3>{{ g.title }}</h3>
+                <p>{{ g.description | strip_html | truncate: 165 }}</p>
+                <span class="wh-link">Group details <i class="bi bi-arrow-right"></i></span>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="wh-more">
+            <a class="wh-button" href="/groups">All working groups <i class="bi bi-arrow-right"></i></a>
         </div>
     </div>
+</section>
+{% endif %}
+
+<!-- REPORTS -->
+{% assign reports = site.data.reports | sort: "date" | reverse %}
+{% if reports.size > 0 %}
+<section id="reports" class="rep-section">
+    <div class="container" data-aos="fade-up">
+        <div class="wh-header wh-header-dark">
+            <div class="wh-eyebrow"><span class="wh-pulse"></span>Published outcomes</div>
+            <h2>Reports &amp; publications</h2>
+            <p>Community summits and studies turned into citable, openly available reports.</p>
+        </div>
+        <div class="rep-grid">
+            {% for r in reports limit: 3 %}
+            <a class="rep-card" href="{{ r.url }}" target="_blank" rel="noopener">
+                <div class="rep-cover"><img src="/images/reports/{{ r.image }}" alt="{{ r.title }} cover" loading="lazy" /></div>
+                <div class="rep-body">
+                    <span class="rep-date">{{ r.date | date: "%B %Y" }}{% if r.publisher %} &middot; {{ r.publisher }}{% endif %}</span>
+                    <h3>{{ r.title }}</h3>
+                    {% if r.subtitle %}<p class="rep-sub">{{ r.subtitle }}</p>{% endif %}
+                    {% if r.doi %}<span class="rep-doi"><i class="bi bi-link-45deg"></i>{{ r.doi }}</span>{% endif %}
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="wh-more">
+            <a class="wh-button wh-button-light" href="/reports">All {{ total_reports }} reports <i class="bi bi-arrow-right"></i></a>
+        </div>
     </div>
-</section> -->
+</section>
+{% endif %}
+
+<!-- WAYS TO CONTRIBUTE -->
+<section id="contribute" class="gi-section">
+    <div class="container" data-aos="fade-up">
+        <div class="wh-header">
+            <div class="wh-eyebrow"><span class="wh-pulse"></span>Open to everyone</div>
+            <h2>Ways to contribute</h2>
+            <p>The initiative is volunteer-driven. Every catalog, group, and talk on this site came from someone taking one of these steps.</p>
+        </div>
+        <ul class="gi-list">
+            <li><a href="/systems/contribute"><i class="bi bi-plus-circle"></i><span><strong>Add your workflow system</strong>Get it profiled in the systems catalog, refreshed automatically from your repository</span></a></li>
+            <li><a href="/groups"><i class="bi bi-people"></i><span><strong>Join a working group</strong>Shape benchmarking, FAIR workflows, quantum-classical, or terminology</span></a></li>
+            <li><a href="/talks"><i class="bi bi-mic"></i><span><strong>Give a community talk</strong>Present your system or research in the monthly virtual series</span></a></li>
+            <li><a href="/registries/contribute"><i class="bi bi-collection"></i><span><strong>Contribute a registry</strong>Help others discover pipelines that already exist</span></a></li>
+            <li><a href="/frameworks/contribute"><i class="bi bi-boxes"></i><span><strong>List a research framework</strong>Share a project building on workflow technology</span></a></li>
+            <li><a href="/members"><i class="bi bi-person-plus"></i><span><strong>Become a member</strong>Join {{ total_members }} people across {{ total_countries }} countries</span></a></li>
+        </ul>
+    </div>
+</section>

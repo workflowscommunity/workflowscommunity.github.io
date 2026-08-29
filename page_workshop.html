@@ -4,43 +4,183 @@ title: Workshops
 permalink: /workshops
 ---
 
-<section class="workshop-index-hero">
-    <div class="container" data-aos="fade-up">
-        <div class="workshop-index-hero-card">
-            <div class="workshop-index-eyebrow">Workshops</div>
-            <h1>Gatherings that move workflows forward</h1>
-            <p>Workshop events are associated with a major conference or meeting where researchers, developers, and users from distinct workflow systems share state-of-the-art research and practice.</p>
+{% capture nowunix %}{{ 'now' | date: '%s' }}{% endcapture %}
+{% assign all_workshops = site.workshops | sort: 'event_date' %}
+{% assign workshops_desc = all_workshops | reverse %}
+
+{% comment %} Split upcoming vs past on the real event date {% endcomment %}
+{% assign upcoming = "" | split: "" %}
+{% assign past = "" | split: "" %}
+{% for w in all_workshops %}
+{% capture wtime %}{{ w.event_date | date: '%s' }}{% endcapture %}
+{% assign one = w.title | split: "|" %}
+{% if wtime >= nowunix %}
+{% assign upcoming = upcoming | concat: one %}
+{% else %}
+{% assign past = past | concat: one %}
+{% endif %}
+{% endfor %}
+
+{% assign first_year = all_workshops.first.event_date | date: "%Y" %}
+{% assign this_year = 'now' | date: "%Y" %}
+{% assign span_years = this_year | minus: first_year | plus: 1 %}
+
+{% assign people = 0 %}
+{% assign hosts = "" %}
+{% assign cities = "" %}
+{% for w in site.workshops %}
+{% if w.organizers %}{% assign people = people | plus: w.organizers.size %}{% endif %}
+{% if w.speakers %}{% assign people = people | plus: w.speakers.size %}{% endif %}
+{% if w.steering_committee %}{% assign people = people | plus: w.steering_committee.size %}{% endif %}
+{% if w.in_conjunction_with %}{% assign hosts = hosts | append: w.in_conjunction_with | append: "|" %}{% endif %}
+{% if w.location %}{% assign cities = cities | append: w.location | append: "|" %}{% endif %}
+{% endfor %}
+{% assign host_count = hosts | split: "|" | uniq | size %}
+{% assign city_count = cities | split: "|" | uniq | size %}
+
+<section class="wsx-hero">
+    <div class="container">
+        <div class="wsx-hero-card" data-aos="fade-up">
+            <div class="wsx-hero-glow"></div>
+            <div class="wsx-hero-inner">
+                <div class="wh-eyebrow"><span class="wh-pulse"></span>Workshops</div>
+                <h1>Gatherings that move workflows forward</h1>
+                <p class="wsx-lead">Workshops run alongside a major conference, bringing researchers, developers, and
+                    users from distinct workflow systems together to share state-of-the-art research and practice.</p>
+                <div class="wsx-stats">
+                    <div class="wsx-stat"><strong>{{ site.workshops | size }}</strong><span>Workshops</span></div>
+                    <div class="wsx-stat"><strong>{{ host_count }}</strong><span>Host conferences</span></div>
+                    <div class="wsx-stat"><strong>{{ people }}+</strong><span>Organizers &amp; speakers</span></div>
+                    <div class="wsx-stat"><strong>{{ city_count }}</strong><span>Host cities</span></div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="workshop-index-section">
-    <div class="container" data-aos="fade-up">
-        <div class="workshop-index-header">
-            <h2>Upcoming and past workshops</h2>
-            <p>Explore the latest gatherings across the workflows community.</p>
+{% if upcoming.size > 0 %}
+<section class="wsx-next">
+    <div class="container">
+        <div class="wh-header wh-header-left" data-aos="fade-up">
+            <div class="wh-eyebrow"><span class="wh-pulse"></span>Coming up next</div>
+            <h2>Upcoming workshops</h2>
+            <p>Calls for papers, deadlines, and programmes for the gatherings still ahead.</p>
         </div>
-        <div class="workshop-index-grid">
-            {% assign workshops = site.workshops | sort: 'event_date' | reverse %}
-            {% for w in workshops %}
-            <a class="workshop-index-card" href="{{ w.url }}">
-                <div class="workshop-index-date">
-                    <span>{{ w.event_date | date: "%b" }}</span>
-                    <strong>{{ w.event_date | date: "%d" }}</strong>
-                    <em>{{ w.event_date | date: "%Y" }}</em>
+        {% for w in all_workshops %}
+        {% capture wtime %}{{ w.event_date | date: '%s' }}{% endcapture %}
+        {% if wtime >= nowunix %}
+        {% assign wtime_label = w.time | default: w.times %}
+        {% assign banner = "" %}
+        {% unless w.image == nil or w.image == "" or w.image contains "wci-default-card" %}{% assign banner = w.image %}{% endunless %}
+        <a class="wsx-feature" href="{{ w.url }}" data-aos="fade-up">
+            <div class="wsx-feature-visual">
+                <span class="wsx-badge">Upcoming</span>
+                {% if banner != "" %}
+                <img class="wsx-feature-banner" src="{{ banner }}" alt="{{ w.title }}" loading="lazy" />
+                {% else %}
+                <span class="wsx-logo-text">{{ w.title }}</span>
+                {% endif %}
+                {% if w.in_conjunction_with %}
+                <div class="wsx-host">
+                    <span>In conjunction with</span>
+                    <img src="{{ w.in_conjunction_with }}" alt="Host conference" loading="lazy" />
                 </div>
-                <div class="workshop-index-body">
-                    <h3>{{ w.title }}</h3>
-                    {% if w.subtitle %}
-                    <p class="workshop-index-subtitle">{{ w.subtitle }}</p>
-                    {% endif %}
-                    <div class="workshop-index-meta">
-                        <span class="workshop-index-location"><i class="fas fa-map-marker-alt"></i> {{ w.location }}</span>
-                        <span class="workshop-index-link">View details</span>
+                {% endif %}
+            </div>
+            <div class="wsx-feature-body">
+                <h3>{{ w.title }}</h3>
+                {% if w.subtitle and w.subtitle != "" %}<p class="wsx-feature-sub">{{ w.subtitle }}</p>{% endif %}
+                <div class="wsx-meta-grid">
+                    <div class="wsx-meta-item">
+                        <i class="bi bi-calendar-event"></i>
+                        <div><span>Date</span><strong>{{ w.event_date | date: "%B %-d, %Y" }}</strong></div>
+                    </div>
+                    <div class="wsx-meta-item">
+                        <i class="bi bi-clock"></i>
+                        <div><span>Time</span><strong>{{ wtime_label | default: "TBA" }}</strong></div>
+                    </div>
+                    <div class="wsx-meta-item">
+                        <i class="bi bi-geo-alt"></i>
+                        <div><span>Location</span><strong>{{ w.location | default: "TBA" }}</strong></div>
                     </div>
                 </div>
+                {% if w.organizers %}
+                <div class="wsx-people">
+                    <div class="wsx-avatars">
+                        {% for o in w.organizers limit: 5 %}
+                        <img src="{{ o.image }}" alt="{{ o.name }}" title="{{ o.name }}" loading="lazy" />
+                        {% endfor %}
+                        {% if w.organizers.size > 5 %}<span class="wsx-avatar-more">+{{ w.organizers.size | minus: 5 }}</span>{% endif %}
+                    </div>
+                    <span class="wsx-people-label">{{ w.organizers.size }} organizer{% if w.organizers.size != 1 %}s{% endif %}</span>
+                </div>
+                {% endif %}
+                <span class="wh-link">Workshop details <i class="bi bi-arrow-right"></i></span>
+            </div>
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+<section class="wsx-archive">
+    <div class="container">
+        <div class="wh-header wh-header-left" data-aos="fade-up">
+            <div class="wh-eyebrow"><span class="wh-pulse"></span>The archive</div>
+            <h2>Past workshops</h2>
+            <p>Programmes, organizers, and materials from previous editions.</p>
+        </div>
+
+        <div class="wsx-timeline">
+            {% assign last_year = "" %}
+            {% assign shown = 0 %}
+            {% for w in workshops_desc %}
+            {% capture wtime %}{{ w.event_date | date: '%s' }}{% endcapture %}
+            {% if wtime < nowunix %}
+            {% assign year = w.event_date | date: "%Y" %}
+            {% if year != last_year %}
+            {% if shown > 0 %}
+        </div>
+    </div>
+            {% endif %}
+    <div class="wsx-year-group">
+        <div class="wsx-year-rail"><span class="wsx-year-label">{{ year }}</span></div>
+        <div class="wsx-grid">
+            {% assign last_year = year %}
+            {% endif %}
+            {% assign shown = shown | plus: 1 %}
+            {% assign banner = "" %}
+            {% unless w.image == nil or w.image == "" or w.image contains "wci-default-card" %}{% assign banner = w.image %}{% endunless %}
+
+            <a class="wsx-card" href="{{ w.url }}" data-aos="fade-up">
+                <div class="wsx-card-cover">
+                    {% if banner != "" %}
+                    <img class="wsx-card-banner" src="{{ banner }}" alt="{{ w.title }}" loading="lazy" />
+                    {% else %}
+                    <span class="wsx-logo-text">{{ w.title }}</span>
+                    {% endif %}
+                    {% if w.in_conjunction_with %}
+                    <span class="wsx-card-host"><img src="{{ w.in_conjunction_with }}" alt="Host conference" loading="lazy" /></span>
+                    {% endif %}
+                </div>
+                <div class="wsx-card-body">
+                    <h3>{{ w.title }}</h3>
+                    {% if w.subtitle and w.subtitle != "" %}<p class="wsx-card-sub">{{ w.subtitle }}</p>{% endif %}
+                    <ul class="wsx-card-meta">
+                        <li><i class="bi bi-calendar-event"></i>{{ w.event_date | date: "%B %-d, %Y" }}</li>
+                        {% if w.location %}<li><i class="bi bi-geo-alt"></i>{{ w.location }}</li>{% endif %}
+                    </ul>
+                    <span class="wh-link">Workshop details <i class="bi bi-arrow-right"></i></span>
+                </div>
             </a>
+
+            {% endif %}
             {% endfor %}
+            {% if shown > 0 %}
+        </div>
+    </div>
+            {% endif %}
         </div>
     </div>
 </section>

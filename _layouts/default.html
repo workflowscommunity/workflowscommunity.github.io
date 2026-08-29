@@ -44,31 +44,37 @@ image: "https://workflows.community/images/wci-default-card.png"
                     </div>
                 </div>
                 <div class="col-lg-5 d-flex flex-column justify-content-start hero-spotlight">
-                    {% assign talks = site.talks| where: "given", false | sort: 'order'%}
-                    {% assign talk = talks.first %}
-                    <div class="hero-card" data-aos="fade-left" data-aos-delay="200">
-                        <a href="/talks" class="hero-card-media">
-                            <img src="/images/talks/banner.png" alt="Community talk banner" />
-                        </a>
-                        <div class="hero-card-body">
-                            <span class="hero-tag">Community talk</span>
-                            {% if talk %}
-                            <h3 class="hero-card-title"><a href="{{ talk.url }}">{{ talk.title }}</a></h3>
-                            <p class="hero-card-meta">{{ talk.authors }}</p>
-                            <p class="hero-card-date">{{ talk.event_date }}</p>
-                            {% else %}
-                            <h3 class="hero-card-title"><a href="/talks">Workflow Community Talks</a></h3>
-                            <p class="hero-card-meta">A 30 minute virtual series highlighting workflow systems, research frameworks, and community practices</p>
-                            <p class="hero-card-date">Monthly talks open to all</p>
-                            {% endif %}
+                    {% assign hero_members = 0 %}
+                    {% for m in site.data.members %}{% assign hero_members = hero_members | plus: m.entries.size %}{% endfor %}
+                    {% assign hero_systems = site.systems | size %}
+                    {% if hero_systems == 0 %}{% assign hero_systems = site.data.workflow_systems | size %}{% endif %}
+                    <div class="hero-panel" data-aos="fade-left" data-aos-delay="200">
+                        <span class="hero-tag">Community at a glance</span>
+                        <div class="hero-stats">
+                            <div class="hero-stat">
+                                <strong>{{ hero_members }}</strong>
+                                <span>Members</span>
+                            </div>
+                            <div class="hero-stat">
+                                <strong>{{ site.data.members | size }}</strong>
+                                <span>Countries</span>
+                            </div>
+                            <div class="hero-stat">
+                                <strong>{{ hero_systems }}</strong>
+                                <span>Workflow systems</span>
+                            </div>
+                            <div class="hero-stat">
+                                <strong>{{ site.summits.size | plus: site.bofs.size }}</strong>
+                                <span>Summits &amp; BoFs</span>
+                            </div>
                         </div>
-                        <div class="hero-card-footer">
-                            {% if talk %}
-                            <a href="{{ talk.url }}" class="hero-card-link">Learn more</a>
-                            {% else %}
-                            <a href="/talks" class="hero-card-link">View all talks</a>
-                            {% endif %}
-                        </div>
+                        <ul class="hero-panel-list">
+                            <li><a href="/talks"><i class="bi bi-mic"></i>{{ site.talks | size }} community talks</a></li>
+                            {% assign hero_groups = site.working_groups | where: "layout", "working_groups" %}
+                            <li><a href="/groups"><i class="bi bi-people"></i>{{ hero_groups | size }} working groups</a></li>
+                            <li><a href="/reports"><i class="bi bi-journal-text"></i>{{ site.data.reports | size }} published reports</a></li>
+                        </ul>
+                        <a href="/about" class="hero-card-link">About the initiative <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
