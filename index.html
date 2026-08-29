@@ -14,158 +14,132 @@ permalink: /
 {% assign total_bofs = site.bofs | size %}
 {% assign total_events = total_wcs | plus: total_bofs %}
 
-<section id="recent-posts" class="recent-posts sections-bg">
+{% comment %} ---- Pick what to feature: the next upcoming item of each kind, else the most recent ---- {% endcomment %}
+{% assign today = site.time | date: "%Y-%m-%d" %}
+
+{% assign talks_asc = site.talks | sort: "talk_number" %}
+{% assign upcoming_talks = talks_asc | where: "given", false %}
+{% if upcoming_talks.size > 0 %}
+{% assign talk = upcoming_talks.first %}
+{% assign talk_kind = "Next talk" %}
+{% else %}
+{% assign talk = talks_asc.last %}
+{% assign talk_kind = "Latest talk" %}
+{% endif %}
+
+{% assign workshops_asc = site.workshops | sort: "event_date" %}
+{% assign workshop = false %}
+{% for w in workshops_asc %}
+{% capture wtime %}{{ w.event_date | date: '%s' }}{% endcapture %}
+{% if wtime >= nowunix and workshop == false %}{% assign workshop = w %}{% assign workshop_kind = "Upcoming workshop" %}{% endif %}
+{% endfor %}
+{% if workshop == false %}{% assign workshop = workshops_asc.last %}{% assign workshop_kind = "Latest workshop" %}{% endif %}
+
+{% assign bofs_asc = site.bofs | sort: "start_date" %}
+{% assign bof = false %}
+{% for b in bofs_asc %}
+{% if b.start_date >= today and bof == false %}{% assign bof = b %}{% assign bof_kind = "Upcoming BoF" %}{% endif %}
+{% endfor %}
+{% if bof == false %}{% assign bof = bofs_asc.last %}{% assign bof_kind = "Latest BoF" %}{% endif %}
+{% assign bof_banner = "" %}
+{% unless bof.image contains "wci-default-card" %}{% assign bof_banner = bof.image %}{% endunless %}
+
+<section id="whats-happening" class="wh-section">
     <div class="container" data-aos="fade-up">
-        <div class="section-header">
-            <h2>What's Happening in the Community</h2>
-            <p>Recent innovations, events, and contributions from workflow practitioners worldwide</p>
+        <div class="wh-header">
+            <div class="wh-eyebrow"><span class="wh-pulse"></span>Community pulse</div>
+            <h2>What&rsquo;s happening in the community</h2>
+            <p>Talks, workshops, and gatherings from workflow practitioners worldwide.</p>
         </div>
 
-        <div class="row gy-4">
+        <div class="wh-grid">
 
-            <div class="col-lg-4">
-                <!-- COMMUNITY TALKS -->
-                <article class="community-card">
-                    {% assign talks = site.talks| where: "given", false | sort: 'order'%}
-                    {% assign talk = talks.first %}
-                    <div class="post-img">
-                        <img src="/images/talks/banner.png" alt="" class="img-fluid">
-                    </div>
-                    <p class="post-category">COMMUNITY TALK</p>
-                    {% if talk %}
-                    <h2 class="title">
-                        <a href="{{ talk.url }}">{{ talk.title }}</a>
-                    </h2>
-                    <div class="d-flex align-items-center post-footer">
-                        <div class="post-meta">
-                            <p class="post-author">{{ talk.authors }}</p>
-                            <p class="post-date">
-                                <time datetime="2022-01-01">{{ talk.event_date }}</time>
-                            </p>
-                        </div>
-                    </div>
+            {% if talk %}
+            <article class="wh-card" data-kind="talk">
+                <div class="wh-media">
+                    <img src="{{ talk.image | default: '/images/talks/banner.png' }}" alt="{{ talk.title }}" loading="lazy" />
+                    <span class="wh-kind">{{ talk_kind }}</span>
+                </div>
+                <div class="wh-body">
+                    <h3 class="wh-title"><a href="{{ talk.url }}">{{ talk.title }}</a></h3>
+                    {% if talk.authors %}<p class="wh-desc">{{ talk.authors }}</p>{% endif %}
+                    <ul class="wh-meta">
+                        <li><i class="bi bi-calendar-event"></i>{{ talk.event_date }}</li>
+                        {% if talk.times %}<li><i class="bi bi-clock"></i>{{ talk.times }}</li>{% endif %}
+                    </ul>
+                    <a class="wh-link" href="{{ talk.url }}">
+                        {% if talk.video %}Watch the talk{% else %}Talk details{% endif %}
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+            {% endif %}
+
+            {% if workshop %}
+            <article class="wh-card" data-kind="workshop">
+                <div class="wh-media">
+                    {% if workshop.image and workshop.image != "" %}
+                    <img src="{{ workshop.image }}" alt="{{ workshop.title }}" loading="lazy" />
                     {% else %}
-                    <h2 class="title">
-                        <a href="/talks">Workflow Community Talks</a>
-                    </h2>
-                    <div class="d-flex align-items-center post-footer">
-                        <div class="post-meta">
-                            <p class="post-author">Highlighting workflow systems, research frameworks, and community practices</p>
-                            <p class="post-date">
-                                <a href="/talks">View all talks</a>
-                            </p>
-                        </div>
-                    </div>
+                    <span class="wh-media-text">{{ workshop.title }}</span>
                     {% endif %}
-                </article>
-            </div>
+                    <span class="wh-kind">{{ workshop_kind }}</span>
+                </div>
+                <div class="wh-body">
+                    <h3 class="wh-title"><a href="{{ workshop.url }}">{{ workshop.title }}</a></h3>
+                    {% if workshop.subtitle and workshop.subtitle != "" %}<p class="wh-desc">{{ workshop.subtitle }}</p>{% endif %}
+                    <ul class="wh-meta">
+                        <li><i class="bi bi-calendar-event"></i>{{ workshop.event_date | date: "%B %-d, %Y" }}</li>
+                        {% if workshop.location %}<li><i class="bi bi-geo-alt"></i>{{ workshop.location }}</li>{% endif %}
+                    </ul>
+                    <a class="wh-link" href="{{ workshop.url }}">Workshop details <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </article>
+            {% endif %}
 
-            <!-- WORKSHOP -->
-            <div class="col-lg-4">
-                <article class="community-card">
-                    {% assign count_events = 0 %}
-                    {% assign workshops = site.workshops | sort: 'event_date' %}
-                    {% for w in workshops %}
-                    {% capture eventtime %}{{ w.event_date | date: '%s'}}{% endcapture %}
-                    {% if eventtime >= nowunix and count_events < 1 %}
-                    <div class="post-img">
-                        <img src="{{w.image}}" alt="" class="img-fluid">
-                    </div>
-                    <p class="post-category">WORKSHOP</p>
-                    <h2 class="title">
-                        <a href="{{ w.url }}">{{ w.title }}</a>
-                    </h2>
-                    <div class="d-flex align-items-center post-footer">
-                        <div class="post-meta">
-                            <p class="post-author">{{ w.subtitle }}</p>
-                            <p class="post-date">
-                                <time datetime="2022-01-01">{{ w.event_date | date: "%B %d, %Y" }}</time>
-                            </p>
-                        </div>
-                    </div>
-                    {% assign count_events = count_events | plus: 1 %}
+            {% if bof %}
+            <article class="wh-card" data-kind="bof">
+                <div class="wh-media">
+                    {% if bof_banner != "" %}
+                    <img src="{{ bof_banner }}" alt="{{ bof.title }}" loading="lazy" />
+                    {% elsif bof.conference_logo %}
+                    <img class="wh-media-logo" src="{{ bof.conference_logo }}" alt="{{ bof.title }}" loading="lazy" />
+                    {% else %}
+                    <span class="wh-media-text">{{ bof.title }}</span>
                     {% endif %}
-                    {% endfor %}
-                </article>
-            </div>
+                    <span class="wh-kind">{{ bof_kind }}</span>
+                </div>
+                <div class="wh-body">
+                    <h3 class="wh-title"><a href="{{ bof.url }}">{{ bof.subtitle | default: bof.title }}</a></h3>
+                    <p class="wh-desc">{{ bof.title }}</p>
+                    <ul class="wh-meta">
+                        <li><i class="bi bi-calendar-event"></i>{{ bof.event_date | split: " - " | last }}</li>
+                        {% if bof.time and bof.time != "TBA" %}<li><i class="bi bi-clock"></i>{{ bof.time }}</li>{% endif %}
+                        {% if bof.room and bof.room != "TBA" %}<li><i class="bi bi-geo-alt"></i>{{ bof.room }}</li>{% endif %}
+                    </ul>
+                    <a class="wh-link" href="{{ bof.url }}">Session details <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </article>
+            {% endif %}
 
-            <!-- <div class="col-lg-3">
-                <!- RECENT SUMMIT ->
-                <article class="community-card">
-                    {% assign summits = site.summits | sort: 'order' | reverse %}
-                    {% for summit in summits limit: 1 %}
-                    <div class="post-img">
-                        <img src="{{ summit.image }}" alt="" class="img-fluid">
-                    </div>
-                    <p class="post-category">COMMUNITY SUMMIT</p>
-                    <h2 class="title">
-                        <a href="{{ summit.url }}">{{ summit.title }}</a>
-                    </h2>
-                    <div class="d-flex align-items-center">
-                        <div class="post-meta">
-                            <p class="post-author">{{ summit.subtitle }}</p>
-                            <p class="post-date">
-                                <time datetime="2022-01-01">{{ summit.event_date }}</time>
-                            </p>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </article>
-            </div> -->
+            <article class="wh-card" data-kind="media">
+                <div class="wh-media wh-media-embed">
+                    <iframe src="https://www.youtube.com/embed/videoseries?si=ElrjhblSaUsMzOed&amp;list=PLAtmuqHExRvNnGtrqHl1ZXR6ZH37HLfo1"
+                        title="Workflows Community on YouTube" frameborder="0" loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <span class="wh-kind">On demand</span>
+                </div>
+                <div class="wh-body">
+                    <h3 class="wh-title"><a href="https://youtube.com/@WorkflowsCommunity" target="_blank" rel="noopener">Workflow innovation in action</a></h3>
+                    <p class="wh-desc">Recordings from the talk series, connecting researchers, developers, and practitioners shaping the future of workflows.</p>
+                    <ul class="wh-meta">
+                        <li><i class="bi bi-collection-play"></i>Full talk archive</li>
+                    </ul>
+                    <a class="wh-link" href="https://youtube.com/@WorkflowsCommunity" target="_blank" rel="noopener">YouTube channel <i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+            </article>
 
-            <div class="col-lg-4">
-                <!-- BOF -->
-                <article>
-                    {% assign bofs = site.bofs | sort: 'start_date' | reverse %}
-                    {% for b in bofs limit: 1 %}
-                    <div class="post-img">
-                        <img src="{{ b.image }}" alt="" class="img-fluid">
-                    </div>
-                    <p class="post-category">BOF SESSION</p>
-                    <h2 class="title">
-                        <a href="{{ b.url }}">{{ b.title }}</a>
-                    </h2>
-                    <div class="d-flex align-items-center">
-                        <div class="post-meta">
-                            <p class="post-author">{{ b.subtitle }}</p>
-                            <p class="post-date">
-                                {{ b.time }}<br />
-                                <time datetime="{{ b.start_date }}">{{ b.event_date }}</time>
-                            </p>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </article>
-            </div>
-
-            <div class="col-lg-4">
-                <!-- YOUTUBE -->
-                <article>
-                    <div class="post-img">
-                        <iframe width="100%" height="315"
-                            src="https://www.youtube.com/embed/videoseries?si=ElrjhblSaUsMzOed&amp;list=PLAtmuqHExRvNnGtrqHl1ZXR6ZH37HLfo1"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <p class="post-category">MEDIA</p>
-                    <h2 class="title">
-                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw/" target="_blank">Workflow
-                            Innovation in Action</a>
-                    </h2>
-                    <div class="d-flex align-items-center post-footer">
-                        <div class="post-meta col-lg-12">
-                            <p class="post-author">Connecting researchers, developers, and practitioners shaping the
-                                future of workflows</p>
-                        </div>
-                    </div>
-                    <div class="community-cta">
-                        <a class="community-cta-link" href="https://youtube.com/@WorkflowsCommunity" target="_blank">
-                            See our YouTube channel >
-                        </a>
-                    </div>
-                </article>
-            </div>
         </div>
     </div>
 </section>
