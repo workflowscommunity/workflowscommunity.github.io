@@ -60,15 +60,23 @@ permalink: /bof
         {% for bof in upcoming %}
         {% if bof.title contains "ISC" %}{% assign series = "ISC" %}{% elsif bof.title contains "ECP" %}{% assign series = "ECP" %}{% elsif bof.title contains "SC" %}{% assign series = "SC" %}{% else %}{% assign series = "BoF" %}{% endif %}
         {% assign year = bof.start_date | slice: 0, 4 %}
+        {% assign banner = "" %}
+        {% unless bof.image contains "wci-default-card" %}{% assign banner = bof.image %}{% endunless %}
         <a class="bofx-feature" href="{{ bof.url }}" data-aos="fade-up">
             <div class="bofx-feature-visual">
                 <div class="bofx-feature-badge">Upcoming</div>
-                {% if bof.conference_logo %}
+                {% if banner != "" %}
+                <img class="bofx-feature-photo" src="{{ banner }}" alt="{{ bof.title }} announcement" />
+                {% elsif bof.conference_logo %}
                 <div class="bofx-feature-logo"><img src="{{ bof.conference_logo }}" alt="{{ series }} {{ year }} logo" loading="lazy" /></div>
                 {% else %}
                 <div class="bofx-feature-logo bofx-logo-text">{{ series }} {{ year }}</div>
                 {% endif %}
+                {% if bof.event_date contains "," %}
                 <div class="bofx-countdown" data-bof-date="{{ bof.start_date }}"></div>
+                {% else %}
+                <div class="bofx-when">{{ bof.event_date }}</div>
+                {% endif %}
             </div>
             <div class="bofx-feature-body">
                 <div class="bofx-tags">
@@ -129,6 +137,8 @@ permalink: /bof
             {% for bof in past %}
             {% assign year = bof.start_date | slice: 0, 4 %}
             {% if bof.title contains "ISC" %}{% assign series = "ISC" %}{% elsif bof.title contains "ECP" %}{% assign series = "ECP" %}{% elsif bof.title contains "SC" %}{% assign series = "SC" %}{% else %}{% assign series = "BoF" %}{% endif %}
+            {% assign banner = "" %}
+            {% unless bof.image contains "wci-default-card" %}{% assign banner = bof.image %}{% endunless %}
             {% if year != last_year %}
             {% unless forloop.first %}
         </div>
@@ -143,9 +153,11 @@ permalink: /bof
             {% endif %}
 
             <a class="bofx-card" href="{{ bof.url }}" data-series="{{ series }}" data-aos="fade-up">
-                <div class="bofx-card-cover">
-                    <span class="bofx-card-year">{{ year }}</span>
-                    {% if bof.conference_logo %}
+                <div class="bofx-card-cover{% if banner != "" %} bofx-card-cover-photo{% endif %}">
+                    {% if banner == "" %}<span class="bofx-card-year">{{ year }}</span>{% endif %}
+                    {% if banner != "" %}
+                    <img class="bofx-card-photo" src="{{ banner }}" alt="{{ bof.title }} announcement" loading="lazy" />
+                    {% elsif bof.conference_logo %}
                     <div class="bofx-card-logo"><img src="{{ bof.conference_logo }}" alt="{{ series }} {{ year }} logo" loading="lazy" /></div>
                     {% else %}
                     <div class="bofx-card-logo bofx-logo-text">{{ series }} {{ year }}</div>

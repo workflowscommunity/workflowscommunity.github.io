@@ -116,7 +116,7 @@ permalink: /
             <div class="col-lg-4">
                 <!-- BOF -->
                 <article>
-                    {% assign bofs = site.bofs | sort: 'order' | reverse %}
+                    {% assign bofs = site.bofs | sort: 'start_date' | reverse %}
                     {% for b in bofs limit: 1 %}
                     <div class="post-img">
                         <img src="{{ b.image }}" alt="" class="img-fluid">
@@ -130,7 +130,7 @@ permalink: /
                             <p class="post-author">{{ b.subtitle }}</p>
                             <p class="post-date">
                                 {{ b.time }}<br />
-                                <time datetime="2022-01-01">{{ b.event_date }}</time>
+                                <time datetime="{{ b.start_date }}">{{ b.event_date }}</time>
                             </p>
                         </div>
                     </div>

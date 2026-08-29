@@ -6604,7 +6604,7 @@ canvas{
 
 @keyframes bofx-pulse {
   0% { box-shadow: 0 0 0 0 rgb(42 180 184 / 45%); }
-  70% { box-shadow: 0 0 0 0.75em rgb(42 180 184 / 0%); }
+  70% { box-shadow: 0 0 0 0.55em rgb(42 180 184 / 0%); }
   100% { box-shadow: 0 0 0 0 rgb(42 180 184 / 0%); }
 }
 
@@ -6685,6 +6685,15 @@ canvas{
   object-fit: contain;
 }
 
+.bofx-feature-photo {
+  position: relative;
+  width: 100%;
+  max-height: 12em;
+  object-fit: contain;
+  border-radius: 0.9em;
+  box-shadow: 0 10px 24px rgb(15 43 52 / 18%);
+}
+
 .bofx-logo-text {
   font-family: var(--font-primary);
   font-weight: 700;
@@ -6704,6 +6713,14 @@ canvas{
 
 .bofx-countdown:empty {
   display: none;
+}
+
+.bofx-when {
+  position: relative;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 1.15em;
+  color: #0f2b34;
 }
 
 .bofx-countdown strong {
@@ -6817,10 +6834,16 @@ canvas{
   height: 2.6em;
   border-radius: 50%;
   object-fit: cover;
+  overflow: hidden;
   border: 2px solid #ffffff;
   box-shadow: 0 2px 6px rgb(15 43 52 / 14%);
   margin-left: -0.7em;
   background: #eef1f2;
+}
+
+.bofx-avatars img {
+  font-size: 0;
+  color: transparent;
 }
 
 .bofx-avatars img:first-child {
@@ -6975,7 +6998,10 @@ canvas{
 
 .bofx-card-cover {
   position: relative;
-  height: 8.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
   background: linear-gradient(150deg, #16242c 0%, #1f3f49 100%);
 }
 
@@ -6993,6 +7019,27 @@ canvas{
   inset: auto 0 0 0;
   height: 60%;
   background: linear-gradient(180deg, rgb(16 23 32 / 0%), rgb(16 23 32 / 35%));
+}
+
+.bofx-card-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* contain, not cover: the banners are not all 16:9 and cropping one loses
+     the date, room, or supporter logos printed along its edges */
+  object-fit: contain;
+  object-position: center;
+}
+
+.bofx-card-cover-photo::before,
+.bofx-card-cover-photo::after {
+  display: none;
+}
+
+/* Neutral backdrop so letterbox bars read as a frame, not a colour clash */
+.bofx-card[data-series] .bofx-card-cover-photo {
+  background: #12181f;
 }
 
 .bofx-card[data-series="SC"] .bofx-card-cover {
@@ -7023,16 +7070,14 @@ canvas{
 }
 
 .bofx-card-logo {
-  position: absolute;
-  left: 1.4em;
-  bottom: -1.6em;
+  position: relative;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 5.4em;
-  height: 5.4em;
-  padding: 0.8em;
+  width: 7em;
+  height: 7em;
+  padding: 1em;
   border-radius: 1em;
   background: #ffffff;
   border: 1px solid #ececec;
@@ -7054,7 +7099,7 @@ canvas{
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 2.6em 1.5em 1.4em;
+  padding: 1.4em 1.5em;
 }
 
 .bofx-card-body h3 {
