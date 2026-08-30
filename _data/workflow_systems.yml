@@ -592,3 +592,8 @@
       Storage: ["Shared", "Distributed"]
     metadata: ["Provenance"]
     extensions: ["Replicated Storage", "Cloud Integration", "Scalability"]
+
+- type: github
+  organization: temple-compute
+  repository: horus-runtime
+  metadata: .wci.yml
