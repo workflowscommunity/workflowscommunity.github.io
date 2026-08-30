@@ -597,3 +597,22 @@
   organization: temple-compute
   repository: horus-runtime
   metadata: .wci.yml
+  terminology:
+    characteristics:
+      Flow: ["Task", "Data"]
+      Granularity: ["Functions", "Executables", "Sub-workflows"]
+      Coupling: ["Loose"]
+      Dynamicity: ["Branches", "Runtime Intervention"]
+      Domain: ["Agnostic"]
+    composition:
+      Description: ["Ad-hoc Schema", "API"]
+      Abstraction: ["Concrete"]
+      Modularity: ["Hierarchical"]
+    orchestration:
+      Planning: ["Static", "Dynamic"]
+      Execution: ["Runner"]
+    data_management:
+      Transport: ["File-based"]
+      Storage: ["Local", "Shared", "Distributed"]
+    metadata: ["Provenance", "Monitoring"]
+    extensions: ["Plugins", "HPC Execution", "Container/Cloud Support"]
