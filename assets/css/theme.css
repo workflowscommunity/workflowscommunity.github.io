@@ -1256,3 +1256,81 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+/*--------------------------------------------------------------
+# BoF supporters - full-width logo wall
+--------------------------------------------------------------*/
+.bof-supporters-band {
+  padding: 3em 0 4.2em;
+  background: var(--surface-1);
+  border-top: 1px solid var(--line-subtle);
+}
+
+.bof-supporters-band .wh-eyebrow {
+  margin-bottom: 1.5em;
+}
+
+.bof-logo-wall {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11.5em, 1fr));
+  gap: 0.9em;
+}
+
+.bof-logo-wall a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6em;
+  padding: 1.1em 1.3em;
+  background: var(--surface-0);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--r-md);
+  border-bottom-width: 1px;
+  transition: transform var(--dur) var(--ease-spring), box-shadow var(--dur) var(--ease),
+              border-color var(--dur) var(--ease);
+}
+
+.bof-logo-wall a:hover {
+  transform: translateY(-3px);
+  border-color: rgb(42 180 184 / 45%);
+  box-shadow: var(--shadow-md);
+}
+
+/* Grayscale at rest pulls a set of visually mismatched logos together */
+.bof-logo-wall img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.68;
+  font-size: 0;
+  color: transparent;
+  transition: filter var(--dur) var(--ease), opacity var(--dur) var(--ease);
+}
+
+.bof-logo-wall a:hover img,
+.bof-logo-wall a:focus-visible img {
+  filter: none;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bof-logo-wall img {
+    filter: none;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .bof-logo-wall {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bof-logo-wall a {
+    height: 5em;
+    padding: 0.9em;
+  }
+}

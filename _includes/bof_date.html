@@ -1,0 +1,17 @@
+{%- comment -%}
+Renders a BoF date from its ISO start_date.
+
+  date      - the ISO date string (required)
+  precision - "month" when only the month is announced; omit for a known day
+  style     - "long" to include the weekday
+
+Replaces the old free-text event_date field, which could not be sorted and
+could not distinguish "day not announced" from a real date.
+{%- endcomment -%}
+{%- if include.precision == "month" -%}
+{{- include.date | date: "%B %Y" -}}
+{%- elsif include.style == "long" -%}
+{{- include.date | date: "%A, %B %-d, %Y" -}}
+{%- else -%}
+{{- include.date | date: "%B %-d, %Y" -}}
+{%- endif -%}

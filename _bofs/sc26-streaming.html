@@ -1,0 +1,152 @@
+---
+layout: bof
+title: SC26 Data Streaming BoF
+subtitle: "Real-Time Scientific Data Streaming to HPC Nodes: Challenges and Innovations VI"
+start_date: "2026-11-17"
+date_precision: month
+time: TBA
+room: TBA
+conference_logo: /images/bof/sc26.png
+<!-- image: /images/bof/sc25-bof-streaming.jpg -->
+speakers:
+    - name: Adam Thompson (NVIDIA)
+      image: /images/bof/adam-thompson.jpg
+    - name: Alex Upton (CSCS)
+      image: https://www.cscs.ch/fileadmin/user_upload/mycscs_staff/user_29_small.jpg
+    - name: Eli Dart (ESnet)
+      image: /images/bof/eli-dart.jpg
+
+organizers:
+    - name: Bjoern Enders (LBNL)
+      image: /images/bof/bjoern_enders.jpg
+    - name: Rafael Ferreira da Silva (ORNL)
+      image: https://rafaelsilva.com/assets/images/2022-rafael-ferreira-da-silva-high-resolution.jpg
+
+supporters:
+    - link: https://www.lbl.gov/
+      image: https://www.lbl.gov/wp-content/uploads/2022/09/berkeley-logo.svg
+    - link: https://www.nersc.gov/
+      image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzKv5LXRUBcMbGsXmwhEVArUKYup-AJjDs8g&s
+    - link: https://ornl.gov/
+      image: https://map.ornl.org/art/logo.png
+    - link: https://www.nvidia.com/en-us/
+      image: /images/institutions/nvidia.png
+    - link: https://www.anl.gov/
+      image: https://upload.wikimedia.org/wikipedia/commons/5/5b/Argonnelablogo.PNG
+    - link: https://www.cscs.ch/
+      image: https://upload.wikimedia.org/wikipedia/commons/d/df/Simple_CSCS_Logo.jpg
+---
+
+<p>
+  As High-Performance Computing enters the Exascale era, the scientific community faces a data paradox: our
+  ability to generate data through high-fidelity simulations and next-generation instruments vastly outpaces
+  our ability to store it. In domains ranging from climate modeling and cosmology to experimental physics,
+  simulation outputs and sensor inputs now routinely reach the petabyte range per run. The traditional
+  "compute-store-analyze" paradigm, which dumps massive datasets to parallel file systems for post-processing,
+  has become an unsustainable bottleneck that introduces unacceptable latency, wastes energy on data movement,
+  and often puts high-frequency data analysis out of practical reach. This BoF is about the architectural shift
+  that follows, from file-based workflows to high-performance streaming, where storage serves as a sink for
+  final scientific results rather than a buffer for post-processing, and analysis, visualization, and reduction
+  happen in-transit or in-situ.
+</p>
+
+<p>
+  The convergence of HPC and Artificial Intelligence makes this conversation especially timely. Modern
+  scientific workflows increasingly rely on AI to steer simulations, train surrogate models on the fly, and
+  integrate digital twins with real-time data from the edge. Such live interactions require data to flow
+  continuously between compute nodes and inference engines, bypassing the latency of the file system entirely.
+  While a number of streaming workflows have emerged, many HPC, data, and network user facilities are not set
+  up to support them out of the gate, for policy, scheduler, or hardware reasons. Yet these workflows have
+  become a cornerstone of modern scientific applications, and their stringent timing requirements benchmark the
+  ultimate integration of HPC, data, and networks into seamless compute-in-the-loop workflows for experimental
+  and observational user facilities.
+</p>
+
+<p>
+  This BoF takes another step toward building a community around the software stacks, protocols, and hardware
+  architectures required to make streaming a first-class citizen in HPC, moving the conversation beyond ad-hoc,
+  application-specific implementations toward standardized, interoperable frameworks. It is the sixth edition
+  of its kind, following successful sessions at SC24, ISC25, <a href="/bof/sc25-streaming">SC25</a>, SCA26, and
+  ISC26, as well as the Stream2HPC 2026 workshop at ISC26. Those events revealed strong interest in streaming
+  workflows, particularly around integration challenges with existing HPC infrastructure and the need for
+  standardized approaches across facilities. SC26 is an ideal venue, bringing the major HPC user facility
+  providers together with scientific computing users who already run real-time streaming workflows or expect
+  that need to arise soon, and offering an opportunity to survey current solutions and discuss limitations
+  across HPC, data, and network providers. We will also report on the community whitepaper started at ISC26 and
+  invite more people to contribute.
+</p>
+<!-- <img src="/images/bof/sc25-bof-streaming.jpg" style="width: 100%; border-radius: 1em;" /> -->
+
+<!-- <p>&nbsp;</p>
+<h2 class="mb-4">Agenda</h2>
+<div class="col-md-12 ftco-animate">
+  <table class="table">
+    <thead>
+      <th style="min-width: 4em">Time</th>
+      <th>Event</th>
+    </thead>
+    <tr>
+      <td>5:15pm</td>
+      <td>
+        Welcome and Agenda Presentation
+        <p style="padding-left: 1em; line-height: 1.2em; color: #666; margin-bottom: 0.5em">
+          Bjoern Enders &mdash; <span style="font-style: italic; color: #999">
+            National Energy Research Scientific Computing Center (NERSC)
+          </span><br />
+          Rafael Ferreira da Silva &mdash; <span style="font-style: italic; color: #999">Oak Ridge
+            Leadership Computing Facility (OLCF)</span><br />
+        </p>
+      </td>
+    </tr>
+    <tr style="background-color: #f5f5f5;">
+      <td>5:20pm</td>
+      <td>
+        Lightning talks:
+        <ul>
+          <li>
+            <a href="/files/bof/">
+              Connecting experiments and HPC with interactive streaming workflows</a><br />
+            <span style="color: #999"><strong>Samuel Welborn</strong>,
+              National Energy Research Scientific Computing Center (NERSC)</span>
+          </li>
+          <li>
+            <a href="/files/bof/">
+              AlpsB &mdash; A Geographically Distributed Infrastructure to Facilitate Large-Scale Training of Weather and Climate AI Models</a><br />
+            <span style="color: #999"><strong>Alex Upton</strong>,
+              Swiss National Computing Center (CSCS)</span>
+          </li>
+          <li>
+            <a href="/files/bof/">
+              The Instrumental Edge: Real Time and AI-Ready Discovery</a><br />
+            <span style="color: #999"><strong>Adam Thompson</strong>,
+              NVIDIA</span>
+          </li>
+          <li>
+            <a href="/files/bof/">
+              What and where to stream … and now?! How can we answer such questions</a><br />
+            <span style="color: #999"><strong>Fred Suter</strong>,
+              Oak Ridge National Laboratory (ORNL)</span>
+          </li>
+          <li>
+            <a href="/files/bof/">
+              Build It and They Will Come: Designing a Streaming Framework for HPC</a><br />
+            <span style="color: #999"><strong>Matthieu Dorier</strong>,
+              Argonne National Laboratory (ANL)</span>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>6:00pm</td>
+      <td>Panel Discussions and Open Q&A</td>
+    </tr>
+    <tr>
+      <td>6:15pm</td>
+      <td>Workflow Challenge Workshop</td>
+    </tr>
+    <tr>
+      <td>6:40pm</td>
+      <td>Closing Remarks</td>
+    </tr>
+  </table>
+</div> -->

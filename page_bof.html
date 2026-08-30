@@ -72,10 +72,11 @@ permalink: /bof
                 {% else %}
                 <div class="bofx-feature-logo bofx-logo-text">{{ series }} {{ year }}</div>
                 {% endif %}
-                {% if bof.event_date contains "," %}
+                {% comment %} Only count down when the exact day is announced. {% endcomment %}
+                {% if bof.date_precision != "month" %}
                 <div class="bofx-countdown" data-bof-date="{{ bof.start_date }}"></div>
                 {% else %}
-                <div class="bofx-when">{{ bof.event_date }}</div>
+                <div class="bofx-when">{% include bof_date.html date=bof.start_date precision=bof.date_precision %}</div>
                 {% endif %}
             </div>
             <div class="bofx-feature-body">
@@ -87,7 +88,7 @@ permalink: /bof
                 <div class="bofx-meta">
                     <div class="bofx-meta-item">
                         <i class="bi bi-calendar-event"></i>
-                        <div><span>Date</span><strong>{{ bof.event_date | split: " - " | last }}</strong></div>
+                        <div><span>Date</span><strong>{% include bof_date.html date=bof.start_date precision=bof.date_precision %}</strong></div>
                     </div>
                     <div class="bofx-meta-item">
                         <i class="bi bi-clock"></i>
@@ -170,7 +171,7 @@ permalink: /bof
                     </div>
                     <h3>{{ bof.subtitle | default: bof.title }}</h3>
                     <div class="bofx-card-foot">
-                        <span class="bofx-card-time"><i class="bi bi-calendar-event"></i>{{ bof.event_date | split: " - " | last }}</span>
+                        <span class="bofx-card-time"><i class="bi bi-calendar-event"></i>{% include bof_date.html date=bof.start_date precision=bof.date_precision %}</span>
                         <span class="bofx-card-link">View details <i class="bi bi-arrow-right"></i></span>
                     </div>
                 </div>

@@ -17,10 +17,10 @@ layout: page
                     {% endif %}
                     <h1>{{ page.title }}</h1>
                     <div class="bof-meta">
-                        {% if page.event_date %}
+                        {% if page.start_date %}
                         <div>
                             <span>Date</span>
-                            <strong>{{ page.event_date }}</strong>
+                            <strong>{% include bof_date.html date=page.start_date precision=page.date_precision style="long" %}</strong>
                         </div>
                         {% endif %}
                         {% if page.time %}
@@ -51,12 +51,12 @@ layout: page
 <section class="bof-body">
     <div class="container" data-aos="fade-up">
         <div class="row g-4">
-            <div class="{% if page.speakers or page.organizers or page.supporters %}col-lg-8{% else %}col-lg-12{% endif %} wg wg-contents">
+            <div class="{% if page.speakers or page.organizers %}col-lg-8{% else %}col-lg-12{% endif %} wg wg-contents">
                 <div class="bof-content-card">
                     {{ content }}
                 </div>
             </div>
-            {% if page.speakers or page.organizers or page.supporters %}
+            {% if page.speakers or page.organizers %}
             <div class="col-lg-4">
                 <div class="bof-panel">
                     {% if page.speakers %}
@@ -97,21 +97,27 @@ layout: page
                     </div>
                     {% endif %}
 
-                    {% if page.supporters %}
-                    <div class="bof-panel-block">
-                        <h3>Supporters</h3>
-                        <div class="bof-supporters">
-                            {% for s in page.supporters %}
-                            <a href="{{ s.link }}" target="_blank" rel="noopener">
-                                <img src="{{ s.image }}" alt="Supporter logo" />
-                            </a>
-                            {% endfor %}
-                        </div>
-                    </div>
-                    {% endif %}
                 </div>
             </div>
             {% endif %}
         </div>
     </div>
 </section>
+
+{% if page.supporters %}
+<section class="bof-supporters-band">
+    <div class="container" data-aos="fade-up">
+        <div class="wh-eyebrow"><span class="wh-pulse"></span>Supported by</div>
+        <ul class="bof-logo-wall">
+            {% for s in page.supporters %}
+            {% assign domain = s.link | split: "//" | last | split: "/" | first | remove: "www." %}
+            <li>
+                <a href="{{ s.link }}" target="_blank" rel="noopener" title="{{ domain }}">
+                    <img src="{{ s.image }}" alt="{{ domain }}" loading="lazy" />
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endif %}

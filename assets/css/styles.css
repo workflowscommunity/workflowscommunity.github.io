@@ -6507,18 +6507,6 @@ canvas{
   color: #5b5b5b;
 }
 
-.bof-supporters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8em;
-  align-items: center;
-}
-
-.bof-supporters img {
-  height: 2.4em;
-  max-width: 100%;
-}
-
 /*--------------------------------------------------------------
 # Landing page - hero at-a-glance panel
 --------------------------------------------------------------*/

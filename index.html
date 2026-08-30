@@ -123,7 +123,7 @@ so fall back to the data file when the collection has not been built. {% endcomm
                     <h3 class="wh-title"><a href="{{ bof.url }}">{{ bof.subtitle | default: bof.title }}</a></h3>
                     <p class="wh-desc">{{ bof.title }}</p>
                     <ul class="wh-meta">
-                        <li><i class="bi bi-calendar-event"></i>{{ bof.event_date | split: " - " | last }}</li>
+                        <li><i class="bi bi-calendar-event"></i>{% include bof_date.html date=bof.start_date precision=bof.date_precision %}</li>
                         {% if bof.time and bof.time != "TBA" %}<li><i class="bi bi-clock"></i>{{ bof.time }}</li>{% endif %}
                         {% if bof.room and bof.room != "TBA" %}<li><i class="bi bi-geo-alt"></i>{{ bof.room }}</li>{% endif %}
                     </ul>
