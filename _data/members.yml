@@ -1526,6 +1526,16 @@
     first_name: Kaylee
     institution: Massachusetts Institute of Technology
 
+  - last_name: Shpilker
+    first_name: Polina
+    institution: Oak Ridge National Laboratory
+    link: https://orcid.org/0000-0002-6761-7326
+
+  - last_name: Naha
+    first_name: Kallol
+    institution: University of Idaho
+    link: https://kallolnaha.me
+
 
 - country: Vietnam
   entries:
