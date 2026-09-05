@@ -1,0 +1,726 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title> Horus Runtime - Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Horus Runtime" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Horus Runtime is the open-source engine behind the Temple Compute platform. You describe a pipeline once, in YAML or Python, and run it wherever the compute lives, from a laptop to an HPC cluster. A workflow is a DAG of tasks wired together by edges that carry typed, addressable artifacts (files, folders, JSON, pickles) from one task’s output to another’s input; the DAG comes entirely from those edges, not from list order. Each task separates three concerns: a Runtime (what runs: a shell command, a Python snippet or script), an Executor (how it runs: subprocess, in-process Python), and a Target…" />
+<meta name="twitter:description" property="og:description" content="Horus Runtime is the open-source engine behind the Temple Compute platform. You describe a pipeline once, in YAML or Python, and run it wherever the compute lives, from a laptop to an HPC cluster. A workflow is a DAG of tasks wired together by edges that carry typed, addressable artifacts (files, folders, JSON, pickles) from one task’s output to another’s input; the DAG comes entirely from those edges, not from list order. Each task separates three concerns: a Runtime (what runs: a shell command, a Python snippet or script), an Executor (how it runs: subprocess, in-process Python), and a Target…" />
+<link rel="canonical" href="https://workflows.community/systems/horus-runtime/" />
+<meta property="og:url" content="https://workflows.community/systems/horus-runtime/" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/243013656?v=4" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-09-05T14:45:11+00:00" />
+<meta property="article:modified_time" content="2026-09-05T14:45:11+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/243013656?v=4" />
+<meta name="twitter:title" content="Horus Runtime" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Workflows Community Initiative"},"dateModified":"2026-09-05T14:45:11+00:00","datePublished":"2026-09-05T14:45:11+00:00","description":"Horus Runtime is the open-source engine behind the Temple Compute platform. You describe a pipeline once, in YAML or Python, and run it wherever the compute lives, from a laptop to an HPC cluster. A workflow is a DAG of tasks wired together by edges that carry typed, addressable artifacts (files, folders, JSON, pickles) from one task’s output to another’s input; the DAG comes entirely from those edges, not from list order. Each task separates three concerns: a Runtime (what runs: a shell command, a Python snippet or script), an Executor (how it runs: subprocess, in-process Python), and a Target…","headline":"Horus Runtime","image":"https://avatars.githubusercontent.com/u/243013656?v=4","mainEntityOfPage":{"@type":"WebPage","@id":"https://workflows.community/systems/horus-runtime/"},"url":"https://workflows.community/systems/horus-runtime/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+<link rel="stylesheet" href="/assets/css/theme.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset page-band">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <p class="page-band-title" data-aos="fade-up">Horus Runtime</p>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        <div class="single-page">
+            <section class="system-detail">
+    <div class="container system-container" data-aos="fade-up">
+        <div class="system-hero">
+            <p class="system-breadcrumb">
+                <a href="/systems">Workflow Systems</a>
+                <span>/</span>
+                Horus Runtime
+            </p>
+            <div class="system-hero-content">
+                <div>
+                    <div class="system-title-row">
+                        <h1>Horus Runtime</h1>
+                        
+                        <span class="system-wci-badge">
+                            <img src="/favicon.ico" alt="WCI" />
+                            WCI metadata
+                        </span>
+                        
+                    </div>
+                    <p class="system-hero-headline">Reproducible scientific workflows, from your laptop to the HPC cluster.</p>
+                    <div class="system-hero-actions">
+                        
+                        <a href="https://templecompute.com" target="_blank" class="btn btn-primary system-cta-btn">
+                            Visit website
+                        </a>
+                        
+                        
+                        <a href="https://github.com/temple-compute/horus-runtime" target="_blank" class="btn btn-outer">
+                            View repository
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="system-hero-card">
+                    <div class="system-meta-grid">
+                        <div class="system-meta">
+                            <span>Last updated</span>
+                            <strong>03 Sep 2026</strong>
+                        </div>
+                        
+                        <div class="system-meta">
+                            <span>Release</span>
+                            <strong>v0.5.0</strong>
+                        </div>
+                        
+                        <div class="system-meta">
+                            <span>Language</span>
+                            <strong>Python</strong>
+                        </div>
+                        
+                        <div class="system-meta">
+                            <span>License</span>
+                            <strong>AGPL-3.0</strong>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row system-main g-4">
+            <div class="col-lg-8 wg wg-contents">
+                <section class="system-section">
+                    <h2>Overview</h2>
+                    <p>Horus Runtime is the open-source engine behind the Temple Compute platform. You describe a pipeline once, in YAML or Python, and run it wherever the compute lives, from a laptop to an HPC cluster. A workflow is a DAG of tasks wired together by edges that carry typed, addressable artifacts (files, folders, JSON, pickles) from one task's output to another's input; the DAG comes entirely from those edges, not from list order. Each task separates three concerns: a Runtime (what runs: a shell command, a Python snippet or script), an Executor (how it runs: subprocess, in-process Python), and a Target (where it runs: local today, SSH and Slurm via official plugins), so moving a stage from a laptop to a cluster is a change to the target, not a rewrite. Targets expose an agentless channel (run_command, put_file, get_file, list_dir) so a remote host needs nothing but the binaries a command names, no Horus install required there. Because outputs are artifacts rather than side effects, completed tasks are skipped on re-run, and a pipeline that failed at hour nine resumes at hour nine. Beyond single tasks, workflows can fan out over a collection with a `map` task that dispatches one clone per item concurrently, and repeat a task with a conditional `loop` driven by a predicate artifact, both expanding the DAG dynamically at runtime as the data becomes known. Every building block, artifacts, tasks, runtimes, executors, targets, transfer strategies, workflows, interactive runtime interactions, event transports and subscribers, and middleware, is a plugin: a Python package that subclasses a Horus base class and registers itself under a `horus.*` entry point, so the runtime discovers it automatically once installed and it is used the same way a built-in kind is, by its `kind` string in YAML or by direct import in Python. </p>
+                </section>
+
+                <section class="system-section">
+                    <div class="system-actions-grid">
+                        
+                        <a class="system-action" href="https://docs.templecompute.com/guides/installation" target="_blank">
+                            <i class="fas fa-download"></i>
+                            <div>
+                                <strong>Install</strong>
+                                <span>Get started quickly</span>
+                            </div>
+                        </a>
+                        
+                        
+                        <a class="system-action" href="https://docs.templecompute.com/guides/quickstart" target="_blank">
+                            <i class="fas fa-user-cog"></i>
+                            <div>
+                                <strong>Tutorial</strong>
+                                <span>Learn the basics</span>
+                            </div>
+                        </a>
+                        
+                        
+                        <a class="system-action" href="https://docs.templecompute.com" target="_blank">
+                            <i class="fas fa-book"></i>
+                            <div>
+                                <strong>Documentation</strong>
+                                <span>Explore the docs</span>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </section>
+
+                <section class="system-section">
+                    <h3>Repository activity</h3>
+                    <div class="system-stats-grid">
+                        <a class="system-stat" href="https://github.com/temple-compute/horus-runtime/stargazers" target="_blank">
+                            <strong>32</strong>
+                            <span>Stargazers</span>
+                        </a>
+                        <a class="system-stat" href="https://github.com/temple-compute/horus-runtime/network/members" target="_blank">
+                            <strong>3</strong>
+                            <span>Forks</span>
+                        </a>
+                    </div>
+                </section>
+
+                
+                <section class="system-section">
+                    <h3>Execution environment</h3>
+                    <div class="row" style="text-align: left;"><div class="col-lg-12"><strong>User Interfaces</strong><ul class="list-services"><li>CLI</li><li>Python API</li><li>YAML</li></ul></div><div class="col-lg-12"><strong>Resource Managers</strong><ul class="list-services"><li>local</li><li>SLURM</li></ul></div><div class="col-lg-12"><strong>Transfer Protocols</strong><ul class="list-services"><li>local</li><li>SSH</li></ul></div></div>
+                </section>
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <section class="system-section">
+                    <h3 class="system-terminology-title">Terminology
+                        <span class="tt">
+                            <span class="tt-trigger" aria-hidden="true"><i class="fa fa-circle-info"></i></span>
+                            <span class="tooltiptext">
+                                Terminology below follows the definitions established by the
+                                <a href="/terminology">Workflows Community Terminology</a>.
+                            </span>
+                        </span>
+                    </h3>
+                    <div id="tree">
+                        <div class="branch">
+                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753"><strong>Characteristics</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Flow</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Task</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Data</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Granularity</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Functions</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Executables</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Sub-workflows</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Coupling</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Loose</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Dynamicity</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Branches</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Runtime Intervention</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D46753"><strong>Domain</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #F9DADA; border: 1px solid #D46753">Agnostic</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B"><strong>Composition</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D8833B"><strong>Description</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B">Ad-hoc Schema</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B">API</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D8833B"><strong>Abstraction</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B">Concrete</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #D8833B"><strong>Modularity</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #FBF4EC; border: 1px solid #D8833B">Hierarchical</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68"><strong>Orchestration</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #55AB68"><strong>Planning</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68">Static</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68">Dynamic</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #55AB68"><strong>Execution</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #DEE8E0; border: 1px solid #55AB68">Runner</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA"><strong>Data Management</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #4EADEA"><strong>Transport</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA">File-based</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #4EADEA"><strong>Storage</strong></span>
+                                        <div class="branch">
+                                            
+                                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA">Local</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA">Shared</span></div>
+                                            
+                                            <div class="entry"><span style="background-color: #E6F1F2; border: 1px solid #4EADEA">Distributed</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span style="background-color: #F5EAF3; border: 1px solid #8448A8"><strong>Metadata Capture</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #8448A8"><strong>Provenance</strong></span>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span style="border: 1px solid #8448A8"><strong>Monitoring</strong></span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="entry"><span><strong>Extensions</strong></span>
+                                <div class="branch">
+                                    
+                                    <div class="entry">
+                                        <span>Plugins</span>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span>HPC Execution</span>
+                                    </div>
+                                    
+                                    <div class="entry">
+                                        <span>Container/Cloud Support</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                
+                
+            </div>
+
+            <div class="col-lg-4">
+                <aside class="system-sidebar">
+                    <div class="system-sidebar-card">
+                        <div class="system-logo-block">
+                            <img src="https://avatars.githubusercontent.com/u/243013656?v=4" alt="Horus Runtime" />
+                        </div>
+                        <h4>Links</h4>
+                        <div class="system-links">
+                            
+                            <a href="https://templecompute.com" target="_blank" class="system-link">
+                                <span class="system-link-icon"><i class="fa fa-link"></i></span>
+                                <span class="system-link-text">
+                                    <span class="system-link-label">Website</span>
+                                    <span class="system-link-value">https://templecompute.com</span>
+                                </span>
+                            </a>
+                            
+                            
+                            <a href="https://github.com/temple-compute/horus-runtime" target="_blank" class="system-link">
+                                <span class="system-link-icon"><i class="fab fa-github"></i></span>
+                                <span class="system-link-text">
+                                    <span class="system-link-label">Repository</span>
+                                    <span class="system-link-value">https://github.com/temple-compute/horus-runtime</span>
+                                </span>
+                            </a>
+                            
+                            
+                            
+                        </div>
+                    </div>
+
+                    <div class="system-sidebar-card">
+                        <h4>Contributors</h4>
+                        <div class="system-contributors">
+                            <a href="https://github.com/chdominguez" target="_blank"><img src="https://avatars.githubusercontent.com/u/34599976?v=4" width="48" height="48" alt="chdominguez" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/quietflareco-sudo" target="_blank"><img src="https://avatars.githubusercontent.com/u/279080788?v=4" width="48" height="48" alt="quietflareco-sudo" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a><a href="https://github.com/apps/dependabot" target="_blank"><img src="https://avatars.githubusercontent.com/in/29110?v=4" width="48" height="48" alt="dependabot[bot]" style="margin-right: 0.5em; border-radius: 0.5em; margin-bottom: 1em"/></a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </div>
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

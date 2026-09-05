@@ -1,0 +1,787 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Workflows Community Initiative</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="workflow, hpc, science, exascale, fair, reproducibility, distributed computing, artificial intelligence, hpc, ai" />
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Workflows Community Initiative" />
+<meta name="author" content="Workflows Community Initiative" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://workflows.community/" />
+<meta property="og:url" content="https://workflows.community/" />
+<meta property="og:site_name" content="Workflows Community Initiative" />
+<meta property="og:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://workflows.community/images/wci-default-card.png" />
+<meta name="twitter:title" content="Workflows Community Initiative" />
+<meta name="twitter:site" content="@WorkflowsCI" />
+<meta name="twitter:creator" content="@WorkflowsCI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Workflows Community Initiative"},"headline":"Workflows Community Initiative","image":"https://workflows.community/images/wci-default-card.png","name":"Workflows Community Initiative","sameAs":["https://twitter.com/WorkflowsCI"],"url":"https://workflows.community/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Prefetch DNS for faster page speed -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/aos.css">
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+<link rel="stylesheet" href="/assets/css/theme.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-271163E6PP"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-271163E6PP');
+</script>
+
+<!-- MapBox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body class="is-preload dark">
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="/images/wci-logo-horizontal-white.png" alt="logo" class="logo-default">
+            <img src="/images/wci-logo-horizontal.png" alt="logo" class="logo-sticky">
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <!-- RESOURCES -->
+                <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/systems">Workflow Systems</a></li>
+                        <li><a href="/registries">Workflow Registries</a></li>
+                        <li><a href="/terminology">Terminology</a></li>
+                        <li><a href="/education">Education and Training</a></li>
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+                </li>
+                <!-- RESEARCH -->
+                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/groups">Working Groups</a></li>
+                        <li><a href="/frameworks">Research Frameworks</a></li>
+                    </ul>
+                </li>
+                <!-- EVENTS -->
+                <li class="dropdown"><a href="#"><span>Events</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/summits">Workflows Community Summits</a></li>
+                        <li><a href="/talks">Workflows Community Talks</a></li>
+                        <li><a href="/bof">Birds of a Feather (BoF)</a></li>
+                        <li><a href="/workshops">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="/members">Members</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-get-started hide-on-mobile">Get involved!</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+
+    <section id="hero" class="hero sticked-header-offset">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row gy-5 aos-init aos-animate hero-grid">
+                <div class="col-lg-7 d-flex flex-column justify-content-start text-left hero-copy">
+                    <h2 data-aos="fade-up" data-aos-delay="100">Elevating community-centered scientific workflow solutions <span>through
+                            collective expertise</span><span class="circle" data-aos="fade-right"
+                            data-aos-delay="800">.</span></h2>
+                    <p class="hero-lead" data-aos="fade-up" data-aos-delay="200">We bring together users, developers, researchers, and facilities to
+                        share resources, showcase systems, and align on the grand challenges shaping workflow science.</p>
+                    <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                        <a href="/talks" class="btn-outer">Explore talks</a>
+                        <a href="/terminology" class="btn-outer">See our terminology</a>
+                        <a href="/systems" class="btn-outer">Explore systems</a>
+                    </div>
+                    <div class="social hero-social" data-aos="fade-up" data-aos-delay="400">
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="mailto:contact@workflows.community">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank">
+                            <i class="fab fa-slack"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-flex flex-column justify-content-start hero-spotlight">
+                    
+                    
+                    
+                    
+                    <div class="hero-panel" data-aos="fade-left" data-aos-delay="200">
+                        <span class="hero-tag">Community at a glance</span>
+                        <div class="hero-stats">
+                            <div class="hero-stat">
+                                <strong>323</strong>
+                                <span>Members</span>
+                            </div>
+                            <div class="hero-stat">
+                                <strong>27</strong>
+                                <span>Countries</span>
+                            </div>
+                            <div class="hero-stat">
+                                <strong>38</strong>
+                                <span>Workflow systems</span>
+                            </div>
+                            <div class="hero-stat">
+                                <strong>17</strong>
+                                <span>Summits &amp; BoFs</span>
+                            </div>
+                        </div>
+                        <ul class="hero-panel-list">
+                            <li><a href="/talks"><i class="bi bi-mic"></i>14 community talks</a></li>
+                            
+                            <li><a href="/groups"><i class="bi bi-people"></i>4 working groups</a></li>
+                            <li><a href="/reports"><i class="bi bi-journal-text"></i>7 published reports</a></li>
+                        </ul>
+                        <a href="/about" class="hero-card-link">About the initiative <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="whats-happening" class="wh-section">
+    <div class="container" data-aos="fade-up">
+        <div class="wh-header">
+            <div class="wh-eyebrow"><span class="wh-pulse"></span>Community pulse</div>
+            <h2>What&rsquo;s happening in the community</h2>
+            <p>Talks, workshops, and gatherings from workflow practitioners worldwide.</p>
+        </div>
+
+        <div class="wh-grid">
+
+            
+            <article class="wh-card" data-kind="talk">
+                <div class="wh-media">
+                    <img src="/images/talks/du-yin-banner.jpg" alt="Agentic AI for experiments and data analyses at the APS" loading="lazy" />
+                    <span class="wh-kind">Latest talk</span>
+                </div>
+                <div class="wh-body">
+                    <h3 class="wh-title"><a href="/talks/2026_07_22/">Agentic AI for experiments and data analyses at the APS</a></h3>
+                    <p class="wh-desc">Ming Du, Xiangyu Yin (Argonne National Laboratory)</p>
+                    <ul class="wh-meta">
+                        <li><i class="bi bi-calendar-event"></i>July 22, 2026</li>
+                        <li><i class="bi bi-clock"></i>11:00am PST / 2:00pm EST / 20:00 CEST</li>
+                    </ul>
+                    <a class="wh-link" href="/talks/2026_07_22/">
+                        Watch the talk
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+            
+
+            
+            <article class="wh-card" data-kind="workshop">
+                <div class="wh-media">
+                    
+                    <img src="/images/workshops/wisdom-2026.jpeg" alt="WISDOM 2026" loading="lazy" />
+                    
+                    <span class="wh-kind">Upcoming workshop</span>
+                </div>
+                <div class="wh-body">
+                    <h3 class="wh-title"><a href="/workshops/wisdom-2026/">WISDOM 2026</a></h3>
+                    <p class="wh-desc">2nd Workshop on Workflows, Intelligent Scientific Data, and Optimization for Automated Management</p>
+                    <ul class="wh-meta">
+                        <li><i class="bi bi-calendar-event"></i>September 29, 2026</li>
+                        <li><i class="bi bi-geo-alt"></i>Naples, Italy</li>
+                    </ul>
+                    <a class="wh-link" href="/workshops/wisdom-2026/">Workshop details <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </article>
+            
+
+            
+            <article class="wh-card" data-kind="bof">
+                <div class="wh-media">
+                    
+                    <img class="wh-media-logo" src="/images/bof/sc26.png" alt="SC26 Data Streaming BoF" loading="lazy" />
+                    
+                    <span class="wh-kind">Upcoming BoF</span>
+                </div>
+                <div class="wh-body">
+                    <h3 class="wh-title"><a href="/bof/sc26-streaming/">Real-Time Scientific Data Streaming to HPC Nodes: Challenges and Innovations VI</a></h3>
+                    <p class="wh-desc">SC26 Data Streaming BoF</p>
+                    <ul class="wh-meta">
+                        <li><i class="bi bi-calendar-event"></i>November 2026</li>
+                        
+                        
+                    </ul>
+                    <a class="wh-link" href="/bof/sc26-streaming/">Session details <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </article>
+            
+
+            <article class="wh-card" data-kind="media">
+                <div class="wh-media wh-media-embed">
+                    <iframe src="https://www.youtube.com/embed/videoseries?si=ElrjhblSaUsMzOed&amp;list=PLAtmuqHExRvNnGtrqHl1ZXR6ZH37HLfo1"
+                        title="Workflows Community on YouTube" frameborder="0" loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <span class="wh-kind">On demand</span>
+                </div>
+                <div class="wh-body">
+                    <h3 class="wh-title"><a href="https://youtube.com/@WorkflowsCommunity" target="_blank" rel="noopener">Workflow innovation in action</a></h3>
+                    <p class="wh-desc">Recordings from the talk series, connecting researchers, developers, and practitioners shaping the future of workflows.</p>
+                    <ul class="wh-meta">
+                        <li><i class="bi bi-collection-play"></i>Full talk archive</li>
+                    </ul>
+                    <a class="wh-link" href="https://youtube.com/@WorkflowsCommunity" target="_blank" rel="noopener">YouTube channel <i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- EXPLORE THE ECOSYSTEM -->
+<section id="ecosystem" class="wh-section explore-section">
+    <div class="container" data-aos="fade-up">
+        <div class="wh-header">
+            <div class="wh-eyebrow"><span class="wh-pulse"></span>Community resources</div>
+            <h2>Explore the workflows ecosystem</h2>
+            <p>Curated, community-maintained references for finding a system, reusing a pipeline, and speaking a shared language.</p>
+        </div>
+
+        <div class="explore-grid">
+            <a class="explore-card" href="/systems">
+                <span class="explore-icon"><i class="bi bi-diagram-3"></i></span>
+                <span class="explore-count">38</span>
+                <h3>Workflow systems</h3>
+                <p>Open-source engines profiled with language, release, and activity, plus standardized terminology characteristics.</p>
+                <span class="explore-link">Browse systems <i class="bi bi-arrow-right"></i></span>
+            </a>
+
+            <a class="explore-card" href="/registries">
+                <span class="explore-icon"><i class="bi bi-collection"></i></span>
+                <span class="explore-count">5</span>
+                <h3>Workflow registries</h3>
+                <p>Where the community publishes and discovers ready-to-run pipelines you can adapt instead of rebuilding.</p>
+                <span class="explore-link">Find a registry <i class="bi bi-arrow-right"></i></span>
+            </a>
+
+            <a class="explore-card" href="/terminology">
+                <span class="explore-icon"><i class="bi bi-translate"></i></span>
+                <span class="explore-count">&mdash;</span>
+                <h3>Terminology</h3>
+                <p>A shared vocabulary for describing and comparing workflow systems, maintained by the terminology working group.</p>
+                <span class="explore-link">Read the terminology <i class="bi bi-arrow-right"></i></span>
+            </a>
+
+            <a class="explore-card" href="/frameworks">
+                <span class="explore-icon"><i class="bi bi-boxes"></i></span>
+                <span class="explore-count">4</span>
+                <h3>Research frameworks</h3>
+                <p>Larger research efforts and infrastructures building on and around scientific workflow technology.</p>
+                <span class="explore-link">See frameworks <i class="bi bi-arrow-right"></i></span>
+            </a>
+
+            <a class="explore-card" href="/education">
+                <span class="explore-icon"><i class="bi bi-mortarboard"></i></span>
+                <span class="explore-count">2</span>
+                <h3>Education &amp; training</h3>
+                <p>Courseware and guides for teaching and learning workflow concepts, from first principles to practice.</p>
+                <span class="explore-link">Start learning <i class="bi bi-arrow-right"></i></span>
+            </a>
+
+            <a class="explore-card" href="/members">
+                <span class="explore-icon"><i class="bi bi-globe2"></i></span>
+                <span class="explore-count">27</span>
+                <h3>Countries represented</h3>
+                <p>323 members across 27 countries &mdash; researchers, developers, and facility staff.</p>
+                <span class="explore-link">Meet the community <i class="bi bi-arrow-right"></i></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- WORKFLOW SYSTEMS -->
+
+
+<div id="services" class="section sys-section">
+    <div class="container" data-aos="fade-up">
+        <div class="wh-header">
+            <div class="wh-eyebrow"><span class="wh-pulse"></span>Recently updated</div>
+            <h2>Workflow systems</h2>
+            <p>Open-source systems described by their own teams, refreshed automatically from their repositories.</p>
+        </div>
+        <div class="sys-grid">
+            
+            <a class="sys-card" href="/systems/taskvine/">
+                <div class="sys-head">
+                    <span class="sys-avatar"><img src="https://ccl.cse.nd.edu/software/taskvine/taskvine-icon.png" alt="TaskVine logo" loading="lazy" /></span>
+                    <h3>TaskVine</h3>
+                </div>
+                <p class="sys-desc">An execution system for large scale data intensive dynamic workflows.</p>
+                <ul class="sys-meta">
+                    <li><i class="bi bi-code-slash"></i>Python</li>
+                    <li><i class="bi bi-box-seam"></i>devel</li>
+                    <li><i class="bi bi-clock-history"></i>04 Sep 2026</li>
+                </ul>
+            </a>
+            
+            <a class="sys-card" href="/systems/cylc-flow/">
+                <div class="sys-head">
+                    <span class="sys-avatar"><img src="https://avatars.githubusercontent.com/u/824878?v=4" alt="Cylc logo" loading="lazy" /></span>
+                    <h3>Cylc</h3>
+                </div>
+                <p class="sys-desc">A general purpose workflow engine with a particular gift for cycling.</p>
+                <ul class="sys-meta">
+                    <li><i class="bi bi-code-slash"></i>Python</li>
+                    <li><i class="bi bi-box-seam"></i>cylc-flow-8.6.5</li>
+                    <li><i class="bi bi-clock-history"></i>04 Sep 2026</li>
+                </ul>
+            </a>
+            
+            <a class="sys-card" href="/systems/pyiron_base/">
+                <div class="sys-head">
+                    <span class="sys-avatar"><img src="https://avatars.githubusercontent.com/u/25691954?v=4" alt="pyiron logo" loading="lazy" /></span>
+                    <h3>pyiron</h3>
+                </div>
+                <p class="sys-desc">A workflow manager for scientific computing on high performance computing infrastructures</p>
+                <ul class="sys-meta">
+                    <li><i class="bi bi-code-slash"></i>python</li>
+                    <li><i class="bi bi-box-seam"></i>pyiron_base-0.15.18</li>
+                    <li><i class="bi bi-clock-history"></i>04 Sep 2026</li>
+                </ul>
+            </a>
+            
+            <a class="sys-card" href="/systems/makeflow/">
+                <div class="sys-head">
+                    <span class="sys-avatar"><img src="https://avatars.githubusercontent.com/u/2520573?v=4" alt="Makeflow logo" loading="lazy" /></span>
+                    <h3>Makeflow</h3>
+                </div>
+                <p class="sys-desc">Makeflow is a workflow system for parallel and distributed computing that uses a language very similar to Make.</p>
+                <ul class="sys-meta">
+                    <li><i class="bi bi-code-slash"></i>Make</li>
+                    <li><i class="bi bi-box-seam"></i>devel</li>
+                    <li><i class="bi bi-clock-history"></i>04 Sep 2026</li>
+                </ul>
+            </a>
+            
+            <a class="sys-card" href="/systems/maestrowf/">
+                <div class="sys-head">
+                    <span class="sys-avatar"><img src="https://raw.githubusercontent.com/LLNL/maestrowf/develop/assets/logo_icon.png" alt="Maestro Workflow Conductor logo" loading="lazy" /></span>
+                    <h3>Maestro Workflow Conductor</h3>
+                </div>
+                <p class="sys-desc">Orchestrate your HPC workflows with ease</p>
+                <ul class="sys-meta">
+                    <li><i class="bi bi-code-slash"></i>Python</li>
+                    <li><i class="bi bi-box-seam"></i>v1.2.1</li>
+                    <li><i class="bi bi-clock-history"></i>04 Sep 2026</li>
+                </ul>
+            </a>
+            
+            <a class="sys-card" href="/systems/snakemake/">
+                <div class="sys-head">
+                    <span class="sys-avatar"><img src="https://avatars.githubusercontent.com/u/33450111?v=4" alt="Snakemake logo" loading="lazy" /></span>
+                    <h3>Snakemake</h3>
+                </div>
+                <p class="sys-desc">This is the development home of the workflow management system Snakemake. For general information, see</p>
+                <ul class="sys-meta">
+                    <li><i class="bi bi-code-slash"></i>Python</li>
+                    <li><i class="bi bi-box-seam"></i>v9.26.1</li>
+                    <li><i class="bi bi-clock-history"></i>03 Sep 2026</li>
+                </ul>
+            </a>
+            
+            <a class="sys-card" href="/systems/nipype/">
+                <div class="sys-head">
+                    <span class="sys-avatar"><img src="https://avatars.githubusercontent.com/u/233707?v=4" alt="nipype logo" loading="lazy" /></span>
+                    <h3>nipype</h3>
+                </div>
+                <p class="sys-desc">Neuroimaging in Python: Pipelines and Interfaces</p>
+                <ul class="sys-meta">
+                    <li><i class="bi bi-code-slash"></i>Python3</li>
+                    <li><i class="bi bi-box-seam"></i>1.11.0</li>
+                    <li><i class="bi bi-clock-history"></i>03 Sep 2026</li>
+                </ul>
+            </a>
+            
+            <a class="sys-card" href="/systems/horus-runtime/">
+                <div class="sys-head">
+                    <span class="sys-avatar"><img src="https://avatars.githubusercontent.com/u/243013656?v=4" alt="Horus Runtime logo" loading="lazy" /></span>
+                    <h3>Horus Runtime</h3>
+                </div>
+                <p class="sys-desc">Reproducible scientific workflows, from your laptop to the HPC cluster.</p>
+                <ul class="sys-meta">
+                    <li><i class="bi bi-code-slash"></i>Python</li>
+                    <li><i class="bi bi-box-seam"></i>v0.5.0</li>
+                    <li><i class="bi bi-clock-history"></i>03 Sep 2026</li>
+                </ul>
+            </a>
+            
+        </div>
+        <div class="wh-more">
+            <a class="wh-button" href="/systems">See all 38 systems <i class="bi bi-arrow-right"></i></a>
+        </div>
+    </div>
+</div>
+
+
+<!-- WORKING GROUPS -->
+
+
+<section id="working-groups" class="wh-section wg-home-section">
+    <div class="container" data-aos="fade-up">
+        <div class="wh-header">
+            <div class="wh-eyebrow"><span class="wh-pulse"></span>Where the work happens</div>
+            <h2>Working groups</h2>
+            <p>Open groups tackling a specific problem together. Anyone can join &mdash; most of the work happens in the open.</p>
+        </div>
+        <div class="wg-home-grid">
+            
+            <a class="wg-home-card" href="/groups/fair/" data-status="active">
+                <div class="wg-home-top">
+                    <span class="wg-home-status">Active</span>
+                    <span class="wg-home-count">15 members</span>
+                </div>
+                <h3>FAIR Computational Workflows</h3>
+                <p>Define FAIR principles for computational workflows that consider the complex lifecycle from specification to execution and data products</p>
+                <span class="wh-link">Group details <i class="bi bi-arrow-right"></i></span>
+            </a>
+            
+            <a class="wg-home-card" href="/groups/quantum/" data-status="establishing">
+                <div class="wg-home-top">
+                    <span class="wg-home-status">Establishing</span>
+                    <span class="wg-home-count">4 members</span>
+                </div>
+                <h3>Quantum-Classical Workflows Group</h3>
+                <p>Develop hybrid workflows and middleware capable of reconciling quantum and classical systems and software stacks.</p>
+                <span class="wh-link">Group details <i class="bi bi-arrow-right"></i></span>
+            </a>
+            
+            <a class="wg-home-card" href="/groups/terminology/" data-status="active">
+                <div class="wg-home-top">
+                    <span class="wg-home-status">Active</span>
+                    <span class="wg-home-count">26 members</span>
+                </div>
+                <h3>Scientific Workflow Systems Terminology</h3>
+                <p>Develop and maintain a standardized terminology that enables researchers to systematically characterize, compare, and select workflow management systems based on ...</p>
+                <span class="wh-link">Group details <i class="bi bi-arrow-right"></i></span>
+            </a>
+            
+            <a class="wg-home-card" href="/groups/benchmarking/" data-status="establishing">
+                <div class="wg-home-top">
+                    <span class="wg-home-status">Establishing</span>
+                    <span class="wg-home-count">4 members</span>
+                </div>
+                <h3>WfBG: Workflow Benchmarking Group</h3>
+                <p>Define methodology to collect meaningful performance metrics; share exemplar workflows written in multiple workflow languages</p>
+                <span class="wh-link">Group details <i class="bi bi-arrow-right"></i></span>
+            </a>
+            
+        </div>
+        <div class="wh-more">
+            <a class="wh-button" href="/groups">All working groups <i class="bi bi-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+
+<!-- REPORTS -->
+
+
+<section id="reports" class="rep-section">
+    <div class="container" data-aos="fade-up">
+        <div class="wh-header wh-header-dark">
+            <div class="wh-eyebrow"><span class="wh-pulse"></span>Published outcomes</div>
+            <h2>Reports &amp; publications</h2>
+            <p>Community summits and studies turned into citable, openly available reports.</p>
+        </div>
+        <div class="rep-grid">
+            
+            <a class="rep-card" href="https://arxiv.org/abs/2602.05131" target="_blank" rel="noopener">
+                <div class="rep-cover"><img src="/images/reports/wcs-2025.png" alt="Towards Advancing Research with Workflows cover" loading="lazy" /></div>
+                <div class="rep-body">
+                    <span class="rep-date">February 2026 &middot; arXiv</span>
+                    <h3>Towards Advancing Research with Workflows</h3>
+                    <p class="rep-sub">A perspective from the Workflows Community Summit -- Amsterdam, 2025</p>
+                    <span class="rep-doi"><i class="bi bi-link-45deg"></i>10.48550/arXiv.2602.05131</span>
+                </div>
+            </a>
+            
+            <a class="rep-card" href="https://doi.org/10.5281/zenodo.13844759" target="_blank" rel="noopener">
+                <div class="rep-cover"><img src="/images/reports/wcs-2024.png" alt="Workflows Community Summit 2024 cover" loading="lazy" /></div>
+                <div class="rep-body">
+                    <span class="rep-date">October 2024 &middot; Zenodo</span>
+                    <h3>Workflows Community Summit 2024</h3>
+                    <p class="rep-sub">Future Trends and Challenges in Scientific Workflows</p>
+                    <span class="rep-doi"><i class="bi bi-link-45deg"></i>10.5281/zenodo.13844759</span>
+                </div>
+            </a>
+            
+            <a class="rep-card" href="https://doi.org/10.5281/zenodo.7750669" target="_blank" rel="noopener">
+                <div class="rep-cover"><img src="/images/reports/wcs-2022.png" alt="Workflows Community Summit cover" loading="lazy" /></div>
+                <div class="rep-body">
+                    <span class="rep-date">March 2023 &middot; Zenodo</span>
+                    <h3>Workflows Community Summit</h3>
+                    <p class="rep-sub">A Roadmap Revolution</p>
+                    <span class="rep-doi"><i class="bi bi-link-45deg"></i>10.5281/zenodo.7750669</span>
+                </div>
+            </a>
+            
+        </div>
+        <div class="wh-more">
+            <a class="wh-button wh-button-light" href="/reports">All 7 reports <i class="bi bi-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+
+<!-- WAYS TO CONTRIBUTE -->
+<section id="contribute" class="gi-section">
+    <div class="container" data-aos="fade-up">
+        <div class="wh-header">
+            <div class="wh-eyebrow"><span class="wh-pulse"></span>Open to everyone</div>
+            <h2>Ways to contribute</h2>
+            <p>The initiative is volunteer-driven. Every catalog, group, and talk on this site came from someone taking one of these steps.</p>
+        </div>
+        <ul class="gi-list">
+            <li><a href="/systems/contribute"><i class="bi bi-plus-circle"></i><span><strong>Add your workflow system</strong>Get it profiled in the systems catalog, refreshed automatically from your repository</span></a></li>
+            <li><a href="/groups"><i class="bi bi-people"></i><span><strong>Join a working group</strong>Shape benchmarking, FAIR workflows, quantum-classical, or terminology</span></a></li>
+            <li><a href="/talks"><i class="bi bi-mic"></i><span><strong>Give a community talk</strong>Present your system or research in the monthly virtual series</span></a></li>
+            <li><a href="/registries/contribute"><i class="bi bi-collection"></i><span><strong>Contribute a registry</strong>Help others discover pipelines that already exist</span></a></li>
+            <li><a href="/frameworks/contribute"><i class="bi bi-boxes"></i><span><strong>List a research framework</strong>Share a project building on workflow technology</span></a></li>
+            <li><a href="/members"><i class="bi bi-person-plus"></i><span><strong>Become a member</strong>Join 323 people across 27 countries</span></a></li>
+        </ul>
+    </div>
+</section>
+
+    </main>
+
+    <footer id="footer" class="footer-section">
+    <div class="container">
+        <div class="footer-cta">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="footer-cta-title">Build the future of workflows together</h3>
+                    <p class="footer-cta-copy">
+                        Join the community to share tools, research, events, and hands-on experience across science
+                        and engineering.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="footer-cta-actions">
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join Slack</a>
+                        <a href="/contact" class="btn btn-outer btn-sm">Get involved</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-4 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="/" class="logo d-flex align-items-center">
+                                <img src="/images/wci-logo-horizontal-white.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>We unite users, developers, researchers, and facilities to provide resources that help
+                                scientists and engineers discover tools, connect with related initiatives, and
+                                collaborate on the biggest workflow challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Resources</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/systems">Workflow Systems</a></li>
+                            <li><a href="/registries">Workflow Registries</a></li>
+                            <li><a href="/frameworks">Research Frameworks</a></li>
+                            <li><a href="/terminology">Terminology</a></li>
+                            <li><a href="/education">Education & Training</a></li>
+                            <li><a href="/reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Community</h3>
+                        </div>
+                        <ul class="list footer-links">
+                            <li><a href="/groups">Working Groups</a></li>
+                            <li><a href="/summits">Summits</a></li>
+                            <li><a href="/talks">Community Talks</a></li>
+                            <li><a href="/workshops">Workshops</a></li>
+                            <li><a href="/stories">Stories</a></li>
+                            <li><a href="/members">Members</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Stay connected</h3>
+                        </div>
+                        <ul class="list footer-links footer-contact-list">
+                            <li>
+                                <a href="mailto:contact@workflows.community">
+                                    <i class="bi bi-envelope-fill me-2"></i>contact@workflows.community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/members">
+                                    <i class="bi bi-people-fill me-2"></i>Meet the community
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contact">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>Get involved
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank"
+                            rel="noopener" aria-label="Workflows Community on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:contact@workflows.community" aria-label="Email Workflows Community"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="https://linkedin.com/company/workflows-community" target="_blank" rel="noopener"
+                            aria-label="Workflows Community on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank" rel="noopener" aria-label="Join Workflows Community on Slack"><i
+                                class="fab fa-slack"></i></a>
+                    </div>
+                    <!-- <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-telegram"></i></button>
+                            </form>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+                    <div class="copyright-text">
+                        <p>&copy;2022&ndash;2026 Workflows.Community Initiative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<!-- JS Files -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/glightbox.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/purecounter_vanilla.js"></script>
+<script src="/assets/js/validator.min.js"></script>
+<script src="/assets/js/particles.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>
