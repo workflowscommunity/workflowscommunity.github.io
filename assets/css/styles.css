@@ -6365,18 +6365,12 @@ canvas{
   align-items: center;
 }
 
-.bof-eyebrow {
-  text-transform: uppercase;
-  font-size: 0.8em;
-  letter-spacing: 0.2em;
-  color: #6c6c6c;
-  margin-bottom: 0.6em;
-  font-weight: 600;
-}
-
 .bof-hero-card h1 {
-  font-size: 2.4em;
-  margin-bottom: 0.7em;
+  font-size: 2.1em;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  margin-bottom: 0.9em;
 }
 
 .bof-meta {
@@ -9092,7 +9086,7 @@ pre {
   }
 
   .bof-hero-card h1 {
-    font-size: 2em;
+    font-size: 1.55em;
   }
 
   .bof-content-card {

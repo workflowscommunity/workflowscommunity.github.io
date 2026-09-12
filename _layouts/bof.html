@@ -12,10 +12,8 @@ layout: page
             </p>
             <div class="bof-hero-grid">
                 <div>
-                    {% if page.subtitle %}
-                    <p class="bof-eyebrow">{{ page.subtitle }}</p>
-                    {% endif %}
-                    <h1>{{ page.title }}</h1>
+                    {% comment %} The session name leads; the short label is already in the breadcrumb. {% endcomment %}
+                    <h1>{{ page.subtitle | default: page.title }}</h1>
                     <div class="bof-meta">
                         {% if page.start_date %}
                         <div>
