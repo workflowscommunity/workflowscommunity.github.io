@@ -448,6 +448,11 @@
     first_name: Jayesh
     institution: Forschungszentrum Juelich
 
+  - last_name: Srikakulam
+    first_name: Sanjay Kumar
+    institution: Forschungszentrum Juelich
+    link: https://sanjay.srikakulam.de/
+
 - country: India
   entries:
   - last_name: Swain
