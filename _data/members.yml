@@ -766,6 +766,10 @@
     first_name: Julian
     institution: Paul-Scherrer Institut
 
+  - last_name: Capodanno
+    first_name: Mario
+    institution: USI University
+
 
 - country: Turkey
   entries:
