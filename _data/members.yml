@@ -469,6 +469,14 @@
     institution: University of New Hampshire
 
 
+- country: Ireland
+  entries:
+  - last_name: Kenna
+    first_name: Brendan
+    institution: UCD
+    link: https://TaskTide.org
+
+
 - country: Italy
   entries:
   - last_name: Talia
@@ -769,6 +777,11 @@
   - last_name: Capodanno
     first_name: Mario
     institution: USI University
+
+  - last_name: Carrillo
+    first_name: Ben
+    institution: UZH
+    link: https://github.com/btraven00
 
 
 - country: Turkey
