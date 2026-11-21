@@ -1558,6 +1558,39 @@
     institution: University of Idaho
     link: https://kallolnaha.me
 
+  - last_name: Thoelen
+    first_name: Robert
+    institution: RTX Pratt & Whitney
+    link: https://thoelen.dev
+
+  - last_name: Boland
+    first_name: Erin
+    institution: RTX Technologies
+
+  - last_name: Wijayawardana
+    first_name: Rajini
+    institution: University of Chicago
+
+  - last_name: Mulrooney
+    first_name: Patrick
+    institution: CW3E @ SIO / UC San Diego
+
+  - last_name: Schuette
+    first_name: Chase
+    institution: Caterpillar
+
+  - last_name: Bhattacharya
+    first_name: Chandrachur
+    institution: Argonne National Laboratory
+
+  - last_name: Li
+    first_name: Mengnan
+    institution: Idaho National Laboratory
+
+  - last_name: Pease
+    first_name: Kevin
+    institution: UCSD
+
 
 - country: Vietnam
   entries:
